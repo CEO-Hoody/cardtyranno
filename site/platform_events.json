@@ -1,0 +1,38 @@
+{
+ "updated": "2026-06-21",
+ "month": "2026-06",
+ "products": [
+  {
+   "id": 1,
+   "name": "신한카드 Mr.Life",
+   "issuer": "신한카드",
+   "platforms": {
+    "ajungdang": {
+     "id": "75",
+     "url": null
+    },
+    "banksalad": {
+     "id": "CARD000004",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "13",
+     "url": null
+    },
+    "toss": {
+     "id": "3480",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 57.9만원 혜택",
+     "reward_won": 579000,
+     "period_end": "2026.7.31",
+     "url": "https://www.card-gorilla.com/card/13"
+    }
+   ]
+  }
+ ]
+}
