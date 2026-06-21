@@ -100,10 +100,26 @@ def collect_platform(plat, info):
             else:
                 api=f"https://card.pay.naver.com/home/detail.json?cardCompanyId={co}&cardIssuerCode={iss}&productId={prod}&from=pc_financetab"
                 page=api.replace("detail.json","detail")
-            return parse_naver(fetch(api).text, page)
+            ev=None
+            try: ev=parse_naver(fetch(api).text, page)
+            except Exception as e: print("  ! naver api err", e)
+            if not ev:                                   # 헤드리스 폴백(Actions)
+                try:
+                    import headless; html=headless.render_html(page, wait_selector="body")
+                    if html: ev=parse_naver(html, page)
+                except Exception as e: print("  ! naver headless err", e)
+            return ev
         if plat=="ajungdang":
-            r = fetch(f"https://www.ajd.co.kr/card/event/detail/{pid}", headers={"RSC":"1","User-Agent":"Mozilla/5.0","Accept":"text/x-component"})
-            return parse_ajd_rsc(r.text, pid)
+            page=f"https://www.ajd.co.kr/card/event/detail/{pid}"
+            ev=None
+            try: ev=parse_ajd_rsc(fetch(page, headers={"RSC":"1","User-Agent":"Mozilla/5.0","Accept":"text/x-component"}).text, pid)
+            except Exception as e: print("  ! ajd rsc err", e)
+            if not ev:                                   # 헤드리스 폴백(Actions)
+                try:
+                    import headless; html=headless.render_html(page, wait_selector="body")
+                    if html: ev=parse_ajd_rsc(html, pid)
+                except Exception as e: print("  ! ajd headless err", e)
+            return ev
     except Exception as e:
         print(f"  ! {plat}/{pid} fetch err: {e}")
     return None
@@ -179,7 +195,42 @@ def run(products, today, injected=None, june_only=True):
             print(f"  [{today}] {p['name'][:18]:<18} {plat:<11} {res:<7} {amt}")
     export_json(con); con.close()
 
+def discover_products(limit=60):
+    """카드고릴라 랭킹에서 6월 이벤트 있는 카드 자동 발굴 → 상품 레지스트리(사람 개입 없이)."""
+    out=[]
+    try:
+        rank=fetch("https://api.card-gorilla.com/v1/charts/ranking?card_gb=CRD&term=monthly&user_gb=&corp=&chart=top100").json()
+    except Exception as e:
+        print("discover rank err", e); return out
+    ids=[]
+    def walk(o):
+        if isinstance(o, dict):
+            if isinstance(o.get("card"), dict) and o["card"].get("idx"): ids.append(o["card"]["idx"])
+            elif o.get("idx") and o.get("cate")=="CRD": ids.append(o["idx"])
+            for v in o.values(): walk(v)
+        elif isinstance(o, list):
+            for v in o: walk(v)
+    walk(rank)
+    ids=list(dict.fromkeys(ids))[:limit]
+    for cid in ids:
+        try:
+            j=fetch(f"https://api.card-gorilla.com/v1/cards/{cid}").json()
+            ev=parse_cardgorilla(j, cid)
+            if ev and is_june2026(ev):
+                out.append({"name":j.get("name"),"issuer":(j.get("corp") or {}).get("name"),
+                            "platforms":{"cardgorilla":{"id":str(cid)}}})
+        except Exception as e: print("  ! discover", cid, e)
+    print(f"discover → {len(out)} cards with June events (scanned {len(ids)})")
+    return out
+
 if __name__=="__main__":
-    products=json.load(open(os.path.join(BASE,"products.json"),encoding="utf-8"))
     today=datetime.date.today().isoformat()
+    curated=json.load(open(os.path.join(BASE,"products.json"),encoding="utf-8"))
+    by={_nk(p["name"]):p for p in curated}
+    for d in discover_products():                 # 자동 발굴 + 큐레이션 매핑 병합
+        k=_nk(d["name"])
+        if k in by: by[k]["platforms"].setdefault("cardgorilla", d["platforms"]["cardgorilla"])
+        else: by[k]=d
+    products=list(by.values())
+    print(f"총 상품 {len(products)}개 수집 시작")
     run(products, today)
