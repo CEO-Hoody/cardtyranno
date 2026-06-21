@@ -155,10 +155,11 @@ def record_event(con, pid, plat, fetched, today):
 SITE = os.path.join(os.path.dirname(BASE), "site")
 
 def export_json(con):
-    cur=con.cursor(); out=[]
-    for pid,name,issuer in cur.execute("SELECT id,name,issuer FROM card_product ORDER BY id"):
-        maps={r[0]:{"id":r[1],"url":r[2]} for r in cur.execute("SELECT platform,platform_product_id,url FROM product_platform WHERE card_product_id=?",(pid,))}
-        evs=[{"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4]} for r in cur.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,))]
+    rows=con.cursor().execute("SELECT id,name,issuer FROM card_product ORDER BY id").fetchall()  # 먼저 materialize(커서 재사용 버그 방지)
+    out=[]; c=con.cursor()
+    for pid,name,issuer in rows:
+        maps={r[0]:{"id":r[1],"url":r[2]} for r in c.execute("SELECT platform,platform_product_id,url FROM product_platform WHERE card_product_id=?",(pid,)).fetchall()}
+        evs=[{"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4]} for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall()]
         out.append({"id":pid,"name":name,"issuer":issuer,"platforms":maps,"events":evs})
     os.makedirs(SITE,exist_ok=True)
     json.dump({"updated":datetime.date.today().isoformat(),"month":"2026-06","products":out},
