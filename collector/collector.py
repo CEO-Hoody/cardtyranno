@@ -79,7 +79,14 @@ def is_june2026(ev):
 # ---------- 라이브 수집(Actions용; requests 필요) ----------
 def fetch(url, headers=None):
     import requests
-    r = requests.get(url, headers=headers or {"User-Agent":"Mozilla/5.0","Accept":"*/*"}, timeout=15)
+    h={"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+       "Accept":"application/json, text/plain, */*","Accept-Language":"ko-KR,ko;q=0.9"}
+    if "card-gorilla.com" in url:                 # 목록 API는 referer/origin 필요
+        h["Referer"]="https://www.card-gorilla.com/"; h["Origin"]="https://www.card-gorilla.com"
+    if "banksalad.com" in url or "card-lounge.toss.im" in url:
+        h["Accept"]="text/html,application/xhtml+xml,*/*"
+    if headers: h.update(headers)
+    r = requests.get(url, headers=h, timeout=20)
     r.raise_for_status(); return r
 
 def collect_platform(plat, info):
@@ -105,7 +112,7 @@ def collect_platform(plat, info):
             except Exception as e: print("  ! naver api err", e)
             if not ev:                                   # 헤드리스 폴백(Actions)
                 try:
-                    import headless; html=headless.render_html(page, wait_selector="body")
+                    import headless; html=headless.render_html(page, wait_selector="body", referer="https://card.pay.naver.com/")
                     if html: ev=parse_naver(html, page)
                 except Exception as e: print("  ! naver headless err", e)
             return ev
@@ -116,7 +123,7 @@ def collect_platform(plat, info):
             except Exception as e: print("  ! ajd rsc err", e)
             if not ev:                                   # 헤드리스 폴백(Actions)
                 try:
-                    import headless; html=headless.render_html(page, wait_selector="body")
+                    import headless; html=headless.render_html(page, wait_selector="main,section,body", referer="https://www.ajd.co.kr/")
                     if html: ev=parse_ajd_rsc(html, pid)
                 except Exception as e: print("  ! ajd headless err", e)
             return ev
@@ -195,39 +202,95 @@ def run(products, today, injected=None, june_only=True):
             print(f"  [{today}] {p['name'][:18]:<18} {plat:<11} {res:<7} {amt}")
     export_json(con); con.close()
 
-def discover_products(limit=60):
-    """카드고릴라 랭킹에서 6월 이벤트 있는 카드 자동 발굴 → 상품 레지스트리(사람 개입 없이)."""
-    out=[]
+def _cards_from(j):
+    """카드고릴라 목록 응답에서 카드 배열 추출(여러 shape 방어)."""
+    if isinstance(j, list): return j
+    for k in ("data","result","results","cards","list","items"):
+        v=j.get(k) if isinstance(j, dict) else None
+        if isinstance(v, list): return v
+        if isinstance(v, dict):
+            for kk in ("data","list","cards","items"):
+                if isinstance(v.get(kk), list): return v[kk]
+    return []
+
+def _load_seed():
+    """cg_seed.json(브라우저로 확정한 6월 CBK 카드 128개) → 발굴 폴백/시드."""
     try:
-        rank=fetch("https://api.card-gorilla.com/v1/charts/ranking?card_gb=CRD&term=monthly&user_gb=&corp=&chart=top100").json()
+        s=json.load(open(os.path.join(BASE,"cg_seed.json"),encoding="utf-8"))
+        return [{"name":n,"issuer":iss,"platforms":{"cardgorilla":{"id":str(cid)}}}
+                for cid,n,iss in s.get("cards",[])]
     except Exception as e:
-        print("discover rank err", e); return out
-    ids=[]
-    def walk(o):
-        if isinstance(o, dict):
-            if isinstance(o.get("card"), dict) and o["card"].get("idx"): ids.append(o["card"]["idx"])
-            elif o.get("idx") and o.get("cate")=="CRD": ids.append(o["idx"])
-            for v in o.values(): walk(v)
-        elif isinstance(o, list):
-            for v in o: walk(v)
-    walk(rank)
-    ids=list(dict.fromkeys(ids))[:limit]
-    for cid in ids:
-        try:
-            j=fetch(f"https://api.card-gorilla.com/v1/cards/{cid}").json()
-            ev=parse_cardgorilla(j, cid)
-            if ev and is_june2026(ev):
-                out.append({"name":j.get("name"),"issuer":(j.get("corp") or {}).get("name"),
-                            "platforms":{"cardgorilla":{"id":str(cid)}}})
-        except Exception as e: print("  ! discover", cid, e)
-    print(f"discover → {len(out)} cards with June events (scanned {len(ids)})")
-    return out
+        print("seed load err", e); return []
+
+def _cg_catalog():
+    """idx→{name,issuer} (실제 발급사). cards?type=CBK&is_live=true 전체 카탈로그."""
+    cat={}
+    try:
+        cj=fetch("https://api.card-gorilla.com/v1/cards?type=CBK&is_live=true").json()
+        for c in _cards_from(cj):
+            if isinstance(c,dict) and c.get("idx"):
+                corp=c.get("corp") or {}
+                cat[str(c["idx"])]={"name":c.get("name"),
+                                    "issuer":corp.get("name") if isinstance(corp,dict) else None}
+    except Exception as e:
+        print("catalog err", e)
+    return cat
+
+def discover_products(limit=400):
+    """카드고릴라 events?type=CBK(현재 진행 캐시백 이벤트) → 매핑 카드 자동 발굴.
+    각 이벤트의 card_idxs를 카탈로그(이름·발급사)와 조인. 라이브 실패 시 cg_seed.json 폴백."""
+    out={}
+    try:
+        ev=fetch("https://api.card-gorilla.com/v1/events?type=CBK").json()
+        events=ev.get("data") if isinstance(ev,dict) else ev
+        cat=_cg_catalog()
+        for e in (events or []):
+            if not isinstance(e,dict): continue
+            corpn=e.get("corp_name")
+            for cid in (e.get("card_idxs") or []):
+                cid=str(cid); meta=cat.get(cid) or {}
+                name=meta.get("name") or (e.get("title") or "").strip()
+                if not name: continue
+                out[_nk(name)]={"name":name,"issuer":meta.get("issuer") or corpn,
+                                "platforms":{"cardgorilla":{"id":cid}}}
+        print(f"discover(live events?type=CBK) → {len(out)} cards")
+    except Exception as e:
+        print("discover live err", e)
+    if not out:                                   # 라이브 차단 시 시드로 보장
+        for p in _load_seed(): out[_nk(p["name"])]=p
+        print(f"discover(seed fallback) → {len(out)} cards")
+    return list(out.values())[:limit]
+
+def diagnose():
+    """진단 덤프 → site/_debug.json (Actions 로그 대신 커밋 파일로 관찰)."""
+    dbg={"playwright":False,"cg_events":{},"cg_cards":{}}
+    try:
+        import playwright; dbg["playwright"]=getattr(playwright,"__version__","yes")
+    except Exception as e: dbg["playwright"]="ERR:"+str(e)[:60]
+    try:
+        r=fetch("https://api.card-gorilla.com/v1/events?type=CBK")
+        j=r.json(); d=j.get("data") if isinstance(j,dict) else j
+        dbg["cg_events"]={"st":r.status_code,"len":len(r.text),"n":len(d or []),
+                          "cardIdxs":sum(len(e.get("card_idxs") or []) for e in (d or []))}
+    except Exception as e: dbg["cg_events"]="ERR:"+str(e)[:120]
+    try:
+        r=fetch("https://api.card-gorilla.com/v1/cards?type=CBK&is_live=true")
+        j=r.json(); d=j.get("data") if isinstance(j,dict) else j
+        dbg["cg_cards"]={"st":r.status_code,"n":len(d or [])}
+    except Exception as e: dbg["cg_cards"]="ERR:"+str(e)[:120]
+    os.makedirs(SITE,exist_ok=True)
+    json.dump(dbg,open(os.path.join(SITE,"_debug.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    print("diagnose →", {k:(v if isinstance(v,str) else "...") for k,v in dbg.items()})
 
 if __name__=="__main__":
     today=datetime.date.today().isoformat()
+    try: diagnose()
+    except Exception as e: print("diagnose err", e)
     curated=json.load(open(os.path.join(BASE,"products.json"),encoding="utf-8"))
     by={_nk(p["name"]):p for p in curated}
-    for d in discover_products():                 # 자동 발굴 + 큐레이션 매핑 병합
+    discovered=discover_products()                # 라이브 events?type=CBK
+    seed=_load_seed()                             # 항상 시드 합집합(최소 128 보장)
+    for d in discovered+seed:                      # 자동 발굴 + 큐레이션 매핑 병합
         k=_nk(d["name"])
         if k in by: by[k]["platforms"].setdefault("cardgorilla", d["platforms"]["cardgorilla"])
         else: by[k]=d
