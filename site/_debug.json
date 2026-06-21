@@ -1,0 +1,10 @@
+{
+ "playwright": "yes",
+ "cg_events": {
+  "st": 200,
+  "len": 4362915,
+  "n": 127,
+  "cardIdxs": 138
+ },
+ "cg_cards": "ERR:HTTPSConnectionPool(host='api.card-gorilla.com', port=8080): Read timed out. (read timeout=20)"
+}
