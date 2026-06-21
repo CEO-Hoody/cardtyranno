@@ -14,6 +14,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r collector/requirements.txt
+      - name: install chromium (headless 폴백)
+        run: python -m playwright install --with-deps chromium
       - run: python collector/collector.py
       - name: commit & push
         run: |
