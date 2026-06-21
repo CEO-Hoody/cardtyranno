@@ -250,7 +250,15 @@
      "url": null
     }
    },
-   "events": []
+   "events": [
+    {
+     "platform": "naver",
+     "reward_text": "최대 17.5만원",
+     "reward_won": 175000,
+     "period_end": "2026.07.31",
+     "url": "https://card.pay.naver.com/home/promotion?cardCompanyId=CCNH&cardIssuerCode=CCNH&promotionId=20260521001731590500&from=pc_financetab"
+    }
+   ]
   }
  ]
 }
