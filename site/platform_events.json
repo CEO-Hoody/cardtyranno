@@ -33,6 +33,224 @@
      "url": "https://www.card-gorilla.com/card/13"
     }
    ]
+  },
+  {
+   "id": 2,
+   "name": "신한카드 Deep Oil",
+   "issuer": "신한카드",
+   "platforms": {
+    "banksalad": {
+     "id": "CARD000118",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "39",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_text": "최대 84만원 캐시백",
+     "reward_won": 840000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/product/cards/CARD000118"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 57.9만원 혜택",
+     "reward_won": 579000,
+     "period_end": "2026.7.31",
+     "url": "https://www.card-gorilla.com/card/39"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "신한카드 처음(ANNIVERSE)",
+   "issuer": "신한카드",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2759",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 57.9만원 혜택",
+     "reward_won": 579000,
+     "period_end": "2026.7.31",
+     "url": "https://www.card-gorilla.com/card/2759"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "name": "삼성 iD SELECT ALL 카드",
+   "issuer": "삼성카드",
+   "platforms": {
+    "banksalad": {
+     "id": "CARD004534",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "2885",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 49.4만원 혜택",
+     "reward_won": 494000,
+     "period_end": "2026.7.31",
+     "url": "https://www.card-gorilla.com/card/2885"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "name": "삼성카드 taptap O",
+   "issuer": "삼성카드",
+   "platforms": {
+    "cardgorilla": {
+     "id": "51",
+     "url": null
+    }
+   },
+   "events": []
+  },
+  {
+   "id": 6,
+   "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
+   "issuer": "삼성카드",
+   "platforms": {
+    "banksalad": {
+     "id": "CARD000081",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "49",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 117만원 혜택",
+     "reward_won": 1170000,
+     "period_end": "2026.6.30",
+     "url": "https://www.card-gorilla.com/card/49"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "현대카드 M",
+   "issuer": "현대카드",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2669",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 68.5만원 캐시백",
+     "reward_won": 685000,
+     "period_end": "2026.6.30",
+     "url": "https://www.card-gorilla.com/card/2669"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "name": "KB국민 굿데이카드",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "banksalad": {
+     "id": "CARD000156",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "106",
+     "url": null
+    },
+    "toss": {
+     "id": "1121",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 86만원 캐시백",
+     "reward_won": 860000,
+     "period_end": "2026.6.30",
+     "url": "https://www.card-gorilla.com/card/106"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "최대 81만원 이벤트",
+     "reward_won": 810000,
+     "period_end": null,
+     "url": "https://card-lounge.toss.im/card/1121"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "name": "카드의정석 2",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2848",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 78만원 혜택",
+     "reward_won": 780000,
+     "period_end": "2026.7.31",
+     "url": "https://www.card-gorilla.com/card/2848"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "name": "LOCA LIKIT 2.0",
+   "issuer": "롯데카드",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2987",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 67만원 혜택",
+     "reward_won": 670000,
+     "period_end": "2026.7.10",
+     "url": "https://www.card-gorilla.com/card/2987"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "name": "NH농협 네이버페이 제휴(CCNH 샘플)",
+   "issuer": "NH농협카드",
+   "platforms": {
+    "naver": {
+     "id": "20230610000000001453",
+     "url": null
+    }
+   },
+   "events": []
   }
  ]
 }
