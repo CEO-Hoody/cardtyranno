@@ -1,0 +1,28 @@
+[
+ {"name":"신한카드 Mr.Life","issuer":"신한카드","platforms":{
+   "cardgorilla":{"id":"13"},
+   "banksalad":{"id":"CARD000004"},
+   "toss":{"id":"3480"},
+   "ajungdang":{"id":"75"}}},
+ {"name":"신한카드 Deep Oil","issuer":"신한카드","platforms":{
+   "cardgorilla":{"id":"39"}, "banksalad":{"id":"CARD000118"}}},
+ {"name":"신한카드 처음(ANNIVERSE)","issuer":"신한카드","platforms":{
+   "cardgorilla":{"id":"2759"}}},
+ {"name":"삼성 iD SELECT ALL 카드","issuer":"삼성카드","platforms":{
+   "cardgorilla":{"id":"2885"}, "banksalad":{"id":"CARD004534"}}},
+ {"name":"삼성카드 taptap O","issuer":"삼성카드","platforms":{
+   "cardgorilla":{"id":"51"}}},
+ {"name":"삼성카드 & MILEAGE PLATINUM (스카이패스)","issuer":"삼성카드","platforms":{
+   "cardgorilla":{"id":"49"}, "banksalad":{"id":"CARD000081"}}},
+ {"name":"현대카드 M","issuer":"현대카드","platforms":{
+   "cardgorilla":{"id":"2669"}}},
+ {"name":"KB국민 굿데이카드","issuer":"KB국민카드","platforms":{
+   "cardgorilla":{"id":"106"}, "banksalad":{"id":"CARD000156"}, "toss":{"id":"1121"}}},
+ {"name":"카드의정석 2","issuer":"우리카드","platforms":{
+   "cardgorilla":{"id":"2848"}}},
+ {"name":"LOCA LIKIT 2.0","issuer":"롯데카드","platforms":{
+   "cardgorilla":{"id":"2987"}}},
+ {"name":"NH농협 네이버페이 제휴(CCNH 샘플)","issuer":"NH농협카드","platforms":{
+   "naver":{"id":"20230610000000001453","company":"CCNH","issuer":"CCNH",
+            "productId":"20230610000000001453","promotionId":"20260521001731590500"}}}
+]
