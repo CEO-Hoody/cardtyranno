@@ -1,0 +1,5124 @@
+{
+ "month": "2026-06",
+ "source": "db",
+ "order": [
+  "삼성카드",
+  "현대카드",
+  "신한카드",
+  "KB국민카드",
+  "롯데카드",
+  "우리카드",
+  "하나카드",
+  "NH농협카드",
+  "BC카드",
+  "IBK기업"
+ ],
+ "apply": {
+  "삼성카드": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+  "현대카드": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+  "신한카드": "https://www.shinhancard.com/pconts/html/card/main.html",
+  "KB국민카드": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+  "롯데카드": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+  "우리카드": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+  "하나카드": "https://www.hanacard.co.kr/OPI41000000D.web",
+  "NH농협카드": "https://card.nonghyup.com/IDDCB0001.act",
+  "BC카드": "https://www.bccard.com/app/card/CreditCardMain.do",
+  "IBK기업": "https://card.ibk.co.kr/"
+ },
+ "cards": {
+  "삼성카드": [
+   {
+    "id": 1,
+    "name": "토스 삼성카드",
+    "img": "https://static.toss.im/assets/credit-card/toss_samsung.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10279",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 2,
+    "name": "삼성카드 taptap O",
+    "img": "https://static.toss.im/assets/credit-card/2936.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/17",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 16,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "영역별 월 5천~1만원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "통신(이동통신요금)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "대중교통(버스·지하철·택시)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "커피(스타벅스)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "50%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "영화(CGV·롯데시네마)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5천원(월2회)",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "쇼핑",
+        "편의점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "7%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "해외"
+       ],
+       "type": "적립",
+       "method": "빅포인트",
+       "value": "1.3%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/51"
+    }
+   },
+   {
+    "id": 3,
+    "name": "Toss taptap S",
+    "img": "https://static.toss.im/assets/credit-card/samsung-taptap-s.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/16",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 4,
+    "name": "삼성 iD 달달할인 카드",
+    "img": "https://static.toss.im/assets/credit-card/samsung-id-monthly-discount-bubble.png",
+    "fee": "29,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1366",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 5,
+    "name": "삼성 iD EV 카드",
+    "img": "https://static.toss.im/assets/credit-card/1797.png",
+    "fee": "15,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/5461",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 6,
+    "name": "삼성 iD PLUG-IN 카드",
+    "img": "https://static.toss.im/assets/credit-card/samsung_iDPLUG-IN.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10275",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 99,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 7,
+    "name": "AI 구독 클럽 삼성카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/samsung_AI_구독_클럽_삼성카드.png",
+    "fee": "20,000원",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/11045",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 8,
+    "name": "신세계이마트 삼성카드 SFC 7",
+    "img": "https://static.toss.im/assets/credit-card/1958.png",
+    "fee": "18,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/5936",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 9,
+    "name": "신세계이마트 삼성카드 SFC 2",
+    "img": "https://static.toss.im/assets/credit-card/2025070121.png",
+    "fee": "18,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/5331",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 10,
+    "name": "신세계이마트 삼성카드 SFC 4",
+    "img": "https://static.toss.im/assets/credit-card/2025070130.png",
+    "fee": "10,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6216",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 11,
+    "name": "신세계이마트 삼성카드 5",
+    "img": "https://static.toss.im/assets/credit-card/2025090103.png",
+    "fee": "12,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/5299",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 12,
+    "name": "네이버페이 taptap BY SAMSUNG",
+    "img": "https://static.toss.im/assets/credit-card/1676.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5085",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 13,
+    "name": "모니모카드",
+    "img": "https://static.toss.im/assets/credit-card/1915.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5838",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 14,
+    "name": "T나는혜택 삼성카드",
+    "img": "https://static.toss.im/assets/credit-card/1912.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5854",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 15,
+    "name": "삼성 SFC & MILEAGE PLATINUM",
+    "img": "https://static.toss.im/assets/credit-card/2025080801.png",
+    "fee": "47,000원",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/6320",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 16,
+    "name": "국민행복 삼성카드 V2",
+    "img": "https://static.toss.im/assets/credit-card/2025070120.png",
+    "fee": "없음",
+    "benefit": "정부 지원·바우처 연계 카드",
+    "source": "https://card-lounge.toss.im/card/5463",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 17,
+    "name": "SSG.COM 삼성카드",
+    "img": "https://static.toss.im/assets/credit-card/1653.png",
+    "fee": "15,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/5165",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 18,
+    "name": "신세계이마트 삼성카드 7",
+    "img": "https://static.toss.im/assets/credit-card/samsung-sinsegae-emart.png",
+    "fee": "18,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/947",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 19,
+    "name": "THE 1 (스카이패스)",
+    "img": "https://static.toss.im/assets/credit-card/6809.png",
+    "fee": "245,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10409",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 48,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 20,
+    "name": "삼성 iD SELECT ALL 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 1,
+    "detail": {
+     "prev_spend": "40만원",
+     "max_benefit": "월 통합 7천~1.5만원(실적별)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": null,
+       "unit": "월",
+       "applies": [
+        "선택형 할인 전체"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "아파트관리비",
+        "통신"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "교육비"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "국내 전가맹점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "0.7%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "음식점",
+        "편의점",
+        "할인점",
+        "주유"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "7%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "온라인쇼핑",
+        "배달앱",
+        "병원",
+        "약국"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "7%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "디지털콘텐츠",
+        "온라인멤버십"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "50%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "다이소",
+        "여행",
+        "도서",
+        "와인"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "해외"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "2%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2885",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD004534"
+    }
+   },
+   {
+    "id": 21,
+    "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 3,
+    "detail": {
+     "prev_spend": "없음",
+     "max_benefit": "마일리지 적립 한도 없음(기본)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "무제한"
+      },
+      {
+       "id": "g2",
+       "scope": "통합",
+       "amount": 2000,
+       "unit": "월마일",
+       "applies": [
+        "선택 영역"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "국내외 전가맹점"
+       ],
+       "type": "적립",
+       "method": "스카이패스",
+       "value": "1,000원당 1마일",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "국내 백화점·주유·커피·편의점·택시 또는 해외"
+       ],
+       "type": "적립",
+       "method": "스카이패스",
+       "value": "1,000원당 2마일",
+       "tier": "선택",
+       "limit": "g2"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/49",
+     "아정당": "https://www.ajd.co.kr/card/detail/105",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000081"
+    }
+   },
+   {
+    "id": 22,
+    "name": "삼성 iD SELECT ON 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 11,
+    "detail": {
+     "prev_spend": "40만원",
+     "max_benefit": "월 통합 한도(실적별)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": null,
+       "unit": "월",
+       "applies": [
+        "선택형 할인"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "음식점",
+        "온라인몰(금·토·일)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "생활편의"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "인앱결제",
+        "디지털콘텐츠"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "50%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2886"
+    }
+   },
+   {
+    "id": 23,
+    "name": "삼성 iD SIMPLE 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 17,
+    "detail": {
+     "prev_spend": "없음",
+     "max_benefit": "무실적 0.7~1% 한도없음",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "무제한"
+      },
+      {
+       "id": "g2",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "국내외 전가맹점(건당 10만원 미만)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "0.7%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "국내외 전가맹점(건당 10만원 이상)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "1%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "온라인쇼핑몰 멤버십"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "50%",
+       "tier": "추가",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "영화"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "3,000원",
+       "tier": "추가",
+       "limit": "g2"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2376"
+    }
+   },
+   {
+    "id": 24,
+    "name": "THE iD. 1st",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 22,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 25,
+    "name": "taptap DIGITAL",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 25,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 26,
+    "name": "삼성 iD GLOBAL 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 28,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 27,
+    "name": "삼성 iD ON 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "온라인 신규회원 연회비 100% 캐시백"
+     }
+    ],
+    "rank": 52,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 28,
+    "name": "네이버페이 taptap",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 76,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 29,
+    "name": "THE iD. PLATINUM(포인트)",
+    "img": "",
+    "fee": "",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 85,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 30,
+    "name": "삼성 iD ALL 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [],
+    "rank": 93,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 31,
+    "name": "taptap DRIVE",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001",
+    "events": [
+     {
+      "platform": "아정당",
+      "amount": "최대 93.8만원"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "현대카드": [
+   {
+    "id": 32,
+    "name": "현대카드 M",
+    "img": "https://static.toss.im/assets/credit-card/wood.png",
+    "fee": "30,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1827",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 68.5만원 캐시백"
+     }
+    ],
+    "rank": 9,
+    "detail": {
+     "prev_spend": "50만원",
+     "max_benefit": "M포인트 적립(추가 월 1만M)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "무제한"
+      },
+      {
+       "id": "g2",
+       "scope": "통합",
+       "amount": 10000,
+       "unit": "월M",
+       "applies": [
+        "온라인몰",
+        "일반음식점",
+        "해외"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "국내외 전가맹점"
+       ],
+       "type": "적립",
+       "method": "M포인트",
+       "value": "1.5%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "온라인몰",
+        "일반음식점",
+        "해외"
+       ],
+       "type": "적립",
+       "method": "M포인트",
+       "value": "5%",
+       "tier": "추가",
+       "limit": "g2"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2669"
+    }
+   },
+   {
+    "id": 33,
+    "name": "현대카드 ZERO Edition3(포인트형)",
+    "img": "https://static.toss.im/assets/credit-card/2266.png",
+    "fee": "15,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/1822",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "1.5만원 캐시백"
+     }
+    ],
+    "rank": 95,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 34,
+    "name": "현대카드 ZERO Edition3(할인형)",
+    "img": "https://static.toss.im/assets/credit-card/2266.png",
+    "fee": "15,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1820",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "1.5만원 캐시백"
+     }
+    ],
+    "rank": 26,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 35,
+    "name": "현대카드 MX Black Edition2",
+    "img": "https://static.toss.im/assets/credit-card/2803.png",
+    "fee": "200,000원",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/1900",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "20만원 캐시백"
+     }
+    ],
+    "rank": 88,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 36,
+    "name": "현대카드 Z family Edition2",
+    "img": "https://static.toss.im/assets/credit-card/10192.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1833",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 37,
+    "name": "현대카드 Z work Edition2",
+    "img": "https://static.toss.im/assets/credit-card/10194.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1835",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 38,
+    "name": "현대카드 Z play",
+    "img": "https://static.toss.im/assets/credit-card/10188.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1831",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 39,
+    "name": "NOL 카드",
+    "img": "https://static.toss.im/assets/credit-card/2078.png",
+    "fee": "20,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6172",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 40,
+    "name": "배민현대카드",
+    "img": "https://static.toss.im/assets/credit-card/1683.png",
+    "fee": "10,000원",
+    "benefit": "취미·문화·생활 특화 카드",
+    "source": "https://card-lounge.toss.im/card/5049",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 41,
+    "name": "네이버 현대카드",
+    "img": "https://static.toss.im/assets/credit-card/2025070111.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5735",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 42,
+    "name": "네이버 현대카드 Edition2",
+    "img": "https://static.toss.im/assets/credit-card/hyundai-naver-edition2.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10211",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": 68,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 43,
+    "name": "Hyundai EV카드",
+    "img": "https://static.toss.im/assets/credit-card/2133.png",
+    "fee": "30,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/6288",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 44,
+    "name": "이마트 e카드 Edition2",
+    "img": "https://static.toss.im/assets/credit-card/1664.png",
+    "fee": "20,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/5131",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 45,
+    "name": "Hyundai Mobility Platinum",
+    "img": "https://static.toss.im/assets/credit-card/2050.png",
+    "fee": "70,000원",
+    "benefit": "주유·드라이브 영역 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/6118",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 46,
+    "name": "Kia Members 전기차 카드",
+    "img": "https://static.toss.im/assets/credit-card/2259.png",
+    "fee": "30,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/6522",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 47,
+    "name": "Kia Members 카드 Edition2",
+    "img": "https://static.toss.im/assets/credit-card/3045.png",
+    "fee": "30,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/7224",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 48,
+    "name": "SKT-현대카드 M Edition3",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/hyundai_SKT_현대카드_M_Edition3_통신할인형2_0.png",
+    "fee": "20,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10595",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 49,
+    "name": "대한항공카드 the First Edition2",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/hd_koreanair_the_first_edition2.png",
+    "fee": "800,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10341",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 89만원 캐시백"
+     }
+    ],
+    "rank": 27,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 50,
+    "name": "Kia Members 신용카드 Edition2",
+    "img": "https://static.toss.im/assets/credit-card/3045.png",
+    "fee": "30,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/7224",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 51,
+    "name": "American Express Gold Card Edition2",
+    "img": "",
+    "fee": "",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 50만원 캐시백"
+     }
+    ],
+    "rank": 6,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 52,
+    "name": "현대카드 Summit",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "25만원 캐시백"
+     }
+    ],
+    "rank": 20,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 53,
+    "name": "대한항공카드 300",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 79만원 캐시백"
+     }
+    ],
+    "rank": 30,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 54,
+    "name": "the Orange",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "25만원 캐시백"
+     }
+    ],
+    "rank": 38,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 55,
+    "name": "대한항공카드 060",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 73만원 캐시백"
+     }
+    ],
+    "rank": 47,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 56,
+    "name": "대한항공카드 120",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 76만원 캐시백"
+     }
+    ],
+    "rank": 50,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 57,
+    "name": "American Express Green Card Edition2",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 25만원 캐시백"
+     }
+    ],
+    "rank": 55,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 58,
+    "name": "현대카드 ZERO Up(할인형)",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "3만원 캐시백"
+     }
+    ],
+    "rank": 59,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 59,
+    "name": "현대카드T",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "1.5만원 캐시백"
+     }
+    ],
+    "rank": 63,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 60,
+    "name": "에너지플러스 현대카드",
+    "img": "",
+    "fee": "",
+    "benefit": "주유·드라이브 영역 할인 중심 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 60만원 캐시백"
+     },
+     {
+      "platform": "아정당",
+      "amount": "최대 60만원 캐시백"
+     }
+    ],
+    "rank": 67,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 61,
+    "name": "현대카드O",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "1.5만원 캐시백"
+     }
+    ],
+    "rank": 72,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 62,
+    "name": "American Express The Platinum Card Edition2",
+    "img": "",
+    "fee": "",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [],
+    "rank": 100,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "신한카드": [
+   {
+    "id": 63,
+    "name": "토스 신한카드 Mr.Life",
+    "img": "https://static.toss.im/assets/credit-card/3480.png",
+    "fee": "15,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1259",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "생활할인 월 3천~1만원(실적별)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": null,
+       "unit": "월",
+       "applies": [
+        "공과금",
+        "통신",
+        "대형마트"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "전기요금",
+        "도시가스",
+        "공과금"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "통신(SKT·KT·LGU+)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "대형마트(이마트·홈플러스·롯데마트)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "일 1회 최대 5천원",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/13",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000004"
+    }
+   },
+   {
+    "id": 64,
+    "name": "토스 신한카드 YOLO",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_toss_yolo.png",
+    "fee": "15,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1261",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/14"
+    }
+   },
+   {
+    "id": 65,
+    "name": "신한카드 Deep Oil",
+    "img": "https://static.toss.im/assets/credit-card/2025070113.png",
+    "fee": "10,000원",
+    "benefit": "주유·드라이브 영역 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/34",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "84만원 캐시백"
+     },
+     {
+      "platform": "아정당",
+      "amount": "최대 54만원"
+     }
+    ],
+    "rank": 23,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "월 42,500원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "주유",
+        "충전"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "주차장"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/39",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000118"
+    }
+   },
+   {
+    "id": 66,
+    "name": "신한카드 Deep Dream Platinum+",
+    "img": "https://static.toss.im/assets/credit-card/993.png",
+    "fee": "30,000원",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/993",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 67,
+    "name": "신한카드 Deep Dream",
+    "img": "https://static.toss.im/assets/credit-card/shinhan_deepdream.png",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/989",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 68,
+    "name": "신한카드 EV",
+    "img": "https://static.toss.im/assets/credit-card/1937.png",
+    "fee": "",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/1937",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 69,
+    "name": "신한카드 EVerywhere",
+    "img": "https://static.toss.im/assets/credit-card/2025090105.png",
+    "fee": "19,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/2025090105",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 70,
+    "name": "신한카드 Simple Plan+",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_simple_plan_plus_core.png",
+    "fee": "47,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/8594",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 35,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 71,
+    "name": "LG전자 The 구독케어 신한카드",
+    "img": "https://static.toss.im/assets/credit-card/8322.png",
+    "fee": "",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/8322",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 72,
+    "name": "신한카드 처음(ANNIVERSE)",
+    "img": "https://static.toss.im/assets/credit-card/2934.png",
+    "fee": "15,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10023",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 18,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "월 36,000원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "음식점"
+       ],
+       "type": "적립",
+       "method": "포인트",
+       "value": "5%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "커피전문점"
+       ],
+       "type": "적립",
+       "method": "포인트",
+       "value": "5%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2759"
+    }
+   },
+   {
+    "id": 73,
+    "name": "신한카드 SOL트래블",
+    "img": "https://static.toss.im/assets/credit-card/8325.png",
+    "fee": "27,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10385",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 74,
+    "name": "신한카드 RPM Platinum#",
+    "img": "https://static.toss.im/assets/credit-card/2256.png",
+    "fee": "27,000원",
+    "benefit": "주유·드라이브 영역 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/5079",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 75,
+    "name": "K-패스 신한카드",
+    "img": "https://static.toss.im/assets/credit-card/2795.png",
+    "fee": "7,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/1893",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 76,
+    "name": "신한카드 Discount Plan",
+    "img": "https://static.toss.im/assets/credit-card/8594.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10293",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 13,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 77,
+    "name": "네이버페이 라인프렌즈 신한카드",
+    "img": "https://static.toss.im/assets/credit-card/1875.png",
+    "fee": "7,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5769",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 78,
+    "name": "신한카드 SOL Plan",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/shinhan_SOL_Plan.png",
+    "fee": "30,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/11553",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 79,
+    "name": "토스 신한카드 YOLO ⓘ",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_toss_yolo.png",
+    "fee": "15,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1261",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 80,
+    "name": "신한카드 The CLASSIC-Y",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%20The%20CLASSIC-Y.png",
+    "fee": "100,000원",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/6088",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 81,
+    "name": "RPM Platinum#",
+    "img": "https://static.toss.im/assets/credit-card/2256.png",
+    "fee": "27,000원",
+    "benefit": "주유·드라이브 영역 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/5079",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 82,
+    "name": "신한카드 Deep Making",
+    "img": "https://static.toss.im/assets/credit-card/1174.png",
+    "fee": "30,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1174",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 83,
+    "name": "신한카드 국민행복",
+    "img": "",
+    "fee": "없음",
+    "benefit": "정부 지원·바우처 연계 카드",
+    "source": "https://card-lounge.toss.im/card/1605",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 84,
+    "name": "신한카드 Mr.Life",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 2,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "생활할인 월 3천~1만원(실적별)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": null,
+       "unit": "월",
+       "applies": [
+        "공과금",
+        "통신",
+        "대형마트"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "전기요금",
+        "도시가스",
+        "공과금"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "통신(SKT·KT·LGU+)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "대형마트(이마트·홈플러스·롯데마트)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "일 1회 최대 5천원",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/13",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000004"
+    }
+   },
+   {
+    "id": 85,
+    "name": "신한카드 Point Plan",
+    "img": "",
+    "fee": "",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 79,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 86,
+    "name": "신한카드 Air One",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 44,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 87,
+    "name": "신한카드 The BEST-F",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 45,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 88,
+    "name": "메리어트 본보이 더 베스트 신한카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 60,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 89,
+    "name": "신한카드 Globus",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 61,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 90,
+    "name": "신한카드 The CLASSIC+",
+    "img": "",
+    "fee": "",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 77,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 91,
+    "name": "Haru(Hoshino Resorts)",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [],
+    "rank": 98,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "KB국민카드": [
+   {
+    "id": 92,
+    "name": "KB국민 굿데이카드",
+    "img": "https://static.toss.im/assets/credit-card/1121.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1121",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [
+     {
+      "platform": "아정당",
+      "amount": "최대 55만원 캐시백"
+     }
+    ],
+    "rank": null,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "연 70.8만원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      },
+      {
+       "id": "g2",
+       "scope": "통합",
+       "amount": null,
+       "unit": "월",
+       "applies": [
+        "음식점·카페·편의점·약국",
+        "학원·휘트니스"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "주유",
+        "충전"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "리터당 60원",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "통신",
+        "인터넷",
+        "케이블TV"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "버스",
+        "지하철",
+        "택시"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "음식점",
+        "카페",
+        "편의점",
+        "약국"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "추가",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "학원",
+        "휘트니스"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "추가",
+       "limit": "g2"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/106",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000156"
+    }
+   },
+   {
+    "id": 93,
+    "name": "KB국민 굿데이올림카드",
+    "img": "https://static.toss.im/assets/credit-card/kb_goodday_olim.png",
+    "fee": "20,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/50",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "월 최대 77,400원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "대중교통",
+        "통신"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "음식점",
+        "편의점",
+        "커피"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "대형마트",
+        "학원"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "해외"
+       ],
+       "type": "적립",
+       "method": "캐시백",
+       "value": "5%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/115",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000114"
+    }
+   },
+   {
+    "id": 94,
+    "name": "KB국민 다담카드",
+    "img": "https://static.toss.im/assets/credit-card/kb_dadam.png",
+    "fee": "20,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/701",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 95,
+    "name": "KB국민 WE:SH Travel",
+    "img": "https://static.toss.im/assets/credit-card/2801.png",
+    "fee": "25,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1906",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 96,
+    "name": "KB 청춘대로 톡톡카드",
+    "img": "https://static.toss.im/assets/credit-card/55.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/55",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 97,
+    "name": "KB국민 My WE:SH 카드",
+    "img": "https://static.toss.im/assets/credit-card/1468.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1467",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 86만원 캐시백"
+     }
+    ],
+    "rank": 8,
+    "detail": {
+     "prev_spend": "40만원",
+     "max_benefit": "선택 영역 월 1~2만원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": null,
+       "unit": "월",
+       "applies": [
+        "선택 서비스팩"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "배달",
+        "커피"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "택시",
+        "커피",
+        "영화관"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "택시·커피 5% / 영화 30%",
+       "tier": "선택",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "미용실",
+        "스포츠",
+        "올리브영",
+        "온라인서점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5%",
+       "tier": "선택",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000128"
+    }
+   },
+   {
+    "id": 98,
+    "name": "KB국민 Easy on카드",
+    "img": "https://static.toss.im/assets/credit-card/1097.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1097",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 99,
+    "name": "볼트업 KB EV 카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/kb_볼트업_KB_EV_카드.png",
+    "fee": "20,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10845",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 100,
+    "name": "KB국민 WE:SH Daily 카드",
+    "img": "https://static.toss.im/assets/credit-card/2862.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1951",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 101,
+    "name": "KB국민 iMND 카드",
+    "img": "https://static.toss.im/assets/credit-card/1874.png",
+    "fee": "없음",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5759",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 102,
+    "name": "쿠팡 와우카드",
+    "img": "https://static.toss.im/assets/credit-card/2025070104.png",
+    "fee": "20,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6090",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": 51,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 103,
+    "name": "T-economy",
+    "img": "https://static.toss.im/assets/credit-card/1932.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5884",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 104,
+    "name": "KB국민 알뜰폰 Hub Ⅱ카드",
+    "img": "",
+    "fee": "15,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6336",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 105,
+    "name": "굿데이카드",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 86만원 캐시백"
+     }
+    ],
+    "rank": 4,
+    "detail": null,
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/106",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000156"
+    }
+   },
+   {
+    "id": 106,
+    "name": "KB NEED Pay 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 86만원 캐시백"
+     }
+    ],
+    "rank": 12,
+    "detail": {
+     "prev_spend": "40만원",
+     "max_benefit": "간편결제 월 3만원·연 36만원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": 30000,
+       "unit": "월",
+       "applies": [
+        "간편결제"
+       ]
+      },
+      {
+       "id": "g2",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "KB Pay"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "15%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "네이버페이",
+        "카카오페이",
+        "토스페이"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "디지털콘텐츠",
+        "구독멤버십"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "30%",
+       "tier": "추가",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "온라인패션몰(무신사·지그재그·29CM·에이블리)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5%",
+       "tier": "추가",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "해외"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "2%",
+       "tier": "기본",
+       "limit": "g2"
+      }
+     ]
+    },
+    "plat": {}
+   },
+   {
+    "id": 107,
+    "name": "KB YOU Prime 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 86만원 캐시백"
+     }
+    ],
+    "rank": 21,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 108,
+    "name": "KB YOU Wish 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 86만원 캐시백"
+     }
+    ],
+    "rank": 31,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 109,
+    "name": "가온올림카드(실속형)",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": 58,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 110,
+    "name": "HERITAGE Smart [대한항공 마일리지형]",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": 71,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 111,
+    "name": "WE:SH Travel",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": 75,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 112,
+    "name": "BeV V카드(스카이패스형)",
+    "img": "",
+    "fee": "",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+    "events": [],
+    "rank": 87,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "롯데카드": [
+   {
+    "id": 113,
+    "name": "토스 LIKIT ALL",
+    "img": "https://static.toss.im/assets/credit-card/1418.png",
+    "fee": "14,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1418",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "50만원",
+     "max_benefit": "모든 가맹점 1% + 주유·편의점",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "모든 가맹점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "1%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "주유소·충전소"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5,000원",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "편의점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "1,000원",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "국내외 전가맹점"
+       ],
+       "type": "적립",
+       "method": "L.POINT",
+       "value": "0.2%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/210"
+    }
+   },
+   {
+    "id": 114,
+    "name": "LOCA LIKIT 1.2 카드",
+    "img": "https://static.toss.im/assets/credit-card/1677.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5083",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "없음",
+     "max_benefit": "스타벅스·영화 각 월 1만원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "모든 가맹점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "1.2%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "해외"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "2%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "스타벅스",
+        "영화"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "월 1만원 한도",
+       "tier": "추가",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2261",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000038"
+    }
+   },
+   {
+    "id": 115,
+    "name": "LOCA 365",
+    "img": "https://static.toss.im/assets/credit-card/1477.png",
+    "fee": "20,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1477",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "50만원",
+     "max_benefit": "월 36,500원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "아파트관리비"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "공과금"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2330"
+    }
+   },
+   {
+    "id": 116,
+    "name": "LG구독엔로카",
+    "img": "https://static.toss.im/assets/credit-card/lottecard-lg-subscribe.png",
+    "fee": "20,000원",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10207",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 117,
+    "name": "DIGILOCA SKYPASS",
+    "img": "https://static.toss.im/assets/credit-card/2025090102.png",
+    "fee": "20,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10343",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 118,
+    "name": "Mobile x LOCA SE",
+    "img": "https://static.toss.im/assets/credit-card/25090301.png",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10365",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 119,
+    "name": "LOCA LIKIT",
+    "img": "https://static.toss.im/assets/credit-card/1305.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1583",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 120,
+    "name": "LOCA LIKIT Eat",
+    "img": "https://static.toss.im/assets/credit-card/1770.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1699",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 121,
+    "name": "LOCA LIKIT Shop",
+    "img": "https://static.toss.im/assets/credit-card/1810.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1731",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 122,
+    "name": "롯데하이마트 Hi-Plan 롤라카드",
+    "img": "https://static.toss.im/assets/credit-card/1987.png",
+    "fee": "",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1987",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 123,
+    "name": "디지로카 Link",
+    "img": "https://static.toss.im/assets/credit-card/new/lotte_DiGiLOCA_LINK.png",
+    "fee": "30,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10489",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 124,
+    "name": "LOCA Biz",
+    "img": "https://static.toss.im/assets/credit-card/new/lotte_LOCA_Biz.JPG",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10491",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 125,
+    "name": "보험엔로카",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/lotte_보험엔로카.png",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/2098",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 126,
+    "name": "LOCA LIKIT Play",
+    "img": "https://static.toss.im/assets/credit-card/1771.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1701",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 82,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 127,
+    "name": "롯데 포인트플러스 카드",
+    "img": "https://static.toss.im/assets/credit-card/1804.png",
+    "fee": "5,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/5563",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 128,
+    "name": "롯데멤버스 카드",
+    "img": "https://static.toss.im/assets/credit-card/10214.png",
+    "fee": "30,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/10143",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 129,
+    "name": "모바일엔디지로카",
+    "img": "https://static.toss.im/assets/credit-card/0037.png",
+    "fee": "20,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10289",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 130,
+    "name": "춘식이 모바일 로카",
+    "img": "https://static.toss.im/assets/credit-card/25090302.png",
+    "fee": "20,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10367",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 131,
+    "name": "롯데카드 TELLO SE",
+    "img": "https://static.toss.im/assets/credit-card/1903.png",
+    "fee": "25,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5836",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 132,
+    "name": "LG U+ X LOCA",
+    "img": "https://static.toss.im/assets/credit-card/2123.png",
+    "fee": "20,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6266",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 133,
+    "name": "롯데마트&MAXX 카드",
+    "img": "https://static.toss.im/assets/credit-card/2314.png",
+    "fee": "18,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6637",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 134,
+    "name": "The CJ 롯데카드",
+    "img": "https://static.toss.im/assets/credit-card/2250.png",
+    "fee": "5,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/6508",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 135,
+    "name": "카카오뱅크 롯데카드",
+    "img": "https://static.toss.im/assets/credit-card/1922.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5864",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 136,
+    "name": "Trip to 로카",
+    "img": "",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1703",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 137,
+    "name": "LOCA Lite",
+    "img": "",
+    "fee": "1,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5892",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 138,
+    "name": "LOCA LIKIT 2.0",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 7,
+    "detail": {
+     "prev_spend": "40만원",
+     "max_benefit": "스타벅스·영화 각 월 1만원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "모든 가맹점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "기본 할인",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "스타벅스"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "월 1만원 한도",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "영화"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "월 1만원 한도",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2987"
+    }
+   },
+   {
+    "id": 139,
+    "name": "LOCA LIKIT 1.5",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 14,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 140,
+    "name": "LOCA 365 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 19,
+    "detail": null,
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2330"
+    }
+   },
+   {
+    "id": 141,
+    "name": "LOCA LIKIT 1.2",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 33,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 142,
+    "name": "디지로카 London",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 37,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 143,
+    "name": "디지로카 Las Vegas",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 43,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 144,
+    "name": "힐튼 아너스 아멕스 프리미엄",
+    "img": "",
+    "fee": "",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 84,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 145,
+    "name": "LOCA Professional",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 86,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 146,
+    "name": "디지로카 Paris",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [],
+    "rank": 90,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 147,
+    "name": "롯데카드 LOCA 365",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "url": "https://www.lottecard.co.kr/app/LPCDAACR_V100.lc",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "84만원 캐시백"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "우리카드": [
+   {
+    "id": 148,
+    "name": "카드의정석 2",
+    "img": "https://static.toss.im/assets/credit-card/10550.png",
+    "fee": "22,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10175",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 5,
+    "detail": {
+     "prev_spend": "없음",
+     "max_benefit": "분기별 최대 15,000원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": 15000,
+       "unit": "분기",
+       "applies": [
+        "전가맹점"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "국내외 전가맹점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "1.2%",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2848"
+    }
+   },
+   {
+    "id": 149,
+    "name": "카드의정석 SHOPPING+",
+    "img": "https://static.toss.im/assets/credit-card/2856.png",
+    "fee": "10,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1959",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 10,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "월 통합 1만원(실적별)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "통합",
+       "amount": null,
+       "unit": "월",
+       "applies": [
+        "온·오프 쇼핑",
+        "간편결제"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "온라인·오프라인 쇼핑"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "10%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "간편결제"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5%",
+       "tier": "추가",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "주말 주유"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "리터당 60원",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/85",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD003739"
+    }
+   },
+   {
+    "id": 150,
+    "name": "카드의정석 EVERY MILE SKYPASS",
+    "img": "https://static.toss.im/assets/credit-card/10168.png",
+    "fee": "39,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/1761",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "3.9만원 캐시백"
+     }
+    ],
+    "rank": 36,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 151,
+    "name": "DA카드의정석Ⅱ",
+    "img": "https://static.toss.im/assets/credit-card/2812.png",
+    "fee": "12,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1924",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "1.2만원 캐시백"
+     }
+    ],
+    "rank": 66,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 152,
+    "name": "카드의정석 NEW우리V카드",
+    "img": "https://static.toss.im/assets/credit-card/1668.png",
+    "fee": "2,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5117",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 153,
+    "name": "카드의정석 EVERY DISCOUNT",
+    "img": "https://static.toss.im/assets/credit-card/10170.png",
+    "fee": "12,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10127",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 154,
+    "name": "카드의정석 EVERY POINT",
+    "img": "https://static.toss.im/assets/credit-card/10172.png",
+    "fee": "12,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10129",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 155,
+    "name": "SKT 우리카드+",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/woori_SKT_%EC%9A%B0%EB%A6%AC%EC%B9%B4%EB%93%9C.png",
+    "fee": "10,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/17011",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 156,
+    "name": "카드의정석2 SIMPLE",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/woori_%EC%B9%B4%EB%93%9C%EC%9D%98%EC%A0%95%EC%84%9D2_SIMPLE.png",
+    "fee": "7,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/11699",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 157,
+    "name": "DA@카드의정석 DISCOUNT",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/woori_DA_%EC%B9%B4%EB%93%9C%EC%9D%98%EC%A0%95%EC%84%9D_DISCOUNT.png",
+    "fee": "5,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/17335",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 158,
+    "name": "로얄블루1000",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/woori_%EB%A1%9C%EC%96%84%EB%B8%94%EB%A3%A81000.png",
+    "fee": "1,000,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/17237",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 159,
+    "name": "LG전자 우리카드",
+    "img": "https://static.toss.im/assets/credit-card/7093.png",
+    "fee": "15,000원",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10217",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 160,
+    "name": "D4카드의정석 II",
+    "img": "https://static.toss.im/assets/credit-card/2858.png",
+    "fee": "12,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1957",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "30만원",
+     "max_benefit": "월 36,300원",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "커피(스타벅스·투썸·커피빈·폴바셋)"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "55%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "대중교통"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "33%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "편의점"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "11%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "영화관"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "할인",
+       "tier": "기본",
+       "limit": "g1"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2686",
+     "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD004420"
+    }
+   },
+   {
+    "id": 161,
+    "name": "KT 카드의정석 SUPER DC Ⅱ+",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/woori_KT_카드의정석_SUPER_DC.png",
+    "fee": "20,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/17283",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 162,
+    "name": "LG U+ NU 우리카드 Ⅱ",
+    "img": "https://static.toss.im/assets/credit-card/7899.png",
+    "fee": "20,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10231",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 163,
+    "name": "카드의정석 I&U+",
+    "img": "https://static.toss.im/assets/credit-card/2860.png",
+    "fee": "12,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1961",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 74,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 164,
+    "name": "U+ X 우리카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/woori_U_X_우리카드.png",
+    "fee": "25,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/11653",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 165,
+    "name": "ALL 우리카드 Infinite",
+    "img": "https://static.toss.im/assets/credit-card/25082002.png",
+    "fee": "500,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10315",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 166,
+    "name": "코웨이 우리카드II",
+    "img": "https://static.toss.im/assets/credit-card/080102.png",
+    "fee": "15,000원",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10255",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 167,
+    "name": "쿠쿠 우리카드",
+    "img": "https://static.toss.im/assets/credit-card/8150.png",
+    "fee": "15,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10257",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 168,
+    "name": "우리 K-패스",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/woori_우리_K_패스.png",
+    "fee": "13,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/17193",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 169,
+    "name": "우리카드 MILE&POINT",
+    "img": "",
+    "fee": "",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 24,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 170,
+    "name": "우리카드 7CORE",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 32,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 171,
+    "name": "카드의정석2 EVERY DISCOUNT",
+    "img": "",
+    "fee": "",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 39,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 172,
+    "name": "카드의정석2 SUPER",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 41,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 173,
+    "name": "the OPUS silver",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 46,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 174,
+    "name": "카드의정석 TEN",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 83,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 175,
+    "name": "카드의정석2 EVERY POINT",
+    "img": "",
+    "fee": "",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [],
+    "rank": 89,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 176,
+    "name": "우리카드 D4카드의정석Ⅱ",
+    "img": "",
+    "fee": "",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "연회비 100% 캐시백"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "하나카드": [
+   {
+    "id": 177,
+    "name": "하나 클럽SK카드(CLUB SK)",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/%ED%95%98%EB%82%98%20%ED%81%B4%EB%9F%BDSK%EC%B9%B4%EB%93%9C%28CLUB%20SK%29.png",
+    "fee": "6,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "40만원",
+     "max_benefit": "실적 100만원 이상 시 최대 혜택",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      },
+      {
+       "id": "g2",
+       "scope": "개별",
+       "amount": null,
+       "unit": "월"
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "SK주유소"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "리터당 100~150원",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "SK충전소"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "리터당 35~70원",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "SKT 통신요금"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "2,000~15,000원",
+       "tier": "기본",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "마트",
+        "외식",
+        "학원"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "5~10%",
+       "tier": "추가",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "대중교통"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "3.5~7%",
+       "tier": "추가",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "커피"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "2.5~5%",
+       "tier": "추가",
+       "limit": "g2"
+      },
+      {
+       "areas": [
+        "영화"
+       ],
+       "type": "할인",
+       "method": "청구",
+       "value": "1,500~3,000원",
+       "tier": "추가",
+       "limit": "g2"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/227",
+     "아정당": "https://www.ajd.co.kr/card/detail/163"
+    }
+   },
+   {
+    "id": 178,
+    "name": "하나 스카이패스 아멕스 플래티늄",
+    "img": "https://static.toss.im/assets/credit-card/1420.png",
+    "fee": "45,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1420",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 179,
+    "name": "원더카드2.0 FREE+",
+    "img": "https://static.toss.im/assets/credit-card/20030.png",
+    "fee": "19,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10209",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": 70,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 180,
+    "name": "JADE Classic",
+    "img": "https://static.toss.im/assets/credit-card/2182.png",
+    "fee": "120,000원",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/1818",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": 34,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 181,
+    "name": "JADE Prime",
+    "img": "https://static.toss.im/assets/credit-card/2817.png",
+    "fee": "300,000원",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/1932",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": 97,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 182,
+    "name": "트래블로그 신용카드",
+    "img": "https://static.toss.im/assets/credit-card/1878.png",
+    "fee": "20,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1793",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": {
+     "prev_spend": "없음",
+     "max_benefit": "해외·여행 3% 적립(월 10만 하나머니)",
+     "limit_groups": [
+      {
+       "id": "g1",
+       "scope": "개별",
+       "amount": null,
+       "unit": "무제한"
+      },
+      {
+       "id": "g2",
+       "scope": "통합",
+       "amount": 100000,
+       "unit": "월하나머니",
+       "applies": [
+        "해외",
+        "항공",
+        "면세점",
+        "여행"
+       ]
+      }
+     ],
+     "items": [
+      {
+       "areas": [
+        "국내외 전가맹점"
+       ],
+       "type": "적립",
+       "method": "하나머니",
+       "value": "1%",
+       "tier": "기본",
+       "limit": "g1"
+      },
+      {
+       "areas": [
+        "해외",
+        "항공",
+        "면세점",
+        "여행"
+       ],
+       "type": "적립",
+       "method": "하나머니",
+       "value": "3%",
+       "tier": "추가",
+       "limit": "g2"
+      }
+     ]
+    },
+    "plat": {
+     "카드고릴라": "https://www.card-gorilla.com/card/detail/2529"
+    }
+   },
+   {
+    "id": 183,
+    "name": "HD현대 패밀리카드",
+    "img": "https://static.toss.im/assets/credit-card/2132.png",
+    "fee": "100,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/6286",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 184,
+    "name": "BIGPOT(빅팟) 카드",
+    "img": "https://static.toss.im/assets/credit-card/1629.png",
+    "fee": "4,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5235",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 185,
+    "name": "SMART ANY 카드",
+    "img": "https://static.toss.im/assets/credit-card/1669.png",
+    "fee": "5,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5115",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 186,
+    "name": "더 심플 하나카드",
+    "img": "https://static.toss.im/assets/credit-card/2025070108.png",
+    "fee": "25,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/6420",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 187,
+    "name": "하나 MULTI Living",
+    "img": "https://static.toss.im/assets/credit-card/1340.png",
+    "fee": "12,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1340",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 188,
+    "name": "하나 MULTI Oil",
+    "img": "https://static.toss.im/assets/credit-card/1338.png",
+    "fee": "15,000원",
+    "benefit": "주유·드라이브 영역 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/1338",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 189,
+    "name": "Any PLUS 카드",
+    "img": "https://static.toss.im/assets/credit-card/1984.png",
+    "fee": "15,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5988",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 190,
+    "name": "원더카드2.0 LIVING",
+    "img": "https://static.toss.im/assets/credit-card/6024.png",
+    "fee": "19,900원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10223",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 191,
+    "name": "원더카드2.0 DAILY",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/hana_원더카드2_0_DAILY.png",
+    "fee": "19,900원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10555",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 192,
+    "name": "원더카드2.0 HAPPY",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/hana_원더카드2_0_HAPPY.png",
+    "fee": "19,900원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10557",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 193,
+    "name": "원더카드 2.0 T",
+    "img": "https://static.toss.im/assets/credit-card/0122.png",
+    "fee": "19,900원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10371",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 194,
+    "name": "모두의 신세계 하나카드",
+    "img": "https://static.toss.im/assets/credit-card/2172.png",
+    "fee": "12,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6372",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 195,
+    "name": "#tag1카드 Orange",
+    "img": "https://static.toss.im/assets/credit-card/1093.png",
+    "fee": "12,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1093",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 196,
+    "name": "#tag1 카드 Navy",
+    "img": "https://static.toss.im/assets/credit-card/1422.png",
+    "fee": "12,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1422",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 197,
+    "name": "# MY WAY",
+    "img": "https://static.toss.im/assets/credit-card/2500.png",
+    "fee": "20,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/6997",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 198,
+    "name": "1Q Daily+",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/hana_1Q_Daily_원큐_데일리플러스.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/18347",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 199,
+    "name": "MG+ S 하나카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/hana_MG_S_하나카드.png",
+    "fee": "17,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/17613",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 200,
+    "name": "U+ Family 하나카드",
+    "img": "https://static.toss.im/assets/credit-card/1643.png",
+    "fee": "30,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/5195",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 201,
+    "name": "하나 Mile 1.6 대한항공",
+    "img": "https://static.toss.im/assets/credit-card/hana_skypass_1.6mile.png",
+    "fee": "45,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/56",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 202,
+    "name": "하나멤버스 1Q 카드 Special Auto(원큐 스페셜 오토)",
+    "img": "https://static.toss.im/assets/credit-card/2178.png",
+    "fee": "8,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/6384",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 203,
+    "name": "1Q Special+",
+    "img": "https://static.toss.im/assets/credit-card/2023.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/6066",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 204,
+    "name": "하나멤버스 1Q(원큐) 카드 ALL in",
+    "img": "https://static.toss.im/assets/credit-card/2138.png",
+    "fee": "28,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/6298",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 205,
+    "name": "하나멤버스 1Q(원큐) 카드 Special",
+    "img": "https://static.toss.im/assets/credit-card/2216.png",
+    "fee": "8,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/6440",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 206,
+    "name": "트래블로그+(플러스) 신용카드",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": 15,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 207,
+    "name": "하나 스카이패스 아멕스 플래티늄 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": 56,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 208,
+    "name": "토스뱅크 하나카드 Day",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "url": "https://www.hanacard.co.kr/OPI41000000D.web",
+    "events": [],
+    "rank": 80,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "NH농협카드": [
+   {
+    "id": 209,
+    "name": "올바른 FLEX 카드",
+    "img": "https://static.toss.im/assets/credit-card/1236.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1236",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 17.5만원 캐시백"
+     }
+    ],
+    "rank": 29,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 210,
+    "name": "농협 별다줄카드",
+    "img": "https://static.toss.im/assets/credit-card/1356.png",
+    "fee": "12,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1356",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 211,
+    "name": "zgm.play카드",
+    "img": "https://static.toss.im/assets/credit-card/1821.png",
+    "fee": "12,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10173",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 17.5만원 캐시백"
+     }
+    ],
+    "rank": 64,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 212,
+    "name": "zgm.streaming카드",
+    "img": "https://static.toss.im/assets/credit-card/1814.png",
+    "fee": "12,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1739",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 17.5만원 캐시백"
+     }
+    ],
+    "rank": 62,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 213,
+    "name": "올바른하나로(Hanaro) 카드",
+    "img": "https://static.toss.im/assets/credit-card/2980.png",
+    "fee": "13,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10055",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 214,
+    "name": "NH20 해봄카드",
+    "img": "https://static.toss.im/assets/credit-card/1218.png",
+    "fee": "8,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1218",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 215,
+    "name": "올바른 NEW HAVE카드",
+    "img": "https://static.toss.im/assets/credit-card/10152.png",
+    "fee": "12,000원",
+    "benefit": "전기차 충전·친환경 소비 혜택 중심 카드",
+    "source": "https://card-lounge.toss.im/card/5097",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "연회비 캐시백"
+     }
+    ],
+    "rank": 94,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 216,
+    "name": "NH올원 LGU+카드",
+    "img": "https://static.toss.im/assets/credit-card/1210.png",
+    "fee": "15,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1210",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 217,
+    "name": "NH올원 Rental&코웨이",
+    "img": "https://static.toss.im/assets/credit-card/2196.png",
+    "fee": "10,000원",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/6400",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 218,
+    "name": "T라이트카드",
+    "img": "https://static.toss.im/assets/credit-card/1212.png",
+    "fee": "15,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1212",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 219,
+    "name": "채움 스카이패스카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/%EC%B1%84%EC%9B%80%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%ED%8C%A8%EC%8A%A4%EC%B9%B4%EB%93%9C.png",
+    "fee": "15,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6626",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 220,
+    "name": "NH올원 All100카드",
+    "img": "https://static.toss.im/assets/credit-card/1981.png",
+    "fee": "8,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/5982",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 221,
+    "name": "채움 BAZIC",
+    "img": "https://static.toss.im/assets/credit-card/5169.png",
+    "fee": "8,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5169",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 222,
+    "name": "NH올원 Rental&코웨이 카드",
+    "img": "https://static.toss.im/assets/credit-card/2196.png",
+    "fee": "10,000원",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/6400",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 223,
+    "name": "NH농협 올바른하나로(Hanaro) 카드",
+    "img": "https://static.toss.im/assets/credit-card/2980.png",
+    "fee": "13,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10055",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 224,
+    "name": "NH대한민국히어로카드(신용)",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/nh_NH대한민국히어로카드_신용.png",
+    "fee": "8,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10955",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 225,
+    "name": "채움카드 (천)",
+    "img": "https://static.toss.im/assets/credit-card/1983.png",
+    "fee": "3,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5986",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 226,
+    "name": "NH올원 파이카드",
+    "img": "https://static.toss.im/assets/credit-card/1216.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1216",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 227,
+    "name": "NH올원 Rental&넥센타이어 카드",
+    "img": "https://static.toss.im/assets/credit-card/2581.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/7159",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 228,
+    "name": "zgm 할인카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.nonghyup.com/IDDCB0001.act",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "연회비 캐시백"
+     }
+    ],
+    "rank": 49,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 229,
+    "name": "클래시 트래블카드",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card.nonghyup.com/IDDCB0001.act",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "연회비 캐시백"
+     }
+    ],
+    "rank": 53,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 230,
+    "name": "zgm.일본여행중 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card.nonghyup.com/IDDCB0001.act",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [],
+    "rank": 78,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 231,
+    "name": "zgm.the pay카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.nonghyup.com/IDDCB0001.act",
+    "url": "https://card.nonghyup.com/IDDCB0001.act",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "연회비 캐시백"
+     }
+    ],
+    "rank": 92,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "BC카드": [
+   {
+    "id": 232,
+    "name": "BC 바로 ZONE 카드",
+    "img": "https://static.toss.im/assets/credit-card/BC_104520_a.png",
+    "fee": "19,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10467",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 233,
+    "name": "BC 바로 MACAO카드",
+    "img": "https://static.toss.im/assets/credit-card/2854.png",
+    "fee": "12,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1953",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [
+     {
+      "platform": "아정당",
+      "amount": "주유소 최대 10% 할인"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 234,
+    "name": "BC 바로 에어 마스터",
+    "img": "https://static.toss.im/assets/credit-card/BC_104452_a.png",
+    "fee": "29,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10469",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 235,
+    "name": "BC 바로 에어 맥스",
+    "img": "https://static.toss.im/assets/credit-card/BC_airmax_236774-F.png",
+    "fee": "43,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10471",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 236,
+    "name": "BC 바로 클리어 플러스",
+    "img": "https://static.toss.im/assets/credit-card/1824.png",
+    "fee": "5,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1579",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": 69,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 237,
+    "name": "KT SUPER DC BC 바로카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/bc_KT_SUPER_DC_BC_%EB%B0%94%EB%A1%9C%EC%B9%B4%EB%93%9C.png",
+    "fee": "25,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10503",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 238,
+    "name": "케이뱅크 SIMPLE 카드",
+    "img": "https://static.toss.im/assets/credit-card/1807.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/5659",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 239,
+    "name": "신세계 BC 바로 콰트로 플러스",
+    "img": "https://static.toss.im/assets/credit-card/2408.png",
+    "fee": "5,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6827",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 240,
+    "name": "신세계 푸빌라 BC 바로카드",
+    "img": "https://static.toss.im/assets/credit-card/2479.png",
+    "fee": "10,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6971",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 241,
+    "name": "컬리카드",
+    "img": "https://static.toss.im/assets/credit-card/1996.png",
+    "fee": "12,000원",
+    "benefit": "쇼핑·마트 적립/할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/6012",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 242,
+    "name": "BC 바로 에어 플러스 스카이패스",
+    "img": "https://static.toss.im/assets/credit-card/1825.png",
+    "fee": "19,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1559",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 243,
+    "name": "세븐캐쉬백카드",
+    "img": "https://static.toss.im/assets/credit-card/6314.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/6314",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 244,
+    "name": "GOAT BC바로카드",
+    "img": "https://static.toss.im/assets/credit-card/4019.png",
+    "fee": "12,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/7254",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 245,
+    "name": "비씨TOP포인트",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/bc_비씨TOP포인트.png",
+    "fee": "10,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/15393",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 246,
+    "name": "비씨SK카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/bc_비씨SK카드.png",
+    "fee": "5,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/15399",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 247,
+    "name": "KT DC PLUS BC 바로카드",
+    "img": "https://static.toss.im/assets/credit-card/6022.png",
+    "fee": "12,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10221",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 248,
+    "name": "BC 바로 On&Off 카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/bc_BC_바로_KaPick.png",
+    "fee": "5,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/15429",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 249,
+    "name": "K-패스 카드",
+    "img": "https://static.toss.im/assets/credit-card/6478.png",
+    "fee": "6,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/10235",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 250,
+    "name": "BC 바로 Air Max 카드",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "url": "https://www.bccard.com/app/card/CreditCardMain.do",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "연회비 100% 캐시백"
+     }
+    ],
+    "rank": 91,
+    "detail": null,
+    "plat": {}
+   }
+  ],
+  "IBK기업": [
+   {
+    "id": 251,
+    "name": "IBK 포인트3.8 토스 제휴카드",
+    "img": "https://static.toss.im/assets/credit-card/10184.png",
+    "fee": "37,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10097",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 252,
+    "name": "IBK 일상의 기쁨카드",
+    "img": "https://static.toss.im/assets/credit-card/ibk_happy.png",
+    "fee": "10,000원",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/43",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 253,
+    "name": "IBK 포인트 카드",
+    "img": "https://static.toss.im/assets/credit-card/10130.png",
+    "fee": "21,000원",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card-lounge.toss.im/card/10045",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 254,
+    "name": "참! 좋은 kt wiz 카드",
+    "img": "https://static.toss.im/assets/credit-card/1777.png",
+    "fee": "2,000원",
+    "benefit": "통신비 할인 특화 카드",
+    "source": "https://card-lounge.toss.im/card/1709",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 255,
+    "name": "IBK 국민행복카드(신용)",
+    "img": "https://static.toss.im/assets/credit-card/2908.png",
+    "fee": "없음",
+    "benefit": "정부 지원·바우처 연계 카드",
+    "source": "https://card-lounge.toss.im/card/6885",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 256,
+    "name": "IBK K-패스(신용)",
+    "img": "https://static.toss.im/assets/credit-card/2802.png",
+    "fee": "2,000원",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/1875",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 257,
+    "name": "Daily With 카드",
+    "img": "https://static.toss.im/assets/credit-card/1226-master.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1226",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 258,
+    "name": "IBK I-Mileage(대한항공)",
+    "img": "https://static.toss.im/assets/credit-card/2892.png",
+    "fee": "41,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10017",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 259,
+    "name": "코웨이 IBK 카드",
+    "img": "https://static.toss.im/assets/credit-card/1775.png",
+    "fee": "12,000원",
+    "benefit": "구독·렌탈료 할인 중심 카드",
+    "source": "https://card-lounge.toss.im/card/1705",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 260,
+    "name": "IBK-Hybrid카드",
+    "img": "https://static.toss.im/assets/credit-card/48.png",
+    "fee": "10,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/48",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 261,
+    "name": "IBK I ALL",
+    "img": "https://static.toss.im/assets/credit-card/1495.png",
+    "fee": "14,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/1495",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 262,
+    "name": "BLISS. 5 카드",
+    "img": "https://static.toss.im/assets/credit-card/2385.png",
+    "fee": "100,000원",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://card-lounge.toss.im/card/6781",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 263,
+    "name": "자연드림 IBK 카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/ibk_자연드림_IBK_카드.png",
+    "fee": "5,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10689",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 264,
+    "name": "IBK나라사랑카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/ibk_IBK나라사랑카드.png",
+    "fee": "없음",
+    "benefit": "정부 지원·바우처 연계 카드",
+    "source": "https://card-lounge.toss.im/card/15807",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 265,
+    "name": "BOC(福) 카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/ibk_BOC_카드.png",
+    "fee": "99,000원",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card-lounge.toss.im/card/10633",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 266,
+    "name": "대한항공 SKYPASS 카드",
+    "img": "https://static.toss.im/assets/credit-card/credit-card-new/ibk_대한항공_SKYPASS_카드.png",
+    "fee": "15,000원",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card-lounge.toss.im/card/10665",
+    "url": "https://card.ibk.co.kr/",
+    "events": [],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 267,
+    "name": "K-패스 (신용)",
+    "img": "",
+    "fee": "",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card.ibk.co.kr/",
+    "url": "https://card.ibk.co.kr/",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 12.5만원 캐시백"
+     }
+    ],
+    "rank": 40,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 268,
+    "name": "IBK포인트(신용)",
+    "img": "",
+    "fee": "",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card.ibk.co.kr/",
+    "url": "https://card.ibk.co.kr/",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 12.5만원 캐시백"
+     }
+    ],
+    "rank": 57,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 269,
+    "name": "IBK포인트3.8(신용)",
+    "img": "",
+    "fee": "",
+    "benefit": "포인트 적립 중심 카드",
+    "source": "https://card.ibk.co.kr/",
+    "url": "https://card.ibk.co.kr/",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 12.5만원 캐시백"
+     }
+    ],
+    "rank": 65,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 270,
+    "name": "I-Mileage (대한항공)",
+    "img": "",
+    "fee": "",
+    "benefit": "항공 마일리지·해외여행 특화 카드",
+    "source": "https://card.ibk.co.kr/",
+    "url": "https://card.ibk.co.kr/",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 4.2만원 캐시백"
+     }
+    ],
+    "rank": 73,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 271,
+    "name": "I-ALL",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://card.ibk.co.kr/",
+    "url": "https://card.ibk.co.kr/",
+    "events": [
+     {
+      "platform": "카드고릴라",
+      "amount": "최대 12.5만원 캐시백"
+     }
+    ],
+    "rank": 81,
+    "detail": null,
+    "plat": {}
+   },
+   {
+    "id": 272,
+    "name": "IBK기업은행 K-패스(신용)",
+    "img": "",
+    "fee": "",
+    "benefit": "대중교통·교통비 혜택 카드",
+    "source": "https://card.ibk.co.kr/",
+    "url": "https://card.ibk.co.kr/",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "15만 5,000원 캐시백"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "month": "2026-06",
+ "items": [
+  {
+   "plat": "무신사",
+   "domain": "musinsa.com",
+   "gubun": "온라인",
+   "count": 11,
+   "top": "30,000원 즉시할인"
+  },
+  {
+   "plat": "롯데하이마트",
+   "domain": "himart.co.kr",
+   "gubun": "온라인",
+   "count": 7,
+   "top": "10% 즉시할인"
+  },
+  {
+   "plat": "GS25",
+   "domain": "gs25.gsretail.com",
+   "gubun": "오프라인",
+   "count": 5,
+   "top": "샐러드 50% 페이백"
+  },
+  {
+   "plat": "홈플러스",
+   "domain": "homeplus.co.kr",
+   "gubun": "오프라인",
+   "count": 4,
+   "top": "50%(최대 3만원) 캐시백(첫결제)"
+  },
+  {
+   "plat": "이마트",
+   "domain": "emart.com",
+   "gubun": "오프라인",
+   "count": 4,
+   "top": "약 10% 행사상품 즉시할인"
+  },
+  {
+   "plat": "트립닷컴",
+   "domain": "trip.com",
+   "gubun": "온라인",
+   "count": 3,
+   "top": "최대 20% 즉시할인"
+  },
+  {
+   "plat": "네이버 패키지여행",
+   "domain": "naver.com",
+   "gubun": "온라인",
+   "count": 3,
+   "top": "최대 6% N포인트적립"
+  },
+  {
+   "plat": "롯데면세점",
+   "domain": "lottedfs.com",
+   "gubun": "오프라인",
+   "count": 3,
+   "top": "LDF PAY 증정 캐시백성"
+  },
+  {
+   "plat": "이마트24",
+   "domain": "emart24.co.kr",
+   "gubun": "오프라인",
+   "count": 2,
+   "top": "10% 할인+10% 적립 즉시할인+적립"
+  },
+  {
+   "plat": "SSG닷컴",
+   "domain": "ssg.com",
+   "gubun": "온라인",
+   "count": 2,
+   "top": "7% 청구할인"
+  }
+ ]
+}

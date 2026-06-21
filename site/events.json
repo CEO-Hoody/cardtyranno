@@ -1,0 +1,282 @@
+{
+ "month": "2026-06",
+ "source": "db",
+ "order": [
+  "삼성카드",
+  "현대카드",
+  "신한카드",
+  "KB국민카드",
+  "롯데카드",
+  "우리카드",
+  "하나카드",
+  "NH농협카드",
+  "BC카드",
+  "IBK기업"
+ ],
+ "items": [
+  {
+   "issuer": "삼성카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 119만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/team/detail/1"
+  },
+  {
+   "issuer": "현대카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 89만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/event"
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 86만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/event"
+  },
+  {
+   "issuer": "신한카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 78.9만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/event"
+  },
+  {
+   "issuer": "우리카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 78만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/team/detail/5"
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 67만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/event"
+  },
+  {
+   "issuer": "하나카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 57만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/event"
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 17.5만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.card-gorilla.com/team/detail/9"
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 119만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.banksalad.com/chart/cards?tab=event"
+  },
+  {
+   "issuer": "현대카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 89만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.banksalad.com/chart/cards?tab=event"
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 86만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.banksalad.com/chart/cards?tab=event"
+  },
+  {
+   "issuer": "신한카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 78.9만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.banksalad.com/chart/cards?tab=event"
+  },
+  {
+   "issuer": "우리카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 78만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.banksalad.com/chart/cards?tab=event"
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 67만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.banksalad.com/chart/cards?tab=event"
+  },
+  {
+   "issuer": "하나카드",
+   "card": "연회비 캐시백 대상카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 57만원 캐시백",
+   "period": "2026.06",
+   "url": "https://www.banksalad.com/chart/cards?tab=event"
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "KB국민카드 발급",
+   "platform": "아정당",
+   "benefit": "최대 85만원",
+   "period": "2026.06",
+   "url": "https://www.ajd.co.kr/card/event/detail/243"
+  },
+  {
+   "issuer": "우리카드",
+   "card": "우리카드 발급",
+   "platform": "아정당",
+   "benefit": "최대 77만원",
+   "period": "2026.06",
+   "url": "https://www.ajd.co.kr/card/event/detail/267"
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 발급",
+   "platform": "아정당",
+   "benefit": "최대 72만원",
+   "period": "2026.06",
+   "url": "https://www.ajd.co.kr/card/event/detail/86"
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 발급",
+   "platform": "아정당",
+   "benefit": "최대 66만원",
+   "period": "2026.06",
+   "url": "https://www.ajd.co.kr/card/event/detail/158"
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성카드 발급",
+   "platform": "아정당",
+   "benefit": "최대 63.1만원",
+   "period": "2026.06",
+   "url": "https://www.ajd.co.kr/card/event/detail/260"
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 발급",
+   "platform": "아정당",
+   "benefit": "최대 54만원",
+   "period": "2026.06",
+   "url": "https://www.ajd.co.kr/card/event/detail/75"
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "NH농협카드 발급",
+   "platform": "아정당",
+   "benefit": "최대 20.5만원",
+   "period": "2026.06",
+   "url": "https://www.ajd.co.kr/card/event/list"
+  },
+  {
+   "issuer": "신한카드",
+   "card": "Deep Oil / KaPick",
+   "platform": "카카오페이",
+   "benefit": "최대 39만원(기본 27만)",
+   "period": "2026.06",
+   "url": "https://contents.kakaopay.com/contents/2296"
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드M / ZERO Edition3",
+   "platform": "카카오페이",
+   "benefit": "최대 44만 포인트",
+   "period": "2026.06",
+   "url": "https://contents.kakaopay.com/contents/2296"
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "굿데이/굿데이올림",
+   "platform": "토스",
+   "benefit": "최대 81만원 이벤트",
+   "period": "2026.06",
+   "url": "https://card-lounge.toss.im/event"
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "LOCA 365 / LIKIT",
+   "platform": "토스",
+   "benefit": "최대 48만원 이벤트",
+   "period": "2026.06",
+   "url": "https://card-lounge.toss.im/event"
+  },
+  {
+   "issuer": "하나카드",
+   "card": "클럽SK카드",
+   "platform": "토스",
+   "benefit": "80만원 이벤트",
+   "period": "2026.06",
+   "url": "https://card-lounge.toss.im/card/5"
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성카드 taptap O",
+   "platform": "삼성카드",
+   "benefit": "연회비 100% 캐시백(신규)",
+   "period": "상시",
+   "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1483"
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 첫만남",
+   "platform": "신한카드",
+   "benefit": "연회비 100% 캐시백(7천~5.1만)",
+   "period": "회차별",
+   "url": "https://www.shinhancard.com/pconts/html/benefit/event/1196240_2239.html"
+  },
+  {
+   "issuer": "우리카드",
+   "card": "카드의정석2",
+   "platform": "우리카드",
+   "benefit": "최대 39만원 캐시백",
+   "period": "2026 진행",
+   "url": "https://pc.wooricard.com/dcpc/yh1/bnf/bnf02/prgevnt/movePrgEvntDtl.do?evntSrno=30004533"
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "트래블월렛 하이브리드 롯데",
+   "platform": "롯데카드",
+   "benefit": "20만원 캐시백",
+   "period": "2026 진행",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V300.lc?evnBultSeq=8271"
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "트래블러스 체크",
+   "platform": "KB국민카드",
+   "benefit": "최대 5.5만원+30달러",
+   "period": "~2026.07.31",
+   "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076"
+  },
+  {
+   "issuer": "BC카드",
+   "card": "BC바로 발급",
+   "platform": "카드고릴라",
+   "benefit": "국내 20만원↑ 시 페이북머니 10만원",
+   "period": "2026 진행",
+   "url": "https://www.card-gorilla.com/team/detail/32"
+  }
+ ]
+}

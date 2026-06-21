@@ -1,0 +1,1186 @@
+{
+ "month": "2026-06",
+ "note": "토스·카드고릴라 인기순위 동일가중 평균",
+ "items": [
+  {
+   "name": "토스 삼성카드",
+   "issuer": "삼성카드",
+   "img": "https://static.toss.im/assets/credit-card/toss_samsung.png",
+   "avg": 1.0,
+   "toss": 1,
+   "cg": null,
+   "n": 1,
+   "rank": 1
+  },
+  {
+   "name": "삼성 iD SELECT ALL 카드",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 1.0,
+   "toss": null,
+   "cg": 1,
+   "n": 1,
+   "rank": 2
+  },
+  {
+   "name": "토스 신한카드 Mr.Life",
+   "issuer": "신한카드",
+   "img": "https://static.toss.im/assets/credit-card/3480.png",
+   "avg": 2.0,
+   "toss": 2,
+   "cg": null,
+   "n": 1,
+   "rank": 3
+  },
+  {
+   "name": "신한카드 Mr.Life",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 2.0,
+   "toss": null,
+   "cg": 2,
+   "n": 1,
+   "rank": 4
+  },
+  {
+   "name": "KB국민 굿데이카드",
+   "issuer": "KB국민카드",
+   "img": "https://static.toss.im/assets/credit-card/1121.png",
+   "avg": 3.0,
+   "toss": 3,
+   "cg": null,
+   "n": 1,
+   "rank": 5
+  },
+  {
+   "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 3.0,
+   "toss": null,
+   "cg": 3,
+   "n": 1,
+   "rank": 6
+  },
+  {
+   "name": "하나 클럽SK카드(CLUB SK)",
+   "issuer": "하나카드",
+   "img": "https://static.toss.im/assets/credit-card/credit-card-new/%ED%95%98%EB%82%98%20%ED%81%B4%EB%9F%BDSK%EC%B9%B4%EB%93%9C%28CLUB%20SK%29.png",
+   "avg": 4.0,
+   "toss": 4,
+   "cg": null,
+   "n": 1,
+   "rank": 7
+  },
+  {
+   "name": "굿데이카드",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 4.0,
+   "toss": null,
+   "cg": 4,
+   "n": 1,
+   "rank": 8
+  },
+  {
+   "name": "토스 LIKIT ALL",
+   "issuer": "롯데카드",
+   "img": "https://static.toss.im/assets/credit-card/1418.png",
+   "avg": 5.0,
+   "toss": 5,
+   "cg": null,
+   "n": 1,
+   "rank": 9
+  },
+  {
+   "name": "American Express Gold Card Edition2",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 6.0,
+   "toss": null,
+   "cg": 6,
+   "n": 1,
+   "rank": 10
+  },
+  {
+   "name": "토스 신한카드 YOLO",
+   "issuer": "신한카드",
+   "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_toss_yolo.png",
+   "avg": 7.0,
+   "toss": 7,
+   "cg": null,
+   "n": 1,
+   "rank": 11
+  },
+  {
+   "name": "LOCA LIKIT 2.0",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 7.0,
+   "toss": null,
+   "cg": 7,
+   "n": 1,
+   "rank": 12
+  },
+  {
+   "name": "현대카드 M",
+   "issuer": "현대카드",
+   "img": "https://static.toss.im/assets/credit-card/wood.png",
+   "avg": 7.5,
+   "toss": 6,
+   "cg": 9,
+   "n": 2,
+   "rank": 13
+  },
+  {
+   "name": "KB국민 My WE:SH 카드",
+   "issuer": "KB국민카드",
+   "img": "https://static.toss.im/assets/credit-card/1468.png",
+   "avg": 8.0,
+   "toss": null,
+   "cg": 8,
+   "n": 1,
+   "rank": 14
+  },
+  {
+   "name": "카드의정석 2",
+   "issuer": "우리카드",
+   "img": "https://static.toss.im/assets/credit-card/10550.png",
+   "avg": 8.5,
+   "toss": 12,
+   "cg": 5,
+   "n": 2,
+   "rank": 15
+  },
+  {
+   "name": "KB국민 굿데이올림카드",
+   "issuer": "KB국민카드",
+   "img": "https://static.toss.im/assets/credit-card/kb_goodday_olim.png",
+   "avg": 9.0,
+   "toss": 9,
+   "cg": null,
+   "n": 1,
+   "rank": 16
+  },
+  {
+   "name": "LOCA LIKIT 1.2 카드",
+   "issuer": "롯데카드",
+   "img": "https://static.toss.im/assets/credit-card/1677.png",
+   "avg": 11.0,
+   "toss": 11,
+   "cg": null,
+   "n": 1,
+   "rank": 17
+  },
+  {
+   "name": "삼성 iD SELECT ON 카드",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 11.0,
+   "toss": null,
+   "cg": 11,
+   "n": 1,
+   "rank": 18
+  },
+  {
+   "name": "삼성카드 taptap O",
+   "issuer": "삼성카드",
+   "img": "https://static.toss.im/assets/credit-card/2936.png",
+   "avg": 12.0,
+   "toss": 8,
+   "cg": 16,
+   "n": 2,
+   "rank": 19
+  },
+  {
+   "name": "KB NEED Pay 카드",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 12.0,
+   "toss": null,
+   "cg": 12,
+   "n": 1,
+   "rank": 20
+  },
+  {
+   "name": "하나 스카이패스 아멕스 플래티늄",
+   "issuer": "하나카드",
+   "img": "https://static.toss.im/assets/credit-card/1420.png",
+   "avg": 13.0,
+   "toss": 13,
+   "cg": null,
+   "n": 1,
+   "rank": 21
+  },
+  {
+   "name": "신한카드 Discount Plan+",
+   "issuer": "신한카드",
+   "img": "https://static.toss.im/assets/credit-card/8594.png",
+   "avg": 13.0,
+   "toss": null,
+   "cg": 13,
+   "n": 1,
+   "rank": 22
+  },
+  {
+   "name": "카드의정석 SHOPPING+",
+   "issuer": "우리카드",
+   "img": "https://static.toss.im/assets/credit-card/2856.png",
+   "avg": 14.0,
+   "toss": 18,
+   "cg": 10,
+   "n": 2,
+   "rank": 23
+  },
+  {
+   "name": "LOCA LIKIT 1.5",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 14.0,
+   "toss": null,
+   "cg": 14,
+   "n": 1,
+   "rank": 24
+  },
+  {
+   "name": "트래블로그+(플러스) 신용카드",
+   "issuer": "하나카드",
+   "img": "",
+   "avg": 15.0,
+   "toss": null,
+   "cg": 15,
+   "n": 1,
+   "rank": 25
+  },
+  {
+   "name": "IBK 포인트3.8 토스 제휴카드",
+   "issuer": "IBK기업",
+   "img": "https://static.toss.im/assets/credit-card/10184.png",
+   "avg": 16.0,
+   "toss": 16,
+   "cg": null,
+   "n": 1,
+   "rank": 26
+  },
+  {
+   "name": "신한카드 Deep Oil",
+   "issuer": "신한카드",
+   "img": "https://static.toss.im/assets/credit-card/2025070113.png",
+   "avg": 16.5,
+   "toss": 10,
+   "cg": 23,
+   "n": 2,
+   "rank": 27
+  },
+  {
+   "name": "LOCA 365",
+   "issuer": "롯데카드",
+   "img": "https://static.toss.im/assets/credit-card/1477.png",
+   "avg": 17.0,
+   "toss": 17,
+   "cg": null,
+   "n": 1,
+   "rank": 28
+  },
+  {
+   "name": "삼성 iD SIMPLE 카드",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 17.0,
+   "toss": null,
+   "cg": 17,
+   "n": 1,
+   "rank": 29
+  },
+  {
+   "name": "신한카드 처음(ANNIVERSE)",
+   "issuer": "신한카드",
+   "img": "https://static.toss.im/assets/credit-card/2934.png",
+   "avg": 18.0,
+   "toss": null,
+   "cg": 18,
+   "n": 1,
+   "rank": 30
+  },
+  {
+   "name": "LOCA 365 카드",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 19.0,
+   "toss": null,
+   "cg": 19,
+   "n": 1,
+   "rank": 31
+  },
+  {
+   "name": "현대카드 Summit",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 20.0,
+   "toss": null,
+   "cg": 20,
+   "n": 1,
+   "rank": 32
+  },
+  {
+   "name": "현대카드 ZERO Edition3 (할인형)",
+   "issuer": "현대카드",
+   "img": "https://static.toss.im/assets/credit-card/2266.png",
+   "avg": 20.5,
+   "toss": 15,
+   "cg": 26,
+   "n": 2,
+   "rank": 33
+  },
+  {
+   "name": "BC 바로 ZONE 카드",
+   "issuer": "BC카드",
+   "img": "https://static.toss.im/assets/credit-card/BC_104520_a.png",
+   "avg": 21.0,
+   "toss": 21,
+   "cg": null,
+   "n": 1,
+   "rank": 34
+  },
+  {
+   "name": "KB YOU Prime 카드",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 21.0,
+   "toss": null,
+   "cg": 21,
+   "n": 1,
+   "rank": 35
+  },
+  {
+   "name": "현대카드 Z family Edition 2",
+   "issuer": "현대카드",
+   "img": "https://static.toss.im/assets/credit-card/10192.png",
+   "avg": 22.0,
+   "toss": 22,
+   "cg": null,
+   "n": 1,
+   "rank": 36
+  },
+  {
+   "name": "THE iD. 1st",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 22.0,
+   "toss": null,
+   "cg": 22,
+   "n": 1,
+   "rank": 37
+  },
+  {
+   "name": "Toss taptap S",
+   "issuer": "삼성카드",
+   "img": "https://static.toss.im/assets/credit-card/samsung-taptap-s.png",
+   "avg": 24.0,
+   "toss": 24,
+   "cg": null,
+   "n": 1,
+   "rank": 38
+  },
+  {
+   "name": "우리카드 MILE&POINT",
+   "issuer": "우리카드",
+   "img": "",
+   "avg": 24.0,
+   "toss": null,
+   "cg": 24,
+   "n": 1,
+   "rank": 39
+  },
+  {
+   "name": "올바른 FLEX 카드",
+   "issuer": "NH농협카드",
+   "img": "https://static.toss.im/assets/credit-card/1236.png",
+   "avg": 24.5,
+   "toss": 20,
+   "cg": 29,
+   "n": 2,
+   "rank": 40
+  },
+  {
+   "name": "KB 청춘대로 톡톡카드",
+   "issuer": "KB국민카드",
+   "img": "https://static.toss.im/assets/credit-card/55.png",
+   "avg": 25.0,
+   "toss": 25,
+   "cg": null,
+   "n": 1,
+   "rank": 41
+  },
+  {
+   "name": "taptap DIGITAL",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 25.0,
+   "toss": null,
+   "cg": 25,
+   "n": 1,
+   "rank": 42
+  },
+  {
+   "name": "LOCA LIKIT Eat",
+   "issuer": "롯데카드",
+   "img": "https://static.toss.im/assets/credit-card/1770.png",
+   "avg": 27.0,
+   "toss": 27,
+   "cg": null,
+   "n": 1,
+   "rank": 43
+  },
+  {
+   "name": "대한항공카드 the First Edition2",
+   "issuer": "현대카드",
+   "img": "https://static.toss.im/assets/credit-card/credit-card-new/hd_koreanair_the_first_edition2.png",
+   "avg": 27.0,
+   "toss": null,
+   "cg": 27,
+   "n": 1,
+   "rank": 44
+  },
+  {
+   "name": "농협 별다줄카드",
+   "issuer": "NH농협카드",
+   "img": "https://static.toss.im/assets/credit-card/1356.png",
+   "avg": 28.0,
+   "toss": 28,
+   "cg": null,
+   "n": 1,
+   "rank": 45
+  },
+  {
+   "name": "삼성 iD GLOBAL 카드",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 28.0,
+   "toss": null,
+   "cg": 28,
+   "n": 1,
+   "rank": 46
+  },
+  {
+   "name": "KB국민 다담카드",
+   "issuer": "KB국민카드",
+   "img": "https://static.toss.im/assets/credit-card/kb_dadam.png",
+   "avg": 29.0,
+   "toss": 29,
+   "cg": null,
+   "n": 1,
+   "rank": 47
+  },
+  {
+   "name": "BC 바로 MACAO카드",
+   "issuer": "BC카드",
+   "img": "https://static.toss.im/assets/credit-card/2854.png",
+   "avg": 30.0,
+   "toss": 30,
+   "cg": null,
+   "n": 1,
+   "rank": 48
+  },
+  {
+   "name": "대한항공카드 300",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 30.0,
+   "toss": null,
+   "cg": 30,
+   "n": 1,
+   "rank": 49
+  },
+  {
+   "name": "신한카드 Simple Plan+",
+   "issuer": "신한카드",
+   "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_simple_plan_plus_core.png",
+   "avg": 30.5,
+   "toss": 26,
+   "cg": 35,
+   "n": 2,
+   "rank": 50
+  },
+  {
+   "name": "KB YOU Wish 카드",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 31.0,
+   "toss": null,
+   "cg": 31,
+   "n": 1,
+   "rank": 51
+  },
+  {
+   "name": "우리카드 7CORE",
+   "issuer": "우리카드",
+   "img": "",
+   "avg": 32.0,
+   "toss": null,
+   "cg": 32,
+   "n": 1,
+   "rank": 52
+  },
+  {
+   "name": "LOCA LIKIT 1.2",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 33.0,
+   "toss": null,
+   "cg": 33,
+   "n": 1,
+   "rank": 53
+  },
+  {
+   "name": "JADE Classic",
+   "issuer": "하나카드",
+   "img": "https://static.toss.im/assets/credit-card/2182.png",
+   "avg": 34.0,
+   "toss": null,
+   "cg": 34,
+   "n": 1,
+   "rank": 54
+  },
+  {
+   "name": "카드의정석 EVERY MILE SKYPASS",
+   "issuer": "우리카드",
+   "img": "https://static.toss.im/assets/credit-card/10168.png",
+   "avg": 36.0,
+   "toss": null,
+   "cg": 36,
+   "n": 1,
+   "rank": 55
+  },
+  {
+   "name": "디지로카 London",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 37.0,
+   "toss": null,
+   "cg": 37,
+   "n": 1,
+   "rank": 56
+  },
+  {
+   "name": "the Orange",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 38.0,
+   "toss": null,
+   "cg": 38,
+   "n": 1,
+   "rank": 57
+  },
+  {
+   "name": "카드의정석2 EVERY DISCOUNT",
+   "issuer": "우리카드",
+   "img": "",
+   "avg": 39.0,
+   "toss": null,
+   "cg": 39,
+   "n": 1,
+   "rank": 58
+  },
+  {
+   "name": "K-패스 (신용)",
+   "issuer": "IBK기업",
+   "img": "",
+   "avg": 40.0,
+   "toss": null,
+   "cg": 40,
+   "n": 1,
+   "rank": 59
+  },
+  {
+   "name": "카드의정석2 SUPER",
+   "issuer": "우리카드",
+   "img": "",
+   "avg": 41.0,
+   "toss": null,
+   "cg": 41,
+   "n": 1,
+   "rank": 60
+  },
+  {
+   "name": "디지로카 Las Vegas",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 43.0,
+   "toss": null,
+   "cg": 43,
+   "n": 1,
+   "rank": 61
+  },
+  {
+   "name": "신한카드 Air One",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 44.0,
+   "toss": null,
+   "cg": 44,
+   "n": 1,
+   "rank": 62
+  },
+  {
+   "name": "원더카드2.0 FREE+",
+   "issuer": "하나카드",
+   "img": "https://static.toss.im/assets/credit-card/20030.png",
+   "avg": 44.5,
+   "toss": 19,
+   "cg": 70,
+   "n": 2,
+   "rank": 63
+  },
+  {
+   "name": "신한카드 The BEST-F",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 45.0,
+   "toss": null,
+   "cg": 45,
+   "n": 1,
+   "rank": 64
+  },
+  {
+   "name": "the OPUS silver",
+   "issuer": "우리카드",
+   "img": "",
+   "avg": 46.0,
+   "toss": null,
+   "cg": 46,
+   "n": 1,
+   "rank": 65
+  },
+  {
+   "name": "대한항공카드 060",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 47.0,
+   "toss": null,
+   "cg": 47,
+   "n": 1,
+   "rank": 66
+  },
+  {
+   "name": "THE 1 (스카이패스)",
+   "issuer": "삼성카드",
+   "img": "https://static.toss.im/assets/credit-card/6809.png",
+   "avg": 48.0,
+   "toss": null,
+   "cg": 48,
+   "n": 1,
+   "rank": 67
+  },
+  {
+   "name": "zgm 할인카드",
+   "issuer": "NH농협카드",
+   "img": "",
+   "avg": 49.0,
+   "toss": null,
+   "cg": 49,
+   "n": 1,
+   "rank": 68
+  },
+  {
+   "name": "대한항공카드 120",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 50.0,
+   "toss": null,
+   "cg": 50,
+   "n": 1,
+   "rank": 69
+  },
+  {
+   "name": "쿠팡 와우카드",
+   "issuer": "KB국민카드",
+   "img": "https://static.toss.im/assets/credit-card/2025070104.png",
+   "avg": 51.0,
+   "toss": null,
+   "cg": 51,
+   "n": 1,
+   "rank": 70
+  },
+  {
+   "name": "삼성 iD ON 카드",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 52.0,
+   "toss": null,
+   "cg": 52,
+   "n": 1,
+   "rank": 71
+  },
+  {
+   "name": "클래시 트래블카드",
+   "issuer": "NH농협카드",
+   "img": "",
+   "avg": 53.0,
+   "toss": null,
+   "cg": 53,
+   "n": 1,
+   "rank": 72
+  },
+  {
+   "name": "MG+ BLACK 하나카드",
+   "issuer": "MG새마을금고",
+   "img": "",
+   "avg": 54.0,
+   "toss": null,
+   "cg": 54,
+   "n": 1,
+   "rank": 73
+  },
+  {
+   "name": "현대카드 ZERO Edition3 (포인트형)",
+   "issuer": "현대카드",
+   "img": "https://static.toss.im/assets/credit-card/2266.png",
+   "avg": 54.5,
+   "toss": 14,
+   "cg": 95,
+   "n": 2,
+   "rank": 74
+  },
+  {
+   "name": "American Express Green Card Edition2",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 55.0,
+   "toss": null,
+   "cg": 55,
+   "n": 1,
+   "rank": 75
+  },
+  {
+   "name": "현대카드 MX Black Edition2",
+   "issuer": "현대카드",
+   "img": "https://static.toss.im/assets/credit-card/2803.png",
+   "avg": 55.5,
+   "toss": 23,
+   "cg": 88,
+   "n": 2,
+   "rank": 76
+  },
+  {
+   "name": "하나 스카이패스 아멕스 플래티늄 카드",
+   "issuer": "하나카드",
+   "img": "",
+   "avg": 56.0,
+   "toss": null,
+   "cg": 56,
+   "n": 1,
+   "rank": 77
+  },
+  {
+   "name": "IBK포인트(신용)",
+   "issuer": "IBK기업",
+   "img": "",
+   "avg": 57.0,
+   "toss": null,
+   "cg": 57,
+   "n": 1,
+   "rank": 78
+  },
+  {
+   "name": "가온올림카드(실속형)",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 58.0,
+   "toss": null,
+   "cg": 58,
+   "n": 1,
+   "rank": 79
+  },
+  {
+   "name": "현대카드 ZERO Up(할인형)",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 59.0,
+   "toss": null,
+   "cg": 59,
+   "n": 1,
+   "rank": 80
+  },
+  {
+   "name": "메리어트 본보이 더 베스트 신한카드",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 60.0,
+   "toss": null,
+   "cg": 60,
+   "n": 1,
+   "rank": 81
+  },
+  {
+   "name": "신한카드 Globus",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 61.0,
+   "toss": null,
+   "cg": 61,
+   "n": 1,
+   "rank": 82
+  },
+  {
+   "name": "zgm.streaming카드",
+   "issuer": "NH농협카드",
+   "img": "https://static.toss.im/assets/credit-card/1814.png",
+   "avg": 62.0,
+   "toss": null,
+   "cg": 62,
+   "n": 1,
+   "rank": 83
+  },
+  {
+   "name": "현대카드T",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 63.0,
+   "toss": null,
+   "cg": 63,
+   "n": 1,
+   "rank": 84
+  },
+  {
+   "name": "zgm.play카드",
+   "issuer": "NH농협카드",
+   "img": "https://static.toss.im/assets/credit-card/1821.png",
+   "avg": 64.0,
+   "toss": null,
+   "cg": 64,
+   "n": 1,
+   "rank": 85
+  },
+  {
+   "name": "IBK포인트3.8(신용)",
+   "issuer": "IBK기업",
+   "img": "",
+   "avg": 65.0,
+   "toss": null,
+   "cg": 65,
+   "n": 1,
+   "rank": 86
+  },
+  {
+   "name": "DA카드의정석Ⅱ",
+   "issuer": "우리카드",
+   "img": "https://static.toss.im/assets/credit-card/2812.png",
+   "avg": 66.0,
+   "toss": null,
+   "cg": 66,
+   "n": 1,
+   "rank": 87
+  },
+  {
+   "name": "에너지플러스 현대카드",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 67.0,
+   "toss": null,
+   "cg": 67,
+   "n": 1,
+   "rank": 88
+  },
+  {
+   "name": "네이버 현대카드 Edition2",
+   "issuer": "현대카드",
+   "img": "https://static.toss.im/assets/credit-card/hyundai-naver-edition2.png",
+   "avg": 68.0,
+   "toss": null,
+   "cg": 68,
+   "n": 1,
+   "rank": 89
+  },
+  {
+   "name": "BC 바로 클리어 플러스",
+   "issuer": "BC카드",
+   "img": "https://static.toss.im/assets/credit-card/1824.png",
+   "avg": 69.0,
+   "toss": null,
+   "cg": 69,
+   "n": 1,
+   "rank": 90
+  },
+  {
+   "name": "HERITAGE Smart [대한항공 마일리지형]",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 71.0,
+   "toss": null,
+   "cg": 71,
+   "n": 1,
+   "rank": 91
+  },
+  {
+   "name": "현대카드O",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 72.0,
+   "toss": null,
+   "cg": 72,
+   "n": 1,
+   "rank": 92
+  },
+  {
+   "name": "I-Mileage (대한항공)",
+   "issuer": "IBK기업",
+   "img": "",
+   "avg": 73.0,
+   "toss": null,
+   "cg": 73,
+   "n": 1,
+   "rank": 93
+  },
+  {
+   "name": "카드의정석 I&U+",
+   "issuer": "우리카드",
+   "img": "https://static.toss.im/assets/credit-card/2860.png",
+   "avg": 74.0,
+   "toss": null,
+   "cg": 74,
+   "n": 1,
+   "rank": 94
+  },
+  {
+   "name": "WE:SH Travel",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 75.0,
+   "toss": null,
+   "cg": 75,
+   "n": 1,
+   "rank": 95
+  },
+  {
+   "name": "네이버페이 taptap",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 76.0,
+   "toss": null,
+   "cg": 76,
+   "n": 1,
+   "rank": 96
+  },
+  {
+   "name": "신한카드 The CLASSIC+",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 77.0,
+   "toss": null,
+   "cg": 77,
+   "n": 1,
+   "rank": 97
+  },
+  {
+   "name": "zgm.일본여행중 카드",
+   "issuer": "NH농협카드",
+   "img": "",
+   "avg": 78.0,
+   "toss": null,
+   "cg": 78,
+   "n": 1,
+   "rank": 98
+  },
+  {
+   "name": "신한카드 Point Plan",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 79.0,
+   "toss": null,
+   "cg": 79,
+   "n": 1,
+   "rank": 99
+  },
+  {
+   "name": "토스뱅크 하나카드 Day",
+   "issuer": "하나카드",
+   "img": "",
+   "avg": 80.0,
+   "toss": null,
+   "cg": 80,
+   "n": 1,
+   "rank": 100
+  },
+  {
+   "name": "I-ALL",
+   "issuer": "IBK기업",
+   "img": "",
+   "avg": 81.0,
+   "toss": null,
+   "cg": 81,
+   "n": 1,
+   "rank": 101
+  },
+  {
+   "name": "LOCA LIKIT Play",
+   "issuer": "롯데카드",
+   "img": "https://static.toss.im/assets/credit-card/1771.png",
+   "avg": 82.0,
+   "toss": null,
+   "cg": 82,
+   "n": 1,
+   "rank": 102
+  },
+  {
+   "name": "카드의정석 TEN",
+   "issuer": "우리카드",
+   "img": "",
+   "avg": 83.0,
+   "toss": null,
+   "cg": 83,
+   "n": 1,
+   "rank": 103
+  },
+  {
+   "name": "힐튼 아너스 아멕스 프리미엄",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 84.0,
+   "toss": null,
+   "cg": 84,
+   "n": 1,
+   "rank": 104
+  },
+  {
+   "name": "THE iD. PLATINUM(포인트)",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 85.0,
+   "toss": null,
+   "cg": 85,
+   "n": 1,
+   "rank": 105
+  },
+  {
+   "name": "LOCA Professional",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 86.0,
+   "toss": null,
+   "cg": 86,
+   "n": 1,
+   "rank": 106
+  },
+  {
+   "name": "BeV V카드(스카이패스형)",
+   "issuer": "KB국민카드",
+   "img": "",
+   "avg": 87.0,
+   "toss": null,
+   "cg": 87,
+   "n": 1,
+   "rank": 107
+  },
+  {
+   "name": "카드의정석2 EVERY POINT",
+   "issuer": "우리카드",
+   "img": "",
+   "avg": 89.0,
+   "toss": null,
+   "cg": 89,
+   "n": 1,
+   "rank": 108
+  },
+  {
+   "name": "디지로카 Paris",
+   "issuer": "롯데카드",
+   "img": "",
+   "avg": 90.0,
+   "toss": null,
+   "cg": 90,
+   "n": 1,
+   "rank": 109
+  },
+  {
+   "name": "BC 바로 Air Max 카드",
+   "issuer": "BC카드",
+   "img": "",
+   "avg": 91.0,
+   "toss": null,
+   "cg": 91,
+   "n": 1,
+   "rank": 110
+  },
+  {
+   "name": "zgm.the pay카드",
+   "issuer": "NH농협카드",
+   "img": "",
+   "avg": 92.0,
+   "toss": null,
+   "cg": 92,
+   "n": 1,
+   "rank": 111
+  },
+  {
+   "name": "삼성 iD ALL 카드",
+   "issuer": "삼성카드",
+   "img": "",
+   "avg": 93.0,
+   "toss": null,
+   "cg": 93,
+   "n": 1,
+   "rank": 112
+  },
+  {
+   "name": "올바른 NEW HAVE카드",
+   "issuer": "NH농협카드",
+   "img": "https://static.toss.im/assets/credit-card/10152.png",
+   "avg": 94.0,
+   "toss": null,
+   "cg": 94,
+   "n": 1,
+   "rank": 113
+  },
+  {
+   "name": "The Aureum(더 아우름)카드",
+   "issuer": "Sh수협은행",
+   "img": "",
+   "avg": 96.0,
+   "toss": null,
+   "cg": 96,
+   "n": 1,
+   "rank": 114
+  },
+  {
+   "name": "JADE Prime",
+   "issuer": "하나카드",
+   "img": "https://static.toss.im/assets/credit-card/2817.png",
+   "avg": 97.0,
+   "toss": null,
+   "cg": 97,
+   "n": 1,
+   "rank": 115
+  },
+  {
+   "name": "Haru(Hoshino Resorts)",
+   "issuer": "신한카드",
+   "img": "",
+   "avg": 98.0,
+   "toss": null,
+   "cg": 98,
+   "n": 1,
+   "rank": 116
+  },
+  {
+   "name": "삼성 iD PLUG-IN 카드",
+   "issuer": "삼성카드",
+   "img": "https://static.toss.im/assets/credit-card/samsung_iDPLUG-IN.png",
+   "avg": 99.0,
+   "toss": null,
+   "cg": 99,
+   "n": 1,
+   "rank": 117
+  },
+  {
+   "name": "American Express The Platinum Card Edition2",
+   "issuer": "현대카드",
+   "img": "",
+   "avg": 100.0,
+   "toss": null,
+   "cg": 100,
+   "n": 1,
+   "rank": 118
+  }
+ ]
+}

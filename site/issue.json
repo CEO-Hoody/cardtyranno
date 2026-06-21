@@ -1,0 +1,88 @@
+{
+ "month": "2026-06",
+ "source": "db",
+ "platforms": [
+  {
+   "key": "ajungdang",
+   "name": "아정당",
+   "color": "#3b5bdb",
+   "url": "https://www.ajd.co.kr/card"
+  },
+  {
+   "key": "cardgorilla",
+   "name": "카드고릴라",
+   "color": "#ff4d4f",
+   "url": "https://www.card-gorilla.com/event"
+  },
+  {
+   "key": "toss",
+   "name": "토스",
+   "color": "#3182f6",
+   "url": "https://card-lounge.toss.im/event"
+  },
+  {
+   "key": "kakaopay",
+   "name": "카카오페이",
+   "color": "#e8b800",
+   "url": "https://contents.kakaopay.com/contents/2296"
+  }
+ ],
+ "items": [
+  {
+   "issuer": "삼성카드",
+   "ajungdang": "최대 61.1만원",
+   "cardgorilla": "최대 117만원",
+   "toss": "-",
+   "kakaopay": "-"
+  },
+  {
+   "issuer": "현대카드",
+   "ajungdang": "최대 72만원",
+   "cardgorilla": "최대 89만원",
+   "toss": "-",
+   "kakaopay": "최대 44만P"
+  },
+  {
+   "issuer": "신한카드",
+   "ajungdang": "최대 54만원",
+   "cardgorilla": "최대 78.9만원",
+   "toss": "-",
+   "kakaopay": "최대 39만원"
+  },
+  {
+   "issuer": "KB국민카드",
+   "ajungdang": "최대 85만원",
+   "cardgorilla": "최대 86만원",
+   "toss": "최대 81만원",
+   "kakaopay": "-"
+  },
+  {
+   "issuer": "롯데카드",
+   "ajungdang": "최대 66만원",
+   "cardgorilla": "최대 67만원",
+   "toss": "최대 48만원",
+   "kakaopay": "-"
+  },
+  {
+   "issuer": "우리카드",
+   "ajungdang": "최대 77만원",
+   "cardgorilla": "최대 78만원",
+   "toss": "-",
+   "kakaopay": "-"
+  },
+  {
+   "issuer": "하나카드",
+   "ajungdang": "-",
+   "cardgorilla": "최대 57만원",
+   "toss": "-",
+   "kakaopay": "-"
+  },
+  {
+   "issuer": "NH농협카드",
+   "ajungdang": "최대 20.5만원",
+   "cardgorilla": "최대 17.5만원",
+   "toss": "-",
+   "kakaopay": "-"
+  }
+ ]
+}

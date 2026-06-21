@@ -1,0 +1,69 @@
+{
+ "month": "2026-06",
+ "items": [
+  {
+   "rank": 1,
+   "issuer": "삼성카드",
+   "card": "삼성카드 taptap O",
+   "reward": "최대 119만원",
+   "img": "https://static.toss.im/assets/credit-card/2936.png",
+   "url": "https://card-lounge.toss.im/card/17"
+  },
+  {
+   "rank": 2,
+   "issuer": "현대카드",
+   "card": "현대카드 M",
+   "reward": "최대 89만원",
+   "img": "https://static.toss.im/assets/credit-card/wood.png",
+   "url": "https://card-lounge.toss.im/card/1827"
+  },
+  {
+   "rank": 3,
+   "issuer": "KB국민카드",
+   "card": "KB국민 굿데이카드",
+   "reward": "최대 86만원",
+   "img": "https://static.toss.im/assets/credit-card/1121.png",
+   "url": "https://card-lounge.toss.im/card/1121"
+  },
+  {
+   "rank": 4,
+   "issuer": "우리카드",
+   "card": "카드의정석 2",
+   "reward": "최대 78만원",
+   "img": "https://static.toss.im/assets/credit-card/10550.png",
+   "url": "https://card-lounge.toss.im/card/10175"
+  },
+  {
+   "rank": 5,
+   "issuer": "신한카드",
+   "card": "토스 신한카드 Mr.Life",
+   "reward": "최대 78.9만원",
+   "img": "https://static.toss.im/assets/credit-card/3480.png",
+   "url": "https://card-lounge.toss.im/card/1259"
+  },
+  {
+   "rank": 6,
+   "issuer": "롯데카드",
+   "card": "LOCA 365",
+   "reward": "최대 67만원",
+   "img": "https://static.toss.im/assets/credit-card/1477.png",
+   "url": "https://card-lounge.toss.im/card/1477"
+  },
+  {
+   "rank": 7,
+   "issuer": "하나카드",
+   "card": "하나 클럽SK카드",
+   "reward": "최대 57만원",
+   "img": "https://static.toss.im/assets/credit-card/credit-card-new/%ED%95%98%EB%82%98%20%ED%81%B4%EB%9F%BDSK%EC%B9%B4%EB%93%9C%28CLUB%20SK%29.png",
+   "url": "https://card-lounge.toss.im/card/5"
+  },
+  {
+   "rank": 8,
+   "issuer": "NH농협카드",
+   "card": "농협 별다줄카드",
+   "reward": "최대 20.5만원",
+   "img": "https://static.toss.im/assets/credit-card/1356.png",
+   "url": "https://card-lounge.toss.im/card/1356"
+  }
+ ]
+}
