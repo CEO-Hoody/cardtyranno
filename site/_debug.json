@@ -6,5 +6,40 @@
   "n": 130,
   "cardIdxs": 140
  },
- "cg_cards": "ERR:HTTPSConnectionPool(host='api.card-gorilla.com', port=8080): Read timed out. (read timeout=20)"
+ "cg_cards": "ERR:HTTPSConnectionPool(host='api.card-gorilla.com', port=8080): Read timed out. (read timeout=20)",
+ "toss": {
+  "1121": {
+   "st": 200,
+   "len": 267916,
+   "man": true,
+   "event": true,
+   "cashback": false,
+   "ctx": [
+    "urce-file=\"index.client.mobile.tsx\">카드 쓰고 최대 81만원 받는 이벤트</but",
+    "sentry-source-file=\"index.client.mobile.tsx\">30만원 이상</span></",
+    "<p>- 주유 : 주유소, 충전소 업종<br/>- 일 할인제공 이용금액 한도 : 10만원</p> <table ",
+    "9, 239, 239);text-align:center\"><strong>1구간 (30만원 이상)</strong",
+    "9, 239, 239);text-align:center\"><strong>2구간 (60만원 이상)</strong"
+   ],
+   "keys": [],
+   "next": false
+  },
+  "34": {
+   "st": 200,
+   "len": 284095,
+   "man": true,
+   "event": false,
+   "cashback": true,
+   "ctx": [
+    "sentry-source-file=\"index.client.mobile.tsx\">30만원 이상</span></",
+    "용금액(1일~말일, 일시불+할부, 모든 주유소 주유 및 LPG 이용금액 제외)이 30만원 이상인 경우 제공됩니",
+    "용금액(1일~말일, 일시불+할부, 모든 주유소 주유 및 LPG 이용금액 제외)이 30만원 이상인 경우 제공됩니",
+    "금액(1일~말일, 일시불+ 할부, 모든 주유소 주유 및 LPG 이용금액 제외)이 30만원 이상인 경우 제공됩니",
+    "용금액(1일~말일, 일시불+할부, 모든 주유소 주유 및 LPG 이용금액 제외)이 30만원 이상인 경우 제공됩니"
+   ],
+   "keys": [],
+   "next": false
+  },
+  "3480": "ERR:404 Client Error: Not Found for url: https://card-lounge.toss.im/card/3480"
+ }
 }
