@@ -1,12 +1,15 @@
 {
  "as_of": "2026-06",
- "source": "네이버페이 카드 캡처(promotionsList / 인기 신용카드 추천) — 거주지 IP 라이브가 데이터센터에서 막혀 캡처 기반 추출",
- "_note": "전체 자동화는 collector/local_ajd/collect_naver_local.py 를 회원님 맥에서 실행(거주지 IP)하면 됩니다.",
+ "source": "네이버페이 카드 캡처(promotionsList 25건 + 우리78만 대상카드 + 인기카드 per-card). 라이브 .json은 데이터센터 404 → 캡처 기반.",
+ "_note": "전체 자동화는 collector/local_ajd/collect_naver_local.py(거주지 IP). productsList POST body = {pageNo,cardCodeSets,rewardTypes,promotionYn}, 응답 result.result.",
  "cards": {
-  "KB국민 굿데이카드": {"reward_won": 830000, "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)", "company": "", "url": "https://card.pay.naver.com/home/promotion/event"},
-  "카드의정석 2":      {"reward_won": 780000, "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)", "company": "CCWR", "promotionId": "20260521001731590524", "url": "https://card.pay.naver.com/home/promotion/event"},
-  "LOCA LIKIT":        {"reward_won": 634000, "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)", "company": "CCLG", "promotionId": "20260521001731590512", "url": "https://card.pay.naver.com/home/promotion/event"},
-  "올바른 FLEX 카드":  {"reward_won": 175000, "reward_text": "최대 17.5만원 (네이버페이 NH농협카드 이벤트)", "company": "CCNH", "url": "https://card.pay.naver.com/home/promotion/event"},
+  "KB국민 굿데이카드": {"reward_won": 830000, "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)", "company": "CCKM", "url": "https://card.pay.naver.com/home/promotion/event"},
+  "카드의정석 2":      {"reward_won": 780000, "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)", "company": "CCWR", "promotionId": "20260521001731590524", "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"},
+  "우리카드 7CORE":    {"reward_won": 780000, "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)", "company": "CCWR", "promotionId": "20260521001731590524", "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"},
+  "the OPUS silver":   {"reward_won": 780000, "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)", "company": "CCWR", "promotionId": "20260521001731590524", "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"},
+  "우리카드 MILE&POINT": {"reward_won": 780000, "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)", "company": "CCWR", "promotionId": "20260521001731590524", "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"},
+  "LOCA LIKIT":        {"reward_won": 634000, "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)", "company": "CCLO", "promotionId": "20260520001726177937", "url": "https://card.pay.naver.com/home/promotion/event"},
+  "올바른 FLEX 카드":  {"reward_won": 175000, "reward_text": "최대 17.5만원 (네이버페이 NH농협카드 이벤트)", "company": "CCNH", "promotionId": "20260521001731590500", "url": "https://card.pay.naver.com/home/promotion/event"},
   "신한카드 Mr.Life":  {"reward_won": 500000, "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)", "company": "", "url": "https://card.pay.naver.com/home/promotion/event"}
  }
 }
