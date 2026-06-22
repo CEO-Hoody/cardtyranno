@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-21",
+ "updated": "2026-06-22",
  "month": "2026-06",
  "products": [
   {
@@ -70,6 +70,10 @@
    "name": "신한카드 처음(ANNIVERSE)",
    "issuer": "신한카드",
    "platforms": {
+    "banksalad": {
+     "id": "CARD004343",
+     "url": null
+    },
     "cardgorilla": {
      "id": "2759",
      "url": null
@@ -87,6 +91,70 @@
   },
   {
    "id": 4,
+   "name": "K-패스 (신용)",
+   "issuer": "IBK기업은행",
+   "platforms": {
+    "banksalad": {
+     "id": "CARD004320",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "2559",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 12.5만원 캐시백",
+     "reward_won": 125000,
+     "period_end": "2026.6.30",
+     "url": "https://www.card-gorilla.com/card/2559"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "name": "D4카드의정석Ⅱ",
+   "issuer": "우리카드",
+   "platforms": {
+    "banksalad": {
+     "id": "CARD004420",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "2686",
+     "url": null
+    }
+   },
+   "events": []
+  },
+  {
+   "id": 6,
+   "name": "LOCA 365 카드",
+   "issuer": "롯데카드",
+   "platforms": {
+    "banksalad": {
+     "id": "CARD000037",
+     "url": null
+    },
+    "cardgorilla": {
+     "id": "2330",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "최대 64만원 혜택",
+     "reward_won": 640000,
+     "period_end": "2026.7.10",
+     "url": "https://www.card-gorilla.com/card/2330"
+    }
+   ]
+  },
+  {
+   "id": 7,
    "name": "삼성 iD SELECT ALL 카드",
    "issuer": "삼성카드",
    "platforms": {
@@ -110,7 +178,7 @@
    ]
   },
   {
-   "id": 5,
+   "id": 8,
    "name": "삼성카드 taptap O",
    "issuer": "삼성카드",
    "platforms": {
@@ -122,7 +190,7 @@
    "events": []
   },
   {
-   "id": 6,
+   "id": 9,
    "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
    "issuer": "삼성카드",
    "platforms": {
@@ -138,7 +206,7 @@
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "최대 117만원 혜택",
+     "reward_text": "최대 117만원 캐시백",
      "reward_won": 1170000,
      "period_end": "2026.6.30",
      "url": "https://www.card-gorilla.com/card/49"
@@ -146,7 +214,7 @@
    ]
   },
   {
-   "id": 7,
+   "id": 10,
    "name": "현대카드 M",
    "issuer": "현대카드",
    "platforms": {
@@ -166,7 +234,7 @@
    ]
   },
   {
-   "id": 8,
+   "id": 11,
    "name": "KB국민 굿데이카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -201,7 +269,7 @@
    ]
   },
   {
-   "id": 9,
+   "id": 12,
    "name": "카드의정석 2",
    "issuer": "우리카드",
    "platforms": {
@@ -221,7 +289,7 @@
    ]
   },
   {
-   "id": 10,
+   "id": 13,
    "name": "LOCA LIKIT 2.0",
    "issuer": "롯데카드",
    "platforms": {
@@ -241,7 +309,7 @@
    ]
   },
   {
-   "id": 11,
+   "id": 14,
    "name": "NH농협 네이버페이 제휴(CCNH 샘플)",
    "issuer": "NH농협카드",
    "platforms": {
@@ -253,7 +321,7 @@
    "events": []
   },
   {
-   "id": 12,
+   "id": 15,
    "name": "the Orange",
    "issuer": "현대카드",
    "platforms": {
@@ -273,7 +341,7 @@
    ]
   },
   {
-   "id": 13,
+   "id": 16,
    "name": "I-Mileage (대한항공)",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -293,7 +361,7 @@
    ]
   },
   {
-   "id": 14,
+   "id": 17,
    "name": "삼성 iD STATION 카드 (HD현대오일뱅크)",
    "issuer": "삼성카드",
    "platforms": {
@@ -305,7 +373,7 @@
    "events": []
   },
   {
-   "id": 15,
+   "id": 18,
    "name": "신한카드 Discount Plan+",
    "issuer": "주유할인",
    "platforms": {
@@ -325,7 +393,7 @@
    ]
   },
   {
-   "id": 16,
+   "id": 19,
    "name": "카드의정석 I&U+",
    "issuer": "주유할인",
    "platforms": {
@@ -345,7 +413,7 @@
    ]
   },
   {
-   "id": 17,
+   "id": 20,
    "name": "LOCA LIKIT Play",
    "issuer": "주유할인",
    "platforms": {
@@ -365,7 +433,7 @@
    ]
   },
   {
-   "id": 18,
+   "id": 21,
    "name": "굿데이카드",
    "issuer": "주유할인",
    "platforms": {
@@ -385,7 +453,7 @@
    ]
   },
   {
-   "id": 19,
+   "id": 22,
    "name": "하나 나라사랑카드",
    "issuer": "하나카드",
    "platforms": {
@@ -405,7 +473,27 @@
    ]
   },
   {
-   "id": 20,
+   "id": 23,
+   "name": "트라이플러스 삼성카드",
+   "issuer": "삼성카드",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2988",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "12만원 캐시백",
+     "reward_won": 120000,
+     "period_end": "2026.7.31",
+     "url": "https://www.card-gorilla.com/card/2988"
+    }
+   ]
+  },
+  {
+   "id": 24,
    "name": "에너지플러스 현대카드",
    "issuer": "현대카드",
    "platforms": {
@@ -425,7 +513,7 @@
    ]
   },
   {
-   "id": 21,
+   "id": 25,
    "name": "I-ALL",
    "issuer": "주유할인",
    "platforms": {
@@ -445,7 +533,7 @@
    ]
   },
   {
-   "id": 22,
+   "id": 26,
    "name": "팝업구조 TEST",
    "issuer": "이벤트 등록용",
    "platforms": {
@@ -457,7 +545,7 @@
    "events": []
   },
   {
-   "id": 23,
+   "id": 27,
    "name": "트래블로그+(플러스) 신용카드",
    "issuer": "하나카드",
    "platforms": {
@@ -477,7 +565,7 @@
    ]
   },
   {
-   "id": 24,
+   "id": 28,
    "name": "THE iD. 1st",
    "issuer": "추가캐시백",
    "platforms": {
@@ -497,7 +585,7 @@
    ]
   },
   {
-   "id": 25,
+   "id": 29,
    "name": "대한항공카드 060",
    "issuer": "현대카드",
    "platforms": {
@@ -517,7 +605,7 @@
    ]
   },
   {
-   "id": 26,
+   "id": 30,
    "name": "대한항공카드 300",
    "issuer": "현대카드",
    "platforms": {
@@ -537,7 +625,7 @@
    ]
   },
   {
-   "id": 27,
+   "id": 31,
    "name": "대한항공카드 120",
    "issuer": "현대카드",
    "platforms": {
@@ -557,7 +645,7 @@
    ]
   },
   {
-   "id": 28,
+   "id": 32,
    "name": "대한항공카드 the First Edition2",
    "issuer": "현대카드",
    "platforms": {
@@ -577,7 +665,7 @@
    ]
   },
   {
-   "id": 29,
+   "id": 33,
    "name": "현대카드 ZERO Up",
    "issuer": "현대카드",
    "platforms": {
@@ -589,7 +677,7 @@
    "events": []
   },
   {
-   "id": 30,
+   "id": 34,
    "name": "현대카드MY BUSINESS",
    "issuer": "현대카드",
    "platforms": {
@@ -609,7 +697,7 @@
    ]
   },
   {
-   "id": 31,
+   "id": 35,
    "name": "The Aureum(더 아우름)카드",
    "issuer": "이벤트 등록용",
    "platforms": {
@@ -629,7 +717,7 @@
    ]
   },
   {
-   "id": 32,
+   "id": 36,
    "name": "zgm 할인카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -649,7 +737,7 @@
    ]
   },
   {
-   "id": 33,
+   "id": 37,
    "name": "zgm.고향으로카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -669,7 +757,7 @@
    ]
   },
   {
-   "id": 34,
+   "id": 38,
    "name": "K-패스카드(신용)",
    "issuer": "NH농협카드",
    "platforms": {
@@ -689,7 +777,7 @@
    ]
   },
   {
-   "id": 35,
+   "id": 39,
    "name": "zgm.rounding카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -709,7 +797,7 @@
    ]
   },
   {
-   "id": 36,
+   "id": 40,
    "name": "zgm.휴가중카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -729,7 +817,7 @@
    ]
   },
   {
-   "id": 37,
+   "id": 41,
    "name": "zgm.the pay카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -749,7 +837,7 @@
    ]
   },
   {
-   "id": 38,
+   "id": 42,
    "name": "zgm living카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -769,7 +857,7 @@
    ]
   },
   {
-   "id": 39,
+   "id": 43,
    "name": "zgm shopping카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -789,7 +877,7 @@
    ]
   },
   {
-   "id": 40,
+   "id": 44,
    "name": "zgm point카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -809,7 +897,7 @@
    ]
   },
   {
-   "id": 41,
+   "id": 45,
    "name": "올바른 NEW HAVE 카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -829,7 +917,7 @@
    ]
   },
   {
-   "id": 42,
+   "id": 46,
    "name": "올바른 BAZIC 카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -849,7 +937,7 @@
    ]
   },
   {
-   "id": 43,
+   "id": 47,
    "name": "올바른지구 카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -869,7 +957,7 @@
    ]
   },
   {
-   "id": 44,
+   "id": 48,
    "name": "올바른 MYPICK 카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -889,7 +977,7 @@
    ]
   },
   {
-   "id": 45,
+   "id": 49,
    "name": "별다줄 카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -909,7 +997,7 @@
    ]
   },
   {
-   "id": 46,
+   "id": 50,
    "name": "NH1961 카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -929,7 +1017,7 @@
    ]
   },
   {
-   "id": 47,
+   "id": 51,
    "name": "NH20해봄카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -949,7 +1037,7 @@
    ]
   },
   {
-   "id": 48,
+   "id": 52,
    "name": "SOHO 다사로이OIL카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -969,7 +1057,7 @@
    ]
   },
   {
-   "id": 49,
+   "id": 53,
    "name": "삼성카드 iD SELECT 2종",
    "issuer": "삼성카드",
    "platforms": {
@@ -989,7 +1077,7 @@
    ]
   },
   {
-   "id": 50,
+   "id": 54,
    "name": "현대카드ZERO Edition3(할인형)",
    "issuer": "현대카드",
    "platforms": {
@@ -1001,7 +1089,7 @@
    "events": []
   },
   {
-   "id": 51,
+   "id": 55,
    "name": "현대카드ZERO Edition3(포인트형)",
    "issuer": "현대카드",
    "platforms": {
@@ -1013,7 +1101,7 @@
    "events": []
   },
   {
-   "id": 52,
+   "id": 56,
    "name": "신한카드 Globus",
    "issuer": "신한카드",
    "platforms": {
@@ -1033,7 +1121,7 @@
    ]
   },
   {
-   "id": 53,
+   "id": 57,
    "name": "현대카드 O",
    "issuer": "현대카드",
    "platforms": {
@@ -1045,7 +1133,7 @@
    "events": []
   },
   {
-   "id": 54,
+   "id": 58,
    "name": "현대카드 S",
    "issuer": "현대카드",
    "platforms": {
@@ -1057,7 +1145,7 @@
    "events": []
   },
   {
-   "id": 55,
+   "id": 59,
    "name": "현대카드 D",
    "issuer": "현대카드",
    "platforms": {
@@ -1069,7 +1157,7 @@
    "events": []
   },
   {
-   "id": 56,
+   "id": 60,
    "name": "현대카드 H",
    "issuer": "현대카드",
    "platforms": {
@@ -1081,7 +1169,7 @@
    "events": []
   },
   {
-   "id": 57,
+   "id": 61,
    "name": "현대카드 T",
    "issuer": "현대카드",
    "platforms": {
@@ -1093,7 +1181,7 @@
    "events": []
   },
   {
-   "id": 58,
+   "id": 62,
    "name": "현대카드 X Cut",
    "issuer": "현대카드",
    "platforms": {
@@ -1105,7 +1193,7 @@
    "events": []
   },
   {
-   "id": 59,
+   "id": 63,
    "name": "현대카드 X Save",
    "issuer": "현대카드",
    "platforms": {
@@ -1117,7 +1205,7 @@
    "events": []
   },
   {
-   "id": 60,
+   "id": 64,
    "name": "국민행복",
    "issuer": "롯데카드",
    "platforms": {
@@ -1137,7 +1225,7 @@
    ]
   },
   {
-   "id": 61,
+   "id": 65,
    "name": "클래시 트래블카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -1157,7 +1245,7 @@
    ]
   },
   {
-   "id": 62,
+   "id": 66,
    "name": "일년의 설렘카드",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -1177,7 +1265,7 @@
    ]
   },
   {
-   "id": 63,
+   "id": 67,
    "name": "해피메이트 IBK카드(신용)",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -1197,7 +1285,7 @@
    ]
   },
   {
-   "id": 64,
+   "id": 68,
    "name": "삼성 모니모A카드",
    "issuer": "삼성카드",
    "platforms": {
@@ -1209,7 +1297,7 @@
    "events": []
   },
   {
-   "id": 65,
+   "id": 69,
    "name": "삼성 taptap Drive",
    "issuer": "삼성카드",
    "platforms": {
@@ -1221,7 +1309,7 @@
    "events": []
   },
   {
-   "id": 66,
+   "id": 70,
    "name": "롯데멤버스 2종",
    "issuer": "롯데카드",
    "platforms": {
@@ -1241,7 +1329,7 @@
    ]
   },
   {
-   "id": 67,
+   "id": 71,
    "name": "LOCA 365",
    "issuer": "롯데카드",
    "platforms": {
@@ -1261,7 +1349,7 @@
    ]
   },
   {
-   "id": 68,
+   "id": 72,
    "name": "KB국민카드 5종",
    "issuer": "KB국민카드",
    "platforms": {
@@ -1281,7 +1369,7 @@
    ]
   },
   {
-   "id": 69,
+   "id": 73,
    "name": "IBK기업은행 4종",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -1301,7 +1389,7 @@
    ]
   },
   {
-   "id": 70,
+   "id": 74,
    "name": "롯데카드 시티 3종",
    "issuer": "롯데카드",
    "platforms": {
@@ -1321,7 +1409,7 @@
    ]
   },
   {
-   "id": 71,
+   "id": 75,
    "name": "LOCA LIKIT 2종",
    "issuer": "롯데카드",
    "platforms": {
@@ -1341,7 +1429,7 @@
    ]
   },
   {
-   "id": 72,
+   "id": 76,
    "name": "BC 바로 MACAO 카드",
    "issuer": "BC 바로카드",
    "platforms": {
@@ -1361,7 +1449,7 @@
    ]
   },
   {
-   "id": 73,
+   "id": 77,
    "name": "BC 바로 Air Master 카드",
    "issuer": "BC 바로카드",
    "platforms": {
@@ -1381,7 +1469,7 @@
    ]
   },
   {
-   "id": 74,
+   "id": 78,
    "name": "BC 바로 ZONE 카드",
    "issuer": "BC 바로카드",
    "platforms": {
@@ -1401,7 +1489,7 @@
    ]
   },
   {
-   "id": 75,
+   "id": 79,
    "name": "Discount Plan+ 외 2종",
    "issuer": "신한카드",
    "platforms": {
@@ -1421,7 +1509,7 @@
    ]
   },
   {
-   "id": 76,
+   "id": 80,
    "name": "Point Plan+ 외 2종",
    "issuer": "신한카드",
    "platforms": {
@@ -1441,7 +1529,7 @@
    ]
   },
   {
-   "id": 77,
+   "id": 81,
    "name": "Mr.Life 외 4종",
    "issuer": "신한카드",
    "platforms": {
@@ -1461,7 +1549,7 @@
    ]
   },
   {
-   "id": 78,
+   "id": 82,
    "name": "카드의정석 EVERY MILE SKYPASS",
    "issuer": "우리카드",
    "platforms": {
@@ -1473,7 +1561,7 @@
    "events": []
   },
   {
-   "id": 79,
+   "id": 83,
    "name": "NH농협카드 3종",
    "issuer": "NH농협카드",
    "platforms": {
@@ -1493,7 +1581,7 @@
    ]
   },
   {
-   "id": 80,
+   "id": 84,
    "name": "현대백화점카드",
    "issuer": "현대백화점",
    "platforms": {
@@ -1505,7 +1593,7 @@
    "events": []
   },
   {
-   "id": 81,
+   "id": 85,
    "name": "우리카드 SHOPPING+ 외 4종",
    "issuer": "우리카드",
    "platforms": {
@@ -1525,7 +1613,7 @@
    ]
   },
   {
-   "id": 82,
+   "id": 86,
    "name": "카드의정석2 외 3종",
    "issuer": "우리카드",
    "platforms": {
@@ -1545,7 +1633,7 @@
    ]
   },
   {
-   "id": 83,
+   "id": 87,
    "name": "현대카드 AMEX GOLD",
    "issuer": "현대카드",
    "platforms": {
@@ -1565,7 +1653,7 @@
    ]
   },
   {
-   "id": 84,
+   "id": 88,
    "name": "현대카드 MX Black Edition2",
    "issuer": "현대카드",
    "platforms": {
@@ -1585,7 +1673,7 @@
    ]
   },
   {
-   "id": 85,
+   "id": 89,
    "name": "현대카드 Summit",
    "issuer": "현대카드",
    "platforms": {
@@ -1605,7 +1693,7 @@
    ]
   },
   {
-   "id": 86,
+   "id": 90,
    "name": "the Green Edition3",
    "issuer": "현대카드",
    "platforms": {
@@ -1617,7 +1705,7 @@
    "events": []
   },
   {
-   "id": 87,
+   "id": 91,
    "name": "the Pink Edition2",
    "issuer": "현대카드",
    "platforms": {
@@ -1629,7 +1717,7 @@
    "events": []
   },
   {
-   "id": 88,
+   "id": 92,
    "name": "현대카드 AMEX GREEN",
    "issuer": "현대카드",
    "platforms": {
@@ -1649,7 +1737,7 @@
    ]
   },
   {
-   "id": 89,
+   "id": 93,
    "name": "KB국민카드 체크 6종",
    "issuer": "KB국민카드",
    "platforms": {
@@ -1661,7 +1749,7 @@
    "events": []
   },
   {
-   "id": 90,
+   "id": 94,
    "name": "삼성 iD ON 카드",
    "issuer": "삼성카드",
    "platforms": {
@@ -1673,7 +1761,7 @@
    "events": []
   },
   {
-   "id": 91,
+   "id": 95,
    "name": "현대카드Z family Edition2",
    "issuer": "현대카드",
    "platforms": {
@@ -1685,7 +1773,7 @@
    "events": []
   },
   {
-   "id": 92,
+   "id": 96,
    "name": "현대카드Z play",
    "issuer": "현대카드",
    "platforms": {
@@ -1697,7 +1785,7 @@
    "events": []
   },
   {
-   "id": 93,
+   "id": 97,
    "name": "현대카드Z everyday",
    "issuer": "현대카드",
    "platforms": {
@@ -1709,7 +1797,7 @@
    "events": []
   },
   {
-   "id": 94,
+   "id": 98,
    "name": "현대카드Z work Edition2",
    "issuer": "현대카드",
    "platforms": {
@@ -1721,7 +1809,7 @@
    "events": []
   },
   {
-   "id": 95,
+   "id": 99,
    "name": "I-PET",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -1741,7 +1829,7 @@
    ]
   },
   {
-   "id": 96,
+   "id": 100,
    "name": "DA카드의정석Ⅱ",
    "issuer": "우리카드",
    "platforms": {
@@ -1753,7 +1841,7 @@
    "events": []
   },
   {
-   "id": 97,
+   "id": 101,
    "name": "Daily With(데일리위드)카드",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -1773,19 +1861,7 @@
    ]
   },
   {
-   "id": 98,
-   "name": "D4카드의정석Ⅱ",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2686",
-     "url": null
-    }
-   },
-   "events": []
-  },
-  {
-   "id": 99,
+   "id": 102,
    "name": "LOCA LIKIT 3종",
    "issuer": "롯데카드",
    "platforms": {
@@ -1805,7 +1881,7 @@
    ]
   },
   {
-   "id": 100,
+   "id": 103,
    "name": "디지로카 Link",
    "issuer": "롯데카드",
    "platforms": {
@@ -1825,7 +1901,7 @@
    ]
   },
   {
-   "id": 101,
+   "id": 104,
    "name": "일상의 기쁨카드(신용)",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -1845,7 +1921,7 @@
    ]
   },
   {
-   "id": 102,
+   "id": 105,
    "name": "신한카드 체크 2종",
    "issuer": "신한카드",
    "platforms": {
@@ -1865,7 +1941,7 @@
    ]
   },
   {
-   "id": 103,
+   "id": 106,
    "name": "롯데 국민행복카드",
    "issuer": "롯데카드",
    "platforms": {
@@ -1885,7 +1961,7 @@
    ]
   },
   {
-   "id": 104,
+   "id": 107,
    "name": "신한카드 Air One",
    "issuer": "신한카드",
    "platforms": {
@@ -1905,7 +1981,7 @@
    ]
   },
   {
-   "id": 105,
+   "id": 108,
    "name": "taptap DRIVE",
    "issuer": "삼성카드",
    "platforms": {
@@ -1917,7 +1993,7 @@
    "events": []
   },
   {
-   "id": 106,
+   "id": 109,
    "name": "올바른 FLEX 카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -1937,7 +2013,7 @@
    ]
   },
   {
-   "id": 107,
+   "id": 110,
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
    "platforms": {
@@ -1957,7 +2033,7 @@
    ]
   },
   {
-   "id": 108,
+   "id": 111,
    "name": "LOCA LIKIT Eat",
    "issuer": "롯데카드",
    "platforms": {
@@ -1977,27 +2053,7 @@
    ]
   },
   {
-   "id": 109,
-   "name": "LOCA 365 카드",
-   "issuer": "롯데카드",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2330",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "최대 64만원 혜택",
-     "reward_won": 640000,
-     "period_end": "2026.7.10",
-     "url": "https://www.card-gorilla.com/card/2330"
-    }
-   ]
-  },
-  {
-   "id": 110,
+   "id": 112,
    "name": "신한카드 플리(체크)",
    "issuer": "신한카드",
    "platforms": {
@@ -2017,7 +2073,7 @@
    ]
   },
   {
-   "id": 111,
+   "id": 113,
    "name": "노리2 체크카드(KB Pay)",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2029,7 +2085,7 @@
    "events": []
   },
   {
-   "id": 112,
+   "id": 114,
    "name": "zgm.streaming카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -2049,7 +2105,7 @@
    ]
   },
   {
-   "id": 113,
+   "id": 115,
    "name": "KB국민 My WE:SH 카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2069,7 +2125,7 @@
    ]
   },
   {
-   "id": 114,
+   "id": 116,
    "name": "신한카드 플리 체크(산리오캐릭터즈)",
    "issuer": "신한카드",
    "platforms": {
@@ -2089,7 +2145,7 @@
    ]
   },
   {
-   "id": 115,
+   "id": 117,
    "name": "zgm.play카드",
    "issuer": "NH농협카드",
    "platforms": {
@@ -2109,27 +2165,7 @@
    ]
   },
   {
-   "id": 116,
-   "name": "K-패스 (신용)",
-   "issuer": "IBK기업은행",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2559",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "최대 12.5만원 캐시백",
-     "reward_won": 125000,
-     "period_end": "2026.6.30",
-     "url": "https://www.card-gorilla.com/card/2559"
-    }
-   ]
-  },
-  {
-   "id": 117,
+   "id": 118,
    "name": "토심이 첵첵 체크카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2141,7 +2177,7 @@
    "events": []
   },
   {
-   "id": 118,
+   "id": 119,
    "name": "모니모A 카드",
    "issuer": "삼성카드",
    "platforms": {
@@ -2153,7 +2189,7 @@
    "events": []
   },
   {
-   "id": 119,
+   "id": 120,
    "name": "디지로카 London",
    "issuer": "롯데카드",
    "platforms": {
@@ -2173,7 +2209,7 @@
    ]
   },
   {
-   "id": 120,
+   "id": 121,
    "name": "디지로카 Paris",
    "issuer": "롯데카드",
    "platforms": {
@@ -2193,7 +2229,7 @@
    ]
   },
   {
-   "id": 121,
+   "id": 122,
    "name": "American Express® Green Card Edition2",
    "issuer": "현대카드",
    "platforms": {
@@ -2213,7 +2249,7 @@
    ]
   },
   {
-   "id": 122,
+   "id": 123,
    "name": "American Express® Gold Card Edition2",
    "issuer": "현대카드",
    "platforms": {
@@ -2233,7 +2269,7 @@
    ]
   },
   {
-   "id": 123,
+   "id": 124,
    "name": "신한카드 Point Plan",
    "issuer": "신한카드",
    "platforms": {
@@ -2253,7 +2289,7 @@
    ]
   },
   {
-   "id": 124,
+   "id": 125,
    "name": "카드의정석 SHOPPING+",
    "issuer": "우리카드",
    "platforms": {
@@ -2273,7 +2309,7 @@
    ]
   },
   {
-   "id": 125,
+   "id": 126,
    "name": "카드의정석2 EVERY POINT",
    "issuer": "우리카드",
    "platforms": {
@@ -2293,7 +2329,7 @@
    ]
   },
   {
-   "id": 126,
+   "id": 127,
    "name": "트래블러스 체크카드(토심이)",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2305,7 +2341,7 @@
    "events": []
   },
   {
-   "id": 127,
+   "id": 128,
    "name": "카드의정석 TEN",
    "issuer": "우리카드",
    "platforms": {
@@ -2325,7 +2361,7 @@
    ]
   },
   {
-   "id": 128,
+   "id": 129,
    "name": "디지로카 Las Vegas",
    "issuer": "롯데카드",
    "platforms": {
@@ -2345,7 +2381,7 @@
    ]
   },
   {
-   "id": 129,
+   "id": 130,
    "name": "카드의정석2 EVERY DISCOUNT",
    "issuer": "우리카드",
    "platforms": {
@@ -2365,7 +2401,7 @@
    ]
   },
   {
-   "id": 130,
+   "id": 131,
    "name": "신한카드 Edu Plan+",
    "issuer": "신한카드",
    "platforms": {
@@ -2385,7 +2421,7 @@
    ]
   },
   {
-   "id": 131,
+   "id": 132,
    "name": "IBK포인트3.8(신용)",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -2405,7 +2441,7 @@
    ]
   },
   {
-   "id": 132,
+   "id": 133,
    "name": "IBK포인트(신용)",
    "issuer": "IBK기업은행",
    "platforms": {
@@ -2425,7 +2461,7 @@
    ]
   },
   {
-   "id": 133,
+   "id": 134,
    "name": "롯데멤버스 카드",
    "issuer": "롯데카드",
    "platforms": {
@@ -2445,7 +2481,7 @@
    ]
   },
   {
-   "id": 134,
+   "id": 135,
    "name": "롯데멤버스 카드 프리미엄",
    "issuer": "롯데카드",
    "platforms": {
@@ -2465,7 +2501,7 @@
    ]
   },
   {
-   "id": 135,
+   "id": 136,
    "name": "알리익스프레스 신한카드",
    "issuer": "신한카드",
    "platforms": {
@@ -2485,7 +2521,7 @@
    ]
   },
   {
-   "id": 136,
+   "id": 137,
    "name": "현대카드 ZERO Up(할인형)",
    "issuer": "현대카드",
    "platforms": {
@@ -2497,7 +2533,7 @@
    "events": []
   },
   {
-   "id": 137,
+   "id": 138,
    "name": "우리카드 7CORE",
    "issuer": "우리카드",
    "platforms": {
@@ -2517,7 +2553,7 @@
    ]
   },
   {
-   "id": 138,
+   "id": 139,
    "name": "KB 틴업 체크카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2529,7 +2565,7 @@
    "events": []
   },
   {
-   "id": 139,
+   "id": 140,
    "name": "Haru(Hoshino Resorts)",
    "issuer": "신한카드",
    "platforms": {
@@ -2549,7 +2585,7 @@
    ]
   },
   {
-   "id": 140,
+   "id": 141,
    "name": "삼성 iD SELECT ON 카드",
    "issuer": "삼성카드",
    "platforms": {
@@ -2569,7 +2605,7 @@
    ]
   },
   {
-   "id": 141,
+   "id": 142,
    "name": "우리카드 MILE&POINT",
    "issuer": "우리카드",
    "platforms": {
@@ -2589,7 +2625,7 @@
    ]
   },
   {
-   "id": 142,
+   "id": 143,
    "name": "the OPUS silver",
    "issuer": "우리카드",
    "platforms": {
@@ -2609,7 +2645,7 @@
    ]
   },
   {
-   "id": 143,
+   "id": 144,
    "name": "트래블러스 체크카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2621,7 +2657,7 @@
    "events": []
   },
   {
-   "id": 144,
+   "id": 145,
    "name": "BC 바로 Air Max 카드",
    "issuer": "BC 바로카드",
    "platforms": {
@@ -2641,7 +2677,7 @@
    ]
   },
   {
-   "id": 145,
+   "id": 146,
    "name": "KB Youth Club 체크카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2653,7 +2689,7 @@
    "events": []
   },
   {
-   "id": 146,
+   "id": 147,
    "name": "KB YOU Prime 카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2673,7 +2709,7 @@
    ]
   },
   {
-   "id": 147,
+   "id": 148,
    "name": "현대카드MY BUSINESS M F&B",
    "issuer": "현대카드",
    "platforms": {
@@ -2693,7 +2729,7 @@
    ]
   },
   {
-   "id": 148,
+   "id": 149,
    "name": "현대카드MY BUSINESS M Retail",
    "issuer": "현대카드",
    "platforms": {
@@ -2713,7 +2749,7 @@
    ]
   },
   {
-   "id": 149,
+   "id": 150,
    "name": "현대카드MY BUSINESS M E-seller",
    "issuer": "현대카드",
    "platforms": {
@@ -2733,7 +2769,7 @@
    ]
   },
   {
-   "id": 150,
+   "id": 151,
    "name": "신한카드 Simple Plan+",
    "issuer": "신한카드",
    "platforms": {
@@ -2753,7 +2789,7 @@
    ]
   },
   {
-   "id": 151,
+   "id": 152,
    "name": "KB NEED Pay 카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2773,7 +2809,7 @@
    ]
   },
   {
-   "id": 152,
+   "id": 153,
    "name": "KB YOU Wish 카드",
    "issuer": "KB국민카드",
    "platforms": {
@@ -2793,7 +2829,7 @@
    ]
   },
   {
-   "id": 153,
+   "id": 154,
    "name": "LOCA LIKIT 1.5",
    "issuer": "롯데카드",
    "platforms": {
@@ -2813,7 +2849,7 @@
    ]
   },
   {
-   "id": 154,
+   "id": 155,
    "name": "현대카드 ZERO Up(포인트형)",
    "issuer": "현대카드",
    "platforms": {
