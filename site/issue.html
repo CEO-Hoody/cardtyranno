@@ -198,26 +198,32 @@ fetch('events.json').then(r=>r.json()).then(function(j){EV=j.items;ORD=j.order;
  if(qi&&(qi==="전체"||ORD.indexOf(qi)>=0))cur=qi;
  tabs();render();
  var at=document.querySelector('#tabs .tab.active');if(at)at.scrollIntoView({inline:'center',block:'nearest'});});
-// (1) 카드사 최대혜택 비교 — 카드사별 카드(가로스크롤 X, 세로 카드형)
-fetch('issue.json').then(r=>r.json()).then(function(j){var P=j.platforms;
- document.getElementById('cmp-iss').innerHTML=j.items.map(function(d){
-  var best=-1,bk=null;P.forEach(function(p){var v=num(d[p.key]);if(v>best){best=v;bk=p.key;}});
-  var rows=P.map(function(p,i){var v=d[p.key],has=v&&v!=="-";var isb=has&&p.key===bk&&best>0;
-   return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+p.color+'">'+p.name+'</span><span class="pv'+(has?'':' none')+'">'+(has?v:'이벤트 없음')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
-  return '<div class="cmpcard"><div class="ch">'+d.issuer+'</div>'+rows+'</div>';}).join("");});
-// (2) 카드상품별 플랫폼 비교 — 콜렉터 platform_events.json(교차비교)
+// 카드사·카드상품 비교 모두 콜렉터 platform_events.json에서 집계(뱅샐·아정당 포함, 카카오페이 제외)
 var PN={cardgorilla:"카드고릴라",banksalad:"뱅크샐러드",toss:"토스",naver:"네이버페이",ajungdang:"아정당"};
+var PORD=["cardgorilla","banksalad","toss","ajungdang","naver"];
 fetch('platform_events.json').then(r=>r.json()).then(function(j){
- var rows=(j.products||[]).filter(function(p){return new Set((p.events||[]).map(e=>e.platform)).size>1;});
- rows.forEach(function(p){var m=0;p.events.forEach(function(e){if((e.reward_won||0)>m)m=e.reward_won;});p._m=m;});
- rows.sort(function(a,b){return b._m-a._m;});
- if(!rows.length){document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';return;}
- document.getElementById('cmp-prod').innerHTML=rows.map(function(p){
+ var prods=(j.products||[]);
+ // (1) 카드사 최대혜택 비교 — issuer×platform 최대 집계
+ var byIss={};
+ prods.forEach(function(p){if(!(p.events||[]).length)return;var iss=p.issuer||'기타';byIss[iss]=byIss[iss]||{};
+  p.events.forEach(function(e){var c=byIss[iss][e.platform];if(!c||(e.reward_won||0)>c.won)byIss[iss][e.platform]={won:e.reward_won||0,text:e.reward_text||''};});});
+ var issuers=Object.keys(byIss).map(function(iss){var mx=0;for(var k in byIss[iss])if(byIss[iss][k].won>mx)mx=byIss[iss][k].won;return {iss:iss,mx:mx,data:byIss[iss]};}).sort(function(a,b){return b.mx-a.mx;});
+ var present=PORD.filter(function(pk){return issuers.some(function(x){return x.data[pk];});});
+ document.getElementById('cmp-iss').innerHTML=issuers.length?issuers.map(function(x){
+  var best=-1,bk=null;present.forEach(function(pk){var v=(x.data[pk]||{}).won||0;if(v>best){best=v;bk=pk;}});
+  var rows=present.map(function(pk,i){var d=x.data[pk];var has=d&&d.won;var isb=has&&pk===bk&&best>0;
+   return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+pcol(PN[pk])+'">'+PN[pk]+'</span><span class="pv'+(has?'':' none')+'">'+(has?d.text:'이벤트 없음')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
+  return '<div class="cmpcard"><div class="ch">'+x.iss+'</div>'+rows+'</div>';}).join(""):'<div class="empty">데이터 준비 중</div>';
+ // (2) 카드상품별 플랫폼 비교 — 2개 이상 플랫폼
+ var rows2=prods.filter(function(p){return new Set((p.events||[]).map(e=>e.platform)).size>1;});
+ rows2.forEach(function(p){var m=0;p.events.forEach(function(e){if((e.reward_won||0)>m)m=e.reward_won;});p._m=m;});
+ rows2.sort(function(a,b){return b._m-a._m;});
+ document.getElementById('cmp-prod').innerHTML=rows2.length?rows2.map(function(p){
   var best=-1,bk=null;p.events.forEach(function(e){if((e.reward_won||0)>best){best=e.reward_won;bk=e.platform;}});
   var es=p.events.slice().sort(function(a,b){return (b.reward_won||0)-(a.reward_won||0);});
   var prs=es.map(function(e,i){var nm=PN[e.platform]||e.platform;var isb=e.platform===bk;
    return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+pcol(nm)+'">'+nm+'</span><span class="pv">'+(e.reward_text||'')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
-  return '<div class="cmpcard"><div class="ch">'+p.name+'</div><div class="csub">'+(p.issuer||'')+'</div>'+prs+'</div>';}).join("");
-}).catch(function(){document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';});
+  return '<div class="cmpcard"><div class="ch">'+p.name+'</div><div class="csub">'+(p.issuer||'')+'</div>'+prs+'</div>';}).join(""):'<div class="empty">교차비교 데이터 준비 중이에요.</div>';
+}).catch(function(){document.getElementById('cmp-iss').innerHTML='<div class="empty">데이터 준비 중</div>';document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';});
 
 bindUI();</script></body></html>
