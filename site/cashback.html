@@ -25,9 +25,16 @@ h1{font-size:22px;margin:0;font-weight:800;letter-spacing:-.02em}
 .nm{font-size:15px;font-weight:700;line-height:1.35;letter-spacing:-.01em}
 .rw{font-size:19px;font-weight:800;color:var(--gold);letter-spacing:-.02em}
 .rw small{font-size:12px;color:var(--mut);font-weight:600;margin-left:4px}
-.plats{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
-.pl{font-size:11px;font-weight:700;border-radius:8px;padding:5px 9px;border:1px solid var(--line);background:var(--card2);display:flex;gap:5px;align-items:center}
-.pl b{color:var(--ac2)}
+.plats{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.pl{font-size:11px;font-weight:700;border-radius:9px;padding:5px 9px 5px 5px;display:inline-flex;gap:6px;align-items:center;color:#fff;line-height:1;text-decoration:none;transition:filter .15s}
+.pl:hover{filter:brightness(1.08)}
+.pl .mk{width:17px;height:17px;border-radius:5px;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:900}
+.pl .amt{font-weight:600;opacity:.92}
+.pl.cardgorilla{background:#0AC15B}
+.pl.banksalad{background:#2A6FF3}
+.pl.toss{background:#0064FF}
+.pl.naver{background:#03C75A}
+.pl.ajungdang{background:#2563EB}
 .cnt{color:var(--mut);font-size:12px;margin:2px 0 14px}
 footer{color:var(--mut);font-size:12px;margin-top:30px;line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
 .empty{color:var(--mut);padding:40px 0;text-align:center}
@@ -50,7 +57,7 @@ footer{color:var(--mut);font-size:12px;margin-top:30px;line-height:1.7;border-to
 </div>
 <script>
 const won=n=>{if(!n)return null;if(n>=10000)return (Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';};
-const PLAT={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',naver:'네이버',ajungdang:'아정당'};
+const PLAT={cardgorilla:{name:'카드고릴라',mk:'G'},banksalad:{name:'뱅크샐러드',mk:'b'},toss:{name:'toss',mk:'t'},naver:{name:'네이버페이',mk:'N'},ajungdang:{name:'아정당',mk:'아'}};
 let DATA=[],filter='all';
 function maxReward(p){let m=0,t=null;(p.events||[]).forEach(e=>{if((e.reward_won||0)>m){m=e.reward_won;t=e.reward_text;}});return{won:m,text:t};}
 function render(){
@@ -65,9 +72,10 @@ function render(){
   document.getElementById('empty').style.display=rows.length?'none':'block';
   rows.forEach(p=>{
     const m=p._m;const pf=p.platforms||{};
-    const plats=(p.events||[]).map(e=>{const u=(pf[e.platform]||{}).url;const lbl=PLAT[e.platform]||e.platform;const r=won(e.reward_won);
-      const inner='<b>'+lbl+'</b>'+(r?' '+r:'');
-      return u?'<a class="pl" href="'+u+'" target="_blank" rel="noopener">'+inner+'</a>':'<span class="pl">'+inner+'</span>';}).join('');
+    const plats=(p.events||[]).map(e=>{const u=(pf[e.platform]||{}).url;const P=PLAT[e.platform]||{name:e.platform,mk:'·'};const r=won(e.reward_won);
+      const inner='<span class="mk">'+P.mk+'</span><span>'+P.name+'</span>'+(r?'<span class="amt">'+r+'</span>':'');
+      const cls='pl '+e.platform;
+      return u?'<a class="'+cls+'" href="'+u+'" target="_blank" rel="noopener">'+inner+'</a>':'<span class="'+cls+'">'+inner+'</span>';}).join('');
     const el=document.createElement('div');el.className='c';
     el.innerHTML='<div class="iss">'+(p.issuer||'')+'</div>'+
       '<div class="nm">'+p.name+'</div>'+
