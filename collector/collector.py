@@ -312,6 +312,17 @@ if __name__=="__main__":
         if k in by: by[k]["platforms"].setdefault("cardgorilla", d["platforms"]["cardgorilla"])
         else: by[k]=d
     products=list(by.values())
+    # 토스: cards.json 매칭 시드(toss_seed.json) → toss 플랫폼 부착(라이브 parse_toss로 수집)
+    try:
+        ts=json.load(open(os.path.join(BASE,"toss_seed.json"),encoding="utf-8")).get("cards",{})
+        _bt={_nk(p["name"]):p for p in products}; _tn=0
+        for nm,info in ts.items():
+            p=_bt.get(_nk(nm))
+            if p and info.get("toss_id"):
+                p.setdefault("platforms",{}).setdefault("toss",{"id":str(info["toss_id"])}); _tn+=1
+        if _tn: print(f"토스 매핑 부착 {_tn}건")
+    except FileNotFoundError: pass
+    except Exception as e: print("toss seed err", e)
     # 아정당: 로컬 수집(거주지 IP) 결과 ajd_seed.json 을 주입(라이브 호출 없이 병합)
     injected={}
     try:

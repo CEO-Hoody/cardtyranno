@@ -1,0 +1,102 @@
+{
+ "as_of": "2026-06",
+ "source": "cards.json toss-sourced match",
+ "cards": {
+  "신한카드 Deep Oil": {
+   "toss_id": "34"
+  },
+  "NH20해봄카드": {
+   "toss_id": "1218"
+  },
+  "올바른 NEW HAVE카드": {
+   "toss_id": "5097"
+  },
+  "올바른 FLEX 카드": {
+   "toss_id": "1236"
+  },
+  "LOCA LIKIT": {
+   "toss_id": "1583"
+  },
+  "LOCA LIKIT Eat": {
+   "toss_id": "1699"
+  },
+  "LOCA LIKIT Play": {
+   "toss_id": "1701"
+  },
+  "zgm.streaming카드": {
+   "toss_id": "1739"
+  },
+  "KB국민 My WE:SH 카드": {
+   "toss_id": "1467"
+  },
+  "zgm.play카드": {
+   "toss_id": "10173"
+  },
+  "카드의정석 EVERY MILE SKYPASS": {
+   "toss_id": "1761"
+  },
+  "현대카드ZERO Edition3(할인형)": {
+   "toss_id": "1820"
+  },
+  "현대카드ZERO Edition3(포인트형)": {
+   "toss_id": "1822"
+  },
+  "DA카드의정석Ⅱ": {
+   "toss_id": "1924"
+  },
+  "현대카드 M": {
+   "toss_id": "1827"
+  },
+  "현대카드Z work Edition2": {
+   "toss_id": "1835"
+  },
+  "현대카드Z family Edition2": {
+   "toss_id": "1833"
+  },
+  "현대카드Z play": {
+   "toss_id": "1831"
+  },
+  "카드의정석 SHOPPING+": {
+   "toss_id": "1959"
+  },
+  "카드의정석 I&U+": {
+   "toss_id": "1961"
+  },
+  "현대카드 MX Black Edition2": {
+   "toss_id": "1900"
+  },
+  "대한항공카드 the First Edition2": {
+   "toss_id": "10341"
+  },
+  "BC 바로 MACAO 카드": {
+   "toss_id": "1953"
+  },
+  "신한카드 처음(ANNIVERSE)": {
+   "toss_id": "10023"
+  },
+  "롯데멤버스 카드": {
+   "toss_id": "10143"
+  },
+  "신한카드 Discount Plan+": {
+   "toss_id": "10293"
+  },
+  "카드의정석 2": {
+   "toss_id": "10175"
+  },
+  "BC 바로 ZONE 카드": {
+   "toss_id": "10467"
+  },
+  "디지로카 Link": {
+   "toss_id": "10489"
+  },
+  "신한카드 Simple Plan+": {
+   "toss_id": "8594"
+  },
+  "삼성카드 taptap O": {
+   "toss_id": "17"
+  },
+  "KB국민 굿데이카드": {
+   "toss_id": "1121"
+  }
+ }
+}
