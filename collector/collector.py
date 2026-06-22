@@ -196,9 +196,41 @@ def export_json(con):
         evs=[{"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4]} for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall()]
         out.append({"id":pid,"name":name,"issuer":issuer,"platforms":maps,"events":evs})
     os.makedirs(SITE,exist_ok=True)
-    json.dump({"updated":datetime.date.today().isoformat(),"month":"2026-06","products":out},
+    MONTH="2026-06"
+    json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"products":out},
               open(os.path.join(SITE,"platform_events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/platform_events.json ({len(out)} products)")
+    # ── 월간 스냅샷(전월 대비 비교 기반: 7월에 6월과 diff) ──
+    issuers={}; cardsnap=[]
+    for p in out:
+        pl={}
+        for e in p.get("events",[]):
+            w=e.get("reward_won") or 0
+            if w>pl.get(e["platform"],0): pl[e["platform"]]=w
+        if not pl: continue
+        iss=p.get("issuer") or "기타"; issuers.setdefault(iss,{})
+        for pk,w in pl.items():
+            if w>issuers[iss].get(pk,0): issuers[iss][pk]=w
+        cardsnap.append({"name":p["name"],"issuer":iss,"platforms":pl,"max":max(pl.values())})
+    hist=os.path.join(SITE,"history"); os.makedirs(hist,exist_ok=True)
+    json.dump({"month":MONTH,"updated":datetime.date.today().isoformat(),"issuers":issuers,"cards":cardsnap},
+              open(os.path.join(hist,MONTH+".json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    # ── 추천 테이블 기반(reco.json): 카드별 교차 최대혜택 + 플랫폼 + 발급사 (향후 유저 추천용) ──
+    reco=[]
+    for p in out:
+        evs=p.get("events",[])
+        if not evs: continue
+        best=max(evs,key=lambda e:e.get("reward_won") or 0)
+        reco.append({"id":p["id"],"name":p["name"],"issuer":p.get("issuer"),
+                     "maxCashbackWon":best.get("reward_won") or 0,"maxCashbackText":best.get("reward_text"),
+                     "bestPlatform":best.get("platform"),
+                     "platforms":sorted(set(e["platform"] for e in evs)),
+                     "platformCount":len(set(e["platform"] for e in evs)),
+                     "events":[{"platform":e["platform"],"reward_won":e.get("reward_won"),"reward_text":e.get("reward_text")} for e in evs]})
+    reco.sort(key=lambda r:r["maxCashbackWon"],reverse=True)
+    json.dump({"month":MONTH,"updated":datetime.date.today().isoformat(),"count":len(reco),"cards":reco},
+              open(os.path.join(SITE,"reco.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    print(f"export → history/{MONTH}.json ({len(cardsnap)} cards), reco.json ({len(reco)} cards)")
 
 def run(products, today, injected=None, june_only=True):
     con=sqlite3.connect(DB); init_db(con)
