@@ -415,7 +415,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion/event"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     },
     "toss": {
      "id": "10175",
@@ -435,7 +435,7 @@
      "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
      "reward_won": 780000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion/event"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     },
     {
      "platform": "ajungdang",
@@ -3226,6 +3226,10 @@
     "cardgorilla": {
      "id": "2851",
      "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    },
    "events": [
@@ -3235,6 +3239,13 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/2851"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+     "reward_won": 780000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     },
     {
      "platform": "ajungdang",
@@ -3317,6 +3328,10 @@
     "cardgorilla": {
      "id": "2898",
      "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    },
    "events": [
@@ -3326,6 +3341,13 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/2898"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+     "reward_won": 780000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     },
     {
      "platform": "ajungdang",
@@ -3344,6 +3366,10 @@
     "cardgorilla": {
      "id": "2902",
      "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    },
    "events": [
@@ -3353,6 +3379,13 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/2902"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+     "reward_won": 780000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    ]
   },
