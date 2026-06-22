@@ -19,6 +19,10 @@
      "id": "13",
      "url": null
     },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion/event"
+    },
     "toss": {
      "id": "3480",
      "url": null
@@ -45,6 +49,13 @@
      "reward_won": 540000,
      "period_end": null,
      "url": "https://www.ajd.co.kr/card/event/detail/264"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 500000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion/event"
     }
    ]
   },
@@ -342,6 +353,10 @@
      "id": "106",
      "url": null
     },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion/event"
+    },
     "toss": {
      "id": "1121",
      "url": null
@@ -370,6 +385,13 @@
      "url": "https://www.banksalad.com/product/cards/CARD000156"
     },
     {
+     "platform": "naver",
+     "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
+     "reward_won": 830000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion/event"
+    },
+    {
      "platform": "toss",
      "reward_text": "최대 81만원 이벤트",
      "reward_won": 810000,
@@ -391,6 +413,10 @@
      "id": "2848",
      "url": null
     },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion/event"
+    },
     "toss": {
      "id": "10175",
      "url": null
@@ -403,6 +429,13 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/2848"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+     "reward_won": 780000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion/event"
     },
     {
      "platform": "ajungdang",
@@ -2439,6 +2472,10 @@
      "id": "666",
      "url": null
     },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion/event"
+    },
     "toss": {
      "id": "1236",
      "url": null
@@ -2458,6 +2495,13 @@
      "reward_won": 175000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/666"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 17.5만원 (네이버페이 NH농협카드 이벤트)",
+     "reward_won": 175000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion/event"
     }
    ]
   },
@@ -2474,6 +2518,10 @@
      "id": "2228",
      "url": null
     },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion/event"
+    },
     "toss": {
      "id": "1583",
      "url": null
@@ -2486,6 +2534,13 @@
      "reward_won": 660000,
      "period_end": null,
      "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 634000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion/event"
     },
     {
      "platform": "cardgorilla",

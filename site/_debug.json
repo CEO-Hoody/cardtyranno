@@ -6,35 +6,5 @@
   "n": 130,
   "cardIdxs": 140
  },
- "cg_cards": "ERR:HTTPSConnectionPool(host='api.card-gorilla.com', port=8080): Read timed out. (read timeout=20)",
- "naver": {
-  "detail": "ERR:404 Client Error: OK for url: https://card.pay.naver.com/home/detail.json?cardCompanyId=CC",
-  "promotion": "ERR:404 Client Error: OK for url: https://card.pay.naver.com/home/promotion.json?cardCompanyId",
-  "list": {
-   "st": 200,
-   "len": 18100,
-   "isjson": false,
-   "man": false,
-   "keys": [],
-   "head": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\">\n    <meta name=\"viewport\""
-  },
-  "promotions": "ERR:404 Client Error: OK for url: https://card.pay.naver.com/home/promotions.json?from=pc_fina",
-  "promo_list": "ERR:404 Client Error: OK for url: https://card.pay.naver.com/home/promotion/list.json?from=pc_",
-  "benefit": {
-   "st": 200,
-   "len": 18103,
-   "isjson": false,
-   "man": false,
-   "keys": [],
-   "head": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\">\n    <meta name=\"viewport\""
-  },
-  "event": {
-   "st": 200,
-   "len": 18101,
-   "isjson": false,
-   "man": false,
-   "keys": [],
-   "head": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\">\n    <meta name=\"viewport\""
-  }
- }
+ "cg_cards": "ERR:HTTPSConnectionPool(host='api.card-gorilla.com', port=8080): Read timed out. (read timeout=20)"
 }
