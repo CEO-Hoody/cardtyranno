@@ -36,6 +36,22 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .ad{position:relative;border:1px dashed #3a3a42;border-radius:var(--radius);background:repeating-linear-gradient(135deg,#141416,#141416 12px,#161618 12px,#161618 24px);display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:13px;font-weight:700}
 .ad::before{content:"AD";position:absolute;top:10px;left:12px;font-size:10px;font-weight:900;color:#fff;background:#33333b;padding:2px 7px;border-radius:5px;letter-spacing:1px}
 .ad.hero{height:280px;margin:22px 0}.ad.inline{height:104px;margin:14px 0}
+.adbanner{position:relative;display:block;border-radius:var(--radius);overflow:hidden;margin:22px 0;border:1px solid var(--line)}
+.adbanner img{width:100%;height:auto;display:block}
+.adbanner .adtag{position:absolute;top:10px;left:12px;font-size:10px;font-weight:900;color:#fff;background:rgba(0,0,0,.45);padding:2px 7px;border-radius:5px;letter-spacing:1px}
+.herowrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 6px}
+.vhero{position:relative;min-height:210px;border-radius:18px;padding:20px 18px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff}
+.vhero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 80% 0%,rgba(255,255,255,.18),transparent 60%)}
+.vhero>*{position:relative;z-index:1}
+.vh1{background:linear-gradient(160deg,#ff6a2b 0%,#e0461f 100%)}
+.vh2{background:linear-gradient(160deg,#1f8f5b 0%,#0f7a45 100%)}
+.vhero .vh-tag{font-size:12px;font-weight:800;opacity:.92;margin-bottom:auto;letter-spacing:-.01em;background:rgba(0,0,0,.18);align-self:flex-start;padding:5px 10px;border-radius:999px}
+.vhero .vh-iss{font-size:12px;opacity:.9;font-weight:700;margin-top:14px}
+.vhero .vh-name{font-size:18px;font-weight:900;line-height:1.25;letter-spacing:-.02em;margin-top:3px}
+.vhero .vh-amt{font-size:24px;font-weight:900;letter-spacing:-.02em;margin-top:8px}
+.vhero .vh-amt small{font-size:13px;font-weight:700;opacity:.85;margin-left:3px}
+.vhero .vh-go{font-size:12.5px;font-weight:800;margin-top:12px;opacity:.95}
+@media(max-width:560px){.herowrap{grid-template-columns:1fr 1fr;gap:9px}.vhero{min-height:178px;padding:15px 13px}.vhero .vh-name{font-size:15px}.vhero .vh-amt{font-size:20px}}
 section{padding:30px 0}
 .sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
 .sec-h h2{font-size:22px;font-weight:900;letter-spacing:-.6px}
