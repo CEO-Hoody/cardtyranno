@@ -295,25 +295,6 @@ def diagnose():
         j=r.json(); d=j.get("data") if isinstance(j,dict) else j
         dbg["cg_cards"]={"st":r.status_code,"n":len(d or [])}
     except Exception as e: dbg["cg_cards"]="ERR:"+str(e)[:120]
-    # 네이버 진단: detail/promotion(서버측 작동?) + 카드/이벤트 목록 엔드포인트 탐침(발굴용)
-    dbg["naver"]={}
-    NVH={"Referer":"https://card.pay.naver.com/","Accept":"application/json,*/*","X-Requested-With":"XMLHttpRequest"}
-    nvprobe=[
-      ("detail","https://card.pay.naver.com/home/detail.json?cardCompanyId=CCNH&cardIssuerCode=CCNH&productId=20230610000000001453&from=pc_financetab"),
-      ("promotion","https://card.pay.naver.com/home/promotion.json?cardCompanyId=CCNH&cardIssuerCode=CCNH&promotionId=20260521001731590500&from=pc_financetab"),
-      ("list","https://card.pay.naver.com/home/list.json?from=pc_financetab"),
-      ("promotions","https://card.pay.naver.com/home/promotions.json?from=pc_financetab"),
-      ("promo_list","https://card.pay.naver.com/home/promotion/list.json?from=pc_financetab"),
-      ("benefit","https://card.pay.naver.com/home/benefit.json?from=pc_financetab"),
-      ("event","https://card.pay.naver.com/home/event.json?from=pc_financetab")]
-    for nm,u in nvprobe:
-        try:
-            r=fetch(u, headers=NVH); t=r.text
-            keys=re.findall(r'"([a-zA-Z_]*(?:productId|promotionId|companyId|issuer|cardName|amount|benefit|cashback)[a-zA-Z_]*)"', t)
-            dbg["naver"][nm]={"st":r.status_code,"len":len(t),"isjson":(t[:1] in "[{"),
-                "man":("만원" in t),"keys":list(dict.fromkeys(keys))[:14],"head":re.sub(r'https?://\S+','U',t[:160])}
-        except Exception as e:
-            dbg["naver"][nm]="ERR:"+str(e)[:90]
     os.makedirs(SITE,exist_ok=True)
     json.dump(dbg,open(os.path.join(SITE,"_debug.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print("diagnose →", {k:(v if isinstance(v,str) else "...") for k,v in dbg.items()})
@@ -358,6 +339,20 @@ if __name__=="__main__":
         pass
     except Exception as e:
         print("ajd seed 병합 err", e)
+    # 네이버: 캡처/로컬 수집 결과 naver_seed.json 주입(네이버는 데이터센터 404 → 라이브 호출 없이 병합)
+    try:
+        nv=json.load(open(os.path.join(BASE,"naver_seed.json"),encoding="utf-8")).get("cards",{})
+        _bn={_nk(p["name"]):p for p in products}; _nn=0
+        for nm,info in nv.items():
+            p=_bn.get(_nk(nm))
+            if not p or not info.get("reward_won"): continue
+            p.setdefault("platforms",{})["naver"]={"id":info.get("productId",""),"url":info.get("url","")}
+            injected[(p["name"],"naver")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
+                                           "period_start":None,"period_end":None,"url":info.get("url","")}
+            _nn+=1
+        if _nn: print(f"네이버 주입 {_nn}건")
+    except FileNotFoundError: pass
+    except Exception as e: print("naver seed err", e)
     # 카드고릴라: 이벤트 라벨(subject)을 reward_text로 주입(상세 'card_detail_text'의 "연회비 캐시백"류 대신)
     cg_inj=0
     for p in products:
