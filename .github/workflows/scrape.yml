@@ -22,4 +22,8 @@ jobs:
           git config user.name  "cardtyranno-bot"
           git config user.email "bot@cardtyranno.com"
           git add -A site collector/meta.db || true
-          git diff --cached --quiet || (git commit -m "daily scrape $(date -u +%F)" && git push)
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "daily scrape $(date -u +%F)"
+          for i in 1 2 3; do
+            git pull --no-rebase -X ours --no-edit origin main && git push && break || (echo "재시도 $i"; sleep 5)
+          done
