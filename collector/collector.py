@@ -295,6 +295,21 @@ def diagnose():
         j=r.json(); d=j.get("data") if isinstance(j,dict) else j
         dbg["cg_cards"]={"st":r.status_code,"n":len(d or [])}
     except Exception as e: dbg["cg_cards"]="ERR:"+str(e)[:120]
+    # 토스 진단: 금액 표현·JSON 키 후보 덤프(parse_toss 강화용). 1121=작동, 34/3480=미작동
+    dbg["toss"]={}
+    for tid in ["1121","34","3480"]:
+        try:
+            h=fetch(f"https://card-lounge.toss.im/card/{tid}").text
+            ctx=[]
+            for m in re.finditer(r"[\d,]+\s*만원", h):
+                ctx.append(h[max(0,m.start()-45):m.end()+12].replace("\n"," ").replace("  "," "))
+                if len(ctx)>=5: break
+            keys=re.findall(r'"([a-zA-Z_]*(?:amount|cashback|benefit|reward|event|Krw|won|promotion)[a-zA-Z_]*)"\s*:', h)
+            dbg["toss"][tid]={"st":fetch(f"https://card-lounge.toss.im/card/{tid}").status_code,
+                "len":len(h),"man":("만원" in h),"event":("받는 이벤트" in h),"cashback":("캐시백" in h),
+                "ctx":ctx,"keys":list(dict.fromkeys(keys))[:14],"next":("__NEXT_DATA__" in h)}
+        except Exception as e:
+            dbg["toss"][tid]="ERR:"+str(e)[:90]
     os.makedirs(SITE,exist_ok=True)
     json.dump(dbg,open(os.path.join(SITE,"_debug.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print("diagnose →", {k:(v if isinstance(v,str) else "...") for k,v in dbg.items()})
