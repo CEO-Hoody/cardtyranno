@@ -8,8 +8,8 @@
    "issuer": "신한카드",
    "platforms": {
     "ajungdang": {
-     "id": "75",
-     "url": null
+     "id": "264",
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
     },
     "banksalad": {
      "id": "CARD000004",
@@ -31,6 +31,13 @@
      "reward_won": 579000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/13"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "reward_won": 540000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
     }
    ]
   },
@@ -39,6 +46,10 @@
    "name": "신한카드 Deep Oil",
    "issuer": "신한카드",
    "platforms": {
+    "ajungdang": {
+     "id": "264",
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
+    },
     "banksalad": {
      "id": "CARD000118",
      "url": null
@@ -62,6 +73,13 @@
      "reward_won": 579000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/39"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "reward_won": 540000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
     }
    ]
   },
@@ -70,6 +88,10 @@
    "name": "신한카드 처음(ANNIVERSE)",
    "issuer": "신한카드",
    "platforms": {
+    "ajungdang": {
+     "id": "264",
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
+    },
     "banksalad": {
      "id": "CARD004343",
      "url": null
@@ -86,6 +108,13 @@
      "reward_won": 579000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/2759"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "reward_won": 540000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
     }
    ]
   },
@@ -134,6 +163,10 @@
    "name": "LOCA 365 카드",
    "issuer": "롯데카드",
    "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     "banksalad": {
      "id": "CARD000037",
      "url": null
@@ -144,6 +177,13 @@
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 64만원 혜택",
@@ -238,6 +278,10 @@
    "name": "KB국민 굿데이카드",
    "issuer": "KB국민카드",
    "platforms": {
+    "ajungdang": {
+     "id": "246",
+     "url": "https://www.ajd.co.kr/card/event/detail/246"
+    },
     "banksalad": {
      "id": "CARD000156",
      "url": null
@@ -260,6 +304,13 @@
      "url": "https://www.card-gorilla.com/card/106"
     },
     {
+     "platform": "ajungdang",
+     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
+     "reward_won": 850000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/246"
+    },
+    {
      "platform": "toss",
      "reward_text": "최대 81만원 이벤트",
      "reward_won": 810000,
@@ -273,6 +324,10 @@
    "name": "카드의정석 2",
    "issuer": "우리카드",
    "platforms": {
+    "ajungdang": {
+     "id": "267",
+     "url": "https://www.ajd.co.kr/card/event/detail/267"
+    },
     "cardgorilla": {
      "id": "2848",
      "url": null
@@ -285,6 +340,13 @@
      "reward_won": 780000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/2848"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
+     "reward_won": 770000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/267"
     }
    ]
   },
@@ -365,12 +427,24 @@
    "name": "삼성 iD STATION 카드 (HD현대오일뱅크)",
    "issuer": "삼성카드",
    "platforms": {
+    "ajungdang": {
+     "id": "271",
+     "url": "https://www.ajd.co.kr/card/event/detail/271"
+    },
     "cardgorilla": {
      "id": "2952",
      "url": null
     }
    },
-   "events": []
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
+     "reward_won": 611000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/271"
+    }
+   ]
   },
   {
    "id": 18,
@@ -589,6 +663,10 @@
    "name": "대한항공카드 060",
    "issuer": "현대카드",
    "platforms": {
+    "ajungdang": {
+     "id": "261",
+     "url": "https://www.ajd.co.kr/card/event/detail/261"
+    },
     "cardgorilla": {
      "id": "2709",
      "url": null
@@ -601,6 +679,13 @@
      "reward_won": 730000,
      "period_end": "2026.6.30",
      "url": "https://www.card-gorilla.com/card/2709"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 69만원 (아정당 현대카드 발급 이벤트)",
+     "reward_won": 690000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/261"
     }
    ]
   },
@@ -1753,12 +1838,24 @@
    "name": "삼성 iD ON 카드",
    "issuer": "삼성카드",
    "platforms": {
+    "ajungdang": {
+     "id": "271",
+     "url": "https://www.ajd.co.kr/card/event/detail/271"
+    },
     "cardgorilla": {
      "id": "2235",
      "url": null
     }
    },
-   "events": []
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
+     "reward_won": 611000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/271"
+    }
+   ]
   },
   {
    "id": 95,
@@ -1997,12 +2094,23 @@
    "name": "올바른 FLEX 카드",
    "issuer": "NH농협카드",
    "platforms": {
+    "ajungdang": {
+     "id": "233",
+     "url": "https://www.ajd.co.kr/card/event/detail/233"
+    },
     "cardgorilla": {
      "id": "666",
      "url": null
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+     "reward_won": 205000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/233"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 17.5만원 캐시백",
@@ -2017,12 +2125,23 @@
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
    "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     "cardgorilla": {
      "id": "2228",
      "url": null
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 59만원 혜택",
@@ -2077,24 +2196,47 @@
    "name": "노리2 체크카드(KB Pay)",
    "issuer": "KB국민카드",
    "platforms": {
+    "ajungdang": {
+     "id": "254",
+     "url": "https://www.ajd.co.kr/card/event/detail/254"
+    },
     "cardgorilla": {
      "id": "2422",
      "url": null
     }
    },
-   "events": []
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
+     "reward_won": 30000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/254"
+    }
+   ]
   },
   {
    "id": 114,
    "name": "zgm.streaming카드",
    "issuer": "NH농협카드",
    "platforms": {
+    "ajungdang": {
+     "id": "233",
+     "url": "https://www.ajd.co.kr/card/event/detail/233"
+    },
     "cardgorilla": {
      "id": "2428",
      "url": null
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+     "reward_won": 205000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/233"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 17.5만원 캐시백",
@@ -2109,6 +2251,10 @@
    "name": "KB국민 My WE:SH 카드",
    "issuer": "KB국민카드",
    "platforms": {
+    "ajungdang": {
+     "id": "246",
+     "url": "https://www.ajd.co.kr/card/event/detail/246"
+    },
     "cardgorilla": {
      "id": "2441",
      "url": null
@@ -2121,6 +2267,13 @@
      "reward_won": 860000,
      "period_end": "2026.6.30",
      "url": "https://www.card-gorilla.com/card/2441"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
+     "reward_won": 850000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/246"
     }
    ]
   },
@@ -2149,12 +2302,23 @@
    "name": "zgm.play카드",
    "issuer": "NH농협카드",
    "platforms": {
+    "ajungdang": {
+     "id": "233",
+     "url": "https://www.ajd.co.kr/card/event/detail/233"
+    },
     "cardgorilla": {
      "id": "2544",
      "url": null
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+     "reward_won": 205000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/233"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 17.5만원 캐시백",
@@ -2193,12 +2357,23 @@
    "name": "디지로카 London",
    "issuer": "롯데카드",
    "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     "cardgorilla": {
      "id": "2632",
      "url": null
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 64만원 혜택",
@@ -2213,12 +2388,23 @@
    "name": "디지로카 Paris",
    "issuer": "롯데카드",
    "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     "cardgorilla": {
      "id": "2633",
      "url": null
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 64만원 혜택",
@@ -2273,6 +2459,10 @@
    "name": "신한카드 Point Plan",
    "issuer": "신한카드",
    "platforms": {
+    "ajungdang": {
+     "id": "264",
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
+    },
     "cardgorilla": {
      "id": "2666",
      "url": null
@@ -2285,6 +2475,13 @@
      "reward_won": 579000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/2666"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "reward_won": 540000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
     }
    ]
   },
@@ -2365,12 +2562,23 @@
    "name": "디지로카 Las Vegas",
    "issuer": "롯데카드",
    "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     "cardgorilla": {
      "id": "2707",
      "url": null
     }
    },
    "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "최대 64만원 혜택",
@@ -2505,6 +2713,10 @@
    "name": "알리익스프레스 신한카드",
    "issuer": "신한카드",
    "platforms": {
+    "ajungdang": {
+     "id": "264",
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
+    },
     "cardgorilla": {
      "id": "2831",
      "url": null
@@ -2517,6 +2729,13 @@
      "reward_won": 579000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/2831"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "reward_won": 540000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
     }
    ]
   },
@@ -2537,6 +2756,10 @@
    "name": "우리카드 7CORE",
    "issuer": "우리카드",
    "platforms": {
+    "ajungdang": {
+     "id": "267",
+     "url": "https://www.ajd.co.kr/card/event/detail/267"
+    },
     "cardgorilla": {
      "id": "2851",
      "url": null
@@ -2549,6 +2772,13 @@
      "reward_won": 780000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/2851"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
+     "reward_won": 770000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/267"
     }
    ]
   },
@@ -2609,6 +2839,10 @@
    "name": "우리카드 MILE&POINT",
    "issuer": "우리카드",
    "platforms": {
+    "ajungdang": {
+     "id": "267",
+     "url": "https://www.ajd.co.kr/card/event/detail/267"
+    },
     "cardgorilla": {
      "id": "2898",
      "url": null
@@ -2621,6 +2855,13 @@
      "reward_won": 780000,
      "period_end": "2026.7.31",
      "url": "https://www.card-gorilla.com/card/2898"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
+     "reward_won": 770000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/267"
     }
    ]
   },
@@ -2693,6 +2934,10 @@
    "name": "KB YOU Prime 카드",
    "issuer": "KB국민카드",
    "platforms": {
+    "ajungdang": {
+     "id": "246",
+     "url": "https://www.ajd.co.kr/card/event/detail/246"
+    },
     "cardgorilla": {
      "id": "2930",
      "url": null
@@ -2705,6 +2950,13 @@
      "reward_won": 860000,
      "period_end": "2026.6.30",
      "url": "https://www.card-gorilla.com/card/2930"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
+     "reward_won": 850000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/246"
     }
    ]
   },
