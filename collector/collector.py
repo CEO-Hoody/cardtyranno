@@ -33,11 +33,22 @@ def parse_cardgorilla(card_json, card_id):
             "period_end":period.group(2) if period else None,
             "url":f"https://www.card-gorilla.com/card/{card_id}"} if txt else None
 
+def _fmt_man(won):
+    m = won/10000
+    return (str(int(m)) if m==int(m) else ("%.1f"%m))+"만원"
+
 def parse_banksalad(html, prod_id):
-    m = re.search(r"최대\s*([\d.,]+\s*(?:억|만원|원))\s*캐시백", html or "")
-    if not m: return None
-    txt = "최대 "+m.group(1).replace(" ","")+" 캐시백"
-    return {"reward_text":txt, "reward_won":parse_won(txt), "period_start":None,"period_end":None,
+    """뱅샐 상세 __NEXT_DATA__의 cashbackPromotion.cashbackAmountKrw0f(정확 금액·원)를 우선 추출.
+    상세 페이지엔 해당 카드 1건만 있어 모호성 없음. 없으면 렌더 텍스트 폴백."""
+    html = html or ""
+    m = re.search(r'cashbackAmountKrw0f"?\s*:\s*"?(\d+)', html)   # 1) 정확 금액(JSON)
+    won = int(m.group(1)) if m else 0
+    if not won:                                                   # 2) 폴백: "최대 N만원 캐시백"
+        m2 = re.search(r"최대\s*([\d.,]+\s*(?:억|만원|원))\s*캐시백", html)
+        if m2: won = parse_won("최대 "+m2.group(1).replace(" ","")+" 캐시백")
+    if not won: return None
+    return {"reward_text":"최대 "+_fmt_man(won)+" 캐시백", "reward_won":won,
+            "period_start":None,"period_end":None,
             "url":f"https://www.banksalad.com/product/cards/{prod_id}"}
 
 def parse_toss(html, card_id):
