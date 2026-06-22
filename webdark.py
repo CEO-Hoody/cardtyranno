@@ -45,6 +45,22 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .ad{position:relative;border:1px dashed #3a3a42;border-radius:var(--radius);background:repeating-linear-gradient(135deg,#141416,#141416 12px,#161618 12px,#161618 24px);display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:13px;font-weight:700}
 .ad::before{content:"AD";position:absolute;top:10px;left:12px;font-size:10px;font-weight:900;color:#fff;background:#33333b;padding:2px 7px;border-radius:5px;letter-spacing:1px}
 .ad.hero{height:280px;margin:22px 0}.ad.inline{height:104px;margin:14px 0}
+.adbanner{position:relative;display:block;border-radius:var(--radius);overflow:hidden;margin:22px 0;border:1px solid var(--line)}
+.adbanner img{width:100%;height:auto;display:block}
+.adbanner .adtag{position:absolute;top:10px;left:12px;font-size:10px;font-weight:900;color:#fff;background:rgba(0,0,0,.45);padding:2px 7px;border-radius:5px;letter-spacing:1px}
+.herowrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 6px}
+.vhero{position:relative;min-height:210px;border-radius:18px;padding:20px 18px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff}
+.vhero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 80% 0%,rgba(255,255,255,.18),transparent 60%)}
+.vhero>*{position:relative;z-index:1}
+.vh1{background:linear-gradient(160deg,#ff6a2b 0%,#e0461f 100%)}
+.vh2{background:linear-gradient(160deg,#1f8f5b 0%,#0f7a45 100%)}
+.vhero .vh-tag{font-size:12px;font-weight:800;opacity:.92;margin-bottom:auto;letter-spacing:-.01em;background:rgba(0,0,0,.18);align-self:flex-start;padding:5px 10px;border-radius:999px}
+.vhero .vh-iss{font-size:12px;opacity:.9;font-weight:700;margin-top:14px}
+.vhero .vh-name{font-size:18px;font-weight:900;line-height:1.25;letter-spacing:-.02em;margin-top:3px}
+.vhero .vh-amt{font-size:24px;font-weight:900;letter-spacing:-.02em;margin-top:8px}
+.vhero .vh-amt small{font-size:13px;font-weight:700;opacity:.85;margin-left:3px}
+.vhero .vh-go{font-size:12.5px;font-weight:800;margin-top:12px;opacity:.95}
+@media(max-width:560px){.herowrap{grid-template-columns:1fr 1fr;gap:9px}.vhero{min-height:178px;padding:15px 13px}.vhero .vh-name{font-size:15px}.vhero .vh-amt{font-size:20px}}
 section{padding:30px 0}
 .sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
 .sec-h h2{font-size:22px;font-weight:900;letter-spacing:-.6px}
@@ -280,7 +296,11 @@ CUR_HTML=('<section id="curation"><div class="sec-h"><h2>✨ 테마별 큐레이
 
 # ===== INDEX (landing) =====
 INDEX_BODY=('<div class="wrap">'
- '<div class="ad hero">main_hero · 광고 구좌</div>'
+ '<a class="adbanner" href="mailto:partner@cardtyranno.com" data-track="ad" data-label="main_hero"><span class="adtag">AD · 샘플</span><img src="img/sample_ad.svg" alt="광고 문의 샘플 배너" loading="eager"/></a>'
+ '<div class="herowrap">'
+ '<a class="vhero vh1" href="cashback.html" data-track="hero" data-label="max_card"><div class="vh-tag">🏆 이번 달 최대 할인 카드</div><div class="vh-iss" id="vh1iss"></div><div class="vh-name" id="vh1name">불러오는 중…</div><div class="vh-amt" id="vh1amt"></div><div class="vh-go">캐시백 비교 보기 ›</div></a>'
+ '<a class="vhero vh2" href="discount.html" data-track="hero" data-label="max_disc"><div class="vh-tag">💳 이번 달 최고 결제 할인</div><div class="vh-iss" id="vh2iss"></div><div class="vh-name" id="vh2name">불러오는 중…</div><div class="vh-amt" id="vh2amt"></div><div class="vh-go">결제 할인 보기 ›</div></a>'
+ '</div>'
  '<section id="rank"><div class="sec-h"><h2>🏆 이번 달 카드티라노 랭킹</h2><a class="more" href="cards.html">전체보기 ›</a></div>'
  '<div class="rank" id="rk"><div class="empty">불러오는 중…</div></div></section>'
  '<div class="ad inline">list_inline · 광고 구좌</div>'
@@ -299,6 +319,15 @@ fetch('data.json').then(r=>r.json()).then(function(j){var pick=j.items.slice(0,4
  return '<a class="gcard" href="detail.html?id='+d.id+'"><span class="badge gray">'+d.plat+'</span><div class="cw accent">'+d.disc+'</div><div class="cs">'+d.card+' · '+d.type+'</div></a>';}).join("");});
 fetch('content.json').then(r=>r.json()).then(function(j){document.getElementById('posts').innerHTML=j.items.slice(0,4).map(function(x){
  return '<a class="post" href="content.html?id='+x.id+'"><div class="thumb">'+x.emoji+'</div><div class="pb"><div class="pc">'+x.cat+'</div><div class="pt">'+x.title+'</div></div></a>';}).join("");});
+// 세로형 히어로 ① 이번 달 최대 할인(캐시백) 카드 — 콜렉터 platform_events.json
+(function(){function won(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
+ fetch('platform_events.json').then(r=>r.json()).then(function(j){var best=null,bw=-1;(j.products||[]).forEach(function(p){(p.events||[]).forEach(function(e){if((e.reward_won||0)>bw){bw=e.reward_won;best=p;}});});
+  if(best){document.getElementById('vh1iss').textContent=best.issuer||'';document.getElementById('vh1name').textContent=best.name;document.getElementById('vh1amt').innerHTML='최대 '+won(bw)+'<small>캐시백</small>';}}).catch(function(){});
+})();
+// 세로형 히어로 ② 이번 달 최고 결제 할인 — data.json
+fetch('data.json').then(r=>r.json()).then(function(j){function num(s){var m=(s||'').match(/([0-9]+(?:\.[0-9]+)?)/);return m?parseFloat(m[1]):-1;}
+ var its=(j.items||[]).slice();its.sort(function(a,b){return num(b.disc)-num(a.disc);});var t=its[0];
+ if(t){document.getElementById('vh2iss').textContent=t.plat||'';document.getElementById('vh2name').textContent=t.card||t.type||'';document.getElementById('vh2amt').innerHTML=t.disc+'<small> '+(t.type||'')+'</small>';}}).catch(function(){});
 """
 
 # ===== DISCOUNT =====
@@ -377,27 +406,34 @@ fetch('events.json').then(r=>r.json()).then(function(j){EV=j.items;ORD=j.order;
  if(qi&&(qi==="전체"||ORD.indexOf(qi)>=0))cur=qi;
  tabs();render();
  var at=document.querySelector('#tabs .tab.active');if(at)at.scrollIntoView({inline:'center',block:'nearest'});});
-// (1) 카드사 최대혜택 비교 — 카드사별 카드(가로스크롤 X, 세로 카드형)
-fetch('issue.json').then(r=>r.json()).then(function(j){var P=j.platforms;
- document.getElementById('cmp-iss').innerHTML=j.items.map(function(d){
-  var best=-1,bk=null;P.forEach(function(p){var v=num(d[p.key]);if(v>best){best=v;bk=p.key;}});
-  var rows=P.map(function(p,i){var v=d[p.key],has=v&&v!=="-";var isb=has&&p.key===bk&&best>0;
-   return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+p.color+'">'+p.name+'</span><span class="pv'+(has?'':' none')+'">'+(has?v:'이벤트 없음')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
-  return '<div class="cmpcard"><div class="ch">'+d.issuer+'</div>'+rows+'</div>';}).join("");});
-// (2) 카드상품별 플랫폼 비교 — 콜렉터 platform_events.json(교차비교)
+// 카드사·카드상품 비교 모두 콜렉터 platform_events.json에서 집계(뱅샐·아정당 포함, 카카오페이 제외)
 var PN={cardgorilla:"카드고릴라",banksalad:"뱅크샐러드",toss:"토스",naver:"네이버페이",ajungdang:"아정당"};
+var PORD=["cardgorilla","banksalad","toss","ajungdang","naver"];
 fetch('platform_events.json').then(r=>r.json()).then(function(j){
- var rows=(j.products||[]).filter(function(p){return new Set((p.events||[]).map(e=>e.platform)).size>1;});
- rows.forEach(function(p){var m=0;p.events.forEach(function(e){if((e.reward_won||0)>m)m=e.reward_won;});p._m=m;});
- rows.sort(function(a,b){return b._m-a._m;});
- if(!rows.length){document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';return;}
- document.getElementById('cmp-prod').innerHTML=rows.map(function(p){
+ var prods=(j.products||[]);
+ // (1) 카드사 최대혜택 비교 — issuer×platform 최대 집계
+ var byIss={};
+ prods.forEach(function(p){if(!(p.events||[]).length)return;var iss=p.issuer||'기타';byIss[iss]=byIss[iss]||{};
+  p.events.forEach(function(e){var c=byIss[iss][e.platform];if(!c||(e.reward_won||0)>c.won)byIss[iss][e.platform]={won:e.reward_won||0,text:e.reward_text||''};});});
+ var issuers=Object.keys(byIss).map(function(iss){var mx=0;for(var k in byIss[iss])if(byIss[iss][k].won>mx)mx=byIss[iss][k].won;return {iss:iss,mx:mx,data:byIss[iss]};}).sort(function(a,b){return b.mx-a.mx;});
+ var present=PORD.filter(function(pk){return issuers.some(function(x){return x.data[pk];});});
+ document.getElementById('cmp-iss').innerHTML=issuers.length?issuers.map(function(x){
+  var best=-1,bk=null;present.forEach(function(pk){var v=(x.data[pk]||{}).won||0;if(v>best){best=v;bk=pk;}});
+  var ordered=present.slice().sort(function(a,b){return ((x.data[b]||{}).won||0)-((x.data[a]||{}).won||0);});  // 금액 높은 순
+  var rows=ordered.map(function(pk,i){var d=x.data[pk];var has=d&&d.won;var isb=has&&pk===bk&&best>0;
+   return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+pcol(PN[pk])+'">'+PN[pk]+'</span><span class="pv'+(has?'':' none')+'">'+(has?d.text:'이벤트 없음')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
+  return '<div class="cmpcard"><div class="ch">'+x.iss+'</div>'+rows+'</div>';}).join(""):'<div class="empty">데이터 준비 중</div>';
+ // (2) 카드상품별 플랫폼 비교 — 2개 이상 플랫폼
+ var rows2=prods.filter(function(p){return new Set((p.events||[]).map(e=>e.platform)).size>1;});
+ rows2.forEach(function(p){var m=0;p.events.forEach(function(e){if((e.reward_won||0)>m)m=e.reward_won;});p._m=m;});
+ rows2.sort(function(a,b){return b._m-a._m;});
+ document.getElementById('cmp-prod').innerHTML=rows2.length?rows2.map(function(p){
   var best=-1,bk=null;p.events.forEach(function(e){if((e.reward_won||0)>best){best=e.reward_won;bk=e.platform;}});
   var es=p.events.slice().sort(function(a,b){return (b.reward_won||0)-(a.reward_won||0);});
   var prs=es.map(function(e,i){var nm=PN[e.platform]||e.platform;var isb=e.platform===bk;
    return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+pcol(nm)+'">'+nm+'</span><span class="pv">'+(e.reward_text||'')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
-  return '<div class="cmpcard"><div class="ch">'+p.name+'</div><div class="csub">'+(p.issuer||'')+'</div>'+prs+'</div>';}).join("");
-}).catch(function(){document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';});
+  return '<div class="cmpcard"><div class="ch">'+p.name+'</div><div class="csub">'+(p.issuer||'')+'</div>'+prs+'</div>';}).join(""):'<div class="empty">교차비교 데이터 준비 중이에요.</div>';
+}).catch(function(){document.getElementById('cmp-iss').innerHTML='<div class="empty">데이터 준비 중</div>';document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';});
 """
 
 # ===== DETAIL =====
@@ -464,25 +500,31 @@ CARDDETAIL_BODY=('<style>'
 CARDDETAIL_JS=r"""
 var PCOL={"카드고릴라":"#ff4d4f","뱅크샐러드":"#2f6bff","아정당":"#3b5bdb","카카오페이":"#e8b800","토스":"#3182f6"};
 var id=Number(new URLSearchParams(location.search).get('id'));
-Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>r.json()).catch(function(){return {items:[]};})]).then(function(A){
- var j=A[0],EVT=(A[1]&&A[1].items)||[];
+Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>r.json()).catch(function(){return {items:[]};}),fetch('platform_events.json').then(r=>r.json()).catch(function(){return {products:[]};})]).then(function(A){
+ var j=A[0],EVT=(A[1]&&A[1].items)||[],PE=(A[2]&&A[2].products)||[];
  var card=null,issuer='';
  for(var k in j.cards){var f=(j.cards[k]||[]).filter(function(c){return c.id===id;})[0];if(f){card=f;issuer=k;break;}}
  if(!card){document.getElementById('root').innerHTML='<div class="empty">카드를 찾을 수 없어요. <a class="accent" href="cards.html">카드찾기</a></div>';return;}
  var img=imgTag(card.img);
  function _rel(e){var cn=(card.name||'').toLowerCase();var ec=(e.card||'').toLowerCase();return ec&&cn&&(ec.indexOf(cn)>=0||cn.indexOf(ec)>=0);}
  var spec=EVT.filter(function(e){return e.issuer===issuer&&_rel(e);});
- var platBenefit={};
- (card.events||[]).forEach(function(e){if(e.platform&&!platBenefit[e.platform])platBenefit[e.platform]=e.amount;});
+ // 콜렉터 정확 데이터(platform_events.json)에서 이 카드 매칭(이름 정규화) — 상품↔이벤트 정합성 핵심
+ function _nk(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
+ var PEMAP={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',naver:'네이버페이',ajungdang:'아정당'};
+ var ck=_nk(card.name), pmatch=PE.filter(function(p){return _nk(p.name)===ck;})[0];
+ var platBenefit={},platUrl={};
+ if(pmatch){(pmatch.events||[]).forEach(function(e){var nm=PEMAP[e.platform]||e.platform;if(!platBenefit[nm]){platBenefit[nm]=e.reward_text||'';platUrl[nm]=((pmatch.platforms||{})[e.platform]||{}).url||'';}});}
+ (card.events||[]).forEach(function(e){if(e.platform&&!platBenefit[e.platform])platBenefit[e.platform]=e.amount;});       // 폴백(옛 데이터)
  spec.forEach(function(e){if(e.platform&&!platBenefit[e.platform])platBenefit[e.platform]=e.benefit;});
  var PL=card.plat||{};var src=card.source||'';
  function _won(s){var m=(s||'').replace(/,/g,'').match(/([0-9]+(?:\.[0-9]+)?)\s*(억|만)/);return m?parseFloat(m[1])*(m[2]==='억'?10000:1):0;}
  function _src(d){return src.indexOf(d)>=0;}
  var allP=[
-  {k:'토스',c:'#3182f6',u:PL['토스']||(_src('toss')?src:''),mapped:!!(PL['토스']||_src('toss'))},
-  {k:'카드고릴라',c:'#ff4d4f',u:PL['카드고릴라']||(_src('gorilla')?src:''),mapped:!!(PL['카드고릴라']||_src('gorilla'))},
-  {k:'뱅크샐러드',c:'#2f6bff',u:PL['뱅크샐러드']||(_src('banksalad')?src:''),mapped:!!(PL['뱅크샐러드']||_src('banksalad'))},
-  {k:'아정당',c:'#3b5bdb',u:PL['아정당']||(_src('ajd')||_src('jungdang')?src:''),mapped:!!(PL['아정당']||_src('ajd')||_src('jungdang'))}
+  {k:'토스',c:'#3182f6',u:platUrl['토스']||PL['토스']||(_src('toss')?src:''),mapped:!!(PL['토스']||_src('toss')||platBenefit['토스'])},
+  {k:'카드고릴라',c:'#ff4d4f',u:platUrl['카드고릴라']||PL['카드고릴라']||(_src('gorilla')?src:''),mapped:!!(PL['카드고릴라']||_src('gorilla')||platBenefit['카드고릴라'])},
+  {k:'뱅크샐러드',c:'#2f6bff',u:platUrl['뱅크샐러드']||PL['뱅크샐러드']||(_src('banksalad')?src:''),mapped:!!(PL['뱅크샐러드']||_src('banksalad')||platBenefit['뱅크샐러드'])},
+  {k:'아정당',c:'#3b5bdb',u:platUrl['아정당']||PL['아정당']||(_src('ajd')||_src('jungdang')?src:''),mapped:!!(PL['아정당']||_src('ajd')||_src('jungdang')||platBenefit['아정당'])},
+  {k:'네이버페이',c:'#03c75a',u:platUrl['네이버페이']||'https://card.pay.naver.com/home/promotion/event',mapped:!!platBenefit['네이버페이']}
  ];
  var plats=allP.filter(function(p){return p.mapped||platBenefit[p.k];});           // 맵핑/이벤트 있는 플랫폼만
  plats.sort(function(a,b){return _won(platBenefit[b.k])-_won(platBenefit[a.k]);});  // 금액 높은 순
