@@ -247,9 +247,12 @@ def _cg_catalog():
         print("catalog err", e)
     return cat
 
+CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
+
 def discover_products(limit=400):
     """카드고릴라 events?type=CBK(현재 진행 캐시백 이벤트) → 매핑 카드 자동 발굴.
-    각 이벤트의 card_idxs를 카탈로그(이름·발급사)와 조인. 라이브 실패 시 cg_seed.json 폴백."""
+    각 이벤트의 card_idxs를 카탈로그(이름·발급사)와 조인. subject(이벤트 라벨)도 CG_EVENTS에 적재.
+    라이브 실패 시 cg_seed.json 폴백."""
     out={}
     try:
         ev=fetch("https://api.card-gorilla.com/v1/events?type=CBK").json()
@@ -264,7 +267,10 @@ def discover_products(limit=400):
                 if not name: continue
                 out[_nk(name)]={"name":name,"issuer":meta.get("issuer") or corpn,
                                 "platforms":{"cardgorilla":{"id":cid}}}
-        print(f"discover(live events?type=CBK) → {len(out)} cards")
+                CG_EVENTS[cid]={"subject":(e.get("subject") or "").strip(),
+                                "title":(e.get("title") or "").strip(),
+                                "start":e.get("evt_start_time"),"end":e.get("evt_end_time")}
+        print(f"discover(live events?type=CBK) → {len(out)} cards, {len(CG_EVENTS)} events")
     except Exception as e:
         print("discover live err", e)
     if not out:                                   # 라이브 차단 시 시드로 보장
@@ -322,5 +328,18 @@ if __name__=="__main__":
         pass
     except Exception as e:
         print("ajd seed 병합 err", e)
+    # 카드고릴라: 이벤트 라벨(subject)을 reward_text로 주입(상세 'card_detail_text'의 "연회비 캐시백"류 대신)
+    cg_inj=0
+    for p in products:
+        cid=str((p.get("platforms",{}).get("cardgorilla") or {}).get("id") or "")
+        ce=CG_EVENTS.get(cid)
+        if not ce: continue
+        subj=ce.get("subject") or ""
+        if not subj: continue
+        injected[(p["name"],"cardgorilla")]={"reward_won":parse_won(subj),"reward_text":subj,
+            "period_start":ce.get("start"),"period_end":ce.get("end"),
+            "url":f"https://www.card-gorilla.com/card/{cid}"}
+        cg_inj+=1
+    if cg_inj: print(f"카드고릴라 이벤트 라벨 주입 {cg_inj}건")
     print(f"총 상품 {len(products)}개 수집 시작")
     run(products, today, injected=injected or None)
