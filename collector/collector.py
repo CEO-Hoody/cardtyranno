@@ -295,5 +295,21 @@ if __name__=="__main__":
         if k in by: by[k]["platforms"].setdefault("cardgorilla", d["platforms"]["cardgorilla"])
         else: by[k]=d
     products=list(by.values())
+    # 아정당: 로컬 수집(거주지 IP) 결과 ajd_seed.json 을 주입(라이브 호출 없이 병합)
+    injected={}
+    try:
+        aj=json.load(open(os.path.join(BASE,"ajd_seed.json"),encoding="utf-8")).get("cards",{})
+        bynk={_nk(p["name"]):p for p in products}
+        for nm,info in aj.items():
+            p=bynk.get(_nk(nm))
+            if not p or not info.get("reward_won"): continue
+            p.setdefault("platforms",{})["ajungdang"]={"id":info.get("ajd_id",""),"url":info.get("url","")}
+            injected[(p["name"],"ajungdang")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
+                                               "period_start":None,"period_end":None,"url":info.get("url","")}
+        if injected: print(f"아정당 로컬 주입 {len(injected)}건")
+    except FileNotFoundError:
+        pass
+    except Exception as e:
+        print("ajd seed 병합 err", e)
     print(f"총 상품 {len(products)}개 수집 시작")
-    run(products, today)
+    run(products, today, injected=injected or None)
