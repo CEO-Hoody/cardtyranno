@@ -1,0 +1,3142 @@
+{
+ "month": "2026-06",
+ "updated": "2026-06-22",
+ "count": 153,
+ "cards": [
+  {
+   "id": 9,
+   "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 1170000,
+   "maxCashbackText": "117만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 1170000,
+     "reward_text": "117만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "name": "대한항공카드 the First Edition2",
+   "issuer": "현대카드",
+   "maxCashbackWon": 890000,
+   "maxCashbackText": "89만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 890000,
+     "reward_text": "89만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "name": "KB국민 굿데이카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 860000,
+   "maxCashbackText": "86만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla",
+    "naver",
+    "toss"
+   ],
+   "platformCount": 5,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 860000,
+     "reward_text": "86만원 캐시백"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 850000,
+     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)"
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 830000,
+     "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)"
+    },
+    {
+     "platform": "toss",
+     "reward_won": 810000,
+     "reward_text": "최대 81만원 이벤트"
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "name": "굿데이카드",
+   "issuer": "주유할인",
+   "maxCashbackWon": 860000,
+   "maxCashbackText": "86만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 860000,
+     "reward_text": "86만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 72,
+   "name": "KB국민카드 5종",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 860000,
+   "maxCashbackText": "86만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 860000,
+     "reward_text": "86만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 115,
+   "name": "KB국민 My WE:SH 카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 860000,
+   "maxCashbackText": "86만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 860000,
+     "reward_text": "86만원 캐시백"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 850000,
+     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 147,
+   "name": "KB YOU Prime 카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 860000,
+   "maxCashbackText": "86만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 860000,
+     "reward_text": "86만원 캐시백"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 850000,
+     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 152,
+   "name": "KB NEED Pay 카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 860000,
+   "maxCashbackText": "86만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 860000,
+     "reward_text": "86만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 153,
+   "name": "KB YOU Wish 카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 860000,
+   "maxCashbackText": "86만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 860000,
+     "reward_text": "86만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "name": "신한카드 Mr.Life",
+   "issuer": "신한카드",
+   "maxCashbackWon": 840000,
+   "maxCashbackText": "최대 84만원 캐시백",
+   "bestPlatform": "banksalad",
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 4,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 540000,
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 500000,
+     "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "신한카드 Deep Oil",
+   "issuer": "신한카드",
+   "maxCashbackWon": 840000,
+   "maxCashbackText": "최대 84만원 캐시백",
+   "bestPlatform": "banksalad",
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 540000,
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "LOCA 365 카드",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 840000,
+   "maxCashbackText": "최대 84만원 캐시백",
+   "bestPlatform": "banksalad",
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 660000,
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 640000,
+     "reward_text": "64만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "name": "대한항공카드 300",
+   "issuer": "현대카드",
+   "maxCashbackWon": 790000,
+   "maxCashbackText": "79만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 790000,
+     "reward_text": "79만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "name": "신한카드 Discount Plan+",
+   "issuer": "주유할인",
+   "maxCashbackWon": 789000,
+   "maxCashbackText": "78.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 789000,
+     "reward_text": "78.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "name": "Discount Plan+ 외 2종",
+   "issuer": "신한카드",
+   "maxCashbackWon": 789000,
+   "maxCashbackText": "78.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 789000,
+     "reward_text": "78.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "name": "신한카드 Air One",
+   "issuer": "신한카드",
+   "maxCashbackWon": 789000,
+   "maxCashbackText": "78.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 789000,
+     "reward_text": "78.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 151,
+   "name": "신한카드 Simple Plan+",
+   "issuer": "신한카드",
+   "maxCashbackWon": 789000,
+   "maxCashbackText": "78.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 789000,
+     "reward_text": "78.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "name": "카드의정석 2",
+   "issuer": "우리카드",
+   "maxCashbackWon": 780000,
+   "maxCashbackText": "78만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 780000,
+     "reward_text": "78만원 혜택"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 780000,
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 770000,
+     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "name": "카드의정석2 외 3종",
+   "issuer": "우리카드",
+   "maxCashbackWon": 780000,
+   "maxCashbackText": "78만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 780000,
+     "reward_text": "78만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 138,
+   "name": "우리카드 7CORE",
+   "issuer": "우리카드",
+   "maxCashbackWon": 780000,
+   "maxCashbackText": "78만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 780000,
+     "reward_text": "78만원 혜택"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 780000,
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 770000,
+     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 142,
+   "name": "우리카드 MILE&POINT",
+   "issuer": "우리카드",
+   "maxCashbackWon": 780000,
+   "maxCashbackText": "78만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 780000,
+     "reward_text": "78만원 혜택"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 780000,
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 770000,
+     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 143,
+   "name": "the OPUS silver",
+   "issuer": "우리카드",
+   "maxCashbackWon": 780000,
+   "maxCashbackText": "78만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 780000,
+     "reward_text": "78만원 혜택"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 780000,
+     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "name": "대한항공카드 120",
+   "issuer": "현대카드",
+   "maxCashbackWon": 760000,
+   "maxCashbackText": "76만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 760000,
+     "reward_text": "76만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "name": "카드의정석 I&U+",
+   "issuer": "주유할인",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "75만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 85,
+   "name": "우리카드 SHOPPING+ 외 4종",
+   "issuer": "우리카드",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "75만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 125,
+   "name": "카드의정석 SHOPPING+",
+   "issuer": "우리카드",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "75만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 126,
+   "name": "카드의정석2 EVERY POINT",
+   "issuer": "우리카드",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "75만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 128,
+   "name": "카드의정석 TEN",
+   "issuer": "우리카드",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "75만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 130,
+   "name": "카드의정석2 EVERY DISCOUNT",
+   "issuer": "우리카드",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "75만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "name": "대한항공카드 060",
+   "issuer": "현대카드",
+   "maxCashbackWon": 730000,
+   "maxCashbackText": "73만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 730000,
+     "reward_text": "73만원 캐시백"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 690000,
+     "reward_text": "최대 69만원 (아정당 현대카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "name": "현대카드 M",
+   "issuer": "현대카드",
+   "maxCashbackWon": 685000,
+   "maxCashbackText": "68.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 685000,
+     "reward_text": "68.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "name": "LOCA LIKIT 2.0",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 670000,
+   "maxCashbackText": "67만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 670000,
+     "reward_text": "67만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "name": "LOCA LIKIT 2종",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 670000,
+   "maxCashbackText": "67만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 670000,
+     "reward_text": "67만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 154,
+   "name": "LOCA LIKIT 1.5",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 670000,
+   "maxCashbackText": "67만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 670000,
+     "reward_text": "67만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 110,
+   "name": "LOCA LIKIT",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 660000,
+   "maxCashbackText": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 660000,
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 634000,
+     "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 590000,
+     "reward_text": "59만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 120,
+   "name": "디지로카 London",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 660000,
+   "maxCashbackText": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 660000,
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 640000,
+     "reward_text": "64만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 121,
+   "name": "디지로카 Paris",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 660000,
+   "maxCashbackText": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 660000,
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 640000,
+     "reward_text": "64만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 129,
+   "name": "디지로카 Las Vegas",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 660000,
+   "maxCashbackText": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 660000,
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 640000,
+     "reward_text": "64만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 71,
+   "name": "LOCA 365",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 640000,
+   "maxCashbackText": "64만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 640000,
+     "reward_text": "64만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 74,
+   "name": "롯데카드 시티 3종",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 640000,
+   "maxCashbackText": "64만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 640000,
+     "reward_text": "64만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "name": "삼성 iD STATION 카드 (HD현대오일뱅크)",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 611000,
+   "maxCashbackText": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 611000,
+     "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 94,
+   "name": "삼성 iD ON 카드",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 611000,
+   "maxCashbackText": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 611000,
+     "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 20000,
+     "reward_text": "2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "name": "에너지플러스 현대카드",
+   "issuer": "현대카드",
+   "maxCashbackWon": 600000,
+   "maxCashbackText": "60만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 600000,
+     "reward_text": "60만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "name": "LOCA LIKIT Play",
+   "issuer": "주유할인",
+   "maxCashbackWon": 590000,
+   "maxCashbackText": "59만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 590000,
+     "reward_text": "59만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "name": "LOCA LIKIT 3종",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 590000,
+   "maxCashbackText": "59만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 590000,
+     "reward_text": "59만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 103,
+   "name": "디지로카 Link",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 590000,
+   "maxCashbackText": "59만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 590000,
+     "reward_text": "59만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 111,
+   "name": "LOCA LIKIT Eat",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 590000,
+   "maxCashbackText": "59만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 590000,
+     "reward_text": "59만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "신한카드 처음(ANNIVERSE)",
+   "issuer": "신한카드",
+   "maxCashbackWon": 579000,
+   "maxCashbackText": "57.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 540000,
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 81,
+   "name": "Mr.Life 외 4종",
+   "issuer": "신한카드",
+   "maxCashbackWon": 579000,
+   "maxCashbackText": "57.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 124,
+   "name": "신한카드 Point Plan",
+   "issuer": "신한카드",
+   "maxCashbackWon": 579000,
+   "maxCashbackText": "57.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 540000,
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 136,
+   "name": "알리익스프레스 신한카드",
+   "issuer": "신한카드",
+   "maxCashbackWon": 579000,
+   "maxCashbackText": "57.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택"
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 540000,
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "name": "트래블로그+(플러스) 신용카드",
+   "issuer": "하나카드",
+   "maxCashbackWon": 570000,
+   "maxCashbackText": "57만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 570000,
+     "reward_text": "57만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "name": "신한카드 Globus",
+   "issuer": "신한카드",
+   "maxCashbackWon": 559000,
+   "maxCashbackText": "55.9만원 혜택+라운지 이용권",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 559000,
+     "reward_text": "55.9만원 혜택+라운지 이용권"
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "name": "현대카드 AMEX GOLD",
+   "issuer": "현대카드",
+   "maxCashbackWon": 500000,
+   "maxCashbackText": "50만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 500000,
+     "reward_text": "50만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 123,
+   "name": "American Express® Gold Card Edition2",
+   "issuer": "현대카드",
+   "maxCashbackWon": 500000,
+   "maxCashbackText": "50만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 500000,
+     "reward_text": "50만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "삼성 iD SELECT ALL 카드",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 494000,
+   "maxCashbackText": "49.4만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "banksalad",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 494000,
+     "reward_text": "49.4만원 혜택"
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 230000,
+     "reward_text": "최대 23만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "name": "삼성카드 iD SELECT 2종",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 494000,
+   "maxCashbackText": "49.4만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 494000,
+     "reward_text": "49.4만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 141,
+   "name": "삼성 iD SELECT ON 카드",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 494000,
+   "maxCashbackText": "49.4만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 494000,
+     "reward_text": "49.4만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "name": "현대카드MY BUSINESS",
+   "issuer": "현대카드",
+   "maxCashbackWon": 450000,
+   "maxCashbackText": "45만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 450000,
+     "reward_text": "45만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 148,
+   "name": "현대카드MY BUSINESS M F&B",
+   "issuer": "현대카드",
+   "maxCashbackWon": 450000,
+   "maxCashbackText": "45만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 450000,
+     "reward_text": "45만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 149,
+   "name": "현대카드MY BUSINESS M Retail",
+   "issuer": "현대카드",
+   "maxCashbackWon": 450000,
+   "maxCashbackText": "45만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 450000,
+     "reward_text": "45만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 150,
+   "name": "현대카드MY BUSINESS M E-seller",
+   "issuer": "현대카드",
+   "maxCashbackWon": 450000,
+   "maxCashbackText": "45만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 450000,
+     "reward_text": "45만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 80,
+   "name": "Point Plan+ 외 2종",
+   "issuer": "신한카드",
+   "maxCashbackWon": 349000,
+   "maxCashbackText": "34.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 349000,
+     "reward_text": "34.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 131,
+   "name": "신한카드 Edu Plan+",
+   "issuer": "신한카드",
+   "maxCashbackWon": 349000,
+   "maxCashbackText": "34.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 349000,
+     "reward_text": "34.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 140,
+   "name": "Haru(Hoshino Resorts)",
+   "issuer": "신한카드",
+   "maxCashbackWon": 349000,
+   "maxCashbackText": "34.9만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 349000,
+     "reward_text": "34.9만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "name": "the Orange",
+   "issuer": "현대카드",
+   "maxCashbackWon": 250000,
+   "maxCashbackText": "25만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 250000,
+     "reward_text": "25만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 89,
+   "name": "현대카드 Summit",
+   "issuer": "현대카드",
+   "maxCashbackWon": 250000,
+   "maxCashbackText": "25만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 250000,
+     "reward_text": "25만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 92,
+   "name": "현대카드 AMEX GREEN",
+   "issuer": "현대카드",
+   "maxCashbackWon": 250000,
+   "maxCashbackText": "25만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 250000,
+     "reward_text": "25만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 122,
+   "name": "American Express® Green Card Edition2",
+   "issuer": "현대카드",
+   "maxCashbackWon": 250000,
+   "maxCashbackText": "25만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 250000,
+     "reward_text": "25만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 109,
+   "name": "올바른 FLEX 카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 205000,
+   "maxCashbackText": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 205000,
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 175000,
+     "reward_text": "17.5만원 캐시백"
+    },
+    {
+     "platform": "naver",
+     "reward_won": 175000,
+     "reward_text": "최대 17.5만원 (네이버페이 NH농협카드 이벤트)"
+    }
+   ]
+  },
+  {
+   "id": 114,
+   "name": "zgm.streaming카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 205000,
+   "maxCashbackText": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 205000,
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 175000,
+     "reward_text": "17.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 117,
+   "name": "zgm.play카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 205000,
+   "maxCashbackText": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 205000,
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 175000,
+     "reward_text": "17.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 70,
+   "name": "롯데멤버스 2종",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 200000,
+   "maxCashbackText": "20만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 200000,
+     "reward_text": "20만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 88,
+   "name": "현대카드 MX Black Edition2",
+   "issuer": "현대카드",
+   "maxCashbackWon": 200000,
+   "maxCashbackText": "20만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 200000,
+     "reward_text": "20만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 134,
+   "name": "롯데멤버스 카드",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 200000,
+   "maxCashbackText": "20만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 200000,
+     "reward_text": "20만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 135,
+   "name": "롯데멤버스 카드 프리미엄",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 200000,
+   "maxCashbackText": "20만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 200000,
+     "reward_text": "20만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 83,
+   "name": "NH농협카드 3종",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 175000,
+   "maxCashbackText": "17.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 175000,
+     "reward_text": "17.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "name": "K-패스 (신용)",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 155000,
+   "maxCashbackText": "최대 15.5만원 캐시백",
+   "bestPlatform": "banksalad",
+   "platforms": [
+    "banksalad",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 155000,
+     "reward_text": "최대 15.5만원 캐시백"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 125000,
+     "reward_text": "12.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 90,
+   "name": "the Green Edition3",
+   "issuer": "현대카드",
+   "maxCashbackWon": 150000,
+   "maxCashbackText": "15만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 150000,
+     "reward_text": "15만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 91,
+   "name": "the Pink Edition2",
+   "issuer": "현대카드",
+   "maxCashbackWon": 150000,
+   "maxCashbackText": "15만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 150000,
+     "reward_text": "15만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "name": "국민행복",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 130000,
+   "maxCashbackText": "13만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 130000,
+     "reward_text": "13만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 106,
+   "name": "롯데 국민행복카드",
+   "issuer": "롯데카드",
+   "maxCashbackWon": 130000,
+   "maxCashbackText": "13만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 130000,
+     "reward_text": "13만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "name": "I-ALL",
+   "issuer": "주유할인",
+   "maxCashbackWon": 125000,
+   "maxCashbackText": "12.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 125000,
+     "reward_text": "12.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "name": "IBK기업은행 4종",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 125000,
+   "maxCashbackText": "12.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 125000,
+     "reward_text": "12.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 132,
+   "name": "IBK포인트3.8(신용)",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 125000,
+   "maxCashbackText": "12.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 125000,
+     "reward_text": "12.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 133,
+   "name": "IBK포인트(신용)",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 125000,
+   "maxCashbackText": "12.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 125000,
+     "reward_text": "12.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "name": "THE iD. 1st",
+   "issuer": "추가캐시백",
+   "maxCashbackWon": 124000,
+   "maxCashbackText": "기존회원 12.4만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 124000,
+     "reward_text": "기존회원 12.4만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "name": "트라이플러스 삼성카드",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 120000,
+   "maxCashbackText": "12만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 120000,
+     "reward_text": "12만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "name": "BC 바로 Air Master 카드",
+   "issuer": "BC 바로카드",
+   "maxCashbackWon": 43000,
+   "maxCashbackText": "4.3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 43000,
+     "reward_text": "4.3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 145,
+   "name": "BC 바로 Air Max 카드",
+   "issuer": "BC 바로카드",
+   "maxCashbackWon": 43000,
+   "maxCashbackText": "4.3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 43000,
+     "reward_text": "4.3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "name": "I-Mileage (대한항공)",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 42000,
+   "maxCashbackText": "4.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 42000,
+     "reward_text": "4.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 82,
+   "name": "카드의정석 EVERY MILE SKYPASS",
+   "issuer": "우리카드",
+   "maxCashbackWon": 39000,
+   "maxCashbackText": "3.9만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 39000,
+     "reward_text": "3.9만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "name": "현대카드 ZERO Up",
+   "issuer": "현대카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "name": "zgm 할인카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "name": "zgm living카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "name": "zgm shopping카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "name": "zgm point카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 62,
+   "name": "현대카드 X Cut",
+   "issuer": "현대카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 63,
+   "name": "현대카드 X Save",
+   "issuer": "현대카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 65,
+   "name": "클래시 트래블카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 113,
+   "name": "노리2 체크카드(KB Pay)",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "platforms": [
+    "ajungdang",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 30000,
+     "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)"
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 137,
+   "name": "현대카드 ZERO Up(할인형)",
+   "issuer": "현대카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 155,
+   "name": "현대카드 ZERO Up(포인트형)",
+   "issuer": "현대카드",
+   "maxCashbackWon": 30000,
+   "maxCashbackText": "3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 30000,
+     "reward_text": "3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "name": "zgm.rounding카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "name": "zgm.휴가중카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 93,
+   "name": "KB국민카드 체크 6종",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 118,
+   "name": "토심이 첵첵 체크카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 127,
+   "name": "트래블러스 체크카드(토심이)",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 139,
+   "name": "KB 틴업 체크카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 144,
+   "name": "트래블러스 체크카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 146,
+   "name": "KB Youth Club 체크카드",
+   "issuer": "KB국민카드",
+   "maxCashbackWon": 25000,
+   "maxCashbackText": "2.5만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 25000,
+     "reward_text": "2.5만원 혜택"
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "name": "해피메이트 IBK카드(신용)",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 20000,
+   "maxCashbackText": "2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 20000,
+     "reward_text": "2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 95,
+   "name": "현대카드Z family Edition2",
+   "issuer": "현대카드",
+   "maxCashbackWon": 20000,
+   "maxCashbackText": "2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 20000,
+     "reward_text": "2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 96,
+   "name": "현대카드Z play",
+   "issuer": "현대카드",
+   "maxCashbackWon": 20000,
+   "maxCashbackText": "2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 20000,
+     "reward_text": "2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 97,
+   "name": "현대카드Z everyday",
+   "issuer": "현대카드",
+   "maxCashbackWon": 20000,
+   "maxCashbackText": "2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 20000,
+     "reward_text": "2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 98,
+   "name": "현대카드Z work Edition2",
+   "issuer": "현대카드",
+   "maxCashbackWon": 20000,
+   "maxCashbackText": "2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 20000,
+     "reward_text": "2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 78,
+   "name": "BC 바로 ZONE 카드",
+   "issuer": "BC 바로카드",
+   "maxCashbackWon": 19000,
+   "maxCashbackText": "1.9만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 19000,
+     "reward_text": "1.9만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 99,
+   "name": "I-PET",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 19000,
+   "maxCashbackText": "1.9만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 19000,
+     "reward_text": "1.9만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "name": "SOHO 다사로이OIL카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 17000,
+   "maxCashbackText": "1.7만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 17000,
+     "reward_text": "1.7만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "name": "K-패스카드(신용)",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "name": "올바른지구 카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 54,
+   "name": "현대카드ZERO Edition3(할인형)",
+   "issuer": "현대카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 55,
+   "name": "현대카드ZERO Edition3(포인트형)",
+   "issuer": "현대카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "name": "현대카드 O",
+   "issuer": "현대카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "name": "현대카드 S",
+   "issuer": "현대카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 59,
+   "name": "현대카드 D",
+   "issuer": "현대카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "name": "현대카드 H",
+   "issuer": "현대카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 61,
+   "name": "현대카드 T",
+   "issuer": "현대카드",
+   "maxCashbackWon": 15000,
+   "maxCashbackText": "1.5만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 15000,
+     "reward_text": "1.5만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "name": "올바른 BAZIC 카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 14000,
+   "maxCashbackText": "1.4만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 14000,
+     "reward_text": "1.4만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "name": "별다줄 카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 14000,
+   "maxCashbackText": "1.4만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 14000,
+     "reward_text": "1.4만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "name": "NH1961 카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 14000,
+   "maxCashbackText": "1.4만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 14000,
+     "reward_text": "1.4만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "name": "올바른 MYPICK 카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 13000,
+   "maxCashbackText": "1.3만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 13000,
+     "reward_text": "1.3만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "name": "D4카드의정석Ⅱ",
+   "issuer": "우리카드",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "name": "zgm.고향으로카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "name": "zgm.the pay카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "name": "올바른 NEW HAVE 카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 66,
+   "name": "일년의 설렘카드",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "name": "BC 바로 MACAO 카드",
+   "issuer": "BC 바로카드",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "name": "DA카드의정석Ⅱ",
+   "issuer": "우리카드",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 101,
+   "name": "Daily With(데일리위드)카드",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 104,
+   "name": "일상의 기쁨카드(신용)",
+   "issuer": "IBK기업은행",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "name": "하나 나라사랑카드",
+   "issuer": "하나카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 + CU 쿠폰 이벤트",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 + CU 쿠폰 이벤트"
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "name": "NH20해봄카드",
+   "issuer": "NH농협카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "name": "삼성 모니모A카드",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 69,
+   "name": "삼성 taptap Drive",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 84,
+   "name": "현대백화점카드",
+   "issuer": "현대백화점",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "H.Point 1만P 증정",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "H.Point 1만P 증정"
+    }
+   ]
+  },
+  {
+   "id": 105,
+   "name": "신한카드 체크 2종",
+   "issuer": "신한카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 108,
+   "name": "taptap DRIVE",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 112,
+   "name": "신한카드 플리(체크)",
+   "issuer": "신한카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 116,
+   "name": "신한카드 플리 체크(산리오캐릭터즈)",
+   "issuer": "신한카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 119,
+   "name": "모니모A 카드",
+   "issuer": "삼성카드",
+   "maxCashbackWon": 10000,
+   "maxCashbackText": "1만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 10000,
+     "reward_text": "1만원 캐시백"
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "name": "팝업구조 TEST",
+   "issuer": "이벤트 등록용",
+   "maxCashbackWon": 0,
+   "maxCashbackText": "팝업구조 TEST",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": null,
+     "reward_text": "팝업구조 TEST"
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "name": "The Aureum(더 아우름)카드",
+   "issuer": "이벤트 등록용",
+   "maxCashbackWon": 0,
+   "maxCashbackText": "SH수협은행",
+   "bestPlatform": "cardgorilla",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": null,
+     "reward_text": "SH수협은행"
+    }
+   ]
+  }
+ ]
+}
