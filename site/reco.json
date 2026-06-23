@@ -21,7 +21,9 @@
      "platform": "cardgorilla",
      "reward_won": 1170000,
      "reward_text": "117만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 1170000,
+     "bonus_won": 0
     }
    ]
   },
@@ -43,7 +45,9 @@
      "platform": "cardgorilla",
      "reward_won": 890000,
      "reward_text": "89만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 890000,
+     "bonus_won": 0
     }
    ]
   },
@@ -68,25 +72,33 @@
      "platform": "cardgorilla",
      "reward_won": 860000,
      "reward_text": "86만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 860000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 850000,
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 850000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 830000,
      "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 830000,
+     "bonus_won": 0
     },
     {
      "platform": "toss",
      "reward_won": 810000,
      "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.25"
+     "period_end": "2026.06.25",
+     "main_won": 810000,
+     "bonus_won": 0
     }
    ]
   },
@@ -108,7 +120,9 @@
      "platform": "cardgorilla",
      "reward_won": 860000,
      "reward_text": "86만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 860000,
+     "bonus_won": 0
     }
    ]
   },
@@ -130,7 +144,9 @@
      "platform": "cardgorilla",
      "reward_won": 860000,
      "reward_text": "86만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 860000,
+     "bonus_won": 0
     }
    ]
   },
@@ -153,13 +169,17 @@
      "platform": "cardgorilla",
      "reward_won": 860000,
      "reward_text": "86만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 860000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 850000,
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 850000,
+     "bonus_won": 0
     }
    ]
   },
@@ -182,13 +202,17 @@
      "platform": "cardgorilla",
      "reward_won": 860000,
      "reward_text": "86만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 860000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 850000,
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 850000,
+     "bonus_won": 0
     }
    ]
   },
@@ -210,7 +234,9 @@
      "platform": "cardgorilla",
      "reward_won": 860000,
      "reward_text": "86만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 860000,
+     "bonus_won": 0
     }
    ]
   },
@@ -232,7 +258,9 @@
      "platform": "cardgorilla",
      "reward_won": 860000,
      "reward_text": "86만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 860000,
+     "bonus_won": 0
     }
    ]
   },
@@ -254,7 +282,9 @@
      "platform": "cardgorilla",
      "reward_won": 790000,
      "reward_text": "79만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 790000,
+     "bonus_won": 0
     }
    ]
   },
@@ -276,7 +306,9 @@
      "platform": "cardgorilla",
      "reward_won": 789000,
      "reward_text": "78.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 789000,
+     "bonus_won": 0
     }
    ]
   },
@@ -298,7 +330,9 @@
      "platform": "cardgorilla",
      "reward_won": 789000,
      "reward_text": "78.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 789000,
+     "bonus_won": 0
     }
    ]
   },
@@ -320,7 +354,9 @@
      "platform": "cardgorilla",
      "reward_won": 789000,
      "reward_text": "78.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 789000,
+     "bonus_won": 0
     }
    ]
   },
@@ -342,7 +378,9 @@
      "platform": "cardgorilla",
      "reward_won": 789000,
      "reward_text": "78.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 789000,
+     "bonus_won": 0
     }
    ]
   },
@@ -366,19 +404,25 @@
      "platform": "cardgorilla",
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 780000,
      "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 770000,
      "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 770000,
+     "bonus_won": 0
     }
    ]
   },
@@ -400,7 +444,9 @@
      "platform": "cardgorilla",
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 780000,
+     "bonus_won": 0
     }
    ]
   },
@@ -424,19 +470,25 @@
      "platform": "cardgorilla",
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 780000,
      "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 770000,
      "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 770000,
+     "bonus_won": 0
     }
    ]
   },
@@ -460,19 +512,25 @@
      "platform": "cardgorilla",
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 780000,
      "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 770000,
      "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 770000,
+     "bonus_won": 0
     }
    ]
   },
@@ -495,13 +553,17 @@
      "platform": "cardgorilla",
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 780000,
      "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 780000,
+     "bonus_won": 0
     }
    ]
   },
@@ -523,7 +585,9 @@
      "platform": "cardgorilla",
      "reward_won": 760000,
      "reward_text": "76만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 760000,
+     "bonus_won": 0
     }
    ]
   },
@@ -545,7 +609,9 @@
      "platform": "cardgorilla",
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -567,7 +633,9 @@
      "platform": "cardgorilla",
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -589,7 +657,9 @@
      "platform": "cardgorilla",
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -611,7 +681,9 @@
      "platform": "cardgorilla",
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -633,7 +705,9 @@
      "platform": "cardgorilla",
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -655,7 +729,9 @@
      "platform": "cardgorilla",
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -678,13 +754,17 @@
      "platform": "cardgorilla",
      "reward_won": 730000,
      "reward_text": "73만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 730000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 690000,
      "reward_text": "최대 69만원 (아정당 현대카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 690000,
+     "bonus_won": 0
     }
    ]
   },
@@ -706,7 +786,9 @@
      "platform": "cardgorilla",
      "reward_won": 685000,
      "reward_text": "68.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 685000,
+     "bonus_won": 0
     }
    ]
   },
@@ -728,7 +810,9 @@
      "platform": "cardgorilla",
      "reward_won": 670000,
      "reward_text": "67만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 670000,
+     "bonus_won": 0
     }
    ]
   },
@@ -750,7 +834,9 @@
      "platform": "cardgorilla",
      "reward_won": 670000,
      "reward_text": "67만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 670000,
+     "bonus_won": 0
     }
    ]
   },
@@ -772,7 +858,9 @@
      "platform": "cardgorilla",
      "reward_won": 670000,
      "reward_text": "67만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 670000,
+     "bonus_won": 0
     }
    ]
   },
@@ -795,13 +883,17 @@
      "platform": "ajungdang",
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 660000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 640000,
      "reward_text": "64만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 640000,
+     "bonus_won": 0
     }
    ]
   },
@@ -825,19 +917,25 @@
      "platform": "ajungdang",
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 660000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 634000,
      "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 634000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 590000,
      "reward_text": "59만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 590000,
+     "bonus_won": 0
     }
    ]
   },
@@ -860,13 +958,17 @@
      "platform": "ajungdang",
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 660000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 640000,
      "reward_text": "64만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 640000,
+     "bonus_won": 0
     }
    ]
   },
@@ -889,13 +991,17 @@
      "platform": "ajungdang",
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 660000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 640000,
      "reward_text": "64만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 640000,
+     "bonus_won": 0
     }
    ]
   },
@@ -918,13 +1024,17 @@
      "platform": "ajungdang",
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 660000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 640000,
      "reward_text": "64만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 640000,
+     "bonus_won": 0
     }
    ]
   },
@@ -946,7 +1056,9 @@
      "platform": "cardgorilla",
      "reward_won": 640000,
      "reward_text": "64만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 640000,
+     "bonus_won": 0
     }
    ]
   },
@@ -968,7 +1080,9 @@
      "platform": "cardgorilla",
      "reward_won": 640000,
      "reward_text": "64만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 640000,
+     "bonus_won": 0
     }
    ]
   },
@@ -991,13 +1105,17 @@
      "platform": "ajungdang",
      "reward_won": 611000,
      "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 611000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1020,13 +1138,17 @@
      "platform": "ajungdang",
      "reward_won": 611000,
      "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 611000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 20000,
      "reward_text": "2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 20000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1048,7 +1170,9 @@
      "platform": "cardgorilla",
      "reward_won": 600000,
      "reward_text": "60만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 600000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1070,7 +1194,9 @@
      "platform": "cardgorilla",
      "reward_won": 590000,
      "reward_text": "59만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 590000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1092,7 +1218,9 @@
      "platform": "cardgorilla",
      "reward_won": 590000,
      "reward_text": "59만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 590000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1114,7 +1242,9 @@
      "platform": "cardgorilla",
      "reward_won": 590000,
      "reward_text": "59만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 590000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1136,7 +1266,9 @@
      "platform": "cardgorilla",
      "reward_won": 590000,
      "reward_text": "59만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 590000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1160,19 +1292,25 @@
      "platform": "cardgorilla",
      "reward_won": 579000,
      "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 540000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 500000,
      "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 500000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1195,13 +1333,17 @@
      "platform": "cardgorilla",
      "reward_won": 579000,
      "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 540000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1224,13 +1366,17 @@
      "platform": "cardgorilla",
      "reward_won": 579000,
      "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 540000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1252,7 +1398,9 @@
      "platform": "cardgorilla",
      "reward_won": 579000,
      "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1275,13 +1423,17 @@
      "platform": "cardgorilla",
      "reward_won": 579000,
      "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 540000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1304,13 +1456,17 @@
      "platform": "cardgorilla",
      "reward_won": 579000,
      "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 540000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1332,7 +1488,9 @@
      "platform": "cardgorilla",
      "reward_won": 570000,
      "reward_text": "57만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 570000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1354,7 +1512,9 @@
      "platform": "cardgorilla",
      "reward_won": 559000,
      "reward_text": "55.9만원 혜택+라운지 이용권",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 559000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1376,7 +1536,9 @@
      "platform": "cardgorilla",
      "reward_won": 500000,
      "reward_text": "50만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 500000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1398,7 +1560,9 @@
      "platform": "cardgorilla",
      "reward_won": 500000,
      "reward_text": "50만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 500000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1420,7 +1584,9 @@
      "platform": "cardgorilla",
      "reward_won": 494000,
      "reward_text": "49.4만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 494000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1442,7 +1608,9 @@
      "platform": "cardgorilla",
      "reward_won": 494000,
      "reward_text": "49.4만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 494000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1464,7 +1632,9 @@
      "platform": "cardgorilla",
      "reward_won": 494000,
      "reward_text": "49.4만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 494000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1486,7 +1656,9 @@
      "platform": "cardgorilla",
      "reward_won": 450000,
      "reward_text": "45만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 450000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1508,7 +1680,9 @@
      "platform": "cardgorilla",
      "reward_won": 450000,
      "reward_text": "45만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 450000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1530,7 +1704,9 @@
      "platform": "cardgorilla",
      "reward_won": 450000,
      "reward_text": "45만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 450000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1552,7 +1728,9 @@
      "platform": "cardgorilla",
      "reward_won": 450000,
      "reward_text": "45만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 450000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1574,7 +1752,9 @@
      "platform": "cardgorilla",
      "reward_won": 349000,
      "reward_text": "34.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 349000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1596,7 +1776,9 @@
      "platform": "cardgorilla",
      "reward_won": 349000,
      "reward_text": "34.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 349000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1618,7 +1800,9 @@
      "platform": "cardgorilla",
      "reward_won": 349000,
      "reward_text": "34.9만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 349000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1640,7 +1824,9 @@
      "platform": "cardgorilla",
      "reward_won": 250000,
      "reward_text": "25만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 250000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1662,7 +1848,9 @@
      "platform": "cardgorilla",
      "reward_won": 250000,
      "reward_text": "25만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 250000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1684,7 +1872,9 @@
      "platform": "cardgorilla",
      "reward_won": 250000,
      "reward_text": "25만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 250000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1706,7 +1896,9 @@
      "platform": "cardgorilla",
      "reward_won": 250000,
      "reward_text": "25만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 250000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1730,19 +1922,25 @@
      "platform": "ajungdang",
      "reward_won": 205000,
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 205000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 175000,
      "reward_text": "17.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 175000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
      "reward_won": 175000,
      "reward_text": "최대 17.5만원 (네이버페이 NH농협카드 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 175000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1765,13 +1963,17 @@
      "platform": "ajungdang",
      "reward_won": 205000,
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 205000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 175000,
      "reward_text": "17.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 175000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1794,13 +1996,17 @@
      "platform": "ajungdang",
      "reward_won": 205000,
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 205000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 175000,
      "reward_text": "17.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 175000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1822,7 +2028,9 @@
      "platform": "cardgorilla",
      "reward_won": 200000,
      "reward_text": "20만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 200000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1844,7 +2052,9 @@
      "platform": "cardgorilla",
      "reward_won": 200000,
      "reward_text": "20만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 200000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1866,7 +2076,9 @@
      "platform": "cardgorilla",
      "reward_won": 200000,
      "reward_text": "20만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 200000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1888,7 +2100,9 @@
      "platform": "cardgorilla",
      "reward_won": 200000,
      "reward_text": "20만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 200000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1910,7 +2124,9 @@
      "platform": "cardgorilla",
      "reward_won": 175000,
      "reward_text": "17.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 175000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1932,7 +2148,9 @@
      "platform": "cardgorilla",
      "reward_won": 150000,
      "reward_text": "15만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 150000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1954,7 +2172,9 @@
      "platform": "cardgorilla",
      "reward_won": 150000,
      "reward_text": "15만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 150000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1976,7 +2196,9 @@
      "platform": "cardgorilla",
      "reward_won": 130000,
      "reward_text": "13만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 130000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1998,7 +2220,9 @@
      "platform": "cardgorilla",
      "reward_won": 130000,
      "reward_text": "13만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 130000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2020,7 +2244,9 @@
      "platform": "cardgorilla",
      "reward_won": 125000,
      "reward_text": "12.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 125000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2042,7 +2268,9 @@
      "platform": "cardgorilla",
      "reward_won": 125000,
      "reward_text": "12.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 125000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2064,7 +2292,9 @@
      "platform": "cardgorilla",
      "reward_won": 125000,
      "reward_text": "12.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 125000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2086,7 +2316,9 @@
      "platform": "cardgorilla",
      "reward_won": 125000,
      "reward_text": "12.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 125000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2108,7 +2340,9 @@
      "platform": "cardgorilla",
      "reward_won": 125000,
      "reward_text": "12.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 125000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2130,7 +2364,9 @@
      "platform": "cardgorilla",
      "reward_won": 124000,
      "reward_text": "기존회원 12.4만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 124000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2152,7 +2388,9 @@
      "platform": "cardgorilla",
      "reward_won": 120000,
      "reward_text": "12만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 120000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2174,7 +2412,9 @@
      "platform": "cardgorilla",
      "reward_won": 43000,
      "reward_text": "4.3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 43000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2196,7 +2436,9 @@
      "platform": "cardgorilla",
      "reward_won": 43000,
      "reward_text": "4.3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 43000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2218,7 +2460,9 @@
      "platform": "cardgorilla",
      "reward_won": 42000,
      "reward_text": "4.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 42000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2240,7 +2484,9 @@
      "platform": "cardgorilla",
      "reward_won": 39000,
      "reward_text": "3.9만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 39000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2262,7 +2508,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2284,7 +2532,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2306,7 +2556,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2328,7 +2580,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2350,7 +2604,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2372,7 +2628,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2394,7 +2652,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2416,7 +2676,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2439,13 +2701,17 @@
      "platform": "ajungdang",
      "reward_won": 30000,
      "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
-     "period_end": null
+     "period_end": null,
+     "main_won": 30000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2467,7 +2733,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2489,7 +2757,9 @@
      "platform": "cardgorilla",
      "reward_won": 30000,
      "reward_text": "3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 30000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2511,7 +2781,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2533,7 +2805,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2555,7 +2829,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2577,7 +2853,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2599,7 +2877,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2621,7 +2901,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2643,7 +2925,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2665,7 +2949,9 @@
      "platform": "cardgorilla",
      "reward_won": 25000,
      "reward_text": "2.5만원 혜택",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 25000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2687,7 +2973,9 @@
      "platform": "cardgorilla",
      "reward_won": 20000,
      "reward_text": "2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 20000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2709,7 +2997,9 @@
      "platform": "cardgorilla",
      "reward_won": 20000,
      "reward_text": "2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 20000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2731,7 +3021,9 @@
      "platform": "cardgorilla",
      "reward_won": 20000,
      "reward_text": "2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 20000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2753,7 +3045,9 @@
      "platform": "cardgorilla",
      "reward_won": 20000,
      "reward_text": "2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 20000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2775,7 +3069,9 @@
      "platform": "cardgorilla",
      "reward_won": 20000,
      "reward_text": "2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 20000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2797,7 +3093,9 @@
      "platform": "cardgorilla",
      "reward_won": 19000,
      "reward_text": "1.9만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 19000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2819,7 +3117,9 @@
      "platform": "cardgorilla",
      "reward_won": 19000,
      "reward_text": "1.9만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 19000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2841,7 +3141,9 @@
      "platform": "cardgorilla",
      "reward_won": 17000,
      "reward_text": "1.7만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 17000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2863,7 +3165,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2885,7 +3189,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2907,7 +3213,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2929,7 +3237,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2951,7 +3261,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2973,7 +3285,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2995,7 +3309,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3017,7 +3333,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3039,7 +3357,9 @@
      "platform": "cardgorilla",
      "reward_won": 15000,
      "reward_text": "1.5만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 15000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3061,7 +3381,9 @@
      "platform": "cardgorilla",
      "reward_won": 14000,
      "reward_text": "1.4만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 14000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3083,7 +3405,9 @@
      "platform": "cardgorilla",
      "reward_won": 14000,
      "reward_text": "1.4만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 14000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3105,7 +3429,9 @@
      "platform": "cardgorilla",
      "reward_won": 14000,
      "reward_text": "1.4만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 14000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3127,7 +3453,9 @@
      "platform": "cardgorilla",
      "reward_won": 13000,
      "reward_text": "1.3만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 13000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3149,7 +3477,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3171,7 +3501,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3193,7 +3525,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3215,7 +3549,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3237,7 +3573,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3259,7 +3597,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3281,7 +3621,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3303,7 +3645,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3325,7 +3669,9 @@
      "platform": "cardgorilla",
      "reward_won": 12000,
      "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3347,7 +3693,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 + CU 쿠폰 이벤트",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3369,7 +3717,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3391,7 +3741,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3413,7 +3765,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3435,7 +3789,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "H.Point 1만P 증정",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3457,7 +3813,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3479,7 +3837,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3501,7 +3861,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3523,7 +3885,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3545,7 +3909,9 @@
      "platform": "cardgorilla",
      "reward_won": 10000,
      "reward_text": "1만원 캐시백",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 10000,
+     "bonus_won": 0
     }
    ]
   },
@@ -3567,7 +3933,9 @@
      "platform": "cardgorilla",
      "reward_won": null,
      "reward_text": "팝업구조 TEST",
-     "period_end": null
+     "period_end": null,
+     "main_won": 0,
+     "bonus_won": 0
     }
    ]
   },
@@ -3589,7 +3957,9 @@
      "platform": "cardgorilla",
      "reward_won": null,
      "reward_text": "SH수협은행",
-     "period_end": "2026-06-30"
+     "period_end": "2026-06-30",
+     "main_won": 0,
+     "bonus_won": 0
     }
    ]
   }
