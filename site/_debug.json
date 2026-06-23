@@ -2,9 +2,9 @@
  "playwright": "yes",
  "cg_events": {
   "st": 200,
-  "len": 4393579,
+  "len": 4393364,
   "n": 130,
-  "cardIdxs": 140
+  "cardIdxs": 139
  },
  "cg_cards": "ERR:HTTPSConnectionPool(host='api.card-gorilla.com', port=8080): Read timed out. (read timeout=20)"
 }
