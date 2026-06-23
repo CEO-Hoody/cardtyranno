@@ -12,7 +12,7 @@ DB = os.path.join(BASE, "meta.db")
 PLATFORMS = {"toss":"토스 카드라운지","cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","ajungdang":"아정당"}
 
 # ── 용각류 파서 모듈 분리(2026-06): 공통=cardutil / 플랫폼별 파서 ──
-from cardutil import _nk, parse_won, _fmt_man, is_june2026   # 공통 유틸
+from cardutil import _nk, parse_won, _fmt_man, is_june2026, parse_breakdown   # 공통 유틸
 from brachio import parse_cardgorilla                        # 카드고릴라
 from apato import parse_banksalad                            # 뱅크샐러드
 from diplo import parse_toss                                 # 토스
@@ -125,7 +125,13 @@ def export_json(con):
     out=[]; c=con.cursor()
     for pid,name,issuer in rows:
         maps={r[0]:{"id":r[1],"url":r[2]} for r in c.execute("SELECT platform,platform_product_id,url FROM product_platform WHERE card_product_id=?",(pid,)).fetchall()}
-        evs=[{"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4]} for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall()]
+        evs=[]
+        for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall():
+            mw,bw,comps=parse_breakdown(r[1],r[2])   # reward_text→메인/부가 분해
+            e={"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4],
+               "main_won":mw,"bonus_won":bw}
+            if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
+            evs.append(e)
         cgid=str((maps.get("cardgorilla") or {}).get("id") or "")
         img=CG_IMG.get(cgid)
         out.append({"id":pid,"name":name,"issuer":issuer,"img":img,"platforms":maps,"events":evs})
@@ -160,7 +166,7 @@ def export_json(con):
                      "bestPlatform":best.get("platform"),"periodEnd":best.get("period_end"),
                      "platforms":sorted(set(e["platform"] for e in evs)),
                      "platformCount":len(set(e["platform"] for e in evs)),
-                     "events":[{"platform":e["platform"],"reward_won":e.get("reward_won"),"reward_text":e.get("reward_text"),"period_end":e.get("period_end")} for e in evs]})
+                     "events":[{"platform":e["platform"],"reward_won":e.get("reward_won"),"reward_text":e.get("reward_text"),"period_end":e.get("period_end"),"main_won":e.get("main_won"),"bonus_won":e.get("bonus_won")} for e in evs]})
     reco.sort(key=lambda r:r["maxCashbackWon"],reverse=True)
     json.dump({"month":MONTH,"updated":datetime.date.today().isoformat(),"count":len(reco),"cards":reco},
               open(os.path.join(SITE,"reco.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
