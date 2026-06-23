@@ -39,6 +39,27 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .adbanner{position:relative;display:block;border-radius:var(--radius);overflow:hidden;margin:22px 0;border:1px solid var(--line)}
 .adbanner img{width:100%;height:auto;display:block}
 .adbanner .adtag{position:absolute;top:10px;left:12px;font-size:10px;font-weight:900;color:#fff;background:rgba(0,0,0,.45);padding:2px 7px;border-radius:5px;letter-spacing:1px}
+.cardad{position:relative;display:block;margin:18px 0;border:1px solid var(--line);border-radius:var(--radius);background:radial-gradient(120% 140% at 0% 0%,#1d1f26 0%,#121319 60%,#0e0f14 100%);overflow:hidden}
+.cardad:hover{border-color:#3a3a42}
+.cardad .adtag{position:absolute;top:10px;right:12px;font-size:10px;font-weight:900;color:#fff;background:rgba(0,0,0,.5);padding:2px 7px;border-radius:5px;letter-spacing:1px;z-index:2}
+.cadbody{display:flex;align-items:center;gap:20px;padding:20px 22px}
+.cadplate{width:178px;height:112px;flex:0 0 auto;border-radius:13px;overflow:hidden;background:#23232a;box-shadow:0 12px 28px rgba(0,0,0,.55);transform:rotate(-3deg);transition:.2s}
+.cardad:hover .cadplate{transform:rotate(-3deg) scale(1.03)}
+.cadplate img{width:100%;height:100%;object-fit:cover}
+.cadinfo{flex:1;min-width:0}
+.cadev{font-size:11.5px;font-weight:900;color:var(--accent);letter-spacing:.3px}
+.cadname{font-size:20px;font-weight:900;margin-top:6px;letter-spacing:-.5px;line-height:1.28}
+.cadiss{font-size:12px;color:var(--sub);margin-top:3px}
+.cadamt{font-size:14.5px;font-weight:800;margin-top:9px;color:#e8e8ee}
+.cadamt b{color:var(--accent);font-size:21px}
+.cadplats{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.cadplats .pb2{font-size:10.5px;font-weight:800;color:#fff;padding:3px 9px;border-radius:6px;white-space:nowrap}
+.cadcta{font-size:12px;color:var(--sub);margin-top:11px;font-weight:700}
+.cadcta b{color:#e8e8ee}
+@media(max-width:560px){.cadbody{gap:14px;padding:16px}.cadplate{width:122px;height:78px}.cadname{font-size:16px}.cadamt b{font-size:18px}}
+.ghero{margin:-2px -2px 20px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.ghero img{width:100%;height:auto;display:block}
+.asum{font-size:14.5px;color:var(--sub);font-weight:600;margin:2px 0 16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .herowrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 6px}
 .vhero{position:relative;min-height:210px;border-radius:18px;padding:20px 18px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff}
 .vhero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 80% 0%,rgba(255,255,255,.18),transparent 60%)}
@@ -206,7 +227,8 @@ function renderList(){var items=cur==="전체"?C:C.filter(x=>x.cat===cur);docume
 function tabs(){var t=document.getElementById('tabs');t.innerHTML=cats().map(o=>'<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'</div>').join("");
  t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderList();};});}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
- el.innerHTML='<div class="adt"><div class="acat">'+d.emoji+' '+d.cat+'</div><div class="ah">'+d.title+'</div>'+d.body.map(p=>'<p>'+p+'</p>').join("")+'<a class="bk2" href="content.html">← 다른 가이드</a></div>';document.title=d.title+' | 카드티라노';}
+ var hero=d.img?'<div class="ghero"><img src="'+d.img+'" alt="'+d.cat+'" loading="eager"/></div>':'';
+ el.innerHTML='<div class="adt">'+hero+'<div class="acat">'+d.emoji+' '+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(p=>'<p>'+p+'</p>').join("")+'<a class="bk2" href="content.html">← 다른 가이드</a></div>';document.title=d.title+' | 카드티라노';}
 var id=new URLSearchParams(location.search).get('id');
 fetch('content.json').then(r=>r.json()).then(function(j){C=j.items;if(id!==null){var d=C.find(x=>String(x.id)===String(id));if(d){detail(d);return;}}tabs();renderList();});
 
