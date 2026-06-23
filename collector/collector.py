@@ -200,18 +200,24 @@ def _load_seed():
         print("seed load err", e); return []
 
 def _cg_catalog():
-    """idx→{name,issuer} (실제 발급사). cards?type=CBK&is_live=true 전체 카탈로그."""
+    """idx→{name,issuer,img}. cards?type=CBK&is_live=true 전체 카탈로그.
+    :8080 응답엔 card_img(플레이트 이미지)가 포함됨 → 우선 사용, 실패 시 무포트 폴백."""
     cat={}
-    try:
-        cj=fetch("https://api.card-gorilla.com/v1/cards?type=CBK&is_live=true").json()
-        for c in _cards_from(cj):
-            if isinstance(c,dict) and c.get("idx"):
-                corp=c.get("corp") or {}
-                cat[str(c["idx"])]={"name":c.get("name"),
-                                    "issuer":corp.get("name") if isinstance(corp,dict) else None,
-                                    "img":(c.get("card_img") or {}).get("url")}   # 카드 플레이트 이미지(CloudFront)
-    except Exception as e:
-        print("catalog err", e)
+    for url in ("https://api.card-gorilla.com:8080/v1/cards?type=CBK&is_live=true",
+                "https://api.card-gorilla.com/v1/cards?type=CBK&is_live=true"):
+        try:
+            cj=fetch(url).json()
+            for c in _cards_from(cj):
+                if isinstance(c,dict) and c.get("idx"):
+                    corp=c.get("corp") or {}
+                    cat[str(c["idx"])]={"name":c.get("name"),
+                                        "issuer":corp.get("name") if isinstance(corp,dict) else None,
+                                        "img":(c.get("card_img") or {}).get("url")}   # 카드 플레이트 이미지(CloudFront)
+            n_img=sum(1 for v in cat.values() if v.get("img"))
+            print(f"catalog({url.split('//')[1][:30]}) → {len(cat)} cards, {n_img} with img")
+            if cat: return cat
+        except Exception as e:
+            print("catalog err", url[:40], e)
     return cat
 
 CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
