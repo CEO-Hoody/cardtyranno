@@ -243,7 +243,7 @@ def discover_products(limit=400):
                                 "platforms":{"cardgorilla":{"id":cid}}}
                 if meta.get("img"): CG_IMG[cid]=meta["img"]
                 CG_EVENTS[cid]={"subject":(e.get("subject") or "").strip(),
-                                "title":(e.get("title") or "").strip(),
+                                "title":(e.get("title") or "").strip(),"idx":e.get("idx"),
                                 "start":e.get("evt_start_time"),"end":e.get("evt_end_time")}
         print(f"discover(live events?type=CBK) → {len(out)} cards, {len(CG_EVENTS)} events")
     except Exception as e:
@@ -336,9 +336,11 @@ if __name__=="__main__":
         if not ce: continue
         subj=ce.get("subject") or ""
         if not subj: continue
+        evidx=ce.get("idx")
+        ev_url=f"https://www.card-gorilla.com/event/detail/{evidx}" if evidx else f"https://www.card-gorilla.com/card/{cid}"
         injected[(p["name"],"cardgorilla")]={"reward_won":parse_won(subj),"reward_text":subj,
             "period_start":ce.get("start"),"period_end":ce.get("end"),
-            "url":f"https://www.card-gorilla.com/card/{cid}"}
+            "url":ev_url}
         cg_inj+=1
     if cg_inj: print(f"카드고릴라 이벤트 라벨 주입 {cg_inj}건")
     print(f"총 상품 {len(products)}개 수집 시작")
