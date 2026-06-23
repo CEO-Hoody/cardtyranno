@@ -30,13 +30,6 @@
    },
    "events": [
     {
-     "platform": "banksalad",
-     "reward_text": "최대 84만원 캐시백",
-     "reward_won": 840000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD000004"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "57.9만원 혜택",
      "reward_won": 579000,
@@ -82,13 +75,6 @@
     }
    },
    "events": [
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 84만원 캐시백",
-     "reward_won": 840000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD000118"
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "57.9만원 혜택",
@@ -160,13 +146,6 @@
    },
    "events": [
     {
-     "platform": "banksalad",
-     "reward_text": "최대 15.5만원 캐시백",
-     "reward_won": 155000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004320"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "12.5만원 캐시백",
      "reward_won": 125000,
@@ -219,13 +198,6 @@
    },
    "events": [
     {
-     "platform": "banksalad",
-     "reward_text": "최대 84만원 캐시백",
-     "reward_won": 840000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD000037"
-    },
-    {
      "platform": "ajungdang",
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "reward_won": 660000,
@@ -262,13 +234,6 @@
      "reward_won": 494000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/2885"
-    },
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 23만원 캐시백",
-     "reward_won": 230000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004534"
     }
    ]
   },
@@ -378,13 +343,6 @@
      "url": "https://www.ajd.co.kr/card/event/detail/246"
     },
     {
-     "platform": "banksalad",
-     "reward_text": "최대 84만원 캐시백",
-     "reward_won": 840000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD000156"
-    },
-    {
      "platform": "naver",
      "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
      "reward_won": 830000,
@@ -395,7 +353,7 @@
      "platform": "toss",
      "reward_text": "최대 81만원 이벤트",
      "reward_won": 810000,
-     "period_end": null,
+     "period_end": "2026.06.25",
      "url": "https://card-lounge.toss.im/card/1121"
     }
    ]
