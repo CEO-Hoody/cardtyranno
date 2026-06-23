@@ -220,18 +220,21 @@ function renderBenefit(d){
  return head+html;
 }
 
-var C={},ORD=[],cur="",EVSET={};
+var C={},ORD=[],cur="",EVSET={},PEIMG={};
 function _nkc(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
-function render(){var a=C[cur]||[];document.getElementById('list').innerHTML=a.map(function(c){var fee=c.fee?('연회비 '+c.fee):'';
+function render(){var a=(C[cur]||[]).slice();
+ a.sort(function(x,y){return (EVSET[_nkc(y.name)]||0)-(EVSET[_nkc(x.name)]||0);});   // 이벤트 있는 카드 우선(플랫폼 많은 순)
+ document.getElementById('list').innerHTML=a.map(function(c){var fee=c.fee?('연회비 '+c.fee):'';
  var pc=EVSET[_nkc(c.name)]||((c.events&&c.events.length)?1:0);    // platform_events.json 매칭(상세페이지와 동일 정규화)
  var ev=pc?'<div class="cev">🎁 발급 이벤트'+(pc>1?' · '+pc+'곳':'')+'</div>':'';
+ var img=c.img||PEIMG[_nkc(c.name)];                               // 메타 이미지 폴백(콜렉터 카드고릴라 플레이트)
  var hb='<span class="favbtn" onclick="event.preventDefault();event.stopPropagation();this.textContent=toggleFav('+c.id+')?String.fromCodePoint(10084):String.fromCodePoint(129293);">'+(isFav(c.id)?'❤️':'🤍')+'</span>';
- return '<a class="ctile" href="carddetail.html?id='+c.id+'">'+hb+'<div class="plate">'+imgTag(c.img)+'</div><div class="cn">'+c.name+'</div>'+(fee?'<div class="cfee">'+fee+'</div>':'')+'<div class="cd">'+c.benefit+'</div>'+ev+'<div class="apply">카드 자세히 보기 ›</div></a>';}).join("");}
+ return '<a class="ctile" href="carddetail.html?id='+c.id+'">'+hb+'<div class="plate">'+imgTag(img)+'</div><div class="cn">'+c.name+'</div>'+(fee?'<div class="cfee">'+fee+'</div>':'')+'<div class="cd">'+c.benefit+'</div>'+ev+'<div class="apply">카드 자세히 보기 ›</div></a>';}).join("");}
 function tabs(){var t=document.getElementById('tabs');t.innerHTML=ORD.map(function(o){return '<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'<span class="cnt">'+(C[o]||[]).length+'</span></div>';}).join("");
  t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
 Promise.all([fetch('cards.json').then(r=>r.json()),fetch('platform_events.json').then(r=>r.json()).catch(function(){return {products:[]};})]).then(function(A){
  C=A[0].cards;ORD=A[0].order;cur=ORD[0];
- (A[1].products||[]).forEach(function(p){if((p.events||[]).length){EVSET[_nkc(p.name)]=new Set((p.events||[]).map(function(e){return e.platform;})).size;}});
+ (A[1].products||[]).forEach(function(p){if((p.events||[]).length){EVSET[_nkc(p.name)]=new Set((p.events||[]).map(function(e){return e.platform;})).size;}if(p.img)PEIMG[_nkc(p.name)]=p.img;});
  tabs();render();});
 
 bindUI();</script></body></html>

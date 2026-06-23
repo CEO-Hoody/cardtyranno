@@ -245,7 +245,7 @@ Promise.all([fetch('reco.json').then(r=>r.json()),fetch('cards.json').then(r=>r.
  var el=document.getElementById('cardad');if(!el||!rc.length)return;var c=rc[0];
  var IMG={},cj=A[1].cards||{};for(var ik in cj){(cj[ik]||[]).forEach(function(k){if(k.img&&!IMG[_nk2(k.name)])IMG[_nk2(k.name)]=k.img;});}
  var plats=(c.platforms||[]).map(function(p){var m=PMETA[p]||{n:p,c:'#33333b'};return '<span class="pb2" style="background:'+m.c+'">'+m.n+'</span>';}).join("");
- document.getElementById('cadplate').innerHTML=imgTag(IMG[_nk2(c.name)]);
+ document.getElementById('cadplate').innerHTML=imgTag(c.img||IMG[_nk2(c.name)]);
  document.getElementById('cadname').textContent=c.name;
  document.getElementById('cadiss').textContent=c.issuer||'';
  document.getElementById('cadamt').innerHTML='이번 달 최대 <b>'+_wonM(c.maxCashbackWon)+'</b> 캐시백';

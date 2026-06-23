@@ -227,7 +227,7 @@ Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>
  var card=null,issuer='';
  for(var k in j.cards){var f=(j.cards[k]||[]).filter(function(c){return c.id===id;})[0];if(f){card=f;issuer=k;break;}}
  if(!card){document.getElementById('root').innerHTML='<div class="empty">카드를 찾을 수 없어요. <a class="accent" href="cards.html">카드찾기</a></div>';return;}
- var img=imgTag(card.img);
+ var _imgurl=card.img;
  function _rel(e){var cn=(card.name||'').toLowerCase();var ec=(e.card||'').toLowerCase();return ec&&cn&&(ec.indexOf(cn)>=0||cn.indexOf(ec)>=0);}
  var spec=EVT.filter(function(e){return e.issuer===issuer&&_rel(e);});
  // 콜렉터 정확 데이터(platform_events.json)에서 이 카드 매칭(이름 정규화) — 상품↔이벤트 정합성 핵심
@@ -236,6 +236,7 @@ Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>
  function _rwdc(t,w){return (w&&w>0)?('최대 '+_wmc(w)+' 캐시백'):(t||'');}   // 이벤트명 통일(금액+캐시백)
  var PEMAP={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',naver:'네이버페이',ajungdang:'아정당'};
  var ck=_nk(card.name), pmatch=PE.filter(function(p){return _nk(p.name)===ck;})[0];
+ var img=imgTag(_imgurl||(pmatch&&pmatch.img));   // 메타 이미지 폴백(콜렉터 카드고릴라 플레이트)
  var platBenefit={},platUrl={};
  if(pmatch){(pmatch.events||[]).forEach(function(e){var nm=PEMAP[e.platform]||e.platform;if(!platBenefit[nm]){platBenefit[nm]=_rwdc(e.reward_text,e.reward_won);platUrl[nm]=((pmatch.platforms||{})[e.platform]||{}).url||'';}});}
  (card.events||[]).forEach(function(e){if(e.platform&&!platBenefit[e.platform])platBenefit[e.platform]=e.amount;});       // 폴백(옛 데이터)
