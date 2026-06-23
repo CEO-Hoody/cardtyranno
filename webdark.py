@@ -212,7 +212,7 @@ function renderBenefit(d){
 """
 
 def header(active):
-    L=[("cards","cards.html","카드찾기"),("issue","issue.html","발급 이벤트"),("discount","discount.html","카드 혜택"),
+    L=[("cards","cards.html","카드찾기"),("compare","issue.html?v=cmp","📊 플랫폼 비교"),("issue","issue.html","발급 이벤트"),("discount","discount.html","카드 혜택"),
        ("charts","chart.html","인기차트"),("curation","index.html#curation","큐레이션"),("content","content.html","가이드")]
     gnb="".join('<a href="%s" class="%s">%s</a>'%(u,("on" if k==active else ""),t) for k,u,t in L)
     drawer="".join('<a href="%s">%s</a>'%(u,t) for k,u,t in L)
@@ -304,6 +304,7 @@ INDEX_BODY=('<div class="wrap">'
  '<section id="rank"><div class="sec-h"><h2>🏆 이번 달 카드티라노 랭킹</h2><a class="more" href="cards.html">전체보기 ›</a></div>'
  '<div class="rank" id="rk"><div class="empty">불러오는 중…</div></div></section>'
  '<div class="ad inline">list_inline · 광고 구좌</div>'
+ '<section><div class="sec-h"><h2>🦖 6월 티라노 추천 카드</h2><a class="more" href="issue.html?v=cmp">플랫폼 비교 ›</a></div><div class="muted" style="font-size:12.5px;padding-bottom:12px">5개 플랫폼 교차 캐시백이 가장 크고 채널 선택지가 많은 카드예요.</div><div class="grid" id="reco"></div></section>'
  '<section><div class="sec-h"><h2>🎁 지금 뜨는 발급 이벤트</h2><a class="more" href="issue.html">전체보기 ›</a></div><div class="grid" id="evs"></div></section>'
  '<section><div class="sec-h"><h2>🏷️ 업종별 카드 할인 혜택</h2><a class="more" href="discount.html">전체보기 ›</a></div><div class="grid" id="discs"></div></section>'
  +CUR_HTML+
@@ -319,6 +320,11 @@ fetch('data.json').then(r=>r.json()).then(function(j){var pick=j.items.slice(0,4
  return '<a class="gcard" href="detail.html?id='+d.id+'"><span class="badge gray">'+d.plat+'</span><div class="cw accent">'+d.disc+'</div><div class="cs">'+d.card+' · '+d.type+'</div></a>';}).join("");});
 fetch('content.json').then(r=>r.json()).then(function(j){document.getElementById('posts').innerHTML=j.items.slice(0,4).map(function(x){
  return '<a class="post" href="content.html?id='+x.id+'"><div class="thumb">'+x.emoji+'</div><div class="pb"><div class="pc">'+x.cat+'</div><div class="pt">'+x.title+'</div></div></a>';}).join("");});
+// 🦖 6월 티라노 추천 — reco.json(추천 테이블 기반): 교차 최대혜택·멀티플랫폼 우선
+fetch('reco.json').then(r=>r.json()).then(function(j){function won(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
+ var pick=(j.cards||[]).slice().sort(function(a,b){return (b.platformCount-a.platformCount)||(b.maxCashbackWon-a.maxCashbackWon);}).slice(0,6);
+ var el=document.getElementById('reco');if(!el)return;
+ el.innerHTML=pick.map(function(c){return '<a class="gcard" href="issue.html?v=cmp"><span class="badge" style="background:#19c37d">'+c.platformCount+'개 플랫폼</span><div class="ct">'+c.name+'</div><div class="cw accent">최대 '+won(c.maxCashbackWon)+' 캐시백</div><div class="cs">'+(c.issuer||'')+'</div></a>';}).join("");}).catch(function(){});
 // 세로형 히어로 ① 이번 달 최대 할인(캐시백) 카드 — 콜렉터 platform_events.json
 (function(){function won(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
  fetch('platform_events.json').then(r=>r.json()).then(function(j){var best=null,bw=-1;(j.products||[]).forEach(function(p){(p.events||[]).forEach(function(e){if((e.reward_won||0)>bw){bw=e.reward_won;best=p;}});});
@@ -372,6 +378,15 @@ ISSUE_BODY=('<style>'
  '.cmpcard{border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-bottom:12px;background:var(--surface)}'
  '.cmpcard .ch{font-size:15px;font-weight:800;letter-spacing:-.01em}'
  '.cmpcard .csub{font-size:11.5px;color:var(--sub);margin-top:2px}'
+ '.cmphd{display:flex;align-items:baseline;justify-content:space-between;gap:10px}'
+ '.chmax{font-size:15px;font-weight:900;color:#f5b301;white-space:nowrap}.chmax small{font-size:11px;color:var(--sub);font-weight:600;margin-left:2px}'
+ '.cmpcard.prodc{padding:0;overflow:hidden}'
+ '.prodc .phead{display:flex;gap:13px;align-items:center;padding:14px 15px;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}'
+ '.prodc .cplate{width:96px;height:60px;flex:0 0 auto;border-radius:8px;overflow:hidden;background:#23232a;box-shadow:0 4px 12px rgba(0,0,0,.4)}'
+ '.prodc .cplate img{width:100%;height:100%;object-fit:cover}'
+ '.prodc .cinfo{min-width:0}.prodc .cinfo .ch{font-size:15.5px;font-weight:800;line-height:1.25}'
+ '.prodc .cinfo .chmax{font-size:21px;margin-top:5px;display:block}'
+ '.prodc .prows{padding:2px 15px 14px}'
  '.prow{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line);margin-top:8px}'
  '.prow.f{border-top:0;margin-top:10px}'
  '.prow .pf{font-size:11px;font-weight:800;color:#fff;padding:5px 9px;border-radius:7px;flex:0 0 auto;min-width:74px;text-align:center}'
@@ -400,6 +415,8 @@ function tabs(){var T=["전체"].concat(ORD);var t=document.getElementById('tabs
  t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
 document.querySelector('.subnav').onclick=function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('.subnav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');var ev=b.dataset.v==='ev';document.getElementById('view-ev').style.display=ev?'':'none';document.getElementById('view-cmp').style.display=ev?'none':'';};
 document.querySelector('.subnav2').onclick=function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('.subnav2 button').forEach(x=>x.classList.remove('on'));b.classList.add('on');var iss=b.dataset.c==='iss';document.getElementById('cmp-iss').style.display=iss?'':'none';document.getElementById('cmp-prod').style.display=iss?'none':'';};
+// 상위 메뉴 '플랫폼 비교'(issue.html?v=cmp) → 플랫폼 비교 뷰로 기본 진입
+if(new URLSearchParams(location.search).get('v')==='cmp'){var cb=[...document.querySelectorAll('.subnav button')].find(function(b){return b.dataset.v==='cmp';});if(cb)cb.click();}
 function num(s){var m=(s||"").match(/([0-9]+(?:\.[0-9]+)?)\s*만/);return m?parseFloat(m[1]):-1;}
 fetch('events.json').then(r=>r.json()).then(function(j){EV=j.items;ORD=j.order;
  var qi=new URLSearchParams(location.search).get('issuer');
@@ -409,8 +426,10 @@ fetch('events.json').then(r=>r.json()).then(function(j){EV=j.items;ORD=j.order;
 // 카드사·카드상품 비교 모두 콜렉터 platform_events.json에서 집계(뱅샐·아정당 포함, 카카오페이 제외)
 var PN={cardgorilla:"카드고릴라",banksalad:"뱅크샐러드",toss:"토스",naver:"네이버페이",ajungdang:"아정당"};
 var PORD=["cardgorilla","banksalad","toss","ajungdang","naver"];
-fetch('platform_events.json').then(r=>r.json()).then(function(j){
- var prods=(j.products||[]);
+function _wm(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
+function _nk2(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
+Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json').then(r=>r.json()).catch(function(){return {cards:{}};})]).then(function(A){
+ var prods=(A[0].products||[]);var IMG={},cj=A[1].cards||{};for(var ik in cj){(cj[ik]||[]).forEach(function(c){if(c.img&&!IMG[_nk2(c.name)])IMG[_nk2(c.name)]=c.img;});}
  // (1) 카드사 최대혜택 비교 — issuer×platform 최대 집계
  var byIss={};
  prods.forEach(function(p){if(!(p.events||[]).length)return;var iss=p.issuer||'기타';byIss[iss]=byIss[iss]||{};
@@ -422,8 +441,8 @@ fetch('platform_events.json').then(r=>r.json()).then(function(j){
   var ordered=present.slice().sort(function(a,b){return ((x.data[b]||{}).won||0)-((x.data[a]||{}).won||0);});  // 금액 높은 순
   var rows=ordered.map(function(pk,i){var d=x.data[pk];var has=d&&d.won;var isb=has&&pk===bk&&best>0;
    return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+pcol(PN[pk])+'">'+PN[pk]+'</span><span class="pv'+(has?'':' none')+'">'+(has?d.text:'이벤트 없음')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
-  return '<div class="cmpcard"><div class="ch">'+x.iss+'</div>'+rows+'</div>';}).join(""):'<div class="empty">데이터 준비 중</div>';
- // (2) 카드상품별 플랫폼 비교 — 2개 이상 플랫폼
+  return '<div class="cmpcard"><div class="cmphd"><div class="ch">'+x.iss+'</div><div class="chmax">최대 '+_wm(x.mx)+'</div></div>'+rows+'</div>';}).join(""):'<div class="empty">데이터 준비 중</div>';
+ // (2) 카드상품별 플랫폼 비교 — 카드 플레이트 이미지 + 헤드라인
  var rows2=prods.filter(function(p){return new Set((p.events||[]).map(e=>e.platform)).size>1;});
  rows2.forEach(function(p){var m=0;p.events.forEach(function(e){if((e.reward_won||0)>m)m=e.reward_won;});p._m=m;});
  rows2.sort(function(a,b){return b._m-a._m;});
@@ -432,7 +451,7 @@ fetch('platform_events.json').then(r=>r.json()).then(function(j){
   var es=p.events.slice().sort(function(a,b){return (b.reward_won||0)-(a.reward_won||0);});
   var prs=es.map(function(e,i){var nm=PN[e.platform]||e.platform;var isb=e.platform===bk;
    return '<div class="prow'+(i===0?' f':'')+(isb?' best':'')+'"><span class="pf" style="background:'+pcol(nm)+'">'+nm+'</span><span class="pv">'+(e.reward_text||'')+'</span>'+(isb?'<span class="pick">🦖 티라노 픽</span>':'')+'</div>';}).join("");
-  return '<div class="cmpcard"><div class="ch">'+p.name+'</div><div class="csub">'+(p.issuer||'')+'</div>'+prs+'</div>';}).join(""):'<div class="empty">교차비교 데이터 준비 중이에요.</div>';
+  return '<div class="cmpcard prodc"><div class="phead"><div class="cplate">'+imgTag(IMG[_nk2(p.name)])+'</div><div class="cinfo"><div class="csub">'+(p.issuer||'')+'</div><div class="ch">'+p.name+'</div><div class="chmax">최대 '+_wm(p._m)+'<small>캐시백</small></div></div></div><div class="prows">'+prs+'</div></div>';}).join(""):'<div class="empty">교차비교 데이터 준비 중이에요.</div>';
 }).catch(function(){document.getElementById('cmp-iss').innerHTML='<div class="empty">데이터 준비 중</div>';document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';});
 """
 
