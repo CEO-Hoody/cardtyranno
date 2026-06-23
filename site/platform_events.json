@@ -84,6 +84,15 @@
    },
    "events": [
     {
+     "platform": "banksalad",
+     "reward_text": "최대 84만원 캐시백",
+     "reward_won": 840000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/product/cards/CARD000118",
+     "main_won": 840000,
+     "bonus_won": 0
+    },
+    {
      "platform": "cardgorilla",
      "reward_text": "57.9만원 혜택",
      "reward_won": 579000,
@@ -164,6 +173,15 @@
    },
    "events": [
     {
+     "platform": "banksalad",
+     "reward_text": "최대 15.5만원 캐시백",
+     "reward_won": 155000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/product/cards/CARD004320",
+     "main_won": 155000,
+     "bonus_won": 0
+    },
+    {
      "platform": "cardgorilla",
      "reward_text": "12.5만원 캐시백",
      "reward_won": 125000,
@@ -222,6 +240,15 @@
    },
    "events": [
     {
+     "platform": "banksalad",
+     "reward_text": "최대 84만원 캐시백",
+     "reward_won": 840000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/product/cards/CARD000037",
+     "main_won": 840000,
+     "bonus_won": 0
+    },
+    {
      "platform": "ajungdang",
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "reward_won": 660000,
@@ -264,6 +291,15 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1296",
      "main_won": 494000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_text": "최대 23만원 캐시백",
+     "reward_won": 230000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/product/cards/CARD004534",
+     "main_won": 230000,
      "bonus_won": 0
     }
    ]
@@ -308,6 +344,15 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/902",
      "main_won": 1170000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_text": "연회비 100% 캐시백",
+     "reward_won": 49000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/product/cards/CARD000081",
+     "main_won": 49000,
      "bonus_won": 0
     }
    ]
@@ -383,6 +428,15 @@
      "period_end": null,
      "url": "https://www.ajd.co.kr/card/event/detail/246",
      "main_won": 850000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_text": "최대 84만원 캐시백",
+     "reward_won": 840000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/product/cards/CARD000156",
+     "main_won": 840000,
      "bonus_won": 0
     },
     {

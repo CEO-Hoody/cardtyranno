@@ -13,9 +13,10 @@
    "bestPlatform": "cardgorilla",
    "periodEnd": "2026-06-30",
    "platforms": [
+    "banksalad",
     "cardgorilla"
    ],
-   "platformCount": 1,
+   "platformCount": 2,
    "events": [
     {
      "platform": "cardgorilla",
@@ -23,6 +24,14 @@
      "reward_text": "117만원 캐시백",
      "period_end": "2026-06-30",
      "main_won": 1170000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 49000,
+     "reward_text": "연회비 100% 캐시백",
+     "period_end": null,
+     "main_won": 49000,
      "bonus_won": 0
     }
    ]
@@ -62,11 +71,12 @@
    "periodEnd": "2026-06-30",
    "platforms": [
     "ajungdang",
+    "banksalad",
     "cardgorilla",
     "naver",
     "toss"
    ],
-   "platformCount": 4,
+   "platformCount": 5,
    "events": [
     {
      "platform": "cardgorilla",
@@ -82,6 +92,14 @@
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
      "period_end": null,
      "main_won": 850000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백",
+     "period_end": null,
+     "main_won": 840000,
      "bonus_won": 0
     },
     {
@@ -260,6 +278,90 @@
      "reward_text": "86만원 캐시백",
      "period_end": "2026-06-30",
      "main_won": 860000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "신한카드 Deep Oil",
+   "issuer": "신한카드",
+   "img": null,
+   "maxCashbackWon": 840000,
+   "maxCashbackText": "최대 84만원 캐시백",
+   "bestPlatform": "banksalad",
+   "periodEnd": null,
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백",
+     "period_end": null,
+     "main_won": 840000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 540000,
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "period_end": null,
+     "main_won": 540000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "LOCA 365 카드",
+   "issuer": "롯데카드",
+   "img": null,
+   "maxCashbackWon": 840000,
+   "maxCashbackText": "최대 84만원 캐시백",
+   "bestPlatform": "banksalad",
+   "periodEnd": null,
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla"
+   ],
+   "platformCount": 3,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백",
+     "period_end": null,
+     "main_won": 840000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 660000,
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "period_end": null,
+     "main_won": 660000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 640000,
+     "reward_text": "64만원 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 640000,
      "bonus_won": 0
     }
    ]
@@ -865,39 +967,6 @@
    ]
   },
   {
-   "id": 6,
-   "name": "LOCA 365 카드",
-   "issuer": "롯데카드",
-   "img": null,
-   "maxCashbackWon": 660000,
-   "maxCashbackText": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-   "bestPlatform": "ajungdang",
-   "periodEnd": null,
-   "platforms": [
-    "ajungdang",
-    "cardgorilla"
-   ],
-   "platformCount": 2,
-   "events": [
-    {
-     "platform": "ajungdang",
-     "reward_won": 660000,
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "period_end": null,
-     "main_won": 660000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_won": 640000,
-     "reward_text": "64만원 혜택",
-     "period_end": "2026-06-30",
-     "main_won": 640000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
    "id": 110,
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
@@ -1315,39 +1384,6 @@
    ]
   },
   {
-   "id": 2,
-   "name": "신한카드 Deep Oil",
-   "issuer": "신한카드",
-   "img": null,
-   "maxCashbackWon": 579000,
-   "maxCashbackText": "57.9만원 혜택",
-   "bestPlatform": "cardgorilla",
-   "periodEnd": "2026-06-30",
-   "platforms": [
-    "ajungdang",
-    "cardgorilla"
-   ],
-   "platformCount": 2,
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_won": 579000,
-     "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30",
-     "main_won": 579000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "ajungdang",
-     "reward_won": 540000,
-     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "period_end": null,
-     "main_won": 540000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
    "id": 3,
    "name": "신한카드 처음(ANNIVERSE)",
    "issuer": "신한카드",
@@ -1576,9 +1612,10 @@
    "bestPlatform": "cardgorilla",
    "periodEnd": "2026-06-30",
    "platforms": [
+    "banksalad",
     "cardgorilla"
    ],
-   "platformCount": 1,
+   "platformCount": 2,
    "events": [
     {
      "platform": "cardgorilla",
@@ -1586,6 +1623,14 @@
      "reward_text": "49.4만원 혜택",
      "period_end": "2026-06-30",
      "main_won": 494000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 230000,
+     "reward_text": "최대 23만원 캐시백",
+     "period_end": null,
+     "main_won": 230000,
      "bonus_won": 0
     }
    ]
@@ -2131,6 +2176,39 @@
    ]
   },
   {
+   "id": 4,
+   "name": "K-패스 (신용)",
+   "issuer": "IBK기업은행",
+   "img": null,
+   "maxCashbackWon": 155000,
+   "maxCashbackText": "최대 15.5만원 캐시백",
+   "bestPlatform": "banksalad",
+   "periodEnd": null,
+   "platforms": [
+    "banksalad",
+    "cardgorilla"
+   ],
+   "platformCount": 2,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 155000,
+     "reward_text": "최대 15.5만원 캐시백",
+     "period_end": null,
+     "main_won": 155000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 125000,
+     "reward_text": "12.5만원 캐시백",
+     "period_end": "2026-06-30",
+     "main_won": 125000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
    "id": 90,
    "name": "the Green Edition3",
    "issuer": "현대카드",
@@ -2222,30 +2300,6 @@
      "reward_text": "13만원 혜택",
      "period_end": "2026-06-30",
      "main_won": 130000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 4,
-   "name": "K-패스 (신용)",
-   "issuer": "IBK기업은행",
-   "img": null,
-   "maxCashbackWon": 125000,
-   "maxCashbackText": "12.5만원 캐시백",
-   "bestPlatform": "cardgorilla",
-   "periodEnd": "2026-06-30",
-   "platforms": [
-    "cardgorilla"
-   ],
-   "platformCount": 1,
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_won": 125000,
-     "reward_text": "12.5만원 캐시백",
-     "period_end": "2026-06-30",
-     "main_won": 125000,
      "bonus_won": 0
     }
    ]

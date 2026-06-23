@@ -5,9 +5,11 @@
   "신한카드": {
    "cardgorilla": 789000,
    "ajungdang": 540000,
-   "naver": 500000
+   "naver": 500000,
+   "banksalad": 840000
   },
   "IBK기업은행": {
+   "banksalad": 155000,
    "cardgorilla": 125000
   },
   "우리카드": {
@@ -16,12 +18,14 @@
    "ajungdang": 770000
   },
   "롯데카드": {
+   "banksalad": 840000,
    "ajungdang": 660000,
    "cardgorilla": 670000,
    "naver": 634000
   },
   "삼성카드": {
    "cardgorilla": 1170000,
+   "banksalad": 230000,
    "ajungdang": 611000
   },
   "현대카드": {
@@ -31,6 +35,7 @@
   "KB국민카드": {
    "cardgorilla": 860000,
    "ajungdang": 850000,
+   "banksalad": 840000,
    "naver": 830000,
    "toss": 810000
   },
@@ -70,10 +75,11 @@
    "name": "신한카드 Deep Oil",
    "issuer": "신한카드",
    "platforms": {
+    "banksalad": 840000,
     "cardgorilla": 579000,
     "ajungdang": 540000
    },
-   "max": 579000
+   "max": 840000
   },
   {
    "name": "신한카드 처음(ANNIVERSE)",
@@ -88,9 +94,10 @@
    "name": "K-패스 (신용)",
    "issuer": "IBK기업은행",
    "platforms": {
+    "banksalad": 155000,
     "cardgorilla": 125000
    },
-   "max": 125000
+   "max": 155000
   },
   {
    "name": "D4카드의정석Ⅱ",
@@ -104,16 +111,18 @@
    "name": "LOCA 365 카드",
    "issuer": "롯데카드",
    "platforms": {
+    "banksalad": 840000,
     "ajungdang": 660000,
     "cardgorilla": 640000
    },
-   "max": 660000
+   "max": 840000
   },
   {
    "name": "삼성 iD SELECT ALL 카드",
    "issuer": "삼성카드",
    "platforms": {
-    "cardgorilla": 494000
+    "cardgorilla": 494000,
+    "banksalad": 230000
    },
    "max": 494000
   },
@@ -121,7 +130,8 @@
    "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
    "issuer": "삼성카드",
    "platforms": {
-    "cardgorilla": 1170000
+    "cardgorilla": 1170000,
+    "banksalad": 49000
    },
    "max": 1170000
   },
@@ -139,6 +149,7 @@
    "platforms": {
     "cardgorilla": 860000,
     "ajungdang": 850000,
+    "banksalad": 840000,
     "naver": 830000,
     "toss": 810000
    },
