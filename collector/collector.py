@@ -126,7 +126,9 @@ def export_json(con):
     for pid,name,issuer in rows:
         maps={r[0]:{"id":r[1],"url":r[2]} for r in c.execute("SELECT platform,platform_product_id,url FROM product_platform WHERE card_product_id=?",(pid,)).fetchall()}
         evs=[{"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4]} for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall()]
-        out.append({"id":pid,"name":name,"issuer":issuer,"platforms":maps,"events":evs})
+        cgid=str((maps.get("cardgorilla") or {}).get("id") or "")
+        img=CG_IMG.get(cgid)
+        out.append({"id":pid,"name":name,"issuer":issuer,"img":img,"platforms":maps,"events":evs})
     os.makedirs(SITE,exist_ok=True)
     MONTH="2026-06"
     json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"products":out},
@@ -153,7 +155,7 @@ def export_json(con):
         evs=p.get("events",[])
         if not evs: continue
         best=max(evs,key=lambda e:e.get("reward_won") or 0)
-        reco.append({"id":p["id"],"name":p["name"],"issuer":p.get("issuer"),
+        reco.append({"id":p["id"],"name":p["name"],"issuer":p.get("issuer"),"img":p.get("img"),
                      "maxCashbackWon":best.get("reward_won") or 0,"maxCashbackText":best.get("reward_text"),
                      "bestPlatform":best.get("platform"),"periodEnd":best.get("period_end"),
                      "platforms":sorted(set(e["platform"] for e in evs)),
@@ -206,12 +208,14 @@ def _cg_catalog():
             if isinstance(c,dict) and c.get("idx"):
                 corp=c.get("corp") or {}
                 cat[str(c["idx"])]={"name":c.get("name"),
-                                    "issuer":corp.get("name") if isinstance(corp,dict) else None}
+                                    "issuer":corp.get("name") if isinstance(corp,dict) else None,
+                                    "img":(c.get("card_img") or {}).get("url")}   # 카드 플레이트 이미지(CloudFront)
     except Exception as e:
         print("catalog err", e)
     return cat
 
 CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
+CG_IMG={}      # cardgorilla_id → 카드 플레이트 이미지 URL(상품 메타 매핑)
 
 def discover_products(limit=400):
     """카드고릴라 events?type=CBK(현재 진행 캐시백 이벤트) → 매핑 카드 자동 발굴.
@@ -231,6 +235,7 @@ def discover_products(limit=400):
                 if not name: continue
                 out[_nk(name)]={"name":name,"issuer":meta.get("issuer") or corpn,
                                 "platforms":{"cardgorilla":{"id":cid}}}
+                if meta.get("img"): CG_IMG[cid]=meta["img"]
                 CG_EVENTS[cid]={"subject":(e.get("subject") or "").strip(),
                                 "title":(e.get("title") or "").strip(),
                                 "start":e.get("evt_start_time"),"end":e.get("evt_end_time")}
