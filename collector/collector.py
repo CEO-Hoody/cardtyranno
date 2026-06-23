@@ -334,6 +334,23 @@ if __name__=="__main__":
         if _nn: print(f"네이버 주입 {_nn}건")
     except FileNotFoundError: pass
     except Exception as e: print("naver seed err", e)
+    # 뱅크샐러드: 거주지 렌더링 텍스트로 보정한 banksalad_seed.json 주입(cashbackAmountKrw0f 파싱 오류 override)
+    try:
+        bs=json.load(open(os.path.join(BASE,"banksalad_seed.json"),encoding="utf-8")).get("cards",{})
+        _bb={_nk(p["name"]):p for p in products}; _bn2=0
+        for nm,info in bs.items():
+            p=_bb.get(_nk(nm))
+            if not p: continue
+            if info.get("no_event") or not info.get("reward_won"):
+                injected[(p["name"],"banksalad")]=None        # 이벤트 없음 → 종료(잘못된 라이브값 차단)
+            else:
+                injected[(p["name"],"banksalad")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
+                                                   "period_start":None,"period_end":None,
+                                                   "url":"https://www.banksalad.com/product/cards/"+str((p.get("platforms",{}).get("banksalad") or {}).get("id") or "")}
+            _bn2+=1
+        if _bn2: print(f"뱅샐 보정 주입 {_bn2}건")
+    except FileNotFoundError: pass
+    except Exception as e: print("banksalad seed err", e)
     # 카드고릴라: 이벤트 라벨(subject)을 reward_text로 주입(상세 'card_detail_text'의 "연회비 캐시백"류 대신)
     cg_inj=0
     for p in products:
