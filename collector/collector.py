@@ -7,85 +7,17 @@
 import os, re, sqlite3, json, datetime, sys
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, BASE)                          # 용각류 모듈(같은 폴더) import 보장
 DB = os.path.join(BASE, "meta.db")
 PLATFORMS = {"toss":"토스 카드라운지","cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","ajungdang":"아정당"}
 
-def _nk(n): return re.sub(r"[\s()（）·\-_/+.]+","",(n or "")).lower()
-
-def parse_won(text):
-    """'최대 57.9만원 혜택' -> 579000, '84만원' -> 840000. 여러 개면 최대값."""
-    if not text: return None
-    t = text.replace(",","")
-    best = 0
-    for m in re.finditer(r"([\d]+(?:\.\d+)?)\s*(억|만원|만|원)", t):
-        v = float(m.group(1)); u = m.group(2)
-        won = v*100000000 if u=="억" else v*10000 if u in("만원","만") else v
-        best = max(best, int(won))
-    return best or None
-
-# ---------- 플랫폼 파서 (입력: 응답 본문 → 출력: {reward_text,reward_won,period_start,period_end,url}) ----------
-def parse_cardgorilla(card_json, card_id):
-    ev = (card_json or {}).get("event") or {}
-    txt = ev.get("card_detail_text") or ev.get("subject")
-    period = re.search(r"(20\d\d\.\d\d?\.\d\d?)\s*~\s*(20\d\d\.\d\d?\.\d\d?)", ev.get("detail","") or "")
-    return {"reward_text":txt, "reward_won":parse_won(txt),
-            "period_start":period.group(1) if period else None,
-            "period_end":period.group(2) if period else None,
-            "url":f"https://www.card-gorilla.com/card/{card_id}"} if txt else None
-
-def _fmt_man(won):
-    m = won/10000
-    return (str(int(m)) if m==int(m) else ("%.1f"%m))+"만원"
-
-def parse_banksalad(html, prod_id):
-    """뱅샐 상세 __NEXT_DATA__의 cashbackPromotion.cashbackAmountKrw0f(정확 금액·원)를 우선 추출.
-    상세 페이지엔 해당 카드 1건만 있어 모호성 없음. 없으면 렌더 텍스트 폴백."""
-    html = html or ""
-    m = re.search(r'cashbackAmountKrw0f"?\s*:\s*"?(\d+)', html)   # 1) 정확 금액(JSON)
-    won = int(m.group(1)) if m else 0
-    if not won:                                                   # 2) 폴백: "최대 N만원 캐시백"
-        m2 = re.search(r"최대\s*([\d.,]+\s*(?:억|만원|원))\s*캐시백", html)
-        if m2: won = parse_won("최대 "+m2.group(1).replace(" ","")+" 캐시백")
-    if not won: return None
-    return {"reward_text":"최대 "+_fmt_man(won)+" 캐시백", "reward_won":won,
-            "period_start":None,"period_end":None,
-            "url":f"https://www.banksalad.com/product/cards/{prod_id}"}
-
-def parse_toss(html, card_id):
-    # 카드 자체 이벤트 배너: '카드 쓰고 최대 81만원 받는 이벤트'
-    m = re.search(r"최대\s*([\d.,]+\s*(?:억|만원|원))\s*받는\s*이벤트", html or "") \
-        or re.search(r"최대\s*([\d.,]+\s*(?:억|만원|원))\s*이벤트", html or "")
-    if not m: return None
-    txt = "최대 "+m.group(1).replace(" ","")+" 이벤트"
-    return {"reward_text":txt, "reward_won":parse_won(txt), "period_start":None,"period_end":None,
-            "url":f"https://card-lounge.toss.im/card/{card_id}"}
-
-def parse_naver(text, url):
-    # 네이버페이 detail.json/promotion.json 또는 page-data(dehydratedState) → 리워드/기간 generic 추출
-    mt = re.search(r"(최대\s*[\d.,]+\s*(?:억|만원|원))", text)
-    won = parse_won(mt.group(1)) if mt else parse_won(text)
-    if not won: return None
-    period = re.search(r"(20\d\d[.\-]\d\d?[.\-]\d\d?)\D{1,4}(20\d\d[.\-]\d\d?[.\-]\d\d?)", text)
-    return {"reward_text":(mt.group(1) if mt else f"최대 {won//10000}만원"),"reward_won":won,
-            "period_start":period.group(1).replace("-",".") if period else None,
-            "period_end":period.group(2).replace("-",".") if period else None,"url":url}
-
-def parse_ajd_rsc(text, evt_id):
-    # 아정당 RSC(self.__next_f)/렌더 텍스트 → 리워드/기간 generic 추출
-    mt = re.search(r"(최대\s*[\d.,]+\s*(?:억|만원|원))", text)
-    won = parse_won(mt.group(1)) if mt else parse_won(text)
-    if not won: return None
-    period = re.search(r"(20\d\d[.\-]\d\d?[.\-]\d\d?)\D{1,4}(20\d\d[.\-]\d\d?[.\-]\d\d?)", text)
-    return {"reward_text":(mt.group(1) if mt else f"최대 {won//10000}만원"),"reward_won":won,
-            "period_start":period.group(1).replace("-",".") if period else None,
-            "period_end":period.group(2).replace("-",".") if period else None,
-            "url":f"https://www.ajd.co.kr/card/event/detail/{evt_id}"}
-
-def is_june2026(ev):
-    """6월(2026.06) 이벤트만 우선 필터."""
-    if not ev: return False
-    s = (ev.get("period_start") or "")+(ev.get("period_end") or "")+(ev.get("reward_text") or "")
-    return ("2026.6" in s) or ("2026.06" in s) or ("2026-06" in s) or (not ev.get("period_start"))  # 기간 미표기는 현행으로 간주
+# ── 용각류 파서 모듈 분리(2026-06): 공통=cardutil / 플랫폼별 파서 ──
+from cardutil import _nk, parse_won, _fmt_man, is_june2026   # 공통 유틸
+from brachio import parse_cardgorilla                        # 카드고릴라
+from apato import parse_banksalad                            # 뱅크샐러드
+from diplo import parse_toss                                 # 토스
+from bronto import parse_ajd_rsc                             # 아정당
+from mamenchi import parse_naver                             # 네이버페이
 
 # ---------- 라이브 수집(Actions용; requests 필요) ----------
 def fetch(url, headers=None):
@@ -223,10 +155,10 @@ def export_json(con):
         best=max(evs,key=lambda e:e.get("reward_won") or 0)
         reco.append({"id":p["id"],"name":p["name"],"issuer":p.get("issuer"),
                      "maxCashbackWon":best.get("reward_won") or 0,"maxCashbackText":best.get("reward_text"),
-                     "bestPlatform":best.get("platform"),
+                     "bestPlatform":best.get("platform"),"periodEnd":best.get("period_end"),
                      "platforms":sorted(set(e["platform"] for e in evs)),
                      "platformCount":len(set(e["platform"] for e in evs)),
-                     "events":[{"platform":e["platform"],"reward_won":e.get("reward_won"),"reward_text":e.get("reward_text")} for e in evs]})
+                     "events":[{"platform":e["platform"],"reward_won":e.get("reward_won"),"reward_text":e.get("reward_text"),"period_end":e.get("period_end")} for e in evs]})
     reco.sort(key=lambda r:r["maxCashbackWon"],reverse=True)
     json.dump({"month":MONTH,"updated":datetime.date.today().isoformat(),"count":len(reco),"cards":reco},
               open(os.path.join(SITE,"reco.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
