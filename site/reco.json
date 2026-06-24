@@ -13,10 +13,9 @@
    "bestPlatform": "cardgorilla",
    "periodEnd": "2026-06-30",
    "platforms": [
-    "banksalad",
     "cardgorilla"
    ],
-   "platformCount": 2,
+   "platformCount": 1,
    "events": [
     {
      "platform": "cardgorilla",
@@ -24,14 +23,6 @@
      "reward_text": "117만원 캐시백",
      "period_end": "2026-06-30",
      "main_won": 1170000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "banksalad",
-     "reward_won": 49000,
-     "reward_text": "연회비 100% 캐시백",
-     "period_end": null,
-     "main_won": 49000,
      "bonus_won": 0
     }
    ]
@@ -278,6 +269,57 @@
      "reward_text": "86만원 캐시백",
      "period_end": "2026-06-30",
      "main_won": 860000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "name": "신한카드 Mr.Life",
+   "issuer": "신한카드",
+   "img": null,
+   "maxCashbackWon": 840000,
+   "maxCashbackText": "최대 84만원 캐시백",
+   "bestPlatform": "banksalad",
+   "periodEnd": null,
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla",
+    "naver"
+   ],
+   "platformCount": 4,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백",
+     "period_end": null,
+     "main_won": 840000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 579000,
+     "reward_text": "57.9만원 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 579000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 540000,
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "period_end": null,
+     "main_won": 540000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "naver",
+     "reward_won": 500000,
+     "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
+     "period_end": null,
+     "main_won": 500000,
      "bonus_won": 0
     }
    ]
@@ -1337,48 +1379,6 @@
      "reward_text": "59만원 혜택",
      "period_end": "2026-06-30",
      "main_won": 590000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 1,
-   "name": "신한카드 Mr.Life",
-   "issuer": "신한카드",
-   "img": null,
-   "maxCashbackWon": 579000,
-   "maxCashbackText": "57.9만원 혜택",
-   "bestPlatform": "cardgorilla",
-   "periodEnd": "2026-06-30",
-   "platforms": [
-    "ajungdang",
-    "cardgorilla",
-    "naver"
-   ],
-   "platformCount": 3,
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_won": 579000,
-     "reward_text": "57.9만원 혜택",
-     "period_end": "2026-06-30",
-     "main_won": 579000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "ajungdang",
-     "reward_won": 540000,
-     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "period_end": null,
-     "main_won": 540000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "naver",
-     "reward_won": 500000,
-     "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
-     "period_end": null,
-     "main_won": 500000,
      "bonus_won": 0
     }
    ]

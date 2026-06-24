@@ -3,10 +3,10 @@
  "updated": "2026-06-24",
  "issuers": {
   "신한카드": {
+   "banksalad": 840000,
    "cardgorilla": 789000,
    "ajungdang": 540000,
-   "naver": 500000,
-   "banksalad": 840000
+   "naver": 500000
   },
   "IBK기업은행": {
    "banksalad": 155000,
@@ -65,11 +65,12 @@
    "name": "신한카드 Mr.Life",
    "issuer": "신한카드",
    "platforms": {
+    "banksalad": 840000,
     "cardgorilla": 579000,
     "ajungdang": 540000,
     "naver": 500000
    },
-   "max": 579000
+   "max": 840000
   },
   {
    "name": "신한카드 Deep Oil",
@@ -130,8 +131,7 @@
    "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
    "issuer": "삼성카드",
    "platforms": {
-    "cardgorilla": 1170000,
-    "banksalad": 49000
+    "cardgorilla": 1170000
    },
    "max": 1170000
   },
