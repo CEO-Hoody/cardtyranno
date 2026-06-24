@@ -359,8 +359,8 @@ if __name__=="__main__":
         if not ce: continue
         subj=ce.get("subject") or ""
         if not subj: continue
-        evidx=ce.get("idx")
-        ev_url=f"https://www.card-gorilla.com/event/detail/{evidx}" if evidx else f"https://www.card-gorilla.com/card/{cid}"
+        # /event/detail/{idx}는 카드별 상세가 아니라 공통 캐시백 허브(빈 랜딩)로 감 → 해당 카드의 실제 페이지로 링크
+        ev_url=f"https://www.card-gorilla.com/card/detail/{cid}"
         injected[(p["name"],"cardgorilla")]={"reward_won":parse_won(subj),"reward_text":subj,
             "period_start":ce.get("start"),"period_end":ce.get("end"),
             "url":ev_url}
