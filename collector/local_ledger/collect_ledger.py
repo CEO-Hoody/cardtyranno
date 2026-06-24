@@ -49,12 +49,12 @@ def _won(text):
         best = max(best, int(float(m.group(1)) * 10000))
     return best
 
-def _http_json(url, headers=None):
+def _http_json(url, headers=None, timeout=8):
     h = {"User-Agent": UA, "Accept": "application/json", "Referer": "https://www.card-gorilla.com/"}
     if headers:
         h.update(headers)
     req = urllib.request.Request(url, headers=h)
-    with urllib.request.urlopen(req, timeout=20) as r:
+    with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read().decode("utf-8"))
 
 # ── 1) 카드고릴라: API(거주지/데이터센터 모두 OK). 카드명·발급사·플레이트·캐시백이벤트 ────────────
@@ -96,7 +96,9 @@ def collect_cardgorilla(ledger):
                 n += 1
         print(f"[카드고릴라] 카탈로그 {len(cat)}장 · 캐시백이벤트 매핑 {n}건")
     except Exception as e:
-        print("[카드고릴라] 오류:", e)
+        print("[카드고릴라] 건너뜀(8080 포트 차단 가능):", str(e)[:80])
+        print("            └ 카드고릴라 기본 데이터(이름·이벤트)는 클라우드 콜렉터(GitHub Actions)가 매일 수집하므로,")
+        print("              이 로컬 단계가 실패해도 카드고릴라가 사이트에서 빠지지 않습니다. 8080 열린 망에서만 이미지까지 보강됩니다.")
 
 # ── 2) 뱅크샐러드: SPA → Playwright로 렌더링 텍스트 읽기 ───────────────────────────────────────
 # 알려진 GUID(우리 데이터 기준). 회원님이 더 추가하면 그만큼 더 수집됩니다.
@@ -145,7 +147,10 @@ def collect_banksalad(ledger):
                           wait_until="networkidle", timeout=30000)
                 body = page.inner_text("body")
                 title = page.title()
-                real_name = title.split("|")[0].replace("뱅크샐러드", "").strip() or name
+                # ★ 매칭용 카드명: 알려진 카드는 등록된 '깨끗한 이름'(BANKSALAD_GUIDS의 키)을 사용.
+                #   페이지 제목엔 "- 최대 84만원 캐시백 이벤트 진행중" 같은 마케팅 수식어가 붙어 매칭이 깨짐.
+                rendered = re.split(r"\s*[|\-–]\s*", title)[0].replace("뱅크샐러드", "").strip()
+                canonical = name if not name.startswith("__auto_") else (rendered or guid)
                 # 이벤트 금액(렌더링 텍스트에서)
                 ev_text, ev_won = "", 0
                 for ln in body.split("\n"):
@@ -154,9 +159,9 @@ def collect_banksalad(ledger):
                         ev_text = BS_EVENT_RE.search(ln).group(1).replace(" ", "")
                         ev_won = _won(ev_text)
                         break
-                p = _ensure(ledger, real_name, None, None)
+                p = _ensure(ledger, canonical, None, None)
                 p["platforms"]["banksalad"] = {
-                    "guid": guid, "event_text": ev_text, "event_won": ev_won,
+                    "guid": guid, "rendered_name": rendered, "event_text": ev_text, "event_won": ev_won,
                     "no_event": (ev_won == 0 and "연회비" not in ev_text),
                     "url": f"https://www.banksalad.com/product/cards/{guid}",
                     "read_at": _today(),
