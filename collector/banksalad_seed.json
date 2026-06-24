@@ -1,14 +1,66 @@
 {
- "as_of": "2026-06-24",
- "source": "거주지 렌더링 텍스트 수집(banksalad.com/product/cards/{guid} 페이지 본문). 콜렉터 parse_banksalad의 cashbackAmountKrw0f가 일부 카드(예: 삼성 119만)에서 실제와 다른 값을 줘서, 렌더링 텍스트의 '최대 N만원 캐시백' 이벤트 금액으로 보정.",
- "_note": "교차 매핑은 상품명(_nk) 기준. no_event=true 는 뱅샐 캐시백 이벤트 없음(연회비/적립 등 상시혜택만).",
+ "as_of": "2026-06-25",
+ "source": "거주지 렌더링 텍스트 수집(collect_ledger.py). 상품명 매핑.",
  "cards": {
-  "삼성 iD SELECT ALL 카드":            {"reward_won": 230000, "reward_text": "최대 23만원 캐시백"},
-  "삼성카드 & MILEAGE PLATINUM (스카이패스)": {"reward_won": 49000,  "reward_text": "연회비 100% 캐시백"},
-  "신한카드 Deep Oil":                  {"reward_won": 840000, "reward_text": "최대 84만원 캐시백"},
-  "LOCA 365 카드":                     {"reward_won": 840000, "reward_text": "최대 84만원 캐시백"},
-  "K-패스 (신용)":                     {"reward_won": 155000, "reward_text": "최대 15.5만원 캐시백"},
-  "KB국민 굿데이카드":                  {"reward_won": 840000, "reward_text": "최대 84만원 캐시백"},
-  "신한카드 처음(ANNIVERSE)":           {"reward_won": 0, "reward_text": "", "no_event": true}
+  "삼성카드 삼성 iD SELECT ALL 카드 - 골라 쓰는 혜택, 모든 영역을 챙기는 카드": {
+   "reward_won": 230000,
+   "reward_text": "최대23만원캐시백"
+  },
+  "삼성카드 & MILEAGE PLATINUM (스카이패스)": {
+   "reward_won": 0,
+   "reward_text": "연회비100%캐시백"
+  },
+  "신한카드 Mr.Life": {
+   "reward_won": 840000,
+   "reward_text": "최대84만원캐시백"
+  },
+  "신한카드 Deep Oil - 최대 84만원 캐시백 이벤트 진행중": {
+   "reward_won": 840000,
+   "reward_text": "최대84만원캐시백"
+  },
+  "신한카드 신한카드 처음(ANNIVERSE) - 특별한 365일, 저마다의 우주를 기억해요.": {
+   "reward_won": 0,
+   "reward_text": "",
+   "no_event": true
+  },
+  "LOCA 365": {
+   "reward_won": 840000,
+   "reward_text": "최대84만원캐시백"
+  },
+  "롯데카드 LOCA LIKIT 1.2 - 모든 가맹점 1.2% 할인": {
+   "reward_won": 0,
+   "reward_text": "",
+   "no_event": true
+  },
+  "IBK기업은행 K-패스(신용) - 대중교통 이용 시 마일리지를 지급하는 특화 카드": {
+   "reward_won": 155000,
+   "reward_text": "최대15.5만원캐시백"
+  },
+  "KB국민 굿데이카드": {
+   "reward_won": 840000,
+   "reward_text": "최대84만원캐시백"
+  },
+  "KB국민 굿데이올림카드 - 월 최대 77,400원 혜택": {
+   "reward_won": 840000,
+   "reward_text": "최대84만원캐시백"
+  },
+  "KB 국민 My WE:SH": {
+   "reward_won": 840000,
+   "reward_text": "최대84만원캐시백"
+  },
+  "우리카드 D4카드의정석Ⅱ - 4개 업종 집중할인! 커피! 대중교통! 편의점! 영화관!": {
+   "reward_won": 0,
+   "reward_text": "연회비100%캐시백"
+  },
+  "우리카드 카드의정석 SHOPPING+ - 온오프라인 쇼핑 시 10%, 간편결제 추가 할인까지!": {
+   "reward_won": 0,
+   "reward_text": "",
+   "no_event": true
+  },
+  "우리카드 카드의 정석 SHOPPING - 카드의 정석, 쇼핑을 담다!": {
+   "reward_won": 0,
+   "reward_text": "",
+   "no_event": true
+  }
  }
 }
