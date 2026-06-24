@@ -128,6 +128,8 @@ def export_json(con):
         evs=[]
         for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall():
             mw,bw,comps=parse_breakdown(r[1],r[2])   # reward_text→메인/부가 분해
+            ov=BREAKDOWN.get((name,r[0]))            # 거주지 수집 이벤트상세 분해값 우선
+            if ov: mw,bw=ov["main"],ov["bonus"]
             e={"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4],
                "main_won":mw,"bonus_won":bw}
             if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
@@ -228,6 +230,7 @@ def _cg_catalog():
 
 CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
 CG_IMG={}      # cardgorilla_id → 카드 플레이트 이미지 URL(상품 메타 매핑)
+BREAKDOWN={}   # (카드명, 플랫폼) → {"main":원, "bonus":원}  거주지 수집 이벤트상세 분해값(메인/부가 override)
 
 def discover_products(limit=400):
     """카드고릴라 events?type=CBK(현재 진행 캐시백 이벤트) → 매핑 카드 자동 발굴.
@@ -347,6 +350,8 @@ if __name__=="__main__":
                 injected[(p["name"],"banksalad")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
                                                    "period_start":None,"period_end":None,
                                                    "url":"https://www.banksalad.com/product/cards/"+str((p.get("platforms",{}).get("banksalad") or {}).get("id") or "")}
+                if info.get("main_won") is not None or info.get("bonus_won"):
+                    BREAKDOWN[(p["name"],"banksalad")]={"main":info.get("main_won") or 0,"bonus":info.get("bonus_won") or 0}
             _bn2+=1
         if _bn2: print(f"뱅샐 보정 주입 {_bn2}건")
     except FileNotFoundError: pass

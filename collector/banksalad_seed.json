@@ -1,61 +1,21 @@
 {
  "as_of": "2026-06-25",
- "source": "거주지 렌더링 텍스트 수집(collect_ledger.py). 상품명 매핑.",
+ "source": "거주지 렌더링 텍스트 수집(뱅샐 상품/이벤트 상세 페이지 본문). 상품명 매핑. reward_won=이벤트 총액, main/bonus=상세페이지 분해(메인=저난도 기본캐시백, bonus=해외/자동납부/고액구간 등 조건부).",
+ "_note": "84만류 발급사 캐시백 이벤트는 실제로 메인 ~20만 + 부가 ~64만(해외 60만 등) 구조. no_event=true는 캐시백 이벤트 없음.",
  "cards": {
-  "삼성 iD SELECT ALL 카드": {
-   "reward_won": 230000,
-   "reward_text": "최대23만원캐시백"
-  },
-  "삼성카드 & MILEAGE PLATINUM (스카이패스)": {
-   "reward_won": 0,
-   "reward_text": "연회비100%캐시백"
-  },
-  "신한카드 Mr.Life": {
-   "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
-  },
-  "신한카드 Deep Oil": {
-   "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
-  },
-  "신한카드 처음(ANNIVERSE)": {
-   "reward_won": 0,
-   "reward_text": "",
-   "no_event": true
-  },
-  "LOCA 365 카드": {
-   "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
-  },
-  "LOCA LIKIT 1.2 카드": {
-   "reward_won": 0,
-   "reward_text": "",
-   "no_event": true
-  },
-  "K-패스 (신용)": {
-   "reward_won": 155000,
-   "reward_text": "최대15.5만원캐시백"
-  },
-  "KB국민 굿데이카드": {
-   "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
-  },
-  "KB국민 굿데이올림카드": {
-   "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
-  },
-  "KB국민 My WE:SH 카드": {
-   "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
-  },
-  "D4카드의정석 II": {
-   "reward_won": 0,
-   "reward_text": "연회비100%캐시백"
-  },
-  "카드의정석 SHOPPING+": {
-   "reward_won": 0,
-   "reward_text": "",
-   "no_event": true
-  }
+  "삼성 iD SELECT ALL 카드":            {"reward_won": 230000, "reward_text": "최대 23만원 캐시백", "main_won": 230000, "bonus_won": 0},
+  "삼성카드 & MILEAGE PLATINUM (스카이패스)": {"reward_won": 0, "reward_text": "연회비 100% 캐시백", "no_event": true},
+  "신한카드 Mr.Life":                   {"reward_won": 840000, "reward_text": "최대 84만원 캐시백", "main_won": 190000, "bonus_won": 650000},
+  "신한카드 Deep Oil":                  {"reward_won": 840000, "reward_text": "최대 84만원 캐시백", "main_won": 190000, "bonus_won": 650000},
+  "신한카드 처음(ANNIVERSE)":           {"reward_won": 0, "reward_text": "", "no_event": true},
+  "LOCA 365 카드":                     {"reward_won": 840000, "reward_text": "최대 84만원 캐시백", "main_won": 200000, "bonus_won": 640000},
+  "LOCA LIKIT 1.2 카드":               {"reward_won": 0, "reward_text": "", "no_event": true},
+  "K-패스 (신용)":                     {"reward_won": 155000, "reward_text": "최대 15.5만원 캐시백", "main_won": 155000, "bonus_won": 0},
+  "KB국민 굿데이카드":                  {"reward_won": 840000, "reward_text": "최대 84만원 캐시백", "main_won": 210000, "bonus_won": 630000},
+  "KB국민 굿데이올림카드":              {"reward_won": 840000, "reward_text": "최대 84만원 캐시백", "main_won": 210000, "bonus_won": 630000},
+  "KB국민 My WE:SH 카드":              {"reward_won": 840000, "reward_text": "최대 84만원 캐시백", "main_won": 210000, "bonus_won": 630000},
+  "D4카드의정석 II":                   {"reward_won": 0, "reward_text": "연회비 100% 캐시백", "no_event": true},
+  "카드의정석 SHOPPING+":              {"reward_won": 0, "reward_text": "", "no_event": true},
+  "카드의정석 SHOPPING":               {"reward_won": 0, "reward_text": "", "no_event": true}
  }
 }
