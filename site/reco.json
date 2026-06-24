@@ -90,8 +90,8 @@
      "reward_won": 840000,
      "reward_text": "최대 84만원 캐시백",
      "period_end": null,
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 210000,
+     "bonus_won": 630000
     },
     {
      "platform": "naver",
@@ -295,8 +295,8 @@
      "reward_won": 840000,
      "reward_text": "최대 84만원 캐시백",
      "period_end": null,
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 190000,
+     "bonus_won": 650000
     },
     {
      "platform": "cardgorilla",
@@ -345,8 +345,8 @@
      "reward_won": 840000,
      "reward_text": "최대 84만원 캐시백",
      "period_end": null,
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 190000,
+     "bonus_won": 650000
     },
     {
      "platform": "cardgorilla",
@@ -387,8 +387,8 @@
      "reward_won": 840000,
      "reward_text": "최대 84만원 캐시백",
      "period_end": null,
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 200000,
+     "bonus_won": 640000
     },
     {
      "platform": "ajungdang",

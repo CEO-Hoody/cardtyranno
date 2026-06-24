@@ -36,8 +36,15 @@
      "reward_won": 840000,
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD000004",
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 190000,
+     "bonus_won": 650000,
+     "breakdown": [
+      {
+       "text": "최대 84만원 캐시백",
+       "won": 840000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "cardgorilla",
@@ -98,8 +105,15 @@
      "reward_won": 840000,
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD000118",
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 190000,
+     "bonus_won": 650000,
+     "breakdown": [
+      {
+       "text": "최대 84만원 캐시백",
+       "won": 840000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "cardgorilla",
@@ -254,8 +268,15 @@
      "reward_won": 840000,
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD000037",
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 200000,
+     "bonus_won": 640000,
+     "breakdown": [
+      {
+       "text": "최대 84만원 캐시백",
+       "won": 840000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "ajungdang",
@@ -436,8 +457,15 @@
      "reward_won": 840000,
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD000156",
-     "main_won": 840000,
-     "bonus_won": 0
+     "main_won": 210000,
+     "bonus_won": 630000,
+     "breakdown": [
+      {
+       "text": "최대 84만원 캐시백",
+       "won": 840000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "naver",
