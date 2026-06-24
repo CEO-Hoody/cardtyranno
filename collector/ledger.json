@@ -1,14 +1,15 @@
 {
  "products": {
-  "삼성카드삼성idselectall카드골라쓰는혜택모든영역을챙기는카드": {
+  "삼성idselectall카드": {
    "id": "P0001",
-   "name": "삼성카드 삼성 iD SELECT ALL 카드 - 골라 쓰는 혜택, 모든 영역을 챙기는 카드",
-   "name_key": "삼성카드삼성idselectall카드골라쓰는혜택모든영역을챙기는카드",
+   "name": "삼성 iD SELECT ALL 카드",
+   "name_key": "삼성idselectall카드",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD004534",
+     "rendered_name": "삼성카드 삼성 iD SELECT ALL 카드",
      "event_text": "최대23만원캐시백",
      "event_won": 230000,
      "no_event": false,
@@ -26,6 +27,7 @@
    "platforms": {
     "banksalad": {
      "guid": "CARD000081",
+     "rendered_name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
      "event_text": "연회비100%캐시백",
      "event_won": 0,
      "no_event": false,
@@ -43,6 +45,7 @@
    "platforms": {
     "banksalad": {
      "guid": "CARD000004",
+     "rendered_name": "신한카드 Mr.Life",
      "event_text": "최대84만원캐시백",
      "event_won": 840000,
      "no_event": false,
@@ -51,15 +54,16 @@
     }
    }
   },
-  "신한카드deepoil최대84만원캐시백이벤트진행중": {
+  "신한카드deepoil": {
    "id": "P0004",
-   "name": "신한카드 Deep Oil - 최대 84만원 캐시백 이벤트 진행중",
-   "name_key": "신한카드deepoil최대84만원캐시백이벤트진행중",
+   "name": "신한카드 Deep Oil",
+   "name_key": "신한카드deepoil",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD000118",
+     "rendered_name": "신한카드 Deep Oil",
      "event_text": "최대84만원캐시백",
      "event_won": 840000,
      "no_event": false,
@@ -68,15 +72,16 @@
     }
    }
   },
-  "신한카드신한카드처음anniverse특별한365일저마다의우주를기억해요": {
+  "신한카드처음anniverse": {
    "id": "P0005",
-   "name": "신한카드 신한카드 처음(ANNIVERSE) - 특별한 365일, 저마다의 우주를 기억해요.",
-   "name_key": "신한카드신한카드처음anniverse특별한365일저마다의우주를기억해요",
+   "name": "신한카드 처음(ANNIVERSE)",
+   "name_key": "신한카드처음anniverse",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD004343",
+     "rendered_name": "신한카드 신한카드 처음(ANNIVERSE)",
      "event_text": "",
      "event_won": 0,
      "no_event": true,
@@ -85,15 +90,16 @@
     }
    }
   },
-  "loca365": {
+  "loca365카드": {
    "id": "P0006",
-   "name": "LOCA 365",
-   "name_key": "loca365",
+   "name": "LOCA 365 카드",
+   "name_key": "loca365카드",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD000037",
+     "rendered_name": "LOCA 365",
      "event_text": "최대84만원캐시백",
      "event_won": 840000,
      "no_event": false,
@@ -102,15 +108,16 @@
     }
    }
   },
-  "롯데카드localikit12모든가맹점12할인": {
+  "localikit12카드": {
    "id": "P0007",
-   "name": "롯데카드 LOCA LIKIT 1.2 - 모든 가맹점 1.2% 할인",
-   "name_key": "롯데카드localikit12모든가맹점12할인",
+   "name": "LOCA LIKIT 1.2 카드",
+   "name_key": "localikit12카드",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD000038",
+     "rendered_name": "롯데카드 LOCA LIKIT 1.2",
      "event_text": "",
      "event_won": 0,
      "no_event": true,
@@ -119,15 +126,16 @@
     }
    }
   },
-  "ibk기업은행k패스신용대중교통이용시마일리지를지급하는특화카드": {
+  "k패스신용": {
    "id": "P0008",
-   "name": "IBK기업은행 K-패스(신용) - 대중교통 이용 시 마일리지를 지급하는 특화 카드",
-   "name_key": "ibk기업은행k패스신용대중교통이용시마일리지를지급하는특화카드",
+   "name": "K-패스 (신용)",
+   "name_key": "k패스신용",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD004320",
+     "rendered_name": "IBK기업은행 K",
      "event_text": "최대15.5만원캐시백",
      "event_won": 155000,
      "no_event": false,
@@ -145,6 +153,7 @@
    "platforms": {
     "banksalad": {
      "guid": "CARD000156",
+     "rendered_name": "KB국민 굿데이카드",
      "event_text": "최대84만원캐시백",
      "event_won": 840000,
      "no_event": false,
@@ -153,15 +162,16 @@
     }
    }
   },
-  "kb국민굿데이올림카드월최대77400원혜택": {
+  "kb국민굿데이올림카드": {
    "id": "P0010",
-   "name": "KB국민 굿데이올림카드 - 월 최대 77,400원 혜택",
-   "name_key": "kb국민굿데이올림카드월최대77400원혜택",
+   "name": "KB국민 굿데이올림카드",
+   "name_key": "kb국민굿데이올림카드",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD000114",
+     "rendered_name": "KB국민 굿데이올림카드",
      "event_text": "최대84만원캐시백",
      "event_won": 840000,
      "no_event": false,
@@ -170,15 +180,16 @@
     }
    }
   },
-  "kb국민mywesh": {
+  "kb국민mywesh카드": {
    "id": "P0011",
-   "name": "KB 국민 My WE:SH",
-   "name_key": "kb국민mywesh",
+   "name": "KB국민 My WE:SH 카드",
+   "name_key": "kb국민mywesh카드",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD000128",
+     "rendered_name": "KB 국민 My WE:SH",
      "event_text": "최대84만원캐시백",
      "event_won": 840000,
      "no_event": false,
@@ -187,15 +198,16 @@
     }
    }
   },
-  "우리카드d4카드의정석4개업종집중할인커피대중교통편의점영화관": {
+  "d4카드의정석ii": {
    "id": "P0012",
-   "name": "우리카드 D4카드의정석Ⅱ - 4개 업종 집중할인! 커피! 대중교통! 편의점! 영화관!",
-   "name_key": "우리카드d4카드의정석4개업종집중할인커피대중교통편의점영화관",
+   "name": "D4카드의정석 II",
+   "name_key": "d4카드의정석ii",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD004420",
+     "rendered_name": "우리카드 D4카드의정석Ⅱ",
      "event_text": "연회비100%캐시백",
      "event_won": 0,
      "no_event": false,
@@ -204,32 +216,16 @@
     }
    }
   },
-  "우리카드카드의정석shopping온오프라인쇼핑시10간편결제추가할인까지": {
+  "카드의정석shopping": {
    "id": "P0013",
-   "name": "우리카드 카드의정석 SHOPPING+ - 온오프라인 쇼핑 시 10%, 간편결제 추가 할인까지!",
-   "name_key": "우리카드카드의정석shopping온오프라인쇼핑시10간편결제추가할인까지",
-   "issuer": null,
-   "img": null,
-   "platforms": {
-    "banksalad": {
-     "guid": "CARD004419",
-     "event_text": "",
-     "event_won": 0,
-     "no_event": true,
-     "url": "https://www.banksalad.com/product/cards/CARD004419",
-     "read_at": "2026-06-25"
-    }
-   }
-  },
-  "우리카드카드의정석shopping카드의정석쇼핑을담다": {
-   "id": "P0014",
-   "name": "우리카드 카드의 정석 SHOPPING - 카드의 정석, 쇼핑을 담다!",
-   "name_key": "우리카드카드의정석shopping카드의정석쇼핑을담다",
+   "name": "카드의정석 SHOPPING+",
+   "name_key": "카드의정석shopping",
    "issuer": null,
    "img": null,
    "platforms": {
     "banksalad": {
      "guid": "CARD003739",
+     "rendered_name": "우리카드 카드의 정석 SHOPPING",
      "event_text": "",
      "event_won": 0,
      "no_event": true,
