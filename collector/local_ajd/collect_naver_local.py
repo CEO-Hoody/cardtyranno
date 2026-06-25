@@ -71,19 +71,27 @@ def our_universe():
 _AMT = re.compile(r"(?:최대\s*)?([0-9][0-9,]*)\s*만\s*원")
 _AMT_WON = re.compile(r"([0-9][0-9,]{3,})\s*원")
 
-def best_won(text):
-    """텍스트에서 가장 큰 '만원' 금액을 원 단위로. 없으면 가장 큰 '원' 금액."""
-    best = 0
-    for m in _AMT.finditer(text):
-        v = int(m.group(1).replace(",", "")) * 10000
-        if v > best: best = v
-    if best:
-        return best
-    for m in _AMT_WON.finditer(text):
-        v = int(m.group(1).replace(",", ""))
-        if 10000 <= v <= 5000000 and v > best:
-            best = v
-    return best
+NAVER_MAX = 1_000_000   # 안전장치(현실 상한). 헤드라인이 이를 넘으면 총행사규모 의심 → 버림.
+_HEAD = re.compile(r"최대\s*([0-9][0-9,.]*)\s*만원|([0-9][0-9,.]*)\s*만원\s*드려요")
+_ISS = re.compile(r"\n?\s*([가-힣A-Za-z]+(?:카드|은행))(?:가|이)\s*\n?\s*(?:최대|[0-9])")
+
+def headline_won(text):
+    """프로모션 헤드라인 '최대 N만원 드려요'(=네이버 표시 금액, 총행사규모 아님)를 원 단위로.
+    페이지 상단의 첫 '만원'이 헤드라인이다. 소수(72.5만원=725000)도 처리."""
+    m = _HEAD.search(text or "")
+    if not m:
+        return 0
+    g = m.group(1) or m.group(2)
+    try:
+        v = int(round(float(g.replace(",", "")) * 10000))
+    except Exception:
+        return 0
+    return v if 10000 <= v <= NAVER_MAX else 0
+
+def issuer_from_text(text):
+    """헤드라인 'XXX카드가/XXX은행이'에서 발급사명 추출(코드맵보다 정확. CCLG=신한 등 코드오류 회피)."""
+    m = _ISS.search(text or "")
+    return m.group(1) if m else ""
 
 def parse_promo_list_json(txt):
     """promotionsList 응답(JSON 문자열)에서 (promotionId, cardCompanyId, cardIssuerCode) 추출."""
@@ -164,16 +172,21 @@ def main():
             except Exception as e:
                 raw["events"].append({"pid": pr["pid"], "err": str(e)[:80]})
                 continue
-            won = best_won(t)
-            iss = ISSUER.get(pr["cc"], "")
-            # 카드 매칭: 유니버스 카드명이 페이지 텍스트에 등장하면 부착
-            nt = _nk(t)
+            won = headline_won(t)
+            iss = issuer_from_text(t) or ISSUER.get(pr["cc"], "")
+            # 카드 매칭: '대상 카드로' ~ '혜택상세' 구간만(그 뒤 푸터의 제휴 카드사 목록 오매칭 차단)
+            region = t.split("혜택상세")[0]
+            cut = region.find("대상 카드로")
+            if cut != -1:
+                region = region[cut:]
+            nt = _nk(region)
             hit = []
             for nk, name in uni.items():
                 if len(nk) >= 4 and nk in nt:
                     hit.append(name)
-            rtext = (f"최대 {won//10000}만원" if won else "이벤트") + \
-                    (f" (네이버페이 {iss}카드 이벤트)" if iss else " (네이버페이 카드 이벤트)")
+            iss_disp = iss[:-2] if iss.endswith("카드") else iss   # '신한카드'→'신한'
+            rtext = (f"최대 {won/10000:.1f}".rstrip("0").rstrip(".") + "만원" if won else "이벤트") + \
+                    (f" (네이버페이 {iss_disp}카드 이벤트)" if iss_disp else " (네이버페이 카드 이벤트)")
             for name in hit:
                 # 더 큰 금액으로만 갱신(같은 카드가 여러 프로모션에 걸칠 때)
                 if name not in cards or won > cards[name]["reward_won"]:
