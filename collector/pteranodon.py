@@ -132,6 +132,7 @@ def parse_discounts(text, merchant):
             "cond": "", "period": period,
             "conf": "중",                     # 자동수집은 신뢰도 '중'(수기검증 시 '상')
             "url": merchant["url"],
+            "capture": merchant.get("capture", ""),   # 이 항목의 스크래핑 대상 페이지 캡처
         })
     # 동일 (카드사+할인액+유형) 중복 제거
     seen, uniq = set(), []
@@ -160,8 +161,16 @@ def collect():
                 page.goto(m["url"], wait_until="networkidle", timeout=35000)
                 page.wait_for_timeout(1200)
                 text = page.inner_text("body")
+                cap = m.get("capture")                         # 스크래핑 대상 페이지 캡처 저장
+                if cap:
+                    cpath = os.path.join(BASE, cap)
+                    os.makedirs(os.path.dirname(cpath), exist_ok=True)
+                    try:
+                        page.screenshot(path=cpath, full_page=False)
+                    except Exception as ce:
+                        print(f"   캡처 실패({m['plat']}):", str(ce)[:40])
                 got = parse_discounts(text, m)
-                print(f"[프테라노돈] {m['plat']:<10} {len(got)}건")
+                print(f"[프테라노돈] {m['plat']:<10} {len(got)}건  캡처:{cap or '-'}")
                 items.extend(got)
             except Exception as e:
                 print(f"[프테라노돈] {m['plat']} 실패: {str(e)[:70]}")
@@ -199,7 +208,7 @@ def merge_into_data(items):
 
 def git_push():
     try:
-        subprocess.run(["git", "-C", os.path.dirname(BASE), "add", "collector/discount_seed.json", "site/data.json"], check=True)
+        subprocess.run(["git", "-C", os.path.dirname(BASE), "add", "collector/discount_seed.json", "collector/captures", "collector/discount_sources.json", "site/data.json"], check=True)
         subprocess.run(["git", "-C", os.path.dirname(BASE), "commit", "-m", "pteranodon: 결제처 카드할인 수집 " + _today()], check=True)
         for _ in range(3):
             try:

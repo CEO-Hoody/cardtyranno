@@ -1,6 +1,6 @@
 {
  "updated": "2026-06-25",
- "note": "프테라노돈(pteranodon) 결제처 카드할인 스크래핑 레지스트리. 각 결제처 소스 페이지의 렌더링 텍스트에서 fields의 변수를 추출해 site/data.json 스키마로 적재.",
+ "note": "프테라노돈(pteranodon) 결제처 카드할인 스크래핑 레지스트리. 각 결제처 소스 페이지의 렌더링 텍스트에서 fields의 변수를 추출해 site/data.json 스키마로 적재. 각 결제처의 스크래핑 대상 페이지 캡처는 capture 경로(collector/captures/)에 실행 시 저장된다.",
  "fields": [
   {
    "key": "plat",
@@ -61,6 +61,11 @@
    "key": "conf",
    "label": "신뢰도",
    "source": "자동수집=중, 수기검증=상"
+  },
+  {
+   "key": "capture",
+   "label": "스크래핑 대상 페이지 캡처",
+   "source": "pteranodon 실행 시 captures/mNN.png 로 자동 저장(거주지)"
   }
  ],
  "merchants": [
@@ -69,301 +74,344 @@
    "domain": "musinsa.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.musinsa.com/campaign/payevent/0"
+   "url": "https://www.musinsa.com/campaign/payevent/0",
+   "capture": "captures/m00.png"
   },
   {
    "plat": "롯데하이마트",
    "domain": "himart.co.kr",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://company.himart.co.kr/event/card"
+   "url": "https://company.himart.co.kr/event/card",
+   "capture": "captures/m01.png"
   },
   {
    "plat": "GS25",
    "domain": "gs25.gsretail.com",
    "gubun": "오프라인",
    "src": "own",
-   "url": "http://gs25.gsretail.com/gscvs/ko/customer-engagement/event/detail/publishing?eventCode=8842885975584"
+   "url": "http://gs25.gsretail.com/gscvs/ko/customer-engagement/event/detail/publishing?eventCode=8842885975584",
+   "capture": "captures/m02.png"
   },
   {
    "plat": "이마트",
    "domain": "emart.com",
    "gubun": "오프라인",
    "src": "own",
-   "url": "https://store.emart.com/event/detail/card_event_view.do?master_cd=4432"
+   "url": "https://store.emart.com/event/detail/card_event_view.do?master_cd=4432",
+   "capture": "captures/m03.png"
   },
   {
    "plat": "홈플러스",
    "domain": "homeplus.co.kr",
    "gubun": "오프라인",
    "src": "own",
-   "url": "https://my.homeplus.co.kr/membership_benefits"
+   "url": "https://my.homeplus.co.kr/membership_benefits",
+   "capture": "captures/m04.png"
   },
   {
    "plat": "네이버 패키지여행",
    "domain": "naver.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://travel.naver.co.kr/pkgevent"
+   "url": "https://travel.naver.co.kr/pkgevent",
+   "capture": "captures/m05.png"
   },
   {
    "plat": "롯데면세점",
    "domain": "lottedfs.com",
    "gubun": "오프라인",
    "src": "own",
-   "url": "https://kor.lottedfs.com/kr/event/eventDetail?evtDispNo=1038093"
+   "url": "https://kor.lottedfs.com/kr/event/eventDetail?evtDispNo=1038093",
+   "capture": "captures/m06.png"
   },
   {
    "plat": "트립닷컴",
    "domain": "trip.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://kr.trip.com/sale/w/7478/samsungcard.html"
+   "url": "https://kr.trip.com/sale/w/7478/samsungcard.html",
+   "capture": "captures/m07.png"
   },
   {
    "plat": "CU",
    "domain": "cu.bgfretail.com",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://www.newsis.com/view/NISX20260204_0003502851"
+   "url": "https://www.newsis.com/view/NISX20260204_0003502851",
+   "capture": "captures/m08.png"
   },
   {
    "plat": "SSG닷컴",
    "domain": "ssg.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000003913"
+   "url": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000003913",
+   "capture": "captures/m09.png"
   },
   {
    "plat": "이마트24",
    "domain": "emart24.co.kr",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://www.shinsegaegroupnewsroom.com/e-mart-24-introduces-tosspay-collaboration-industrys-largest-all-day-tenten-membership/"
+   "url": "https://www.shinsegaegroupnewsroom.com/e-mart-24-introduces-tosspay-collaboration-industrys-largest-all-day-tenten-membership/",
+   "capture": "captures/m10.png"
   },
   {
    "plat": "코스트코",
    "domain": "costco.co.kr",
    "gubun": "오프라인",
    "src": "own",
-   "url": "https://www.hyundaicard.com/costco/m/html/costco_event2506.html"
+   "url": "https://www.hyundaicard.com/costco/m/html/costco_event2506.html",
+   "capture": "captures/m11.png"
   },
   {
    "plat": "현대Hmall",
    "domain": "hmall.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.hmall.com/p/dpa/searchSpexSectItem.do?sectId=2718492"
+   "url": "https://www.hmall.com/p/dpa/searchSpexSectItem.do?sectId=2718492",
+   "capture": "captures/m12.png"
   },
   {
    "plat": "11번가",
    "domain": "11st.co.kr",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://plan.11st.co.kr/plan/front/exhibitions/2014938/detail"
+   "url": "https://plan.11st.co.kr/plan/front/exhibitions/2014938/detail",
+   "capture": "captures/m13.png"
   },
   {
    "plat": "CGV",
    "domain": "cgv.co.kr",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://m.card-gorilla.com/contents/detail/3190"
+   "url": "https://m.card-gorilla.com/contents/detail/3190",
+   "capture": "captures/m14.png"
   },
   {
    "plat": "CJ온스타일",
    "domain": "cjonstyle.com",
    "gubun": "온라인",
    "src": "issuer",
-   "url": "https://m.kbcard.com/CXHIACRC0002.cms"
+   "url": "https://m.kbcard.com/CXHIACRC0002.cms",
+   "capture": "captures/m15.png"
   },
   {
    "plat": "GS샵",
    "domain": "gsshop.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.gsshop.com/shop/planCard.gs"
+   "url": "https://www.gsshop.com/shop/planCard.gs",
+   "capture": "captures/m16.png"
   },
   {
    "plat": "GS칼텍스",
    "domain": "gscaltex.com",
    "gubun": "오프라인",
    "src": "own",
-   "url": "https://gscaltexmediahub.com/news/gscaltex-naverplus-membership/"
+   "url": "https://gscaltexmediahub.com/news/gscaltex-naverplus-membership/",
+   "capture": "captures/m17.png"
   },
   {
    "plat": "G마켓",
    "domain": "gmarket.co.kr",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.gmarket.co.kr/n/showroom/samsungcard"
+   "url": "https://www.gmarket.co.kr/n/showroom/samsungcard",
+   "capture": "captures/m18.png"
   },
   {
    "plat": "HD현대오일뱅크",
    "domain": "oilbank.co.kr",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1855"
+   "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1855",
+   "capture": "captures/m19.png"
   },
   {
    "plat": "LG전자",
    "domain": "lge.co.kr",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.lge.co.kr/"
+   "url": "https://www.lge.co.kr/",
+   "capture": "captures/m20.png"
   },
   {
    "plat": "NS홈쇼핑",
    "domain": "nsmall.com",
    "gubun": "온라인",
    "src": "issuer",
-   "url": "https://m.card-gorilla.com/card/detail/2278"
+   "url": "https://m.card-gorilla.com/card/detail/2278",
+   "capture": "captures/m21.png"
   },
   {
    "plat": "S-OIL",
    "domain": "s-oil.com",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://www.shinhancard.com/conts/person/card_info/major/benefit/oil/1198252_12889.jsp"
+   "url": "https://www.shinhancard.com/conts/person/card_info/major/benefit/oil/1198252_12889.jsp",
+   "capture": "captures/m22.png"
   },
   {
    "plat": "SK에너지",
    "domain": "skenergy.com",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://m.kbcard.com/CRD/DVIEW/MCAMCXHIACRC0002?cooperationcode=02020&mainCC=a"
+   "url": "https://m.kbcard.com/CRD/DVIEW/MCAMCXHIACRC0002?cooperationcode=02020&mainCC=a",
+   "capture": "captures/m23.png"
   },
   {
    "plat": "W컨셉",
    "domain": "wconcept.co.kr",
    "gubun": "온라인",
    "src": "issuer",
-   "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1812"
+   "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1812",
+   "capture": "captures/m24.png"
   },
   {
    "plat": "교보문고",
    "domain": "kyobobook.co.kr",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://event.kyobobook.co.kr/detail/204081"
+   "url": "https://event.kyobobook.co.kr/detail/204081",
+   "capture": "captures/m25.png"
   },
   {
    "plat": "더한섬",
    "domain": "thehandsome.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://m.thehandsome.com/ko/MK/event/21511"
+   "url": "https://m.thehandsome.com/ko/MK/event/21511",
+   "capture": "captures/m26.png"
   },
   {
    "plat": "롯데백화점",
    "domain": "lotteshopping.com",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://m.lottecard.co.kr/app/LPBNFDA_V300.lc?evnBultSeq=11148"
+   "url": "https://m.lottecard.co.kr/app/LPBNFDA_V300.lc?evnBultSeq=11148",
+   "capture": "captures/m27.png"
   },
   {
    "plat": "롯데백화점몰",
    "domain": "lotteon.com",
    "gubun": "온라인",
    "src": "issuer",
-   "url": "https://m.lottecard.co.kr/app/LPBNFDA_V300.lc?evnBultSeq=11010"
+   "url": "https://m.lottecard.co.kr/app/LPBNFDA_V300.lc?evnBultSeq=11010",
+   "capture": "captures/m28.png"
   },
   {
    "plat": "롯데시네마",
    "domain": "lottecinema.co.kr",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://m.card-gorilla.com/contents/detail/3190"
+   "url": "https://m.card-gorilla.com/contents/detail/3190",
+   "capture": "captures/m29.png"
   },
   {
    "plat": "롯데온",
    "domain": "lotteon.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.lotteon.com/m/display/planV2/planDetail/116893"
+   "url": "https://www.lotteon.com/m/display/planV2/planDetail/116893",
+   "capture": "captures/m30.png"
   },
   {
    "plat": "롯데홈쇼핑",
    "domain": "lotteimall.com",
    "gubun": "온라인",
    "src": "issuer",
-   "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1712312"
+   "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1712312",
+   "capture": "captures/m31.png"
   },
   {
    "plat": "메가박스",
    "domain": "megabox.co.kr",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://www.banksalad.com/articles/메가박스-할인-카드와-영화표-할인-방법-가격-정리-2023"
+   "url": "https://www.banksalad.com/articles/메가박스-할인-카드와-영화표-할인-방법-가격-정리-2023",
+   "capture": "captures/m32.png"
   },
   {
    "plat": "삼성닷컴",
    "domain": "samsung.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.samsung.com/sec/eventList/creditcard_benefit/"
+   "url": "https://www.samsung.com/sec/eventList/creditcard_benefit/",
+   "capture": "captures/m33.png"
   },
   {
    "plat": "세븐일레븐",
    "domain": "7-eleven.co.kr",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://www.news1.kr/industry/distribution/6083414"
+   "url": "https://www.news1.kr/industry/distribution/6083414",
+   "capture": "captures/m34.png"
   },
   {
    "plat": "스타벅스",
    "domain": "starbucks.co.kr",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://namu.wiki/w/스타벅스%20리워드"
+   "url": "https://namu.wiki/w/스타벅스%20리워드",
+   "capture": "captures/m35.png"
   },
   {
    "plat": "신라면세점",
    "domain": "shilladfs.com",
    "gubun": "오프라인",
    "src": "issuer",
-   "url": "https://m.wooricard.com/dcmw/yh1/bnf/bnf02/prgevnt/movePrgEvntDtl.do?evntSrno=30004507"
+   "url": "https://m.wooricard.com/dcmw/yh1/bnf/bnf02/prgevnt/movePrgEvntDtl.do?evntSrno=30004507",
+   "capture": "captures/m36.png"
   },
   {
    "plat": "신세계백화점",
    "domain": "shinsegae.com",
    "gubun": "오프라인",
    "src": "own",
-   "url": "https://www.shinsegaegroupnewsroom.com/shinsegae-baek-alliance-card-event/"
+   "url": "https://www.shinsegaegroupnewsroom.com/shinsegae-baek-alliance-card-event/",
+   "capture": "captures/m37.png"
   },
   {
    "plat": "알라딘",
    "domain": "aladin.co.kr",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.aladin.co.kr/events/wevent.aspx?EventId=309615"
+   "url": "https://www.aladin.co.kr/events/wevent.aspx?EventId=309615",
+   "capture": "captures/m38.png"
   },
   {
    "plat": "야놀자(NOL)",
    "domain": "yanolja.com",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://nol.yanolja.com/promotion/nol-promotion?eventcode=NOY73"
+   "url": "https://nol.yanolja.com/promotion/nol-promotion?eventcode=NOY73",
+   "capture": "captures/m39.png"
   },
   {
    "plat": "옥션",
    "domain": "auction.co.kr",
    "gubun": "온라인",
    "src": "own",
-   "url": "https://www.auction.co.kr/n/showroom/samsungcard"
+   "url": "https://www.auction.co.kr/n/showroom/samsungcard",
+   "capture": "captures/m40.png"
   },
   {
    "plat": "올리브영",
    "domain": "oliveyoung.co.kr",
    "gubun": "온라인",
    "src": "issuer",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=675332"
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=675332",
+   "capture": "captures/m41.png"
   },
   {
    "plat": "쿠팡",
    "domain": "coupang.com",
    "gubun": "온라인",
    "src": "issuer",
-   "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076"
+   "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076",
+   "capture": "captures/m42.png"
   }
  ]
 }
