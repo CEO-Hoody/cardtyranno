@@ -1,148 +1,222 @@
 # -*- coding: utf-8 -*-
 """
-네이버페이 카드 로컬 수집기 — 거주지 IP(회원님 맥)에서 실행.
+네이버페이 카드 로컬 수집기 (v2 · Playwright 렌더링 텍스트 방식) — 거주지 IP(회원님 맥)에서 실행.
 
-배경: 네이버 card.pay.naver.com 의 .json API는 데이터센터(GitHub Actions) IP엔 404를 줍니다.
-     회원님 맥(거주지 IP)에선 정상이라, 여기서 수집해 결과를 깃에 올립니다(아정당과 동일 패턴).
+배경
+  - card.pay.naver.com 의 .json API는 데이터센터(GitHub Actions) IP엔 404.
+  - Claude의 브라우저(Claude in Chrome)도 이 결제 도메인은 안전제한으로 차단됨.
+  → 회원님 맥에서 도는 Playwright(헤드리스 크롬)엔 이런 제한이 없으므로 여기서 수집한다.
+    (뱅크샐러드·프테라노돈에서 검증된 '렌더링된 화면 텍스트 읽기' 방식과 동일)
 
-확인된 엔드포인트(회원님 네트워크 캡처):
-  - 프로모션 목록: https://card.pay.naver.com/home/api/promotionsList?formedYn=y  (★진입점: 전체 6월 이벤트)
-  - 카드 목록:    https://card.pay.naver.com/home/api/productsList  (프로모션 대상 카드)
-  - 프로모션상세: https://card.pay.naver.com/home/promotion.json?promotionId=..&cardCompanyId=..&cardIssuerCode=..
-  - 카드상세:     https://card.pay.naver.com/home/detail.json?cardCompanyId=..&cardIssuerCode=..&productId=..
-  발급사 코드 예: CCLG=롯데, CCWR=우리, CCNH=NH농협
+동작
+  1) 프로모션 목록을 가져온다.
+     - 1순위: 브라우저 컨텍스트에서 promotionsList API(JSON) 로드(거주지 IP+쿠키라 정상 응답).
+     - 실패 시: 이벤트 허브 페이지의 렌더링 텍스트/HTML에서 promotionId 추출.
+  2) 각 프로모션 페이지를 열어 **렌더링된 본문 텍스트**를 읽고
+     - 우리 카드 유니버스(cg_seed.json/products.json)에 있는 카드명이 텍스트에 등장하면 매칭
+     - '최대 N만원' 등 금액을 추출 → reward_won
+  3) naver_seed.json 작성(스키마는 collector.py가 읽는 형식과 동일):
+        cards: { "카드명": {reward_won, reward_text, company, promotionId, url} }
+  4) 진단용 naver_raw.json 도 함께 저장(프로모션별 원본 텍스트). 1차 실행 후 매칭이 적으면
+     이 파일을 Claude에게 주면 파서를 그 구조에 맞게 확정한다.
+  5) --push 면 git add/commit/push (아정당 로컬 수집과 동일 패턴).
 
-동작:
-  1) 위 엔드포인트들을 호출해 **원본 응답을 naver_raw.json 으로 덤프**(필드 구조 확인용)
-  2) 가능한 범위에서 카드명↔(company/productId/promotionId)+리워드를 추출해 naver_seed.json 작성
-  3) (옵션) --push 로 git add/commit/push
+준비(최초 1회)
+  pip3 install playwright
+  python3 -m playwright install chromium
 
-준비:  pip3 install requests
-실행:
-  python3 collect_naver_local.py            # 수집 + 원본 덤프
-  python3 collect_naver_local.py --push     # 수집 + git push
-
-※ 1차 실행 후 naver_raw.json 을 Claude에게 주시면, 응답 구조에 맞춰 파서를 확정해 드립니다.
+실행
+  python3 collector/local_ajd/collect_naver_local.py            # 수집 + 진단 덤프
+  python3 collector/local_ajd/collect_naver_local.py --headed    # 브라우저 띄워 눈으로 확인
+  python3 collector/local_ajd/collect_naver_local.py --push      # 수집 + git push
 """
 import json, re, os, sys, subprocess, datetime
-import urllib.request, urllib.parse
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # collector/
+HERE = os.path.dirname(os.path.abspath(__file__))      # collector/local_ajd/
+BASE = os.path.dirname(HERE)                            # collector/
 SEED = os.path.join(BASE, "naver_seed.json")
-RAW  = os.path.join(os.path.dirname(os.path.abspath(__file__)), "naver_raw.json")
+RAW  = os.path.join(HERE, "naver_raw.json")
+
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
-H = {"User-Agent": UA, "Referer": "https://card.pay.naver.com/",
-     "Accept": "application/json, text/plain, */*", "X-Requested-With": "XMLHttpRequest"}
 
-EVENT_URLS = ["https://card.pay.naver.com/home/api/promotionsList?formedYn=y",
-              "https://card.pay.naver.com/home/api/event.json"]
-PRODUCTS_URLS = ["https://card.pay.naver.com/home/api/productsList"]
-PROMO = "https://card.pay.naver.com/home/promotion.json"
+HUB        = "https://card.pay.naver.com/home/promotion/event"
+PROMO_LIST = "https://card.pay.naver.com/home/api/promotionsList?formedYn=y"
+PROMO_PAGE = ("https://card.pay.naver.com/home/promotion"
+              "?promotionId={pid}&cardCompanyId={cc}&cardIssuerCode={ic}")
 
-def get(url, params=None, data=None):
-    if params: url = url + "?" + urllib.parse.urlencode(params)
-    body = json.dumps(data).encode() if data is not None else None
-    req = urllib.request.Request(url, data=body, headers=dict(H, **({"Content-Type":"application/json"} if data else {})))
-    with urllib.request.urlopen(req, timeout=20) as r:
-        t = r.read().decode("utf-8", "ignore")
-    try: return json.loads(t)
-    except Exception: return {"_nonjson": t[:500], "_status": "parse_fail"}
+# 카드사 코드 → 표기명 (reward_text 용). 미확인 코드는 렌더링 텍스트에서 보강된다.
+ISSUER = {"CCKM": "KB국민", "CCKB": "KB국민", "CCWR": "우리", "CCNH": "NH농협",
+          "CCLG": "롯데", "CCLO": "롯데", "CCSS": "삼성", "CCSH": "신한",
+          "CCHN": "하나", "CCBC": "비씨", "CCHD": "현대", "CCDI": "현대"}
 
-def deep_find(o, keyset):
-    """중첩 구조에서 keyset 중 하나라도 키로 가진 dict들을 수집."""
-    out = []
-    def w(x):
-        if isinstance(x, dict):
-            if any(k in x for k in keyset): out.append(x)
-            for v in x.values(): w(v)
-        elif isinstance(x, list):
-            for v in x: w(v)
-    w(o); return out
-
-def _nk(s): return re.sub(r"[^0-9a-z가-힣]", "", (s or "").lower())
+def _nk(s):  # 정규화(공백/기호 제거, 소문자)
+    return re.sub(r"[^0-9a-z가-힣]", "", (s or "").lower())
 
 def our_universe():
+    """우리 사이트가 다루는 카드명 집합 → {정규화명: 표기명}."""
     uni = {}
-    for fn, k in [("cg_seed.json","cards"),("products.json",None)]:
+    for fn, key in [("cg_seed.json", "cards"), ("products.json", None)]:
         try:
             data = json.load(open(os.path.join(BASE, fn), encoding="utf-8"))
-            rows = data.get("cards", []) if k else data
+            rows = data.get("cards", []) if key else data
             for r in rows:
-                nm = r[1] if isinstance(r, list) else r["name"]
-                uni[_nk(nm)] = nm
-        except Exception: pass
+                nm = r[1] if isinstance(r, list) else (r.get("name") if isinstance(r, dict) else None)
+                if nm:
+                    uni[_nk(nm)] = nm
+        except Exception:
+            pass
     return uni
 
+_AMT = re.compile(r"(?:최대\s*)?([0-9][0-9,]*)\s*만\s*원")
+_AMT_WON = re.compile(r"([0-9][0-9,]{3,})\s*원")
+
+NAVER_MAX = 1_000_000   # 안전장치(현실 상한). 헤드라인이 이를 넘으면 총행사규모 의심 → 버림.
+_HEAD = re.compile(r"최대\s*([0-9][0-9,.]*)\s*만원|([0-9][0-9,.]*)\s*만원\s*드려요")
+_ISS = re.compile(r"\n?\s*([가-힣A-Za-z]+(?:카드|은행))(?:가|이)\s*\n?\s*(?:최대|[0-9])")
+
+def headline_won(text):
+    """프로모션 헤드라인 '최대 N만원 드려요'(=네이버 표시 금액, 총행사규모 아님)를 원 단위로.
+    페이지 상단의 첫 '만원'이 헤드라인이다. 소수(72.5만원=725000)도 처리."""
+    m = _HEAD.search(text or "")
+    if not m:
+        return 0
+    g = m.group(1) or m.group(2)
+    try:
+        v = int(round(float(g.replace(",", "")) * 10000))
+    except Exception:
+        return 0
+    return v if 10000 <= v <= NAVER_MAX else 0
+
+def issuer_from_text(text):
+    """헤드라인 'XXX카드가/XXX은행이'에서 발급사명 추출(코드맵보다 정확. CCLG=신한 등 코드오류 회피)."""
+    m = _ISS.search(text or "")
+    return m.group(1) if m else ""
+
+def parse_promo_list_json(txt):
+    """promotionsList 응답(JSON 문자열)에서 (promotionId, cardCompanyId, cardIssuerCode) 추출."""
+    try:
+        j = json.loads(txt)
+    except Exception:
+        return []
+    out, seen = [], set()
+    def walk(x):
+        if isinstance(x, dict):
+            pid = x.get("promotionId")
+            if pid and str(pid) not in seen:
+                seen.add(str(pid))
+                out.append({"pid": str(pid),
+                            "cc": x.get("cardCompanyId") or x.get("companyId") or "",
+                            "ic": x.get("cardIssuerCode") or x.get("issuerCode") or
+                                  x.get("cardCompanyId") or ""})
+            for v in x.values(): walk(v)
+        elif isinstance(x, list):
+            for v in x: walk(v)
+    walk(j)
+    return out
+
 def main():
-    raw = {"as_of": datetime.date.today().isoformat(), "events": None, "products": [], "promotions": []}
-    # 1) 이벤트 목록
-    events = None
-    for u in EVENT_URLS:
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception:
+        print("Playwright 미설치. → pip3 install playwright && python3 -m playwright install chromium")
+        sys.exit(1)
+
+    uni = our_universe()
+    print(f"우리 카드 유니버스 {len(uni)}개 로드")
+    headed = "--headed" in sys.argv
+    raw = {"as_of": datetime.date.today().isoformat(), "promos": [], "events": []}
+    cards = {}
+
+    with sync_playwright() as pw:
+        b = pw.chromium.launch(headless=not headed)
+        ctx = b.new_context(user_agent=UA, locale="ko-KR",
+                            viewport={"width": 1280, "height": 1200})
+        pg = ctx.new_page()
+
+        # 0) 허브 먼저 열어 쿠키/세션 확보
         try:
-            j = get(u);
-            if isinstance(j, (list, dict)) and "_nonjson" not in (j if isinstance(j,dict) else {}):
-                events = j; raw["events_url"] = u; break
+            pg.goto(HUB, wait_until="networkidle", timeout=40000)
+            pg.wait_for_timeout(1500)
+            raw["hub_text"] = pg.inner_text("body")[:4000]
         except Exception as e:
-            raw.setdefault("event_err", []).append(f"{u}: {e}")
-    raw["events"] = events
+            raw["hub_err"] = str(e)[:120]
 
-    # 이벤트에서 (promotionId, cardCompanyId, cardIssuerCode) 추출
-    promos = deep_find(events or {}, ["promotionId"])
-    seen = set(); plist = []
-    for p in promos:
-        pid = str(p.get("promotionId") or "")
-        if not pid or pid in seen: continue
-        seen.add(pid)
-        plist.append({"promotionId": pid,
-                      "cardCompanyId": p.get("cardCompanyId") or p.get("companyId"),
-                      "cardIssuerCode": p.get("cardIssuerCode") or p.get("issuerCode")})
-    raw["promo_ids"] = plist[:30]
-
-    # 2) 각 프로모션의 대상 카드 + 리워드
-    uni = our_universe(); cards = {}
-    for pr in plist[:30]:
-        for pu in PRODUCTS_URLS:
-            for call in ("get", "post"):
-                try:
-                    j = get(pu, params=pr) if call=="get" else get(pu, data=pr)
-                    if isinstance(j, dict) and "_nonjson" in j: continue
-                    raw["products"].append({"promotionId": pr["promotionId"], "resp_keys": list(j.keys()) if isinstance(j,dict) else "list"})
-                    # 카드 추출
-                    for c in deep_find(j, ["productId"]):
-                        nm = c.get("cardName") or c.get("name") or c.get("productName")
-                        prod = str(c.get("productId") or "")
-                        if not nm or not prod: continue
-                        ourname = uni.get(_nk(nm))
-                        if ourname:
-                            cards[ourname] = {"company": pr.get("cardCompanyId"), "issuer": pr.get("cardIssuerCode"),
-                                              "productId": prod, "promotionId": pr["promotionId"]}
-                    break
-                except Exception as e:
-                    raw.setdefault("products_err", []).append(f"{pr['promotionId']} {call}: {str(e)[:60]}")
-            else: continue
-            break
-        # 프로모션 리워드
+        # 1) 프로모션 목록 (브라우저 컨텍스트에서 API JSON 로드)
+        promos = []
         try:
-            pj = get(PROMO, params=pr)
-            raw["promotions"].append({"promotionId": pr["promotionId"], "keys": list(pj.keys()) if isinstance(pj,dict) else "list",
-                                      "sample": json.dumps(pj, ensure_ascii=False)[:400]})
+            pg.goto(PROMO_LIST, wait_until="domcontentloaded", timeout=40000)
+            pg.wait_for_timeout(800)
+            txt = pg.inner_text("body")
+            raw["promo_list_sample"] = txt[:800]
+            promos = parse_promo_list_json(txt)
         except Exception as e:
-            raw.setdefault("promo_err", []).append(str(e)[:60])
+            raw["promo_list_err"] = str(e)[:120]
+        # 폴백: 허브 텍스트/HTML에서 promotionId 패턴 긁기
+        if not promos:
+            html = ""
+            try: html = pg.content()
+            except Exception: pass
+            for pid in dict.fromkeys(re.findall(r"promotionId[\"'=:\s]+([0-9]{14,})", html)):
+                promos.append({"pid": pid, "cc": "", "ic": ""})
+        raw["promo_count"] = len(promos)
+        print(f"프로모션 {len(promos)}건 발견")
 
+        # 2) 각 프로모션 페이지 렌더링 텍스트 → 카드 매칭 + 금액
+        for i, pr in enumerate(promos[:60]):
+            url = PROMO_PAGE.format(pid=pr["pid"], cc=pr["cc"], ic=pr["ic"] or pr["cc"])
+            try:
+                pg.goto(url, wait_until="networkidle", timeout=40000)
+                pg.wait_for_timeout(1200)
+                t = pg.inner_text("body")
+            except Exception as e:
+                raw["events"].append({"pid": pr["pid"], "err": str(e)[:80]})
+                continue
+            won = headline_won(t)
+            iss = issuer_from_text(t) or ISSUER.get(pr["cc"], "")
+            # 카드 매칭: '대상 카드로' ~ '혜택상세' 구간만(그 뒤 푸터의 제휴 카드사 목록 오매칭 차단)
+            region = t.split("혜택상세")[0]
+            cut = region.find("대상 카드로")
+            if cut != -1:
+                region = region[cut:]
+            nt = _nk(region)
+            hit = []
+            for nk, name in uni.items():
+                if len(nk) >= 4 and nk in nt:
+                    hit.append(name)
+            iss_disp = iss[:-2] if iss.endswith("카드") else iss   # '신한카드'→'신한'
+            rtext = (f"최대 {won/10000:.1f}".rstrip("0").rstrip(".") + "만원" if won else "이벤트") + \
+                    (f" (네이버페이 {iss_disp}카드 이벤트)" if iss_disp else " (네이버페이 카드 이벤트)")
+            for name in hit:
+                # 더 큰 금액으로만 갱신(같은 카드가 여러 프로모션에 걸칠 때)
+                if name not in cards or won > cards[name]["reward_won"]:
+                    cards[name] = {"reward_won": won, "reward_text": rtext,
+                                   "company": pr["cc"], "promotionId": pr["pid"], "url": url}
+            raw["events"].append({"pid": pr["pid"], "cc": pr["cc"], "won": won,
+                                  "matched": hit, "text": t[:600]})
+            if (i + 1) % 10 == 0:
+                print(f"  진행 {i+1}/{min(len(promos),60)}  (누적 매칭 {len(cards)})")
+
+        b.close()
+
+    # 3) 저장
     json.dump(raw, open(RAW, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    json.dump({"as_of": datetime.date.today().strftime("%Y-%m"), "cards": cards},
-              open(SEED, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"원본 덤프: {RAW}")
+    out = {"as_of": datetime.date.today().strftime("%Y-%m"),
+           "source": "네이버페이 거주지 Playwright 렌더링 텍스트 수집(collect_naver_local.py v2)",
+           "cards": cards}
+    json.dump(out, open(SEED, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"\n진단 덤프 : {RAW}")
     print(f"네이버 시드: {SEED}  (매칭 {len(cards)}건)")
-    print("※ naver_raw.json 을 Claude에게 주시면 파서를 확정합니다.")
+    if len(cards) < 5:
+        print("※ 매칭이 적습니다. naver_raw.json 을 Claude에게 주시면 페이지 구조에 맞게 파서를 확정합니다.")
 
     if "--push" in sys.argv:
         try:
-            subprocess.run(["git","-C",BASE,"add","naver_seed.json","local_ajd/naver_raw.json"], check=True)
-            subprocess.run(["git","-C",BASE,"commit","-m",f"naver local collect {datetime.date.today()}"], check=True)
-            subprocess.run(["git","-C",BASE,"push"], check=True)
-            print("git push 완료")
+            subprocess.run(["git", "-C", BASE, "add", "naver_seed.json", "local_ajd/naver_raw.json"], check=True)
+            subprocess.run(["git", "-C", BASE, "commit", "-m",
+                            f"naver local collect (rendered) {datetime.date.today()}"], check=True)
+            subprocess.run(["git", "-C", BASE, "push"], check=True)
+            print("git push 완료 → Cloudflare 자동 배포")
         except subprocess.CalledProcessError as e:
             print("git 실패(변경 없음/인증 필요):", e)
 

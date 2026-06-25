@@ -20,7 +20,7 @@ from bronto import parse_ajd_rsc                             # 아정당
 from mamenchi import parse_naver                             # 네이버페이
 
 # ---------- 라이브 수집(Actions용; requests 필요) ----------
-def fetch(url, headers=None):
+def fetch(url, headers=None, timeout=20):
     import requests
     h={"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
        "Accept":"application/json, text/plain, */*","Accept-Language":"ko-KR,ko;q=0.9"}
@@ -29,7 +29,7 @@ def fetch(url, headers=None):
     if "banksalad.com" in url or "card-lounge.toss.im" in url:
         h["Accept"]="text/html,application/xhtml+xml,*/*"
     if headers: h.update(headers)
-    r = requests.get(url, headers=h, timeout=20)
+    r = requests.get(url, headers=h, timeout=timeout)
     r.raise_for_status(); return r
 
 def collect_platform(plat, info):
@@ -123,17 +123,32 @@ SITE = os.path.join(os.path.dirname(BASE), "site")
 def export_json(con):
     rows=con.cursor().execute("SELECT id,name,issuer FROM card_product ORDER BY id").fetchall()  # 먼저 materialize(커서 재사용 버그 방지)
     out=[]; c=con.cursor()
+    # 이미지 폴백 맵: cards.json(빌드 카탈로그·toss CDN 등 안정 443 URL)에서 이름→이미지.
+    # 카드고릴라 :8080 card_img가 실패(데이터센터 timeout)해도 저장된 URL로 플레이트를 채운다.
+    CARDS_IMG={}
+    try:
+        _cj=json.load(open(os.path.join(SITE,"cards.json"),encoding="utf-8"))
+        def _wimg(o):
+            if isinstance(o,dict):
+                if o.get("name") and o.get("img"): CARDS_IMG[_nk(o["name"])]=o["img"]
+                for v in o.values(): _wimg(v)
+            elif isinstance(o,list):
+                for v in o: _wimg(v)
+        _wimg(_cj); print(f"이미지 폴백맵(cards.json) {len(CARDS_IMG)}개")
+    except Exception as _e: print("cards.json 이미지맵 로드 실패:", str(_e)[:60])
     for pid,name,issuer in rows:
         maps={r[0]:{"id":r[1],"url":r[2]} for r in c.execute("SELECT platform,platform_product_id,url FROM product_platform WHERE card_product_id=?",(pid,)).fetchall()}
         evs=[]
         for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall():
             mw,bw,comps=parse_breakdown(r[1],r[2])   # reward_text→메인/부가 분해
+            ov=BREAKDOWN.get((name,r[0]))            # 거주지 수집 이벤트상세 분해값 우선
+            if ov: mw,bw=ov["main"],ov["bonus"]
             e={"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4],
                "main_won":mw,"bonus_won":bw}
             if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
             evs.append(e)
         cgid=str((maps.get("cardgorilla") or {}).get("id") or "")
-        img=CG_IMG.get(cgid)
+        img=CG_IMG.get(cgid) or CARDS_IMG.get(_nk(name))   # 8080 실패 시 cards.json 저장 이미지로 폴백
         out.append({"id":pid,"name":name,"issuer":issuer,"img":img,"platforms":maps,"events":evs})
     os.makedirs(SITE,exist_ok=True)
     MONTH="2026-06"
@@ -209,25 +224,28 @@ def _cg_catalog():
     """idx→{name,issuer,img}. cards?type=CBK&is_live=true 전체 카탈로그.
     :8080 응답엔 card_img(플레이트 이미지)가 포함됨 → 우선 사용, 실패 시 무포트 폴백."""
     cat={}
+    # cards 카탈로그(card_img 포함)는 응답이 커서 20s로는 타임아웃 → 60s + 재시도. :8080 우선(card_img 제공).
     for url in ("https://api.card-gorilla.com:8080/v1/cards?type=CBK&is_live=true",
                 "https://api.card-gorilla.com/v1/cards?type=CBK&is_live=true"):
-        try:
-            cj=fetch(url).json()
-            for c in _cards_from(cj):
-                if isinstance(c,dict) and c.get("idx"):
-                    corp=c.get("corp") or {}
-                    cat[str(c["idx"])]={"name":c.get("name"),
-                                        "issuer":corp.get("name") if isinstance(corp,dict) else None,
-                                        "img":(c.get("card_img") or {}).get("url")}   # 카드 플레이트 이미지(CloudFront)
-            n_img=sum(1 for v in cat.values() if v.get("img"))
-            print(f"catalog({url.split('//')[1][:30]}) → {len(cat)} cards, {n_img} with img")
-            if cat: return cat
-        except Exception as e:
-            print("catalog err", url[:40], e)
+        for attempt in range(3):
+            try:
+                cj=fetch(url, timeout=60).json()
+                for c in _cards_from(cj):
+                    if isinstance(c,dict) and c.get("idx"):
+                        corp=c.get("corp") or {}
+                        cat[str(c["idx"])]={"name":c.get("name"),
+                                            "issuer":corp.get("name") if isinstance(corp,dict) else None,
+                                            "img":(c.get("card_img") or {}).get("url")}   # 카드 플레이트 이미지(CloudFront)
+                n_img=sum(1 for v in cat.values() if v.get("img"))
+                print(f"catalog({url.split('//')[1][:30]}) → {len(cat)} cards, {n_img} with img (try {attempt+1})")
+                if cat: return cat
+            except Exception as e:
+                print("catalog err", url[:40], "try", attempt+1, str(e)[:60])
     return cat
 
 CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
 CG_IMG={}      # cardgorilla_id → 카드 플레이트 이미지 URL(상품 메타 매핑)
+BREAKDOWN={}   # (카드명, 플랫폼) → {"main":원, "bonus":원}  거주지 수집 이벤트상세 분해값(메인/부가 override)
 
 def discover_products(limit=400):
     """카드고릴라 events?type=CBK(현재 진행 캐시백 이벤트) → 매핑 카드 자동 발굴.
@@ -323,15 +341,23 @@ if __name__=="__main__":
     # 네이버: 캡처/로컬 수집 결과 naver_seed.json 주입(네이버는 데이터센터 404 → 라이브 호출 없이 병합)
     try:
         nv=json.load(open(os.path.join(BASE,"naver_seed.json"),encoding="utf-8")).get("cards",{})
-        _bn={_nk(p["name"]):p for p in products}; _nn=0
+        _bn={_nk(p["name"]):p for p in products}; _nn=0; _nskip=0
+        NAVER_MAX=1_000_000   # 1인 캐시백 현실 상한. 초과액은 '총 행사규모/최대적립한도' 마케팅 수치로 보고 금액 비표시
         for nm,info in nv.items():
             p=_bn.get(_nk(nm))
-            if not p or not info.get("reward_won"): continue
-            p.setdefault("platforms",{})["naver"]={"id":info.get("productId",""),"url":info.get("url","")}
-            injected[(p["name"],"naver")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
-                                           "period_start":None,"period_end":None,"url":info.get("url","")}
-            _nn+=1
-        if _nn: print(f"네이버 주입 {_nn}건")
+            if not p: continue
+            rw=info.get("reward_won") or 0
+            rtext=info.get("reward_text")
+            if rw>NAVER_MAX:                       # 3600만원 등 비현실 금액 → 금액 숨기고 이벤트만 표기
+                rw=0; rtext="네이버페이 카드 이벤트"; _nskip+=1
+            # 네이버 상품 페이지 링크는 항상 부착(금액 신뢰 여부와 무관)
+            if info.get("url"):
+                p.setdefault("platforms",{})["naver"]={"id":info.get("productId",""),"url":info.get("url","")}
+            if rw:                                  # 신뢰 가능한 금액만 교차비교 이벤트로 주입
+                injected[(p["name"],"naver")]={"reward_won":rw,"reward_text":rtext,
+                                               "period_start":None,"period_end":None,"url":info.get("url","")}
+                _nn+=1
+        if _nn or _nskip: print(f"네이버 주입 {_nn}건 (금액 비현실 제외 {_nskip}건)")
     except FileNotFoundError: pass
     except Exception as e: print("naver seed err", e)
     # 뱅크샐러드: 거주지 렌더링 텍스트로 보정한 banksalad_seed.json 주입(cashbackAmountKrw0f 파싱 오류 override)
@@ -347,6 +373,8 @@ if __name__=="__main__":
                 injected[(p["name"],"banksalad")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
                                                    "period_start":None,"period_end":None,
                                                    "url":"https://www.banksalad.com/product/cards/"+str((p.get("platforms",{}).get("banksalad") or {}).get("id") or "")}
+                if info.get("main_won") is not None or info.get("bonus_won"):
+                    BREAKDOWN[(p["name"],"banksalad")]={"main":info.get("main_won") or 0,"bonus":info.get("bonus_won") or 0}
             _bn2+=1
         if _bn2: print(f"뱅샐 보정 주입 {_bn2}건")
     except FileNotFoundError: pass
