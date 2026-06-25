@@ -53,6 +53,18 @@ MERCHANTS = [
     {"plat": "KB국민카드 행사", "domain": "kbcard.com", "gubun": "온라인", "src": "issuer",
      "url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076"},
 ]
+# ★ 결제처 전체 목록은 collector/discount_sources.json(레지스트리)에서 읽는다(43개 결제처).
+#   위 MERCHANTS는 레지스트리가 없을 때의 폴백. 결제처 추가/수정은 discount_sources.json에서.
+REGISTRY = os.path.join(BASE, "discount_sources.json")
+
+def _load_registry():
+    try:
+        ms = json.load(open(REGISTRY, encoding="utf-8")).get("merchants") or []
+        if ms:
+            return ms
+    except Exception as e:
+        print("[프테라노돈] 레지스트리 로드 실패, 폴백 사용:", str(e)[:60])
+    return MERCHANTS
 
 # 할인을 식별하는 키워드
 ISSUERS = ["삼성카드", "현대카드", "신한카드", "KB국민카드", "국민카드", "롯데카드", "우리카드",
@@ -141,7 +153,9 @@ def collect():
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
         page = browser.new_page(user_agent=UA)
-        for m in MERCHANTS:
+        merchants = _load_registry()
+        print(f"[프테라노돈] 결제처 {len(merchants)}곳 수집 시작")
+        for m in merchants:
             try:
                 page.goto(m["url"], wait_until="networkidle", timeout=35000)
                 page.wait_for_timeout(1200)
