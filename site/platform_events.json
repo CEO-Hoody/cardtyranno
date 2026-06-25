@@ -31,15 +31,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "banksalad",
      "reward_text": "최대 84만원 캐시백",
      "reward_won": 840000,
@@ -104,15 +95,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "banksalad",
      "reward_text": "최대 84만원 캐시백",
      "reward_won": 840000,
@@ -176,15 +158,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "57.9만원 혜택",
@@ -306,15 +279,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "banksalad",
      "reward_text": "최대 84만원 캐시백",
      "reward_won": 840000,
@@ -370,15 +334,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 1500만원 (네이버페이 삼성카드 이벤트)",
-     "reward_won": 15000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 15000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "49.4만원 혜택",
@@ -437,15 +392,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 1500만원 (네이버페이 삼성카드 이벤트)",
-     "reward_won": 15000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590508&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 15000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "117만원 캐시백",
      "reward_won": 1170000,
@@ -476,15 +422,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260528001782191066&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "68.5만원 캐시백",
@@ -524,15 +461,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 KB국민카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "86만원 캐시백",
@@ -603,15 +531,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "78만원 혜택",
      "reward_won": 780000,
@@ -647,15 +566,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "67만원 혜택",
@@ -878,15 +788,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 하나카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=044",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "57만원 혜택",
      "reward_won": 570000,
@@ -973,15 +874,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 KB국민카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "86만원 캐시백",
      "reward_won": 860000,
@@ -1008,15 +900,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590520&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "60만원 캐시백",
@@ -1048,15 +931,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3600만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 36000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 36000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "73만원 캐시백",
@@ -1094,15 +968,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 3600만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 36000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 36000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "79만원 캐시백",
      "reward_won": 790000,
@@ -1129,15 +994,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3600만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 36000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 36000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "76만원 캐시백",
@@ -1169,15 +1025,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3600만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 36000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 36000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "89만원 캐시백",
@@ -2420,15 +2267,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 3600만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 36000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 36000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "H.Point 1만P 증정",
      "reward_won": 10000,
@@ -2999,15 +2837,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "78.9만원 혜택",
      "reward_won": 789000,
@@ -3034,15 +2863,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 1500만원 (네이버페이 삼성카드 이벤트)",
-     "reward_won": 15000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 15000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "1만원 캐시백",
@@ -3078,15 +2898,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
     {
      "platform": "ajungdang",
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
@@ -3492,15 +3303,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "ajungdang",
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "reward_won": 660000,
@@ -3541,15 +3343,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "ajungdang",
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "reward_won": 660000,
@@ -3586,15 +3379,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 1200만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 12000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776761&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 12000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "25만원 캐시백",
      "reward_won": 250000,
@@ -3621,15 +3405,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 2400만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 24000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 24000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "50만원 캐시백",
@@ -3661,15 +3436,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "57.9만원 혜택",
@@ -3711,15 +3477,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "75만원 혜택",
      "reward_won": 750000,
@@ -3750,15 +3507,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "75만원 혜택",
@@ -3833,15 +3581,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "75만원 혜택",
      "reward_won": 750000,
@@ -3872,15 +3611,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
     {
      "platform": "ajungdang",
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
@@ -3940,15 +3670,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "34.9만원 혜택",
@@ -4139,15 +3860,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "78.9만원 혜택",
      "reward_won": 789000,
@@ -4201,15 +3913,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "78만원 혜택",
@@ -4270,15 +3973,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "34.9만원 혜택",
      "reward_won": 349000,
@@ -4333,15 +4027,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "78만원 혜택",
      "reward_won": 780000,
@@ -4377,15 +4062,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 1000만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 10000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 10000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "78만원 혜택",
@@ -4487,15 +4163,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 KB국민카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "86만원 캐시백",
      "reward_won": 860000,
@@ -4532,15 +4199,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "45만원 캐시백",
      "reward_won": 450000,
@@ -4568,15 +4226,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "45만원 캐시백",
      "reward_won": 450000,
@@ -4603,15 +4252,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "45만원 캐시백",
@@ -4644,15 +4284,6 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 500만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 5000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 5000000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "78.9만원 혜택",
      "reward_won": 789000,
@@ -4679,15 +4310,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 KB국민카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "86만원 캐시백",
@@ -4738,15 +4360,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 3000만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 30000000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 30000000,
-     "bonus_won": 0
-    },
     {
      "platform": "cardgorilla",
      "reward_text": "67만원 혜택",
