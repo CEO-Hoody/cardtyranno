@@ -1,6 +1,6 @@
 {
  "month": "2026-06",
- "updated": "2026-06-24",
+ "updated": "2026-06-25",
  "issuers": {
   "신한카드": {
    "banksalad": 840000,
@@ -39,19 +39,20 @@
    "naver": 830000,
    "toss": 810000
   },
-  "주유할인": {
-   "cardgorilla": 860000
-  },
   "하나카드": {
    "cardgorilla": 570000
+  },
+  "주유할인": {
+   "ajungdang": 205000,
+   "cardgorilla": 860000,
+   "naver": 175000
   },
   "추가캐시백": {
    "cardgorilla": 124000
   },
   "NH농협카드": {
    "cardgorilla": 175000,
-   "ajungdang": 205000,
-   "naver": 175000
+   "ajungdang": 205000
   },
   "BC 바로카드": {
    "cardgorilla": 43000
@@ -199,38 +200,6 @@
    "max": 611000
   },
   {
-   "name": "신한카드 Discount Plan+",
-   "issuer": "주유할인",
-   "platforms": {
-    "cardgorilla": 789000
-   },
-   "max": 789000
-  },
-  {
-   "name": "카드의정석 I&U+",
-   "issuer": "주유할인",
-   "platforms": {
-    "cardgorilla": 750000
-   },
-   "max": 750000
-  },
-  {
-   "name": "LOCA LIKIT Play",
-   "issuer": "주유할인",
-   "platforms": {
-    "cardgorilla": 590000
-   },
-   "max": 590000
-  },
-  {
-   "name": "굿데이카드",
-   "issuer": "주유할인",
-   "platforms": {
-    "cardgorilla": 860000
-   },
-   "max": 860000
-  },
-  {
    "name": "하나 나라사랑카드",
    "issuer": "하나카드",
    "platforms": {
@@ -247,20 +216,14 @@
    "max": 120000
   },
   {
-   "name": "에너지플러스 현대카드",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 600000
-   },
-   "max": 600000
-  },
-  {
-   "name": "I-ALL",
+   "name": "올바른 FLEX 카드",
    "issuer": "주유할인",
    "platforms": {
-    "cardgorilla": 125000
+    "ajungdang": 205000,
+    "cardgorilla": 175000,
+    "naver": 175000
    },
-   "max": 125000
+   "max": 205000
   },
   {
    "name": "트래블로그+(플러스) 신용카드",
@@ -277,6 +240,22 @@
     "cardgorilla": 124000
    },
    "max": 124000
+  },
+  {
+   "name": "굿데이카드",
+   "issuer": "주유할인",
+   "platforms": {
+    "cardgorilla": 860000
+   },
+   "max": 860000
+  },
+  {
+   "name": "에너지플러스 현대카드",
+   "issuer": "현대카드",
+   "platforms": {
+    "cardgorilla": 600000
+   },
+   "max": 600000
   },
   {
    "name": "대한항공카드 060",
@@ -913,16 +892,6 @@
    "max": 10000
   },
   {
-   "name": "올바른 FLEX 카드",
-   "issuer": "NH농협카드",
-   "platforms": {
-    "ajungdang": 205000,
-    "cardgorilla": 175000,
-    "naver": 175000
-   },
-   "max": 205000
-  },
-  {
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
    "platforms": {
@@ -934,6 +903,14 @@
   },
   {
    "name": "LOCA LIKIT Eat",
+   "issuer": "롯데카드",
+   "platforms": {
+    "cardgorilla": 590000
+   },
+   "max": 590000
+  },
+  {
+   "name": "LOCA LIKIT Play",
    "issuer": "롯데카드",
    "platforms": {
     "cardgorilla": 590000
@@ -974,6 +951,14 @@
     "ajungdang": 850000
    },
    "max": 860000
+  },
+  {
+   "name": "I-ALL",
+   "issuer": "IBK기업은행",
+   "platforms": {
+    "cardgorilla": 125000
+   },
+   "max": 125000
   },
   {
    "name": "신한카드 플리 체크(산리오캐릭터즈)",
@@ -1053,6 +1038,14 @@
   },
   {
    "name": "카드의정석 SHOPPING+",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 750000
+   },
+   "max": 750000
+  },
+  {
+   "name": "카드의정석 I&U+",
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 750000
@@ -1148,6 +1141,14 @@
     "ajungdang": 540000
    },
    "max": 579000
+  },
+  {
+   "name": "신한카드 Discount Plan+",
+   "issuer": "신한카드",
+   "platforms": {
+    "cardgorilla": 789000
+   },
+   "max": 789000
   },
   {
    "name": "현대카드 ZERO Up(할인형)",
