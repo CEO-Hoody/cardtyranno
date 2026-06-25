@@ -123,6 +123,19 @@ SITE = os.path.join(os.path.dirname(BASE), "site")
 def export_json(con):
     rows=con.cursor().execute("SELECT id,name,issuer FROM card_product ORDER BY id").fetchall()  # 먼저 materialize(커서 재사용 버그 방지)
     out=[]; c=con.cursor()
+    # 이미지 폴백 맵: cards.json(빌드 카탈로그·toss CDN 등 안정 443 URL)에서 이름→이미지.
+    # 카드고릴라 :8080 card_img가 실패(데이터센터 timeout)해도 저장된 URL로 플레이트를 채운다.
+    CARDS_IMG={}
+    try:
+        _cj=json.load(open(os.path.join(SITE,"cards.json"),encoding="utf-8"))
+        def _wimg(o):
+            if isinstance(o,dict):
+                if o.get("name") and o.get("img"): CARDS_IMG[_nk(o["name"])]=o["img"]
+                for v in o.values(): _wimg(v)
+            elif isinstance(o,list):
+                for v in o: _wimg(v)
+        _wimg(_cj); print(f"이미지 폴백맵(cards.json) {len(CARDS_IMG)}개")
+    except Exception as _e: print("cards.json 이미지맵 로드 실패:", str(_e)[:60])
     for pid,name,issuer in rows:
         maps={r[0]:{"id":r[1],"url":r[2]} for r in c.execute("SELECT platform,platform_product_id,url FROM product_platform WHERE card_product_id=?",(pid,)).fetchall()}
         evs=[]
@@ -135,7 +148,7 @@ def export_json(con):
             if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
             evs.append(e)
         cgid=str((maps.get("cardgorilla") or {}).get("id") or "")
-        img=CG_IMG.get(cgid)
+        img=CG_IMG.get(cgid) or CARDS_IMG.get(_nk(name))   # 8080 실패 시 cards.json 저장 이미지로 폴백
         out.append({"id":pid,"name":name,"issuer":issuer,"img":img,"platforms":maps,"events":evs})
     os.makedirs(SITE,exist_ok=True)
     MONTH="2026-06"
