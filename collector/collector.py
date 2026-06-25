@@ -326,15 +326,23 @@ if __name__=="__main__":
     # 네이버: 캡처/로컬 수집 결과 naver_seed.json 주입(네이버는 데이터센터 404 → 라이브 호출 없이 병합)
     try:
         nv=json.load(open(os.path.join(BASE,"naver_seed.json"),encoding="utf-8")).get("cards",{})
-        _bn={_nk(p["name"]):p for p in products}; _nn=0
+        _bn={_nk(p["name"]):p for p in products}; _nn=0; _nskip=0
+        NAVER_MAX=1_000_000   # 1인 캐시백 현실 상한. 초과액은 '총 행사규모/최대적립한도' 마케팅 수치로 보고 금액 비표시
         for nm,info in nv.items():
             p=_bn.get(_nk(nm))
-            if not p or not info.get("reward_won"): continue
-            p.setdefault("platforms",{})["naver"]={"id":info.get("productId",""),"url":info.get("url","")}
-            injected[(p["name"],"naver")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
-                                           "period_start":None,"period_end":None,"url":info.get("url","")}
-            _nn+=1
-        if _nn: print(f"네이버 주입 {_nn}건")
+            if not p: continue
+            rw=info.get("reward_won") or 0
+            rtext=info.get("reward_text")
+            if rw>NAVER_MAX:                       # 3600만원 등 비현실 금액 → 금액 숨기고 이벤트만 표기
+                rw=0; rtext="네이버페이 카드 이벤트"; _nskip+=1
+            # 네이버 상품 페이지 링크는 항상 부착(금액 신뢰 여부와 무관)
+            if info.get("url"):
+                p.setdefault("platforms",{})["naver"]={"id":info.get("productId",""),"url":info.get("url","")}
+            if rw:                                  # 신뢰 가능한 금액만 교차비교 이벤트로 주입
+                injected[(p["name"],"naver")]={"reward_won":rw,"reward_text":rtext,
+                                               "period_start":None,"period_end":None,"url":info.get("url","")}
+                _nn+=1
+        if _nn or _nskip: print(f"네이버 주입 {_nn}건 (금액 비현실 제외 {_nskip}건)")
     except FileNotFoundError: pass
     except Exception as e: print("naver seed err", e)
     # 뱅크샐러드: 거주지 렌더링 텍스트로 보정한 banksalad_seed.json 주입(cashbackAmountKrw0f 파싱 오류 override)
