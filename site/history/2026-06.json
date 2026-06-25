@@ -24,7 +24,8 @@
   "삼성카드": {
    "cardgorilla": 1170000,
    "banksalad": 230000,
-   "ajungdang": 611000
+   "ajungdang": 611000,
+   "naver": 1000000
   },
   "현대카드": {
    "cardgorilla": 890000,
@@ -39,19 +40,10 @@
   "하나카드": {
    "cardgorilla": 570000
   },
-  "주유할인": {
+  "NH농협카드": {
    "naver": 400000,
    "ajungdang": 205000,
-   "cardgorilla": 860000
-  },
-  "추가캐시백": {
-   "naver": 1000000,
-   "cardgorilla": 124000
-  },
-  "NH농협카드": {
-   "cardgorilla": 175000,
-   "naver": 400000,
-   "ajungdang": 205000
+   "cardgorilla": 175000
   },
   "BC 바로카드": {
    "cardgorilla": 43000
@@ -214,7 +206,7 @@
   },
   {
    "name": "올바른 FLEX 카드",
-   "issuer": "주유할인",
+   "issuer": "NH농협카드",
    "platforms": {
     "naver": 400000,
     "ajungdang": 205000,
@@ -232,7 +224,7 @@
   },
   {
    "name": "THE iD. 1st",
-   "issuer": "추가캐시백",
+   "issuer": "삼성카드",
    "platforms": {
     "naver": 1000000,
     "cardgorilla": 124000
@@ -241,7 +233,7 @@
   },
   {
    "name": "굿데이카드",
-   "issuer": "주유할인",
+   "issuer": "KB국민카드",
    "platforms": {
     "cardgorilla": 860000
    },
@@ -289,7 +281,7 @@
    "max": 890000
   },
   {
-   "name": "현대카드 ZERO Up",
+   "name": "현대카드 ZERO Up(할인형)",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 30000
@@ -297,7 +289,31 @@
    "max": 30000
   },
   {
-   "name": "현대카드MY BUSINESS",
+   "name": "현대카드 ZERO Up(포인트형)",
+   "issuer": "현대카드",
+   "platforms": {
+    "cardgorilla": 30000
+   },
+   "max": 30000
+  },
+  {
+   "name": "현대카드MY BUSINESS M F&B",
+   "issuer": "현대카드",
+   "platforms": {
+    "cardgorilla": 450000
+   },
+   "max": 450000
+  },
+  {
+   "name": "현대카드MY BUSINESS M Retail",
+   "issuer": "현대카드",
+   "platforms": {
+    "cardgorilla": 450000
+   },
+   "max": 450000
+  },
+  {
+   "name": "현대카드MY BUSINESS M E-seller",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 450000
@@ -377,7 +393,7 @@
    "max": 30000
   },
   {
-   "name": "올바른 NEW HAVE 카드",
+   "name": "올바른 NEW HAVE카드",
    "issuer": "NH농협카드",
    "platforms": {
     "cardgorilla": 12000
@@ -409,7 +425,7 @@
    "max": 13000
   },
   {
-   "name": "별다줄 카드",
+   "name": "별다줄카드",
    "issuer": "NH농협카드",
    "platforms": {
     "cardgorilla": 14000
@@ -417,7 +433,7 @@
    "max": 14000
   },
   {
-   "name": "NH1961 카드",
+   "name": "NH1961카드",
    "issuer": "NH농협카드",
    "platforms": {
     "cardgorilla": 14000
@@ -441,7 +457,7 @@
    "max": 17000
   },
   {
-   "name": "삼성카드 iD SELECT 2종",
+   "name": "삼성 iD SELECT ON 카드",
    "issuer": "삼성카드",
    "platforms": {
     "cardgorilla": 494000
@@ -473,7 +489,7 @@
    "max": 559000
   },
   {
-   "name": "현대카드 O",
+   "name": "현대카드O",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 15000
@@ -481,7 +497,7 @@
    "max": 15000
   },
   {
-   "name": "현대카드 S",
+   "name": "현대카드S",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 15000
@@ -489,7 +505,7 @@
    "max": 15000
   },
   {
-   "name": "현대카드 D",
+   "name": "현대카드D",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 15000
@@ -497,7 +513,7 @@
    "max": 15000
   },
   {
-   "name": "현대카드 H",
+   "name": "현대카드H",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 15000
@@ -505,7 +521,7 @@
    "max": 15000
   },
   {
-   "name": "현대카드 T",
+   "name": "현대카드T",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 15000
@@ -529,7 +545,7 @@
    "max": 30000
   },
   {
-   "name": "국민행복",
+   "name": "롯데 국민행복카드",
    "issuer": "롯데카드",
    "platforms": {
     "cardgorilla": 130000
@@ -562,7 +578,7 @@
    "max": 500000
   },
   {
-   "name": "삼성 모니모A카드",
+   "name": "모니모A 카드",
    "issuer": "삼성카드",
    "platforms": {
     "cardgorilla": 10000
@@ -570,7 +586,7 @@
    "max": 10000
   },
   {
-   "name": "삼성 taptap Drive",
+   "name": "taptap DRIVE",
    "issuer": "삼성카드",
    "platforms": {
     "cardgorilla": 10000
@@ -578,7 +594,7 @@
    "max": 10000
   },
   {
-   "name": "롯데멤버스 2종",
+   "name": "롯데멤버스 카드 프리미엄",
    "issuer": "롯데카드",
    "platforms": {
     "cardgorilla": 200000
@@ -586,15 +602,15 @@
    "max": 200000
   },
   {
-   "name": "LOCA 365",
+   "name": "롯데멤버스 카드",
    "issuer": "롯데카드",
    "platforms": {
-    "cardgorilla": 640000
+    "cardgorilla": 200000
    },
-   "max": 640000
+   "max": 200000
   },
   {
-   "name": "KB국민카드 5종",
+   "name": "KB NEED Pay 카드",
    "issuer": "KB국민카드",
    "platforms": {
     "cardgorilla": 860000
@@ -602,23 +618,87 @@
    "max": 860000
   },
   {
-   "name": "IBK기업은행 4종",
+   "name": "KB YOU Prime 카드",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "cardgorilla": 860000,
+    "ajungdang": 850000
+   },
+   "max": 860000
+  },
+  {
+   "name": "KB국민 My WE:SH 카드",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "cardgorilla": 860000,
+    "ajungdang": 850000
+   },
+   "max": 860000
+  },
+  {
+   "name": "KB YOU Wish 카드",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "cardgorilla": 860000
+   },
+   "max": 860000
+  },
+  {
+   "name": "IBK포인트(신용)",
    "issuer": "IBK기업은행",
    "platforms": {
+    "naver": 500000,
     "cardgorilla": 125000
    },
-   "max": 125000
+   "max": 500000
   },
   {
-   "name": "롯데카드 시티 3종",
+   "name": "IBK포인트3.8(신용)",
+   "issuer": "IBK기업은행",
+   "platforms": {
+    "naver": 500000,
+    "cardgorilla": 125000
+   },
+   "max": 500000
+  },
+  {
+   "name": "I-ALL",
+   "issuer": "IBK기업은행",
+   "platforms": {
+    "naver": 500000,
+    "cardgorilla": 125000
+   },
+   "max": 500000
+  },
+  {
+   "name": "디지로카 London",
    "issuer": "롯데카드",
    "platforms": {
+    "ajungdang": 660000,
     "cardgorilla": 640000
    },
-   "max": 640000
+   "max": 660000
   },
   {
-   "name": "LOCA LIKIT 2종",
+   "name": "디지로카 Las Vegas",
+   "issuer": "롯데카드",
+   "platforms": {
+    "ajungdang": 660000,
+    "cardgorilla": 640000
+   },
+   "max": 660000
+  },
+  {
+   "name": "디지로카 Paris",
+   "issuer": "롯데카드",
+   "platforms": {
+    "ajungdang": 660000,
+    "cardgorilla": 640000
+   },
+   "max": 660000
+  },
+  {
+   "name": "LOCA LIKIT 1.5",
    "issuer": "롯데카드",
    "platforms": {
     "cardgorilla": 670000
@@ -637,6 +717,14 @@
    "name": "BC 바로 Air Master 카드",
    "issuer": "BC 바로카드",
    "platforms": {
+    "cardgorilla": 29000
+   },
+   "max": 29000
+  },
+  {
+   "name": "BC 바로 Air Max 카드",
+   "issuer": "BC 바로카드",
+   "platforms": {
     "cardgorilla": 43000
    },
    "max": 43000
@@ -650,7 +738,7 @@
    "max": 19000
   },
   {
-   "name": "Discount Plan+ 외 2종",
+   "name": "신한카드 Discount Plan+",
    "issuer": "신한카드",
    "platforms": {
     "cardgorilla": 789000
@@ -658,7 +746,32 @@
    "max": 789000
   },
   {
-   "name": "Point Plan+ 외 2종",
+   "name": "신한카드 Air One",
+   "issuer": "신한카드",
+   "platforms": {
+    "cardgorilla": 789000
+   },
+   "max": 789000
+  },
+  {
+   "name": "신한카드 Simple Plan+",
+   "issuer": "신한카드",
+   "platforms": {
+    "cardgorilla": 789000
+   },
+   "max": 789000
+  },
+  {
+   "name": "신한카드 Point Plan",
+   "issuer": "신한카드",
+   "platforms": {
+    "cardgorilla": 579000,
+    "ajungdang": 540000
+   },
+   "max": 579000
+  },
+  {
+   "name": "Haru(Hoshino Resorts)",
    "issuer": "신한카드",
    "platforms": {
     "cardgorilla": 349000
@@ -666,10 +779,19 @@
    "max": 349000
   },
   {
-   "name": "Mr.Life 외 4종",
+   "name": "신한카드 Edu Plan+",
    "issuer": "신한카드",
    "platforms": {
-    "cardgorilla": 579000
+    "cardgorilla": 349000
+   },
+   "max": 349000
+  },
+  {
+   "name": "알리익스프레스 신한카드",
+   "issuer": "신한카드",
+   "platforms": {
+    "cardgorilla": 579000,
+    "ajungdang": 540000
    },
    "max": 579000
   },
@@ -682,12 +804,24 @@
    "max": 39000
   },
   {
-   "name": "NH농협카드 3종",
+   "name": "zgm.play카드",
    "issuer": "NH농협카드",
    "platforms": {
+    "naver": 400000,
+    "ajungdang": 205000,
     "cardgorilla": 175000
    },
-   "max": 175000
+   "max": 400000
+  },
+  {
+   "name": "zgm.streaming카드",
+   "issuer": "NH농협카드",
+   "platforms": {
+    "naver": 400000,
+    "ajungdang": 205000,
+    "cardgorilla": 175000
+   },
+   "max": 400000
   },
   {
    "name": "현대백화점카드",
@@ -698,7 +832,7 @@
    "max": 10000
   },
   {
-   "name": "우리카드 SHOPPING+ 외 4종",
+   "name": "카드의정석 SHOPPING+",
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 750000
@@ -706,7 +840,57 @@
    "max": 750000
   },
   {
-   "name": "카드의정석2 외 3종",
+   "name": "카드의정석2 EVERY DISCOUNT",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 750000
+   },
+   "max": 750000
+  },
+  {
+   "name": "카드의정석 TEN",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 750000
+   },
+   "max": 750000
+  },
+  {
+   "name": "카드의정석2 EVERY POINT",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 750000
+   },
+   "max": 750000
+  },
+  {
+   "name": "카드의정석 I&U+",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 750000
+   },
+   "max": 750000
+  },
+  {
+   "name": "우리카드 MILE&POINT",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 780000,
+    "ajungdang": 770000
+   },
+   "max": 780000
+  },
+  {
+   "name": "우리카드 7CORE",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 780000,
+    "ajungdang": 770000
+   },
+   "max": 780000
+  },
+  {
+   "name": "the OPUS silver",
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 780000
@@ -714,7 +898,7 @@
    "max": 780000
   },
   {
-   "name": "현대카드 AMEX GOLD",
+   "name": "American Express® Gold Card Edition2",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 500000
@@ -754,7 +938,7 @@
    "max": 150000
   },
   {
-   "name": "현대카드 AMEX GREEN",
+   "name": "American Express® Green Card Edition2",
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 250000
@@ -762,7 +946,48 @@
    "max": 250000
   },
   {
-   "name": "KB국민카드 체크 6종",
+   "name": "트래블러스 체크카드(토심이)",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "cardgorilla": 25000
+   },
+   "max": 25000
+  },
+  {
+   "name": "토심이 첵첵 체크카드",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "cardgorilla": 25000
+   },
+   "max": 25000
+  },
+  {
+   "name": "노리2 체크카드(KB Pay)",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "ajungdang": 30000,
+    "cardgorilla": 25000
+   },
+   "max": 30000
+  },
+  {
+   "name": "KB 틴업 체크카드",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "cardgorilla": 25000
+   },
+   "max": 25000
+  },
+  {
+   "name": "트래블러스 체크카드",
+   "issuer": "KB국민카드",
+   "platforms": {
+    "cardgorilla": 25000
+   },
+   "max": 25000
+  },
+  {
+   "name": "KB Youth Club 체크카드",
    "issuer": "KB국민카드",
    "platforms": {
     "cardgorilla": 25000
@@ -835,62 +1060,6 @@
    "max": 12000
   },
   {
-   "name": "LOCA LIKIT 3종",
-   "issuer": "롯데카드",
-   "platforms": {
-    "cardgorilla": 590000
-   },
-   "max": 590000
-  },
-  {
-   "name": "디지로카 Link",
-   "issuer": "롯데카드",
-   "platforms": {
-    "cardgorilla": 590000
-   },
-   "max": 590000
-  },
-  {
-   "name": "일상의 기쁨카드(신용)",
-   "issuer": "IBK기업은행",
-   "platforms": {
-    "cardgorilla": 12000
-   },
-   "max": 12000
-  },
-  {
-   "name": "신한카드 체크 2종",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 10000
-   },
-   "max": 10000
-  },
-  {
-   "name": "롯데 국민행복카드",
-   "issuer": "롯데카드",
-   "platforms": {
-    "cardgorilla": 130000
-   },
-   "max": 130000
-  },
-  {
-   "name": "신한카드 Air One",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 789000
-   },
-   "max": 789000
-  },
-  {
-   "name": "taptap DRIVE",
-   "issuer": "삼성카드",
-   "platforms": {
-    "cardgorilla": 10000
-   },
-   "max": 10000
-  },
-  {
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
    "platforms": {
@@ -916,49 +1085,20 @@
    "max": 590000
   },
   {
-   "name": "신한카드 플리(체크)",
-   "issuer": "신한카드",
+   "name": "디지로카 Link",
+   "issuer": "롯데카드",
    "platforms": {
-    "cardgorilla": 10000
+    "cardgorilla": 590000
    },
-   "max": 10000
+   "max": 590000
   },
   {
-   "name": "노리2 체크카드(KB Pay)",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "ajungdang": 30000,
-    "cardgorilla": 25000
-   },
-   "max": 30000
-  },
-  {
-   "name": "zgm.streaming카드",
-   "issuer": "NH농협카드",
-   "platforms": {
-    "naver": 400000,
-    "ajungdang": 205000,
-    "cardgorilla": 175000
-   },
-   "max": 400000
-  },
-  {
-   "name": "KB국민 My WE:SH 카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 860000,
-    "ajungdang": 850000
-   },
-   "max": 860000
-  },
-  {
-   "name": "I-ALL",
+   "name": "일상의 기쁨카드(신용)",
    "issuer": "IBK기업은행",
    "platforms": {
-    "naver": 500000,
-    "cardgorilla": 125000
+    "cardgorilla": 12000
    },
-   "max": 500000
+   "max": 12000
   },
   {
    "name": "신한카드 플리 체크(산리오캐릭터즈)",
@@ -969,344 +1109,12 @@
    "max": 10000
   },
   {
-   "name": "zgm.play카드",
-   "issuer": "NH농협카드",
-   "platforms": {
-    "naver": 400000,
-    "ajungdang": 205000,
-    "cardgorilla": 175000
-   },
-   "max": 400000
-  },
-  {
-   "name": "토심이 첵첵 체크카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 25000
-   },
-   "max": 25000
-  },
-  {
-   "name": "모니모A 카드",
-   "issuer": "삼성카드",
+   "name": "신한카드 플리(체크)",
+   "issuer": "신한카드",
    "platforms": {
     "cardgorilla": 10000
    },
    "max": 10000
-  },
-  {
-   "name": "디지로카 London",
-   "issuer": "롯데카드",
-   "platforms": {
-    "ajungdang": 660000,
-    "cardgorilla": 640000
-   },
-   "max": 660000
-  },
-  {
-   "name": "디지로카 Paris",
-   "issuer": "롯데카드",
-   "platforms": {
-    "ajungdang": 660000,
-    "cardgorilla": 640000
-   },
-   "max": 660000
-  },
-  {
-   "name": "American Express® Green Card Edition2",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 250000
-   },
-   "max": 250000
-  },
-  {
-   "name": "American Express® Gold Card Edition2",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 500000
-   },
-   "max": 500000
-  },
-  {
-   "name": "신한카드 Point Plan",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 579000,
-    "ajungdang": 540000
-   },
-   "max": 579000
-  },
-  {
-   "name": "카드의정석 SHOPPING+",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 750000
-   },
-   "max": 750000
-  },
-  {
-   "name": "카드의정석 I&U+",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 750000
-   },
-   "max": 750000
-  },
-  {
-   "name": "카드의정석2 EVERY POINT",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 750000
-   },
-   "max": 750000
-  },
-  {
-   "name": "트래블러스 체크카드(토심이)",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 25000
-   },
-   "max": 25000
-  },
-  {
-   "name": "카드의정석 TEN",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 750000
-   },
-   "max": 750000
-  },
-  {
-   "name": "디지로카 Las Vegas",
-   "issuer": "롯데카드",
-   "platforms": {
-    "ajungdang": 660000,
-    "cardgorilla": 640000
-   },
-   "max": 660000
-  },
-  {
-   "name": "카드의정석2 EVERY DISCOUNT",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 750000
-   },
-   "max": 750000
-  },
-  {
-   "name": "신한카드 Edu Plan+",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 349000
-   },
-   "max": 349000
-  },
-  {
-   "name": "IBK포인트3.8(신용)",
-   "issuer": "IBK기업은행",
-   "platforms": {
-    "naver": 500000,
-    "cardgorilla": 125000
-   },
-   "max": 500000
-  },
-  {
-   "name": "IBK포인트(신용)",
-   "issuer": "IBK기업은행",
-   "platforms": {
-    "naver": 500000,
-    "cardgorilla": 125000
-   },
-   "max": 500000
-  },
-  {
-   "name": "롯데멤버스 카드",
-   "issuer": "롯데카드",
-   "platforms": {
-    "cardgorilla": 200000
-   },
-   "max": 200000
-  },
-  {
-   "name": "롯데멤버스 카드 프리미엄",
-   "issuer": "롯데카드",
-   "platforms": {
-    "cardgorilla": 200000
-   },
-   "max": 200000
-  },
-  {
-   "name": "알리익스프레스 신한카드",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 579000,
-    "ajungdang": 540000
-   },
-   "max": 579000
-  },
-  {
-   "name": "신한카드 Discount Plan+",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 789000
-   },
-   "max": 789000
-  },
-  {
-   "name": "현대카드 ZERO Up(할인형)",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 30000
-   },
-   "max": 30000
-  },
-  {
-   "name": "우리카드 7CORE",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 780000,
-    "ajungdang": 770000
-   },
-   "max": 780000
-  },
-  {
-   "name": "KB 틴업 체크카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 25000
-   },
-   "max": 25000
-  },
-  {
-   "name": "Haru(Hoshino Resorts)",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 349000
-   },
-   "max": 349000
-  },
-  {
-   "name": "삼성 iD SELECT ON 카드",
-   "issuer": "삼성카드",
-   "platforms": {
-    "cardgorilla": 494000
-   },
-   "max": 494000
-  },
-  {
-   "name": "우리카드 MILE&POINT",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 780000,
-    "ajungdang": 770000
-   },
-   "max": 780000
-  },
-  {
-   "name": "the OPUS silver",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 780000
-   },
-   "max": 780000
-  },
-  {
-   "name": "트래블러스 체크카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 25000
-   },
-   "max": 25000
-  },
-  {
-   "name": "BC 바로 Air Max 카드",
-   "issuer": "BC 바로카드",
-   "platforms": {
-    "cardgorilla": 43000
-   },
-   "max": 43000
-  },
-  {
-   "name": "KB Youth Club 체크카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 25000
-   },
-   "max": 25000
-  },
-  {
-   "name": "KB YOU Prime 카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 860000,
-    "ajungdang": 850000
-   },
-   "max": 860000
-  },
-  {
-   "name": "현대카드MY BUSINESS M F&B",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 450000
-   },
-   "max": 450000
-  },
-  {
-   "name": "현대카드MY BUSINESS M Retail",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 450000
-   },
-   "max": 450000
-  },
-  {
-   "name": "현대카드MY BUSINESS M E-seller",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 450000
-   },
-   "max": 450000
-  },
-  {
-   "name": "신한카드 Simple Plan+",
-   "issuer": "신한카드",
-   "platforms": {
-    "cardgorilla": 789000
-   },
-   "max": 789000
-  },
-  {
-   "name": "KB NEED Pay 카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 860000
-   },
-   "max": 860000
-  },
-  {
-   "name": "KB YOU Wish 카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 860000
-   },
-   "max": 860000
-  },
-  {
-   "name": "LOCA LIKIT 1.5",
-   "issuer": "롯데카드",
-   "platforms": {
-    "cardgorilla": 670000
-   },
-   "max": 670000
-  },
-  {
-   "name": "현대카드 ZERO Up(포인트형)",
-   "issuer": "현대카드",
-   "platforms": {
-    "cardgorilla": 30000
-   },
-   "max": 30000
   }
  ]
 }

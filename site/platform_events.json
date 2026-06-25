@@ -6,7 +6,7 @@
    "id": 1,
    "name": "신한카드 Mr.Life",
    "issuer": "신한카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/13/card_img/28201/13card.png",
    "platforms": {
     "ajungdang": {
      "id": "264",
@@ -70,7 +70,7 @@
    "id": 2,
    "name": "신한카드 Deep Oil",
    "issuer": "신한카드",
-   "img": "https://static.toss.im/assets/credit-card/2025070113.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/39/card_img/31864/39card.png",
    "platforms": {
     "ajungdang": {
      "id": "264",
@@ -134,7 +134,7 @@
    "id": 3,
    "name": "신한카드 처음(ANNIVERSE)",
    "issuer": "신한카드",
-   "img": "https://static.toss.im/assets/credit-card/2934.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2759/card_img/37240/2759card.png",
    "platforms": {
     "ajungdang": {
      "id": "264",
@@ -182,7 +182,7 @@
    "id": 4,
    "name": "K-패스 (신용)",
    "issuer": "IBK기업은행",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2559/card_img/45648/2559card.png",
    "platforms": {
     "banksalad": {
      "id": "CARD004320",
@@ -231,7 +231,7 @@
    "id": 5,
    "name": "D4카드의정석Ⅱ",
    "issuer": "우리카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2686/card_img/33272/2686card.png",
    "platforms": {
     "banksalad": {
      "id": "CARD004420",
@@ -258,7 +258,7 @@
    "id": 6,
    "name": "LOCA 365 카드",
    "issuer": "롯데카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2330/card_img/24131/2330card.png",
    "platforms": {
     "ajungdang": {
      "id": "255",
@@ -318,7 +318,7 @@
    "id": 7,
    "name": "삼성 iD SELECT ALL 카드",
    "issuer": "삼성카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2885/card_img/44212/2885card_1.png",
    "platforms": {
     "banksalad": {
      "id": "CARD004534",
@@ -375,7 +375,7 @@
    "id": 9,
    "name": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
    "issuer": "삼성카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/49/card_img/42288/49card.png",
    "platforms": {
     "banksalad": {
      "id": "CARD000081",
@@ -406,7 +406,7 @@
    "id": 10,
    "name": "현대카드 M",
    "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/wood.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2669/card_img/49134/2669card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2669",
@@ -437,7 +437,7 @@
    "id": 11,
    "name": "KB국민 굿데이카드",
    "issuer": "KB국민카드",
-   "img": "https://static.toss.im/assets/credit-card/1121.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/106/card_img/20264/106card.png",
    "platforms": {
     "ajungdang": {
      "id": "246",
@@ -510,7 +510,7 @@
    "id": 12,
    "name": "카드의정석 2",
    "issuer": "우리카드",
-   "img": "https://static.toss.im/assets/credit-card/10550.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2848/card_img/48533/2848card_2.png",
    "platforms": {
     "ajungdang": {
      "id": "267",
@@ -554,7 +554,7 @@
    "id": 13,
    "name": "LOCA LIKIT 2.0",
    "issuer": "롯데카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2987/card_img/48809/2987card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2987",
@@ -594,7 +594,7 @@
    "id": 15,
    "name": "the Orange",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2944/card_img/47603/2944card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2944",
@@ -617,7 +617,7 @@
    "id": 16,
    "name": "I-Mileage (대한항공)",
    "issuer": "IBK기업은행",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2674/card_img/32666/2674card_2.png",
    "platforms": {
     "cardgorilla": {
      "id": "2674",
@@ -640,7 +640,7 @@
    "id": 17,
    "name": "삼성 iD STATION 카드 (HD현대오일뱅크)",
    "issuer": "삼성카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2952/card_img/47716/2952card.png",
    "platforms": {
     "ajungdang": {
      "id": "271",
@@ -676,7 +676,7 @@
    "id": 18,
    "name": "하나 나라사랑카드",
    "issuer": "하나카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2934/card_img/46852/2934card_2.png",
    "platforms": {
     "cardgorilla": {
      "id": "2934",
@@ -699,7 +699,7 @@
    "id": 19,
    "name": "트라이플러스 삼성카드",
    "issuer": "삼성카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2988/card_img/48817/2988card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2988",
@@ -721,8 +721,8 @@
   {
    "id": 20,
    "name": "올바른 FLEX 카드",
-   "issuer": "주유할인",
-   "img": "https://static.toss.im/assets/credit-card/1236.png",
+   "issuer": "NH농협카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/666/card_img/47865/666card.png",
    "platforms": {
     "ajungdang": {
      "id": "233",
@@ -775,7 +775,7 @@
    "id": 21,
    "name": "트래블로그+(플러스) 신용카드",
    "issuer": "하나카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2961/card_img/47942/2961card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2961",
@@ -824,8 +824,8 @@
   {
    "id": 23,
    "name": "THE iD. 1st",
-   "issuer": "추가캐시백",
-   "img": null,
+   "issuer": "삼성카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2915/card_img/45262/2915card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2915",
@@ -860,8 +860,8 @@
   {
    "id": 24,
    "name": "굿데이카드",
-   "issuer": "주유할인",
-   "img": null,
+   "issuer": "KB국민카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/106/card_img/20264/106card.png",
    "platforms": {
     "cardgorilla": {
      "id": "106",
@@ -888,7 +888,7 @@
    "id": 25,
    "name": "에너지플러스 현대카드",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2942/card_img/46756/2942card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2942",
@@ -915,7 +915,7 @@
    "id": 26,
    "name": "대한항공카드 060",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2709/card_img/45294/2709card_1.png",
    "platforms": {
     "ajungdang": {
      "id": "261",
@@ -955,7 +955,7 @@
    "id": 27,
    "name": "대한항공카드 300",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2711/card_img/45301/2711card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2711",
@@ -982,7 +982,7 @@
    "id": 28,
    "name": "대한항공카드 120",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2710/card_img/45297/2710card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2710",
@@ -1009,7 +1009,7 @@
    "id": 29,
    "name": "대한항공카드 the First Edition2",
    "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/credit-card-new/hd_koreanair_the_first_edition2.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2712/card_img/45304/2712card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2712",
@@ -1038,9 +1038,32 @@
   },
   {
    "id": 30,
-   "name": "현대카드 ZERO Up",
+   "name": "현대카드 ZERO Up(할인형)",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2844/card_img/49133/2844card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2844",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "3만원 캐시백",
+     "reward_won": 30000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2844",
+     "main_won": 30000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "name": "현대카드 ZERO Up(포인트형)",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2985/card_img/49104/2985card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2985",
@@ -1060,14 +1083,72 @@
    ]
   },
   {
-   "id": 31,
-   "name": "현대카드MY BUSINESS",
+   "id": 32,
+   "name": "현대카드MY BUSINESS M F&B",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2938/card_img/46988/2938card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2938",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "45만원 캐시백",
+     "reward_won": 450000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2938",
+     "main_won": 450000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "name": "현대카드MY BUSINESS M Retail",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2939/card_img/46989/2939card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2939",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "45만원 캐시백",
+     "reward_won": 450000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2939",
+     "main_won": 450000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "name": "현대카드MY BUSINESS M E-seller",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2940/card_img/46990/2940card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2940",
      "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -1083,10 +1164,10 @@
    ]
   },
   {
-   "id": 32,
+   "id": 35,
    "name": "The Aureum(더 아우름)카드",
-   "issuer": "이벤트 등록용",
-   "img": null,
+   "issuer": "Sh수협은행",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2932/card_img/48313/2932card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2932",
@@ -1106,10 +1187,10 @@
    ]
   },
   {
-   "id": 33,
+   "id": 36,
    "name": "zgm 할인카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2706/card_img/34299/2706card_3.png",
    "platforms": {
     "cardgorilla": {
      "id": "2706",
@@ -1129,10 +1210,10 @@
    ]
   },
   {
-   "id": 34,
+   "id": 37,
    "name": "zgm.고향으로카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2513/card_img/28755/2513card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2513",
@@ -1152,10 +1233,10 @@
    ]
   },
   {
-   "id": 35,
+   "id": 38,
    "name": "K-패스카드(신용)",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2560/card_img/33459/2560card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2560",
@@ -1175,10 +1256,10 @@
    ]
   },
   {
-   "id": 36,
+   "id": 39,
    "name": "zgm.rounding카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2493/card_img/28477/2493card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2493",
@@ -1198,10 +1279,10 @@
    ]
   },
   {
-   "id": 37,
+   "id": 40,
    "name": "zgm.휴가중카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2464/card_img/28156/2464card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2464",
@@ -1221,10 +1302,10 @@
    ]
   },
   {
-   "id": 38,
+   "id": 41,
    "name": "zgm.the pay카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2427/card_img/27201/2427card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2427",
@@ -1244,10 +1325,10 @@
    ]
   },
   {
-   "id": 39,
+   "id": 42,
    "name": "zgm living카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2649/card_img/32141/2649card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2649",
@@ -1267,10 +1348,10 @@
    ]
   },
   {
-   "id": 40,
+   "id": 43,
    "name": "zgm shopping카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2648/card_img/32138/2648card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2648",
@@ -1290,10 +1371,10 @@
    ]
   },
   {
-   "id": 41,
+   "id": 44,
    "name": "zgm point카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2698/card_img/33929/2698card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2698",
@@ -1313,10 +1394,10 @@
    ]
   },
   {
-   "id": 42,
-   "name": "올바른 NEW HAVE 카드",
+   "id": 45,
+   "name": "올바른 NEW HAVE카드",
    "issuer": "NH농협카드",
-   "img": "https://static.toss.im/assets/credit-card/10152.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/635/card_img/28872/635card.png",
    "platforms": {
     "cardgorilla": {
      "id": "635",
@@ -1340,10 +1421,10 @@
    ]
   },
   {
-   "id": 43,
+   "id": 46,
    "name": "올바른 BAZIC 카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/514/card_img/30933/514card.png",
    "platforms": {
     "cardgorilla": {
      "id": "514",
@@ -1363,10 +1444,10 @@
    ]
   },
   {
-   "id": 44,
+   "id": 47,
    "name": "올바른지구 카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2336/card_img/24298/2336card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2336",
@@ -1386,10 +1467,10 @@
    ]
   },
   {
-   "id": 45,
+   "id": 48,
    "name": "올바른 MYPICK 카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/654/card_img/21417/654card.png",
    "platforms": {
     "cardgorilla": {
      "id": "654",
@@ -1409,10 +1490,10 @@
    ]
   },
   {
-   "id": 46,
-   "name": "별다줄 카드",
+   "id": 49,
+   "name": "별다줄카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2305/card_img/23590/2305card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2305",
@@ -1432,10 +1513,10 @@
    ]
   },
   {
-   "id": 47,
-   "name": "NH1961 카드",
+   "id": 50,
+   "name": "NH1961카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2252/card_img/21002/2252card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2252",
@@ -1455,10 +1536,10 @@
    ]
   },
   {
-   "id": 48,
+   "id": 51,
    "name": "NH20해봄카드",
    "issuer": "NH농협카드",
-   "img": "https://static.toss.im/assets/credit-card/1218.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/184/card_img/45716/184card.png",
    "platforms": {
     "cardgorilla": {
      "id": "184",
@@ -1482,10 +1563,10 @@
    ]
   },
   {
-   "id": 49,
+   "id": 52,
    "name": "SOHO 다사로이OIL카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2366/card_img/25047/2366card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2366",
@@ -1505,13 +1586,13 @@
    ]
   },
   {
-   "id": 50,
-   "name": "삼성카드 iD SELECT 2종",
+   "id": 53,
+   "name": "삼성 iD SELECT ON 카드",
    "issuer": "삼성카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2886/card_img/44215/2886card_1.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2885",
+     "id": "2886",
      "url": null
     }
    },
@@ -1521,17 +1602,17 @@
      "reward_text": "49.4만원 혜택",
      "reward_won": 494000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2885",
+     "url": "https://www.card-gorilla.com/card/detail/2886",
      "main_won": 494000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 51,
+   "id": 54,
    "name": "현대카드ZERO Edition3(할인형)",
    "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/2266.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2646/card_img/39624/2646card_3.png",
    "platforms": {
     "cardgorilla": {
      "id": "2646",
@@ -1555,10 +1636,10 @@
    ]
   },
   {
-   "id": 52,
+   "id": 55,
    "name": "현대카드ZERO Edition3(포인트형)",
    "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/2266.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2647/card_img/39626/2646card_3.png",
    "platforms": {
     "cardgorilla": {
      "id": "2647",
@@ -1582,10 +1663,10 @@
    ]
   },
   {
-   "id": 53,
+   "id": 56,
    "name": "신한카드 Globus",
    "issuer": "신한카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2532/card_img/29208/2532card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2532",
@@ -1605,10 +1686,10 @@
    ]
   },
   {
-   "id": 54,
-   "name": "현대카드 O",
+   "id": 57,
+   "name": "현대카드O",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2880/card_img/44410/2880card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2880",
@@ -1628,10 +1709,10 @@
    ]
   },
   {
-   "id": 55,
-   "name": "현대카드 S",
+   "id": 58,
+   "name": "현대카드S",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2881/card_img/44413/2881card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2881",
@@ -1651,10 +1732,10 @@
    ]
   },
   {
-   "id": 56,
-   "name": "현대카드 D",
+   "id": 59,
+   "name": "현대카드D",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2878/card_img/44404/2878card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2878",
@@ -1674,10 +1755,10 @@
    ]
   },
   {
-   "id": 57,
-   "name": "현대카드 H",
+   "id": 60,
+   "name": "현대카드H",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2879/card_img/44407/2879card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2879",
@@ -1697,10 +1778,10 @@
    ]
   },
   {
-   "id": 58,
-   "name": "현대카드 T",
+   "id": 61,
+   "name": "현대카드T",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2882/card_img/44416/2882card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2882",
@@ -1720,10 +1801,10 @@
    ]
   },
   {
-   "id": 59,
+   "id": 62,
    "name": "현대카드 X Cut",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2842/card_img/49146/2842card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2842",
@@ -1743,10 +1824,10 @@
    ]
   },
   {
-   "id": 60,
+   "id": 63,
    "name": "현대카드 X Save",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2843/card_img/49147/2843card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2843",
@@ -1766,10 +1847,10 @@
    ]
   },
   {
-   "id": 61,
-   "name": "국민행복",
+   "id": 64,
+   "name": "롯데 국민행복카드",
    "issuer": "롯데카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/455/card_img/20971/455card.png",
    "platforms": {
     "cardgorilla": {
      "id": "455",
@@ -1789,10 +1870,10 @@
    ]
   },
   {
-   "id": 62,
+   "id": 65,
    "name": "클래시 트래블카드",
    "issuer": "NH농협카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2846/card_img/42434/2846card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2846",
@@ -1812,10 +1893,10 @@
    ]
   },
   {
-   "id": 63,
+   "id": 66,
    "name": "일년의 설렘카드",
    "issuer": "IBK기업은행",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/271/card_img/23585/271card.png",
    "platforms": {
     "cardgorilla": {
      "id": "271",
@@ -1835,10 +1916,10 @@
    ]
   },
   {
-   "id": 64,
+   "id": 67,
    "name": "해피메이트 IBK카드(신용)",
    "issuer": "IBK기업은행",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2911/card_img/44959/2911card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2911",
@@ -1871,10 +1952,10 @@
    ]
   },
   {
-   "id": 65,
-   "name": "삼성 모니모A카드",
+   "id": 68,
+   "name": "모니모A 카드",
    "issuer": "삼성카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2631/card_img/31783/2631card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2631",
@@ -1894,964 +1975,10 @@
    ]
   },
   {
-   "id": 66,
-   "name": "삼성 taptap Drive",
-   "issuer": "삼성카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "658",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1만원 캐시백",
-     "reward_won": 10000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/658",
-     "main_won": 10000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 67,
-   "name": "롯데멤버스 2종",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2823",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "20만원 혜택",
-     "reward_won": 200000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2823",
-     "main_won": 200000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 68,
-   "name": "LOCA 365",
-   "issuer": "롯데카드",
-   "img": "https://static.toss.im/assets/credit-card/1477.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2330",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "64만원 혜택",
-     "reward_won": 640000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2330",
-     "main_won": 640000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
    "id": 69,
-   "name": "KB국민카드 5종",
-   "issuer": "KB국민카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2970",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "86만원 캐시백",
-     "reward_won": 860000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2970",
-     "main_won": 860000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 70,
-   "name": "IBK기업은행 4종",
-   "issuer": "IBK기업은행",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2559",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "12.5만원 캐시백",
-     "reward_won": 125000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2559",
-     "main_won": 125000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 71,
-   "name": "롯데카드 시티 3종",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2633",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "64만원 혜택",
-     "reward_won": 640000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2633",
-     "main_won": 640000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 72,
-   "name": "LOCA LIKIT 2종",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2987",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "67만원 혜택",
-     "reward_won": 670000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2987",
-     "main_won": 670000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 73,
-   "name": "BC 바로 MACAO 카드",
-   "issuer": "BC 바로카드",
-   "img": "https://static.toss.im/assets/credit-card/2854.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2728",
-     "url": null
-    },
-    "toss": {
-     "id": "1953",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1.2만원 캐시백",
-     "reward_won": 12000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2728",
-     "main_won": 12000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 74,
-   "name": "BC 바로 Air Master 카드",
-   "issuer": "BC 바로카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2927",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "4.3만원 캐시백",
-     "reward_won": 43000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2927",
-     "main_won": 43000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 75,
-   "name": "BC 바로 ZONE 카드",
-   "issuer": "BC 바로카드",
-   "img": "https://static.toss.im/assets/credit-card/BC_104520_a.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2928",
-     "url": null
-    },
-    "toss": {
-     "id": "10467",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1.9만원 캐시백",
-     "reward_won": 19000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2928",
-     "main_won": 19000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 76,
-   "name": "Discount Plan+ 외 2종",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2950",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "78.9만원 혜택",
-     "reward_won": 789000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2950",
-     "main_won": 789000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 77,
-   "name": "Point Plan+ 외 2종",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2735",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "34.9만원 혜택",
-     "reward_won": 349000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2735",
-     "main_won": 349000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 78,
-   "name": "Mr.Life 외 4종",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2831",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "57.9만원 혜택",
-     "reward_won": 579000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2831",
-     "main_won": 579000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 79,
-   "name": "카드의정석 EVERY MILE SKYPASS",
-   "issuer": "우리카드",
-   "img": "https://static.toss.im/assets/credit-card/10168.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2553",
-     "url": null
-    },
-    "toss": {
-     "id": "1761",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "3.9만원 캐시백",
-     "reward_won": 39000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2553",
-     "main_won": 39000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 80,
-   "name": "NH농협카드 3종",
-   "issuer": "NH농협카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2428",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "17.5만원 캐시백",
-     "reward_won": 175000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2428",
-     "main_won": 175000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 81,
-   "name": "현대백화점카드",
-   "issuer": "현대백화점",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2344",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "H.Point 1만P 증정",
-     "reward_won": 10000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2344",
-     "main_won": 10000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 82,
-   "name": "우리카드 SHOPPING+ 외 4종",
-   "issuer": "우리카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2688",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "75만원 혜택",
-     "reward_won": 750000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2688",
-     "main_won": 750000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 83,
-   "name": "카드의정석2 외 3종",
-   "issuer": "우리카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2902",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "78만원 혜택",
-     "reward_won": 780000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2902",
-     "main_won": 780000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 84,
-   "name": "현대카드 AMEX GOLD",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2663",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "50만원 캐시백",
-     "reward_won": 500000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2663",
-     "main_won": 500000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 85,
-   "name": "현대카드 MX Black Edition2",
-   "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/2803.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2697",
-     "url": null
-    },
-    "toss": {
-     "id": "1900",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "20만원 캐시백",
-     "reward_won": 200000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2697",
-     "main_won": 200000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 86,
-   "name": "현대카드 Summit",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2692",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "25만원 캐시백",
-     "reward_won": 250000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2692",
-     "main_won": 250000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 87,
-   "name": "the Green Edition3",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2753",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "15만원 캐시백",
-     "reward_won": 150000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2753",
-     "main_won": 150000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 88,
-   "name": "the Pink Edition2",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2752",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "15만원 캐시백",
-     "reward_won": 150000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2752",
-     "main_won": 150000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 89,
-   "name": "현대카드 AMEX GREEN",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2662",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "25만원 캐시백",
-     "reward_won": 250000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2662",
-     "main_won": 250000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 90,
-   "name": "KB국민카드 체크 6종",
-   "issuer": "KB국민카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2929",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2.5만원 혜택",
-     "reward_won": 25000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2929",
-     "main_won": 25000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 91,
-   "name": "삼성 iD ON 카드",
-   "issuer": "삼성카드",
-   "img": null,
-   "platforms": {
-    "ajungdang": {
-     "id": "271",
-     "url": "https://www.ajd.co.kr/card/event/detail/271"
-    },
-    "cardgorilla": {
-     "id": "2235",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
-     "reward_won": 611000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/271",
-     "main_won": 611000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2만원 캐시백",
-     "reward_won": 20000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2235",
-     "main_won": 20000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 92,
-   "name": "현대카드Z family Edition2",
-   "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/10192.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2683",
-     "url": null
-    },
-    "toss": {
-     "id": "1833",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2만원 캐시백",
-     "reward_won": 20000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2683",
-     "main_won": 20000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 93,
-   "name": "현대카드Z play",
-   "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/10188.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2684",
-     "url": null
-    },
-    "toss": {
-     "id": "1831",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2만원 캐시백",
-     "reward_won": 20000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2684",
-     "main_won": 20000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 94,
-   "name": "현대카드Z everyday",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2883",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2만원 캐시백",
-     "reward_won": 20000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2883",
-     "main_won": 20000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 95,
-   "name": "현대카드Z work Edition2",
-   "issuer": "현대카드",
-   "img": "https://static.toss.im/assets/credit-card/10194.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2680",
-     "url": null
-    },
-    "toss": {
-     "id": "1835",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2만원 캐시백",
-     "reward_won": 20000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2680",
-     "main_won": 20000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 96,
-   "name": "I-PET",
-   "issuer": "IBK기업은행",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2565",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1.9만원 캐시백",
-     "reward_won": 19000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2565",
-     "main_won": 19000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 97,
-   "name": "DA카드의정석Ⅱ",
-   "issuer": "우리카드",
-   "img": "https://static.toss.im/assets/credit-card/2812.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2655",
-     "url": null
-    },
-    "toss": {
-     "id": "1924",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1.2만원 캐시백",
-     "reward_won": 12000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2655",
-     "main_won": 12000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 98,
-   "name": "Daily With(데일리위드)카드",
-   "issuer": "IBK기업은행",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "655",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1.2만원 캐시백",
-     "reward_won": 12000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/655",
-     "main_won": 12000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 99,
-   "name": "LOCA LIKIT 3종",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2263",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "59만원 혜택",
-     "reward_won": 590000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2263",
-     "main_won": 590000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 100,
-   "name": "디지로카 Link",
-   "issuer": "롯데카드",
-   "img": "https://static.toss.im/assets/credit-card/new/lotte_DiGiLOCA_LINK.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2937",
-     "url": null
-    },
-    "toss": {
-     "id": "10489",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "59만원 혜택",
-     "reward_won": 590000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2937",
-     "main_won": 590000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 101,
-   "name": "일상의 기쁨카드(신용)",
-   "issuer": "IBK기업은행",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "266",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1.2만원 캐시백",
-     "reward_won": 12000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/266",
-     "main_won": 12000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 102,
-   "name": "신한카드 체크 2종",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2372",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1만원 캐시백",
-     "reward_won": 10000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2372",
-     "main_won": 10000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 103,
-   "name": "롯데 국민행복카드",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "455",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "13만원 혜택",
-     "reward_won": 130000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/455",
-     "main_won": 130000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 104,
-   "name": "신한카드 Air One",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "466",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "78.9만원 혜택",
-     "reward_won": 789000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/466",
-     "main_won": 789000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 105,
    "name": "taptap DRIVE",
    "issuer": "삼성카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/658/card_img/48139/658card.png",
    "platforms": {
     "cardgorilla": {
      "id": "658",
@@ -2875,220 +2002,127 @@
    ]
   },
   {
-   "id": 106,
-   "name": "LOCA LIKIT",
+   "id": 70,
+   "name": "롯데멤버스 카드 프리미엄",
    "issuer": "롯데카드",
-   "img": "https://static.toss.im/assets/credit-card/1305.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2824/card_img/41106/2824card.png",
    "platforms": {
-    "ajungdang": {
-     "id": "255",
-     "url": "https://www.ajd.co.kr/card/event/detail/255"
-    },
     "cardgorilla": {
-     "id": "2228",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO"
-    },
-    "toss": {
-     "id": "1583",
+     "id": "2824",
      "url": null
     }
    },
    "events": [
     {
-     "platform": "ajungdang",
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "reward_won": 660000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/255",
-     "main_won": 660000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
-     "reward_text": "59만원 혜택",
-     "reward_won": 590000,
+     "reward_text": "20만원 혜택",
+     "reward_won": 200000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2228",
-     "main_won": 590000,
+     "url": "https://www.card-gorilla.com/card/detail/2824",
+     "main_won": 200000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 107,
-   "name": "LOCA LIKIT Eat",
+   "id": 71,
+   "name": "롯데멤버스 카드",
    "issuer": "롯데카드",
-   "img": "https://static.toss.im/assets/credit-card/1770.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2823/card_img/41105/2823card.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2262",
+     "id": "2823",
      "url": null
     },
     "toss": {
-     "id": "1699",
+     "id": "10143",
      "url": null
     }
    },
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "59만원 혜택",
-     "reward_won": 590000,
+     "reward_text": "20만원 혜택",
+     "reward_won": 200000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2262",
-     "main_won": 590000,
+     "url": "https://www.card-gorilla.com/card/detail/2823",
+     "main_won": 200000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 108,
-   "name": "LOCA LIKIT Play",
-   "issuer": "롯데카드",
-   "img": "https://static.toss.im/assets/credit-card/1771.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2263",
-     "url": null
-    },
-    "toss": {
-     "id": "1701",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "59만원 혜택",
-     "reward_won": 590000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2263",
-     "main_won": 590000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 109,
-   "name": "신한카드 플리(체크)",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2372",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "1만원 캐시백",
-     "reward_won": 10000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2372",
-     "main_won": 10000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 110,
-   "name": "노리2 체크카드(KB Pay)",
+   "id": 72,
+   "name": "KB NEED Pay 카드",
    "issuer": "KB국민카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2964/card_img/48106/2964card_1.png",
    "platforms": {
-    "ajungdang": {
-     "id": "254",
-     "url": "https://www.ajd.co.kr/card/event/detail/254"
-    },
     "cardgorilla": {
-     "id": "2422",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
-     "reward_won": 30000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/254",
-     "main_won": 30000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2.5만원 혜택",
-     "reward_won": 25000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2422",
-     "main_won": 25000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 111,
-   "name": "zgm.streaming카드",
-   "issuer": "NH농협카드",
-   "img": "https://static.toss.im/assets/credit-card/1814.png",
-   "platforms": {
-    "ajungdang": {
-     "id": "233",
-     "url": "https://www.ajd.co.kr/card/event/detail/233"
-    },
-    "cardgorilla": {
-     "id": "2428",
+     "id": "2964",
      "url": null
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH"
-    },
-    "toss": {
-     "id": "1739",
-     "url": null
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100"
     }
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 40만원 (네이버페이 NH농협카드 이벤트)",
-     "reward_won": 400000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
-     "main_won": 400000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-     "reward_won": 205000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/233",
-     "main_won": 205000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
-     "reward_text": "17.5만원 캐시백",
-     "reward_won": 175000,
+     "reward_text": "86만원 캐시백",
+     "reward_won": 860000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2428",
-     "main_won": 175000,
+     "url": "https://www.card-gorilla.com/card/detail/2964",
+     "main_won": 860000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 112,
+   "id": 73,
+   "name": "KB YOU Prime 카드",
+   "issuer": "KB국민카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2930/card_img/46558/2930card_1.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "246",
+     "url": "https://www.ajd.co.kr/card/event/detail/246"
+    },
+    "cardgorilla": {
+     "id": "2930",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "86만원 캐시백",
+     "reward_won": 860000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2930",
+     "main_won": 860000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
+     "reward_won": 850000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/246",
+     "main_won": 850000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 74,
    "name": "KB국민 My WE:SH 카드",
    "issuer": "KB국민카드",
-   "img": "https://static.toss.im/assets/credit-card/1468.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2441/card_img/37123/2441card_3.png",
    "platforms": {
     "ajungdang": {
      "id": "246",
@@ -3125,10 +2159,105 @@
    ]
   },
   {
-   "id": 113,
+   "id": 75,
+   "name": "KB YOU Wish 카드",
+   "issuer": "KB국민카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2970/card_img/48200/2970card_1.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2970",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "86만원 캐시백",
+     "reward_won": 860000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2970",
+     "main_won": 860000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "name": "IBK포인트(신용)",
+   "issuer": "IBK기업은행",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2779/card_img/39564/2779card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2779",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003"
+    }
+   },
+   "events": [
+    {
+     "platform": "naver",
+     "reward_text": "최대 50만원 (네이버페이 비씨카드 이벤트)",
+     "reward_won": 500000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
+     "main_won": 500000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_text": "12.5만원 캐시백",
+     "reward_won": 125000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2779",
+     "main_won": 125000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "name": "IBK포인트3.8(신용)",
+   "issuer": "IBK기업은행",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2778/card_img/40256/2778card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2778",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003"
+    }
+   },
+   "events": [
+    {
+     "platform": "naver",
+     "reward_text": "최대 50만원 (네이버페이 비씨카드 이벤트)",
+     "reward_won": 500000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
+     "main_won": 500000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_text": "12.5만원 캐시백",
+     "reward_won": 125000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2778",
+     "main_won": 125000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 78,
    "name": "I-ALL",
    "issuer": "IBK기업은행",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2482/card_img/28405/2482card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2482",
@@ -3161,33 +2290,503 @@
    ]
   },
   {
-   "id": 114,
-   "name": "신한카드 플리 체크(산리오캐릭터즈)",
-   "issuer": "신한카드",
-   "img": null,
+   "id": 79,
+   "name": "디지로카 London",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2632/card_img/41192/2632card.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
+    "cardgorilla": {
+     "id": "2632",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+    }
+   },
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255",
+     "main_won": 660000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_text": "64만원 혜택",
+     "reward_won": 640000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2632",
+     "main_won": 640000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 80,
+   "name": "디지로카 Las Vegas",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2707/card_img/34645/2707card.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
+    "cardgorilla": {
+     "id": "2707",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+    }
+   },
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255",
+     "main_won": 660000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_text": "64만원 혜택",
+     "reward_won": 640000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2707",
+     "main_won": 640000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 81,
+   "name": "디지로카 Paris",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2633/card_img/31798/2633card.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
+    "cardgorilla": {
+     "id": "2633",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+    }
+   },
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255",
+     "main_won": 660000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_text": "64만원 혜택",
+     "reward_won": 640000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2633",
+     "main_won": 640000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 82,
+   "name": "LOCA LIKIT 1.5",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2975/card_img/48266/2975card.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2492",
+     "id": "2975",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "67만원 혜택",
+     "reward_won": 670000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2975",
+     "main_won": 670000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 83,
+   "name": "BC 바로 MACAO 카드",
+   "issuer": "BC 바로카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2728/card_img/36134/2728card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2728",
+     "url": null
+    },
+    "toss": {
+     "id": "1953",
      "url": null
     }
    },
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "1만원 캐시백",
-     "reward_won": 10000,
+     "reward_text": "1.2만원 캐시백",
+     "reward_won": 12000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2492",
-     "main_won": 10000,
+     "url": "https://www.card-gorilla.com/card/detail/2728",
+     "main_won": 12000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 115,
+   "id": 84,
+   "name": "BC 바로 Air Master 카드",
+   "issuer": "BC 바로카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2926/card_img/45800/2926card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2926",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "2.9만원 캐시백",
+     "reward_won": 29000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2926",
+     "main_won": 29000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 85,
+   "name": "BC 바로 Air Max 카드",
+   "issuer": "BC 바로카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2927/card_img/45801/2927card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2927",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "4.3만원 캐시백",
+     "reward_won": 43000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2927",
+     "main_won": 43000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "name": "BC 바로 ZONE 카드",
+   "issuer": "BC 바로카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2928/card_img/45807/2928card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2928",
+     "url": null
+    },
+    "toss": {
+     "id": "10467",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "1.9만원 캐시백",
+     "reward_won": 19000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2928",
+     "main_won": 19000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "name": "신한카드 Discount Plan+",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2835/card_img/41600/2835card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2835",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+    },
+    "toss": {
+     "id": "10293",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "78.9만원 혜택",
+     "reward_won": 789000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2835",
+     "main_won": 789000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 88,
+   "name": "신한카드 Air One",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/466/card_img/37854/466card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "466",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "78.9만원 혜택",
+     "reward_won": 789000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/466",
+     "main_won": 789000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 89,
+   "name": "신한카드 Simple Plan+",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2950/card_img/47445/2950card_1.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2950",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+    },
+    "toss": {
+     "id": "8594",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "78.9만원 혜택",
+     "reward_won": 789000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2950",
+     "main_won": 789000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 90,
+   "name": "신한카드 Point Plan",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2666/card_img/32452/2666card.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "264",
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
+    },
+    "cardgorilla": {
+     "id": "2666",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "57.9만원 혜택",
+     "reward_won": 579000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2666",
+     "main_won": 579000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "reward_won": 540000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/264",
+     "main_won": 540000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 91,
+   "name": "Haru(Hoshino Resorts)",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2855/card_img/43765/2855card_1.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2855",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "34.9만원 혜택",
+     "reward_won": 349000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2855",
+     "main_won": 349000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 92,
+   "name": "신한카드 Edu Plan+",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2735/card_img/36457/2735card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2735",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "34.9만원 혜택",
+     "reward_won": 349000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2735",
+     "main_won": 349000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 93,
+   "name": "알리익스프레스 신한카드",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2831/card_img/40882/2831card.jpg",
+   "platforms": {
+    "ajungdang": {
+     "id": "264",
+     "url": "https://www.ajd.co.kr/card/event/detail/264"
+    },
+    "cardgorilla": {
+     "id": "2831",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "57.9만원 혜택",
+     "reward_won": 579000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2831",
+     "main_won": 579000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+     "reward_won": 540000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/264",
+     "main_won": 540000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 94,
+   "name": "카드의정석 EVERY MILE SKYPASS",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2553/card_img/44235/2553card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2553",
+     "url": null
+    },
+    "toss": {
+     "id": "1761",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "3.9만원 캐시백",
+     "reward_won": 39000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2553",
+     "main_won": 39000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 95,
    "name": "zgm.play카드",
    "issuer": "NH농협카드",
-   "img": "https://static.toss.im/assets/credit-card/1821.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2544/card_img/29533/2544card.png",
    "platforms": {
     "ajungdang": {
      "id": "233",
@@ -3237,230 +2836,90 @@
    ]
   },
   {
-   "id": 116,
-   "name": "토심이 첵첵 체크카드",
-   "issuer": "KB국민카드",
-   "img": null,
+   "id": 96,
+   "name": "zgm.streaming카드",
+   "issuer": "NH농협카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2428/card_img/27226/2428card.png",
    "platforms": {
+    "ajungdang": {
+     "id": "233",
+     "url": "https://www.ajd.co.kr/card/event/detail/233"
+    },
     "cardgorilla": {
-     "id": "2604",
+     "id": "2428",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH"
+    },
+    "toss": {
+     "id": "1739",
      "url": null
     }
    },
    "events": [
     {
+     "platform": "naver",
+     "reward_text": "최대 40만원 (네이버페이 NH농협카드 이벤트)",
+     "reward_won": 400000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
+     "main_won": 400000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+     "reward_won": 205000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/233",
+     "main_won": 205000,
+     "bonus_won": 0
+    },
+    {
      "platform": "cardgorilla",
-     "reward_text": "2.5만원 혜택",
-     "reward_won": 25000,
+     "reward_text": "17.5만원 캐시백",
+     "reward_won": 175000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2604",
-     "main_won": 25000,
+     "url": "https://www.card-gorilla.com/card/detail/2428",
+     "main_won": 175000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 117,
-   "name": "모니모A 카드",
-   "issuer": "삼성카드",
-   "img": null,
+   "id": 97,
+   "name": "현대백화점카드",
+   "issuer": "현대백화점",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2344/card_img/39670/2344card.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2631",
+     "id": "2344",
      "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "1만원 캐시백",
+     "reward_text": "H.Point 1만P 증정",
      "reward_won": 10000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2631",
+     "url": "https://www.card-gorilla.com/card/detail/2344",
      "main_won": 10000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 118,
-   "name": "디지로카 London",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "ajungdang": {
-     "id": "255",
-     "url": "https://www.ajd.co.kr/card/event/detail/255"
-    },
-    "cardgorilla": {
-     "id": "2632",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
-    }
-   },
-   "events": [
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "reward_won": 660000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/255",
-     "main_won": 660000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_text": "64만원 혜택",
-     "reward_won": 640000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2632",
-     "main_won": 640000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 119,
-   "name": "디지로카 Paris",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "ajungdang": {
-     "id": "255",
-     "url": "https://www.ajd.co.kr/card/event/detail/255"
-    },
-    "cardgorilla": {
-     "id": "2633",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
-    }
-   },
-   "events": [
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "reward_won": 660000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/255",
-     "main_won": 660000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_text": "64만원 혜택",
-     "reward_won": 640000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2633",
-     "main_won": 640000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 120,
-   "name": "American Express® Green Card Edition2",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2662",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776761&cardCompanyId=CCDI&cardIssuerCode=CCDI"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "25만원 캐시백",
-     "reward_won": 250000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2662",
-     "main_won": 250000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 121,
-   "name": "American Express® Gold Card Edition2",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2663",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "50만원 캐시백",
-     "reward_won": 500000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2663",
-     "main_won": 500000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 122,
-   "name": "신한카드 Point Plan",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "ajungdang": {
-     "id": "264",
-     "url": "https://www.ajd.co.kr/card/event/detail/264"
-    },
-    "cardgorilla": {
-     "id": "2666",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "57.9만원 혜택",
-     "reward_won": 579000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2666",
-     "main_won": 579000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "reward_won": 540000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/264",
-     "main_won": 540000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 123,
+   "id": 98,
    "name": "카드의정석 SHOPPING+",
    "issuer": "우리카드",
-   "img": "https://static.toss.im/assets/credit-card/2856.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2687/card_img/33239/2687card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2687",
@@ -3488,10 +2947,83 @@
    ]
   },
   {
-   "id": 124,
+   "id": 99,
+   "name": "카드의정석2 EVERY DISCOUNT",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2719/card_img/46400/2719card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2719",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "75만원 혜택",
+     "reward_won": 750000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2719",
+     "main_won": 750000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "name": "카드의정석 TEN",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2699/card_img/34252/2699card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2699",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "75만원 혜택",
+     "reward_won": 750000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2699",
+     "main_won": 750000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 101,
+   "name": "카드의정석2 EVERY POINT",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2689/card_img/33241/2689card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2689",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "75만원 혜택",
+     "reward_won": 750000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2689",
+     "main_won": 750000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 102,
    "name": "카드의정석 I&U+",
    "issuer": "우리카드",
-   "img": "https://static.toss.im/assets/credit-card/2860.png",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2688/card_img/33240/2688card.png",
    "platforms": {
     "cardgorilla": {
      "id": "2688",
@@ -3519,498 +3051,10 @@
    ]
   },
   {
-   "id": 125,
-   "name": "카드의정석2 EVERY POINT",
-   "issuer": "우리카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2689",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "75만원 혜택",
-     "reward_won": 750000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2689",
-     "main_won": 750000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 126,
-   "name": "트래블러스 체크카드(토심이)",
-   "issuer": "KB국민카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2691",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2.5만원 혜택",
-     "reward_won": 25000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2691",
-     "main_won": 25000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 127,
-   "name": "카드의정석 TEN",
-   "issuer": "우리카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2699",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "75만원 혜택",
-     "reward_won": 750000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2699",
-     "main_won": 750000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 128,
-   "name": "디지로카 Las Vegas",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "ajungdang": {
-     "id": "255",
-     "url": "https://www.ajd.co.kr/card/event/detail/255"
-    },
-    "cardgorilla": {
-     "id": "2707",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
-    }
-   },
-   "events": [
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "reward_won": 660000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/255",
-     "main_won": 660000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_text": "64만원 혜택",
-     "reward_won": 640000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2707",
-     "main_won": 640000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 129,
-   "name": "카드의정석2 EVERY DISCOUNT",
-   "issuer": "우리카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2719",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "75만원 혜택",
-     "reward_won": 750000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2719",
-     "main_won": 750000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 130,
-   "name": "신한카드 Edu Plan+",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2735",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "34.9만원 혜택",
-     "reward_won": 349000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2735",
-     "main_won": 349000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 131,
-   "name": "IBK포인트3.8(신용)",
-   "issuer": "IBK기업은행",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2778",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003"
-    }
-   },
-   "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 50만원 (네이버페이 비씨카드 이벤트)",
-     "reward_won": 500000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 500000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_text": "12.5만원 캐시백",
-     "reward_won": 125000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2778",
-     "main_won": 125000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 132,
-   "name": "IBK포인트(신용)",
-   "issuer": "IBK기업은행",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2779",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003"
-    }
-   },
-   "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 50만원 (네이버페이 비씨카드 이벤트)",
-     "reward_won": 500000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 500000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_text": "12.5만원 캐시백",
-     "reward_won": 125000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2779",
-     "main_won": 125000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 133,
-   "name": "롯데멤버스 카드",
-   "issuer": "롯데카드",
-   "img": "https://static.toss.im/assets/credit-card/10214.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2823",
-     "url": null
-    },
-    "toss": {
-     "id": "10143",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "20만원 혜택",
-     "reward_won": 200000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2823",
-     "main_won": 200000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 134,
-   "name": "롯데멤버스 카드 프리미엄",
-   "issuer": "롯데카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2824",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "20만원 혜택",
-     "reward_won": 200000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2824",
-     "main_won": 200000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 135,
-   "name": "알리익스프레스 신한카드",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "ajungdang": {
-     "id": "264",
-     "url": "https://www.ajd.co.kr/card/event/detail/264"
-    },
-    "cardgorilla": {
-     "id": "2831",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "57.9만원 혜택",
-     "reward_won": 579000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2831",
-     "main_won": 579000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-     "reward_won": 540000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/264",
-     "main_won": 540000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 136,
-   "name": "신한카드 Discount Plan+",
-   "issuer": "신한카드",
-   "img": "https://static.toss.im/assets/credit-card/8594.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2835",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
-    },
-    "toss": {
-     "id": "10293",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "78.9만원 혜택",
-     "reward_won": 789000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2835",
-     "main_won": 789000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 137,
-   "name": "현대카드 ZERO Up(할인형)",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2844",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "3만원 캐시백",
-     "reward_won": 30000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2844",
-     "main_won": 30000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 138,
-   "name": "우리카드 7CORE",
-   "issuer": "우리카드",
-   "img": null,
-   "platforms": {
-    "ajungdang": {
-     "id": "267",
-     "url": "https://www.ajd.co.kr/card/event/detail/267"
-    },
-    "cardgorilla": {
-     "id": "2851",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "78만원 혜택",
-     "reward_won": 780000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2851",
-     "main_won": 780000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-     "reward_won": 770000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/267",
-     "main_won": 770000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 139,
-   "name": "KB 틴업 체크카드",
-   "issuer": "KB국민카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2852",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "2.5만원 혜택",
-     "reward_won": 25000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2852",
-     "main_won": 25000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 140,
-   "name": "Haru(Hoshino Resorts)",
-   "issuer": "신한카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2855",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "34.9만원 혜택",
-     "reward_won": 349000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2855",
-     "main_won": 349000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 141,
-   "name": "삼성 iD SELECT ON 카드",
-   "issuer": "삼성카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2886",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "49.4만원 혜택",
-     "reward_won": 494000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2886",
-     "main_won": 494000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 142,
+   "id": 103,
    "name": "우리카드 MILE&POINT",
    "issuer": "우리카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2898/card_img/44541/2898card.png",
    "platforms": {
     "ajungdang": {
      "id": "267",
@@ -4047,10 +3091,50 @@
    ]
   },
   {
-   "id": 143,
+   "id": 104,
+   "name": "우리카드 7CORE",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2851/card_img/43400/2851.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "267",
+     "url": "https://www.ajd.co.kr/card/event/detail/267"
+    },
+    "cardgorilla": {
+     "id": "2851",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "78만원 혜택",
+     "reward_won": 780000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2851",
+     "main_won": 780000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
+     "reward_won": 770000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/267",
+     "main_won": 770000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 105,
    "name": "the OPUS silver",
    "issuer": "우리카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2902/card_img/44665/2902card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2902",
@@ -4074,10 +3158,265 @@
    ]
   },
   {
-   "id": 144,
+   "id": 106,
+   "name": "American Express® Gold Card Edition2",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2663/card_img/32407/2663card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2663",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "50만원 캐시백",
+     "reward_won": 500000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2663",
+     "main_won": 500000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "name": "현대카드 MX Black Edition2",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2697/card_img/33888/2697card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2697",
+     "url": null
+    },
+    "toss": {
+     "id": "1900",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "20만원 캐시백",
+     "reward_won": 200000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2697",
+     "main_won": 200000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 108,
+   "name": "현대카드 Summit",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2692/card_img/33549/2692card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2692",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "25만원 캐시백",
+     "reward_won": 250000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2692",
+     "main_won": 250000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 109,
+   "name": "the Green Edition3",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2753/card_img/36948/2753card_2.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2753",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "15만원 캐시백",
+     "reward_won": 150000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2753",
+     "main_won": 150000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 110,
+   "name": "the Pink Edition2",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2752/card_img/36946/2752card_2.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2752",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "15만원 캐시백",
+     "reward_won": 150000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2752",
+     "main_won": 150000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 111,
+   "name": "American Express® Green Card Edition2",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2662/card_img/32405/2662card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2662",
+     "url": null
+    },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776761&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "25만원 캐시백",
+     "reward_won": 250000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2662",
+     "main_won": 250000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 112,
+   "name": "트래블러스 체크카드(토심이)",
+   "issuer": "KB국민카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2691/card_img/33455/2691card_2.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2691",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "2.5만원 혜택",
+     "reward_won": 25000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2691",
+     "main_won": 25000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 113,
+   "name": "토심이 첵첵 체크카드",
+   "issuer": "KB국민카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2604/card_img/31223/2604card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2604",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "2.5만원 혜택",
+     "reward_won": 25000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2604",
+     "main_won": 25000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 114,
+   "name": "노리2 체크카드(KB Pay)",
+   "issuer": "KB국민카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2422/card_img/27141/2422card.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "254",
+     "url": "https://www.ajd.co.kr/card/event/detail/254"
+    },
+    "cardgorilla": {
+     "id": "2422",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
+     "reward_won": 30000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/254",
+     "main_won": 30000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_text": "2.5만원 혜택",
+     "reward_won": 25000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2422",
+     "main_won": 25000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 115,
+   "name": "KB 틴업 체크카드",
+   "issuer": "KB국민카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2852/card_img/46803/2852card_1.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2852",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "2.5만원 혜택",
+     "reward_won": 25000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2852",
+     "main_won": 25000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 116,
    "name": "트래블러스 체크카드",
    "issuer": "KB국민카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2905/card_img/44879/2905card_3.png",
    "platforms": {
     "cardgorilla": {
      "id": "2905",
@@ -4097,33 +3436,10 @@
    ]
   },
   {
-   "id": 145,
-   "name": "BC 바로 Air Max 카드",
-   "issuer": "BC 바로카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2927",
-     "url": null
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "4.3만원 캐시백",
-     "reward_won": 43000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2927",
-     "main_won": 43000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 146,
+   "id": 117,
    "name": "KB Youth Club 체크카드",
    "issuer": "KB국민카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2929/card_img/45849/2929card_1.png",
    "platforms": {
     "cardgorilla": {
      "id": "2929",
@@ -4143,253 +3459,408 @@
    ]
   },
   {
-   "id": 147,
-   "name": "KB YOU Prime 카드",
-   "issuer": "KB국민카드",
-   "img": null,
+   "id": 118,
+   "name": "삼성 iD ON 카드",
+   "issuer": "삼성카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2235/card_img/28314/2235card.png",
    "platforms": {
     "ajungdang": {
-     "id": "246",
-     "url": "https://www.ajd.co.kr/card/event/detail/246"
+     "id": "271",
+     "url": "https://www.ajd.co.kr/card/event/detail/271"
     },
     "cardgorilla": {
-     "id": "2930",
+     "id": "2235",
      "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100"
     }
    },
    "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "86만원 캐시백",
-     "reward_won": 860000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2930",
-     "main_won": 860000,
-     "bonus_won": 0
-    },
     {
      "platform": "ajungdang",
-     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-     "reward_won": 850000,
+     "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
+     "reward_won": 611000,
      "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/246",
-     "main_won": 850000,
+     "url": "https://www.ajd.co.kr/card/event/detail/271",
+     "main_won": 611000,
      "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 148,
-   "name": "현대카드MY BUSINESS M F&B",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2938",
-     "url": null
     },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
-    }
-   },
-   "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "45만원 캐시백",
-     "reward_won": 450000,
+     "reward_text": "2만원 캐시백",
+     "reward_won": 20000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2938",
-     "main_won": 450000,
+     "url": "https://www.card-gorilla.com/card/detail/2235",
+     "main_won": 20000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 149,
-   "name": "현대카드MY BUSINESS M Retail",
+   "id": 119,
+   "name": "현대카드Z family Edition2",
    "issuer": "현대카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2683/card_img/39649/2680card.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2939",
+     "id": "2683",
      "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "45만원 캐시백",
-     "reward_won": 450000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2939",
-     "main_won": 450000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 150,
-   "name": "현대카드MY BUSINESS M E-seller",
-   "issuer": "현대카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2940",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "45만원 캐시백",
-     "reward_won": 450000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2940",
-     "main_won": 450000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 151,
-   "name": "신한카드 Simple Plan+",
-   "issuer": "신한카드",
-   "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_simple_plan_plus_core.png",
-   "platforms": {
-    "cardgorilla": {
-     "id": "2950",
-     "url": null
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     },
     "toss": {
-     "id": "8594",
+     "id": "1833",
      "url": null
     }
    },
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "78.9만원 혜택",
-     "reward_won": 789000,
+     "reward_text": "2만원 캐시백",
+     "reward_won": 20000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2950",
-     "main_won": 789000,
+     "url": "https://www.card-gorilla.com/card/detail/2683",
+     "main_won": 20000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 152,
-   "name": "KB NEED Pay 카드",
-   "issuer": "KB국민카드",
-   "img": null,
+   "id": 120,
+   "name": "현대카드Z play",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2684/card_img/39652/2680card.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2964",
+     "id": "2684",
      "url": null
     },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "86만원 캐시백",
-     "reward_won": 860000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2964",
-     "main_won": 860000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 153,
-   "name": "KB YOU Wish 카드",
-   "issuer": "KB국민카드",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "2970",
+    "toss": {
+     "id": "1831",
      "url": null
     }
    },
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "86만원 캐시백",
-     "reward_won": 860000,
+     "reward_text": "2만원 캐시백",
+     "reward_won": 20000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2970",
-     "main_won": 860000,
+     "url": "https://www.card-gorilla.com/card/detail/2684",
+     "main_won": 20000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 154,
-   "name": "LOCA LIKIT 1.5",
-   "issuer": "롯데카드",
-   "img": null,
+   "id": 121,
+   "name": "현대카드Z everyday",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2883/card_img/44419/2883card_1.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2975",
+     "id": "2883",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "2만원 캐시백",
+     "reward_won": 20000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2883",
+     "main_won": 20000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 122,
+   "name": "현대카드Z work Edition2",
+   "issuer": "현대카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2680/card_img/39646/2680card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2680",
+     "url": null
+    },
+    "toss": {
+     "id": "1835",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "2만원 캐시백",
+     "reward_won": 20000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2680",
+     "main_won": 20000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 123,
+   "name": "I-PET",
+   "issuer": "IBK기업은행",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2565/card_img/29690/2565card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2565",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "1.9만원 캐시백",
+     "reward_won": 19000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2565",
+     "main_won": 19000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 124,
+   "name": "DA카드의정석Ⅱ",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2655/card_img/32217/2655card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2655",
+     "url": null
+    },
+    "toss": {
+     "id": "1924",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "1.2만원 캐시백",
+     "reward_won": 12000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2655",
+     "main_won": 12000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 125,
+   "name": "Daily With(데일리위드)카드",
+   "issuer": "IBK기업은행",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/655/card_img/21418/655card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "655",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "1.2만원 캐시백",
+     "reward_won": 12000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/655",
+     "main_won": 12000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 126,
+   "name": "LOCA LIKIT",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2228/card_img/21353/2228card.png",
+   "platforms": {
+    "ajungdang": {
+     "id": "255",
+     "url": "https://www.ajd.co.kr/card/event/detail/255"
+    },
+    "cardgorilla": {
+     "id": "2228",
      "url": null
     },
     "naver": {
      "id": "",
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+    },
+    "toss": {
+     "id": "1583",
+     "url": null
     }
    },
    "events": [
     {
+     "platform": "ajungdang",
+     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+     "reward_won": 660000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/255",
+     "main_won": 660000,
+     "bonus_won": 0
+    },
+    {
      "platform": "cardgorilla",
-     "reward_text": "67만원 혜택",
-     "reward_won": 670000,
+     "reward_text": "59만원 혜택",
+     "reward_won": 590000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2975",
-     "main_won": 670000,
+     "url": "https://www.card-gorilla.com/card/detail/2228",
+     "main_won": 590000,
      "bonus_won": 0
     }
    ]
   },
   {
-   "id": 155,
-   "name": "현대카드 ZERO Up(포인트형)",
-   "issuer": "현대카드",
-   "img": null,
+   "id": 127,
+   "name": "LOCA LIKIT Eat",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2262/card_img/20704/2262card.png",
    "platforms": {
     "cardgorilla": {
-     "id": "2985",
+     "id": "2262",
+     "url": null
+    },
+    "toss": {
+     "id": "1699",
      "url": null
     }
    },
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "3만원 캐시백",
-     "reward_won": 30000,
+     "reward_text": "59만원 혜택",
+     "reward_won": 590000,
      "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2985",
-     "main_won": 30000,
+     "url": "https://www.card-gorilla.com/card/detail/2262",
+     "main_won": 590000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 128,
+   "name": "LOCA LIKIT Play",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2263/card_img/20703/2263card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2263",
+     "url": null
+    },
+    "toss": {
+     "id": "1701",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "59만원 혜택",
+     "reward_won": 590000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2263",
+     "main_won": 590000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 129,
+   "name": "디지로카 Link",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2937/card_img/46587/2937card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2937",
+     "url": null
+    },
+    "toss": {
+     "id": "10489",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "59만원 혜택",
+     "reward_won": 590000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2937",
+     "main_won": 590000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 130,
+   "name": "일상의 기쁨카드(신용)",
+   "issuer": "IBK기업은행",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/266/card_img/23586/266card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "266",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "1.2만원 캐시백",
+     "reward_won": 12000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/266",
+     "main_won": 12000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 131,
+   "name": "신한카드 플리 체크(산리오캐릭터즈)",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2492/card_img/28476/2492card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2492",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "1만원 캐시백",
+     "reward_won": 10000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2492",
+     "main_won": 10000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 132,
+   "name": "신한카드 플리(체크)",
+   "issuer": "신한카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2372/card_img/25330/2372card.png",
+   "platforms": {
+    "cardgorilla": {
+     "id": "2372",
+     "url": null
+    }
+   },
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_text": "1만원 캐시백",
+     "reward_won": 10000,
+     "period_end": "2026-06-30",
+     "url": "https://www.card-gorilla.com/card/detail/2372",
+     "main_won": 10000,
      "bonus_won": 0
     }
    ]
