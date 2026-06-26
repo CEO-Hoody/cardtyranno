@@ -46,10 +46,11 @@
    "bestPlatform": "cardgorilla",
    "periodEnd": "2026-06-30",
    "platforms": [
+    "ajungdang",
     "cardgorilla",
     "naver"
    ],
-   "platformCount": 2,
+   "platformCount": 3,
    "events": [
     {
      "platform": "cardgorilla",
@@ -57,6 +58,14 @@
      "reward_text": "89만원 캐시백",
      "period_end": "2026-06-30",
      "main_won": 890000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_won": 750000,
+     "reward_text": "최대 75만원 (아정당 현대카드 발급 이벤트)",
+     "period_end": null,
+     "main_won": 750000,
      "bonus_won": 0
     },
     {

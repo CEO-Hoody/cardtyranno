@@ -1155,6 +1155,10 @@
    "issuer": "현대카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2712/card_img/45304/2712card_1.png",
    "platforms": {
+    "ajungdang": {
+     "id": "261",
+     "url": "https://www.ajd.co.kr/card/event/detail/261"
+    },
     "cardgorilla": {
      "id": "2712",
      "url": null
@@ -1176,6 +1180,15 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/detail/2712",
      "main_won": 890000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "ajungdang",
+     "reward_text": "최대 75만원 (아정당 현대카드 발급 이벤트)",
+     "reward_won": 750000,
+     "period_end": null,
+     "url": "https://www.ajd.co.kr/card/event/detail/261",
+     "main_won": 750000,
      "bonus_won": 0
     },
     {

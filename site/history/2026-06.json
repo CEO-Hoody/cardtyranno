@@ -33,7 +33,7 @@
   "현대카드": {
    "naver": 750000,
    "cardgorilla": 890000,
-   "ajungdang": 690000
+   "ajungdang": 750000
   },
   "KB국민카드": {
    "cardgorilla": 860000,
@@ -299,6 +299,7 @@
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 890000,
+    "ajungdang": 750000,
     "naver": 750000
    },
    "max": 890000
