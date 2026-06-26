@@ -79,6 +79,12 @@
    "reward_text": "최대 69만원 (아정당 현대카드 발급 이벤트)",
    "url": "https://www.ajd.co.kr/card/event/detail/261"
   },
+  "대한항공카드 the First Edition2": {
+   "ajd_id": "261",
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 (아정당 현대카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/261"
+  },
   "신한카드 Point Plan+": {
    "ajd_id": "264",
    "reward_won": 540000,

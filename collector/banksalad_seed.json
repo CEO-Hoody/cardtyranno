@@ -1,6 +1,7 @@
 {
- "as_of": "2026-06-26",
- "source": "거주지 렌더링 텍스트 수집(collect_ledger.py). 상품명 매핑.",
+ "as_of": "2026-06-25",
+ "source": "거주지 렌더링 텍스트 수집(뱅샐 상품/이벤트 상세 페이지 본문). 상품명 매핑. reward_won=이벤트 총액, main/bonus=상세페이지 분해(메인=저난도 기본캐시백, bonus=해외/자동납부/고액구간 등 조건부).",
+ "_note": "84만류 발급사 캐시백 이벤트는 실제로 메인 ~20만 + 부가 ~64만(해외 60만 등) 구조. no_event=true는 캐시백 이벤트 없음.",
  "cards": {
   "삼성 iD SELECT ALL 카드":            {"reward_won": 230000, "reward_text": "최대 23만원 캐시백", "main_won": 230000, "bonus_won": 0},
   "삼성카드 & MILEAGE PLATINUM (스카이패스)": {"reward_won": 0, "reward_text": "연회비 100% 캐시백", "no_event": true},
@@ -15,6 +16,9 @@
   "KB국민 My WE:SH 카드":              {"reward_won": 840000, "reward_text": "최대 84만원 캐시백", "main_won": 210000, "bonus_won": 630000},
   "D4카드의정석 II":                   {"reward_won": 0, "reward_text": "연회비 100% 캐시백", "no_event": true},
   "카드의정석 SHOPPING+":              {"reward_won": 0, "reward_text": "", "no_event": true},
-  "카드의정석 SHOPPING":               {"reward_won": 0, "reward_text": "", "no_event": true}
+  "카드의정석 SHOPPING":               {"reward_won": 0, "reward_text": "", "no_event": true},
+  "대한항공카드 the First Edition2":    {"reward_won": 750000, "reward_text": "최대 75만원 캐시백", "main_won": 200000, "bonus_won": 550000},
+  "카드의정석 2":                      {"reward_won": 780000, "reward_text": "최대 78만원 캐시백", "main_won": 200000, "bonus_won": 580000},
+  "올바른 FLEX 카드":                  {"reward_won": 195000, "reward_text": "최대 19.5만원 캐시백", "main_won": 195000, "bonus_won": 0}
  }
 }
