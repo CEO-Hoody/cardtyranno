@@ -370,9 +370,12 @@ if __name__=="__main__":
             if info.get("no_event") or not info.get("reward_won"):
                 injected[(p["name"],"banksalad")]=None        # 이벤트 없음 → 종료(잘못된 라이브값 차단)
             else:
+                bgid=str((p.get("platforms",{}).get("banksalad") or {}).get("id") or "")
+                burl=("https://www.banksalad.com/product/cards/"+bgid) if bgid else "https://www.banksalad.com/cards/event"
+                # 기존 banksalad 매핑이 없던 카드도 플랫폼을 부착해야 run()이 주입을 적용한다(naver와 동일 패턴)
+                p.setdefault("platforms",{}).setdefault("banksalad",{"id":bgid,"url":burl})
                 injected[(p["name"],"banksalad")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
-                                                   "period_start":None,"period_end":None,
-                                                   "url":"https://www.banksalad.com/product/cards/"+str((p.get("platforms",{}).get("banksalad") or {}).get("id") or "")}
+                                                   "period_start":None,"period_end":None,"url":burl}
                 if info.get("main_won") is not None or info.get("bonus_won"):
                     BREAKDOWN[(p["name"],"banksalad")]={"main":info.get("main_won") or 0,"bonus":info.get("bonus_won") or 0}
             _bn2+=1
