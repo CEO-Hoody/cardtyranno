@@ -15,6 +15,7 @@
   },
   "우리카드": {
    "cardgorilla": 780000,
+   "banksalad": 780000,
    "naver": 780000,
    "ajungdang": 770000
   },
@@ -33,7 +34,8 @@
   "현대카드": {
    "naver": 750000,
    "cardgorilla": 890000,
-   "ajungdang": 750000
+   "ajungdang": 750000,
+   "banksalad": 750000
   },
   "KB국민카드": {
    "cardgorilla": 860000,
@@ -48,6 +50,7 @@
   },
   "NH농협카드": {
    "ajungdang": 205000,
+   "banksalad": 195000,
    "cardgorilla": 175000,
    "naver": 175000
   },
@@ -164,6 +167,7 @@
    "name": "카드의정석 2",
    "issuer": "우리카드",
    "platforms": {
+    "banksalad": 780000,
     "cardgorilla": 780000,
     "naver": 780000,
     "ajungdang": 770000
@@ -225,6 +229,7 @@
    "issuer": "NH농협카드",
    "platforms": {
     "ajungdang": 205000,
+    "banksalad": 195000,
     "cardgorilla": 175000,
     "naver": 175000
    },
@@ -300,6 +305,7 @@
    "platforms": {
     "cardgorilla": 890000,
     "ajungdang": 750000,
+    "banksalad": 750000,
     "naver": 750000
    },
    "max": 890000
@@ -661,7 +667,8 @@
    "issuer": "KB국민카드",
    "platforms": {
     "cardgorilla": 860000,
-    "ajungdang": 850000
+    "ajungdang": 850000,
+    "banksalad": 840000
    },
    "max": 860000
   },

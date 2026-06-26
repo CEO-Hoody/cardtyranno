@@ -588,6 +588,10 @@
      "id": "267",
      "url": "https://www.ajd.co.kr/card/event/detail/267"
     },
+    "banksalad": {
+     "id": "",
+     "url": "https://www.banksalad.com/cards/event"
+    },
     "cardgorilla": {
      "id": "2848",
      "url": null
@@ -602,6 +606,22 @@
     }
    },
    "events": [
+    {
+     "platform": "banksalad",
+     "reward_text": "최대 78만원 캐시백",
+     "reward_won": 780000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/cards/event",
+     "main_won": 200000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 78만원 캐시백",
+       "won": 780000,
+       "cond": false
+      }
+     ]
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "78만원 혜택",
@@ -818,6 +838,10 @@
      "id": "233",
      "url": "https://www.ajd.co.kr/card/event/detail/233"
     },
+    "banksalad": {
+     "id": "",
+     "url": "https://www.banksalad.com/cards/event"
+    },
     "cardgorilla": {
      "id": "666",
      "url": null
@@ -839,6 +863,15 @@
      "period_end": null,
      "url": "https://www.ajd.co.kr/card/event/detail/233",
      "main_won": 205000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_text": "최대 19.5만원 캐시백",
+     "reward_won": 195000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/cards/event",
+     "main_won": 195000,
      "bonus_won": 0
     },
     {
@@ -1159,6 +1192,10 @@
      "id": "261",
      "url": "https://www.ajd.co.kr/card/event/detail/261"
     },
+    "banksalad": {
+     "id": "",
+     "url": "https://www.banksalad.com/cards/event"
+    },
     "cardgorilla": {
      "id": "2712",
      "url": null
@@ -1190,6 +1227,22 @@
      "url": "https://www.ajd.co.kr/card/event/detail/261",
      "main_won": 750000,
      "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_text": "최대 75만원 캐시백",
+     "reward_won": 750000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/cards/event",
+     "main_won": 200000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 캐시백",
+       "won": 750000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "naver",
@@ -2348,6 +2401,10 @@
      "id": "246",
      "url": "https://www.ajd.co.kr/card/event/detail/246"
     },
+    "banksalad": {
+     "id": "",
+     "url": "https://www.banksalad.com/cards/event"
+    },
     "cardgorilla": {
      "id": "2441",
      "url": null
@@ -2375,6 +2432,22 @@
      "url": "https://www.ajd.co.kr/card/event/detail/246",
      "main_won": 850000,
      "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_text": "최대 84만원 캐시백",
+     "reward_won": 840000,
+     "period_end": null,
+     "url": "https://www.banksalad.com/cards/event",
+     "main_won": 210000,
+     "bonus_won": 630000,
+     "breakdown": [
+      {
+       "text": "최대 84만원 캐시백",
+       "won": 840000,
+       "cond": false
+      }
+     ]
     }
    ]
   },

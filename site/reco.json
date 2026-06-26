@@ -47,10 +47,11 @@
    "periodEnd": "2026-06-30",
    "platforms": [
     "ajungdang",
+    "banksalad",
     "cardgorilla",
     "naver"
    ],
-   "platformCount": 3,
+   "platformCount": 4,
    "events": [
     {
      "platform": "cardgorilla",
@@ -67,6 +68,14 @@
      "period_end": null,
      "main_won": 750000,
      "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 750000,
+     "reward_text": "최대 75만원 캐시백",
+     "period_end": null,
+     "main_won": 200000,
+     "bonus_won": 550000
     },
     {
      "platform": "naver",
@@ -257,9 +266,10 @@
    "periodEnd": "2026-06-30",
    "platforms": [
     "ajungdang",
+    "banksalad",
     "cardgorilla"
    ],
-   "platformCount": 2,
+   "platformCount": 3,
    "events": [
     {
      "platform": "cardgorilla",
@@ -276,6 +286,14 @@
      "period_end": null,
      "main_won": 850000,
      "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 840000,
+     "reward_text": "최대 84만원 캐시백",
+     "period_end": null,
+     "main_won": 210000,
+     "bonus_won": 630000
     }
    ]
   },
@@ -594,16 +612,25 @@
    "issuer": "우리카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2848/card_img/48533/2848card_2.png",
    "maxCashbackWon": 780000,
-   "maxCashbackText": "78만원 혜택",
-   "bestPlatform": "cardgorilla",
-   "periodEnd": "2026-06-30",
+   "maxCashbackText": "최대 78만원 캐시백",
+   "bestPlatform": "banksalad",
+   "periodEnd": null,
    "platforms": [
     "ajungdang",
+    "banksalad",
     "cardgorilla",
     "naver"
    ],
-   "platformCount": 3,
+   "platformCount": 4,
    "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 780000,
+     "reward_text": "최대 78만원 캐시백",
+     "period_end": null,
+     "main_won": 200000,
+     "bonus_won": 580000
+    },
     {
      "platform": "cardgorilla",
      "reward_won": 780000,
@@ -1970,10 +1997,11 @@
    "periodEnd": null,
    "platforms": [
     "ajungdang",
+    "banksalad",
     "cardgorilla",
     "naver"
    ],
-   "platformCount": 3,
+   "platformCount": 4,
    "events": [
     {
      "platform": "ajungdang",
@@ -1981,6 +2009,14 @@
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
      "period_end": null,
      "main_won": 205000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 195000,
+     "reward_text": "최대 19.5만원 캐시백",
+     "period_end": null,
+     "main_won": 195000,
      "bonus_won": 0
     },
     {
