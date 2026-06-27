@@ -326,7 +326,7 @@ function render(){var a=(C[cur]||[]).slice();
  var ev=pc?'<div class="cev">발급 이벤트'+(pc>1?' · '+pc+'곳':'')+'</div>':'';
  var img=c.img||PEIMG[_nkc(c.name)];                               // 메타 이미지 폴백(콜렉터 카드고릴라 플레이트)
  var hb='<span class="favbtn" onclick="event.preventDefault();event.stopPropagation();this.textContent=toggleFav('+c.id+')?String.fromCodePoint(10084):String.fromCodePoint(129293);">'+(isFav(c.id)?'❤️':'🤍')+'</span>';
- return '<a class="ctile" href="carddetail.html?id='+c.id+'">'+hb+'<div class="plate">'+imgTag(img)+'</div><div class="cn">'+c.name+'</div>'+(fee?'<div class="cfee">'+fee+'</div>':'')+'<div class="cd">'+c.benefit+'</div>'+ev+'<div class="apply">카드 자세히 보기 ›</div></a>';}).join("");if(window.repairImages)repairImages();}
+ return '<a class="ctile" href="carddetail.html?id='+c.id+'">'+hb+'<div class="plate">'+imgTag(img)+'</div><div class="cbody"><div class="cn">'+c.name+'</div>'+(fee?'<div class="cfee">'+fee+'</div>':'')+'<div class="cd">'+c.benefit+'</div>'+ev+'<div class="apply">카드 자세히 보기 ›</div></div></a>';}).join("");if(window.repairImages)repairImages();}
 function tabs(){var t=document.getElementById('tabs');t.innerHTML=ORD.map(function(o){return '<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'<span class="cnt">'+(C[o]||[]).length+'</span></div>';}).join("");
  t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
 Promise.all([fetch('cards.json').then(r=>r.json()),fetch('platform_events.json').then(r=>r.json()).catch(function(){return {products:[]};})]).then(function(A){
