@@ -412,7 +412,7 @@ def _merge_seismo_seed(platform, seed_file, injected, products):
         for cn in ev.get("cards",[]):
             p=bynk.get(_nk(cn))
             if not p:
-                p={"name":cn,"issuer":iss,"platforms":{}}; products.append(p); bynk[_nk(cn)]=p; nnew+=1
+                continue                                   # 우리 시드/DB에 없는 카드는 제외(신규 상품 생성 안 함)
             had_live = platform in p.get("platforms",{})   # 이미 라이브 toss 매핑이 붙어 있던 카드
             p.setdefault("platforms",{}).setdefault(platform,{"id":"","url":""})
             key=(p["name"],platform)
@@ -526,8 +526,8 @@ if __name__=="__main__":
             eurl=ev.get("url","")                      # 카카오페이 이벤트 페이지 랜딩 스킴(fest.kakaopay.com 그룹)
             for cn in ev.get("cards",[]):
                 p=_bk.get(_nk(cn))
-                if not p:                              # 카카오페이 전용(우리 DB 미존재) 카드 → 신규 상품 생성
-                    p={"name":cn,"issuer":iss,"platforms":{}}; products.append(p); _bk[_nk(cn)]=p; _knew+=1
+                if not p:                              # 우리 시드/DB에 없는 카드는 제외(신규 상품 생성 안 함)
+                    continue
                 p.setdefault("platforms",{})["kakaopay"]={"id":"","url":eurl}
                 if rw:
                     injected[(p["name"],"kakaopay")]={"reward_won":rw,"reward_text":rtext,
