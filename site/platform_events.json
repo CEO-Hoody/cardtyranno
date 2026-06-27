@@ -325,11 +325,11 @@
     },
     {
      "platform": "toss",
-     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 12.5만원 상당 혜택",
+     "reward_text": "20만원 이상 + 마케팅 동의 시 토스포인트 9만 + 자동이체 3.5만",
      "reward_won": 125000,
      "period_end": "2026-06-30",
      "url": "https://toss.im/_m/dwdCISRa",
-     "main_won": 125000,
+     "main_won": 35000,
      "bonus_won": 0
     }
    ]
@@ -505,7 +505,7 @@
     },
     "toss": {
      "id": "17",
-     "url": "https://card-lounge.toss.im/card/17"
+     "url": "https://toss.im/_m/banBQDY5"
     }
    },
    "events": []
@@ -1095,6 +1095,10 @@
     "naver": {
      "id": "",
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=CCHN"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/bcjcyh3m"
     }
    },
    "events": [
@@ -1122,6 +1126,15 @@
        "cond": false
       }
      ]
+    },
+    {
+     "platform": "toss",
+     "reward_text": "2만원 쓰면 2만원 + 해외 최대 50만 + 일본 여행 5만 캐시백",
+     "reward_won": 570000,
+     "period_end": "2026-06-30",
+     "url": "https://toss.im/_m/bcjcyh3m",
+     "main_won": 50000,
+     "bonus_won": 0
     }
    ]
   },
@@ -1208,7 +1221,7 @@
     },
     {
      "platform": "toss",
-     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 10만원 상당 혜택",
+     "reward_text": "100만원 이상 쓰면 10만원",
      "reward_won": 100000,
      "period_end": "2026-06-30",
      "url": "https://toss.im/_m/LUWffhjw",
@@ -2503,7 +2516,7 @@
     },
     "toss": {
      "id": "",
-     "url": "https://toss.im/_m/rB3VnV8v"
+     "url": "https://toss.im/_m/zgTwn3un"
     }
    },
    "events": [
@@ -2527,10 +2540,10 @@
     },
     {
      "platform": "toss",
-     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 8만원 상당 혜택",
+     "reward_text": "10만원 쓰면 8만 토스포인트",
      "reward_won": 80000,
      "period_end": "2026-06-30",
-     "url": "https://toss.im/_m/rB3VnV8v",
+     "url": "https://toss.im/_m/zgTwn3un",
      "main_won": 80000,
      "bonus_won": 0
     }
@@ -2634,9 +2647,34 @@
     "cardgorilla": {
      "id": "2631",
      "url": "https://www.card-gorilla.com/event/detail/1"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/banBQDY5"
     }
    },
    "events": [
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
+     "reward_won": 455000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/banBQDY5",
+     "main_won": 15000,
+     "bonus_won": 10000,
+     "breakdown": [
+      {
+       "text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6",
+       "won": 10000,
+       "cond": true
+      },
+      {
+       "text": "30만 + 생활요금 1.5만",
+       "won": 15000,
+       "cond": false
+      }
+     ]
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "1만원 캐시백",
@@ -2690,12 +2728,24 @@
     },
     {
      "platform": "toss",
-     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 45.5만원 상당 혜택",
+     "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
      "reward_won": 455000,
-     "period_end": "2026-06-30",
+     "period_end": "2026-07-31",
      "url": "https://toss.im/_m/banBQDY5",
-     "main_won": 455000,
-     "bonus_won": 0
+     "main_won": 15000,
+     "bonus_won": 10000,
+     "breakdown": [
+      {
+       "text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6",
+       "won": 10000,
+       "cond": true
+      },
+      {
+       "text": "30만 + 생활요금 1.5만",
+       "won": 15000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "kakaopay",
@@ -2752,7 +2802,7 @@
     },
     "toss": {
      "id": "10143",
-     "url": "https://toss.im/_m/7xU5L2v8"
+     "url": "https://toss.im/_m/rB3VnV8v"
     }
    },
    "events": [
@@ -4718,10 +4768,6 @@
     "kakaopay": {
      "id": "",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208ae1f94d85bad33f598?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
-    },
-    "toss": {
-     "id": "",
-     "url": "https://toss.im/_m/dHQ1mRAn"
     }
    },
    "events": [
@@ -4732,15 +4778,6 @@
      "period_end": null,
      "url": "https://www.ajd.co.kr/card/event/detail/271",
      "main_won": 611000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "toss",
-     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 45.5만원 상당 혜택",
-     "reward_won": 455000,
-     "period_end": "2026-06-30",
-     "url": "https://toss.im/_m/dHQ1mRAn",
-     "main_won": 455000,
      "bonus_won": 0
     },
     {
@@ -4973,7 +5010,7 @@
     },
     "toss": {
      "id": "1583",
-     "url": "https://toss.im/_m/zgTwn3un"
+     "url": "https://toss.im/_m/7xU5L2v8"
     }
    },
    "events": [
@@ -5025,7 +5062,7 @@
     },
     "toss": {
      "id": "1699",
-     "url": "https://card-lounge.toss.im/card/1699"
+     "url": "https://toss.im/_m/zgTwn3un"
     }
    },
    "events": [
@@ -5079,7 +5116,7 @@
     },
     "toss": {
      "id": "10489",
-     "url": "https://card-lounge.toss.im/card/10489"
+     "url": "https://toss.im/_m/7xU5L2v8"
     }
    },
    "events": [
@@ -5090,6 +5127,15 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
      "main_won": 590000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "toss",
+     "reward_text": "20만원 이상 이용 시 15만 토스포인트 + 해외 30만",
+     "reward_won": 460000,
+     "period_end": "2026-06-30",
+     "url": "https://toss.im/_m/7xU5L2v8",
+     "main_won": 300000,
      "bonus_won": 0
     }
    ]

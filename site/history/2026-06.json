@@ -29,7 +29,7 @@
    "cardgorilla": 670000,
    "naver": 644000,
    "kakaopay": 100000,
-   "toss": 80000
+   "toss": 460000
   },
   "삼성카드": {
    "cardgorilla": 1170000,
@@ -56,7 +56,8 @@
   },
   "하나카드": {
    "cardgorilla": 570000,
-   "naver": 570000
+   "naver": 570000,
+   "toss": 570000
   },
   "NH농협카드": {
    "ajungdang": 205000,
@@ -259,7 +260,8 @@
    "issuer": "하나카드",
    "platforms": {
     "cardgorilla": 570000,
-    "naver": 570000
+    "naver": 570000,
+    "toss": 570000
    },
    "max": 570000
   },
@@ -645,9 +647,10 @@
    "name": "모니모A 카드",
    "issuer": "삼성카드",
    "platforms": {
+    "toss": 455000,
     "cardgorilla": 10000
    },
-   "max": 10000
+   "max": 455000
   },
   {
    "name": "taptap DRIVE",
@@ -1099,7 +1102,6 @@
    "issuer": "삼성카드",
    "platforms": {
     "ajungdang": 611000,
-    "toss": 455000,
     "kakaopay": 440000,
     "cardgorilla": 20000
    },
@@ -1192,7 +1194,8 @@
    "name": "디지로카 Link",
    "issuer": "롯데카드",
    "platforms": {
-    "cardgorilla": 590000
+    "cardgorilla": 590000,
+    "toss": 460000
    },
    "max": 590000
   },

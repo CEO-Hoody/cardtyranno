@@ -531,6 +531,15 @@
    "won": 570000
   },
   {
+   "issuer": "하나카드",
+   "card": "트래블로그+(플러스) 신용카드",
+   "platform": "토스",
+   "benefit": "최대 57만원 캐시백",
+   "period": "~06/30",
+   "url": "https://toss.im/_m/bcjcyh3m",
+   "won": 570000
+  },
+  {
    "issuer": "이벤트 등록용",
    "card": "팝업구조 TEST",
    "platform": "카드고릴라",
@@ -1139,7 +1148,7 @@
    "platform": "토스",
    "benefit": "최대 8만원 캐시백",
    "period": "~06/30",
-   "url": "https://toss.im/_m/rB3VnV8v",
+   "url": "https://toss.im/_m/zgTwn3un",
    "won": 80000
   },
   {
@@ -1181,6 +1190,15 @@
   {
    "issuer": "삼성카드",
    "card": "모니모A 카드",
+   "platform": "토스",
+   "benefit": "최대 45.5만원 캐시백",
+   "period": "~07/31",
+   "url": "https://toss.im/_m/banBQDY5",
+   "won": 455000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "모니모A 카드",
    "platform": "카드고릴라",
    "benefit": "최대 1만원 캐시백",
    "period": "~06/30",
@@ -1201,7 +1219,7 @@
    "card": "taptap DRIVE",
    "platform": "토스",
    "benefit": "최대 45.5만원 캐시백",
-   "period": "~06/30",
+   "period": "~07/31",
    "url": "https://toss.im/_m/banBQDY5",
    "won": 455000
   },
@@ -2117,15 +2135,6 @@
   {
    "issuer": "삼성카드",
    "card": "삼성 iD ON 카드",
-   "platform": "토스",
-   "benefit": "최대 45.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://toss.im/_m/dHQ1mRAn",
-   "won": 455000
-  },
-  {
-   "issuer": "삼성카드",
-   "card": "삼성 iD ON 카드",
    "platform": "카카오페이",
    "benefit": "최대 44만원 캐시백",
    "period": "~06/30",
@@ -2266,6 +2275,15 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/4",
    "won": 590000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "디지로카 Link",
+   "platform": "토스",
+   "benefit": "최대 46만원 캐시백",
+   "period": "~06/30",
+   "url": "https://toss.im/_m/7xU5L2v8",
+   "won": 460000
   },
   {
    "issuer": "IBK기업은행",
