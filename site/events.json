@@ -11,6 +11,7 @@
   "하나카드",
   "NH농협카드",
   "IBK기업은행",
+  "카카오페이",
   "BC 바로카드",
   "현대백화점",
   "이벤트 등록용",
@@ -55,6 +56,15 @@
   },
   {
    "issuer": "신한카드",
+   "card": "신한카드 Mr.Life",
+   "platform": "카카오페이",
+   "benefit": "최대 25만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 250000
+  },
+  {
+   "issuer": "신한카드",
    "card": "신한카드 Deep Oil",
    "platform": "뱅크샐러드",
    "benefit": "최대 84만원 캐시백",
@@ -88,6 +98,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
    "won": 500000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Deep Oil",
+   "platform": "카카오페이",
+   "benefit": "최대 25만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 250000
   },
   {
    "issuer": "신한카드",
@@ -142,6 +161,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
    "won": 125000
+  },
+  {
+   "issuer": "IBK기업은행",
+   "card": "K-패스 (신용)",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
   },
   {
    "issuer": "우리카드",
@@ -234,6 +262,15 @@
    "won": 440000
   },
   {
+   "issuer": "삼성카드",
+   "card": "삼성카드 & MILEAGE PLATINUM (스카이패스)",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
    "issuer": "현대카드",
    "card": "현대카드 M",
    "platform": "네이버페이",
@@ -250,6 +287,15 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 685000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 M",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
   },
   {
    "issuer": "KB국민카드",
@@ -297,6 +343,15 @@
    "won": 810000
   },
   {
+   "issuer": "KB국민카드",
+   "card": "KB국민 굿데이카드",
+   "platform": "카카오페이",
+   "benefit": "최대 22만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 220000
+  },
+  {
    "issuer": "우리카드",
    "card": "카드의정석 2",
    "platform": "뱅크샐러드",
@@ -331,6 +386,15 @@
    "period": "",
    "url": "https://www.ajd.co.kr/card/event/detail/267",
    "won": 770000
+  },
+  {
+   "issuer": "우리카드",
+   "card": "카드의정석 2",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
   },
   {
    "issuer": "롯데카드",
@@ -486,6 +550,15 @@
    "won": 124000
   },
   {
+   "issuer": "삼성카드",
+   "card": "THE iD. 1st",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
+  },
+  {
    "issuer": "KB국민카드",
    "card": "굿데이카드",
    "platform": "카드고릴라",
@@ -550,6 +623,15 @@
   },
   {
    "issuer": "현대카드",
+   "card": "대한항공카드 060",
+   "platform": "카카오페이",
+   "benefit": "최대 9만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 90000
+  },
+  {
+   "issuer": "현대카드",
    "card": "대한항공카드 300",
    "platform": "카드고릴라",
    "benefit": "최대 79만원 캐시백",
@@ -568,6 +650,15 @@
   },
   {
    "issuer": "현대카드",
+   "card": "대한항공카드 300",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "현대카드",
    "card": "대한항공카드 120",
    "platform": "카드고릴라",
    "benefit": "최대 76만원 캐시백",
@@ -583,6 +674,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
    "won": 750000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "대한항공카드 120",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
   },
   {
    "issuer": "현대카드",
@@ -749,6 +849,15 @@
   {
    "issuer": "NH농협카드",
    "card": "zgm.the pay카드",
+   "platform": "카카오페이",
+   "benefit": "최대 5만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 50000
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "zgm.the pay카드",
    "platform": "카드고릴라",
    "benefit": "최대 1.2만원 캐시백",
    "period": "~06/30",
@@ -866,6 +975,15 @@
   {
    "issuer": "현대카드",
    "card": "현대카드ZERO Edition3(할인형)",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드ZERO Edition3(할인형)",
    "platform": "카드고릴라",
    "benefit": "최대 1.5만원 캐시백",
    "period": "~06/30",
@@ -902,6 +1020,15 @@
   {
    "issuer": "현대카드",
    "card": "현대카드S",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드S",
    "platform": "카드고릴라",
    "benefit": "최대 1.5만원 캐시백",
    "period": "~06/30",
@@ -911,11 +1038,29 @@
   {
    "issuer": "현대카드",
    "card": "현대카드D",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드D",
    "platform": "카드고릴라",
    "benefit": "최대 1.5만원 캐시백",
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 15000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드H",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
   },
   {
    "issuer": "현대카드",
@@ -961,6 +1106,15 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/4",
    "won": 130000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데 국민행복카드",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
   },
   {
    "issuer": "NH농협카드",
@@ -1015,6 +1169,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
    "won": 464000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "taptap DRIVE",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
   },
   {
    "issuer": "삼성카드",
@@ -1090,6 +1253,15 @@
   },
   {
    "issuer": "KB국민카드",
+   "card": "KB YOU Prime 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 22만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 220000
+  },
+  {
+   "issuer": "KB국민카드",
    "card": "KB국민 My WE:SH 카드",
    "platform": "카드고릴라",
    "benefit": "최대 86만원 캐시백",
@@ -1114,6 +1286,15 @@
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD000128",
    "won": 840000
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "KB국민 My WE:SH 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 22만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 220000
   },
   {
    "issuer": "KB국민카드",
@@ -1351,6 +1532,15 @@
   },
   {
    "issuer": "신한카드",
+   "card": "신한카드 Air One",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "신한카드",
    "card": "신한카드 Simple Plan+",
    "platform": "카드고릴라",
    "benefit": "최대 78.9만원 캐시백",
@@ -1432,6 +1622,15 @@
   },
   {
    "issuer": "신한카드",
+   "card": "신한카드 Edu Plan+",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "신한카드",
    "card": "알리익스프레스 신한카드",
    "platform": "카드고릴라",
    "benefit": "최대 57.9만원 캐시백",
@@ -1486,6 +1685,15 @@
   },
   {
    "issuer": "NH농협카드",
+   "card": "zgm.play카드",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
+  },
+  {
+   "issuer": "NH농협카드",
    "card": "zgm.streaming카드",
    "platform": "아정당",
    "benefit": "최대 20.5만원 캐시백",
@@ -1510,6 +1718,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
    "won": 175000
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "zgm.streaming카드",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
   },
   {
    "issuer": "현대백화점",
@@ -1540,6 +1757,15 @@
   },
   {
    "issuer": "우리카드",
+   "card": "카드의정석 SHOPPING+",
+   "platform": "카카오페이",
+   "benefit": "최대 17만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 170000
+  },
+  {
+   "issuer": "우리카드",
    "card": "카드의정석2 EVERY DISCOUNT",
    "platform": "카드고릴라",
    "benefit": "최대 75만원 캐시백",
@@ -1564,6 +1790,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
    "won": 750000
+  },
+  {
+   "issuer": "우리카드",
+   "card": "카드의정석 TEN",
+   "platform": "카카오페이",
+   "benefit": "최대 17만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 170000
   },
   {
    "issuer": "우리카드",
@@ -1594,6 +1829,15 @@
   },
   {
    "issuer": "우리카드",
+   "card": "카드의정석 I&U+",
+   "platform": "카카오페이",
+   "benefit": "최대 17만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 170000
+  },
+  {
+   "issuer": "우리카드",
    "card": "우리카드 MILE&POINT",
    "platform": "카드고릴라",
    "benefit": "최대 78만원 캐시백",
@@ -1621,6 +1865,15 @@
   },
   {
    "issuer": "우리카드",
+   "card": "우리카드 MILE&POINT",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "우리카드",
    "card": "우리카드 7CORE",
    "platform": "카드고릴라",
    "benefit": "최대 78만원 캐시백",
@@ -1648,6 +1901,15 @@
   },
   {
    "issuer": "우리카드",
+   "card": "우리카드 7CORE",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "우리카드",
    "card": "the OPUS silver",
    "platform": "카드고릴라",
    "benefit": "최대 78만원 캐시백",
@@ -1663,6 +1925,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
    "won": 780000
+  },
+  {
+   "issuer": "우리카드",
+   "card": "the OPUS silver",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
   },
   {
    "issuer": "현대카드",
@@ -1811,6 +2082,15 @@
   {
    "issuer": "삼성카드",
    "card": "삼성 iD ON 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성 iD ON 카드",
    "platform": "카드고릴라",
    "benefit": "최대 2만원 캐시백",
    "period": "~06/30",
@@ -1834,6 +2114,15 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 20000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드Z everyday",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
   },
   {
    "issuer": "현대카드",
@@ -1960,6 +2249,330 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/2",
    "won": 10000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 LOCA LIKIT 2.0",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~07/10",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 LOCA LIKIT 1.5",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~07/10",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 LOCA 365",
+   "platform": "카카오페이",
+   "benefit": "최대 19만원 캐시백",
+   "period": "~07/10",
+   "url": "",
+   "won": 190000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 LOCA LIKIT",
+   "platform": "카카오페이",
+   "benefit": "최대 19만원 캐시백",
+   "period": "~07/10",
+   "url": "",
+   "won": 190000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 LOCA LIKIT Eat",
+   "platform": "카카오페이",
+   "benefit": "최대 19만원 캐시백",
+   "period": "~07/10",
+   "url": "",
+   "won": 190000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 LOCA LIKIT Play",
+   "platform": "카카오페이",
+   "benefit": "최대 19만원 캐시백",
+   "period": "~07/10",
+   "url": "",
+   "won": 190000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "롯데카드 LOCA LIKIT Shopping",
+   "platform": "카카오페이",
+   "benefit": "최대 19만원 캐시백",
+   "period": "~07/10",
+   "url": "",
+   "won": 190000
+  },
+  {
+   "issuer": "IBK기업은행",
+   "card": "IBK KaPick",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
+  },
+  {
+   "issuer": "IBK기업은행",
+   "card": "IBK포인트3.8",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
+  },
+  {
+   "issuer": "IBK기업은행",
+   "card": "IBK포인트",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
+  },
+  {
+   "issuer": "하나카드",
+   "card": "하나카드 트래블로그+(플러스) 신용카드",
+   "platform": "카카오페이",
+   "benefit": "최대 2만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 20000
+  },
+  {
+   "issuer": "하나카드",
+   "card": "하나 스카이패스 아멕스 플래티넘",
+   "platform": "카카오페이",
+   "benefit": "최대 7만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 70000
+  },
+  {
+   "issuer": "카카오페이",
+   "card": "카카오페이 신용카드",
+   "platform": "카카오페이",
+   "benefit": "최대 13만원 캐시백",
+   "period": "~07/31",
+   "url": "",
+   "won": 130000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성카드 taptap S",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "taptap SHOPPING",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "taptap DIGITAL",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성 iD ENERGY 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성 iD STATION 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성카드 스페셜마일리지",
+   "platform": "카카오페이",
+   "benefit": "최대 12만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 120000
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "NH농협 올바른 FLEX 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 100000
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "NH농협 K-패스 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 5만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 50000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드ZERO Edition3(적립형)",
+   "platform": "카카오페이",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 200000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "American Express Gold",
+   "platform": "카카오페이",
+   "benefit": "최대 40만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 400000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드MY BUSINESS M Edition3 F",
+   "platform": "카카오페이",
+   "benefit": "최대 9만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 90000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드MY BUSINESS M Edition3 R",
+   "platform": "카카오페이",
+   "benefit": "최대 9만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 90000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드MY BUSINESS M Edition3 E",
+   "platform": "카카오페이",
+   "benefit": "최대 9만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 90000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "American Express Green",
+   "platform": "카카오페이",
+   "benefit": "최대 15만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 150000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "대한항공카드 the First Edition",
+   "platform": "카카오페이",
+   "benefit": "최대 15만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 150000
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "KB국민 YOU Wish 카드",
+   "platform": "카카오페이",
+   "benefit": "최대 22만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 220000
+  },
+  {
+   "issuer": "우리카드",
+   "card": "카드의정석 EVERY DISCOUNT",
+   "platform": "카카오페이",
+   "benefit": "최대 17만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 170000
+  },
+  {
+   "issuer": "우리카드",
+   "card": "D4카드의정석II",
+   "platform": "카카오페이",
+   "benefit": "최대 17만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 170000
+  },
+  {
+   "issuer": "우리카드",
+   "card": "카드의정석 EVERY POINT",
+   "platform": "카카오페이",
+   "benefit": "최대 17만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 170000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 KaPick",
+   "platform": "카카오페이",
+   "benefit": "최대 25만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 250000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Deep On Platinum",
+   "platform": "카카오페이",
+   "benefit": "최대 25만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 250000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 The CLASSIC NEO",
+   "platform": "카카오페이",
+   "benefit": "최대 18만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 180000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 The CLASSIC-Y",
+   "platform": "카카오페이",
+   "benefit": "최대 18만원 캐시백",
+   "period": "~06/30",
+   "url": "",
+   "won": 180000
   }
  ]
 }
