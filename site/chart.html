@@ -175,6 +175,17 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .cardad{transition:box-shadow .18s,transform .18s}.cardad:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.10)}
 .rk .pl img{transition:transform .16s ease}.rk:hover .pl img{transform:scale(1.06)}
 .ctile .plate{overflow:hidden}
+/* 온보딩/랜딩 히어로(인덱스 첫 화면 정체성) */
+.obhero{background:#c5b0f4;border-radius:20px;padding:30px 26px;margin:14px 0 8px;position:relative;overflow:hidden}
+.obhero::after{content:"";position:absolute;right:-50px;top:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%)}
+.obhero .obeb{font-size:12px;font-weight:900;letter-spacing:.4px;color:#5b3fb0;position:relative;z-index:1}
+.obhero .obh{font-size:26px;font-weight:900;letter-spacing:-.03em;line-height:1.22;margin-top:9px;color:#16161b;position:relative;z-index:1}
+.obhero .obs{font-size:14px;color:#3a2d5e;margin-top:10px;line-height:1.6;max-width:560px;position:relative;z-index:1}
+.obhero .obcta{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;position:relative;z-index:1}
+.obhero .obb1{background:#16161b;color:#fff;font-weight:800;font-size:14px;padding:12px 18px;border-radius:999px;transition:transform .15s}
+.obhero .obb2{background:rgba(255,255,255,.72);color:#16161b;font-weight:800;font-size:14px;padding:12px 18px;border-radius:999px;transition:transform .15s}
+.obhero .obb1:hover,.obhero .obb2:hover{transform:translateY(-1px)}
+@media(max-width:560px){.obhero{padding:22px 18px}.obhero .obh{font-size:21px}.obhero .obcta a{flex:1;text-align:center}}
 /* 티라노 브랜드 플레이트 배너(특정 카드 아님·서비스 대표 장식) */
 .tybnr{display:flex;align-items:center;gap:20px;background:#c5b0f4;border-radius:20px;padding:24px 26px;margin:18px 0 22px;overflow:hidden;position:relative;color:#16161b;text-decoration:none;transition:box-shadow .18s,transform .18s}
 .tybnr:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(123,90,210,.28)}
