@@ -336,10 +336,12 @@ var PCOL={"카드고릴라":"#ff4d4f","뱅크샐러드":"#2f6bff","아정당":"#
 fetch('cards.json').then(r=>r.json()).then(function(cj){
  var NAME2ID={};for(var k in cj.cards){(cj.cards[k]||[]).forEach(function(c){if(NAME2ID[_nk2(c.name)]==null)NAME2ID[_nk2(c.name)]=c.id;});}
  function cardHref(name){var id=NAME2ID[_nk2(name||'')];if(id==null)id=NAME2ID[_nk2((name||'').replace(/^토스\s*/,''))];return id!=null?('carddetail.html?id='+id):null;}
- fetch('hero.json').then(r=>r.json()).then(function(j){document.getElementById('rk').innerHTML=j.items.map(function(d,i){
-  var h=cardHref(d.card)||'chart.html';var rk=i+1;
-  return '<a class="rk" href="'+h+'"><span class="no'+(rk<=3?' top':'')+'">'+rk+'</span><span class="pl">'+imgTag(d.img)+'</span><div class="ri"><div class="rn">'+d.card+'</div><div class="rs">'+d.issuer+'</div></div><span class="rw">'+d.reward+'</span></a>';}).join("");
-  var t3=document.getElementById('t3');if(t3)t3.innerHTML=j.items.slice(0,8).map(function(d,i){var h=cardHref(d.card)||'chart.html';return '<a class="t3c" href="'+h+'"><div class="t3p"><span class="t3rk">'+(i+1)+'</span>'+imgTag(d.img)+'</div><div class="t3n">'+d.card+'</div><div class="t3a">'+(d.reward||'')+'</div><div class="t3i">'+(d.issuer||'')+'</div></a>';}).join("");
+ fetch('hero.json').then(r=>r.json()).then(function(j){
+  // 캐러셀=TOP1~3, 아래 순위 리스트=4위~ (겹침 제거)
+  var t3=document.getElementById('t3');if(t3)t3.innerHTML=j.items.slice(0,3).map(function(d,i){var h=cardHref(d.card)||'chart.html';return '<a class="t3c" href="'+h+'"><div class="t3p"><span class="t3rk">'+(i+1)+'</span>'+imgTag(d.img)+'</div><div class="t3n">'+d.card+'</div><div class="t3a">'+(d.reward||'')+'</div><div class="t3i">'+(d.issuer||'')+'</div></a>';}).join("");
+  document.getElementById('rk').innerHTML=j.items.slice(3).map(function(d,i){
+   var h=cardHref(d.card)||'chart.html';var rk=i+4;
+   return '<a class="rk" href="'+h+'"><span class="no">'+rk+'</span><span class="pl">'+imgTag(d.img)+'</span><div class="ri"><div class="rn">'+d.card+'</div><div class="rs">'+d.issuer+'</div></div><span class="rw">'+d.reward+'</span></a>';}).join("");
   repairImages();});
  fetch('events.json').then(r=>r.json()).then(function(j){document.getElementById('evs').innerHTML=j.items.slice(0,4).map(function(x){
   var h=cardHref(x.card)||('issue.html?issuer='+encodeURIComponent(x.issuer||''));
