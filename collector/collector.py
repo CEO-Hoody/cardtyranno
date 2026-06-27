@@ -523,14 +523,15 @@ if __name__=="__main__":
         for ev in kp.get("events",[]):
             rw=ev.get("reward_won") or 0; rtext=ev.get("reward_text")
             ps=ev.get("period_start"); pe=ev.get("period_end"); iss=ev.get("issuer") or ""
+            eurl=ev.get("url","")                      # 카카오페이 이벤트 페이지 랜딩 스킴(fest.kakaopay.com 그룹)
             for cn in ev.get("cards",[]):
                 p=_bk.get(_nk(cn))
                 if not p:                              # 카카오페이 전용(우리 DB 미존재) 카드 → 신규 상품 생성
                     p={"name":cn,"issuer":iss,"platforms":{}}; products.append(p); _bk[_nk(cn)]=p; _knew+=1
-                p.setdefault("platforms",{})["kakaopay"]={"id":"","url":""}
+                p.setdefault("platforms",{})["kakaopay"]={"id":"","url":eurl}
                 if rw:
                     injected[(p["name"],"kakaopay")]={"reward_won":rw,"reward_text":rtext,
-                        "period_start":ps,"period_end":pe,"url":""}
+                        "period_start":ps,"period_end":pe,"url":eurl}
                     _kn+=1
         if _kn: print(f"세이스모(카카오페이) 주입 {_kn}건 (신규상품 {_knew}건)")
     except FileNotFoundError: pass
