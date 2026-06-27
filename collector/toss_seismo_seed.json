@@ -1,0 +1,100 @@
+{
+  "_source": "토스 앱 6월 이벤트 리스트 캡처(세이스모) — 카드사 캠페인을 카카오페이 동일 카드군에 금액 근접 매칭(차이>60% 제외). 카드별 상세 캡처 입수 시 정밀화.",
+  "_captured": "2026-06-27",
+  "month": "2026-06",
+  "platform": "toss",
+  "events": [
+    {
+      "issuer": "롯데카드",
+      "cards": [
+        "롯데카드 LOCA 365",
+        "롯데카드 LOCA LIKIT",
+        "롯데카드 LOCA LIKIT Eat",
+        "롯데카드 LOCA LIKIT Play",
+        "롯데카드 LOCA LIKIT Shopping"
+      ],
+      "reward_won": 620000,
+      "headline_won": 620000,
+      "reward_text": "토스 카드라운지 발급 이벤트 · 최대 62만원 상당 혜택",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "issuer": "롯데카드",
+      "cards": [
+        "롯데카드 LOCA LIKIT 2.0",
+        "롯데카드 LOCA LIKIT 1.5"
+      ],
+      "reward_won": 480000,
+      "headline_won": 480000,
+      "reward_text": "토스 카드라운지 발급 이벤트 · 최대 48만원 상당 혜택",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "issuer": "롯데카드",
+      "cards": [
+        "롯데 국민행복카드"
+      ],
+      "reward_won": 80000,
+      "headline_won": 80000,
+      "reward_text": "토스 카드라운지 발급 이벤트 · 최대 8만원 상당 혜택",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "issuer": "삼성카드",
+      "cards": [
+        "삼성카드 taptap S",
+        "taptap SHOPPING",
+        "taptap DRIVE",
+        "taptap DIGITAL",
+        "삼성 iD ON 카드",
+        "삼성 iD ENERGY 카드",
+        "삼성 iD STATION 카드",
+        "삼성카드 스페셜마일리지"
+      ],
+      "reward_won": 455000,
+      "headline_won": 455000,
+      "reward_text": "토스 카드라운지 발급 이벤트 · 최대 45.5만원 상당 혜택",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "issuer": "삼성카드",
+      "cards": [
+        "THE iD. 1st"
+      ],
+      "reward_won": 100000,
+      "headline_won": 100000,
+      "reward_text": "토스 카드라운지 발급 이벤트 · 최대 10만원 상당 혜택",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "issuer": "IBK기업은행",
+      "cards": [
+        "K-패스 (신용)",
+        "IBK KaPick",
+        "IBK포인트3.8",
+        "IBK포인트"
+      ],
+      "reward_won": 125000,
+      "headline_won": 125000,
+      "reward_text": "토스 카드라운지 발급 이벤트 · 최대 12.5만원 상당 혜택",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "issuer": "하나카드",
+      "cards": [
+        "하나 스카이패스 아멕스 플래티넘"
+      ],
+      "reward_won": 570000,
+      "headline_won": 570000,
+      "reward_text": "토스 카드라운지 발급 이벤트 · 최대 57만원 상당 혜택",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30"
+    }
+  ]
+}
