@@ -206,6 +206,11 @@ def export_json(con):
     hist=os.path.join(SITE,"history"); os.makedirs(hist,exist_ok=True)
     json.dump({"month":MONTH,"updated":datetime.date.today().isoformat(),"issuers":issuers,"cards":cardsnap},
               open(os.path.join(hist,MONTH+".json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    # 추이차트용 월 인덱스(존재하는 스냅샷 월 목록) — 프론트가 이걸 읽어 각 월 파일을 로드
+    months=sorted([f[:-5] for f in os.listdir(hist) if f.endswith(".json") and f[0].isdigit()])
+    json.dump({"months":months,"updated":datetime.date.today().isoformat()},
+              open(os.path.join(hist,"index.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    print(f"export → site/history/{MONTH}.json + index.json ({len(months)} months)")
     # ── 추천 테이블 기반(reco.json): 카드별 교차 최대혜택 + 플랫폼 + 발급사 (향후 유저 추천용) ──
     reco=[]
     for p in out:
