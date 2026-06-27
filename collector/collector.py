@@ -175,7 +175,7 @@ def export_json(con):
               open(os.path.join(SITE,"platform_events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/platform_events.json ({len(out)} products)")
     # ── 발급이벤트 목록(events.json) = platform_events 평탄화(5개 플랫폼·네이버 포함). 구형 build_data 산출물(네이버 0건) 대체 ──
-    PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당"}
+    PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당","kakaopay":"카카오페이"}
     def _man(w):
         if not w: return ""
         return (str(round(w/1000)/10).replace(".0","")+"만원") if w>=10000 else (f"{w:,}원")
@@ -429,6 +429,27 @@ if __name__=="__main__":
         if _bn2: print(f"뱅샐 보정 주입 {_bn2}건")
     except FileNotFoundError: pass
     except Exception as e: print("banksalad seed err", e)
+    # 세이스모(Seismosaurus): 카카오페이 앱 캡처를 비전분석한 kakaopay_seed.json 주입.
+    # 카카오페이는 공개 웹 스크래핑 소스가 없어 앱 캡처 기반으로 적재(toss와 함께 세이스모 모듈이 담당).
+    # reward_won=국내 이용 메인 캐시백(타 플랫폼과 비교 가능한 발급 캐시백). 공개 웹 URL이 없어 아웃링크는 비부착.
+    try:
+        kp=json.load(open(os.path.join(BASE,"kakaopay_seed.json"),encoding="utf-8"))
+        _bk={_nk(p["name"]):p for p in products}; _kn=0; _knew=0
+        for ev in kp.get("events",[]):
+            rw=ev.get("reward_won") or 0; rtext=ev.get("reward_text")
+            ps=ev.get("period_start"); pe=ev.get("period_end"); iss=ev.get("issuer") or ""
+            for cn in ev.get("cards",[]):
+                p=_bk.get(_nk(cn))
+                if not p:                              # 카카오페이 전용(우리 DB 미존재) 카드 → 신규 상품 생성
+                    p={"name":cn,"issuer":iss,"platforms":{}}; products.append(p); _bk[_nk(cn)]=p; _knew+=1
+                p.setdefault("platforms",{})["kakaopay"]={"id":"","url":""}
+                if rw:
+                    injected[(p["name"],"kakaopay")]={"reward_won":rw,"reward_text":rtext,
+                        "period_start":ps,"period_end":pe,"url":""}
+                    _kn+=1
+        if _kn: print(f"세이스모(카카오페이) 주입 {_kn}건 (신규상품 {_knew}건)")
+    except FileNotFoundError: pass
+    except Exception as e: print("kakaopay seismo err", e)
     # 카드고릴라: 이벤트 라벨(subject)을 reward_text로 주입(상세 'card_detail_text'의 "연회비 캐시백"류 대신)
     cg_inj=0
     for p in products:
