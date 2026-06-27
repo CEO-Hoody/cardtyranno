@@ -1,0 +1,18 @@
+{
+  "_source": "토스 앱 6월 이벤트 그룹페이지 캡처 10장(세이스모 비전 분석) — 카드별 대상 리스트·금액 정확 추출. reward_won=토스 헤드라인 '최대 N만원'(토스포인트=원 1:1).",
+  "_captured": "2026-06-27",
+  "month": "2026-06",
+  "platform": "toss",
+  "events": [
+    {"issuer": "롯데카드", "cards": ["롯데카드 LOCA LIKIT 1.5", "롯데카드 LOCA LIKIT 2.0"], "reward_won": 620000, "headline_won": 620000, "reward_text": "25만원 이상 이용 시 최대 15/14만 토스포인트 + 해외 30만 + 백화점몰 쿠폰 10만", "period_start": "2026-06-08", "period_end": "2026-06-30", "url": "https://toss.im/_m/rB3VnV8v"},
+    {"issuer": "롯데카드", "cards": ["롯데카드 LOCA LIKIT", "롯데카드 LOCA 365", "롯데 LOCA 나누기", "Digi-LOCA Las Vegas", "Digi-LOCA London", "Digi-LOCA Paris", "디지로카 Link"], "reward_won": 460000, "headline_won": 460000, "reward_text": "20만원 이상 이용 시 15만 토스포인트 + 해외 30만", "period_start": "2026-06-05", "period_end": "2026-06-30", "url": "https://toss.im/_m/7xU5L2v8"},
+    {"issuer": "삼성카드", "cards": ["taptap DIGITAL", "taptap DRIVE", "Toss taptap S", "모니모A 카드"], "reward_won": 455000, "headline_won": 455000, "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만", "period_start": "2026-06-19", "period_end": "2026-07-31", "url": "https://toss.im/_m/banBQDY5"},
+    {"issuer": "삼성카드", "cards": ["토스 삼성카드"], "reward_won": 445000, "headline_won": 445000, "reward_text": "20만원 이상 쓰면 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만", "period_start": "2026-06-19", "period_end": "2026-07-31", "url": "https://toss.im/_m/dHQ1mRAn"},
+    {"issuer": "IBK기업은행", "cards": ["IBK 일상의 기쁨카드", "IBK 포인트 카드", "IBK K-패스(신용)", "K-패스 (신용)", "해피메이트 IBK카드"], "reward_won": 125000, "headline_won": 125000, "reward_text": "20만원 이상 + 마케팅 동의 시 토스포인트 9만 + 자동이체 3.5만", "period_start": "2026-06-01", "period_end": "2026-06-30", "url": "https://toss.im/_m/dwdCISRa"},
+    {"issuer": "IBK기업은행", "cards": ["IBK 포인트3.8 토스 제휴카드", "IBK포인트3.8"], "reward_won": 125000, "headline_won": 125000, "reward_text": "20만원 이상 + 마케팅 동의 시 토스포인트 9만 + 자동이체 3.5만", "period_start": "2026-06-01", "period_end": "2026-06-30", "url": "https://toss.im/_m/Vip0BaYu"},
+    {"issuer": "하나카드", "cards": ["원더카드2.0 Life", "하나카드 원더카드2.0 Life"], "reward_won": 80000, "headline_won": 80000, "reward_text": "20만원 쓰고 7만원 + 멤버십 정기구독 1만 하나머니", "period_start": "2026-06-01", "period_end": "2026-06-30", "url": "https://toss.im/_m/lfRuO3fm"},
+    {"issuer": "하나카드", "cards": ["하나카드 트래블로그+(플러스) 신용카드", "트래블로그+(플러스) 신용카드"], "reward_won": 570000, "headline_won": 570000, "reward_text": "2만원 쓰면 2만원 + 해외 최대 50만 + 일본 여행 5만 캐시백", "period_start": "2026-06-01", "period_end": "2026-06-30", "url": "https://toss.im/_m/bcjcyh3m"},
+    {"issuer": "삼성카드", "cards": ["THE iD. 1st"], "reward_won": 100000, "headline_won": 100000, "reward_text": "100만원 이상 쓰면 10만원", "period_start": "2026-06-01", "period_end": "2026-06-30", "url": "https://toss.im/_m/LUWffhjw"},
+    {"issuer": "롯데카드", "cards": ["롯데 국민행복카드"], "reward_won": 80000, "headline_won": 80000, "reward_text": "10만원 쓰면 8만 토스포인트", "period_start": "2026-06-05", "period_end": "2026-06-30", "url": "https://toss.im/_m/zgTwn3un"}
+  ]
+}

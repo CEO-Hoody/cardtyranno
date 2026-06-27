@@ -1,0 +1,32 @@
+{
+ "month": "2026-05",
+ "updated": "2026-06-27",
+ "source": "banksalad 지난 이벤트(카드사별 월 최대). cardgorilla/아정당 과거는 미수집(Chrome 차단·드릴다운)",
+ "issuers": {
+  "신한카드": {
+   "banksalad": 730000
+  },
+  "현대카드": {
+   "banksalad": 695000
+  },
+  "우리카드": {
+   "banksalad": 600000
+  },
+  "KB국민카드": {
+   "banksalad": 550000
+  },
+  "롯데카드": {
+   "banksalad": 530000
+  },
+  "삼성카드": {
+   "banksalad": 240000
+  },
+  "NH농협카드": {
+   "banksalad": 210000
+  },
+  "현대백화점": {
+   "banksalad": 10000
+  }
+ },
+ "cards": []
+}

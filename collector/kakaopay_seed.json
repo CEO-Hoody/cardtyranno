@@ -1,0 +1,377 @@
+{
+  "_source": "카카오페이 앱 > 카드 이벤트 캡처(세이스모 비전 분석)",
+  "_captured": "2026-06-27",
+  "_note": "카카오페이는 웹 스크래핑 소스가 없어 앱 캡처를 세이스모 모듈이 비전 분석하여 적재. reward_won=국내 이용 메인 캐시백(타 플랫폼과 비교 가능한 발급 캐시백), headline_won=앱 헤드라인 '최대 N만원'(국내+해외+쿠폰 합산 마케팅값).",
+  "month": "2026-06",
+  "platform": "kakaopay",
+  "events": [
+    {
+      "issuer": "롯데카드",
+      "cards": [
+        "롯데카드 LOCA LIKIT 2.0",
+        "롯데카드 LOCA LIKIT 1.5"
+      ],
+      "reward_won": 200000,
+      "headline_won": 660000,
+      "reward_text": "25만원 이상 이용 시 최대 20만원 캐시백(AMEX 19만/MASTER 18만 + 리볼빙 1만) + 해외 30만 + 백화점몰 쿠폰 10만",
+      "period_start": "2026-06-08",
+      "period_end": "2026-07-10",
+      "capture": "001",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a213ce0708e6a3666d1176c?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "롯데카드",
+      "cards": [
+        "롯데카드 LOCA 365",
+        "롯데카드 LOCA LIKIT",
+        "롯데카드 LOCA LIKIT Eat",
+        "롯데카드 LOCA LIKIT Play",
+        "롯데카드 LOCA LIKIT Shopping"
+      ],
+      "reward_won": 190000,
+      "headline_won": 650000,
+      "reward_text": "25만원 이상 이용 시 최대 19만원 캐시백(18만 + 리볼빙 1만) + 해외 30만 + 백화점몰 쿠폰 10만",
+      "period_start": "2026-06-05",
+      "period_end": "2026-07-10",
+      "capture": "002",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a211d84708e6a3666d11761?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "롯데카드",
+      "cards": [
+        "롯데 국민행복카드"
+      ],
+      "reward_won": 100000,
+      "headline_won": 100000,
+      "reward_text": "15만원 이상 이용 시 10만원 캐시백",
+      "period_start": "2026-06-05",
+      "period_end": "2026-06-30",
+      "capture": "003",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a194fef3f63cd5250620206?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "IBK기업은행",
+      "cards": [
+        "K-패스 (신용)",
+        "IBK KaPick",
+        "IBK포인트3.8",
+        "IBK포인트"
+      ],
+      "reward_won": 100000,
+      "headline_won": 135000,
+      "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동이체 시 최대 3.5만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "004",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18593b0aaffa3c8f306f00?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "하나카드",
+      "cards": [
+        "하나카드 트래블로그+(플러스) 신용카드"
+      ],
+      "reward_won": 20000,
+      "headline_won": 647000,
+      "reward_text": "2만원 이상 이용 시 2만원 캐시백 + 추가 8만↑ 프리미엄라운지 이용권 + 해외 최대 50만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "005,006",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1913a13f63cd52506201e3?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "하나카드",
+      "cards": [
+        "하나 스카이패스 아멕스 플래티넘"
+      ],
+      "reward_won": 70000,
+      "headline_won": 570000,
+      "reward_text": "20만원 이상 이용 시 7만원 캐시백 + 해외 최대 50만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "007",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a196ca3708e6a3666d116f7?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "카카오페이",
+      "cards": [
+        "카카오페이 신용카드"
+      ],
+      "reward_won": 130000,
+      "headline_won": 460000,
+      "reward_text": "20만원 이상 결제 시 12만원 캐시백 + 마케팅동의 1만 + 해외 6/30만 + 생활요금 2만",
+      "period_start": "2026-06-22",
+      "period_end": "2026-07-31",
+      "capture": "008",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208731f94d85bad33f596?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "삼성카드",
+      "cards": [
+        "삼성카드 taptap S",
+        "taptap SHOPPING",
+        "taptap DRIVE",
+        "taptap DIGITAL",
+        "삼성 iD ON 카드",
+        "삼성 iD ENERGY 카드",
+        "삼성 iD STATION 카드",
+        "삼성카드 스페셜마일리지"
+      ],
+      "reward_won": 120000,
+      "headline_won": 440000,
+      "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
+      "period_start": "2026-06-19",
+      "period_end": "2026-06-30",
+      "capture": "009",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208ae1f94d85bad33f598?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "삼성카드",
+      "cards": [
+        "삼성카드 &MILEAGE PLATINUM (스카이패스)"
+      ],
+      "reward_won": 120000,
+      "headline_won": 120000,
+      "reward_text": "30만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만",
+      "period_start": "2026-06-19",
+      "period_end": "2026-06-30",
+      "capture": "010",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a33cf201ae1bb48cd4c1a87?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "삼성카드",
+      "cards": [
+        "THE iD. 1st"
+      ],
+      "reward_won": 100000,
+      "headline_won": 100000,
+      "reward_text": "100만원 이상 이용 시 10만원 캐시백",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "011",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15566ef3bfd14294a5a1e5?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "NH농협카드",
+      "cards": [
+        "NH농협 올바른 FLEX 카드",
+        "zgm.play 카드",
+        "zgm.streaming 카드"
+      ],
+      "reward_won": 100000,
+      "headline_won": 195000,
+      "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "012",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "NH농협카드",
+      "cards": [
+        "zgm.the pay 카드",
+        "NH농협 K-패스 카드"
+      ],
+      "reward_won": 50000,
+      "headline_won": 65000,
+      "reward_text": "5만원 이용 시 5만원 캐시백 + 추가 5만↑ 연회비 캐시백",
+      "period_start": "2026-06-16",
+      "period_end": "2026-06-30",
+      "capture": "013",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a195ac047a5727be5c4af3d?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "현대카드",
+      "cards": [
+        "현대카드M",
+        "현대카드ZERO Edition3(적립형)",
+        "현대카드ZERO Edition3(할인형)",
+        "현대카드D",
+        "현대카드H",
+        "현대카드S",
+        "현대카드Z everyday"
+      ],
+      "reward_won": 200000,
+      "headline_won": 440000,
+      "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
+      "period_start": "2026-06-11",
+      "period_end": "2026-06-30",
+      "capture": "014",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "현대카드",
+      "cards": [
+        "American Express Gold"
+      ],
+      "reward_won": 400000,
+      "headline_won": 500000,
+      "reward_text": "60만원 이상 이용 시 40만원 캐시백 + 해외 15만↑ 10만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "015",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a167b085f8cbf0e05fe65ea?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "현대카드",
+      "cards": [
+        "현대카드MY BUSINESS M Edition3 F",
+        "현대카드MY BUSINESS M Edition3 R",
+        "현대카드MY BUSINESS M Edition3 E"
+      ],
+      "reward_won": 90000,
+      "headline_won": 410000,
+      "reward_text": "20만원 이상 이용+마케팅 동의 시 9만원 캐시백 + 해외 6/30.5만 + 정기결제 1.5만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "016",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1926c43f63cd52506201f2?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "현대카드",
+      "cards": [
+        "American Express Green"
+      ],
+      "reward_won": 150000,
+      "headline_won": 250000,
+      "reward_text": "60만원 이상 이용 시 15만원 캐시백 + 해외 15만↑ 10만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "017",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1679b75f8cbf0e05fe65e8?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "현대카드",
+      "cards": [
+        "대한항공카드 060"
+      ],
+      "reward_won": 90000,
+      "headline_won": 690000,
+      "reward_text": "25만원 이상 이용 시 9만원 캐시백 + 해외 최대 60만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "018",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a168003e4fd92445c8372d0?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "현대카드",
+      "cards": [
+        "대한항공카드 120",
+        "대한항공카드 300"
+      ],
+      "reward_won": 120000,
+      "headline_won": 720000,
+      "reward_text": "25만원 이상 이용 시 12만원 캐시백 + 해외 최대 60만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "019",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1682bce0eb334818c07cb3?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "현대카드",
+      "cards": [
+        "대한항공카드 the First Edition"
+      ],
+      "reward_won": 150000,
+      "headline_won": 750000,
+      "reward_text": "25만원 이상 이용 시 15만원 캐시백 + 해외 최대 60만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "020,021",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a168312e0eb334818c07cb6?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "KB국민카드",
+      "cards": [
+        "KB YOU Prime 카드",
+        "KB국민 YOU Wish 카드",
+        "KB국민 My WE:SH 카드",
+        "KB국민 굿데이카드"
+      ],
+      "reward_won": 220000,
+      "headline_won": 850000,
+      "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "022",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "우리카드",
+      "cards": [
+        "카드의정석2",
+        "우리카드 7CORE",
+        "the OPUS silver",
+        "우리카드 MILE&POINT"
+      ],
+      "reward_won": 200000,
+      "headline_won": 780000,
+      "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "023",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18f5493f63cd52506201dd?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "우리카드",
+      "cards": [
+        "카드의정석 SHOPPING+",
+        "카드의정석 EVERY DISCOUNT",
+        "D4카드의정석II",
+        "카드의정석 TEN",
+        "카드의정석 I&U+",
+        "카드의정석 EVERY POINT"
+      ],
+      "reward_won": 170000,
+      "headline_won": 750000,
+      "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "024",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1860e33f63cd52506201d3?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "신한카드",
+      "cards": [
+        "신한카드 Deep Oil",
+        "신한카드 Mr.Life",
+        "신한카드 KaPick",
+        "신한카드 Deep On Platinum"
+      ],
+      "reward_won": 250000,
+      "headline_won": 390000,
+      "reward_text": "마케팅 동의+35만원 이상 이용 시 25만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "025",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a16535c2b22005aa4ee0f18?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "신한카드",
+      "cards": [
+        "신한카드 Edu Plan+",
+        "신한카드 Air One"
+      ],
+      "reward_won": 200000,
+      "headline_won": 320000,
+      "reward_text": "마케팅 동의+30만원 이상 이용 시 20만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "026",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a190f140aaffa3c8f306f0d?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    {
+      "issuer": "신한카드",
+      "cards": [
+        "신한카드 The CLASSIC NEO",
+        "신한카드 The CLASSIC-Y"
+      ],
+      "reward_won": 180000,
+      "headline_won": 480000,
+      "reward_text": "마케팅 동의+40만원 이상 이용 시 18만원 혜택 + 해외 30만",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "capture": "027",
+      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1911ce0aaffa3c8f306f0f?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    }
+  ]
+}

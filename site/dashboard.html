@@ -1,7 +1,9 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>카드티라노 | 통계 대시보드</title><meta name="description" content="방문·클릭 통계 (관리자 전용)."><meta name="keywords" content="카드티라노,카드 비교,카드 발급 혜택,카드 할인 혜택,카드 캐시백,신용카드 추천,카드 이벤트,카드 순위,2026 카드"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#ffffff"><link rel="canonical" href="https://cardtyranno.com/dashboard.html"><meta property="og:type" content="website"><meta property="og:site_name" content="카드티라노"><meta property="og:title" content="카드티라노 | 통계 대시보드"><meta property="og:description" content="방문·클릭 통계 (관리자 전용)."><meta property="og:url" content="https://cardtyranno.com/dashboard.html"><meta property="og:image" content="https://cardtyranno.com/logo.png"><meta property="og:locale" content="ko_KR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="카드티라노 | 통계 대시보드"><meta name="twitter:description" content="방문·클릭 통계 (관리자 전용)."><meta name="twitter:image" content="https://cardtyranno.com/logo.png"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>"><style>
-:root{--bg:#ffffff;--surface:#ffffff;--surface2:#f3f4f6;--line:#e3e4ea;--text:#16161b;--sub:#54545f;--dim:#7c7c86;--accent:#ef5226;--accent-d:#d6420f;--blue:#2f6bff;--plate:#eceef2;--radius:14px}
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>카드티라노 | 통계 대시보드</title><meta name="description" content="방문·클릭 통계 (관리자 전용)."><meta name="keywords" content="카드티라노,카드 비교,카드 발급 혜택,카드 할인 혜택,카드 캐시백,신용카드 추천,카드 이벤트,카드 순위,2026 카드"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#ffffff"><link rel="canonical" href="https://cardtyranno.com/dashboard.html"><meta property="og:type" content="website"><meta property="og:site_name" content="카드티라노"><meta property="og:title" content="카드티라노 | 통계 대시보드"><meta property="og:description" content="방문·클릭 통계 (관리자 전용)."><meta property="og:url" content="https://cardtyranno.com/dashboard.html"><meta property="og:image" content="https://cardtyranno.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="카드티라노"><meta property="og:locale" content="ko_KR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="카드티라노 | 통계 대시보드"><meta name="twitter:description" content="방문·클릭 통계 (관리자 전용)."><meta name="twitter:image" content="https://cardtyranno.com/og-image.png"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>"><link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><style>
+:root{--bg:#f6f5f1;--surface:#ffffff;--surface2:#edebe4;--line:#e6e3da;--text:#16161b;--sub:#54545f;--dim:#8a8780;--accent:#ef5226;--accent-d:#d6420f;--blue:#2f6bff;--plate:#eceef2;--radius:18px;
+/* Canvas Design System 토큰(핸드오프 §2) */
+--ink:#000;--white:#fff;--surface-soft:#f7f7f5;--hairline:#e6e6e6;--hairline-soft:#f1f1f1;--block-lime:#dceeb1;--block-lilac:#c5b0f4;--block-cream:#f4ecd6;--block-pink:#efd4d4;--block-mint:#c8e6cd;--block-coral:#f3c9b6;--block-navy:#1f1d3d;--accent-magenta:#ff3d8b;--success:#1ea64a}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,'Apple SD Gothic Neo','Pretendard','Malgun Gothic',sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:'Pretendard','Pretendard Variable',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .muted{color:var(--sub)} .accent{color:var(--accent)} .empty{color:var(--sub);text-align:center;padding:46px 20px;font-size:14px}
@@ -11,12 +13,28 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .hd .row{display:flex;align-items:center;gap:24px;height:64px}
 .logo{font-size:21px;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:7px}
-.logo .rx{font-size:23px}.logo b{color:var(--accent)}
+.logo .rx{width:23px;height:23px;color:var(--text);display:block;flex:0 0 auto}.logo b{color:var(--text);font-weight:400}
 .gnb{display:flex;gap:22px;font-size:15px;font-weight:700}
 .gnb a{color:#55555e;padding:6px 0;position:relative}.gnb a:hover,.gnb a.on{color:var(--accent)}
 .gnb a.on::after{content:"";position:absolute;left:0;right:0;bottom:-21px;height:3px;background:var(--accent)}
 .hd .right{margin-left:auto;display:flex;align-items:center;gap:14px}
 .icbtn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#55555e;border:1px solid var(--line);cursor:pointer}
+.ic{width:20px;height:20px;display:block;flex:0 0 auto}
+.cat .ico .ic{width:22px;height:22px}.curc .em .ic{width:26px;height:26px}.favbtn .ic{width:20px;height:20px}
+.dday{display:inline-block;font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:999px;background:var(--surface2);color:var(--sub);margin-left:6px;vertical-align:middle}.dday.soon{background:#ff3d8b;color:#fff}
+/* ===== INTERACTION.md 전역 모션 레이어 ===== */
+:root{--dur-fast:140ms;--dur-base:240ms;--dur-slow:320ms;--ease:cubic-bezier(.2,0,0,1)}
+a,button{transition:opacity var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease),background-color var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease),border-color var(--dur-fast) var(--ease)}
+.nhe-cta:hover,.cf-go:hover,.adb:hover,.evh-cta:hover,.obb1:hover,.obb2:hover{opacity:.92}
+.nhe-cta:active,.cf-go:active,.adb:active,.obb1:active,.obb2:active,.cf-sortbtn:active,.nmore:active{transform:scale(.97)}
+.icbtn:active,.cf-fav:active,.favbtn:active{transform:scale(.94)}
+.cf-card,.nrow,.npc,.ctile,.gcard,.ev{transition:border-color var(--dur-fast) var(--ease),background-color var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease)}
+.nrow:hover,.ev:hover{background:var(--surface-soft)}
+@keyframes heartpop{0%{transform:scale(1)}45%{transform:scale(1.22)}100%{transform:scale(1)}}
+.favbtn.pop svg,.cf-fav.pop svg{animation:heartpop 180ms var(--ease)}
+.subnav2 button,.cf-sort button,.pchips button{transition:background-color var(--dur-base) var(--ease),color var(--dur-base) var(--ease)}
+a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid #000;outline-offset:2px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.nlive-tk,.mlive .lvt span{animation:none!important}}
 .icbtn:hover{color:var(--accent);border-color:#d6d6dd}
 .menu{display:none}
 .searchbar{border-bottom:1px solid var(--line)}
@@ -50,12 +68,12 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .cadev{font-size:11.5px;font-weight:900;color:var(--accent);letter-spacing:.3px}
 .cadname{font-size:20px;font-weight:900;margin-top:6px;letter-spacing:-.5px;line-height:1.28}
 .cadiss{font-size:12px;color:var(--sub);margin-top:3px}
-.cadamt{font-size:14.5px;font-weight:800;margin-top:9px;color:#e8e8ee}
+.cadamt{font-size:14.5px;font-weight:800;margin-top:9px;color:var(--text)}
 .cadamt b{color:var(--accent);font-size:21px}
 .cadplats{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .cadplats .pb2{font-size:10.5px;font-weight:800;color:#fff;padding:3px 9px;border-radius:6px;white-space:nowrap}
 .cadcta{font-size:12px;color:var(--sub);margin-top:11px;font-weight:700}
-.cadcta b{color:#e8e8ee}
+.cadcta b{color:var(--text)}
 @media(max-width:560px){.cadbody{gap:14px;padding:16px}.cadplate{width:122px;height:78px}.cadname{font-size:16px}.cadamt b{font-size:18px}}
 .ghero{margin:-2px -2px 20px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
 .ghero img{width:100%;height:auto;display:block}
@@ -64,7 +82,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .vhero{position:relative;min-height:210px;border-radius:18px;padding:20px 18px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff}
 .vhero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 80% 0%,rgba(255,255,255,.18),transparent 60%)}
 .vhero>*{position:relative;z-index:1}
-.vh1{background:linear-gradient(160deg,#ff6a2b 0%,#e0461f 100%)}
+.vh1{background:#c5b0f4}.vh1,.vh1 .vh-iss,.vh1 .vh-name,.vh1 .vh-amt,.vh1 .vh-go{color:#15131f}.vh1 .vh-tag{background:rgba(255,255,255,.55);color:#15131f}.vh1::after{background:radial-gradient(120% 90% at 80% 0%,rgba(255,255,255,.4),transparent 60%)}
 .vh2{background:linear-gradient(160deg,#1f8f5b 0%,#0f7a45 100%)}
 .vhero .vh-tag{font-size:12px;font-weight:800;opacity:.92;margin-bottom:auto;letter-spacing:-.01em;background:rgba(0,0,0,.18);align-self:flex-start;padding:5px 10px;border-radius:999px}
 .vhero .vh-iss{font-size:12px;opacity:.9;font-weight:700;margin-top:14px}
@@ -111,20 +129,20 @@ section{padding:30px 0}
 .post .pb{padding:13px}.post .pc{font-size:11px;font-weight:800;color:var(--accent)}.post .pt{font-size:14px;font-weight:800;margin-top:5px;line-height:1.35}
 .faq{border-top:1px solid var(--line)}
 .faq .q{border-bottom:1px solid var(--line);padding:18px 2px}
-.faq .q h3{font-size:15.5px;font-weight:800}.faq .q p{font-size:14px;color:#c9c9cf;margin-top:9px;line-height:1.7}
+.faq .q h3{font-size:15.5px;font-weight:800}.faq .q p{font-size:14px;color:var(--sub);margin-top:9px;line-height:1.7}
 .list{display:grid;grid-template-columns:1fr}
 .item{display:flex;align-items:center;gap:13px;padding:15px 4px;border-bottom:1px solid var(--line)}
 .item .th{flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;overflow:hidden}
 .item .th img{width:74%;height:74%;object-fit:contain;border-radius:5px}
 .item .body{flex:1;min-width:0}.item .l1{display:flex;align-items:center;gap:6px;margin-bottom:3px}
-.item .store{font-size:13px;color:#aeb0b6;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
+.item .store{font-size:13px;color:#6a6a72;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
 .item .tag{font-size:10px;font-weight:800;background:#fbf0df;color:#e8a33c;padding:2px 7px;border-radius:6px}.item .tag.off{background:#ececf0;color:#9a9aa2}
 .item .l2{font-size:16px;font-weight:800;letter-spacing:-.3px}.item .l2 .hl{color:var(--accent)}
 .item .l3{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.5;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .item .chev{color:#46464d;font-size:20px}
 .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:18px 14px;padding:16px 0}
 .ctile{position:relative;border-radius:16px;padding:6px 8px 12px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;transition:.15s}
-.favbtn{position:absolute;top:9px;right:11px;font-size:17px;cursor:pointer;z-index:3;line-height:1}
+.favbtn{position:absolute;top:9px;right:11px;cursor:pointer;z-index:3;line-height:0;color:var(--dim)}.favbtn.on{color:var(--accent)}.favbtn .ic{width:21px;height:21px}
 .cev{font-size:10.5px;font-weight:800;color:var(--accent);text-align:center;margin-top:5px}
 .ctile:hover{transform:translateY(-3px);border-color:#d6d6dd}
 .ctile .plate{width:100%;height:104px;display:flex;align-items:center;justify-content:center;margin:6px 0 12px;font-size:32px;overflow:hidden;border-radius:9px;background:#eef0f3}
@@ -151,7 +169,7 @@ table.cmp td .st{font-size:10px;display:block} .doth{display:inline-flex;align-i
 .hero-detail{padding:26px 16px 20px;text-align:center;border-bottom:1px solid var(--line)}
 .hero-detail .th{width:70px;height:70px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 12px;overflow:hidden}
 .hero-detail .th img{width:74%;height:74%;object-fit:contain}
-.hero-detail .store{font-size:14px;color:#aeb0b6;font-weight:700;margin-bottom:8px}
+.hero-detail .store{font-size:14px;color:#6a6a72;font-weight:700;margin-bottom:8px}
 .hero-detail .disc{font-size:28px;font-weight:900;letter-spacing:-.6px}.hero-detail .disc .hl{color:var(--accent)}
 .hero-detail .type{font-size:14px;color:var(--sub);margin-top:6px}
 .rows{max-width:600px;margin:0 auto;padding:6px 16px}
@@ -160,17 +178,170 @@ table.cmp td .st{font-size:10px;display:block} .doth{display:inline-flex;align-i
 .cta a{display:block;text-align:center;background:var(--accent);color:#fff;font-size:16px;font-weight:900;padding:16px;border-radius:14px}
 .bk{font-size:24px;color:#55555e} .adt{max-width:720px;margin:0 auto;padding:6px 2px 50px}
 .adt .acat{font-size:12px;font-weight:800;color:var(--accent);padding-top:16px}.adt .ah{font-size:24px;font-weight:900;letter-spacing:-.5px;line-height:1.35;padding:7px 0 6px}
-.adt p{font-size:15.5px;line-height:1.8;color:#d2d2d8;margin:15px 0}.adt .bk2{display:inline-block;margin-top:24px;font-weight:800;color:var(--blue)}
+.adt p{font-size:15.5px;line-height:1.8;color:#44444c;margin:15px 0}.adt .bk2{display:inline-block;margin-top:24px;font-weight:800;color:var(--blue)}
 footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .foot{display:flex;gap:50px;padding:42px 0 10px;flex-wrap:wrap}
-.foot .col h4{font-size:12px;color:var(--dim);font-weight:800;margin-bottom:13px}.foot .col a{display:block;font-size:13.5px;color:#55555e;margin-bottom:9px}.foot .col a:hover{color:#fff}
-.foot .brand{flex:1;min-width:220px}.foot .brand .lg{font-size:20px;font-weight:900;letter-spacing:-1px}.foot .brand .lg b{color:var(--accent)}.foot .brand p{font-size:12px;color:var(--sub);margin-top:12px;line-height:1.7;max-width:400px}
+.foot .col h4{font-size:12px;color:var(--dim);font-weight:800;margin-bottom:13px}.foot .col a{display:block;font-size:13.5px;color:#55555e;margin-bottom:9px}.foot .col a:hover{color:var(--accent)}
+.foot .brand{flex:1;min-width:220px}.foot .brand .lg{font-size:20px;font-weight:900;letter-spacing:-1px}.foot .brand .lg b{color:var(--text);font-weight:400}.foot .brand p{font-size:12px;color:var(--sub);margin-top:12px;line-height:1.7;max-width:400px}
 .legal{border-top:1px solid var(--line);padding:18px 0 40px;font-size:11.5px;color:var(--dim);line-height:1.8}.legal .biz{margin-top:8px}
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.16);opacity:0;visibility:hidden;transition:.2s;z-index:60}.scrim.on{opacity:1;visibility:visible}
 .drawer{position:fixed;top:0;left:0;bottom:0;width:270px;max-width:82%;background:#ffffff;border-right:1px solid var(--line);transform:translateX(-100%);transition:.24s;z-index:61;padding:20px}.drawer.on{transform:translateX(0)}
 .drawer a{display:block;padding:13px 6px;font-size:16px;font-weight:800;border-bottom:1px solid var(--line)}
-@media(max-width:900px){.grid,.posts{grid-template-columns:1fr 1fr}.cur{grid-template-columns:1fr}.rank{grid-template-columns:1fr}.gnb,.util{display:none}.menu{display:flex}}
-</style></head><body><div class="scrim" id="scrim"></div><aside class="drawer" id="drawer"><div class="logo" style="margin-bottom:10px"><span class="rx"></span>CARD<b>TYRANNO</b></div><a href="cards.html">카드찾기</a><a href="issue.html?v=cmp">플랫폼 비교</a><a href="issue.html">발급 이벤트</a><a href="chart.html">티라노차트</a><a href="index.html#curation">큐레이션</a><a href="content.html">가이드</a></aside><div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:partner@cardtyranno.com">제휴·광고 문의</a></div></div><header class="hd"><div class="wrap row"><span class="icbtn menu" id="menuBtn">☰</span><a class="logo" href="index.html"><span class="rx"></span>CARD<b>TYRANNO</b></a><nav class="gnb"><a href="cards.html" class="">카드찾기</a><a href="issue.html?v=cmp" class="">플랫폼 비교</a><a href="issue.html" class="">발급 이벤트</a><a href="chart.html" class="">티라노차트</a><a href="index.html#curation" class="">큐레이션</a><a href="content.html" class="">가이드</a></nav><div class="right"><div class="icbtn" id="searchGo">🔎</div><a class="icbtn" href="favorites.html" title="관심카드" style="position:relative">🤍<i id="favCount" style="position:absolute;top:-5px;right:-5px;background:var(--accent);color:#fff;font-size:9px;font-weight:800;border-radius:8px;padding:1px 5px;font-style:normal;display:none"></i></a></div></div></header><style>.dwrap{padding:8px 0 44px}.dnote{background:#f4f5f7;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:12px;color:#55555e;line-height:1.6;margin:10px 0 16px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}.kpi .n{font-size:24px;font-weight:900;color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.kpi .l{font-size:12px;color:var(--sub);margin-top:4px}.dsec{margin:0 0 24px}.dsec h3{font-size:15px;font-weight:900;margin-bottom:12px}.bar{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:13px}.bar .bl{flex:0 0 40%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#55555e}.bar .bt{flex:1;background:#eef0f3;border-radius:6px;height:18px;overflow:hidden}.bar .bf{height:100%;background:linear-gradient(90deg,var(--accent),#ff7a59);border-radius:6px}.bar .bn{flex:0 0 34px;font-weight:800;color:#fff;text-align:right}.dbtns{display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 20px}.dbtns button{background:var(--surface2);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 14px;font-weight:700;font-size:12.5px;cursor:pointer}.log{font-size:11.5px;color:var(--sub);border-top:1px solid var(--line);padding:7px 0;display:flex;gap:10px}.log .lt{color:var(--accent);font-weight:800;flex:0 0 64px}.log .lp{flex:0 0 84px;color:var(--dim)}.empty2{color:var(--sub);font-size:13px;padding:12px 0}@media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.bar .bl{flex-basis:48%}}</style><div class="wrap dwrap"><div class="sec-h"><h2>카드티라노 통계 대시보드</h2></div><div class="dnote">⚠️ 현재는 <b>이 브라우저에 쌓인 방문·클릭 데이터</b>(로컬 집계)를 보여줍니다. 전체 방문자 통합 통계는 서버 수집(분석도구 연동 또는 Netlify Functions+Blobs)이 필요해요 — 요청 시 바로 연결해 드립니다.</div><div class="dbtns"><button id="rf">↻ 새로고침</button><button id="csv">⬇ CSV 내보내기</button><button id="rs">🗑 이 브라우저 초기화</button></div><div class="kpis" id="kpis"></div><div id="secs"></div><div class="dsec"><h3>🕒 최근 활동</h3><div id="log"></div></div></div><footer><div class="wrap foot"><div class="brand"><div class="lg">CARD<b>TYRANNO</b></div><p>카드티라노는 여러 카드 중개 플랫폼의 카드·이벤트 혜택을 한곳에서 비교·분석해 드리는 정보 서비스입니다. 실제 카드 발급·심사는 각 카드사에서 진행됩니다.</p></div><div class="col"><h4>서비스</h4><a href="cards.html">카드찾기</a><a href="issue.html">발급 이벤트</a><a href="installment.html">무이자할부</a><a href="content.html">카드 가이드</a></div><div class="col"><h4>회사</h4><a href="mailto:partner@cardtyranno.com">제휴·광고 문의</a><a href="index.html">서비스 소개</a></div><div class="col"><h4>약관·정책</h4><a href="index.html">이용약관</a><a href="index.html">개인정보처리방침</a></div></div><div class="wrap legal">본 사이트는 카드 상품의 비교·정보 제공 및 광고를 목적으로 하며, 카드 신청 시 각 제휴 플랫폼·카드사로 연결됩니다. 게시된 혜택·연회비·이벤트는 수집 시점 기준이며 실제와 다를 수 있으므로 신청 전 각 카드사·플랫폼에서 최종 확인이 필요합니다.<div class="biz muted">카드티라노(CardTyranno) · 쥬라기랩스 · 제휴/광고 partner@cardtyranno.com</div><div class="biz">© 2026 CARDTYRANNO. All rights reserved.</div></div></footer><script>
+/* 인터랙션: 카드 플레이트·광고배너 호버 */
+.ctile .plate img{transition:transform .18s ease}.ctile:hover .plate img{transform:scale(1.07)}
+.adbanner img{transition:transform .25s ease}.adbanner{transition:box-shadow .18s,transform .18s}.adbanner:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.12)}.adbanner:hover img{transform:scale(1.02)}
+.cardad{transition:box-shadow .18s,transform .18s}.cardad:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.10)}
+.rk .pl img{transition:transform .16s ease}.rk:hover .pl img{transform:scale(1.06)}
+.ctile .plate{overflow:hidden}
+/* 온보딩/랜딩 히어로(인덱스 첫 화면 정체성) */
+.obhero{background:#c5b0f4;border-radius:20px;padding:30px 26px;margin:14px 0 8px;position:relative;overflow:hidden}
+.obhero::after{content:"";position:absolute;right:-50px;top:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%)}
+.obhero .obeb{font-size:12px;font-weight:900;letter-spacing:.4px;color:#5b3fb0;position:relative;z-index:1}
+.obhero .obh{font-size:26px;font-weight:900;letter-spacing:-.03em;line-height:1.22;margin-top:9px;color:#16161b;position:relative;z-index:1}
+.obhero .obs{font-size:14px;color:#3a2d5e;margin-top:10px;line-height:1.6;max-width:560px;position:relative;z-index:1}
+.obhero .obcta{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;position:relative;z-index:1}
+.obhero .obb1{background:#16161b;color:#fff;font-weight:800;font-size:14px;padding:12px 18px;border-radius:999px;transition:transform .15s}
+.obhero .obb2{background:rgba(255,255,255,.72);color:#16161b;font-weight:800;font-size:14px;padding:12px 18px;border-radius:999px;transition:transform .15s}
+.obhero .obb1:hover,.obhero .obb2:hover{transform:translateY(-1px)}
+@media(max-width:560px){.obhero{padding:22px 18px}.obhero .obh{font-size:21px}.obhero .obcta a{flex:1;text-align:center}}
+/* ===== 홈 PC 시안(핸드오프 §4.1) ===== */
+.nhero{background:var(--block-lilac);border-radius:24px;padding:56px 48px;margin:28px 0 0;position:relative;overflow:hidden;min-height:300px}
+.nhe-eb{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.6);font-weight:700}
+.nhe-eb.dim{color:rgba(0,0,0,.55)}
+.nhe-h{font-weight:400;font-size:64px;line-height:.99;letter-spacing:-2px;margin:16px 0 0;max-width:640px;color:#000}
+.nhe-p{font-weight:400;font-size:19px;line-height:1.5;margin:20px 0 0;max-width:480px;color:rgba(0,0,0,.72)}
+.nhe-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:600;font-size:16px;margin-top:30px;transition:transform .12s}
+.nhe-cta:active{transform:scale(.97)}
+.nhe-plate{position:absolute;right:40px;top:50%;transform:translateY(-50%) rotate(7deg);width:300px}
+.nhe-plate .hpcard{border-radius:14px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.22)}
+.nhe-plate img,.npc-plate img,.nrow .mp img{width:100%;display:block}
+@media(max-width:820px){.nhe-plate{display:none}}
+@media(max-width:560px){.nhero{padding:32px 22px;min-height:0}.nhe-h{font-size:33px;letter-spacing:-1px}.nhe-p{font-size:15px}}
+.nlive{background:#000;color:#fff;margin-top:28px;overflow:hidden;white-space:nowrap;display:flex;align-items:center}
+.nlive-tag{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:var(--accent-magenta);color:#fff;padding:14px 22px;font-size:13px;letter-spacing:.5px;text-transform:uppercase;font-weight:700}
+.nlive-tag i{width:8px;height:8px;border-radius:50%;background:#fff;display:inline-block;animation:lvpulse 1.2s infinite}
+.nlive-vp{overflow:hidden;flex:1}
+.nlive-tk{display:inline-block;padding-left:100%;animation:lvmarq 30s linear infinite;font-size:13px;letter-spacing:.4px;text-transform:uppercase;font-weight:600}
+.npod{background:var(--block-lime);border-radius:24px;padding:44px 40px;margin-top:28px}
+.npod-h{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px;gap:16px}
+.npod-t{font-weight:400;font-size:34px;letter-spacing:-.9px;margin:6px 0 0}
+.npod-s{font-weight:400;font-size:15px;color:rgba(0,0,0,.62);margin:8px 0 0}
+.nmore{font-weight:500;font-size:14px;white-space:nowrap;color:#000}
+.npod-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.npc{display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#000}
+.npc-rk{display:flex;align-items:center;gap:8px}
+.npc-rk b{width:30px;height:30px;border-radius:50px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.npc-rk span{font-size:11px;opacity:.6;text-transform:uppercase}
+.npc-plate{width:100%;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.16)}
+.npc-nm{font-weight:700;font-size:17px}
+.npc-bn{font-weight:400;font-size:14px;color:rgba(0,0,0,.62);margin-top:3px}
+.npc-ev{background:#fff;border-radius:14px;padding:14px 16px;border:1px solid rgba(0,0,0,.06)}
+.npc-ev .lab{font-size:10px;opacity:.5;margin-bottom:8px;text-transform:uppercase;font-weight:700;letter-spacing:.4px}
+.npc-ev .row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-top:1px solid var(--hairline-soft)}
+.npc-ev .row .p{font-weight:500;font-size:13.5px;display:inline-flex;align-items:center;gap:6px}
+.npc-ev .row .p i{width:7px;height:7px;border-radius:50%;display:inline-block;flex:0 0 auto}
+.npc-ev .row .v{font-weight:700;font-size:14px}
+@media(max-width:820px){.npod-g{grid-template-columns:1fr 1fr}.npc{transform:none!important}.npod{padding:28px 20px}}
+@media(max-width:640px){.npod-g{display:flex;overflow-x:auto;gap:13px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding-bottom:2px}.npod-g::-webkit-scrollbar{display:none}.npc{flex:0 0 158px;scroll-snap-align:start;gap:10px}.npc-ev{display:none}.npc-nm{font-size:15px}.nrow{grid-template-columns:30px 60px 1fr auto}}
+.nspon-sec{margin-top:80px}.sponlbl{margin-bottom:16px}
+.nspon{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:142px;gap:16px}
+.nspt{border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.nspt .adm{font-size:11px;opacity:.62;text-transform:uppercase;letter-spacing:.4px}
+.nspt .adh{font-weight:700;letter-spacing:-.3px;line-height:1.12;margin-top:8px}
+.nspt .adb{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;padding:11px 20px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:14px;text-decoration:none}
+@media(max-width:760px){.nspon{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto}.nspt{grid-column:span 1!important;grid-row:auto!important;min-height:128px}.nspt[style*="span 3"]{grid-column:span 2!important}.nspon .adh{font-size:18px!important}.nspt .adb{margin-top:12px}}
+.nrank-sec{margin-top:80px}
+.nrank-h{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:8px}
+.nrank-t{font-weight:400;font-size:38px;letter-spacing:-1px;margin:6px 0 0}
+.nrow{display:grid;grid-template-columns:50px 96px 1fr auto;gap:24px;align-items:center;padding:18px 4px;border-top:1px solid var(--hairline);text-decoration:none;color:#000}
+.nrow .no{font-weight:700;font-size:30px;letter-spacing:-1px}
+.nrow .mp{width:96px;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,.05)}
+.nrow .nm{font-weight:700;font-size:19px;letter-spacing:-.3px}
+.nrow .mt{font-size:12px;opacity:.55;margin-top:5px}
+.nrow .amt{font-weight:700;font-size:19px;text-align:right}
+.nrow .pt{font-size:11px;opacity:.5;margin-top:5px;text-align:right}
+@media(max-width:560px){.nrow{grid-template-columns:30px 60px 1fr auto;gap:12px}.nrow .no{font-size:20px}.nrow .mp{width:60px}.nrow .nm{font-size:15px}.nrank-t{font-size:25px}.npod-t{font-size:26px}}
+/* 티라노 브랜드 플레이트 배너(특정 카드 아님·서비스 대표 장식) */
+.tybnr{display:flex;align-items:center;gap:20px;background:#c5b0f4;border-radius:20px;padding:24px 26px;margin:18px 0 22px;overflow:hidden;position:relative;color:#16161b;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.tybnr:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(123,90,210,.28)}
+.tybnr .tyb-txt{flex:1;min-width:0;position:relative;z-index:1}
+.tybnr .tyb-eb{font-size:11.5px;font-weight:900;letter-spacing:.6px;color:#5b3fb0;text-transform:uppercase}
+.tybnr .tyb-h{font-size:21px;font-weight:900;letter-spacing:-.03em;line-height:1.25;margin-top:8px}
+.tybnr .tyb-sub{font-size:13px;color:#3a2d5e;margin-top:7px;line-height:1.55}
+.tybnr .tyb-plate{position:relative;width:172px;aspect-ratio:1.586/1;border-radius:13px;background:linear-gradient(135deg,#ffffff 0%,#efe7ff 100%);box-shadow:0 16px 34px rgba(70,40,120,.30);transform:rotate(-6deg);flex:0 0 auto;overflow:hidden}
+.tybnr .tyb-plate .tyb-mk{position:absolute;top:13px;left:15px;font-size:12px;font-weight:900;letter-spacing:-.3px;color:#16161b}.tybnr .tyb-plate .tyb-mk b{color:#ef5226}
+.tybnr .tyb-plate .tyb-dino{position:absolute;right:-7%;bottom:-12%;width:62%;height:62%;color:#ef5226;opacity:.92}
+.tybnr .tyb-plate .tyb-dino.bg{right:auto;left:-14%;bottom:auto;top:36%;width:44%;height:44%;color:#c9b6f0;opacity:.5}
+.tybnr::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%)}
+@media(max-width:560px){.tybnr{padding:18px;gap:14px}.tybnr .tyb-h{font-size:17px}.tybnr .tyb-plate{width:120px}}
+@media(max-width:900px){.grid,.posts{grid-template-columns:1fr 1fr}.cur{grid-template-columns:1fr}.rank{grid-template-columns:1fr}.gnb,.util{display:none}.menu{display:flex}.wrap{padding:0 16px}.icbtn{width:42px;height:42px}}
+@media(max-width:480px){.wrap{padding:0 13px}.grid,.posts{grid-template-columns:1fr}.sec-h h2{font-size:19px}.chip,.ctlb,.ctlf{padding:9px 13px}.cat{width:62px}.cat .ico{width:40px;height:40px}.hd .row{height:56px}.logo{font-size:18px}.searchbar .wrap{padding:11px 13px}.sb{padding:11px 13px}.sb .go{padding:10px 14px}.sec-h{margin-bottom:12px}section{padding:22px 0}}
+/* 티라노차트 TOP 추천 가로 캐러셀(시안 홈) */
+.t3caro{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 0 10px;margin-bottom:6px}
+.t3caro::-webkit-scrollbar{display:none}
+.t3c{flex:0 0 152px;text-decoration:none;color:inherit}
+.t3c .t3p{position:relative;width:100%;aspect-ratio:1.586/1;border-radius:12px;overflow:hidden;background:#eceef2;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.t3c .t3p img{width:100%;height:100%;object-fit:cover;transition:transform .18s ease}
+.t3c:hover .t3p img{transform:scale(1.06)}
+.t3c .t3rk{position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;box-shadow:0 2px 6px rgba(0,0,0,.18);z-index:2}
+.t3c .t3n{font-weight:800;font-size:13.5px;margin-top:8px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t3c .t3a{font-weight:800;font-size:13px;color:var(--accent);margin-top:2px}
+.t3c .t3i{font-size:10.5px;color:var(--dim);margin-top:1px}
+/* ===== 모바일 재구성(시안: 카드티라노 모바일 최적화) ===== */
+/* 하단 탭바 — 데스크톱 숨김, 모바일 고정 */
+.mtab{display:none}
+/* LIVE 티커(홈) */
+.mlive{display:none}
+.mlive .lvb{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;background:#ff3d8b;color:#fff;padding:9px 13px;font-family:var(--font-mono,monospace);font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
+.mlive .lvb i{width:6px;height:6px;border-radius:50%;background:#fff;display:inline-block;animation:lvpulse 1.2s infinite}
+@keyframes lvpulse{0%,100%{opacity:1}50%{opacity:.3}}
+.mlive .lvt{overflow:hidden;white-space:nowrap;flex:1}
+.mlive .lvt span{display:inline-block;padding-left:100%;animation:lvmarq 16s linear infinite;font-size:12px;font-weight:700;letter-spacing:-.01em}
+@keyframes lvmarq{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+/* 발급이벤트 네이비 피처 히어로(시안 screen4) */
+.evhero{display:block;background:#1f1d3d;color:#fff;border-radius:18px;padding:22px;margin:4px 0 16px;text-decoration:none;position:relative;overflow:hidden}
+.evhero .eb{font-family:var(--font-mono,monospace);font-size:11px;letter-spacing:.5px;text-transform:uppercase;opacity:.72}
+.evhero .evh-t{font-size:24px;font-weight:900;line-height:1.22;margin-top:8px;letter-spacing:-.02em}
+.evhero .evh-t b{color:#fff}
+.evhero .evh-cta{display:inline-block;margin-top:14px;background:#fff;color:#16161b;font-weight:800;font-size:13px;padding:10px 17px;border-radius:50px}
+.evhero::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%)}
+@media(max-width:760px){
+ .mtab{display:flex;position:fixed;left:0;right:0;bottom:0;height:60px;background:#fff;border-top:1px solid var(--line);z-index:60;box-shadow:0 -2px 14px rgba(0,0,0,.06)}
+ .mtab a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--dim);font-size:10.5px;font-weight:700;text-decoration:none;min-height:44px}
+ .mtab a svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+ .mtab a.on{color:var(--accent)}
+ body{padding-bottom:60px}
+ .mlive{display:flex;align-items:center;background:#111;color:#fff;margin:14px 0 4px;overflow:hidden;border-radius:10px}
+ /* 카드찾기(.cgrid): 그리드 → 리스트 행(플레이트 좌측) */
+ .cgrid{grid-template-columns:1fr!important;gap:12px}
+ .cgrid .ctile{flex-direction:row;align-items:center;gap:13px;padding:12px;text-align:left}
+ .cgrid .ctile .plate{width:108px;height:68px;flex:0 0 auto;margin:0}
+ .cgrid .ctile .cbody{flex:1;min-width:0;display:flex;flex-direction:column}
+ .cgrid .ctile .cn{text-align:left;font-size:14.5px}
+ .cgrid .ctile .cfee,.cgrid .ctile .cd{text-align:left;margin-top:4px}
+ .cgrid .ctile .tag,.cgrid .ctile .evtag{align-self:flex-start}
+ /* 칩 가로 스크롤 */
+ .sfilters,.chips,.tabs,.subnav,.subnav2,.cmpctl .ctlrow{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+ .sfilters::-webkit-scrollbar,.chips::-webkit-scrollbar,.tabs::-webkit-scrollbar,.cmpctl .ctlrow::-webkit-scrollbar{display:none}
+ .sfilters>*,.tabs>*,.subnav>*,.subnav2>*{flex:0 0 auto}
+ /* 발급이벤트: 행 → 카드형 */
+ .evlist .evrow,#list .ev{border:1px solid var(--line);border-radius:16px;padding:13px 14px;margin-bottom:11px}
+ /* 터치타깃 */
+ .pl,.chip,.tab,.ctlb,.ctlf,.subnav2 button{min-height:38px}
+}
+</style></head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="o" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></g><symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-5-5"/></symbol><symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15.3 4 9.8A3.9 3.9 0 0 1 12 7.6 3.9 3.9 0 0 1 20 9.8C20 15.3 12 20 12 20Z"/></symbol><symbol id="ic-heart-f" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20S4 15.3 4 9.8A3.9 3.9 0 0 1 12 7.6 3.9 3.9 0 0 1 20 9.8C20 15.3 12 20 12 20Z"/></symbol><symbol id="ic-food" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8M9 3v8M6 11h3M7.5 11v10M16.5 3c-1.4 0-2.5 2-2.5 5.5S15.1 13 16.5 13 19 11 19 8.5 17.9 3 16.5 3Zm0 10v8"/></symbol><symbol id="ic-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol><symbol id="ic-fuel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14M4 20h12M15 9h2.5A1.5 1.5 0 0 1 19 10.5V16a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 22 16V8l-3-3"/><path d="M8 8h4"/></symbol><symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></symbol><symbol id="ic-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4.5a1.5 1.5 0 0 1 3 0V10l8 4.5V17l-8-2.5V19l2.5 1.5V22L11.5 21 8 22v-1.5L10.5 19v-4.5L2.5 17v-2.5L10.5 10Z"/></symbol><symbol id="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.5 12h10l2-8H6.5"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></symbol><symbol id="ic-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h12v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8Z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2M8 3v2M11 3v2"/></symbol><symbol id="ic-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 9h16M4 15h16M9 5v14M15 5v14"/></symbol><symbol id="ic-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12l-2-2M20 16H8l2 2"/></symbol><symbol id="ic-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3l2-5a2 2 0 0 1 2-1.3h8A2 2 0 0 1 18 8l2 5v3M4 13h16"/><circle cx="7.5" cy="16.5" r="1.3"/><circle cx="16.5" cy="16.5" r="1.3"/></symbol><symbol id="ic-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v12M6 12h12"/></symbol><symbol id="ic-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol></defs></svg><div class="scrim" id="scrim"></div><aside class="drawer" id="drawer"><div class="logo" style="margin-bottom:10px"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div><a href="cards.html">카드찾기</a><a href="issue.html?v=cmp" title="캐시백 가장 많이 주는 사이트를 확인해보세요!">플랫폼 비교</a><a href="issue.html">발급 이벤트</a><a href="chart.html">티라노차트</a><a href="content.html">티라노TIP</a></aside><div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:partner@cardtyranno.com">제휴·광고 문의</a></div></div><header class="hd"><div class="wrap row"><span class="icbtn menu" id="menuBtn">☰</span><a class="logo" href="index.html"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></a><nav class="gnb"><a href="cards.html" class="">카드찾기</a><a href="issue.html?v=cmp" class="" title="캐시백 가장 많이 주는 사이트를 확인해보세요!">플랫폼 비교</a><a href="issue.html" class="">발급 이벤트</a><a href="chart.html" class="">티라노차트</a><a href="content.html" class="">티라노TIP</a></nav><div class="right"><div class="icbtn" id="searchGo"><svg class="ic"><use href="#ic-search"/></svg></div><a class="icbtn" href="favorites.html" title="관심카드" style="position:relative"><svg class="ic"><use href="#ic-heart"/></svg><i id="favCount" style="position:absolute;top:-5px;right:-5px;background:var(--accent);color:#fff;font-size:9px;font-weight:800;border-radius:8px;padding:1px 5px;font-style:normal;display:none"></i></a></div></div></header><style>.dwrap{padding:8px 0 44px}.dnote{background:#f4f5f7;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:12px;color:#55555e;line-height:1.6;margin:10px 0 16px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}.kpi .n{font-size:24px;font-weight:900;color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.kpi .l{font-size:12px;color:var(--sub);margin-top:4px}.dsec{margin:0 0 24px}.dsec h3{font-size:15px;font-weight:900;margin-bottom:12px}.bar{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:13px}.bar .bl{flex:0 0 40%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#55555e}.bar .bt{flex:1;background:#eef0f3;border-radius:6px;height:18px;overflow:hidden}.bar .bf{height:100%;background:linear-gradient(90deg,var(--accent),#ff7a59);border-radius:6px}.bar .bn{flex:0 0 34px;font-weight:800;color:#fff;text-align:right}.dbtns{display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 20px}.dbtns button{background:var(--surface2);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 14px;font-weight:700;font-size:12.5px;cursor:pointer}.log{font-size:11.5px;color:var(--sub);border-top:1px solid var(--line);padding:7px 0;display:flex;gap:10px}.log .lt{color:var(--accent);font-weight:800;flex:0 0 64px}.log .lp{flex:0 0 84px;color:var(--dim)}.empty2{color:var(--sub);font-size:13px;padding:12px 0}.hgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px}.hcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px 10px;text-align:center}.hcard .hp{font-size:12.5px;font-weight:800;margin-bottom:7px}.hcard .hn{font-size:22px;font-weight:900;color:var(--text)}.hcard .hl{font-size:10.5px;color:var(--dim);margin-top:2px}.hcard .hs{font-size:11px;margin-top:6px;font-weight:800}.ok{color:#16a34a}.warn{color:#d97706}.bad{color:#dc2626}.hrow{display:flex;align-items:center;gap:10px;font-size:13px;padding:8px 0;border-top:1px solid var(--line)}.hrow .hi{flex:0 0 34%;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hrow .hb{flex:1;display:flex;gap:4px}.hrow .hd2{flex:0 0 92px;text-align:right;font-weight:800;color:var(--accent)}.pdot{width:22px;height:22px;border-radius:6px;font-size:9px;font-weight:800;color:#fff;display:flex;align-items:center;justify-content:center}.pdot.off{background:#e3e4ea!important;color:#aaa}@media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.bar .bl{flex-basis:48%}.hgrid{grid-template-columns:repeat(2,1fr)}}</style><div class="wrap dwrap"><div class="sec-h"><h2>카드티라노 대시보드</h2></div><div class="dnote">📡 <b>스크래핑 헬스</b>는 콜렉터 산출물(platform_events.json)을 실시간 분석해 플랫폼·카드사별 수집 상태를 보여줍니다.<br>👣 아래 <b>방문 지표(시간/일/월별)</b>는 <b>이 브라우저</b> 로컬 집계예요. <b>전체 방문자</b>는 개인정보(IP) 미저장 <b>Cloudflare Web Analytics</b>(자동 연동됨)에서 집계됩니다.</div><div class="dsec"><h3>🌐 Cloudflare 실측 방문 (전체 방문자)</h3><div class="kpis"><div class="kpi"><div class="n" id="cfPV">225</div><div class="l">페이지뷰 · 최근 24h</div></div><div class="kpi"><div class="n" id="cfVisit">100</div><div class="l">방문(Visits) · 최근 24h</div></div><div class="kpi"><div class="n">자동</div><div class="l">수집 방식(Automatic)</div></div><div class="kpi"><div class="n" id="cfAsOf">06/27</div><div class="l">스냅샷 기준일</div></div></div><div style="margin-top:4px"><a href="https://dash.cloudflare.com/?to=/:account/web-analytics" target="_blank" rel="noopener" style="display:inline-block;background:#f6821f;color:#fff;font-weight:800;font-size:13px;padding:11px 17px;border-radius:10px;text-decoration:none">Cloudflare에서 실시간 방문자 보기 ↗</a></div><div class="dnote" style="margin-top:10px">위 수치는 Cloudflare Web Analytics <b>스냅샷</b>입니다(IP 미저장). <b>시간/일/월별 실시간 추세·국가·인기 페이지</b>는 위 버튼의 Cloudflare 대시보드에서 기간 필터로 확인하세요. (페이지 내 자동 실시간 표시는 토큰 기반 프록시 연동 시 가능 — 원하면 설정해 드립니다.)</div></div><div class="dsec"><h3>📡 플랫폼별 스크래핑 상태</h3><div class="hgrid" id="hplat"></div><div id="hfresh" class="empty2"></div></div><div class="dsec"><h3>카드사별 커버리지</h3><div id="hiss"></div></div><div class="sec-h" style="margin-top:8px"><h2 style="font-size:18px">👣 방문 지표 (이 브라우저)</h2></div><div class="dbtns"><button id="rf">↻ 새로고침</button><button id="csv">⬇ CSV 내보내기</button><button id="rs">🗑 이 브라우저 초기화</button></div><div class="kpis" id="kpis"></div><div id="secs"></div><div class="dsec"><h3>🕒 최근 활동</h3><div id="log"></div></div></div><footer><div class="wrap foot"><div class="brand"><div class="lg">CARD<b>TYRANNO</b></div><p>카드티라노는 여러 카드 중개 플랫폼의 카드·이벤트 혜택을 한곳에서 비교·분석해 드리는 정보 서비스입니다. 실제 카드 발급·심사는 각 카드사에서 진행됩니다.</p></div><div class="col"><h4>서비스</h4><a href="cards.html">카드찾기</a><a href="issue.html">발급 이벤트</a><a href="installment.html">무이자할부</a><a href="content.html">카드 가이드</a></div><div class="col"><h4>회사</h4><a href="mailto:partner@cardtyranno.com">제휴·광고 문의</a><a href="index.html">서비스 소개</a></div><div class="col"><h4>약관·정책</h4><a href="index.html">이용약관</a><a href="index.html">개인정보처리방침</a></div></div><div class="wrap legal">본 사이트는 카드 상품의 비교·정보 제공 및 광고를 목적으로 하며, 카드 신청 시 각 제휴 플랫폼·카드사로 연결됩니다. 게시된 혜택·연회비·이벤트는 수집 시점 기준이며 실제와 다를 수 있으므로 신청 전 각 카드사·플랫폼에서 최종 확인이 필요합니다.<div class="biz muted">카드티라노(CardTyranno) · 쥬라기랩스 · 제휴/광고 partner@cardtyranno.com</div><div class="biz">© 2026 CARDTYRANNO. All rights reserved.</div></div></footer><nav class="mtab" id="mtab" aria-label="모바일 내비게이션"><a href="index.html" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.4 12 4l8 7.4"/><path d="M6 10v9.5h12V10"/></svg><span>홈</span></a><a href="cards.html" data-tab="cards"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M3 10h18"/></svg><span>카드찾기</span></a><a href="issue.html?v=cmp" data-tab="compare"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v16M18 4v16M6 9h7M18 15h-7"/></svg><span>비교</span></a><a href="issue.html" data-tab="issue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3l-7 10h5l-1 8 7-10h-5z"/></svg><span>이벤트</span></a></nav><script>
+// 모바일 하단 탭바 활성 표시(현재 페이지 기준)
+(function(){var mt=document.getElementById('mtab');if(!mt)return;var pn=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');var qs=location.search||'';var cur='';
+ if(pn==='cards'||pn==='carddetail')cur='cards';else if(pn==='issue')cur=/v=cmp/.test(qs)?'compare':'issue';else if(pn===''||pn==='index')cur='home';
+ mt.querySelectorAll('a').forEach(function(a){if(a.dataset.tab===cur)a.classList.add('on');});})();
+function _purl(plat,id){id=String(id||'').trim();if(!id)return '';return ({cardgorilla:'https://www.card-gorilla.com/card/detail/'+id,banksalad:'https://www.banksalad.com/product/cards/'+id,toss:'https://card-lounge.toss.im/card/'+id,ajungdang:'https://www.ajd.co.kr/card/event/detail/'+id}[plat])||'';}
+function favSvg(f){return '<svg class="ic"><use href="#ic-heart'+(f?'-f':'')+'"/></svg>';}
+function favClick(el,id){var f=toggleFav(id);el.innerHTML=favSvg(f);el.classList.toggle('on',f);if(f){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}if(window._fr)try{window._fr();}catch(e){}}
+function _isList(u){if(!u)return true;return /banksalad\.com\/cards\/event/.test(u)||/pay\.naver\.com\/home\/promotion\/event/.test(u)||/card-gorilla\.com\/event\/?($|\?)/.test(u);}
+// 카드고릴라 카드사 이벤트 그룹 페이지(웹사이트 /event/detail/{작은ID}). API idx(1288류)와 다른 id공간이라 발급사→그룹ID로 생성.
+var _CGG={'삼성카드':'1','신한카드':'2','KB국민카드':'3','롯데카드':'4','우리카드':'5','현대카드':'7','하나카드':'8','NH농협카드':'9','IBK기업은행':'10'};
+function _cgUrl(issuer,id){var g=_CGG[(issuer||'').trim()];return g?('https://www.card-gorilla.com/event/detail/'+g):(id?('https://www.card-gorilla.com/card/detail/'+id):'');}
+function _best(plat,raw,id){if(raw&&!_isList(raw))return raw;var d=_purl(plat,id);return (d&&!_isList(d))?d:'';}  // 그룹/상세 우선, 전체리스트는 배제
 function thumbOf(p){var m=[["마트","🛒","#fff3d6"],["하이마트","📺","#e9f0ff"],["편의|GS25|CU|세븐|이마트24","🏪","#e7f6ee"],["백화점","🏬","#f1ecff"],["면세","🛍️","#ffeef0"],["주유|칼텍스|에너지|OIL|오일","⛽","#e9f7f1"],["CGV|시네마|메가박스","🎬","#ececf3"],["스타벅스","☕","#eaf6ee"],["무신사|W컨셉|한섬|패션","👕","#fff0e6"],["알라딘|교보|도서","📚","#eaf2ff"],["홈쇼핑|CJ|GS샵|NS","📺","#fdeef0"],["야놀자|여행|네이버 패키지","✈️","#e8f3ff"],["쿠팡|11번가|G마켓|옥션|SSG|롯데온|올리브영","🛍️","#fff3d6"]];for(var i=0;i<m.length;i++){if(new RegExp(m[i][0]).test(p))return{e:m[i][1],bg:m[i][2]};}return{e:"",bg:"#eef1f5"};}
 function favico(dom,e,bg){return dom?'<img src="https://www.google.com/s2/favicons?domain='+dom+'&sz=128" alt="" onerror="this.parentNode.style.background=\''+bg+'\';this.parentNode.textContent=\''+e+'\'">':e;}
 var DEFCARD="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 202'><rect width='320' height='202' rx='14' fill='#eef0f3'/><rect x='26' y='40' width='44' height='32' rx='6' fill='#d6d6dd'/><circle cx='280' cy='36' r='13' fill='#33333b'/><rect x='26' y='150' width='150' height='11' rx='5' fill='#d6d6dd'/><rect x='26' y='170' width='96' height='9' rx='4' fill='#33333b'/></svg>");
@@ -237,17 +408,38 @@ function renderBenefit(d){
  return head+html;
 }
 
+// === 스크래핑 헬스 — 콜렉터 산출물(platform_events.json) 실시간 분석 ===
+(function(){var PN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};var PORD=['cardgorilla','banksalad','toss','ajungdang','naver','kakaopay'];var PC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a',kakaopay:'#e8b800'};
+ function wm(n){return n>=10000?(Math.round(n/1000)/10+'만'):(n||0);}
+ fetch('platform_events.json').then(function(r){return r.json();}).then(function(d){
+  var prods=d.products||[];var withEv=prods.filter(function(p){return (p.events||[]).length;});
+  var cross=prods.filter(function(p){return new Set((p.events||[]).map(function(e){return e.platform;})).size>1;});
+  var pc={};PORD.forEach(function(k){pc[k]=0;});prods.forEach(function(p){var seen={};(p.events||[]).forEach(function(e){if(pc[e.platform]!=null&&!seen[e.platform]){pc[e.platform]++;seen[e.platform]=1;}});});
+  var hp=document.getElementById('hplat');if(hp)hp.innerHTML=PORD.map(function(k){var n=pc[k]||0;var st=n>0?'<span class="hs ok">정상 ✓</span>':'<span class="hs bad">수집 0 ✗</span>';return '<div class="hcard"><div class="hp" style="color:'+PC[k]+'">'+PN[k]+'</div><div class="hn">'+n+'</div><div class="hl">이벤트 카드</div>'+st+'</div>';}).join('');
+  var days='';if(d.updated){days=Math.round((Date.now()-new Date(d.updated).getTime())/86400000);}
+  var fr=document.getElementById('hfresh');if(fr)fr.innerHTML='마지막 빌드 <b>'+(d.updated||'-')+'</b> ('+(days===''?'-':(days<=0?'오늘':days+'일 전'))+') · 총 '+prods.length+'개 상품 · 이벤트 보유 '+withEv.length+' · 교차비교(2개+) '+cross.length+'개';
+  var iss={};prods.forEach(function(p){if(!(p.events||[]).length)return;var k=p.issuer||'기타';iss[k]=iss[k]||{mx:0,pl:{}};(p.events||[]).forEach(function(e){iss[k].pl[e.platform]=1;if((e.reward_won||0)>iss[k].mx)iss[k].mx=e.reward_won||0;});});
+  var rows=Object.keys(iss).map(function(k){return [k,iss[k]];}).sort(function(a,b){return b[1].mx-a[1].mx;});
+  var hi=document.getElementById('hiss');if(hi)hi.innerHTML=rows.length?rows.map(function(r){var dots=PORD.map(function(k){var on=r[1].pl[k];return '<span class="pdot'+(on?'':' off')+'"'+(on?' style="background:'+PC[k]+'"':'')+' title="'+PN[k]+'">'+PN[k].slice(0,1)+'</span>';}).join('');return '<div class="hrow"><span class="hi">'+esc(r[0])+'</span><span class="hb">'+dots+'</span><span class="hd2">최대 '+wm(r[1].mx)+'원</span></div>';}).join(''):'<div class="empty2">데이터 준비 중</div>';
+ }).catch(function(){var hp=document.getElementById('hplat');if(hp)hp.innerHTML='<div class="empty2">platform_events.json을 불러오지 못했어요.</div>';});
+})();
 function esc(s){return (s||'').toString().replace(/[<>&]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];});}
-function PG(p){var M={'index.html':'홈','discount.html':'카드 혜택','cards.html':'카드찾기','issue.html':'발급 이벤트','chart.html':'티라노차트','content.html':'가이드','carddetail.html':'카드 상세','detail.html':'혜택 상세','favorites.html':'관심카드','search.html':'검색','dashboard.html':'대시보드'};return M[p]||p;}
+function PG(p){var M={'index.html':'홈','discount.html':'카드 혜택','cards.html':'카드찾기','issue.html':'발급 이벤트','chart.html':'티라노차트','content.html':'티라노TIP','carddetail.html':'카드 상세','detail.html':'혜택 상세','favorites.html':'관심카드','search.html':'검색','dashboard.html':'대시보드'};return M[p]||p;}
 function agg(ev,type,keyfn){var m={};ev.forEach(function(e){if(type&&e.t!==type)return;var k=keyfn(e);if(!k)return;m[k]=(m[k]||0)+1;});return Object.keys(m).map(function(k){return [k,m[k]];}).sort(function(a,b){return b[1]-a[1];});}
 function bars(rows,n){rows=rows.slice(0,n||8);if(!rows.length)return '<div class="empty2">아직 데이터가 없어요.</div>';var max=rows[0][1]||1;return rows.map(function(r){return '<div class="bar"><span class="bl">'+esc(r[0])+'</span><span class="bt"><span class="bf" style="width:'+Math.max(6,Math.round(r[1]/max*100))+'%"></span></span><span class="bn">'+r[1]+'</span></div>';}).join('');}
 function kpi(n,l){return '<div class="kpi"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>';}
+// 시간/일/월별 방문(페이지뷰) 집계 — 시계열은 시간순 정렬(값순 아님)
+function tagg(ev,unit){var m={};ev.forEach(function(e){if(e.t!=='pageview')return;var d=new Date(e.ts);if(isNaN(d))return;var k;if(unit==='month')k=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2);else if(unit==='day')k=('0'+(d.getMonth()+1)).slice(-2)+'/'+('0'+d.getDate()).slice(-2);else k=('0'+d.getHours()).slice(-2)+'시';m[k]=(m[k]||0)+1;});var arr=Object.keys(m).sort().map(function(k){return [k,m[k]];});if(unit==='day')arr=arr.slice(-14);return arr;}
+function tbars(rows){if(!rows.length)return '<div class="empty2">아직 데이터가 없어요.</div>';var max=Math.max.apply(null,rows.map(function(r){return r[1];}))||1;return rows.map(function(r){return '<div class="bar"><span class="bl">'+esc(r[0])+'</span><span class="bt"><span class="bf" style="width:'+Math.max(6,Math.round(r[1]/max*100))+'%"></span></span><span class="bn">'+r[1]+'</span></div>';}).join('');}
 function render(){
  var ev=[];try{ev=JSON.parse(localStorage.getItem('ct_evt')||'[]');}catch(_){}
  var pv=ev.filter(function(e){return e.t==='pageview';}).length;
  var first=Number(localStorage.getItem('ct_first')||0);var fd=first?new Date(first).toLocaleDateString('ko-KR'):'-';
  document.getElementById('kpis').innerHTML=kpi(pv,'페이지뷰')+kpi(ev.length,'총 이벤트')+kpi(new Set(ev.map(function(e){return e.p;})).size,'방문 페이지수')+kpi(fd,'첫 방문');
  var secs=[
+  ['📅 월별 방문(페이지뷰)', tbars(tagg(ev,'month'))],
+  ['🗓 일별 방문 (최근 14일)', tbars(tagg(ev,'day'))],
+  ['🕐 시간대별 방문', tbars(tagg(ev,'hour'))],
   ['📄 페이지별 조회', bars(agg(ev,'pageview',function(e){return PG(e.l||e.p);}))],
   ['🧭 메뉴 클릭', bars(agg(ev,'menu',function(e){return e.l;}))],
   ['카드 클릭(상품)', bars(agg(ev,'card',function(e){return e.l;}))],
@@ -256,7 +448,7 @@ function render(){
   ['🔗 플랫폼 상세 클릭', bars(agg(ev,'plat',function(e){return e.l;}))],
   ['카드사 공식 클릭', bars(agg(ev,'official',function(e){return e.l;}))],
   ['발급 이벤트 클릭', bars(agg(ev,'event',function(e){return e.l;}))],
-  ['🔎 리스트/검색 클릭', bars(agg(ev,'item',function(e){return e.l;}))]
+  ['리스트/검색 클릭', bars(agg(ev,'item',function(e){return e.l;}))]
  ];
  document.getElementById('secs').innerHTML=secs.map(function(s){return '<div class="dsec"><h3>'+s[0]+'</h3>'+s[1]+'</div>';}).join('');
  var log=ev.slice(-30).reverse();
