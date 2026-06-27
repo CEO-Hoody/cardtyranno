@@ -7,70 +7,66 @@
    "cardgorilla": 789000,
    "ajungdang": 540000,
    "naver": 559000,
-   "kakaopay": 250000
+   "kakaopay": 390000
   },
   "IBK기업은행": {
    "banksalad": 155000,
+   "kakaopay": 135000,
    "cardgorilla": 125000,
-   "naver": 125000,
-   "kakaopay": 100000
+   "naver": 125000
   },
   "우리카드": {
    "cardgorilla": 780000,
    "banksalad": 780000,
+   "kakaopay": 780000,
    "naver": 780000,
-   "ajungdang": 770000,
-   "kakaopay": 200000
+   "ajungdang": 770000
   },
   "롯데카드": {
    "banksalad": 840000,
    "ajungdang": 660000,
    "cardgorilla": 670000,
    "naver": 644000,
-   "kakaopay": 200000
+   "kakaopay": 100000
   },
   "삼성카드": {
    "cardgorilla": 1170000,
    "naver": 464000,
    "banksalad": 230000,
-   "kakaopay": 120000,
+   "kakaopay": 440000,
    "ajungdang": 611000
   },
   "현대카드": {
    "naver": 750000,
    "cardgorilla": 890000,
-   "kakaopay": 400000,
+   "kakaopay": 720000,
    "ajungdang": 750000,
    "banksalad": 750000
   },
   "KB국민카드": {
    "cardgorilla": 860000,
    "ajungdang": 850000,
+   "kakaopay": 850000,
    "banksalad": 840000,
    "naver": 830000,
-   "toss": 810000,
-   "kakaopay": 220000
+   "toss": 810000
   },
   "하나카드": {
    "cardgorilla": 570000,
-   "naver": 570000,
-   "kakaopay": 70000
+   "naver": 570000
   },
   "NH농협카드": {
    "ajungdang": 205000,
    "banksalad": 195000,
    "cardgorilla": 175000,
    "naver": 175000,
-   "kakaopay": 100000
+   "kakaopay": 195000
   },
   "BC 바로카드": {
    "cardgorilla": 43000
   },
   "현대백화점": {
    "cardgorilla": 10000
-  },
-  "카카오페이": {
-   "kakaopay": 130000
   }
  },
  "cards": [
@@ -82,7 +78,7 @@
     "cardgorilla": 579000,
     "ajungdang": 540000,
     "naver": 500000,
-    "kakaopay": 250000
+    "kakaopay": 390000
    },
    "max": 840000
   },
@@ -94,7 +90,7 @@
     "cardgorilla": 579000,
     "ajungdang": 540000,
     "naver": 500000,
-    "kakaopay": 250000
+    "kakaopay": 390000
    },
    "max": 840000
   },
@@ -113,9 +109,9 @@
    "issuer": "IBK기업은행",
    "platforms": {
     "banksalad": 155000,
+    "kakaopay": 135000,
     "cardgorilla": 125000,
-    "naver": 125000,
-    "kakaopay": 100000
+    "naver": 125000
    },
    "max": 155000
   },
@@ -164,7 +160,7 @@
    "platforms": {
     "naver": 725000,
     "cardgorilla": 685000,
-    "kakaopay": 200000
+    "kakaopay": 440000
    },
    "max": 725000
   },
@@ -174,10 +170,10 @@
    "platforms": {
     "cardgorilla": 860000,
     "ajungdang": 850000,
+    "kakaopay": 850000,
     "banksalad": 840000,
     "naver": 830000,
-    "toss": 810000,
-    "kakaopay": 220000
+    "toss": 810000
    },
    "max": 860000
   },
@@ -187,9 +183,9 @@
    "platforms": {
     "banksalad": 780000,
     "cardgorilla": 780000,
+    "kakaopay": 780000,
     "naver": 780000,
-    "ajungdang": 770000,
-    "kakaopay": 200000
+    "ajungdang": 770000
    },
    "max": 780000
   },
@@ -298,7 +294,7 @@
     "naver": 750000,
     "cardgorilla": 730000,
     "ajungdang": 690000,
-    "kakaopay": 90000
+    "kakaopay": 690000
    },
    "max": 750000
   },
@@ -308,7 +304,7 @@
    "platforms": {
     "cardgorilla": 790000,
     "naver": 750000,
-    "kakaopay": 120000
+    "kakaopay": 720000
    },
    "max": 790000
   },
@@ -318,7 +314,7 @@
    "platforms": {
     "cardgorilla": 760000,
     "naver": 750000,
-    "kakaopay": 120000
+    "kakaopay": 720000
    },
    "max": 760000
   },
@@ -420,10 +416,10 @@
    "name": "zgm.the pay카드",
    "issuer": "NH농협카드",
    "platforms": {
-    "kakaopay": 50000,
+    "kakaopay": 65000,
     "cardgorilla": 12000
    },
-   "max": 50000
+   "max": 65000
   },
   {
    "name": "zgm living카드",
@@ -525,10 +521,10 @@
    "name": "현대카드ZERO Edition3(할인형)",
    "issuer": "현대카드",
    "platforms": {
-    "kakaopay": 200000,
+    "kakaopay": 440000,
     "cardgorilla": 15000
    },
-   "max": 200000
+   "max": 440000
   },
   {
    "name": "현대카드ZERO Edition3(포인트형)",
@@ -558,28 +554,28 @@
    "name": "현대카드S",
    "issuer": "현대카드",
    "platforms": {
-    "kakaopay": 200000,
+    "kakaopay": 440000,
     "cardgorilla": 15000
    },
-   "max": 200000
+   "max": 440000
   },
   {
    "name": "현대카드D",
    "issuer": "현대카드",
    "platforms": {
-    "kakaopay": 200000,
+    "kakaopay": 440000,
     "cardgorilla": 15000
    },
-   "max": 200000
+   "max": 440000
   },
   {
    "name": "현대카드H",
    "issuer": "현대카드",
    "platforms": {
-    "kakaopay": 200000,
+    "kakaopay": 440000,
     "cardgorilla": 15000
    },
-   "max": 200000
+   "max": 440000
   },
   {
    "name": "현대카드T",
@@ -652,7 +648,7 @@
    "issuer": "삼성카드",
    "platforms": {
     "naver": 464000,
-    "kakaopay": 120000,
+    "kakaopay": 440000,
     "cardgorilla": 10000
    },
    "max": 464000
@@ -688,8 +684,8 @@
    "platforms": {
     "cardgorilla": 860000,
     "ajungdang": 850000,
-    "naver": 830000,
-    "kakaopay": 220000
+    "kakaopay": 850000,
+    "naver": 830000
    },
    "max": 860000
   },
@@ -699,8 +695,8 @@
    "platforms": {
     "cardgorilla": 860000,
     "ajungdang": 850000,
-    "banksalad": 840000,
-    "kakaopay": 220000
+    "kakaopay": 850000,
+    "banksalad": 840000
    },
    "max": 860000
   },
@@ -825,7 +821,7 @@
    "platforms": {
     "cardgorilla": 789000,
     "naver": 559000,
-    "kakaopay": 200000
+    "kakaopay": 320000
    },
    "max": 789000
   },
@@ -863,7 +859,7 @@
    "platforms": {
     "naver": 520000,
     "cardgorilla": 349000,
-    "kakaopay": 200000
+    "kakaopay": 320000
    },
    "max": 520000
   },
@@ -889,9 +885,9 @@
    "issuer": "NH농협카드",
    "platforms": {
     "ajungdang": 205000,
+    "kakaopay": 195000,
     "cardgorilla": 175000,
-    "naver": 175000,
-    "kakaopay": 100000
+    "naver": 175000
    },
    "max": 205000
   },
@@ -900,9 +896,9 @@
    "issuer": "NH농협카드",
    "platforms": {
     "ajungdang": 205000,
+    "kakaopay": 195000,
     "cardgorilla": 175000,
-    "naver": 175000,
-    "kakaopay": 100000
+    "naver": 175000
    },
    "max": 205000
   },
@@ -919,8 +915,8 @@
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 750000,
-    "naver": 750000,
-    "kakaopay": 170000
+    "kakaopay": 750000,
+    "naver": 750000
    },
    "max": 750000
   },
@@ -937,8 +933,8 @@
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 750000,
-    "naver": 750000,
-    "kakaopay": 170000
+    "kakaopay": 750000,
+    "naver": 750000
    },
    "max": 750000
   },
@@ -955,8 +951,8 @@
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 750000,
-    "naver": 750000,
-    "kakaopay": 170000
+    "kakaopay": 750000,
+    "naver": 750000
    },
    "max": 750000
   },
@@ -965,9 +961,9 @@
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 780000,
+    "kakaopay": 780000,
     "naver": 780000,
-    "ajungdang": 770000,
-    "kakaopay": 200000
+    "ajungdang": 770000
    },
    "max": 780000
   },
@@ -976,9 +972,9 @@
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 780000,
+    "kakaopay": 780000,
     "naver": 780000,
-    "ajungdang": 770000,
-    "kakaopay": 200000
+    "ajungdang": 770000
    },
    "max": 780000
   },
@@ -987,8 +983,8 @@
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 780000,
-    "naver": 780000,
-    "kakaopay": 200000
+    "kakaopay": 780000,
+    "naver": 780000
    },
    "max": 780000
   },
@@ -1096,7 +1092,7 @@
    "issuer": "삼성카드",
    "platforms": {
     "ajungdang": 611000,
-    "kakaopay": 120000,
+    "kakaopay": 440000,
     "cardgorilla": 20000
    },
    "max": 611000
@@ -1121,10 +1117,10 @@
    "name": "현대카드Z everyday",
    "issuer": "현대카드",
    "platforms": {
-    "kakaopay": 200000,
+    "kakaopay": 440000,
     "cardgorilla": 20000
    },
-   "max": 200000
+   "max": 440000
   },
   {
    "name": "현대카드Z work Edition2",
@@ -1215,294 +1211,6 @@
     "cardgorilla": 10000
    },
    "max": 10000
-  },
-  {
-   "name": "롯데카드 LOCA LIKIT 2.0",
-   "issuer": "롯데카드",
-   "platforms": {
-    "kakaopay": 200000
-   },
-   "max": 200000
-  },
-  {
-   "name": "롯데카드 LOCA LIKIT 1.5",
-   "issuer": "롯데카드",
-   "platforms": {
-    "kakaopay": 200000
-   },
-   "max": 200000
-  },
-  {
-   "name": "롯데카드 LOCA 365",
-   "issuer": "롯데카드",
-   "platforms": {
-    "kakaopay": 190000
-   },
-   "max": 190000
-  },
-  {
-   "name": "롯데카드 LOCA LIKIT",
-   "issuer": "롯데카드",
-   "platforms": {
-    "kakaopay": 190000
-   },
-   "max": 190000
-  },
-  {
-   "name": "롯데카드 LOCA LIKIT Eat",
-   "issuer": "롯데카드",
-   "platforms": {
-    "kakaopay": 190000
-   },
-   "max": 190000
-  },
-  {
-   "name": "롯데카드 LOCA LIKIT Play",
-   "issuer": "롯데카드",
-   "platforms": {
-    "kakaopay": 190000
-   },
-   "max": 190000
-  },
-  {
-   "name": "롯데카드 LOCA LIKIT Shopping",
-   "issuer": "롯데카드",
-   "platforms": {
-    "kakaopay": 190000
-   },
-   "max": 190000
-  },
-  {
-   "name": "IBK KaPick",
-   "issuer": "IBK기업은행",
-   "platforms": {
-    "kakaopay": 100000
-   },
-   "max": 100000
-  },
-  {
-   "name": "IBK포인트3.8",
-   "issuer": "IBK기업은행",
-   "platforms": {
-    "kakaopay": 100000
-   },
-   "max": 100000
-  },
-  {
-   "name": "IBK포인트",
-   "issuer": "IBK기업은행",
-   "platforms": {
-    "kakaopay": 100000
-   },
-   "max": 100000
-  },
-  {
-   "name": "하나카드 트래블로그+(플러스) 신용카드",
-   "issuer": "하나카드",
-   "platforms": {
-    "kakaopay": 20000
-   },
-   "max": 20000
-  },
-  {
-   "name": "하나 스카이패스 아멕스 플래티넘",
-   "issuer": "하나카드",
-   "platforms": {
-    "kakaopay": 70000
-   },
-   "max": 70000
-  },
-  {
-   "name": "카카오페이 신용카드",
-   "issuer": "카카오페이",
-   "platforms": {
-    "kakaopay": 130000
-   },
-   "max": 130000
-  },
-  {
-   "name": "삼성카드 taptap S",
-   "issuer": "삼성카드",
-   "platforms": {
-    "kakaopay": 120000
-   },
-   "max": 120000
-  },
-  {
-   "name": "taptap SHOPPING",
-   "issuer": "삼성카드",
-   "platforms": {
-    "kakaopay": 120000
-   },
-   "max": 120000
-  },
-  {
-   "name": "taptap DIGITAL",
-   "issuer": "삼성카드",
-   "platforms": {
-    "kakaopay": 120000
-   },
-   "max": 120000
-  },
-  {
-   "name": "삼성 iD ENERGY 카드",
-   "issuer": "삼성카드",
-   "platforms": {
-    "kakaopay": 120000
-   },
-   "max": 120000
-  },
-  {
-   "name": "삼성 iD STATION 카드",
-   "issuer": "삼성카드",
-   "platforms": {
-    "kakaopay": 120000
-   },
-   "max": 120000
-  },
-  {
-   "name": "삼성카드 스페셜마일리지",
-   "issuer": "삼성카드",
-   "platforms": {
-    "kakaopay": 120000
-   },
-   "max": 120000
-  },
-  {
-   "name": "NH농협 올바른 FLEX 카드",
-   "issuer": "NH농협카드",
-   "platforms": {
-    "kakaopay": 100000
-   },
-   "max": 100000
-  },
-  {
-   "name": "NH농협 K-패스 카드",
-   "issuer": "NH농협카드",
-   "platforms": {
-    "kakaopay": 50000
-   },
-   "max": 50000
-  },
-  {
-   "name": "현대카드ZERO Edition3(적립형)",
-   "issuer": "현대카드",
-   "platforms": {
-    "kakaopay": 200000
-   },
-   "max": 200000
-  },
-  {
-   "name": "American Express Gold",
-   "issuer": "현대카드",
-   "platforms": {
-    "kakaopay": 400000
-   },
-   "max": 400000
-  },
-  {
-   "name": "현대카드MY BUSINESS M Edition3 F",
-   "issuer": "현대카드",
-   "platforms": {
-    "kakaopay": 90000
-   },
-   "max": 90000
-  },
-  {
-   "name": "현대카드MY BUSINESS M Edition3 R",
-   "issuer": "현대카드",
-   "platforms": {
-    "kakaopay": 90000
-   },
-   "max": 90000
-  },
-  {
-   "name": "현대카드MY BUSINESS M Edition3 E",
-   "issuer": "현대카드",
-   "platforms": {
-    "kakaopay": 90000
-   },
-   "max": 90000
-  },
-  {
-   "name": "American Express Green",
-   "issuer": "현대카드",
-   "platforms": {
-    "kakaopay": 150000
-   },
-   "max": 150000
-  },
-  {
-   "name": "대한항공카드 the First Edition",
-   "issuer": "현대카드",
-   "platforms": {
-    "kakaopay": 150000
-   },
-   "max": 150000
-  },
-  {
-   "name": "KB국민 YOU Wish 카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "kakaopay": 220000
-   },
-   "max": 220000
-  },
-  {
-   "name": "카드의정석 EVERY DISCOUNT",
-   "issuer": "우리카드",
-   "platforms": {
-    "kakaopay": 170000
-   },
-   "max": 170000
-  },
-  {
-   "name": "D4카드의정석II",
-   "issuer": "우리카드",
-   "platforms": {
-    "kakaopay": 170000
-   },
-   "max": 170000
-  },
-  {
-   "name": "카드의정석 EVERY POINT",
-   "issuer": "우리카드",
-   "platforms": {
-    "kakaopay": 170000
-   },
-   "max": 170000
-  },
-  {
-   "name": "신한카드 KaPick",
-   "issuer": "신한카드",
-   "platforms": {
-    "kakaopay": 250000
-   },
-   "max": 250000
-  },
-  {
-   "name": "신한카드 Deep On Platinum",
-   "issuer": "신한카드",
-   "platforms": {
-    "kakaopay": 250000
-   },
-   "max": 250000
-  },
-  {
-   "name": "신한카드 The CLASSIC NEO",
-   "issuer": "신한카드",
-   "platforms": {
-    "kakaopay": 180000
-   },
-   "max": 180000
-  },
-  {
-   "name": "신한카드 The CLASSIC-Y",
-   "issuer": "신한카드",
-   "platforms": {
-    "kakaopay": 180000
-   },
-   "max": 180000
   }
  ]
 }
