@@ -19,6 +19,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .icbtn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#55555e;border:1px solid var(--line);cursor:pointer}
 .ic{width:20px;height:20px;display:block;flex:0 0 auto}
 .cat .ico .ic{width:22px;height:22px}.curc .em .ic{width:26px;height:26px}.favbtn .ic{width:20px;height:20px}
+.dday{display:inline-block;font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:999px;background:var(--surface2);color:var(--sub);margin-left:6px;vertical-align:middle}.dday.soon{background:#ff3d8b;color:#fff}
 .icbtn:hover{color:var(--accent);border-color:#d6d6dd}
 .menu{display:none}
 .searchbar{border-bottom:1px solid var(--line)}
@@ -335,9 +336,9 @@ function renderBenefit(d){
  return head+html;
 }
 
-var TPN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이'};
-var TPORD=['cardgorilla','banksalad','toss','ajungdang','naver'];
-var TPC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a'};
+var TPN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
+var TPORD=['cardgorilla','banksalad','toss','ajungdang','naver','kakaopay'];
+var TPC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a',kakaopay:'#e8b800'};
 var TMONTHS=[],SNAP={},chIss=null,chProd=null;
 function tesc(s){return (s||'').toString().replace(/</g,'&lt;');}
 function wan(w){return Math.round((w||0)/1000)/10;}

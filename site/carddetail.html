@@ -19,6 +19,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .icbtn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#55555e;border:1px solid var(--line);cursor:pointer}
 .ic{width:20px;height:20px;display:block;flex:0 0 auto}
 .cat .ico .ic{width:22px;height:22px}.curc .em .ic{width:26px;height:26px}.favbtn .ic{width:20px;height:20px}
+.dday{display:inline-block;font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:999px;background:var(--surface2);color:var(--sub);margin-left:6px;vertical-align:middle}.dday.soon{background:#ff3d8b;color:#fff}
 .icbtn:hover{color:var(--accent);border-color:#d6d6dd}
 .menu{display:none}
 .searchbar{border-bottom:1px solid var(--line)}
@@ -343,7 +344,7 @@ Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>
  function _nk(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
  function _wmc(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
  function _rwdc(t,w){return (w&&w>0)?('최대 '+_wmc(w)+' 캐시백'):(t||'');}   // 이벤트명 통일(금액+캐시백)
- var PEMAP={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',naver:'네이버페이',ajungdang:'아정당'};
+ var PEMAP={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',naver:'네이버페이',ajungdang:'아정당',kakaopay:'카카오페이'};
  var card=null,issuer='';
  // ?n=카드명 우선(비교표에서 넘어옴). 정확→퍼지 매칭. 없으면 ?id=cards.json id.
  if(nParam){var nk0=_nk(nParam);
@@ -372,7 +373,8 @@ Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>
   {k:'카드고릴라',c:'#ff4d4f',u:platUrl['카드고릴라']||PL['카드고릴라']||(_src('gorilla')?src:''),mapped:!!(PL['카드고릴라']||_src('gorilla')||platBenefit['카드고릴라'])},
   {k:'뱅크샐러드',c:'#2f6bff',u:platUrl['뱅크샐러드']||PL['뱅크샐러드']||(_src('banksalad')?src:''),mapped:!!(PL['뱅크샐러드']||_src('banksalad')||platBenefit['뱅크샐러드'])},
   {k:'아정당',c:'#3b5bdb',u:platUrl['아정당']||PL['아정당']||(_src('ajd')||_src('jungdang')?src:''),mapped:!!(PL['아정당']||_src('ajd')||_src('jungdang')||platBenefit['아정당'])},
-  {k:'네이버페이',c:'#03c75a',u:platUrl['네이버페이']||'',mapped:!!platBenefit['네이버페이']}
+  {k:'네이버페이',c:'#03c75a',u:platUrl['네이버페이']||'',mapped:!!platBenefit['네이버페이']},
+  {k:'카카오페이',c:'#e8b800',u:platUrl['카카오페이']||'',mapped:!!platBenefit['카카오페이']}
  ];
  allP.forEach(function(x){if(_isList(x.u))x.u='';});   // 전체 이벤트 리스트로 떨어지는 링크 제거(그룹/상세만 허용)
  var plats=allP.filter(function(p){return p.mapped||platBenefit[p.k];});           // 맵핑/이벤트 있는 플랫폼만
