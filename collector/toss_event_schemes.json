@@ -1,0 +1,20 @@
+{
+  "_source": "토스 앱 6월 캐시백 이벤트 리스트 캡처(순서대로) + 사용자 제공 이벤트 페이지 랜딩 스킴",
+  "_captured": "2026-06-27",
+  "_note": "토스/카카오페이는 카드상품 상세 스킴을 줄 수 없어 '이벤트 페이지' 스킴만 제공됨. 이 URL을 토스 이벤트 '보기' 버튼 아웃링크로 사용. issuer+headline_won(만원)으로 라이브 토스 이벤트에 매칭.",
+  "platform": "toss",
+  "month": "2026-06",
+  "period_end": "2026-06-30",
+  "events": [
+    {"order": 1,  "issuer": "롯데카드",     "headline_won": 620000, "title": "카드 쓰고 최대 62만원 상당 혜택", "url": "https://toss.im/_m/rB3VnV8v"},
+    {"order": 2,  "issuer": "롯데카드",     "headline_won": 480000, "title": "카드 쓰고 최대 48만원 상당 혜택", "url": "https://toss.im/_m/7xU5L2v8"},
+    {"order": 3,  "issuer": "삼성카드",     "headline_won": 455000, "title": "카드 쓰고 45.5만원 혜택",        "url": "https://toss.im/_m/banBQDY5"},
+    {"order": 4,  "issuer": "삼성카드",     "headline_won": 445000, "title": "토스 삼성카드 6월 이벤트",       "url": "https://toss.im/_m/dHQ1mRAn"},
+    {"order": 5,  "issuer": "IBK기업은행", "headline_won": 125000, "title": "토스포인트 12.5만원",            "url": "https://toss.im/_m/dwdCISRa"},
+    {"order": 6,  "issuer": "IBK기업은행", "headline_won": 125000, "title": "토스포인트 12.5만원",            "url": "https://toss.im/_m/Vip0BaYu"},
+    {"order": 7,  "issuer": "하나카드",     "headline_won": 80000,  "title": "카드 쓰고 최대 8만원 상당 혜택",  "url": "https://toss.im/_m/lfRuO3fm"},
+    {"order": 8,  "issuer": "하나카드",     "headline_won": 570000, "title": "카드 쓰고 최대 57만원 상당 혜택", "url": "https://toss.im/_m/bcjcyh3m"},
+    {"order": 9,  "issuer": "삼성카드",     "headline_won": 100000, "title": "카드 쓰고 10만원 혜택",          "url": "https://toss.im/_m/LUWffhjw"},
+    {"order": 10, "issuer": "롯데카드",     "headline_won": 80000,  "title": "토스포인트 최대 8만원",          "url": "https://toss.im/_m/zgTwn3un"}
+  ]
+}

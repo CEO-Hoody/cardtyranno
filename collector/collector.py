@@ -342,6 +342,91 @@ def diagnose():
     json.dump(dbg,open(os.path.join(SITE,"_debug.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print("diagnose →", {k:(v if isinstance(v,str) else "...") for k,v in dbg.items()})
 
+def _apply_event_schemes(platform, schemes_file, injected, products):
+    """세이스모(토스/카카오페이) 이벤트 페이지 랜딩 스킴 주입(공통).
+    schemes_file(예: toss_event_schemes.json)의 events[]를 issuer+금액 근접으로 해당 platform 이벤트에 1:1 배정.
+    매칭 규칙: 같은 issuer 내에서 (이벤트 reward_won, 없으면 0) ↔ scheme.headline_won 차이가 작은 쌍부터 그리디 매칭(중복 배정 금지).
+    매칭되면 injected[(name,platform)]["url"] 과 products[i].platforms[platform]["url"] 을 스킴으로 덮어쓴다.
+    파일이 없으면 조용히 0건 반환. 반환=주입(덮어쓴) 건수."""
+    try:
+        sch=json.load(open(os.path.join(BASE,schemes_file),encoding="utf-8"))
+    except FileNotFoundError:
+        return 0
+    except Exception as e:
+        print(f"{platform} scheme load err", e); return 0
+    schemes=sch.get("events",[])
+    if not schemes: return 0
+    # 이름→상품 빠른 조회
+    bynk={_nk(p["name"]):p for p in products}
+    # 현재 이 platform 을 가진 이벤트 후보 수집: (name, issuer, won)
+    cands=[]
+    for p in products:
+        plats=p.get("platforms",{})
+        if platform not in plats: continue
+        won=0
+        inj=injected.get((p["name"],platform))
+        if isinstance(inj,dict): won=inj.get("reward_won") or 0
+        cands.append({"name":p["name"],"issuer":(p.get("issuer") or "").strip(),"won":won})
+    # issuer 별 그리디 매칭: scheme(headline_won 내림차순) ↔ candidate(won 내림차순)
+    from collections import defaultdict
+    sch_by=defaultdict(list); cand_by=defaultdict(list)
+    for s in schemes:
+        sch_by[(s.get("issuer") or "").strip()].append(s)
+    for c in cands:
+        cand_by[c["issuer"]].append(c)
+    used_names=set(); n=0
+    for iss, slist in sch_by.items():
+        clist=[c for c in cand_by.get(iss,[]) if c["name"] not in used_names]
+        # 금액 내림차순 그리디
+        for s in sorted(slist, key=lambda x:-(x.get("headline_won") or 0)):
+            avail=[c for c in clist if c["name"] not in used_names]
+            if not avail: break
+            hw=s.get("headline_won") or 0
+            best=min(avail, key=lambda c:abs((c["won"] or 0)-hw))
+            url=s.get("url")
+            if not url: continue
+            used_names.add(best["name"])
+            inj=injected.get((best["name"],platform))
+            if isinstance(inj,dict): inj["url"]=url
+            p=bynk.get(_nk(best["name"]))
+            if p:
+                p.setdefault("platforms",{}).setdefault(platform,{"id":""})["url"]=url
+            n+=1
+    return n
+
+
+def _merge_seismo_seed(platform, seed_file, injected, products):
+    """선택적 세이스모 시드(kakaopay_seed.json 동일 스키마: platform/events[].cards/reward_won/...)를
+    해당 platform 으로 병합 주입. 단, 라이브가 이미 있는 (name,platform) 이벤트는 라이브 우선(금액 유지),
+    없는 카드만 시드로 보강한다(병합). 미존재 카드는 신규 상품 생성. 파일 없으면 조용히 skip. 반환=보강 건수."""
+    try:
+        sd=json.load(open(os.path.join(BASE,seed_file),encoding="utf-8"))
+    except FileNotFoundError:
+        return 0
+    except Exception as e:
+        print(f"{platform} seismo seed err", e); return 0
+    bynk={_nk(p["name"]):p for p in products}; n=0; nnew=0
+    for ev in sd.get("events",[]):
+        rw=ev.get("reward_won") or 0; rtext=ev.get("reward_text")
+        ps=ev.get("period_start"); pe=ev.get("period_end"); iss=ev.get("issuer") or ""
+        for cn in ev.get("cards",[]):
+            p=bynk.get(_nk(cn))
+            if not p:
+                p={"name":cn,"issuer":iss,"platforms":{}}; products.append(p); bynk[_nk(cn)]=p; nnew+=1
+            had_live = platform in p.get("platforms",{})   # 이미 라이브 toss 매핑이 붙어 있던 카드
+            p.setdefault("platforms",{}).setdefault(platform,{"id":"","url":""})
+            key=(p["name"],platform)
+            # 라이브 우선: 이미 라이브 매핑이 있고 주입값이 들어와 있으면(금액 보유) 시드로 덮지 않음
+            if had_live and isinstance(injected.get(key),dict):
+                continue
+            if rw:
+                injected[key]={"reward_won":rw,"reward_text":rtext,
+                    "period_start":ps,"period_end":pe,"url":injected.get(key,{}).get("url","") if isinstance(injected.get(key),dict) else ""}
+                n+=1
+    if n or nnew: print(f"세이스모({platform}) 시드 보강 {n}건 (신규상품 {nnew}건)")
+    return n
+
+
 if __name__=="__main__":
     today=datetime.date.today().isoformat()
     try: diagnose()
@@ -450,6 +535,23 @@ if __name__=="__main__":
         if _kn: print(f"세이스모(카카오페이) 주입 {_kn}건 (신규상품 {_knew}건)")
     except FileNotFoundError: pass
     except Exception as e: print("kakaopay seismo err", e)
+    # 세이스모(토스): 선택적 toss_seismo_seed.json(kakaopay_seed.json 동일 스키마)로 toss 이벤트 보강.
+    # 라이브 toss(=toss_seed 매핑→parse_toss)가 이미 금액을 가진 카드는 라이브 우선, 없는 카드만 시드로 보강.
+    # 파일 없으면 조용히 skip(지금은 파일 없음). 그 뒤 아래 스킴 주입이 url을 입힌다.
+    try:
+        _merge_seismo_seed("toss","toss_seismo_seed.json",injected,products)
+    except Exception as e: print("toss seismo merge err", e)
+    # 토스 이벤트 페이지 스킴 주입: issuer+금액 근접 매칭으로 toss 이벤트 url을 toss.im/_m/... 스킴으로 덮어쓴다.
+    # (라이브 toss는 reward_won 주입이 없으므로 won=0 기준 근접; 같은 issuer 다건이면 금액 내림차순 그리디 1:1)
+    try:
+        _tsn=_apply_event_schemes("toss","toss_event_schemes.json",injected,products)
+    except Exception as e: _tsn=0; print("toss scheme err", e)
+    print(f"토스 스킴 주입 {_tsn}건")
+    # 카카오페이 스킴 주입(스캐폴드): 선택적 kakaopay_event_schemes.json 있으면 동일 매칭으로 url 덮어쓰기. 없으면 0건.
+    try:
+        _ksn=_apply_event_schemes("kakaopay","kakaopay_event_schemes.json",injected,products)
+    except Exception as e: _ksn=0; print("kakaopay scheme err", e)
+    print(f"카카오페이 스킴 주입 {_ksn}건")
     # 카드고릴라: 이벤트 라벨(subject)을 reward_text로 주입(상세 'card_detail_text'의 "연회비 캐시백"류 대신)
     cg_inj=0
     for p in products:
