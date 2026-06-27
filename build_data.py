@@ -436,9 +436,9 @@ def export():
                         "events":_EVMAP.get(_nk(n),[]),"rank":_RANKMAP.get(_nk(n)),"detail":_det,"plat":_plat})
         out[iss]=arr
     json.dump({"month":"2026-06","source":"db","order":order,"apply":apply,"cards":out},open(os.path.join(SITE,"cards.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
-    evs=[{"issuer":i2,"card":cd,"platform":pl,"benefit":bn,"period":pe,"url":u} for i2,cd,pl,bn,pe,u in cur.execute("SELECT issuer,card,platform,benefit,period,url FROM event ORDER BY id")]
-    iss_order=[r[0] for r in cur.execute("SELECT name FROM issuer ORDER BY ord")]
-    json.dump({"month":"2026-06","source":"db","order":iss_order,"items":evs},open(os.path.join(SITE,"events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    # [2026-06-27] events.json은 이제 collector.py가 platform_events에서 생성(네이버 포함)한다.
+    # build_data가 덮어쓰면 네이버 0건으로 회귀하므로 여기서는 더 이상 쓰지 않는다(소유권: collector).
+    # (구버전) json.dump({...events...}, open(SITE/events.json)) — 비활성화
 export(); con.close(); shutil.copy(DBL,DBF)
 import collections
 tot=sum(len(v) for v in CARDS.values())
