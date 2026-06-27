@@ -22,7 +22,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .hd .row{display:flex;align-items:center;gap:24px;height:64px}
 .logo{font-size:21px;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:7px}
-.logo .rx{width:27px;height:23px;color:var(--text);display:block;flex:0 0 auto}.logo b{color:var(--text);font-weight:400}
+.logo .rx{width:23px;height:23px;color:var(--text);display:block;flex:0 0 auto}.logo b{color:var(--text);font-weight:400}
 .gnb{display:flex;gap:22px;font-size:15px;font-weight:700}
 .gnb a{color:#55555e;padding:6px 0;position:relative}.gnb a:hover,.gnb a.on{color:var(--accent)}
 .gnb a.on::after{content:"";position:absolute;left:0;right:0;bottom:-21px;height:3px;background:var(--accent)}
@@ -346,16 +346,16 @@ function renderBenefit(d){
 """
 
 def header(active):
-    L=[("cards","cards.html","카드찾기"),("compare","issue.html?v=cmp","플랫폼 비교"),("issue","issue.html","발급 이벤트"),
-       ("charts","chart.html","티라노차트"),("trends","trends.html","캐시백 추이"),("content","content.html","가이드")]
-    gnb="".join('<a href="%s" class="%s">%s</a>'%(u,("on" if k==active else ""),t) for k,u,t in L)
-    drawer="".join('<a href="%s">%s</a>'%(u,t) for k,u,t in L)
+    L=[("cards","cards.html","카드찾기",""),("compare","issue.html?v=cmp","사이트 비교","캐시백 가장 많이 주는 사이트를 확인해보세요!"),("issue","issue.html","발급 이벤트",""),
+       ("charts","chart.html","티라노차트",""),("trends","trends.html","캐시백 추이",""),("content","content.html","가이드","")]
+    gnb="".join('<a href="%s" class="%s"%s>%s</a>'%(u,("on" if k==active else ""),(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
+    drawer="".join('<a href="%s"%s>%s</a>'%(u,(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
     return ('<div class="scrim" id="scrim"></div><aside class="drawer" id="drawer">'
-            '<div class="logo" style="margin-bottom:10px"><svg class="rx" viewBox="0 0 128 108" width="27" height="23" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M30 16 H98 A16 16 0 0 1 114 32 V74 A16 16 0 0 1 98 90 H30 A16 16 0 0 1 14 74 V32 A16 16 0 0 1 30 16 Z M98.6 42 a6.6 6.6 0 1 1 -13.2 0 a6.6 6.6 0 1 1 13.2 0 Z M32.6 34 a2.6 2.6 0 1 1 -5.2 0 a2.6 2.6 0 1 1 5.2 0 Z M32 52 H54 A6 6 0 0 1 60 58 V72 A6 6 0 0 1 54 78 H32 A6 6 0 0 1 26 72 V58 A6 6 0 0 1 32 52 Z M32.6 55.4 H53.4 A3.2 3.2 0 0 1 56.6 58.6 V71.4 A3.2 3.2 0 0 1 53.4 74.6 H32.6 A3.2 3.2 0 0 1 29.4 71.4 V58.6 A3.2 3.2 0 0 1 32.6 55.4 Z M30.6 63.2 H55.4 V66.2 H30.6 Z M36 56.5 H39 V73.5 H36 Z M46.4 56.5 H49.4 V73.5 H46.4 Z"/></svg>CARD<b>TYRANNO</b></div>'+drawer+'</aside>'
+            '<div class="logo" style="margin-bottom:10px"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div>'+drawer+'</aside>'
             '<div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:partner@cardtyranno.com">제휴·광고 문의</a></div></div>'
             '<header class="hd"><div class="wrap row">'
             '<span class="icbtn menu" id="menuBtn">☰</span>'
-            '<a class="logo" href="index.html"><svg class="rx" viewBox="0 0 128 108" width="27" height="23" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M30 16 H98 A16 16 0 0 1 114 32 V74 A16 16 0 0 1 98 90 H30 A16 16 0 0 1 14 74 V32 A16 16 0 0 1 30 16 Z M98.6 42 a6.6 6.6 0 1 1 -13.2 0 a6.6 6.6 0 1 1 13.2 0 Z M32.6 34 a2.6 2.6 0 1 1 -5.2 0 a2.6 2.6 0 1 1 5.2 0 Z M32 52 H54 A6 6 0 0 1 60 58 V72 A6 6 0 0 1 54 78 H32 A6 6 0 0 1 26 72 V58 A6 6 0 0 1 32 52 Z M32.6 55.4 H53.4 A3.2 3.2 0 0 1 56.6 58.6 V71.4 A3.2 3.2 0 0 1 53.4 74.6 H32.6 A3.2 3.2 0 0 1 29.4 71.4 V58.6 A3.2 3.2 0 0 1 32.6 55.4 Z M30.6 63.2 H55.4 V66.2 H30.6 Z M36 56.5 H39 V73.5 H36 Z M46.4 56.5 H49.4 V73.5 H46.4 Z"/></svg>CARD<b>TYRANNO</b></a>'
+            '<a class="logo" href="index.html"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></a>'
             '<nav class="gnb">'+gnb+'</nav>'
             '<div class="right"><div class="icbtn" id="searchGo">🔎</div>'
             '<a class="icbtn" href="favorites.html" title="관심카드" style="position:relative">🤍<i id="favCount" style="position:absolute;top:-5px;right:-5px;background:var(--accent);color:#fff;font-size:9px;font-weight:800;border-radius:8px;padding:1px 5px;font-style:normal;display:none"></i></a></div>'
@@ -449,21 +449,17 @@ CUR_HTML=('<section id="curation"><div class="sec-h"><h2>테마별 큐레이션<
 # ===== INDEX (landing) =====
 INDEX_BODY=('<div class="wrap">'
  '<div class="obhero"><div class="obeb">🦖 CARDTYRANNO</div>'
- '<div class="obh">같은 카드, 채널마다 다른 캐시백</div>'
- '<div class="obs">토스·카드고릴라·아정당·네이버페이·뱅크샐러드 — 5개 채널의 카드 발급 캐시백을 한눈에 비교하고, 가장 많이 주는 곳에서 발급하세요.</div>'
- '<div class="obcta"><a class="obb1" href="issue.html?v=cmp">플랫폼 캐시백 비교 ›</a><a class="obb2" href="cards.html">카드 찾기</a></div></div>'
+ '<div class="obh">같은 카드, 발급 사이트마다 다른 캐시백</div>'
+ '<div class="obs">토스·카드고릴라·아정당·네이버페이·뱅크샐러드 — 5개 카드 발급 사이트의 캐시백을 한눈에 비교하고, 가장 많이 주는 곳에서 발급하세요.</div>'
+ '<div class="obcta"><a class="obb1" href="issue.html?v=cmp">사이트 캐시백 비교 ›</a><a class="obb2" href="cards.html">카드 찾기</a></div></div>'
  '<div class="mlive"><span class="lvb"><i></i>LIVE</span><div class="lvt"><span id="liveTxt">이번 달 최대 캐시백 불러오는 중…</span></div></div>'
- '<div class="herowrap">'
- '<a class="vhero vh1" href="cashback.html" data-track="hero" data-label="max_card"><div class="vh-tag">이번 달 최대 할인 카드</div><div class="vh-iss" id="vh1iss"></div><div class="vh-name" id="vh1name">불러오는 중…</div><div class="vh-amt" id="vh1amt"></div><div class="vh-go">캐시백 비교 보기 ›</div></a>'
- '</div>'
- +tybnr("chart.html","CARDTYRANNO · 티라노차트","플랫폼 순위를 모아 한 번에","토스·카드고릴라·뱅크샐러드 순위를 평균낸 카드티라노 랭킹으로 이번 달 인기 카드를 확인하세요.")
  +'<section id="rank"><div class="sec-h"><h2>티라노차트</h2><a class="more" href="chart.html">전체보기 ›</a></div>'
  '<div class="t3caro" id="t3"></div>'
  '<div class="rank" id="rk"><div class="empty">불러오는 중…</div></div></section>'
  '<a class="adbanner" href="mailto:partner@cardtyranno.com" data-track="ad" data-label="main_hero"><span class="adtag">AD · 샘플</span><img src="img/sample_ad.svg" alt="광고 문의 샘플 배너" loading="eager"/></a>'
  '<a class="cardad" id="cardad" href="issue.html?v=cmp" data-track="ad" data-label="card_promo"><span class="adtag">AD</span><div class="cadbody"><div class="cadplate" id="cadplate"></div><div class="cadinfo"><div class="cadev">이번 달 발급 이벤트 · 최대 혜택</div><div class="cadname" id="cadname">불러오는 중…</div><div class="cadiss" id="cadiss"></div><div class="cadamt" id="cadamt"></div><div class="cadplats" id="cadplats"></div><div class="cadcta" id="cadcta"></div></div></div></a>'
- '<section><div class="sec-h"><h2>6월 티라노 추천 카드</h2><a class="more" href="issue.html?v=cmp">플랫폼 비교 ›</a></div><div class="muted" style="font-size:12.5px;padding-bottom:12px">5개 플랫폼 교차 캐시백이 가장 크고 채널 선택지가 많은 카드예요.</div><div class="grid" id="reco"></div></section>'
- '<section><div class="sec-h"><h2>6월 추천 카드사</h2><a class="more" href="issue.html?v=cmp">플랫폼 비교 ›</a></div><div class="muted" style="font-size:12.5px;padding-bottom:12px">교차 발급 캐시백이 큰 카드를 많이 보유한 카드사 순이에요.</div><div class="grid" id="recoIss"></div></section>'
+ '<section><div class="sec-h"><h2>6월 티라노 추천 카드</h2><a class="more" href="issue.html?v=cmp">사이트 비교 ›</a></div><div class="muted" style="font-size:12.5px;padding-bottom:12px">5개 플랫폼 교차 캐시백이 가장 크고 채널 선택지가 많은 카드예요.</div><div class="grid" id="reco"></div></section>'
+ '<section><div class="sec-h"><h2>6월 추천 카드사</h2><a class="more" href="issue.html?v=cmp">사이트 비교 ›</a></div><div class="muted" style="font-size:12.5px;padding-bottom:12px">교차 발급 캐시백이 큰 카드를 많이 보유한 카드사 순이에요.</div><div class="grid" id="recoIss"></div></section>'
  '<section><div class="sec-h"><h2>지금 뜨는 발급 이벤트</h2><a class="more" href="issue.html">전체보기 ›</a></div><div class="grid" id="evs"></div></section>'
  +CUR_HTML+
  '<section><div class="sec-h"><h2>카드 가이드</h2><a class="more" href="content.html">전체보기 ›</a></div><div class="posts" id="posts"></div></section>'
@@ -474,10 +470,12 @@ var PCOL={"카드고릴라":"#ff4d4f","뱅크샐러드":"#2f6bff","아정당":"#
 fetch('cards.json').then(r=>r.json()).then(function(cj){
  var NAME2ID={};for(var k in cj.cards){(cj.cards[k]||[]).forEach(function(c){if(NAME2ID[_nk2(c.name)]==null)NAME2ID[_nk2(c.name)]=c.id;});}
  function cardHref(name){var id=NAME2ID[_nk2(name||'')];if(id==null)id=NAME2ID[_nk2((name||'').replace(/^토스\s*/,''))];return id!=null?('carddetail.html?id='+id):null;}
- fetch('hero.json').then(r=>r.json()).then(function(j){document.getElementById('rk').innerHTML=j.items.map(function(d,i){
-  var h=cardHref(d.card)||'chart.html';var rk=i+1;
-  return '<a class="rk" href="'+h+'"><span class="no'+(rk<=3?' top':'')+'">'+rk+'</span><span class="pl">'+imgTag(d.img)+'</span><div class="ri"><div class="rn">'+d.card+'</div><div class="rs">'+d.issuer+'</div></div><span class="rw">'+d.reward+'</span></a>';}).join("");
-  var t3=document.getElementById('t3');if(t3)t3.innerHTML=j.items.slice(0,8).map(function(d,i){var h=cardHref(d.card)||'chart.html';return '<a class="t3c" href="'+h+'"><div class="t3p"><span class="t3rk">'+(i+1)+'</span>'+imgTag(d.img)+'</div><div class="t3n">'+d.card+'</div><div class="t3a">'+(d.reward||'')+'</div><div class="t3i">'+(d.issuer||'')+'</div></a>';}).join("");
+ fetch('hero.json').then(r=>r.json()).then(function(j){
+  // 캐러셀=TOP1~3, 아래 순위 리스트=4위~ (겹침 제거)
+  var t3=document.getElementById('t3');if(t3)t3.innerHTML=j.items.slice(0,3).map(function(d,i){var h=cardHref(d.card)||'chart.html';return '<a class="t3c" href="'+h+'"><div class="t3p"><span class="t3rk">'+(i+1)+'</span>'+imgTag(d.img)+'</div><div class="t3n">'+d.card+'</div><div class="t3a">'+(d.reward||'')+'</div><div class="t3i">'+(d.issuer||'')+'</div></a>';}).join("");
+  document.getElementById('rk').innerHTML=j.items.slice(3).map(function(d,i){
+   var h=cardHref(d.card)||'chart.html';var rk=i+4;
+   return '<a class="rk" href="'+h+'"><span class="no">'+rk+'</span><span class="pl">'+imgTag(d.img)+'</span><div class="ri"><div class="rn">'+d.card+'</div><div class="rs">'+d.issuer+'</div></div><span class="rw">'+d.reward+'</span></a>';}).join("");
   repairImages();});
  fetch('events.json').then(r=>r.json()).then(function(j){document.getElementById('evs').innerHTML=j.items.slice(0,4).map(function(x){
   var h=cardHref(x.card)||('issue.html?issuer='+encodeURIComponent(x.issuer||''));
@@ -660,9 +658,9 @@ ISSUE_BODY=('<style>'
  '<div class="ctlrow"><span class="ctll">플랫폼</span><button class="ctlf on" data-eplat="">전체</button><button class="ctlf" data-eplat="카드고릴라">카드고릴라</button><button class="ctlf" data-eplat="뱅크샐러드">뱅크샐러드</button><button class="ctlf" data-eplat="토스">토스</button><button class="ctlf" data-eplat="아정당">아정당</button><button class="ctlf" data-eplat="네이버페이">네이버페이</button></div></div>'
  '<div class="tabs" id="tabs"></div><div id="list"><div class="empty">불러오는 중…</div></div></div>'
  '<div id="view-cmp" style="display:none">'
- '<div class="pcmp-hero"><div class="eb">PLATFORM COMPARE · 플랫폼 비교</div><h1>같은 카드, 채널마다<br>다른 캐시백.</h1><p>토스·카드고릴라·아정당·네이버페이·뱅크샐러드의 발급 캐시백을 한 표로 모았어요.</p></div>'
+ '<div class="pcmp-hero"><div class="eb">SITE COMPARE · 사이트 비교</div><h1>같은 카드, 발급 사이트마다<br>다른 캐시백.</h1><p>토스·카드고릴라·아정당·네이버페이·뱅크샐러드 — 카드 발급 사이트별 캐시백을 한 표로 모았어요.</p></div>'
  '<div id="pcmp-spread"></div>'
- '<div class="subnav2"><button data-c="iss" class="on">카드사 최대혜택 비교</button><button data-c="prod">카드상품별 플랫폼 비교</button></div>'
+ '<div class="subnav2"><button data-c="iss" class="on">카드사 최대혜택 비교</button><button data-c="prod">카드상품별 사이트 비교</button></div>'
  '<div id="cmp-iss"><div class="empty">불러오는 중…</div></div>'
  '<div id="cmp-prod" style="display:none"><div class="empty">불러오는 중…</div></div>'
  '</div>'
@@ -691,8 +689,8 @@ document.getElementById('view-ev').addEventListener('click',function(e){var b=e.
 (function(){var isCmp=new URLSearchParams(location.search).get('v')==='cmp';
  document.getElementById('view-ev').style.display=isCmp?'none':'';
  document.getElementById('view-cmp').style.display=isCmp?'':'none';
- var t=document.getElementById('issTitle');if(t)t.textContent=isCmp?'플랫폼 비교':'발급 이벤트';
- document.title=(isCmp?'플랫폼 비교':'발급 이벤트')+' | 카드티라노';})();
+ var t=document.getElementById('issTitle');if(t)t.textContent=isCmp?'사이트 비교':'발급 이벤트';
+ document.title=(isCmp?'사이트 비교':'발급 이벤트')+' | 카드티라노';})();
 function num(s){var m=(s||"").match(/([0-9]+(?:\.[0-9]+)?)\s*만/);return m?parseFloat(m[1]):-1;}
 // 발급이벤트(EV) 목록은 아래 platform_events.json 집계에서 구성(5개 플랫폼·네이버 포함). 구형 events.json(네이버 0건) 의존 제거.
 // 카드사·카드상품 비교 모두 콜렉터 platform_events.json에서 집계(뱅샐·아정당 포함, 카카오페이 제외)
