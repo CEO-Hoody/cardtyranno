@@ -67,6 +67,9 @@ footer{color:var(--mut);font-size:12px;margin-top:30px;line-height:1.7;border-to
 const won=n=>{if(!n)return null;if(n>=10000)return (Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';};
 const PLAT={cardgorilla:{name:'카드고릴라',mk:'G'},banksalad:{name:'뱅크샐러드',mk:'b'},toss:{name:'toss',mk:'t'},naver:{name:'네이버페이',mk:'N'},ajungdang:{name:'아정당',mk:'아'}};
 function platUrl(plat,id){id=String(id||'').trim();if(!id)return null;return {cardgorilla:'https://www.card-gorilla.com/card/detail/'+id,banksalad:'https://www.banksalad.com/product/cards/'+id,toss:'https://card-lounge.toss.im/card/'+id,ajungdang:'https://www.ajd.co.kr/card/event/detail/'+id}[plat]||null;}
+// 전체 이벤트 리스트 페이지(랜딩 금지) 판별 — 저장 URL이 리스트면 상품상세로 대체
+function isListUrl(u){if(!u)return true;return /banksalad\.com\/cards\/event/.test(u)||/pay\.naver\.com\/home\/promotion\/event/.test(u)||/card-gorilla\.com\/event\/?($|\?)/.test(u);}
+function bestUrl(plat,raw,id){if(raw&&!isListUrl(raw))return raw;var d=platUrl(plat,id);return (d&&!isListUrl(d))?d:null;}
 let DATA=[],filter='all';
 function maxReward(p){let m=0,t=null;(p.events||[]).forEach(e=>{if((e.reward_won||0)>m){m=e.reward_won;t=e.reward_text;}});return{won:m,text:t};}
 function render(){
@@ -81,7 +84,7 @@ function render(){
   document.getElementById('empty').style.display=rows.length?'none':'block';
   rows.forEach(p=>{
     const m=p._m;const pf=p.platforms||{};
-    const plats=(p.events||[]).map(e=>{const u=(pf[e.platform]||{}).url||platUrl(e.platform,(pf[e.platform]||{}).id);const P=PLAT[e.platform]||{name:e.platform,mk:'·'};const r=won(e.reward_won);
+    const plats=(p.events||[]).map(e=>{const pf0=pf[e.platform]||{};const u=bestUrl(e.platform,pf0.url,pf0.id);const P=PLAT[e.platform]||{name:e.platform,mk:'·'};const r=won(e.reward_won);
       const inner='<span class="mk">'+P.mk+'</span><span>'+P.name+'</span>'+(r?'<span class="amt">'+r+'</span>':'');
       const cls='pl '+e.platform;
       return u?'<a class="'+cls+'" href="'+u+'" target="_blank" rel="noopener">'+inner+'</a>':'<span class="'+cls+'">'+inner+'</span>';}).join('');
