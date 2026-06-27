@@ -4,6 +4,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>이번 달 카드 캐시백 전체 | 카드티라노</title>
 <meta name="description" content="카드고릴라·뱅크샐러드·토스 등에서 수집한 이번 달 신용카드 캐시백 발급 이벤트를 한눈에 비교. 카드티라노 콜렉터가 매일 자동 수집·갱신합니다."/>
+<link rel="canonical" href="https://cardtyranno.com/cashback.html"/>
+<meta property="og:type" content="website"/><meta property="og:site_name" content="카드티라노"/><meta property="og:title" content="이번 달 카드 캐시백 전체 | 카드티라노"/><meta property="og:description" content="카드고릴라·뱅크샐러드·토스 등에서 수집한 이번 달 신용카드 캐시백 발급 이벤트를 한눈에 비교."/><meta property="og:url" content="https://cardtyranno.com/cashback.html"/><meta property="og:image" content="https://cardtyranno.com/og-image.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:locale" content="ko_KR"/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="이번 달 카드 캐시백 전체 | 카드티라노"/><meta name="twitter:description" content="카드고릴라·뱅크샐러드·토스 등에서 수집한 이번 달 신용카드 캐시백 발급 이벤트를 한눈에 비교."/><meta name="twitter:image" content="https://cardtyranno.com/og-image.png"/>
 <style>
 :root{--bg:#f6f5f1;--card:#ffffff;--card2:#efede8;--line:#e6e3da;--tx:#16161b;--mut:#6a6a72;--ac:#ef5226;--ac2:#d6420f;--gold:#d6420f}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",sans-serif;-webkit-font-smoothing:antialiased}
@@ -63,6 +66,7 @@ footer{color:var(--mut);font-size:12px;margin-top:30px;line-height:1.7;border-to
 <script>
 const won=n=>{if(!n)return null;if(n>=10000)return (Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';};
 const PLAT={cardgorilla:{name:'카드고릴라',mk:'G'},banksalad:{name:'뱅크샐러드',mk:'b'},toss:{name:'toss',mk:'t'},naver:{name:'네이버페이',mk:'N'},ajungdang:{name:'아정당',mk:'아'}};
+function platUrl(plat,id){id=String(id||'').trim();if(!id)return null;return {cardgorilla:'https://www.card-gorilla.com/card/detail/'+id,banksalad:'https://www.banksalad.com/product/cards/'+id,toss:'https://card-lounge.toss.im/card/'+id,ajungdang:'https://www.ajd.co.kr/card/event/detail/'+id}[plat]||null;}
 let DATA=[],filter='all';
 function maxReward(p){let m=0,t=null;(p.events||[]).forEach(e=>{if((e.reward_won||0)>m){m=e.reward_won;t=e.reward_text;}});return{won:m,text:t};}
 function render(){
@@ -77,7 +81,7 @@ function render(){
   document.getElementById('empty').style.display=rows.length?'none':'block';
   rows.forEach(p=>{
     const m=p._m;const pf=p.platforms||{};
-    const plats=(p.events||[]).map(e=>{const u=(pf[e.platform]||{}).url;const P=PLAT[e.platform]||{name:e.platform,mk:'·'};const r=won(e.reward_won);
+    const plats=(p.events||[]).map(e=>{const u=(pf[e.platform]||{}).url||platUrl(e.platform,(pf[e.platform]||{}).id);const P=PLAT[e.platform]||{name:e.platform,mk:'·'};const r=won(e.reward_won);
       const inner='<span class="mk">'+P.mk+'</span><span>'+P.name+'</span>'+(r?'<span class="amt">'+r+'</span>':'');
       const cls='pl '+e.platform;
       return u?'<a class="'+cls+'" href="'+u+'" target="_blank" rel="noopener">'+inner+'</a>':'<span class="'+cls+'">'+inner+'</span>';}).join('');
