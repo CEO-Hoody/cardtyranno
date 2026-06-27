@@ -203,6 +203,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 
 HELPERS = r"""
 function _purl(plat,id){id=String(id||'').trim();if(!id)return '';return ({cardgorilla:'https://www.card-gorilla.com/card/detail/'+id,banksalad:'https://www.banksalad.com/product/cards/'+id,toss:'https://card-lounge.toss.im/card/'+id,ajungdang:'https://www.ajd.co.kr/card/event/detail/'+id}[plat])||'';}
+function _isList(u){if(!u)return true;return /banksalad\.com\/cards\/event/.test(u)||/pay\.naver\.com\/home\/promotion\/event/.test(u)||/card-gorilla\.com\/event\/?($|\?)/.test(u);}
+function _best(plat,raw,id){if(raw&&!_isList(raw))return raw;var d=_purl(plat,id);return (d&&!_isList(d))?d:'';}  // 그룹/상세 우선, 전체리스트는 배제
 function thumbOf(p){var m=[["마트","🛒","#fff3d6"],["하이마트","📺","#e9f0ff"],["편의|GS25|CU|세븐|이마트24","🏪","#e7f6ee"],["백화점","🏬","#f1ecff"],["면세","🛍️","#ffeef0"],["주유|칼텍스|에너지|OIL|오일","⛽","#e9f7f1"],["CGV|시네마|메가박스","🎬","#ececf3"],["스타벅스","☕","#eaf6ee"],["무신사|W컨셉|한섬|패션","👕","#fff0e6"],["알라딘|교보|도서","📚","#eaf2ff"],["홈쇼핑|CJ|GS샵|NS","📺","#fdeef0"],["야놀자|여행|네이버 패키지","✈️","#e8f3ff"],["쿠팡|11번가|G마켓|옥션|SSG|롯데온|올리브영","🛍️","#fff3d6"]];for(var i=0;i<m.length;i++){if(new RegExp(m[i][0]).test(p))return{e:m[i][1],bg:m[i][2]};}return{e:"",bg:"#eef1f5"};}
 function favico(dom,e,bg){return dom?'<img src="https://www.google.com/s2/favicons?domain='+dom+'&sz=128" alt="" onerror="this.parentNode.style.background=\''+bg+'\';this.parentNode.textContent=\''+e+'\'">':e;}
 var DEFCARD="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 202'><rect width='320' height='202' rx='14' fill='#eef0f3'/><rect x='26' y='40' width='44' height='32' rx='6' fill='#d6d6dd'/><circle cx='280' cy='36' r='13' fill='#33333b'/><rect x='26' y='150' width='150' height='11' rx='5' fill='#d6d6dd'/><rect x='26' y='170' width='96' height='9' rx='4' fill='#33333b'/></svg>");
@@ -618,7 +620,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  // (1) 카드사 최대혜택 비교 — issuer×platform 최대 집계
  var byIss={};
  prods.forEach(function(p){if(!(p.events||[]).length)return;var iss=p.issuer||'기타';byIss[iss]=byIss[iss]||{};
-  p.events.forEach(function(e){var c=byIss[iss][e.platform];var _pp=(p.platforms||{})[e.platform]||{};if(!c||(e.reward_won||0)>c.won)byIss[iss][e.platform]={won:e.reward_won||0,text:e.reward_text||'',url:e.url||_pp.url||_purl(e.platform,_pp.id),main:e.main_won,bonus:e.bonus_won};});});
+  p.events.forEach(function(e){var c=byIss[iss][e.platform];var _pp=(p.platforms||{})[e.platform]||{};if(!c||(e.reward_won||0)>c.won)byIss[iss][e.platform]={won:e.reward_won||0,text:e.reward_text||'',url:_best(e.platform,e.url||_pp.url,_pp.id),main:e.main_won,bonus:e.bonus_won};});});
  var issuers=Object.keys(byIss).map(function(iss){var mx=0;for(var k in byIss[iss])if(byIss[iss][k].won>mx)mx=byIss[iss][k].won;return {iss:iss,mx:mx,data:byIss[iss]};}).sort(function(a,b){return b.mx-a.mx;});
  var present=PORD.filter(function(pk){return issuers.some(function(x){return x.data[pk];});});
  function _tyrano(x,bk){
@@ -758,7 +760,7 @@ Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>
  var spec=EVT.filter(function(e){return e.issuer===issuer&&_rel(e);});
  var img=imgTag(_imgurl||(pmatch&&pmatch.img));   // 메타 이미지 폴백(콜렉터 카드고릴라 플레이트)
  var platBenefit={},platUrl={};
- if(pmatch){(pmatch.events||[]).forEach(function(e){var nm=PEMAP[e.platform]||e.platform;if(!platBenefit[nm]){platBenefit[nm]=_rwdc(e.reward_text,e.reward_won);var _pp=(pmatch.platforms||{})[e.platform]||{};platUrl[nm]=e.url||_pp.url||_purl(e.platform,_pp.id)||'';}});}
+ if(pmatch){(pmatch.events||[]).forEach(function(e){var nm=PEMAP[e.platform]||e.platform;if(!platBenefit[nm]){platBenefit[nm]=_rwdc(e.reward_text,e.reward_won);var _pp=(pmatch.platforms||{})[e.platform]||{};platUrl[nm]=_best(e.platform,e.url||_pp.url,_pp.id);}});}
  (card.events||[]).forEach(function(e){if(e.platform&&!platBenefit[e.platform])platBenefit[e.platform]=e.amount;});       // 폴백(옛 데이터)
  spec.forEach(function(e){if(e.platform&&!platBenefit[e.platform])platBenefit[e.platform]=e.benefit;});
  var PL=card.plat||{};var src=card.source||'';
@@ -769,8 +771,9 @@ Promise.all([fetch('cards.json').then(r=>r.json()),fetch('events.json').then(r=>
   {k:'카드고릴라',c:'#ff4d4f',u:platUrl['카드고릴라']||PL['카드고릴라']||(_src('gorilla')?src:''),mapped:!!(PL['카드고릴라']||_src('gorilla')||platBenefit['카드고릴라'])},
   {k:'뱅크샐러드',c:'#2f6bff',u:platUrl['뱅크샐러드']||PL['뱅크샐러드']||(_src('banksalad')?src:''),mapped:!!(PL['뱅크샐러드']||_src('banksalad')||platBenefit['뱅크샐러드'])},
   {k:'아정당',c:'#3b5bdb',u:platUrl['아정당']||PL['아정당']||(_src('ajd')||_src('jungdang')?src:''),mapped:!!(PL['아정당']||_src('ajd')||_src('jungdang')||platBenefit['아정당'])},
-  {k:'네이버페이',c:'#03c75a',u:platUrl['네이버페이']||'https://card.pay.naver.com/home/promotion/event',mapped:!!platBenefit['네이버페이']}
+  {k:'네이버페이',c:'#03c75a',u:platUrl['네이버페이']||'',mapped:!!platBenefit['네이버페이']}
  ];
+ allP.forEach(function(x){if(_isList(x.u))x.u='';});   // 전체 이벤트 리스트로 떨어지는 링크 제거(그룹/상세만 허용)
  var plats=allP.filter(function(p){return p.mapped||platBenefit[p.k];});           // 맵핑/이벤트 있는 플랫폼만
  plats.sort(function(a,b){return _won(platBenefit[b.k])-_won(platBenefit[a.k]);});  // 금액 높은 순
  var ev=plats.length?('<div class="sec2">플랫폼별 발급 이벤트</div><div class="evlist">'+plats.map(function(p){var b=platBenefit[p.k];var amt=b?('<span class="am">'+b+'</span>'):'<span class="am none">이벤트 없음</span>';return '<a class="evrow'+(b?'':' off')+'" href="'+(p.u||'#')+'" target="_blank" rel="noopener" data-track="plat" data-label="'+p.k+'"><span class="pf" style="background:'+p.c+'">'+p.k+'</span>'+amt+'<span class="more">자세히보기 ›</span></a>';}).join('')+'</div>'):'';
