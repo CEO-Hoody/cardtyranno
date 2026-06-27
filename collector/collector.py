@@ -356,6 +356,8 @@ if __name__=="__main__":
             if rw:                                  # 신뢰 가능한 금액만 교차비교 이벤트로 주입
                 injected[(p["name"],"naver")]={"reward_won":rw,"reward_text":rtext,
                                                "period_start":None,"period_end":None,"url":info.get("url","")}
+                if info.get("main_won") is not None or info.get("bonus_won"):   # 주(혜택1)/부가(추가혜택) 분해 반영
+                    BREAKDOWN[(p["name"],"naver")]={"main":info.get("main_won") or 0,"bonus":info.get("bonus_won") or 0}
                 _nn+=1
         if _nn or _nskip: print(f"네이버 주입 {_nn}건 (금액 비현실 제외 {_nskip}건)")
     except FileNotFoundError: pass
