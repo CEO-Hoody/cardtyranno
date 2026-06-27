@@ -434,8 +434,9 @@ Promise.all([
  if(!evt){root.innerHTML='<div class="empty" style="padding:60px 0">진행 중인 이벤트가 없어요. <a class="accent" href="issue.html">발급 이벤트</a></div>';return;}
  var pf=evt.platform,col=PBC[pf]||'#888',img=prod.img||IMG[nk];
  var dd=_dday(evt.period_end);
- var total=evt.reward_won,mainW=evt.main_won||0,bonusW=evt.bonus_won||0;
- if(!mainW){mainW=bonusW?Math.max(total-bonusW,0):total;}
+ var total=evt.reward_won,bonusW=evt.bonus_won||0;
+ if(bonusW>=total)bonusW=0;                          // stale 분해값 방지: 부가가 전체 이상이면 무시
+ var mainW=Math.max(total-bonusW,0);                 // 주요+부가 = 전체 캐시백 정합
  // ===== 헤더 =====
  var head='<div class="ed-head"><div class="ed-plate">'+imgTag(img)+'</div><div class="ed-hbody">'
   +'<div class="ed-tags"><span class="ed-pf"><i style="background:'+col+'"></i>'+(PNM[pf]||pf)+'</span>'
