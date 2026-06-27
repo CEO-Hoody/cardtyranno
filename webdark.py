@@ -28,6 +28,8 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .gnb a.on::after{content:"";position:absolute;left:0;right:0;bottom:-21px;height:3px;background:var(--accent)}
 .hd .right{margin-left:auto;display:flex;align-items:center;gap:14px}
 .icbtn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#55555e;border:1px solid var(--line);cursor:pointer}
+.ic{width:20px;height:20px;display:block;flex:0 0 auto}
+.cat .ico .ic{width:22px;height:22px}.curc .em .ic{width:26px;height:26px}.favbtn .ic{width:20px;height:20px}
 .icbtn:hover{color:var(--accent);border-color:#d6d6dd}
 .menu{display:none}
 .searchbar{border-bottom:1px solid var(--line)}
@@ -135,7 +137,7 @@ section{padding:30px 0}
 .item .chev{color:#46464d;font-size:20px}
 .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:18px 14px;padding:16px 0}
 .ctile{position:relative;border-radius:16px;padding:6px 8px 12px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;transition:.15s}
-.favbtn{position:absolute;top:9px;right:11px;font-size:17px;cursor:pointer;z-index:3;line-height:1}
+.favbtn{position:absolute;top:9px;right:11px;cursor:pointer;z-index:3;line-height:0;color:var(--dim)}.favbtn.on{color:var(--accent)}.favbtn .ic{width:21px;height:21px}
 .cev{font-size:10.5px;font-weight:800;color:var(--accent);text-align:center;margin-top:5px}
 .ctile:hover{transform:translateY(-3px);border-color:#d6d6dd}
 .ctile .plate{width:100%;height:104px;display:flex;align-items:center;justify-content:center;margin:6px 0 12px;font-size:32px;overflow:hidden;border-radius:9px;background:#eef0f3}
@@ -273,6 +275,8 @@ HELPERS = r"""
  if(pn==='cards'||pn==='carddetail')cur='cards';else if(pn==='issue')cur=/v=cmp/.test(qs)?'compare':'issue';else if(pn===''||pn==='index')cur='home';
  mt.querySelectorAll('a').forEach(function(a){if(a.dataset.tab===cur)a.classList.add('on');});})();
 function _purl(plat,id){id=String(id||'').trim();if(!id)return '';return ({cardgorilla:'https://www.card-gorilla.com/card/detail/'+id,banksalad:'https://www.banksalad.com/product/cards/'+id,toss:'https://card-lounge.toss.im/card/'+id,ajungdang:'https://www.ajd.co.kr/card/event/detail/'+id}[plat])||'';}
+function favSvg(f){return '<svg class="ic"><use href="#ic-heart'+(f?'-f':'')+'"/></svg>';}
+function favClick(el,id){var f=toggleFav(id);el.innerHTML=favSvg(f);el.classList.toggle('on',f);if(window._fr)try{window._fr();}catch(e){}}
 function _isList(u){if(!u)return true;return /banksalad\.com\/cards\/event/.test(u)||/pay\.naver\.com\/home\/promotion\/event/.test(u)||/card-gorilla\.com\/event\/?($|\?)/.test(u);}
 // 카드고릴라 카드사 이벤트 그룹 페이지(웹사이트 /event/detail/{작은ID}). API idx(1288류)와 다른 id공간이라 발급사→그룹ID로 생성.
 var _CGG={'삼성카드':'1','신한카드':'2','KB국민카드':'3','롯데카드':'4','우리카드':'5','현대카드':'7','하나카드':'8','NH농협카드':'9','IBK기업은행':'10'};
@@ -345,30 +349,50 @@ function renderBenefit(d){
 }
 """
 
+# 디자인 QA HIGH: 이모지 → 아웃라인 글리프(24 그리드, 1.75 stroke, currentColor). OS 의존·모노크롬 붕괴 제거.
+ICONS=('<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>'
+ '<g id="o" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></g>'
+ '<symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-5-5"/></symbol>'
+ '<symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15.3 4 9.8A3.9 3.9 0 0 1 12 7.6 3.9 3.9 0 0 1 20 9.8C20 15.3 12 20 12 20Z"/></symbol>'
+ '<symbol id="ic-heart-f" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20S4 15.3 4 9.8A3.9 3.9 0 0 1 12 7.6 3.9 3.9 0 0 1 20 9.8C20 15.3 12 20 12 20Z"/></symbol>'
+ '<symbol id="ic-food" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8M9 3v8M6 11h3M7.5 11v10M16.5 3c-1.4 0-2.5 2-2.5 5.5S15.1 13 16.5 13 19 11 19 8.5 17.9 3 16.5 3Zm0 10v8"/></symbol>'
+ '<symbol id="ic-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>'
+ '<symbol id="ic-fuel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14M4 20h12M15 9h2.5A1.5 1.5 0 0 1 19 10.5V16a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 22 16V8l-3-3"/><path d="M8 8h4"/></symbol>'
+ '<symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></symbol>'
+ '<symbol id="ic-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4.5a1.5 1.5 0 0 1 3 0V10l8 4.5V17l-8-2.5V19l2.5 1.5V22L11.5 21 8 22v-1.5L10.5 19v-4.5L2.5 17v-2.5L10.5 10Z"/></symbol>'
+ '<symbol id="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.5 12h10l2-8H6.5"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></symbol>'
+ '<symbol id="ic-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h12v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8Z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2M8 3v2M11 3v2"/></symbol>'
+ '<symbol id="ic-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 9h16M4 15h16M9 5v14M15 5v14"/></symbol>'
+ '<symbol id="ic-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12l-2-2M20 16H8l2 2"/></symbol>'
+ '<symbol id="ic-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3l2-5a2 2 0 0 1 2-1.3h8A2 2 0 0 1 18 8l2 5v3M4 13h16"/><circle cx="7.5" cy="16.5" r="1.3"/><circle cx="16.5" cy="16.5" r="1.3"/></symbol>'
+ '<symbol id="ic-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v12M6 12h12"/></symbol>'
+ '<symbol id="ic-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>'
+ '</defs></svg>')
+
 def header(active):
     L=[("cards","cards.html","카드찾기",""),("compare","issue.html?v=cmp","사이트 비교","캐시백 가장 많이 주는 사이트를 확인해보세요!"),("issue","issue.html","발급 이벤트",""),
        ("charts","chart.html","티라노차트",""),("trends","trends.html","캐시백 추이",""),("content","content.html","가이드","")]
     gnb="".join('<a href="%s" class="%s"%s>%s</a>'%(u,("on" if k==active else ""),(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
     drawer="".join('<a href="%s"%s>%s</a>'%(u,(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
-    return ('<div class="scrim" id="scrim"></div><aside class="drawer" id="drawer">'
+    return (ICONS+'<div class="scrim" id="scrim"></div><aside class="drawer" id="drawer">'
             '<div class="logo" style="margin-bottom:10px"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div>'+drawer+'</aside>'
             '<div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:partner@cardtyranno.com">제휴·광고 문의</a></div></div>'
             '<header class="hd"><div class="wrap row">'
             '<span class="icbtn menu" id="menuBtn">☰</span>'
             '<a class="logo" href="index.html"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></a>'
             '<nav class="gnb">'+gnb+'</nav>'
-            '<div class="right"><div class="icbtn" id="searchGo">🔎</div>'
-            '<a class="icbtn" href="favorites.html" title="관심카드" style="position:relative">🤍<i id="favCount" style="position:absolute;top:-5px;right:-5px;background:var(--accent);color:#fff;font-size:9px;font-weight:800;border-radius:8px;padding:1px 5px;font-style:normal;display:none"></i></a></div>'
+            '<div class="right"><div class="icbtn" id="searchGo"><svg class="ic"><use href="#ic-search"/></svg></div>'
+            '<a class="icbtn" href="favorites.html" title="관심카드" style="position:relative"><svg class="ic"><use href="#ic-heart"/></svg><i id="favCount" style="position:absolute;top:-5px;right:-5px;background:var(--accent);color:#fff;font-size:9px;font-weight:800;border-radius:8px;padding:1px 5px;font-style:normal;display:none"></i></a></div>'
             '</div></header>')
 
 SEARCHBAR=('<div class="searchbar"><div class="wrap">'
- '<div class="sb"><span>🔎</span><input id="siteSearch" placeholder="카드명 · 카드사 · 가맹점 · 혜택을 검색하세요"><button class="go" id="searchGo2">검색</button></div>'
+ '<div class="sb"><span><svg class="ic"><use href="#ic-search"/></svg></span><input id="siteSearch" placeholder="카드명 · 카드사 · 가맹점 · 혜택을 검색하세요"><button class="go" id="searchGo2">검색</button></div>'
  '<div class="sfilters"><span class="chip">즉시할인</span><span class="chip">청구할인</span><a class="chip" href="installment.html">무이자할부</a><span class="chip">캐시백</span><a class="chip" href="issue.html">발급 이벤트</a></div>'
  '</div></div>')
 
 CATSTRIP=('<div class="catstrip"><div class="wrap">'
- +"".join('<a class="cat" href="discount.html?cat=%s"><span class="ico">%s</span>%s</a>'%(n,i,n) for i,n in
-   [("🍽️","식음료"),("🛍️","쇼핑"),("⛽","주유"),("📱","통신"),("✈️","여행"),("🛒","마트"),("☕","카페"),("🎬","문화"),("🔁","구독"),("🚗","자동차"),("🏥","병원"),("","전체")])
+ +"".join('<a class="cat" href="discount.html?cat=%s"><span class="ico"><svg class="ic"><use href="#ic-%s"/></svg></span>%s</a>'%(n,g,n) for g,n in
+   [("food","식음료"),("bag","쇼핑"),("fuel","주유"),("phone","통신"),("plane","여행"),("cart","마트"),("cup","카페"),("film","문화"),("repeat","구독"),("car","자동차"),("cross","병원"),("grid","전체")])
  +'</div></div>')
 
 MTABBAR=('<nav class="mtab" id="mtab" aria-label="모바일 내비게이션">'
@@ -442,9 +466,9 @@ def faq_jsonld():
 FAQ_HTML='<section class="faq"><div class="sec-h"><h2>자주 묻는 질문</h2></div>'+"".join('<div class="q"><h3>'+q+'</h3><p>'+a+'</p></div>' for q,a in FAQ)+'</section>'
 
 CUR_HTML=('<section id="curation"><div class="sec-h"><h2>테마별 큐레이션</h2></div><div class="cur">'
- '<a class="curc"><span class="em">🚗</span><div class="th">THEME</div><div class="ti">신차 구매자를 위한 카드</div><div class="ds">자동차 할부·주유·정비 혜택 모음</div></a>'
- '<a class="curc"><span class="em">✈️</span><div class="th">THEME</div><div class="ti">해외여행 필수 카드</div><div class="ds">수수료 면제·라운지·마일리지</div></a>'
- '<a class="curc"><span class="em">🎓</span><div class="th">THEME</div><div class="ti">사회초년생 첫 카드</div><div class="ds">연회비 낮고 실적 부담 적은 카드</div></a></div></section>')
+ '<a class="curc"><span class="em"><svg class="ic"><use href="#ic-car"/></svg></span><div class="th">THEME</div><div class="ti">신차 구매자를 위한 카드</div><div class="ds">자동차 할부·주유·정비 혜택 모음</div></a>'
+ '<a class="curc"><span class="em"><svg class="ic"><use href="#ic-plane"/></svg></span><div class="th">THEME</div><div class="ti">해외여행 필수 카드</div><div class="ds">수수료 면제·라운지·마일리지</div></a>'
+ '<a class="curc"><span class="em"><svg class="ic"><use href="#ic-grid"/></svg></span><div class="th">THEME</div><div class="ti">사회초년생 첫 카드</div><div class="ds">연회비 낮고 실적 부담 적은 카드</div></a></div></section>')
 
 # ===== INDEX (landing) =====
 INDEX_BODY=('<div class="wrap">'
@@ -561,7 +585,7 @@ function render(){var a=(C[cur]||[]).slice();
  var pc=EVSET[_nkc(c.name)]||((c.events&&c.events.length)?1:0);    // platform_events.json 매칭(상세페이지와 동일 정규화)
  var ev=pc?'<div class="cev">발급 이벤트'+(pc>1?' · '+pc+'곳':'')+'</div>':'';
  var img=c.img||PEIMG[_nkc(c.name)];                               // 메타 이미지 폴백(콜렉터 카드고릴라 플레이트)
- var hb='<span class="favbtn" onclick="event.preventDefault();event.stopPropagation();this.textContent=toggleFav('+c.id+')?String.fromCodePoint(10084):String.fromCodePoint(129293);">'+(isFav(c.id)?'❤️':'🤍')+'</span>';
+ var hb='<span class="favbtn'+(isFav(c.id)?' on':'')+'" onclick="event.preventDefault();event.stopPropagation();favClick(this,'+c.id+')">'+favSvg(isFav(c.id))+'</span>';
  return '<a class="ctile" href="carddetail.html?id='+c.id+'">'+hb+'<div class="plate">'+imgTag(img)+'</div><div class="cbody"><div class="cn">'+c.name+'</div>'+(fee?'<div class="cfee">'+fee+'</div>':'')+'<div class="cd">'+c.benefit+'</div>'+ev+'<div class="apply">카드 자세히 보기 ›</div></div></a>';}).join("");if(window.repairImages)repairImages();}
 function tabs(){var t=document.getElementById('tabs');t.innerHTML=ORD.map(function(o){return '<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'<span class="cnt">'+(C[o]||[]).length+'</span></div>';}).join("");
  t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
@@ -649,7 +673,17 @@ ISSUE_BODY=('<style>'
  '.tyhd{font-size:12.5px;font-weight:900;color:#5b3fb0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}'
  '.tyai{font-size:10px;font-weight:800;color:#6f5bb0;background:#ece5fb;border-radius:999px;padding:3px 8px;letter-spacing:.2px}'
  '.tytxt{font-size:13px;color:var(--text);line-height:1.65;margin-top:8px}.tytxt b{color:#5b3fb0;font-weight:800}'
- '@media(max-width:680px){.pcmp-hero{padding:28px 22px}.pcmp-hero h1{font-size:29px}.pcmp-spread{flex-direction:column;align-items:flex-start}.pcmp-spread .splate{width:128px;align-self:flex-end;margin-top:-30px}.pbasis{flex-direction:column;align-items:stretch;gap:8px}.pchips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}.pchips::-webkit-scrollbar{display:none}.ptblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.ptbl{min-width:516px}.ptr{grid-template-columns:136px repeat(5,76px)}.ptr .pc{padding:11px 12px;gap:9px}.ptr .pcimg{width:42px}.ptr .pcn{font-size:12.5px}.ptr .chip{min-width:0;padding:6px 5px;font-size:11px}.ptr.hd>div:first-child{padding-left:12px}}'
+ '.pcardlist{display:none}'
+ '.pcardm{display:block;border:1px solid var(--line);border-radius:16px;padding:13px 14px;margin-bottom:11px;text-decoration:none;color:inherit;background:var(--surface)}'
+ '.pcardm-top{display:flex;align-items:center;gap:12px}'
+ '.pcardm .pcimg{width:66px;aspect-ratio:1.586/1;flex:0 0 auto;border-radius:8px;overflow:hidden;background:#eceef2}'
+ '.pcardm .pcimg img{width:100%;height:100%;object-fit:cover}'
+ '.pcardm-info{flex:1;min-width:0}.pcardm .pcn{font-size:14.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pcardm .pci{font-size:11px;color:var(--dim);margin-top:2px}'
+ '.pcardm-best{text-align:right;flex:0 0 auto}.pcardm-best .bl{font-size:9px;color:var(--dim)}.pcardm-best .bv{font-size:15px;font-weight:900;white-space:nowrap}'
+ '.pcardm-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}'
+ '.pcardm .pmc{flex:1;min-width:56px;text-align:center;background:var(--surface2);border-radius:10px;padding:7px 6px}'
+ '.pcardm .pmc.mx{background:#16161b;color:#fff}.pcardm .pmc-n{font-size:9.5px;opacity:.7}.pcardm .pmc-v{font-size:13px;font-weight:800;margin-top:2px}'
+ '@media(max-width:680px){.pcmp-hero{padding:28px 22px}.pcmp-hero h1{font-size:29px}.pcmp-spread{flex-direction:column;align-items:flex-start}.pcmp-spread .splate{width:128px;align-self:flex-end;margin-top:-30px}.pbasis{flex-direction:column;align-items:stretch;gap:8px}.pchips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}.pchips::-webkit-scrollbar{display:none}.ptblwrap{display:none}.pcardlist{display:block}}'
  '</style>'
  '<div class="wrap"><section><div class="sec-h"><h2 id="issTitle">발급 이벤트</h2></div>'
  '<div id="view-ev">'
@@ -765,8 +799,12 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
    var plate='<div class="pcimg">'+imgTag(c.img)+'</div>';
    return '<a class="ptr" href="carddetail.html?n='+encodeURIComponent(c.name||'')+'" data-track="cmp" data-label="'+(c.name||'')+'"><div class="pc">'+plate+'<div><div class="pcn">'+c.name+'</div><div class="pci">'+c.issuer+'</div></div></div>'+cells+'</a>';}).join('');
   var chips='<div class="pbasis"><div><div class="bl">기준 플랫폼</div><div class="bt">'+PN[basis]+' 캐시백 순으로 정렬돼요</div></div><div class="pchips" id="pchips">'+PORD.map(function(pk){return '<button data-b="'+pk+'"'+(pk===basis?' class="on"':'')+'>'+PN[pk]+'</button>';}).join('')+'</div></div>';
-  var note='<div class="pcmpnote"><span class="dot"></span>검은 칩 = 그 카드의 최대 캐시백 채널이에요 · 행을 누르면 카드 상세로 이동 · 금액은 수집 시점 기준이에요.</div>';
-  document.getElementById('cmp-prod').innerHTML=rows.length?(chips+'<div class="ptblwrap"><div class="ptbl">'+head+body+'</div></div>'+note):'<div class="empty">교차비교 카드가 없어요.</div>';
+  var note='<div class="pcmpnote"><span class="dot"></span>검은 칩 = 그 카드의 최대 캐시백 사이트예요 · 카드를 누르면 상세로 이동 · 금액은 수집 시점 기준이에요.</div>';
+  // 모바일 시안: 카드별 스택 카드(플레이트+이름+최대+사이트별 캐시백 칩, 최대=검은칩)
+  var pcards='<div class="pcardlist">'+rows.map(function(c){var vals=PORD.map(function(pk){return c.o[pk]||0;});var mx=Math.max.apply(null,vals);
+    var chips2=PORD.filter(function(pk){return c.o[pk];}).sort(function(a,b){return c.o[b]-c.o[a];}).map(function(pk){var w=c.o[pk];return '<div class="pmc'+(w===mx?' mx':'')+'"><div class="pmc-n">'+PN[pk]+'</div><div class="pmc-v">'+_chipW(w)+'</div></div>';}).join('');
+    return '<a class="pcardm" href="carddetail.html?n='+encodeURIComponent(c.name||'')+'" data-track="cmp" data-label="'+(c.name||'')+'"><div class="pcardm-top"><div class="pcimg">'+imgTag(c.img)+'</div><div class="pcardm-info"><div class="pcn">'+c.name+'</div><div class="pci">'+c.issuer+'</div></div><div class="pcardm-best"><div class="bl">최대</div><div class="bv">'+_chipW(mx)+'</div></div></div><div class="pcardm-chips">'+chips2+'</div></a>';}).join('')+'</div>';
+  document.getElementById('cmp-prod').innerHTML=rows.length?(chips+'<div class="ptblwrap"><div class="ptbl">'+head+body+'</div></div>'+pcards+note):'<div class="empty">교차비교 카드가 없어요.</div>';
   if(window.repairImages)repairImages();};
  renderProd();
 }).catch(function(){document.getElementById('cmp-iss').innerHTML='<div class="empty">데이터 준비 중</div>';document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';});
@@ -926,16 +964,16 @@ FAV_JS=r"""
 fetch('cards.json').then(r=>r.json()).then(function(j){
  var all=[];for(var k in j.cards){(j.cards[k]||[]).forEach(function(c){c._iss=k;all.push(c);});}
  function render(){var fav=getFav();var items=all.filter(function(c){return fav.indexOf(c.id)>=0;});var L=document.getElementById('list');
-  if(!items.length){L.innerHTML='<div class="empty">아직 관심 카드가 없어요.<br><br><a class="accent" href="cards.html">카드찾기에서 🤍를 눌러 담아보세요 ›</a></div>';updateFavCount();return;}
+  if(!items.length){L.innerHTML='<div class="empty">아직 관심 카드가 없어요.<br><br><a class="accent" href="cards.html">카드찾기에서 하트를 눌러 담아보세요 ›</a></div>';updateFavCount();return;}
   L.innerHTML=items.map(function(c){var fee=c.fee?('연회비 '+c.fee):'';
-   var hb='<span class="favbtn" onclick="event.preventDefault();event.stopPropagation();toggleFav('+c.id+');window._fr();">❤️</span>';
+   var hb='<span class="favbtn on" onclick="event.preventDefault();event.stopPropagation();favClick(this,'+c.id+')">'+favSvg(true)+'</span>';
    return '<a class="ctile" href="carddetail.html?id='+c.id+'">'+hb+'<div class="plate">'+imgTag(c.img)+'</div><div class="cbody"><div class="cn">'+c.name+'</div>'+(fee?'<div class="cfee">'+fee+'</div>':'')+'<div class="cd">'+c._iss+' · '+c.benefit+'</div></div></a>';}).join("");updateFavCount();}
  window._fr=render; render();
 });
 """
 
 # ===== SEARCH (통합검색) =====
-SEARCH_BODY=('<div class="wrap"><div class="search" style="margin:16px 0"><span>🔎</span><input id="q2" placeholder="카드 · 카드사 · 가맹점 · 혜택 검색"><button class="go" id="q2go">검색</button></div>'
+SEARCH_BODY=('<div class="wrap"><div class="search" style="margin:16px 0"><span><svg class="ic"><use href="#ic-search"/></svg></span><input id="q2" placeholder="카드 · 카드사 · 가맹점 · 혜택 검색"><button class="go" id="q2go">검색</button></div>'
  '<div id="results"><div class="empty">검색어를 입력하세요.</div></div></div>')
 SEARCH_JS=r"""
 var Q=(new URLSearchParams(location.search).get('q')||'').trim();var CC=[],DD=[],EE=[];
@@ -1117,9 +1155,8 @@ function drawProd(){var nm=document.getElementById('selProd').value;
   var ds=TPORD.map(function(pk){return {label:TPN[pk],data:TMONTHS.map(function(m){var c=((SNAP[m]||{}).cards||[]).filter(function(x){return x.name===nm;})[0];var v=c&&c.platforms?c.platforms[pk]:null;return v?wan(v):null;}),borderColor:TPC[pk],backgroundColor:TPC[pk],spanGaps:true,tension:.3,borderWidth:2,pointRadius:4};}).filter(function(d){return d.data.some(function(v){return v!=null;});});
   chProd=mkChart('chProd',chProd,ds);}
 function mkChart(id,old,ds){if(old)old.destroy();if(typeof Chart==='undefined'){noChart('차트 라이브러리를 불러오지 못했어요.');return null;}
-  return new Chart(document.getElementById(id),{type:'line',data:{labels:TMONTHS.map(mlabel),datasets:ds},
-   options:{responsive:true,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom',labels:{font:{size:12}}},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.parsed.y+'만원';}}}},
-   scales:{y:{title:{display:true,text:'최대 캐시백(만원)'},beginAtZero:true},x:{grid:{display:false}}}});}
+  var opt={responsive:true,interaction:{mode:"index",intersect:false},plugins:{legend:{position:"bottom",labels:{font:{size:12}}},tooltip:{callbacks:{label:function(c){return c.dataset.label+": "+c.parsed.y+"만원";}}}},scales:{y:{beginAtZero:true,title:{display:true,text:"최대 캐시백(만원)"}},x:{grid:{display:false}}}};
+  return new Chart(document.getElementById(id),{type:"line",data:{labels:TMONTHS.map(mlabel),datasets:ds},options:opt});}
 document.querySelector('.subnav').onclick=function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('.subnav button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');var iss=b.dataset.t==='iss';document.getElementById('v-iss').style.display=iss?'':'none';document.getElementById('v-prod').style.display=iss?'none':'';if(iss)drawIss();else drawProd();};
 """
 
