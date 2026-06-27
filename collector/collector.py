@@ -365,7 +365,9 @@ def _apply_event_schemes(platform, schemes_file, injected, products):
         if platform not in plats: continue
         won=0
         inj=injected.get((p["name"],platform))
-        if isinstance(inj,dict): won=inj.get("reward_won") or 0
+        if isinstance(inj,dict):
+            if inj.get("url"): continue                 # 시드에 정확한 이벤트 url이 이미 박혀 있으면 재매칭 제외(스크램블 방지)
+            won=inj.get("reward_won") or 0
         cands.append({"name":p["name"],"issuer":(p.get("issuer") or "").strip(),"won":won})
     # issuer 별 그리디 매칭: scheme(headline_won 내림차순) ↔ candidate(won 내림차순)
     from collections import defaultdict
@@ -407,21 +409,23 @@ def _merge_seismo_seed(platform, seed_file, injected, products):
         print(f"{platform} seismo seed err", e); return 0
     bynk={_nk(p["name"]):p for p in products}; n=0; nnew=0
     for ev in sd.get("events",[]):
-        rw=ev.get("reward_won") or 0; rtext=ev.get("reward_text")
+        rw=ev.get("reward_won") or 0; rtext=ev.get("reward_text"); eurl=ev.get("url","")
         ps=ev.get("period_start"); pe=ev.get("period_end"); iss=ev.get("issuer") or ""
         for cn in ev.get("cards",[]):
             p=bynk.get(_nk(cn))
             if not p:
                 continue                                   # 우리 시드/DB에 없는 카드는 제외(신규 상품 생성 안 함)
-            had_live = platform in p.get("platforms",{})   # 이미 라이브 toss 매핑이 붙어 있던 카드
+            had_live = platform in p.get("platforms",{})   # 이미 라이브 매핑이 붙어 있던 카드
             p.setdefault("platforms",{}).setdefault(platform,{"id":"","url":""})
             key=(p["name"],platform)
-            # 라이브 우선: 이미 라이브 매핑이 있고 주입값이 들어와 있으면(금액 보유) 시드로 덮지 않음
-            if had_live and isinstance(injected.get(key),dict):
+            # 시드에 이벤트 스킴 url이 있으면(캡처 기반 정확값) 라이브보다 우선. url 없을 때만 라이브 우선.
+            if had_live and isinstance(injected.get(key),dict) and not eurl:
                 continue
             if rw:
-                injected[key]={"reward_won":rw,"reward_text":rtext,
-                    "period_start":ps,"period_end":pe,"url":injected.get(key,{}).get("url","") if isinstance(injected.get(key),dict) else ""}
+                cur=injected.get(key) if isinstance(injected.get(key),dict) else {}
+                u=eurl or cur.get("url","")
+                injected[key]={"reward_won":rw,"reward_text":rtext,"period_start":ps,"period_end":pe,"url":u}
+                if u: p["platforms"][platform]["url"]=u
                 n+=1
     if n or nnew: print(f"세이스모({platform}) 시드 보강 {n}건 (신규상품 {nnew}건)")
     return n
