@@ -70,6 +70,8 @@ function platUrl(plat,id){id=String(id||'').trim();if(!id)return null;return {ca
 // 전체 이벤트 리스트 페이지(랜딩 금지) 판별 — 저장 URL이 리스트면 상품상세로 대체
 function isListUrl(u){if(!u)return true;return /banksalad\.com\/cards\/event/.test(u)||/pay\.naver\.com\/home\/promotion\/event/.test(u)||/card-gorilla\.com\/event\/?($|\?)/.test(u);}
 function bestUrl(plat,raw,id){if(raw&&!isListUrl(raw))return raw;var d=platUrl(plat,id);return (d&&!isListUrl(d))?d:null;}
+var _CGG={'삼성카드':'1','신한카드':'2','KB국민카드':'3','롯데카드':'4','우리카드':'5','현대카드':'7','하나카드':'8','NH농협카드':'9','IBK기업은행':'10'};
+function cgUrl(issuer,id){var g=_CGG[(issuer||'').trim()];return g?('https://www.card-gorilla.com/event/detail/'+g):(id?('https://www.card-gorilla.com/card/detail/'+id):null);}
 let DATA=[],filter='all';
 function maxReward(p){let m=0,t=null;(p.events||[]).forEach(e=>{if((e.reward_won||0)>m){m=e.reward_won;t=e.reward_text;}});return{won:m,text:t};}
 function render(){
@@ -84,7 +86,7 @@ function render(){
   document.getElementById('empty').style.display=rows.length?'none':'block';
   rows.forEach(p=>{
     const m=p._m;const pf=p.platforms||{};
-    const plats=(p.events||[]).map(e=>{const pf0=pf[e.platform]||{};const u=bestUrl(e.platform,pf0.url,pf0.id);const P=PLAT[e.platform]||{name:e.platform,mk:'·'};const r=won(e.reward_won);
+    const plats=(p.events||[]).map(e=>{const pf0=pf[e.platform]||{};let u=bestUrl(e.platform,pf0.url,pf0.id);if(e.platform==='cardgorilla'){const cg=cgUrl(p.issuer,pf0.id);if(cg)u=cg;}const P=PLAT[e.platform]||{name:e.platform,mk:'·'};const r=won(e.reward_won);
       const inner='<span class="mk">'+P.mk+'</span><span>'+P.name+'</span>'+(r?'<span class="amt">'+r+'</span>':'');
       const cls='pl '+e.platform;
       return u?'<a class="'+cls+'" href="'+u+'" target="_blank" rel="noopener">'+inner+'</a>':'<span class="'+cls+'">'+inner+'</span>';}).join('');
