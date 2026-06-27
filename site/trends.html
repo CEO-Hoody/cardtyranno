@@ -358,9 +358,8 @@ function drawProd(){var nm=document.getElementById('selProd').value;
   var ds=TPORD.map(function(pk){return {label:TPN[pk],data:TMONTHS.map(function(m){var c=((SNAP[m]||{}).cards||[]).filter(function(x){return x.name===nm;})[0];var v=c&&c.platforms?c.platforms[pk]:null;return v?wan(v):null;}),borderColor:TPC[pk],backgroundColor:TPC[pk],spanGaps:true,tension:.3,borderWidth:2,pointRadius:4};}).filter(function(d){return d.data.some(function(v){return v!=null;});});
   chProd=mkChart('chProd',chProd,ds);}
 function mkChart(id,old,ds){if(old)old.destroy();if(typeof Chart==='undefined'){noChart('차트 라이브러리를 불러오지 못했어요.');return null;}
-  return new Chart(document.getElementById(id),{type:'line',data:{labels:TMONTHS.map(mlabel),datasets:ds},
-   options:{responsive:true,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom',labels:{font:{size:12}}},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.parsed.y+'만원';}}}},
-   scales:{y:{title:{display:true,text:'최대 캐시백(만원)'},beginAtZero:true},x:{grid:{display:false}}}});}
+  var opt={responsive:true,interaction:{mode:"index",intersect:false},plugins:{legend:{position:"bottom",labels:{font:{size:12}}},tooltip:{callbacks:{label:function(c){return c.dataset.label+": "+c.parsed.y+"만원";}}}},scales:{y:{beginAtZero:true,title:{display:true,text:"최대 캐시백(만원)"}},x:{grid:{display:false}}}};
+  return new Chart(document.getElementById(id),{type:"line",data:{labels:TMONTHS.map(mlabel),datasets:ds},options:opt});}
 document.querySelector('.subnav').onclick=function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('.subnav button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');var iss=b.dataset.t==='iss';document.getElementById('v-iss').style.display=iss?'':'none';document.getElementById('v-prod').style.display=iss?'none':'';if(iss)drawIss();else drawProd();};
 
 bindUI();</script></body></html>
