@@ -171,6 +171,15 @@
    "won": 125000
   },
   {
+   "issuer": "IBK기업은행",
+   "card": "K-패스 (신용)",
+   "platform": "토스",
+   "benefit": "최대 12.5만원 캐시백",
+   "period": "~06/30",
+   "url": "https://toss.im/_m/dwdCISRa",
+   "won": 125000
+  },
+  {
    "issuer": "우리카드",
    "card": "D4카드의정석Ⅱ",
    "platform": "카드고릴라",
@@ -555,6 +564,15 @@
    "benefit": "최대 10만원 캐시백",
    "period": "~06/30",
    "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15566ef3bfd14294a5a1e5?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894",
+   "won": 100000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "THE iD. 1st",
+   "platform": "토스",
+   "benefit": "최대 10만원 캐시백",
+   "period": "~06/30",
+   "url": "https://toss.im/_m/LUWffhjw",
    "won": 100000
   },
   {
@@ -1116,6 +1134,15 @@
    "won": 100000
   },
   {
+   "issuer": "롯데카드",
+   "card": "롯데 국민행복카드",
+   "platform": "토스",
+   "benefit": "최대 8만원 캐시백",
+   "period": "~06/30",
+   "url": "https://toss.im/_m/rB3VnV8v",
+   "won": 80000
+  },
+  {
    "issuer": "NH농협카드",
    "card": "클래시 트래블카드",
    "platform": "카드고릴라",
@@ -1168,6 +1195,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
    "won": 464000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "taptap DRIVE",
+   "platform": "토스",
+   "benefit": "최대 45.5만원 캐시백",
+   "period": "~06/30",
+   "url": "https://toss.im/_m/banBQDY5",
+   "won": 455000
   },
   {
    "issuer": "삼성카드",
@@ -2077,6 +2113,15 @@
    "period": "",
    "url": "https://www.ajd.co.kr/card/event/detail/271",
    "won": 611000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성 iD ON 카드",
+   "platform": "토스",
+   "benefit": "최대 45.5만원 캐시백",
+   "period": "~06/30",
+   "url": "https://toss.im/_m/dHQ1mRAn",
+   "won": 455000
   },
   {
    "issuer": "삼성카드",

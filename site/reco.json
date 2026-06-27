@@ -1470,9 +1470,10 @@
    "platforms": [
     "ajungdang",
     "cardgorilla",
-    "kakaopay"
+    "kakaopay",
+    "toss"
    ],
-   "platformCount": 3,
+   "platformCount": 4,
    "events": [
     {
      "platform": "ajungdang",
@@ -1480,6 +1481,14 @@
      "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
      "period_end": null,
      "main_won": 611000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "toss",
+     "reward_won": 455000,
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 45.5만원 상당 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 455000,
      "bonus_won": 0
     },
     {
@@ -1965,9 +1974,10 @@
    "platforms": [
     "cardgorilla",
     "kakaopay",
-    "naver"
+    "naver",
+    "toss"
    ],
-   "platformCount": 3,
+   "platformCount": 4,
    "events": [
     {
      "platform": "naver",
@@ -1976,6 +1986,14 @@
      "period_end": null,
      "main_won": 120000,
      "bonus_won": 344000
+    },
+    {
+     "platform": "toss",
+     "reward_won": 455000,
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 45.5만원 상당 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 455000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -2578,9 +2596,10 @@
     "banksalad",
     "cardgorilla",
     "kakaopay",
-    "naver"
+    "naver",
+    "toss"
    ],
-   "platformCount": 4,
+   "platformCount": 5,
    "events": [
     {
      "platform": "banksalad",
@@ -2613,6 +2632,14 @@
      "period_end": null,
      "main_won": 90000,
      "bonus_won": 35000
+    },
+    {
+     "platform": "toss",
+     "reward_won": 125000,
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 12.5만원 상당 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 125000,
+     "bonus_won": 0
     }
    ]
   },
@@ -2675,9 +2702,10 @@
    "periodEnd": "2026-06-30",
    "platforms": [
     "cardgorilla",
-    "kakaopay"
+    "kakaopay",
+    "toss"
    ],
-   "platformCount": 2,
+   "platformCount": 3,
    "events": [
     {
      "platform": "cardgorilla",
@@ -2693,6 +2721,14 @@
      "reward_text": "15만원 이상 이용 시 10만원 캐시백",
      "period_end": "2026-06-30",
      "main_won": 100000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "toss",
+     "reward_won": 80000,
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 8만원 상당 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 80000,
      "bonus_won": 0
     }
    ]
@@ -2841,9 +2877,10 @@
    "platforms": [
     "cardgorilla",
     "kakaopay",
-    "naver"
+    "naver",
+    "toss"
    ],
-   "platformCount": 3,
+   "platformCount": 4,
    "events": [
     {
      "platform": "cardgorilla",
@@ -2865,6 +2902,14 @@
      "platform": "kakaopay",
      "reward_won": 100000,
      "reward_text": "100만원 이상 이용 시 10만원 캐시백",
+     "period_end": "2026-06-30",
+     "main_won": 100000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "toss",
+     "reward_won": 100000,
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 10만원 상당 혜택",
      "period_end": "2026-06-30",
      "main_won": 100000,
      "bonus_won": 0

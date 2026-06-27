@@ -273,6 +273,10 @@
     "naver": {
      "id": "",
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/dwdCISRa"
     }
    },
    "events": [
@@ -318,6 +322,15 @@
        "cond": false
       }
      ]
+    },
+    {
+     "platform": "toss",
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 12.5만원 상당 혜택",
+     "reward_won": 125000,
+     "period_end": "2026-06-30",
+     "url": "https://toss.im/_m/dwdCISRa",
+     "main_won": 125000,
+     "bonus_won": 0
     }
    ]
   },
@@ -492,7 +505,7 @@
     },
     "toss": {
      "id": "17",
-     "url": "https://toss.im/_m/banBQDY5"
+     "url": "https://card-lounge.toss.im/card/17"
     }
    },
    "events": []
@@ -1152,6 +1165,10 @@
     "naver": {
      "id": "",
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590510&cardCompanyId=CCSS&cardIssuerCode=CCSS"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/LUWffhjw"
     }
    },
    "events": [
@@ -1186,6 +1203,15 @@
      "reward_won": 100000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15566ef3bfd14294a5a1e5?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894",
+     "main_won": 100000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "toss",
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 10만원 상당 혜택",
+     "reward_won": 100000,
+     "period_end": "2026-06-30",
+     "url": "https://toss.im/_m/LUWffhjw",
      "main_won": 100000,
      "bonus_won": 0
     }
@@ -2474,6 +2500,10 @@
     "kakaopay": {
      "id": "",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a194fef3f63cd5250620206?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/rB3VnV8v"
     }
    },
    "events": [
@@ -2493,6 +2523,15 @@
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a194fef3f63cd5250620206?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894",
      "main_won": 100000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "toss",
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 8만원 상당 혜택",
+     "reward_won": 80000,
+     "period_end": "2026-06-30",
+     "url": "https://toss.im/_m/rB3VnV8v",
+     "main_won": 80000,
      "bonus_won": 0
     }
    ]
@@ -2626,6 +2665,10 @@
     "naver": {
      "id": "",
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/banBQDY5"
     }
    },
    "events": [
@@ -2644,6 +2687,15 @@
        "cond": false
       }
      ]
+    },
+    {
+     "platform": "toss",
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 45.5만원 상당 혜택",
+     "reward_won": 455000,
+     "period_end": "2026-06-30",
+     "url": "https://toss.im/_m/banBQDY5",
+     "main_won": 455000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -2700,7 +2752,7 @@
     },
     "toss": {
      "id": "10143",
-     "url": "https://toss.im/_m/rB3VnV8v"
+     "url": "https://toss.im/_m/7xU5L2v8"
     }
    },
    "events": [
@@ -4666,6 +4718,10 @@
     "kakaopay": {
      "id": "",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208ae1f94d85bad33f598?t_src=social&t_ch=cardportal_event_share_link&t_obj=service&f_recommenderCode=RC3555311148373478894"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/dHQ1mRAn"
     }
    },
    "events": [
@@ -4676,6 +4732,15 @@
      "period_end": null,
      "url": "https://www.ajd.co.kr/card/event/detail/271",
      "main_won": 611000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "toss",
+     "reward_text": "토스 카드라운지 발급 이벤트 · 최대 45.5만원 상당 혜택",
+     "reward_won": 455000,
+     "period_end": "2026-06-30",
+     "url": "https://toss.im/_m/dHQ1mRAn",
+     "main_won": 455000,
      "bonus_won": 0
     },
     {
@@ -4908,7 +4973,7 @@
     },
     "toss": {
      "id": "1583",
-     "url": "https://toss.im/_m/7xU5L2v8"
+     "url": "https://toss.im/_m/zgTwn3un"
     }
    },
    "events": [
@@ -4960,7 +5025,7 @@
     },
     "toss": {
      "id": "1699",
-     "url": "https://toss.im/_m/zgTwn3un"
+     "url": "https://card-lounge.toss.im/card/1699"
     }
    },
    "events": [

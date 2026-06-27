@@ -13,7 +13,8 @@
    "banksalad": 155000,
    "kakaopay": 135000,
    "cardgorilla": 125000,
-   "naver": 125000
+   "naver": 125000,
+   "toss": 125000
   },
   "우리카드": {
    "cardgorilla": 780000,
@@ -27,14 +28,16 @@
    "ajungdang": 660000,
    "cardgorilla": 670000,
    "naver": 644000,
-   "kakaopay": 100000
+   "kakaopay": 100000,
+   "toss": 80000
   },
   "삼성카드": {
    "cardgorilla": 1170000,
    "naver": 464000,
    "banksalad": 230000,
    "kakaopay": 440000,
-   "ajungdang": 611000
+   "ajungdang": 611000,
+   "toss": 455000
   },
   "현대카드": {
    "naver": 750000,
@@ -111,7 +114,8 @@
     "banksalad": 155000,
     "kakaopay": 135000,
     "cardgorilla": 125000,
-    "naver": 125000
+    "naver": 125000,
+    "toss": 125000
    },
    "max": 155000
   },
@@ -265,7 +269,8 @@
    "platforms": {
     "cardgorilla": 124000,
     "naver": 124000,
-    "kakaopay": 100000
+    "kakaopay": 100000,
+    "toss": 100000
    },
    "max": 124000
   },
@@ -606,7 +611,8 @@
    "issuer": "롯데카드",
    "platforms": {
     "cardgorilla": 130000,
-    "kakaopay": 100000
+    "kakaopay": 100000,
+    "toss": 80000
    },
    "max": 130000
   },
@@ -648,6 +654,7 @@
    "issuer": "삼성카드",
    "platforms": {
     "naver": 464000,
+    "toss": 455000,
     "kakaopay": 440000,
     "cardgorilla": 10000
    },
@@ -1092,6 +1099,7 @@
    "issuer": "삼성카드",
    "platforms": {
     "ajungdang": 611000,
+    "toss": 455000,
     "kakaopay": 440000,
     "cardgorilla": 20000
    },
