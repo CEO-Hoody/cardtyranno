@@ -171,6 +171,26 @@ def export_json(con):
     json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"products":out},
               open(os.path.join(SITE,"platform_events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/platform_events.json ({len(out)} products)")
+    # ── 발급이벤트 목록(events.json) = platform_events 평탄화(5개 플랫폼·네이버 포함). 구형 build_data 산출물(네이버 0건) 대체 ──
+    PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당"}
+    def _man(w):
+        if not w: return ""
+        return (str(round(w/1000)/10).replace(".0","")+"만원") if w>=10000 else (f"{w:,}원")
+    items=[]; iss_max={}
+    for p in out:
+        iss=p.get("issuer") or "기타"
+        for e in p.get("events",[]):
+            pl=e.get("platform"); url=e.get("url") or (p.get("platforms",{}).get(pl) or {}).get("url") or ""
+            w=e.get("reward_won") or 0
+            ben=("최대 "+_man(w)+" 캐시백") if w>0 else (e.get("reward_text") or "")
+            pe=e.get("period_end")
+            items.append({"issuer":iss,"card":p["name"],"platform":PN.get(pl,pl),"benefit":ben,
+                          "period":("~"+str(pe)[5:].replace("-","/")) if pe else "","url":url,"won":w})
+            iss_max[iss]=max(iss_max.get(iss,0),w)
+    order=sorted(iss_max,key=lambda k:-iss_max[k])
+    json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"order":order,"items":items},
+              open(os.path.join(SITE,"events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    print(f"export → site/events.json ({len(items)} items, {len(order)} issuers)")
     # ── 월간 스냅샷(전월 대비 비교 기반: 7월에 6월과 diff) ──
     issuers={}; cardsnap=[]
     for p in out:
