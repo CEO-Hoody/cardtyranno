@@ -19,6 +19,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .icbtn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#55555e;border:1px solid var(--line);cursor:pointer}
 .ic{width:20px;height:20px;display:block;flex:0 0 auto}
 .cat .ico .ic{width:22px;height:22px}.curc .em .ic{width:26px;height:26px}.favbtn .ic{width:20px;height:20px}
+.dday{display:inline-block;font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:999px;background:var(--surface2);color:var(--sub);margin-left:6px;vertical-align:middle}.dday.soon{background:#ff3d8b;color:#fff}
 .icbtn:hover{color:var(--accent);border-color:#d6d6dd}
 .menu{display:none}
 .searchbar{border-bottom:1px solid var(--line)}
@@ -343,7 +344,9 @@ function render(){var items=(cur==="전체"?EV:EV.filter(x=>x.issuer===cur)).sli
  if(evPlat)items=items.filter(x=>x.platform===evPlat);
  items.sort(function(a,b){return evSort==='plat'?(a.platform||'').localeCompare(b.platform||'','ko'):evSort==='iss'?(a.issuer||'').localeCompare(b.issuer||'','ko'):(num(b.benefit)-num(a.benefit));});
  var L=document.getElementById('list');if(!items.length){L.innerHTML='<div class="empty">조건에 맞는 이벤트가 없어요.</div>';return;}
- L.innerHTML=items.map(function(x){var tgt=/^https?:/.test(x.url)?' target="_blank" rel="noopener"':'';return '<a class="ev" href="'+x.url+'"'+tgt+'><span class="pf" style="background:'+pcol(x.platform)+'">'+x.platform+'</span><div class="eb"><div class="ec">'+x.card+'</div><div class="ei">'+x.issuer+(x.period?' · '+x.period:'')+'</div></div><div class="ebn">'+x.benefit+'</div><div class="chev">›</div></a>';}).join("");}
+ L.innerHTML=items.map(function(x){var tgt=/^https?:/.test(x.url)?' target="_blank" rel="noopener"':'';
+   var dd='';if(x.pe){var d=Math.ceil((new Date(x.pe).getTime()-Date.now())/86400000);if(!isNaN(d)&&d>=0&&d<=60){dd=' <span class="dday'+(d<=7?' soon':'')+'">'+(d<=7?'마감임박 D-'+d:'D-'+d)+'</span>';}}
+   return '<a class="ev" href="'+x.url+'"'+tgt+'><span class="pf" style="background:'+pcol(x.platform)+'">'+x.platform+'</span><div class="eb"><div class="ec">'+x.card+'</div><div class="ei">'+x.issuer+(x.period?' · '+x.period:'')+dd+'</div></div><div class="ebn">'+x.benefit+'</div><div class="chev">›</div></a>';}).join("");}
 function tabs(){var T=["전체"].concat(ORD);var t=document.getElementById('tabs');t.innerHTML=T.map(function(o){var c=o==="전체"?EV.length:EV.filter(x=>x.issuer===o).length;return '<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'<span class="cnt">'+c+'</span></div>';}).join("");
  t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
 // 발급이벤트 / 플랫폼비교는 별도 화면(서브탭 제거). ?v=cmp로 진입 화면 결정.
@@ -378,7 +381,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  // (0) 발급이벤트 EV 목록 = 전 플랫폼(네이버 포함) 평탄화. 각 행은 실제 플랫폼 이벤트로 아웃링크.
  (function(){var tmp=[],mx={};
   prods.forEach(function(p){var iss=p.issuer||'기타';(p.events||[]).forEach(function(e){var _pp=(p.platforms||{})[e.platform]||{};var u=_best(e.platform,e.url||_pp.url,_pp.id);if(e.platform==='cardgorilla'){var _cg=_cgUrl(iss,_pp.id);if(_cg)u=_cg;}
-   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),won:(e.reward_won||0)});
+   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),pe:(e.period_end||''),won:(e.reward_won||0)});
    mx[iss]=Math.max(mx[iss]||0,e.reward_won||0);});});
   EV=tmp;ORD=Object.keys(mx).sort(function(a,b){return mx[b]-mx[a];});
   var _mxv=Math.max.apply(null,tmp.map(function(x){return x.won||0;}).concat([0]));var _eh=document.getElementById('evhMax');if(_eh&&_mxv)_eh.textContent=_wm(_mxv);
