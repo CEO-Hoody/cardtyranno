@@ -388,8 +388,9 @@ if __name__=="__main__":
             if info.get("no_event") or not info.get("reward_won"):
                 injected[(p["name"],"banksalad")]=None        # 이벤트 없음 → 종료(잘못된 라이브값 차단)
             else:
-                bgid=str((p.get("platforms",{}).get("banksalad") or {}).get("id") or "")
-                burl=("https://www.banksalad.com/product/cards/"+bgid) if bgid else "https://www.banksalad.com/cards/event"
+                # guid는 시드 우선(거주지 __NEXT_DATA__ productGuid), 없으면 기존 매핑. 둘 다 없으면 전체리스트(/cards/event) 대신 링크 생략
+                bgid=str(info.get("id") or (p.get("platforms",{}).get("banksalad") or {}).get("id") or "")
+                burl=("https://www.banksalad.com/product/cards/"+bgid) if bgid else ""   # 상품상세(p2). 리스트로 떨어뜨리지 않음
                 # 기존 banksalad 매핑이 없던 카드도 플랫폼을 부착해야 run()이 주입을 적용한다(naver와 동일 패턴)
                 p.setdefault("platforms",{}).setdefault("banksalad",{"id":bgid,"url":burl})
                 injected[(p["name"],"banksalad")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
@@ -408,8 +409,11 @@ if __name__=="__main__":
         if not ce: continue
         subj=ce.get("subject") or ""
         if not subj: continue
-        # /event/detail/{idx}는 카드별 상세가 아니라 공통 캐시백 허브(빈 랜딩)로 감 → 해당 카드의 실제 페이지로 링크
-        ev_url=f"https://www.card-gorilla.com/card/detail/{cid}"
+        # 랜딩 우선순위: /event/detail/{idx}=카드사 이벤트그룹 페이지(주/부가 리워드 노출, p1) > /card/detail/{cid}=상품상세(p2 폴백)
+        # (검증: /event/detail/7 → 현대카드 그룹, 직접진입 시 해당 발급사 탭 활성)
+        evidx=ce.get("idx")
+        ev_url=(f"https://www.card-gorilla.com/event/detail/{evidx}" if evidx else f"https://www.card-gorilla.com/card/detail/{cid}")
+        p.setdefault("platforms",{}).setdefault("cardgorilla",{"id":cid})["url"]=ev_url   # platforms.url에도 그룹페이지 반영
         injected[(p["name"],"cardgorilla")]={"reward_won":parse_won(subj),"reward_text":subj,
             "period_start":ce.get("start"),"period_end":ce.get("end"),
             "url":ev_url}
