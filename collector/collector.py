@@ -521,7 +521,7 @@ if __name__=="__main__":
         kp=json.load(open(os.path.join(BASE,"kakaopay_seed.json"),encoding="utf-8"))
         _bk={_nk(p["name"]):p for p in products}; _kn=0; _knew=0
         for ev in kp.get("events",[]):
-            rw=ev.get("reward_won") or 0; rtext=ev.get("reward_text")
+            rw=ev.get("headline_won") or ev.get("reward_won") or 0; rtext=ev.get("reward_text")   # 기준 통일: 전체 혜택(최대 헤드라인). 카카오페이포인트=원 1:1
             ps=ev.get("period_start"); pe=ev.get("period_end"); iss=ev.get("issuer") or ""
             eurl=ev.get("url","")                      # 카카오페이 이벤트 페이지 랜딩 스킴(fest.kakaopay.com 그룹)
             for cn in ev.get("cards",[]):
