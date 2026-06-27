@@ -298,9 +298,9 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   if(!bk)return '';var d=x.data[bk]||{};var total=d.won||0;var main=(d.main!=null?d.main:total);var bonus=d.bonus||0;
   var others=present.filter(function(pk){return pk!==bk&&(x.data[pk]||{}).won;}).sort(function(a,b){return x.data[b].won-x.data[a].won;});
   var snd=others[0];var sndV=snd?x.data[snd].won:0;var ratio=sndV?total/sndV:0;
-  var s=x.iss+'는 이번 달 <b>'+PN[bk]+'</b> 채널이 가장 유리해요. 메인 캐시백 '+_wm(main)+(bonus>0?(' + 부가혜택 '+_wm(bonus)):'')+' 합산 최대 <b>'+_wm(total)+'</b>';
-  if(snd&&ratio>=1.15)s+='로, '+PN[snd]+'('+_wm(sndV)+') 대비 약 '+(Math.round(ratio*10)/10)+'배';
-  s+='. '+(bonus>0?'해외결제·자동납부 등 조건부 부가혜택까지 챙기면 실속이 가장 큽니다.':'조건 없이 받기 쉬운 기본 캐시백 중심이에요.');
+  var s=x.iss+'는 이번 달 <b>'+PN[bk]+'</b> 채널이 가장 유리해요. '+(bonus>0?('메인 캐시백 '+_wm(main)+' + 부가혜택 '+_wm(bonus)+' 합산 최대 <b>'+_wm(total)+'</b>'):('조건 없이 받는 기본 캐시백 최대 <b>'+_wm(total)+'</b>'));
+  if(snd&&ratio>=1.15)s+='으로, '+PN[snd]+'('+_wm(sndV)+') 대비 약 '+(Math.round(ratio*10)/10)+'배';
+  s+='.'+(bonus>0?' 해외결제·자동납부 등 조건부 부가혜택까지 챙기면 실속이 가장 큽니다.':'');
   return '<div class="tybox"><div class="tyhd">🦖 티라노 픽<span class="tyai">Claude Opus 4.8 분석</span></div><div class="tytxt">'+s+'</div></div>';}
  document.getElementById('cmp-iss').innerHTML=issuers.length?issuers.map(function(x){
   var best=-1,bk=null;present.forEach(function(pk){var d=x.data[pk];if(!d||!d.won)return;var sc=_pick({main_won:d.main,bonus_won:d.bonus,reward_won:d.won});if(sc>best){best=sc;bk=pk;}});
