@@ -407,6 +407,8 @@ Promise.all([
  function href(name){var id=NAME2ID[_nk2(name||'')];if(id==null)id=NAME2ID[_nk2((name||'').replace(/^토스\s*/,''))];return id!=null?('carddetail.html?id='+id):'chart.html';}
  var EVMAP={};PE.forEach(function(p){var n=_nk2(p.name);EVMAP[n]=(p.events||[]);if(p.img&&!IMG[n])IMG[n]=p.img;});
  function plate(name,img){return imgTag(img||IMG[_nk2(name)]);}
+ function hasEv(name){return (EVMAP[_nk2(name)]||[]).some(function(e){return e.reward_won;});}
+ var HRf=HR.filter(function(d){return hasEv(d.card);});if(!HRf.length)HRf=HR;   // 발급 이벤트 있는 카드만(집계중 방지)
  var best=null,bw=-1;PE.forEach(function(p){(p.events||[]).forEach(function(e){if((e.reward_won||0)>bw){bw=e.reward_won;best=p;}});});
  var hp=document.getElementById('heroPlate');if(hp&&best){hp.innerHTML='<div class="hpcard">'+plate(best.name,best.img)+'</div>';}
  var im={};PE.forEach(function(p){var k=p.issuer||'';if(!k)return;(p.events||[]).forEach(function(e){if((e.reward_won||0)>(im[k]||0))im[k]=e.reward_won;});});
@@ -417,9 +419,9 @@ Promise.all([
   return evs.map(function(e){var m=PMETA[e.platform]||{n:e.platform,c:'#888'};return '<div class="row"><span class="p"><i style="background:'+m.c+'"></i>'+m.n+'</span><span class="v">'+_won(e.reward_won)+'</span></div>';}).join('');}
  var pod=document.getElementById('t3pod');
  if(pod){var lifts=['transform:translateY(-22px)','','transform:translateY(-10px)'];
-  pod.innerHTML=HR.slice(0,3).map(function(d,i){return '<a class="npc" href="'+href(d.card)+'" style="'+(lifts[i]||'')+'"><div class="npc-rk"><b>'+(i+1)+'</b><span>'+(d.reward||'')+'</span></div><div class="npc-plate">'+plate(d.card,d.img)+'</div><div><div class="npc-nm">'+d.card+'</div><div class="npc-bn">'+(d.issuer||'')+'</div></div><div class="npc-ev"><div class="lab">플랫폼 발급 이벤트</div>'+evRows(d.card)+'</div></a>';}).join('');}
+  pod.innerHTML=HRf.slice(0,3).map(function(d,i){return '<a class="npc" href="'+href(d.card)+'" style="'+(lifts[i]||'')+'"><div class="npc-rk"><b>'+(i+1)+'</b><span>'+(d.reward||'')+'</span></div><div class="npc-plate">'+plate(d.card,d.img)+'</div><div><div class="npc-nm">'+d.card+'</div><div class="npc-bn">'+(d.issuer||'')+'</div></div><div class="npc-ev"><div class="lab">플랫폼 발급 이벤트</div>'+evRows(d.card)+'</div></a>';}).join('');}
  var rk=document.getElementById('rk');
- if(rk){var rows=HR.slice(3);rk.innerHTML=rows.length?rows.map(function(d,i){var no=i+4;var no2=(no<10?'0':'')+no;return '<a class="nrow" href="'+href(d.card)+'"><span class="no">'+no2+'</span><span class="mp">'+plate(d.card,d.img)+'</span><div><div class="nm">'+d.card+'</div><div class="mt">'+(d.issuer||'')+'</div></div><div><div class="amt">'+(d.reward||'')+'</div></div></a>';}).join(''):'<div class="empty">집계 중…</div>';}
+ if(rk){var rows=HRf.slice(3);rk.innerHTML=rows.length?rows.map(function(d,i){var no=i+4;var no2=(no<10?'0':'')+no;return '<a class="nrow" href="'+href(d.card)+'"><span class="no">'+no2+'</span><span class="mp">'+plate(d.card,d.img)+'</span><div><div class="nm">'+d.card+'</div><div class="mt">'+(d.issuer||'')+'</div></div><div><div class="amt">'+(d.reward||'')+'</div></div></a>';}).join(''):'<div class="empty">집계 중…</div>';}
  if(window.repairImages)repairImages();
 }).catch(function(){});
 
