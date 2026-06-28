@@ -207,25 +207,32 @@ except FileNotFoundError:
 except Exception as _e3:
     print("toss_fees 병합 오류:", _e3)
 
-# 카드 메타정보(연회비·혜택·전월실적) 병합 — collector가 수집한 card_meta.json
-def _nk(n): return _re2.sub(r"[\s()（）·\-_/+.]+", "", (n or "")).lower()
+# 카드고릴라 메타 병합 (collector.scrape_cardgorilla_meta → scrape/cg_meta.json)
+# 연회비(빈값만)·전월실적(premonth)·주요혜택(재작성본 _cgben). 이름 정규화 기준.
 try:
-    _cm=json.load(open(os.path.join(OUT,"scrape","card_meta.json"),encoding="utf-8")).get("cards",{})
-    _cmn=0
-    for _iss, _clist in CARDS.items():
-        for _c in _clist:
-            _cnk=_nk(_c["name"])
-            _m=_cm.get(_cnk)
-            if not _m: continue
-            if _m.get("annual_fee") and not _c.get("fee"):
-                _c["fee"]=_m["annual_fee"]; _cmn+=1
-            if _m.get("spending_req") and not (_c.get("detail") or {}).get("prev_spend"):
-                _c.setdefault("detail",{})["prev_spend"]=_m["spending_req"]; _cmn+=1
-            if _m.get("benefits") and not _c.get("benefit"):
-                _c["benefit"]=" / ".join(_m["benefits"][:3]); _cmn+=1
-    if _cmn: print(f"card_meta.json 병합 {_cmn}건")
-except FileNotFoundError: pass
-except Exception as _e4: print("card_meta 병합 오류:", _e4)
+    _cm=json.load(open(os.path.join(OUT,"scrape/cg_meta.json"),encoding="utf-8"))
+    _cFee=_cm.get("feeByName",{}); _cPm=_cm.get("premonthByName",{}); _cBen=_cm.get("benefitByName",{})
+    _cMain=_cm.get("mainByName",{}); _cSub=_cm.get("subByName",{})
+    _ff=0; _pf=0; _bf=0; _mf=0; _sf=0
+    for _iss,_lst in CARDS.items():
+        for _c in _lst:
+            _k=_nk(_c["name"])
+            _cur=str(_c.get("fee") or "").strip()
+            if (not _cur or _cur in ("","-","0")) and _cFee.get(_k):
+                _c["fee"]=_cFee[_k]; _ff+=1
+            if _cPm.get(_k) and not _c.get("premonth"):
+                _c["premonth"]=_cPm[_k]; _pf+=1
+            if _cBen.get(_k):
+                _c["_cgben"]=_cBen[_k]; _bf+=1   # 재작성 혜택(자체 표현) — _gendesc보다 우선
+            if _cMain.get(_k):
+                _c["main_benefit"]=_cMain[_k]; _mf+=1     # 주요혜택: N만원 쓰면 M만원 캐시백
+            if _cSub.get(_k):
+                _c["sub_benefits"]=_cSub[_k]; _sf+=1      # 부가혜택: 해외·생활요금·마케팅 등
+    print(f"cg_meta 병합: 연회비 {_ff} · 전월실적 {_pf} · 혜택 {_bf} · 주요혜택 {_mf} · 부가혜택 {_sf}")
+except FileNotFoundError:
+    print("cg_meta.json 없음 — 카드고릴라 메타 병합 스킵")
+except Exception as _e4:
+    print("cg_meta 병합 오류:", _e4)
 
 # 저작권 햇징: 플랫폼 소개문구 미사용 — 카드명/유형 기반으로 자체 작성한 독창적 설명으로 통일
 def _gendesc(name):
@@ -248,7 +255,8 @@ def _gendesc(name):
         if _re.search(pat,name,_re.I): return desc+" 카드"
     return "국내외 가맹점 적립·할인 밸런스 카드"
 for _iss,_lst in CARDS.items():
-    for _c in _lst: _c["benefit"]=_gendesc(_c["name"])
+    for _c in _lst:
+        _c["benefit"]=_c.pop("_cgben",None) or _gendesc(_c["name"])  # 재작성 혜택 우선, 없으면 자체 생성
 
 APPLY={"KB국민카드":"https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076","신한카드":"https://www.shinhancard.com/pconts/html/card/main.html",
 "삼성카드":"https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001","현대카드":"https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
