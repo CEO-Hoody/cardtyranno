@@ -431,8 +431,56 @@ def _merge_seismo_seed(platform, seed_file, injected, products):
     return n
 
 
+# ---------- 토스 카드라운지 연회비 스크래퍼 (ID 기반) ----------
+# 토스 발급사별 검색 페이지를 playwright로 렌더 → 각 카드의 고유 id(/card/{id})와 연회비를 파싱.
+# 이름 매칭이 아니라 toss 카드 id 기준으로 fee를 적재(scrape/toss_fees.json) → build_data가 카드의
+# toss source id(우선) 또는 정규화 이름(폴백)으로 병합.
+TOSS_FEE_FILTERS = ["SAMSUNG","HYUNDAI","LOTTE","SHINHAN","KB","WOORI","HANA","NH","IBK","BC"]
+def _toss_shortfee(s):
+    if not s: return ""
+    if "없음" in s: return "없음"
+    m=re.search(r"([\d,]+)\s*원", s); return (m.group(1)+"원") if m else ""
+def _toss_clean_name(nm):
+    nm=re.sub(r"\s+"," ",(nm or "")).strip()
+    nm=re.sub(r"^(?:할인|적립|마일리지|·|\s)+","",nm).strip()
+    return nm
+def scrape_toss_fees():
+    """토스 카드라운지에서 카드 id↔연회비를 수집해 scrape/toss_fees.json 작성."""
+    try: import headless
+    except Exception as e:
+        print("toss fee: headless 미가용", e); return
+    SCR=os.path.join(os.path.dirname(BASE),"scrape"); os.makedirs(SCR,exist_ok=True)
+    byId={}; byName={}
+    for code in TOSS_FEE_FILTERS:
+        url=f"https://card-lounge.toss.im/search?filters={code}"
+        html=None
+        try: html=headless.render_html(url, wait_selector="a[href*='/card/']", timeout=35000)
+        except Exception as e: print("  toss fee render err", code, e)
+        if not html: continue
+        parts=re.split(r'href="(?:https://card-lounge\.toss\.im)?/card/(\d+)"', html)
+        n0=len(byId)
+        for i in range(1, len(parts)-1, 2):
+            cid=parts[i]; block=parts[i+1]
+            txt=re.sub(r"<[^>]+>"," ",block); txt=re.sub(r"\s+"," ",txt).strip()
+            mf=re.search(r"연회비\s*(.*?)\s*전월실적", txt)
+            fee=_toss_shortfee(mf.group(1)) if mf else ""
+            if not fee: continue
+            mn=re.search(r"([가-힣A-Za-z0-9().,/&+\-\s]{2,70}?)\s*연회비", txt)
+            nm=_toss_clean_name(mn.group(1) if mn else "")
+            if cid not in byId: byId[cid]={"name":nm,"fee":fee}
+            if nm: byName.setdefault(_nk(nm), fee)
+        print(f"  toss fee {code}: +{len(byId)-n0}")
+    if byId:
+        json.dump({"_updated":datetime.date.today().isoformat(),"byId":byId,"byName":byName},
+                  open(os.path.join(SCR,"toss_fees.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"toss fees → scrape/toss_fees.json (byId {len(byId)}, byName {len(byName)})")
+    else:
+        print("toss fees: 수집 0건 — 기존 파일 유지")
+
 if __name__=="__main__":
     today=datetime.date.today().isoformat()
+    try: scrape_toss_fees()
+    except Exception as e: print("toss fee scrape err", e)
     try: diagnose()
     except Exception as e: print("diagnose err", e)
     curated=json.load(open(os.path.join(BASE,"products.json"),encoding="utf-8"))
