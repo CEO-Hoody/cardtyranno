@@ -396,7 +396,7 @@ if(typeof window!=='undefined'){window.addEventListener('load',function(){setTim
 function getFav(){try{return JSON.parse(localStorage.getItem('ct_fav')||'[]');}catch(e){return [];}}
 function setFav(a){try{localStorage.setItem('ct_fav',JSON.stringify(a));}catch(e){}}
 function isFav(id){return getFav().indexOf(id)>=0;}
-function toggleFav(id){var a=getFav();var i=a.indexOf(id);if(i>=0)a.splice(i,1);else a.push(id);setFav(a);updateFavCount();return i<0;}
+function toggleFav(id){var a=getFav();var i=a.indexOf(id);if(i>=0)a.splice(i,1);else a.push(id);setFav(a);updateFavCount();if(window.ctPushSync)try{ctPushSync();}catch(e){}return i<0;}
 function updateFavCount(){var el=document.getElementById('favCount');if(el){var n=getFav().length;el.textContent=n;el.style.display=n?'inline-block':'none';}}
 function _pg(){return location.pathname.split('/').pop()||'index.html';}
 function track(type,label){try{
@@ -437,6 +437,29 @@ function renderBenefit(d){
  var head='<div class="bhead">'+(d.prev_spend?('전월실적 '+d.prev_spend):'전월실적 없음')+(d.max_benefit?(' · '+d.max_benefit):'')+'</div>';
  return head+html;
 }
+/* ===== 관심카드 푸시 알림 (옵션 A: SW 로컬 체크, 백엔드 불필요) ===== */
+function ctPushSupported(){return ('Notification' in window)&&('serviceWorker' in navigator);}
+function ctPushOn(){try{return localStorage.getItem('ct_push')==='1';}catch(e){return false;}}
+function _ctMsg(m){if(!('serviceWorker' in navigator))return;navigator.serviceWorker.ready.then(function(r){var t=r.active||navigator.serviceWorker.controller;if(t)t.postMessage(m);});}
+function ctFavList(cb){fetch('cards.json').then(function(r){return r.json();}).then(function(j){var fav=getFav(),out=[],seen={};for(var k in j.cards){(j.cards[k]||[]).forEach(function(c){if(fav.indexOf(c.id)>=0){var nk=_nk2(c.name);if(!seen[nk]){seen[nk]=1;out.push({nk:nk,name:c.name});}}});}cb(out);}).catch(function(){cb([]);});}
+function ctRegSW(){return navigator.serviceWorker.register('/sw.js');}
+function ctPushSync(){if(!ctPushOn()||!('serviceWorker' in navigator))return;ctFavList(function(list){_ctMsg({type:'sync',favList:list});});}
+function ctPushEnable(cb){cb=cb||function(){};
+ if(!ctPushSupported()){cb(false,'이 브라우저는 알림을 지원하지 않아요.');return;}
+ Notification.requestPermission().then(function(p){
+  if(p!=='granted'){cb(false,'알림 권한이 거부됐어요. 브라우저 주소창 옆 설정에서 알림을 허용해 주세요.');return;}
+  try{localStorage.setItem('ct_push','1');}catch(e){}
+  ctRegSW().then(function(reg){ctFavList(function(list){
+    _ctMsg({type:'enable',favList:list});
+    if(reg.periodicSync){try{reg.periodicSync.register('ct-events',{minInterval:12*60*60*1000});}catch(e){}}
+    cb(true,'');
+  });}).catch(function(){cb(false,'알림 등록에 실패했어요. 잠시 후 다시 시도해 주세요.');});
+ }).catch(function(){cb(false,'알림 권한 요청에 실패했어요.');});
+}
+function ctPushDisable(){try{localStorage.setItem('ct_push','0');}catch(e){}_ctMsg({type:'disable'});}
+function ctPushBoot(){if(!ctPushOn()||!('serviceWorker' in navigator))return;
+ ctRegSW().then(function(){ctFavList(function(list){_ctMsg({type:'sync',favList:list});_ctMsg({type:'check'});});}).catch(function(){});}
+if(typeof window!=='undefined'){window.addEventListener('load',function(){setTimeout(ctPushBoot,1500);});}
 
 var C=[],cur="전체";
 var TYPES=[{k:'발급 팁',tag:'STRATEGY',h:'이달의 발급 전략',d:'지금 받아야 할 카드와 채널, 놓치면 아까운 캐시백 타이밍.',ic:'ic-search',bg:'var(--block-lime)'},
