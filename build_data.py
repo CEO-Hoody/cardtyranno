@@ -234,6 +234,28 @@ except FileNotFoundError:
 except Exception as _e4:
     print("cg_meta 병합 오류:", _e4)
 
+# 거주지 캡처 메타 병합 (collector/residential_meta.py → scrape/residential_meta.json)
+# 네이버페이·아정당 등 데이터센터 IP 차단 플랫폼을 거주지 PC에서 수집한 결과. 빈값만 채움(기존 보존).
+try:
+    _rm=json.load(open(os.path.join(OUT,"scrape/residential_meta.json"),encoding="utf-8"))
+    _rFee=_rm.get("feeByName",{}); _rMain=_rm.get("mainByName",{}); _rSub=_rm.get("subByName",{})
+    _rf=0; _rmf=0; _rsf=0
+    for _iss,_lst in CARDS.items():
+        for _c in _lst:
+            _k=_nk(_c["name"])
+            _cur=str(_c.get("fee") or "").strip()
+            if (not _cur or _cur in ("","-","0")) and _rFee.get(_k):
+                _c["fee"]=_rFee[_k]; _rf+=1
+            if _rMain.get(_k) and not _c.get("main_benefit"):
+                _c["main_benefit"]=_rMain[_k]; _rmf+=1
+            if _rSub.get(_k) and not _c.get("sub_benefits"):
+                _c["sub_benefits"]=_rSub[_k]; _rsf+=1
+    print(f"residential_meta 병합: 연회비 {_rf} · 주요혜택 {_rmf} · 부가혜택 {_rsf}")
+except FileNotFoundError:
+    print("residential_meta.json 없음 — 거주지 캡처 병합 스킵(정상)")
+except Exception as _e5:
+    print("residential_meta 병합 오류:", _e5)
+
 # 저작권 햇징: 플랫폼 소개문구 미사용 — 카드명/유형 기반으로 자체 작성한 독창적 설명으로 통일
 def _gendesc(name):
     rules=[
