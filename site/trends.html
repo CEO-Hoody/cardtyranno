@@ -372,8 +372,8 @@ function _isList(u){if(!u)return true;return /banksalad\.com\/cards\/event/.test
 var _CGG={'삼성카드':'1','신한카드':'2','KB국민카드':'3','롯데카드':'4','우리카드':'5','현대카드':'7','하나카드':'8','NH농협카드':'9','IBK기업은행':'10'};
 function _cgUrl(issuer,id){var g=_CGG[(issuer||'').trim()];return g?('https://www.card-gorilla.com/event/detail/'+g):(id?('https://www.card-gorilla.com/card/detail/'+id):'');}
 // 카카오페이 fest 링크: 공유채널 추적 파라미터(t_src/t_ch=...share_link/t_obj)는 앱 컨텍스트를 요구해
-// 데스크톱 웹에서 홈으로 리다이렉트시킨다. 이를 제거하고 제휴코드(f_recommenderCode)는 보존해 웹에서 열리게 한다.
-function _kpClean(u){try{if(!/fest\.kakaopay\.com/.test(u))return u;var x=new URL(u);['t_src','t_ch','t_obj','t_act','t_page'].forEach(function(k){x.searchParams.delete(k);});return x.toString();}catch(e){return u;}}
+// 데스크톱 웹에서 홈으로 리다이렉트시킨다. 이를 제거한다. 외부 추천인 코드(f_recommenderCode)도 제거(미보유 코드 적립 방지).
+function _kpClean(u){try{if(!/fest\.kakaopay\.com/.test(u))return u;var x=new URL(u);['t_src','t_ch','t_obj','t_act','t_page','f_recommenderCode'].forEach(function(k){x.searchParams.delete(k);});return x.toString();}catch(e){return u;}}
 function _best(plat,raw,id){if(raw&&!_isList(raw))return (plat==='kakaopay')?_kpClean(raw):raw;var d=_purl(plat,id);return (d&&!_isList(d))?d:'';}  // 그룹/상세 우선, 전체리스트는 배제·카카오페이 공유파라미터 정리
 function thumbOf(p){var m=[["마트|이마트24","ic-cart"],["하이마트|가전|전자","ic-grid"],["편의|GS25|CU|세븐","ic-cart"],["백화점","ic-bag"],["면세","ic-bag"],["주유|칼텍스|에너지|OIL|오일","ic-fuel"],["CGV|시네마|메가박스|영화","ic-film"],["스타벅스|카페|커피","ic-cup"],["무신사|W컨셉|한섬|패션|의류","ic-bag"],["알라딘|교보|도서|서점","ic-grid"],["홈쇼핑|CJ|GS샵|NS","ic-bag"],["야놀자|여행|항공|패키지","ic-plane"],["통신|SKT|KT|LG U|U\\+","ic-phone"],["쿠팡|11번가|G마켓|옥션|SSG|롯데온|올리브영|온라인","ic-bag"]];for(var i=0;i<m.length;i++){if(new RegExp(m[i][0]).test(p))return{e:m[i][1],bg:"#f7f7f5"};}return{e:"ic-grid",bg:"#f7f7f5"};}
 function favico(dom,e,bg){return '<svg class="thic" aria-hidden="true"><use href="#'+(e||'ic-grid')+'"/></svg>';}
