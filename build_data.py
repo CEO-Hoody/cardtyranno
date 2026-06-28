@@ -207,6 +207,26 @@ except FileNotFoundError:
 except Exception as _e3:
     print("toss_fees 병합 오류:", _e3)
 
+# 카드 메타정보(연회비·혜택·전월실적) 병합 — collector가 수집한 card_meta.json
+def _nk(n): return _re2.sub(r"[\s()（）·\-_/+.]+", "", (n or "")).lower()
+try:
+    _cm=json.load(open(os.path.join(OUT,"scrape","card_meta.json"),encoding="utf-8")).get("cards",{})
+    _cmn=0
+    for _iss, _clist in CARDS.items():
+        for _c in _clist:
+            _cnk=_nk(_c["name"])
+            _m=_cm.get(_cnk)
+            if not _m: continue
+            if _m.get("annual_fee") and not _c.get("fee"):
+                _c["fee"]=_m["annual_fee"]; _cmn+=1
+            if _m.get("spending_req") and not (_c.get("detail") or {}).get("prev_spend"):
+                _c.setdefault("detail",{})["prev_spend"]=_m["spending_req"]; _cmn+=1
+            if _m.get("benefits") and not _c.get("benefit"):
+                _c["benefit"]=" / ".join(_m["benefits"][:3]); _cmn+=1
+    if _cmn: print(f"card_meta.json 병합 {_cmn}건")
+except FileNotFoundError: pass
+except Exception as _e4: print("card_meta 병합 오류:", _e4)
+
 # 저작권 햇징: 플랫폼 소개문구 미사용 — 카드명/유형 기반으로 자체 작성한 독창적 설명으로 통일
 def _gendesc(name):
     rules=[
