@@ -185,6 +185,28 @@ for _f in ["scrape/cards_p1.json","scrape/cards_p2.json"]:
                 _new={"name":_cd["name"],"img":_img,"fee":_fee,"benefit":"","url":_cd.get("url","")}
                 _base.append(_new); _idx[_k]=_new
 
+# 토스 ID 기반 연회비 병합 (collector.scrape_toss_fees → scrape/toss_fees.json)
+# 우선순위: 카드의 toss source id(byId) → 정규화 이름(byName). 빈 fee만 채움(기존 값 보존).
+try:
+    _tf=json.load(open(os.path.join(OUT,"scrape/toss_fees.json"),encoding="utf-8"))
+    _byId=_tf.get("byId",{}); _byName=_tf.get("byName",{}); _nfill=0
+    for _iss,_lst in CARDS.items():
+        for _c in _lst:
+            _cur=str(_c.get("fee") or "").strip()
+            if _cur and _cur not in ("","없음","-","0"): continue   # 금액 있으면 건너뜀
+            _fee=""
+            _src=(_c.get("source") or "")+" "+(_c.get("url") or "")
+            _m=_re.search(r"/card/(\d+)", _src)               # toss 카드 id 보유 시 id 기준(정확)
+            if _m and _m.group(1) in _byId: _fee=_byId[_m.group(1)].get("fee","")
+            if not _fee: _fee=_byName.get(_nk(_c["name"]),"")  # 폴백: 정규화 이름
+            if _fee and _fee!=_cur:
+                _c["fee"]=_fee; _nfill+=1
+    print(f"toss_fees 병합: {_nfill}건 연회비 보강 (byId {len(_byId)}, byName {len(_byName)})")
+except FileNotFoundError:
+    print("toss_fees.json 없음 — 토스 연회비 병합 스킵")
+except Exception as _e3:
+    print("toss_fees 병합 오류:", _e3)
+
 # 저작권 햇징: 플랫폼 소개문구 미사용 — 카드명/유형 기반으로 자체 작성한 독창적 설명으로 통일
 def _gendesc(name):
     rules=[
