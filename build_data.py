@@ -385,7 +385,42 @@ _aj=_ld("scrape/ajungdang_events.json")
 if _aj:
     for _it in _aj.get("fuel_cards",[]): _ev(_it["name"],_it["issuer"],"아정당",_it["amount"],True)
 _EVMAP={_nk(c["name"]):c.get("events",[]) for lst in CARDS.values() for c in lst}
-print("event merge → total cards:",sum(len(v) for v in CARDS.values()),"| cards with event:",sum(1 for lst in CARDS.values() for c in lst if c.get("events")))
+# 주요/부가 혜택·전월실적 맵(이름 정규화 키) — DB card 테이블엔 컬럼이 없어 export 시 이 맵으로 주입.
+_MBMAP={}
+for _lst in CARDS.values():
+    for _c in _lst:
+        _mb=_c.get("main_benefit"); _sb=_c.get("sub_benefits"); _pm=_c.get("premonth")
+        if _mb or _sb or _pm: _MBMAP[_nk(_c["name"])]={"main_benefit":_mb,"sub_benefits":_sb,"premonth":_pm}
+print("event merge → total cards:",sum(len(v) for v in CARDS.values()),"| cards with event:",sum(1 for lst in CARDS.values() for c in lst if c.get("events")),"| main_benefit:",len(_MBMAP))
+
+# ===== 동등상품 정규화: 같은 발급사 내 '발급사 접두어 유무' 변형을 한 상품으로 =====
+_ISSPFX=sorted(['KB국민카드','KB국민','국민카드','국민','KB','신한카드','신한','삼성카드','삼성','현대카드','현대',
+  '롯데카드','롯데','우리카드','우리','하나카드','하나','NH농협카드','NH농협','농협','BC카드','BC','IBK기업은행','IBK기업','IBK','기업'],key=len,reverse=True)
+def _stripiss(n):
+    s=(n or "").strip()
+    for t in _ISSPFX:
+        if s.startswith(t):
+            r=s[len(t):].strip()
+            return r if r else s     # 이름이 발급사명뿐이면 원본 유지
+    return s
+def _canon(n): return _nk(_stripiss(n))
+def _cscore(c):
+    r=c.get("rank"); rk=int(r) if str(r).isdigit() else 9999
+    return (1 if c.get("events") else 0, -rk, len(c.get("img") or ""), len(c.get("fee") or ""), 1 if c.get("detail") else 0, len(c.get("name") or ""))
+def _cmerge(keep,drop):
+    for f in ("img","fee","source","url","detail","main_benefit","sub_benefits","premonth"):
+        if not keep.get(f) and drop.get(f): keep[f]=drop[f]
+    if (not keep.get("benefit")) or ("밸런스" in str(keep.get("benefit","")) and drop.get("benefit") and "밸런스" not in drop["benefit"]):
+        if drop.get("benefit"): keep["benefit"]=drop["benefit"]
+    ke=keep.get("events") or []; seen={(e.get("platform"),e.get("amount")) for e in ke}
+    for e in (drop.get("events") or []):
+        if (e.get("platform"),e.get("amount")) not in seen: ke.append(e); seen.add((e.get("platform"),e.get("amount")))
+    if ke: keep["events"]=ke
+    kp=keep.get("plat") or {}
+    for k,v in (drop.get("plat") or {}).items(): kp.setdefault(k,v)
+    if kp: keep["plat"]=kp
+    rks=[int(x.get("rank")) for x in (keep,drop) if str(x.get("rank") or "").isdigit()]
+    if rks: keep["rank"]=min(rks)
 
 # 상세 혜택(benefit_detail) 로드 (사실 데이터·우리 스키마)
 _bd=_ld("scrape/benefit_detail.json") or {}
@@ -498,14 +533,31 @@ def export():
     order=[r[0] for r in cur.execute("SELECT name FROM issuer ORDER BY ord")]
     out={}; _gid=[0]
     for iss in order:
-        arr=[]
+        raw=[]
         for n,img,fee,b,src in cur.execute("SELECT name,img,fee,benefit,source_url FROM card WHERE issuer=?",(iss,)).fetchall():
             _gid[0]+=1
             _bn=_nk(_re.sub(r"^토스\s*","",n))
             _det=_DETMAP.get(_nk(n)) or _DETMAP.get(_bn)
             _plat=_PLATMAP.get(_nk(n)) or _PLATMAP.get(_bn) or {}
-            arr.append({"id":_gid[0],"name":n,"img":img,"fee":fee,"benefit":b,"source":src,"url":apply.get(iss,""),
-                        "events":_EVMAP.get(_nk(n),[]),"rank":_RANKMAP.get(_nk(n)),"detail":_det,"plat":_plat})
+            _mb=_MBMAP.get(_nk(n)) or _MBMAP.get(_bn) or {}
+            _card={"id":_gid[0],"name":n,"img":img,"fee":fee,"benefit":b,"source":src,"url":apply.get(iss,""),
+                        "events":_EVMAP.get(_nk(n),[]),"rank":_RANKMAP.get(_nk(n)),"detail":_det,"plat":_plat}
+            if _mb.get("main_benefit"): _card["main_benefit"]=_mb["main_benefit"]
+            if _mb.get("sub_benefits"): _card["sub_benefits"]=_mb["sub_benefits"]
+            if _mb.get("premonth"): _card["premonth"]=_mb["premonth"]
+            raw.append(_card)
+        # 동등상품 병합: (발급사, 접두어제거 정규화) 동일 → 풍부한 쪽을 대표로 합치기
+        _byc={}; arr=[]
+        for _c in raw:
+            _ck=_canon(_c["name"])
+            if _ck in _byc:
+                _p=_byc[_ck]
+                if _cscore(_c)>_cscore(_p):
+                    _cmerge(_c,_p); arr[arr.index(_p)]=_c; _byc[_ck]=_c
+                else:
+                    _cmerge(_p,_c)
+            else:
+                _byc[_ck]=_c; arr.append(_c)
         out[iss]=arr
     json.dump({"month":"2026-06","source":"db","order":order,"apply":apply,"cards":out},open(os.path.join(SITE,"cards.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     # [2026-06-27] events.json은 이제 collector.py가 platform_events에서 생성(네이버 포함)한다.
