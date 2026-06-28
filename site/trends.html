@@ -425,12 +425,15 @@ fetch('history/index.json').then(function(r){return r.json();}).then(function(ix
 }).catch(function(){noChart('추이 데이터를 불러오지 못했어요.');});
 function mlabel(m){return m.replace('2026-','').replace(/^0/,'')+'월';}
 function initIss(){var set={};TMONTHS.forEach(function(m){Object.keys((SNAP[m]||{}).issuers||{}).forEach(function(k){set[k]=1;});});
-  var arr=Object.keys(set).sort();var sel=document.getElementById('selIss');sel.innerHTML=arr.map(function(k){return '<option>'+tesc(k)+'</option>';}).join('');sel.onchange=drawIss;}
+  function cnt(k){return TMONTHS.filter(function(m){return (SNAP[m]||{}).issuers&&(SNAP[m].issuers[k]);}).length;}   // 데이터 보유 월수
+  var arr=Object.keys(set).sort(function(a,b){return cnt(b)-cnt(a)||a.localeCompare(b,'ko');});                       // 데이터 많은 카드사 우선(기본 선택)
+  var sel=document.getElementById('selIss');sel.innerHTML=arr.map(function(k){return '<option>'+tesc(k)+'</option>';}).join('');sel.onchange=drawIss;}
 function drawIss(){var iss=document.getElementById('selIss').value;
   var ds=TPORD.map(function(pk){return {label:TPN[pk],data:TMONTHS.map(function(m){var v=(((SNAP[m]||{}).issuers||{})[iss]||{})[pk];return v?wan(v):null;}),borderColor:TPC[pk],backgroundColor:TPC[pk],spanGaps:false,tension:.3,borderWidth:2,pointRadius:4,pointHoverRadius:6};}).filter(function(d){return d.data.some(function(v){return v!=null;});});
   chIss=mkChart('chIss',chIss,ds);}
-function initProd(){var set={};TMONTHS.forEach(function(m){((SNAP[m]||{}).cards||[]).forEach(function(c){set[c.name]=1;});});
-  var arr=Object.keys(set).sort();var sel=document.getElementById('selProd');sel.innerHTML=arr.map(function(k){return '<option>'+tesc(k)+'</option>';}).join('');sel.onchange=drawProd;}
+function initProd(){var set={},mc={};TMONTHS.forEach(function(m){((SNAP[m]||{}).cards||[]).forEach(function(c){set[c.name]=1;mc[c.name]=(mc[c.name]||0)+1;});});
+  var arr=Object.keys(set).sort(function(a,b){return (mc[b]-mc[a])||a.localeCompare(b,'ko');});   // 데이터 많은 상품 우선
+  var sel=document.getElementById('selProd');sel.innerHTML=arr.map(function(k){return '<option>'+tesc(k)+'</option>';}).join('');sel.onchange=drawProd;}
 function drawProd(){var nm=document.getElementById('selProd').value;
   var ds=TPORD.map(function(pk){return {label:TPN[pk],data:TMONTHS.map(function(m){var c=((SNAP[m]||{}).cards||[]).filter(function(x){return x.name===nm;})[0];var v=c&&c.platforms?c.platforms[pk]:null;return v?wan(v):null;}),borderColor:TPC[pk],backgroundColor:TPC[pk],spanGaps:false,tension:.3,borderWidth:2,pointRadius:4,pointHoverRadius:6};}).filter(function(d){return d.data.some(function(v){return v!=null;});});
   chProd=mkChart('chProd',chProd,ds);}
