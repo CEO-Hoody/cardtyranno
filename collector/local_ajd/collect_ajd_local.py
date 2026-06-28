@@ -70,12 +70,14 @@ def fmt_won(w):
     m = w / 10000
     return str(int(m)) if m == int(m) else ("%.1f" % m)
 
+EVENTS_OUT = os.path.join(os.path.dirname(BASE), "scrape", "ajungdang_events.json")  # build_data 입력(스냅샷 신선화)
+
 def main():
     uni = our_universe()
     print(f"우리 카드 유니버스 {len(uni)}개")
     ids = discover_event_ids(get(LANDING))
     print(f"이벤트 {len(ids)}개 발견: {ids}")
-    cards = {}
+    cards = {}; ev_issuer = {}; fuel = []
     for eid in ids:
         try:
             issuer, won, clist = parse_event(get(DETAIL % eid), uni)
@@ -84,14 +86,29 @@ def main():
         if not won or not issuer:
             print(f"  - event {eid}: 발급사/금액 미검출 → 스킵"); continue
         wtxt = f"최대 {fmt_won(won)}만원 (아정당 {issuer} 발급 이벤트)"
+        atxt = f"최대 {fmt_won(won)}만원"
+        if won > ev_issuer.get(issuer, 0): ev_issuer[issuer] = won          # 발급사별 최대(issuer_cashback)
         for nm in clist:
-            # 더 큰 금액 우선(같은 카드가 여러 이벤트에 걸칠 때)
             if nm not in cards or won > cards[nm]["reward_won"]:
                 cards[nm] = {"ajd_id": eid, "reward_won": won, "reward_text": wtxt, "url": DETAIL % eid}
+            fuel.append({"name": nm, "issuer": issuer, "amount": atxt})       # 카드별(fuel_cards→카드 events)
         print(f"  ✓ {issuer:<10} 최대 {fmt_won(won)}만원  → 매칭 {len(clist)}")
     json.dump({"as_of": datetime.date.today().strftime("%Y-%m"), "cards": cards},
               open(SEED, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"\n저장: {SEED}  (매칭 {len(cards)}건)")
+
+    # build_data 입력 ajungdang_events.json 신선화 (issuer_cashback + fuel_cards)
+    os.makedirs(os.path.dirname(EVENTS_OUT), exist_ok=True)
+    seen = set(); fuel_u = []
+    for f in fuel:                                                            # 카드 중복 제거(최대금액 우선은 위에서 cards에 반영)
+        if f["name"] not in seen: seen.add(f["name"]); fuel_u.append(f)
+    json.dump({"platform": "ajungdang", "captured": datetime.date.today().isoformat(),
+               "note": "collect_ajd_local v2 자동생성(거주지 렌더+유니버스 매칭).",
+               "issuer_cashback": [{"issuer": i, "amount": f"최대 {fmt_won(w)}만원"} for i, w in
+                                   sorted(ev_issuer.items(), key=lambda x: -x[1])],
+               "fuel_cards": fuel_u, "recommended": []},
+              open(EVENTS_OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"저장: {EVENTS_OUT}  (발급사 {len(ev_issuer)} · 카드 {len(fuel_u)})")
 
     if "--push" in sys.argv:
         try:
