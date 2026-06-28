@@ -1,0 +1,24 @@
+name = "cardtyranno-community"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# ── D1 바인딩 ──────────────────────────────────────────────
+# database_id 는 `wrangler d1 create cardtyranno_community` 실행 후 출력되는 값으로 교체하세요.
+[[d1_databases]]
+binding = "DB"
+database_name = "cardtyranno_community"
+database_id = "PUT-YOUR-D1-DATABASE-ID-HERE"
+
+# ── 환경변수(선택) ─────────────────────────────────────────
+# SALT: 비번/IP 해시용 솔트(원하는 임의 문자열로 교체 권장)
+# ALLOW_ORIGIN: CORS 허용 오리진. 운영 시 "https://cardtyranno.com" 로 제한 권장(기본 *)
+[vars]
+SALT = "change-this-to-a-random-secret"
+ALLOW_ORIGIN = "*"
+
+# ── (선택) 커스텀 도메인 라우트 ─────────────────────────────
+# cardtyranno.com/api/community/* 로 붙이려면 아래 routes 사용(Workers는 Pages와 동일 도메인 라우팅).
+# 기본은 <name>.<your-subdomain>.workers.dev 로 접근합니다.
+# routes = [
+#   { pattern = "cardtyranno.com/api/community/*", zone_name = "cardtyranno.com" }
+# ]

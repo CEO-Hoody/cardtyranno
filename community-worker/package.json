@@ -1,0 +1,15 @@
+{
+  "name": "cardtyranno-community",
+  "version": "1.0.0",
+  "private": true,
+  "description": "카드티라노 커뮤니티 API (Cloudflare Workers + D1)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute cardtyranno_community --file=./schema.sql",
+    "db:init:local": "wrangler d1 execute cardtyranno_community --local --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}
