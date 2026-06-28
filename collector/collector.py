@@ -32,7 +32,8 @@ from brachio import parse_cardgorilla                        # 카드고릴라
 from apato import parse_banksalad                            # 뱅크샐러드
 from diplo import parse_toss                                 # 토스
 from bronto import parse_ajd_rsc                             # 아정당
-from mamenchi import parse_naver                             # 네이버페이
+from mamenchi import parse_naver
+from stego import parse_meta_from_text, parse_meta_from_json  # 메타(연회비·혜택·전월실적)                             # 네이버페이
 
 # ---------- 라이브 수집(Actions용; requests 필요) ----------
 def fetch(url, headers=None, timeout=20):
@@ -51,11 +52,26 @@ def collect_platform(plat, info):
     pid = info["id"]
     try:
         if plat=="cardgorilla":
-            return parse_cardgorilla(fetch(f"https://api.card-gorilla.com/v1/cards/{pid}").json(), pid)
+            _cg_j=fetch(f"https://api.card-gorilla.com/v1/cards/{pid}").json()
+            try:
+                _m=parse_meta_from_json(_cg_j, json.dumps(_cg_j, ensure_ascii=False))
+                if _m: CARD_META[("cardgorilla",str(pid))]=_m
+            except: pass
+            return parse_cardgorilla(_cg_j, pid)
         if plat=="banksalad":
-            return parse_banksalad(fetch(f"https://www.banksalad.com/product/cards/{pid}").text, pid)
+            _bs_h=fetch(f"https://www.banksalad.com/product/cards/{pid}").text
+            try:
+                _m=parse_meta_from_text(_bs_h)
+                if _m: CARD_META[("banksalad",str(pid))]=_m
+            except: pass
+            return parse_banksalad(_bs_h, pid)
         if plat=="toss":
-            return parse_toss(fetch(f"https://card-lounge.toss.im/card/{pid}").text, pid)
+            _ts_h=fetch(f"https://card-lounge.toss.im/card/{pid}").text
+            try:
+                _m=parse_meta_from_text(_ts_h)
+                if _m: CARD_META[("toss",str(pid))]=_m
+            except: pass
+            return parse_toss(_ts_h, pid)
         if plat=="naver":
             co=info.get("company","CCNH"); iss=info.get("issuer",co)
             promo=info.get("promotionId"); prod=info.get("productId") or pid
@@ -289,7 +305,9 @@ def _cg_catalog():
 
 CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
 CG_IMG={}      # cardgorilla_id → 카드 플레이트 이미지 URL(상품 메타 매핑)
-BREAKDOWN={}   # (카드명, 플랫폼) → {"main":원, "bonus":원}  거주지 수집 이벤트상세 분해값(메인/부가 override)
+BREAKDOWN={}   # (카드명, 플랫폼) →
+CARD_META={}    # (platform, pid) → {annual_fee, benefits, spending_req} 메타정보
+# (카드명, 플랫폼) → {"main":원, "bonus":원}  거주지 수집 이벤트상세 분해값(메인/부가 override)
 
 def discover_products(limit=400):
     """카드고릴라 events?type=CBK(현재 진행 캐시백 이벤트) → 매핑 카드 자동 발굴.
@@ -477,6 +495,24 @@ def scrape_toss_fees():
     else:
         print("toss fees: 수집 0건 — 기존 파일 유지")
 
+def export_card_meta(products):
+    """수집된 카드 메타정보를 scrape/card_meta.json으로 저장."""
+    SCR=os.path.join(os.path.dirname(BASE),"scrape"); os.makedirs(SCR,exist_ok=True)
+    by_name={}
+    for p in products:
+        nk=_nk(p["name"]); entry={"name":p["name"],"issuer":p.get("issuer","")}
+        for plat,info in p.get("platforms",{}).items():
+            pid=str(info.get("id",""))
+            m=CARD_META.get((plat,pid))
+            if m:
+                for k in ("annual_fee","benefits","spending_req"):
+                    if m.get(k) and not entry.get(k): entry[k]=m[k]
+        if any(entry.get(k) for k in ("annual_fee","benefits","spending_req")):
+            by_name[nk]=entry
+    json.dump({"_updated":datetime.date.today().isoformat(),"cards":by_name},
+              open(os.path.join(SCR,"card_meta.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    print(f"card meta → scrape/card_meta.json ({len(by_name)} cards)")
+
 if __name__=="__main__":
     today=datetime.date.today().isoformat()
     try: scrape_toss_fees()
@@ -625,3 +661,5 @@ if __name__=="__main__":
     if cg_inj: print(f"카드고릴라 이벤트 라벨 주입 {cg_inj}건")
     print(f"총 상품 {len(products)}개 수집 시작")
     run(products, today, injected=injected or None)
+    try: export_card_meta(products)
+    except Exception as e: print("card meta export err", e)
