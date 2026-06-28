@@ -13,7 +13,7 @@ export default {
     const url = new URL(request.url);
     const { pathname } = url;
     const method = request.method;
-    const origin = env.ALLOW_ORIGIN || "*";
+    const origin = resolveOrigin(request, env);
 
     // CORS preflight
     if (method === "OPTIONS") return cors(new Response(null, { status: 204 }), origin);
@@ -200,12 +200,23 @@ function json(obj, status) {
     headers: { "content-type": "application/json; charset=utf-8" },
   });
 }
+// ALLOW_ORIGIN 은 콤마구분 허용목록("*" 가능). 요청 Origin 이 목록에 있으면 그 값을 그대로 반환
+// (ACAO 헤더는 단일 오리진만 echo 가능 → apex/www 동시 허용하려면 요청별 매칭 필요).
+function resolveOrigin(request, env) {
+  const conf = (env.ALLOW_ORIGIN || "*").trim();
+  if (conf === "*") return "*";
+  const allow = conf.split(",").map((s) => s.trim()).filter(Boolean);
+  const reqOrigin = request.headers.get("Origin");
+  if (reqOrigin && allow.includes(reqOrigin)) return reqOrigin;
+  return allow[0] || "*";
+}
 function cors(res, origin) {
   const h = new Headers(res.headers);
   h.set("Access-Control-Allow-Origin", origin || "*");
   h.set("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
   h.set("Access-Control-Allow-Headers", "content-type");
   h.set("Access-Control-Max-Age", "86400");
+  h.set("Vary", "Origin");
   return new Response(res.body, { status: res.status, headers: h });
 }
 async function safeJson(request) {

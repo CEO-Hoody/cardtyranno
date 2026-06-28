@@ -13,7 +13,7 @@ database_id = "4f606a9f-e25b-4ae6-a4df-559fc49353b6"
 # SALT: 비번/IP 해시용 솔트 → 평문 노출 방지를 위해 Cloudflare Secret으로 관리(`wrangler secret put SALT`).
 # ALLOW_ORIGIN: CORS 허용 오리진. 운영 시 "https://cardtyranno.com" 로 제한 권장(기본 *)
 [vars]
-ALLOW_ORIGIN = "https://cardtyranno.com"
+ALLOW_ORIGIN = "https://cardtyranno.com,https://www.cardtyranno.com"
 
 # ── (선택) 커스텀 도메인 라우트 ─────────────────────────────
 # cardtyranno.com/api/community/* 로 붙이려면 아래 routes 사용(Workers는 Pages와 동일 도메인 라우팅).
