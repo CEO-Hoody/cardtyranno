@@ -32,8 +32,8 @@
    "issuer": "삼성카드",
    "ajungdang": "최대 61.1만원",
    "cardgorilla": "최대 117만원",
-   "toss": "-",
-   "kakaopay": "-"
+   "toss": "최대 45만5천원",
+   "kakaopay": "최대 44만원"
   },
   {
    "issuer": "현대카드",
@@ -54,35 +54,35 @@
    "ajungdang": "최대 85만원",
    "cardgorilla": "최대 86만원",
    "toss": "최대 81만원",
-   "kakaopay": "-"
+   "kakaopay": "최대 85만원"
   },
   {
    "issuer": "롯데카드",
    "ajungdang": "최대 66만원",
    "cardgorilla": "최대 67만원",
    "toss": "최대 48만원",
-   "kakaopay": "-"
+   "kakaopay": "최대 66만원"
   },
   {
    "issuer": "우리카드",
    "ajungdang": "최대 77만원",
    "cardgorilla": "최대 78만원",
    "toss": "-",
-   "kakaopay": "-"
+   "kakaopay": "최대 78만원"
   },
   {
    "issuer": "하나카드",
    "ajungdang": "-",
    "cardgorilla": "최대 57만원",
-   "toss": "-",
-   "kakaopay": "-"
+   "toss": "최대 57만원",
+   "kakaopay": "최대 64만7천원"
   },
   {
    "issuer": "NH농협카드",
    "ajungdang": "최대 20.5만원",
    "cardgorilla": "최대 17.5만원",
    "toss": "-",
-   "kakaopay": "-"
+   "kakaopay": "최대 19만5천원"
   }
  ]
 }
