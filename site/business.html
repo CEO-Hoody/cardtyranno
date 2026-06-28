@@ -457,6 +457,13 @@ function ctPushEnable(cb){cb=cb||function(){};
  }).catch(function(){cb(false,'알림 권한 요청에 실패했어요.');});
 }
 function ctPushDisable(){try{localStorage.setItem('ct_push','0');}catch(e){}_ctMsg({type:'disable'});}
+function ctPushTest(cb){cb=cb||function(){};
+ if(!ctPushSupported()){cb(false,'이 브라우저는 알림을 지원하지 않아요.');return;}
+ Notification.requestPermission().then(function(p){
+  if(p!=='granted'){cb(false,'알림 권한을 허용해야 테스트할 수 있어요.');return;}
+  ctRegSW().then(function(){_ctMsg({type:'test'});cb(true,'');}).catch(function(){cb(false,'알림 등록에 실패했어요.');});
+ }).catch(function(){cb(false,'알림 권한 요청에 실패했어요.');});
+}
 function ctPushBoot(){if(!ctPushOn()||!('serviceWorker' in navigator))return;
  ctRegSW().then(function(){ctFavList(function(list){_ctMsg({type:'sync',favList:list});_ctMsg({type:'check'});});}).catch(function(){});}
 if(typeof window!=='undefined'){window.addEventListener('load',function(){setTimeout(ctPushBoot,1500);});}

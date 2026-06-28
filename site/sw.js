@@ -37,6 +37,7 @@ self.addEventListener('install',function(e){self.skipWaiting();});
 self.addEventListener('activate',function(e){e.waitUntil(self.clients.claim());});
 self.addEventListener('message',function(e){var m=e.data||{};
  if(m.type==='enable'){e.waitUntil(Promise.all([kvSet('enabled',1),kvSet('favList',m.favList||[])]).then(function(){return runCheck('all');}));}
+ else if(m.type==='test'){e.waitUntil(self.registration.showNotification('🦖 카드티라노 알림 테스트',{body:'관심카드 알림이 정상 동작합니다! 새 이벤트가 등록되면 이렇게 알려드릴게요.',icon:'/og-image.png',badge:'/og-image.png',tag:'ct-test',renotify:true,data:{url:'/favorites.html'}}));}
  else if(m.type==='disable'){e.waitUntil(kvSet('enabled',0));}
  else if(m.type==='sync'){e.waitUntil(kvSet('favList',m.favList||[]).then(function(){return runCheck('new');}));}
  else if(m.type==='check'){e.waitUntil(runCheck('check'));}
