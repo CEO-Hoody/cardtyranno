@@ -169,7 +169,7 @@ table.cmp td .st{font-size:10px;display:block} .doth{display:inline-flex;align-i
 .ev .ev-th img{width:100%;height:100%;object-fit:cover;display:block}
 .ev .ei i{vertical-align:middle}
 .ev .eb{flex:1;min-width:0}.ev .ec{font-size:14px;font-weight:800}.ev .ei{font-size:11.5px;color:var(--sub);margin-top:3px}
-.ev .ebn{font-size:14.5px;font-weight:900;color:var(--accent);text-align:right;max-width:42%}.ev .chev{color:#46464d;font-size:19px}
+.ev .ebn{font-size:14.5px;font-weight:900;color:var(--accent);text-align:right;max-width:42%}.ev .chev{color:#46464d;font-size:19px}.ev .ev-go{flex:0 0 auto;font-size:12.5px;font-weight:700;color:#000;white-space:nowrap}
 .hero-detail{padding:26px 16px 20px;text-align:center;border-bottom:1px solid var(--line)}
 .hero-detail .th{width:70px;height:70px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 12px;overflow:hidden}
 .hero-detail .th img{width:74%;height:74%;object-fit:contain}
@@ -448,7 +448,7 @@ function render(){var items=(cur==="전체"?EV:EV.filter(x=>x.issuer===cur)).sli
  var L=document.getElementById('list');if(!items.length){L.innerHTML='<div class="empty">조건에 맞는 이벤트가 없어요.</div>';return;}
  L.innerHTML=items.map(function(x){var tgt=/^https?:/.test(x.url)?' target="_blank" rel="noopener"':'';
    var dd='';if(x.pe){var d=Math.ceil((new Date(x.pe).getTime()-Date.now())/86400000);if(!isNaN(d)&&d>=0&&d<=60){dd=' <span class="dday'+(d<=7?' soon':'')+'">'+(d<=7?'마감임박 D-'+d:'D-'+d)+'</span>';}}
-   return '<a class="ev" href="events.html?n='+encodeURIComponent(x.card)+(x.pk?'&p='+x.pk:'')+'"><div class="ev-th">'+imgTag(x.img)+'</div><div class="eb"><div class="ec">'+x.card+'</div><div class="ei">'+_pdk(x.pk,true)+' · '+x.issuer+(x.period?' · '+x.period:'')+dd+'</div></div><div class="ebn">'+x.benefit+'</div><div class="chev">›</div></a>';}).join("");}
+   return '<a class="ev" href="events.html?n='+encodeURIComponent(x.card)+(x.pk?'&p='+x.pk:'')+'"><div class="ev-th">'+imgTag(x.img)+'</div><div class="eb"><div class="ec">'+x.card+'</div><div class="ei">'+_pdk(x.pk,true)+' · '+x.issuer+(x.period?' · '+x.period:'')+dd+'</div></div><div class="ebn">'+x.benefit+'</div><span class="ev-go">자세히 ›</span></a>';}).join("");}
 function tabs(){var T=["전체"].concat(ORD);var t=document.getElementById('tabs');t.innerHTML=T.map(function(o){var c=o==="전체"?EV.length:EV.filter(x=>x.issuer===o).length;return '<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'<span class="cnt">'+c+'</span></div>';}).join("");
  t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
 // 발급이벤트 / 플랫폼비교는 별도 화면(서브탭 제거). ?v=cmp로 진입 화면 결정.
