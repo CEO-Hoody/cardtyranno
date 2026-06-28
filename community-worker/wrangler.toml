@@ -7,14 +7,13 @@ compatibility_date = "2024-11-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "cardtyranno_community"
-database_id = "PUT-YOUR-D1-DATABASE-ID-HERE"
+database_id = "4f606a9f-e25b-4ae6-a4df-559fc49353b6"
 
 # ── 환경변수(선택) ─────────────────────────────────────────
-# SALT: 비번/IP 해시용 솔트(원하는 임의 문자열로 교체 권장)
+# SALT: 비번/IP 해시용 솔트 → 평문 노출 방지를 위해 Cloudflare Secret으로 관리(`wrangler secret put SALT`).
 # ALLOW_ORIGIN: CORS 허용 오리진. 운영 시 "https://cardtyranno.com" 로 제한 권장(기본 *)
 [vars]
-SALT = "change-this-to-a-random-secret"
-ALLOW_ORIGIN = "*"
+ALLOW_ORIGIN = "https://cardtyranno.com"
 
 # ── (선택) 커스텀 도메인 라우트 ─────────────────────────────
 # cardtyranno.com/api/community/* 로 붙이려면 아래 routes 사용(Workers는 Pages와 동일 도메인 라우팅).
