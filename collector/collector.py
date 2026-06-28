@@ -512,6 +512,47 @@ def _reword_benefit(bene):
     if cat:        return f"{cat} 특화 카드"
     return ""
 
+# 주요혜택 = "얼마 이상 쓰면 얼마" 결제 캐시백(첫 혜택). 부가혜택 = 해외/생활요금/마케팅 등 그 이후.
+def _reword_main(s):
+    """혜택1(주요) → 'N만원 쓰면 M만원 캐시백'(사실 유지·자체 표현)."""
+    s=_html.unescape(s or ""); s=re.sub(r"\s+"," ",s).strip()
+    if not s: return ""
+    m=re.search(r"([\d.,]+\s*만?원)\s*이상[^0-9]*?([\d.,]+\s*만?원)",s)
+    if m: return f"{m.group(1).replace(' ','')} 쓰면 {m.group(2).replace(' ','')} 캐시백"
+    amts=re.findall(r"[\d.,]+\s*만?원",s)
+    if len(amts)>=2: return f"{amts[0].replace(' ','')} 쓰면 {amts[1].replace(' ','')} 캐시백"
+    if amts: return f"{amts[0].replace(' ','')} 캐시백"
+    return ""
+
+_SUB_CATS=[(r"해외","해외결제"),(r"생활요금|공과금|관리비|통신요금|자동납부|아파트","생활요금 납부"),
+ (r"마케팅|동의","마케팅 동의"),(r"마이샵|쿠폰","쿠폰"),(r"주유","주유"),(r"적립|포인트","적립"),
+ (r"대중교통|교통|지하철|버스","교통"),(r"카페|커피","카페"),(r"구독|멤버십","구독")]
+
+def _reword_sub(s):
+    """부가혜택 한 줄 → 짧은 자체 표현(카테고리+금액)."""
+    s=_html.unescape(s or ""); s=re.sub(r"\s+"," ",s).strip()
+    if not s or len(s)>70: return ""
+    amt=re.search(r"[\d.,]+\s*(?:만?원|%)",s)
+    cat=None
+    for pat,label in _SUB_CATS:
+        if re.search(pat,s): cat=label; break
+    if cat and amt: return f"{cat} {amt.group(0).replace(' ','')}"
+    if cat: return cat
+    if amt: return f"추가 {amt.group(0).replace(' ','')}"
+    return ""
+
+def _cg_benefits(detail):
+    """카드고릴라 event.detail의 '혜택1/혜택2/…' 섹션 → (주요, [부가...]) 재작성본."""
+    det=_html.unescape(detail or "")
+    rows=re.findall(r'<p class="title">\s*혜택\s*\d+\s*</p>\s*<p class="title-sub">([^<]{2,90})</p>',det)
+    if not rows: return "", []
+    main=_reword_main(rows[0])
+    subs=[]
+    for r in rows[1:]:
+        rb=_reword_sub(r)
+        if rb and rb not in subs: subs.append(rb)
+    return main, subs
+
 def scrape_cardgorilla_meta():
     """카드고릴라 카드 상세에서 연회비·전월실적·주요혜택(재작성)을 수집해 scrape/cg_meta.json 작성."""
     SCR=os.path.join(os.path.dirname(BASE),"scrape"); os.makedirs(SCR,exist_ok=True)
@@ -519,7 +560,7 @@ def scrape_cardgorilla_meta():
     for p in _load_seed():
         cid=(p.get("platforms",{}).get("cardgorilla") or {}).get("id")
         if cid and cid not in ids: ids.append(cid)
-    byId={}; feeN={}; pmN={}; benN={}
+    byId={}; feeN={}; pmN={}; benN={}; mainN={}; subN={}
     ok=0
     for cid in ids:
         try: j=fetch(f"https://api.card-gorilla.com/v1/cards/{cid}", timeout=20).json()
@@ -528,9 +569,13 @@ def scrape_cardgorilla_meta():
         ok+=1
         nm=j.get("name",""); nk=_nk(nm)
         fee=_cg_fee(j.get("annual_fee_basic")); pm=int(j.get("pre_month_money") or 0)
-        byId[str(cid)]={"name":nm,"fee":fee,"premonth":pm}
+        # 주요/부가 혜택 분리 (이벤트 상세 혜택1/2/3 구조)
+        _main,_subs=_cg_benefits((j.get("event") or {}).get("detail"))
+        byId[str(cid)]={"name":nm,"fee":fee,"premonth":pm,"main":_main,"subs":_subs}
         if fee: feeN.setdefault(nk,fee)
         if pm:  pmN.setdefault(nk,pm)
+        if _main: mainN.setdefault(nk,_main)
+        if _subs: subN.setdefault(nk,_subs)
         # 본문 카드 블록에서 카드별 한줄 혜택(name↔bene) 추출 → 자체 표현으로 재작성해 적재
         blob=json.dumps(j,ensure_ascii=False)
         for mm in re.finditer(r'<b class="name">([^<]{1,40})</b>\s*<i class="bene">([^<]{1,60})</i>',blob):
@@ -540,9 +585,10 @@ def scrape_cardgorilla_meta():
             rb=_reword_benefit(mm.group(1))
             if rb: benN.setdefault(_nk(mm.group(2)),rb)
     if byId:
-        json.dump({"_updated":datetime.date.today().isoformat(),"byId":byId,"feeByName":feeN,"premonthByName":pmN,"benefitByName":benN},
+        json.dump({"_updated":datetime.date.today().isoformat(),"byId":byId,"feeByName":feeN,"premonthByName":pmN,
+                   "benefitByName":benN,"mainByName":mainN,"subByName":subN},
                   open(os.path.join(SCR,"cg_meta.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
-        print(f"cg meta → scrape/cg_meta.json (cards {ok}, fee {len(feeN)}, premonth {len(pmN)}, benefit {len(benN)})")
+        print(f"cg meta → scrape/cg_meta.json (cards {ok}, fee {len(feeN)}, premonth {len(pmN)}, benefit {len(benN)}, main {len(mainN)}, sub {len(subN)})")
     else:
         print("cg meta: 수집 0건 — 기존 파일 유지")
 
