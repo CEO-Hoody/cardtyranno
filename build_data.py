@@ -488,13 +488,25 @@ _pl=_ld("scrape/plat_links.json") or {}
 _PLATMAP={_nk(k):v for k,v in _pl.items() if not k.startswith("_")}
 
 # 독자 인기순위 (순위/차트를 제공하는 모든 플랫폼 동일가중 평균: 토스·카드고릴라·뱅크샐러드)
+# 키 정규화(_canon): 플랫폼 간 같은 카드를 합산해야 n(공통 플랫폼 수)이 정확해진다.
+#   토스는 'X카드'에 '토스 ' 접두어가 붙어 고릴라/뱅샐과 다른 키가 됐음 → 접두어 제거 + CARDS 정식키로 흡수.
+#   (이게 안 되면 같은 카드가 각 플랫폼에서 n=1로 흩어져 _universal(2곳↑)에 안 걸림 = 차트가 십수 개로 줄어듦.)
+_RKALIAS={}
+for _ck in _cardidx:                       # CARDS 키 빠른 부분일치용
+    _RKALIAS.setdefault(_ck, _ck)
+def _canon(nm):
+    k=_nk(_re.sub(r"^\s*토스\s+","",nm or ""))
+    if k in _cardidx: return k
+    for _ck in _cardidx:                   # 느슨한 부분일치(긴 이름만, 양방향)
+        if len(_ck)>=7 and (_ck in k or k in _ck): return _ck
+    return k
 _toss=_ld("scrape/ranking_toss.json"); _rk={}
 if _toss:
-    for _it in _toss["items"]: _rk.setdefault(_nk(_it["name"]),{"name":_it["name"]})["t"]=_it["rank"]
+    for _it in _toss["items"]: _rk.setdefault(_canon(_it["name"]),{"name":_it["name"]})["t"]=_it["rank"]
 if _cg:
-    for _it in _cg["items"]: _rk.setdefault(_nk(_it["name"]),{"name":_it["name"]})["c"]=_it["rank"]
+    for _it in _cg["items"]: _rk.setdefault(_canon(_it["name"]),{"name":_it["name"]})["c"]=_it["rank"]
 if _bs:    # 뱅크샐러드 차트: items 순서를 순위로 사용
-    for _i2,_it in enumerate(_bs.get("items",[]),1): _rk.setdefault(_nk(_it["name"]),{"name":_it["name"]})["b"]=_i2
+    for _i2,_it in enumerate(_bs.get("items",[]),1): _rk.setdefault(_canon(_it["name"]),{"name":_it["name"]})["b"]=_i2
 _our=[]
 for _k,_v in _rk.items():
     _rs=[r for r in (_v.get("t"),_v.get("c"),_v.get("b")) if r]; _avg=sum(_rs)/len(_rs)

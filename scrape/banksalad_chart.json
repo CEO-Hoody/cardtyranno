@@ -1,18 +1,515 @@
 {
- "platform": "뱅크샐러드",
- "scope": "credit",
- "chart": "할인·적립 혜택 TOP",
- "captured": "2026-06-21",
- "header": {"max_benefit":"최대 84만원","event_card_count":63},
- "note": "뱅크샐러드 신용카드 혜택순 차트. 사실 데이터(카드명·카드사·월 최대 혜택·연회비·전월실적·캐시백 이벤트)만 수집. 소개 문구 미수집.",
+ "platform": "banksalad",
+ "scope": "cashback_chart",
+ "captured": "2026-06-29",
+ "header": {
+  "event_card_count": 63
+ },
+ "note": "collector.scrape_banksalad_meta 자동생성(API)",
  "items": [
-  {"name":"신한카드 B.Big(삑)","issuer":"신한카드","monthly_benefit":"48,000원","annual_fee":"13,000원","prev_spend":"30만원","event":""},
-  {"name":"신한카드 Deep Oil","issuer":"신한카드","monthly_benefit":"42,500원","annual_fee":"13,000원","prev_spend":"30만원","event":"84만원 캐시백"},
-  {"name":"IBK기업은행 K-패스(신용)","issuer":"IBK기업은행","monthly_benefit":"37,800원","annual_fee":"2,000원","prev_spend":"20만원","event":"15만 5,000원 캐시백"},
-  {"name":"IBK기업은행 IBK hi 카드","issuer":"IBK기업은행","monthly_benefit":"37,800원","annual_fee":"2,000원","prev_spend":"20만원","event":""},
-  {"name":"롯데카드 LOCA 365","issuer":"롯데카드","monthly_benefit":"36,500원","annual_fee":"20,000원","prev_spend":"50만원","event":"84만원 캐시백"},
-  {"name":"우리카드 D4카드의정석Ⅱ","issuer":"우리카드","monthly_benefit":"36,300원","annual_fee":"12,000원","prev_spend":"30만원","event":"연회비 100% 캐시백"},
-  {"name":"신한카드 처음(ANNIVERSE)","issuer":"신한카드","monthly_benefit":"36,000원","annual_fee":"18,000원","prev_spend":"30만원","event":""},
-  {"name":"다이소 삼성카드","issuer":"삼성카드","monthly_benefit":"약 35,000원","annual_fee":"8,000원","prev_spend":"30만원","event":""}
+  {
+   "name": "LOCA LIKIT",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "LOCA 365",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "디지로카 London",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "디지로카 Paris",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "디지로카 Las Vegas",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "My WE:SH",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "KB국민 굿데이카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "KB국민 굿데이올림카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "KB YOU Prime 카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "KB YOU Wish 카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "ECO Plan",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "신한카드 Deep Oil",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "신한카드 B.Big(삑)",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "신한카드 Mr.Life",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "신한카드 Air One ",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "신한카드 Discount Plan+",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "Simple Plan+",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 84만원 캐시백"
+  },
+  {
+   "name": "신한카드 Point Plan+",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 83만원 캐시백"
+  },
+  {
+   "name": "신한카드 Deep On Platinum+",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 83만원 캐시백"
+  },
+  {
+   "name": "신한카드 Edu Plan+",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 83만원 캐시백"
+  },
+  {
+   "name": "신한카드 RPM+ Platinum#",
+   "issuer": "신한카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 83만원 캐시백"
+  },
+  {
+   "name": "LOCA LIKIT 2.0",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 82만원 캐시백"
+  },
+  {
+   "name": "LOCA LIKIT 1.5",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 82만원 캐시백"
+  },
+  {
+   "name": "디지로카 Link",
+   "issuer": "롯데카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 79만원 캐시백"
+  },
+  {
+   "name": "우리카드 7CORE",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 78만원 캐시백"
+  },
+  {
+   "name": "우리카드 MILE&POINT",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 78만원 캐시백"
+  },
+  {
+   "name": "the OPUS silver",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 78만원 캐시백"
+  },
+  {
+   "name": "카드의정석 SHOPPING+",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 75만원 캐시백"
+  },
+  {
+   "name": "카드의정석 EVERY POINT",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 75만원 캐시백"
+  },
+  {
+   "name": "카드의정석 EVERY DISCOUNT",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 75만원 캐시백"
+  },
+  {
+   "name": "카드의정석 TEN",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 75만원 캐시백"
+  },
+  {
+   "name": "카드의정석 I&U+",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 75만원 캐시백"
+  },
+  {
+   "name": "카드의정석2",
+   "issuer": "우리카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 75만원 캐시백"
+  },
+  {
+   "name": "대한항공카드 the First Edition2",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 75만원 캐시백"
+  },
+  {
+   "name": "대한항공카드 120",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 72만원 캐시백"
+  },
+  {
+   "name": "대한항공카드 300",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 72만원 캐시백"
+  },
+  {
+   "name": "대한항공카드 060",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 69만원 캐시백"
+  },
+  {
+   "name": "현대카드M",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 67.5만원 캐시백"
+  },
+  {
+   "name": "American Express® Gold Card Edition2",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 50만원 캐시백"
+  },
+  {
+   "name": "현대카드MY BUSINESS M F&B",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 45만원 캐시백"
+  },
+  {
+   "name": "현대카드MY BUSINESS M Retail",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 45만원 캐시백"
+  },
+  {
+   "name": "현대카드MY BUSINESS M E-seller",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 45만원 캐시백"
+  },
+  {
+   "name": "American Express® Green Card Edition2",
+   "issuer": "현대카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 25만원 캐시백"
+  },
+  {
+   "name": "삼성 iD SELECT ALL 카드",
+   "issuer": "삼성카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 23만원 캐시백"
+  },
+  {
+   "name": "삼성 iD SELECT ON 카드",
+   "issuer": "삼성카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 23만원 캐시백"
+  },
+  {
+   "name": "삼성카드 taptap O",
+   "issuer": "삼성카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 23만원 캐시백"
+  },
+  {
+   "name": "taptap DIGITAL",
+   "issuer": "삼성카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 23만원 캐시백"
+  },
+  {
+   "name": "taptap DRIVE",
+   "issuer": "삼성카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 23만원 캐시백"
+  },
+  {
+   "name": "올바른FLEX카드",
+   "issuer": "NH농협카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 19.5만원 캐시백"
+  },
+  {
+   "name": "zgm.play카드",
+   "issuer": "NH농협카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 19.5만원 캐시백"
+  },
+  {
+   "name": "zgm.streaming",
+   "issuer": "NH농협카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 19.5만원 캐시백"
+  },
+  {
+   "name": "IBK포인트3.8(신용)",
+   "issuer": "IBK기업은행",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 15.5만원 캐시백"
+  },
+  {
+   "name": "IBK포인트(신용)",
+   "issuer": "IBK기업은행",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 15.5만원 캐시백"
+  },
+  {
+   "name": "I-ALL",
+   "issuer": "IBK기업은행",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 15.5만원 캐시백"
+  },
+  {
+   "name": "K-패스(신용)",
+   "issuer": "IBK기업은행",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 15.5만원 캐시백"
+  },
+  {
+   "name": "NH농협 K-패스카드",
+   "issuer": "NH농협카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 6.5만원 캐시백"
+  },
+  {
+   "name": "zgm.the pay",
+   "issuer": "NH농협카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "최대 6.2만원 캐시백"
+  },
+  {
+   "name": "KB국민 Youth Club 체크카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "3만원 캐시백"
+  },
+  {
+   "name": "KB국민 노리2 체크카드(KB Pay)",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "3만원 캐시백"
+  },
+  {
+   "name": "KB국민 틴업 체크카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "3만원 캐시백"
+  },
+  {
+   "name": "KB국민 토심이 첵첵 체크카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "3만원 캐시백"
+  },
+  {
+   "name": "KB국민 트래블러스 체크카드",
+   "issuer": "KB국민카드",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "3만원 캐시백"
+  },
+  {
+   "name": "현대백화점카드",
+   "issuer": "현대백화점",
+   "monthly_benefit": "",
+   "annual_fee": "",
+   "prev_spend": "",
+   "event": "1만원 캐시백"
+  }
  ]
 }

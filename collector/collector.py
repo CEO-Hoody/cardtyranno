@@ -625,10 +625,11 @@ def scrape_banksalad_meta():
     def _ms(x):
         try: return datetime.datetime.utcfromtimestamp(int(x)/1000).date().isoformat()
         except Exception: return None
-    cards={}
+    cards={}; chart=[]; chart_seen=set()
     for p in j.get("promotions",[]):
         if not p.get("is_enabled"): continue
         cp=p.get("cashback_promotion") or {}
+        _iss=(p.get("organization") or {}).get("name","")
         won=int(cp.get("cashback_amount_krw_0f") or 0)
         total=_c(p.get("introductory_phrase"))
         tiers=[t for t in (_c(x) for x in re.findall(r'\[혜택\s*\d+\]\s*([^<]+)', p.get("promotion_description") or "")) if t]
@@ -642,6 +643,10 @@ def scrape_banksalad_meta():
             cards[nm]={"reward_won":won,"reward_text":total,"main":main,"subs":subs,
                        "main_won":mw,"bonus_won":bw,"id":c.get("product_guid",""),
                        "period_start":ps,"period_end":pe}
+            if nm not in chart_seen:           # build_data 순위(_universal) 입력: 뱅샐 이벤트 카드 목록
+                chart_seen.add(nm)
+                chart.append({"name":nm,"issuer":_iss,"monthly_benefit":"","annual_fee":"",
+                              "prev_spend":"","event":total})
     if not cards:
         print("뱅샐 meta: 수집 0건 — 기존 파일 유지"); return
     out={"_updated":datetime.date.today().isoformat(),
@@ -649,6 +654,12 @@ def scrape_banksalad_meta():
          "cards":cards}
     json.dump(out, open(os.path.join(BASE,"banksalad_seed.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"뱅샐 meta → banksalad_seed.json (cards {len(cards)}, main {sum(1 for c in cards.values() if c['main'])})")
+    # banksalad_chart.json 신선화(스냅샷 대체) — 순위 범용카드 판정에 필요(이전 8개→전체)
+    SCR2=os.path.join(os.path.dirname(BASE),"scrape"); os.makedirs(SCR2,exist_ok=True)
+    json.dump({"platform":"banksalad","scope":"cashback_chart","captured":datetime.date.today().isoformat(),
+               "header":{"event_card_count":len(chart)},"note":"collector.scrape_banksalad_meta 자동생성(API)","items":chart},
+              open(os.path.join(SCR2,"banksalad_chart.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"뱅샐 chart → scrape/banksalad_chart.json ({len(chart)} 카드)")
 
 if __name__=="__main__":
     today=datetime.date.today().isoformat()
