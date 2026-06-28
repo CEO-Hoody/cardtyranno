@@ -17,6 +17,8 @@ jobs:
       - name: install chromium (headless 폴백)
         run: python -m playwright install --with-deps chromium
       - run: python collector/collector.py
+      - name: rebuild site data (cards.json 연회비 병합)
+        run: python build_data.py || echo "build_data 실패 - 기존 데이터 유지"
       - name: commit & push
         run: |
           git config user.name  "cardtyranno-bot"
