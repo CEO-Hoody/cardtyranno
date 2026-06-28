@@ -134,6 +134,7 @@ section{padding:30px 0}
 .item{display:flex;align-items:center;gap:13px;padding:15px 4px;border-bottom:1px solid var(--line)}
 .item .th{flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;overflow:hidden}
 .item .th img{width:74%;height:74%;object-fit:contain;border-radius:5px}
+.thic{width:50%;height:50%;color:#000}.item .th .thic{width:46%;height:46%}
 .item .body{flex:1;min-width:0}.item .l1{display:flex;align-items:center;gap:6px;margin-bottom:3px}
 .item .store{font-size:13px;color:#6a6a72;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
 .item .tag{font-size:10px;font-weight:800;background:#fbf0df;color:#e8a33c;padding:2px 7px;border-radius:6px}.item .tag.off{background:#ececf0;color:#9a9aa2}
@@ -329,6 +330,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .evhero .evh-t b{color:#fff}
 .evhero .evh-cta{display:inline-block;margin-top:16px;background:#fff;color:#000;font-weight:800;font-size:15px;padding:13px 22px;border-radius:50px}
 .evhero::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%)}
+.evhero .evh-wm{position:absolute;right:-3%;bottom:-14%;width:42%;max-width:230px;color:#fff;opacity:.14;pointer-events:none}
+.evhero .evh-body{position:relative;z-index:1}
 @media(max-width:760px){
  .mtab{display:flex;position:fixed;left:0;right:0;bottom:0;height:60px;background:#fff;border-top:1px solid var(--line);z-index:60;box-shadow:0 -2px 14px rgba(0,0,0,.06)}
  .mtab a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--dim);font-size:10.5px;font-weight:700;text-decoration:none;min-height:44px}
@@ -366,8 +369,8 @@ function _isList(u){if(!u)return true;return /banksalad\.com\/cards\/event/.test
 var _CGG={'삼성카드':'1','신한카드':'2','KB국민카드':'3','롯데카드':'4','우리카드':'5','현대카드':'7','하나카드':'8','NH농협카드':'9','IBK기업은행':'10'};
 function _cgUrl(issuer,id){var g=_CGG[(issuer||'').trim()];return g?('https://www.card-gorilla.com/event/detail/'+g):(id?('https://www.card-gorilla.com/card/detail/'+id):'');}
 function _best(plat,raw,id){if(raw&&!_isList(raw))return raw;var d=_purl(plat,id);return (d&&!_isList(d))?d:'';}  // 그룹/상세 우선, 전체리스트는 배제
-function thumbOf(p){var m=[["마트","🛒","#fff3d6"],["하이마트","📺","#e9f0ff"],["편의|GS25|CU|세븐|이마트24","🏪","#e7f6ee"],["백화점","🏬","#f1ecff"],["면세","🛍️","#ffeef0"],["주유|칼텍스|에너지|OIL|오일","⛽","#e9f7f1"],["CGV|시네마|메가박스","🎬","#ececf3"],["스타벅스","☕","#eaf6ee"],["무신사|W컨셉|한섬|패션","👕","#fff0e6"],["알라딘|교보|도서","📚","#eaf2ff"],["홈쇼핑|CJ|GS샵|NS","📺","#fdeef0"],["야놀자|여행|네이버 패키지","✈️","#e8f3ff"],["쿠팡|11번가|G마켓|옥션|SSG|롯데온|올리브영","🛍️","#fff3d6"]];for(var i=0;i<m.length;i++){if(new RegExp(m[i][0]).test(p))return{e:m[i][1],bg:m[i][2]};}return{e:"",bg:"#eef1f5"};}
-function favico(dom,e,bg){return dom?'<img src="https://www.google.com/s2/favicons?domain='+dom+'&sz=128" alt="" onerror="this.parentNode.style.background=\''+bg+'\';this.parentNode.textContent=\''+e+'\'">':e;}
+function thumbOf(p){var m=[["마트|이마트24","ic-cart"],["하이마트|가전|전자","ic-grid"],["편의|GS25|CU|세븐","ic-cart"],["백화점","ic-bag"],["면세","ic-bag"],["주유|칼텍스|에너지|OIL|오일","ic-fuel"],["CGV|시네마|메가박스|영화","ic-film"],["스타벅스|카페|커피","ic-cup"],["무신사|W컨셉|한섬|패션|의류","ic-bag"],["알라딘|교보|도서|서점","ic-grid"],["홈쇼핑|CJ|GS샵|NS","ic-bag"],["야놀자|여행|항공|패키지","ic-plane"],["통신|SKT|KT|LG U|U\\+","ic-phone"],["쿠팡|11번가|G마켓|옥션|SSG|롯데온|올리브영|온라인","ic-bag"]];for(var i=0;i<m.length;i++){if(new RegExp(m[i][0]).test(p))return{e:m[i][1],bg:"#f7f7f5"};}return{e:"ic-grid",bg:"#f7f7f5"};}
+function favico(dom,e,bg){return '<svg class="thic" aria-hidden="true"><use href="#'+(e||'ic-grid')+'"/></svg>';}
 var DEFCARD="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 202'><rect width='320' height='202' rx='14' fill='#f1eef8'/><rect x='24' y='34' width='46' height='34' rx='6' fill='#dcd5ef'/><g opacity='0.14' transform='translate(150 64) scale(7)' fill='#2a2440'><path d='M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z'/><path fill-rule='evenodd' d='M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z'/></g><text x='24' y='176' font-family='ui-monospace,monospace' font-size='15' font-weight='700' fill='#2a2440'>CARD<tspan font-weight='400'>TYRANNO</tspan></text></svg>");
 function imgTag(src,cls){var c=cls?(' class="'+cls+'"'):'';if(!src)return '<img'+c+' src="'+DEFCARD+'" alt="">';return '<img'+c+' src="'+encodeURI(src)+'" loading="lazy" alt="" onerror="this.onerror=null;this.src=DEFCARD;this.classList.add(\'isdef\')">';}
 // 카드 플레이트 이미지 메타 맵: 카드고릴라 카탈로그(card_img)에서 정규화 카드명→이미지. 거주지 IP면 :8080이 card_img 제공. localStorage 24h 캐시.
