@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-27",
+ "updated": "2026-06-28",
  "month": "2026-06",
  "order": [
   "삼성카드",
@@ -362,15 +362,6 @@
   {
    "issuer": "우리카드",
    "card": "카드의정석 2",
-   "platform": "뱅크샐러드",
-   "benefit": "최대 78만원 캐시백",
-   "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD004426",
-   "won": 780000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 2",
    "platform": "카드고릴라",
    "benefit": "최대 78만원 캐시백",
    "period": "~06/30",
@@ -484,15 +475,6 @@
    "period": "",
    "url": "https://www.ajd.co.kr/card/event/detail/233",
    "won": 205000
-  },
-  {
-   "issuer": "NH농협카드",
-   "card": "올바른 FLEX 카드",
-   "platform": "뱅크샐러드",
-   "benefit": "최대 19.5만원 캐시백",
-   "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD000060",
-   "won": 195000
   },
   {
    "issuer": "NH농협카드",
@@ -726,15 +708,6 @@
    "benefit": "최대 75만원 캐시백",
    "period": "",
    "url": "https://www.ajd.co.kr/card/event/detail/261",
-   "won": 750000
-  },
-  {
-   "issuer": "현대카드",
-   "card": "대한항공카드 the First Edition2",
-   "platform": "뱅크샐러드",
-   "benefit": "최대 75만원 캐시백",
-   "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD004620",
    "won": 750000
   },
   {
@@ -1346,7 +1319,7 @@
    "platform": "뱅크샐러드",
    "benefit": "최대 84만원 캐시백",
    "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD000128",
+   "url": "",
    "won": 840000
   },
   {

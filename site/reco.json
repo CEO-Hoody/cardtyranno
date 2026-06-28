@@ -1,6 +1,6 @@
 {
  "month": "2026-06",
- "updated": "2026-06-27",
+ "updated": "2026-06-28",
  "count": 130,
  "cards": [
   {
@@ -56,11 +56,10 @@
    "periodEnd": "2026-06-30",
    "platforms": [
     "ajungdang",
-    "banksalad",
     "cardgorilla",
     "naver"
    ],
-   "platformCount": 4,
+   "platformCount": 3,
    "events": [
     {
      "platform": "cardgorilla",
@@ -77,14 +76,6 @@
      "period_end": null,
      "main_won": 750000,
      "bonus_won": 0
-    },
-    {
-     "platform": "banksalad",
-     "reward_won": 750000,
-     "reward_text": "최대 75만원 캐시백",
-     "period_end": null,
-     "main_won": 200000,
-     "bonus_won": 550000
     },
     {
      "platform": "naver",
@@ -142,10 +133,10 @@
     {
      "platform": "banksalad",
      "reward_won": 840000,
-     "reward_text": "최대 84만원 캐시백",
+     "reward_text": "최대84만원캐시백",
      "period_end": null,
-     "main_won": 210000,
-     "bonus_won": 630000
+     "main_won": 840000,
+     "bonus_won": 0
     },
     {
      "platform": "naver",
@@ -326,10 +317,10 @@
     {
      "platform": "banksalad",
      "reward_won": 840000,
-     "reward_text": "최대 84만원 캐시백",
+     "reward_text": "최대84만원캐시백",
      "period_end": null,
-     "main_won": 210000,
-     "bonus_won": 630000
+     "main_won": 840000,
+     "bonus_won": 0
     }
    ]
   },
@@ -363,7 +354,7 @@
    "issuer": "신한카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/13/card_img/28201/13card.png",
    "maxCashbackWon": 840000,
-   "maxCashbackText": "최대 84만원 캐시백",
+   "maxCashbackText": "최대84만원캐시백",
    "bestPlatform": "banksalad",
    "periodEnd": null,
    "platforms": [
@@ -378,10 +369,10 @@
     {
      "platform": "banksalad",
      "reward_won": 840000,
-     "reward_text": "최대 84만원 캐시백",
+     "reward_text": "최대84만원캐시백",
      "period_end": null,
-     "main_won": 190000,
-     "bonus_won": 650000
+     "main_won": 840000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
@@ -423,7 +414,7 @@
    "issuer": "신한카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/39/card_img/31864/39card.png",
    "maxCashbackWon": 840000,
-   "maxCashbackText": "최대 84만원 캐시백",
+   "maxCashbackText": "최대84만원캐시백",
    "bestPlatform": "banksalad",
    "periodEnd": null,
    "platforms": [
@@ -438,10 +429,10 @@
     {
      "platform": "banksalad",
      "reward_won": 840000,
-     "reward_text": "최대 84만원 캐시백",
+     "reward_text": "최대84만원캐시백",
      "period_end": null,
-     "main_won": 190000,
-     "bonus_won": 650000
+     "main_won": 840000,
+     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
@@ -483,7 +474,7 @@
    "issuer": "롯데카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2330/card_img/24131/2330card.png",
    "maxCashbackWon": 840000,
-   "maxCashbackText": "최대 84만원 캐시백",
+   "maxCashbackText": "최대84만원캐시백",
    "bestPlatform": "banksalad",
    "periodEnd": null,
    "platforms": [
@@ -497,10 +488,10 @@
     {
      "platform": "banksalad",
      "reward_won": 840000,
-     "reward_text": "최대 84만원 캐시백",
+     "reward_text": "최대84만원캐시백",
      "period_end": null,
-     "main_won": 200000,
-     "bonus_won": 640000
+     "main_won": 840000,
+     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
@@ -684,26 +675,17 @@
    "issuer": "우리카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2848/card_img/48533/2848card_2.png",
    "maxCashbackWon": 780000,
-   "maxCashbackText": "최대 78만원 캐시백",
-   "bestPlatform": "banksalad",
-   "periodEnd": null,
+   "maxCashbackText": "78만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "periodEnd": "2026-06-30",
    "platforms": [
     "ajungdang",
-    "banksalad",
     "cardgorilla",
     "kakaopay",
     "naver"
    ],
-   "platformCount": 5,
+   "platformCount": 4,
    "events": [
-    {
-     "platform": "banksalad",
-     "reward_won": 780000,
-     "reward_text": "최대 78만원 캐시백",
-     "period_end": null,
-     "main_won": 200000,
-     "bonus_won": 580000
-    },
     {
      "platform": "cardgorilla",
      "reward_won": 780000,
@@ -1940,7 +1922,7 @@
     {
      "platform": "banksalad",
      "reward_won": 230000,
-     "reward_text": "최대 23만원 캐시백",
+     "reward_text": "최대23만원캐시백",
      "period_end": null,
      "main_won": 230000,
      "bonus_won": 0
@@ -2411,11 +2393,10 @@
    "periodEnd": null,
    "platforms": [
     "ajungdang",
-    "banksalad",
     "cardgorilla",
     "naver"
    ],
-   "platformCount": 4,
+   "platformCount": 3,
    "events": [
     {
      "platform": "ajungdang",
@@ -2423,14 +2404,6 @@
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
      "period_end": null,
      "main_won": 205000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "banksalad",
-     "reward_won": 195000,
-     "reward_text": "최대 19.5만원 캐시백",
-     "period_end": null,
-     "main_won": 195000,
      "bonus_won": 0
     },
     {
@@ -2631,7 +2604,7 @@
    "issuer": "IBK기업은행",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2559/card_img/45648/2559card.png",
    "maxCashbackWon": 155000,
-   "maxCashbackText": "최대 15.5만원 캐시백",
+   "maxCashbackText": "최대15.5만원캐시백",
    "bestPlatform": "banksalad",
    "periodEnd": null,
    "platforms": [
@@ -2646,7 +2619,7 @@
     {
      "platform": "banksalad",
      "reward_won": 155000,
-     "reward_text": "최대 15.5만원 캐시백",
+     "reward_text": "최대15.5만원캐시백",
      "period_end": null,
      "main_won": 155000,
      "bonus_won": 0

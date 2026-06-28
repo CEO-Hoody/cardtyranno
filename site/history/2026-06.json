@@ -1,6 +1,6 @@
 {
  "month": "2026-06",
- "updated": "2026-06-27",
+ "updated": "2026-06-28",
  "issuers": {
   "신한카드": {
    "banksalad": 840000,
@@ -18,7 +18,6 @@
   },
   "우리카드": {
    "cardgorilla": 780000,
-   "banksalad": 780000,
    "kakaopay": 780000,
    "naver": 780000,
    "ajungdang": 770000
@@ -43,8 +42,7 @@
    "naver": 750000,
    "cardgorilla": 890000,
    "kakaopay": 720000,
-   "ajungdang": 750000,
-   "banksalad": 750000
+   "ajungdang": 750000
   },
   "KB국민카드": {
    "cardgorilla": 860000,
@@ -61,7 +59,6 @@
   },
   "NH농협카드": {
    "ajungdang": 205000,
-   "banksalad": 195000,
    "cardgorilla": 175000,
    "naver": 175000,
    "kakaopay": 195000
@@ -186,7 +183,6 @@
    "name": "카드의정석 2",
    "issuer": "우리카드",
    "platforms": {
-    "banksalad": 780000,
     "cardgorilla": 780000,
     "kakaopay": 780000,
     "naver": 780000,
@@ -249,7 +245,6 @@
    "issuer": "NH농협카드",
    "platforms": {
     "ajungdang": 205000,
-    "banksalad": 195000,
     "cardgorilla": 175000,
     "naver": 175000
    },
@@ -331,7 +326,6 @@
    "platforms": {
     "cardgorilla": 890000,
     "ajungdang": 750000,
-    "banksalad": 750000,
     "naver": 750000
    },
    "max": 890000
