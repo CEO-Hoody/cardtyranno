@@ -1,61 +1,846 @@
 {
- "as_of": "2026-06-28",
- "source": "거주지 렌더링 텍스트 수집(collect_ledger.py). 상품명 매핑.",
+ "_updated": "2026-06-28",
+ "source": "banksalad API card-organization-promotions ([혜택N] 티어 분해: main=혜택1, subs=혜택2~)",
  "cards": {
-  "삼성 iD SELECT ALL 카드": {
-   "reward_won": 230000,
-   "reward_text": "최대23만원캐시백"
-  },
-  "삼성카드 & MILEAGE PLATINUM (스카이패스)": {
-   "reward_won": 0,
-   "reward_text": "연회비100%캐시백"
-  },
-  "신한카드 Mr.Life": {
+  "LOCA LIKIT": {
    "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 20만원 뱅샐머니 받기",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액 이월약정(리볼빙) 신청 시 1만원 뱅샐머니 받기",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 200000,
+   "bonus_won": 640000,
+   "id": "CARD000008",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
-  "신한카드 Deep Oil": {
+  "LOCA 365": {
    "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 20만원 뱅샐머니 받기",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액 이월약정(리볼빙) 신청 시 1만원 뱅샐머니 받기",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 200000,
+   "bonus_won": 640000,
+   "id": "CARD000037",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
-  "신한카드 처음(ANNIVERSE)": {
-   "reward_won": 0,
-   "reward_text": "",
-   "no_event": true
-  },
-  "LOCA 365 카드": {
+  "디지로카 London": {
    "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 20만원 뱅샐머니 받기",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액 이월약정(리볼빙) 신청 시 1만원 뱅샐머니 받기",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 200000,
+   "bonus_won": 640000,
+   "id": "CARD004263",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
-  "LOCA LIKIT 1.2 카드": {
-   "reward_won": 0,
-   "reward_text": "",
-   "no_event": true
+  "디지로카 Paris": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 20만원 뱅샐머니 받기",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액 이월약정(리볼빙) 신청 시 1만원 뱅샐머니 받기",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 200000,
+   "bonus_won": 640000,
+   "id": "CARD004264",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
-  "K-패스 (신용)": {
-   "reward_won": 155000,
-   "reward_text": "최대15.5만원캐시백"
+  "디지로카 Las Vegas": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 20만원 뱅샐머니 받기",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액 이월약정(리볼빙) 신청 시 1만원 뱅샐머니 받기",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 200000,
+   "bonus_won": 640000,
+   "id": "CARD004334",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "My WE:SH": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 18+3만원 캐시백",
+   "subs": [
+    "추가 이용 시 최대 30만원 캐시백",
+    "해외 이용 이벤트 참여시 최대 30만원 캐시백",
+    "자동납부 신청 시 최대 3만원 혜택"
+   ],
+   "main_won": 210000,
+   "bonus_won": 630000,
+   "id": "CARD000128",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
   "KB국민 굿데이카드": {
    "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 18+3만원 캐시백",
+   "subs": [
+    "추가 이용 시 최대 30만원 캐시백",
+    "해외 이용 이벤트 참여시 최대 30만원 캐시백",
+    "자동납부 신청 시 최대 3만원 혜택"
+   ],
+   "main_won": 210000,
+   "bonus_won": 630000,
+   "id": "CARD000156",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
   "KB국민 굿데이올림카드": {
    "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 18+3만원 캐시백",
+   "subs": [
+    "추가 이용 시 최대 30만원 캐시백",
+    "해외 이용 이벤트 참여시 최대 30만원 캐시백",
+    "자동납부 신청 시 최대 3만원 혜택"
+   ],
+   "main_won": 210000,
+   "bonus_won": 630000,
+   "id": "CARD000114",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
-  "KB국민 My WE:SH 카드": {
+  "KB YOU Prime 카드": {
    "reward_won": 840000,
-   "reward_text": "최대84만원캐시백"
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 18+3만원 캐시백",
+   "subs": [
+    "추가 이용 시 최대 30만원 캐시백",
+    "해외 이용 이벤트 참여시 최대 30만원 캐시백",
+    "자동납부 신청 시 최대 3만원 혜택"
+   ],
+   "main_won": 210000,
+   "bonus_won": 630000,
+   "id": "CARD004561",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
-  "D4카드의정석 II": {
-   "reward_won": 0,
-   "reward_text": "연회비100%캐시백"
+  "KB YOU Wish 카드": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "25만원 이상 이용 시 18+3만원 캐시백",
+   "subs": [
+    "추가 이용 시 최대 30만원 캐시백",
+    "해외 이용 이벤트 참여시 최대 30만원 캐시백",
+    "자동납부 신청 시 최대 3만원 혜택"
+   ],
+   "main_won": 210000,
+   "bonus_won": 630000,
+   "id": "CARD004613",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "ECO Plan": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "최대 19만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 190000,
+   "bonus_won": 650000,
+   "id": "CARD004615",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 Deep Oil": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "최대 19만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 190000,
+   "bonus_won": 650000,
+   "id": "CARD000118",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 B.Big(삑)": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "최대 19만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 190000,
+   "bonus_won": 650000,
+   "id": "CARD000117",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 Mr.Life": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "최대 19만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 190000,
+   "bonus_won": 650000,
+   "id": "CARD000004",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 Air One ": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "최대 19만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 190000,
+   "bonus_won": 650000,
+   "id": "CARD004324",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 Discount Plan+": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "최대 19만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 190000,
+   "bonus_won": 650000,
+   "id": "CARD004442",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "Simple Plan+": {
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "main": "최대 19만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 190000,
+   "bonus_won": 650000,
+   "id": "CARD004601",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 Point Plan+": {
+   "reward_won": 830000,
+   "reward_text": "최대 83만원 캐시백",
+   "main": "최대 18만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 180000,
+   "bonus_won": 650000,
+   "id": "CARD004569",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 Deep On Platinum+": {
+   "reward_won": 830000,
+   "reward_text": "최대 83만원 캐시백",
+   "main": "최대 18만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 180000,
+   "bonus_won": 650000,
+   "id": "CARD000130",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 Edu Plan+": {
+   "reward_won": 830000,
+   "reward_text": "최대 83만원 캐시백",
+   "main": "최대 18만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 180000,
+   "bonus_won": 650000,
+   "id": "CARD004571",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "신한카드 RPM+ Platinum#": {
+   "reward_won": 830000,
+   "reward_text": "최대 83만원 캐시백",
+   "main": "최대 18만원 받기",
+   "subs": [
+    "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+    "자동납부 최대 4만원 받기"
+   ],
+   "main_won": 180000,
+   "bonus_won": 650000,
+   "id": "CARD000124",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "LOCA LIKIT 2.0": {
+   "reward_won": 820000,
+   "reward_text": "최대 82만원 캐시백",
+   "main": "25만원 이상 구매 시 최대 18만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 180000,
+   "bonus_won": 640000,
+   "id": "CARD004625",
+   "period_start": "2026-06-08",
+   "period_end": "2026-06-30"
+  },
+  "LOCA LIKIT 1.5": {
+   "reward_won": 820000,
+   "reward_text": "최대 82만원 캐시백",
+   "main": "25만원 이상 구매 시 최대 18만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 180000,
+   "bonus_won": 640000,
+   "id": "CARD004614",
+   "period_start": "2026-06-08",
+   "period_end": "2026-06-30"
+  },
+  "디지로카 Link": {
+   "reward_won": 790000,
+   "reward_text": "최대 79만원 캐시백",
+   "main": "16만원 이상 구매 시 15만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용 시 최대 60만원 캐시백",
+    "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
+    "원하는 멤버십 선택하고 최대 3만원 할인 받기"
+   ],
+   "main_won": 150000,
+   "bonus_won": 640000,
+   "id": "CARD004572",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "우리카드 7CORE": {
+   "reward_won": 780000,
+   "reward_text": "최대 78만원 캐시백",
+   "main": "20만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 200000,
+   "bonus_won": 580000,
+   "id": "CARD004443",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "우리카드 MILE&POINT": {
+   "reward_won": 780000,
+   "reward_text": "최대 78만원 캐시백",
+   "main": "20만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 200000,
+   "bonus_won": 580000,
+   "id": "CARD004530",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "the OPUS silver": {
+   "reward_won": 780000,
+   "reward_text": "최대 78만원 캐시백",
+   "main": "20만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 200000,
+   "bonus_won": 580000,
+   "id": "CARD004531",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   },
   "카드의정석 SHOPPING+": {
-   "reward_won": 0,
-   "reward_text": "",
-   "no_event": true
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "main": "17만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 170000,
+   "bonus_won": 580000,
+   "id": "CARD004419",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "카드의정석 EVERY POINT": {
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "main": "17만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 170000,
+   "bonus_won": 580000,
+   "id": "CARD004416",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "카드의정석 EVERY DISCOUNT": {
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "main": "17만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 170000,
+   "bonus_won": 580000,
+   "id": "CARD004417",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "카드의정석 TEN": {
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "main": "17만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 170000,
+   "bonus_won": 580000,
+   "id": "CARD004408",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "카드의정석 I&U+": {
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "main": "17만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 170000,
+   "bonus_won": 580000,
+   "id": "CARD004418",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "카드의정석2": {
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "main": "17만원 혜택",
+   "subs": [
+    "추가 이용 시 최대 2만원 혜택",
+    "해외 결제 시 최대 50만원 혜택",
+    "자동납부·정기결제 시 최대 6만원 캐시백"
+   ],
+   "main_won": 170000,
+   "bonus_won": 580000,
+   "id": "CARD004426",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "대한항공카드 the First Edition2": {
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004620",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "대한항공카드 120": {
+   "reward_won": 720000,
+   "reward_text": "최대 72만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004621",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "대한항공카드 300": {
+   "reward_won": 720000,
+   "reward_text": "최대 72만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004622",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "대한항공카드 060": {
+   "reward_won": 690000,
+   "reward_text": "최대 69만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004617",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "현대카드M": {
+   "reward_won": 675000,
+   "reward_text": "최대 67.5만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004305",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "American Express® Gold Card Edition2": {
+   "reward_won": 500000,
+   "reward_text": "최대 50만원 캐시백",
+   "main": "60만원 이상 이용 시 40만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용시 10만원 캐시백"
+   ],
+   "main_won": 400000,
+   "bonus_won": 100000,
+   "id": "CARD004602",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "현대카드MY BUSINESS M F&B": {
+   "reward_won": 450000,
+   "reward_text": "최대 45만원 캐시백",
+   "main": "20만원 이상 이용 시 13만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용 시 6만원/30.5만원 캐시백"
+   ],
+   "main_won": 130000,
+   "bonus_won": 320000,
+   "id": "CARD004573",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "현대카드MY BUSINESS M Retail": {
+   "reward_won": 450000,
+   "reward_text": "최대 45만원 캐시백",
+   "main": "20만원 이상 이용 시 13만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용 시 6만원/30.5만원 캐시백"
+   ],
+   "main_won": 130000,
+   "bonus_won": 320000,
+   "id": "CARD004574",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "현대카드MY BUSINESS M E-seller": {
+   "reward_won": 450000,
+   "reward_text": "최대 45만원 캐시백",
+   "main": "20만원 이상 이용 시 13만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용 시 6만원/30.5만원 캐시백"
+   ],
+   "main_won": 130000,
+   "bonus_won": 320000,
+   "id": "CARD004575",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "American Express® Green Card Edition2": {
+   "reward_won": 250000,
+   "reward_text": "최대 25만원 캐시백",
+   "main": "60만원 이상 이용 시 15만원 캐시백",
+   "subs": [
+    "해외 가맹점 이용시 10만원 캐시백"
+   ],
+   "main_won": 150000,
+   "bonus_won": 100000,
+   "id": "CARD004604",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "삼성 iD SELECT ALL 카드": {
+   "reward_won": 230000,
+   "reward_text": "최대 23만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004534",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "삼성 iD SELECT ON 카드": {
+   "reward_won": 230000,
+   "reward_text": "최대 23만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004532",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "삼성카드 taptap O": {
+   "reward_won": 230000,
+   "reward_text": "최대 23만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD003051",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "taptap DIGITAL": {
+   "reward_won": 230000,
+   "reward_text": "최대 23만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD000168",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "taptap DRIVE": {
+   "reward_won": 230000,
+   "reward_text": "최대 23만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD000171",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "올바른FLEX카드": {
+   "reward_won": 195000,
+   "reward_text": "최대 19.5만원 캐시백",
+   "main": "11만원 쓰고 10만원 캐시백 받기",
+   "subs": [
+    "10만원 쓰고 4만원 캐시백 받기",
+    "마케팅 선택 동의 하고 5천원 추가 캐시백 받기",
+    "정기결제 이용 하고 최대 5만원 캐시백 받기"
+   ],
+   "main_won": 100000,
+   "bonus_won": 95000,
+   "id": "CARD000060",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "zgm.play카드": {
+   "reward_won": 195000,
+   "reward_text": "최대 19.5만원 캐시백",
+   "main": "11만원 쓰고 10만원 캐시백 받기",
+   "subs": [
+    "10만원 쓰고 4만원 캐시백 받기",
+    "마케팅 선택 동의 하고 5천원 추가 캐시백 받기",
+    "정기결제 이용 하고 최대 5만원 캐시백 받기"
+   ],
+   "main_won": 100000,
+   "bonus_won": 95000,
+   "id": "CARD004425",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "zgm.streaming": {
+   "reward_won": 195000,
+   "reward_text": "최대 19.5만원 캐시백",
+   "main": "11만원 쓰고 10만원 캐시백 받기",
+   "subs": [
+    "10만원 쓰고 4만원 캐시백 받기",
+    "마케팅 선택 동의 하고 5천원 추가 캐시백 받기",
+    "정기결제 이용 하고 최대 5만원 캐시백 받기"
+   ],
+   "main_won": 100000,
+   "bonus_won": 95000,
+   "id": "CARD000067",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "IBK포인트3.8(신용)": {
+   "reward_won": 155000,
+   "reward_text": "최대 15.5만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004360",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "IBK포인트(신용)": {
+   "reward_won": 155000,
+   "reward_text": "최대 15.5만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004361",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "I-ALL": {
+   "reward_won": 155000,
+   "reward_text": "최대 15.5만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004232",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "K-패스(신용)": {
+   "reward_won": 155000,
+   "reward_text": "최대 15.5만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004320",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "NH농협 K-패스카드": {
+   "reward_won": 65000,
+   "reward_text": "최대 6.5만원 캐시백",
+   "main": "5만원 쓰고 5만원 캐시백 받기",
+   "subs": [
+    "온라인 신규회원 10만원 이상 이용 시 연회비 캐시백 받기"
+   ],
+   "main_won": 50000,
+   "bonus_won": 15000,
+   "id": "CARD004283",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "zgm.the pay": {
+   "reward_won": 62000,
+   "reward_text": "최대 6.2만원 캐시백",
+   "main": "5만원 쓰고 5만원 캐시백 받기",
+   "subs": [
+    "온라인 신규회원 10만원 이상 이용 시 연회비 캐시백 받기"
+   ],
+   "main_won": 50000,
+   "bonus_won": 12000,
+   "id": "CARD000089",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "KB국민 Youth Club 체크카드": {
+   "reward_won": 30000,
+   "reward_text": "3만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004570",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "KB국민 노리2 체크카드(KB Pay)": {
+   "reward_won": 30000,
+   "reward_text": "3만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004231",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "KB국민 틴업 체크카드": {
+   "reward_won": 30000,
+   "reward_text": "3만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004526",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "KB국민 토심이 첵첵 체크카드": {
+   "reward_won": 30000,
+   "reward_text": "3만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004253",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "KB국민 트래블러스 체크카드": {
+   "reward_won": 30000,
+   "reward_text": "3만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD004377",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
+  },
+  "현대백화점카드": {
+   "reward_won": 10000,
+   "reward_text": "1만원 캐시백",
+   "main": "",
+   "subs": [],
+   "main_won": 0,
+   "bonus_won": 0,
+   "id": "CARD000075",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30"
   }
  }
 }

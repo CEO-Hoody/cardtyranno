@@ -542,16 +542,27 @@ def _reword_sub(s):
     return ""
 
 def _cg_benefits(detail):
-    """카드고릴라 event.detail의 '혜택1/혜택2/…' 섹션 → (주요, [부가...]) 재작성본."""
-    det=_html.unescape(detail or "")
-    rows=re.findall(r'<p class="title">\s*혜택\s*\d+\s*</p>\s*<p class="title-sub">([^<]{2,90})</p>',det)
-    if not rows: return "", []
-    main=_reword_main(rows[0])
-    subs=[]
-    for r in rows[1:]:
-        rb=_reword_sub(r)
-        if rb and rb not in subs: subs.append(rb)
-    return main, subs
+    """카드고릴라 event.detail HTML → (주요, [부가...]) 이벤트 혜택 타이틀.
+    실제 DOM(2026-06 확인): 요약 타임라인이
+      <div class="events"><p class="subj">…</p>        → 주요(결제 임계 캐시백)
+      <div class="events extra">…<p class="subj">…</p> → 부가(추가/해외/자동납부 …)
+    상품 자체혜택(마일리지 적립 등)은 <p class="info"><i class="bene">…로 events 밖이라 자동 제외.
+    혜택 문구는 '캐시백' 또는 '받기' 두 표현을 쓴다. (아정당 이벤트 파서와 동일 철학: 헤드라인=전체는 별도)."""
+    detail = detail or ""
+    main=""; subs=[]
+    for m in re.finditer(r'<div class="events( extra)?">', detail):
+        is_extra=bool(m.group(1))
+        sm=re.search(r'<p class="subj">(.*?)</p>', detail[m.end():m.end()+800], re.S)
+        if not sm: continue
+        t=re.sub(r"(?i)<br\s*/?>"," ",sm.group(1))
+        t=_html.unescape(re.sub(r"<[^>]+>","",t)); t=re.sub(r"\s+"," ",t).strip()
+        t=re.sub(r"^아래 이벤트 대상 카드로\s*","",t)          # 머리말 제거
+        if not re.search(r"캐시백|페이백|받기",t) or not re.search(r"\d",t): continue
+        if is_extra:
+            if t not in subs: subs.append(t)
+        elif not main:
+            main=t
+    return main, subs[:6]
 
 def scrape_cardgorilla_meta():
     """카드고릴라 카드 상세에서 연회비·전월실적·주요혜택(재작성)을 수집해 scrape/cg_meta.json 작성."""
@@ -592,12 +603,61 @@ def scrape_cardgorilla_meta():
     else:
         print("cg meta: 수집 0건 — 기존 파일 유지")
 
+def scrape_banksalad_meta():
+    """뱅크샐러드 캐시백 이벤트 API → banksalad_seed.json (발급사 이벤트별 [혜택N] 티어 분해).
+    API: api.banksalad.com/v1/productcuration/card-organization-promotions (전 이벤트 1콜).
+    promotion_description 의 <h2><strong>[혜택 N] …</strong></h2> = 주요(혜택1)/부가(혜택2~). 카드별로 부착.
+    reward_won=총액(cashback_amount_krw_0f), main_won=주요 보상액(주요 티어 마지막 만원, 'A+B만원'=A+B),
+    bonus_won=총액-주요, main/subs=서술형 티어(카드고릴라 _cg_benefits와 동일 철학)."""
+    import urllib.request
+    url="https://api.banksalad.com/v1/productcuration/card-organization-promotions"
+    try:
+        req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0","Accept":"application/json",
+            "Referer":"https://www.banksalad.com/","Origin":"https://www.banksalad.com"})
+        j=json.loads(urllib.request.urlopen(req,timeout=25).read().decode("utf-8","ignore"))
+    except Exception as e:
+        print("뱅샐 meta: API 실패 — 기존 파일 유지", e); return
+    def _c(s): return re.sub(r"\s+"," ",_html.unescape(re.sub(r"<[^>]+>","",s or ""))).strip()
+    def _won(text):                                   # 주요 티어의 보상액(마지막 만원, 'A+B만원'=A+B)
+        m=re.findall(r"(\d+)(?:\s*\+\s*(\d+))?\s*만\s*원", text or "")
+        if not m: return 0
+        a=m[-1]; return (int(a[0])+(int(a[1]) if a[1] else 0))*10000
+    def _ms(x):
+        try: return datetime.datetime.utcfromtimestamp(int(x)/1000).date().isoformat()
+        except Exception: return None
+    cards={}
+    for p in j.get("promotions",[]):
+        if not p.get("is_enabled"): continue
+        cp=p.get("cashback_promotion") or {}
+        won=int(cp.get("cashback_amount_krw_0f") or 0)
+        total=_c(p.get("introductory_phrase"))
+        tiers=[t for t in (_c(x) for x in re.findall(r'\[혜택\s*\d+\]\s*([^<]+)', p.get("promotion_description") or "")) if t]
+        main=tiers[0] if tiers else ""
+        subs=tiers[1:6]
+        mw=_won(main); bw=max(0, won-mw) if (won and mw) else 0
+        ps,pe=_ms(p.get("start_date_ms")),_ms(p.get("end_date_ms"))
+        for c in cp.get("cards",[]):
+            nm=c.get("name")
+            if not nm: continue
+            cards[nm]={"reward_won":won,"reward_text":total,"main":main,"subs":subs,
+                       "main_won":mw,"bonus_won":bw,"id":c.get("product_guid",""),
+                       "period_start":ps,"period_end":pe}
+    if not cards:
+        print("뱅샐 meta: 수집 0건 — 기존 파일 유지"); return
+    out={"_updated":datetime.date.today().isoformat(),
+         "source":"banksalad API card-organization-promotions ([혜택N] 티어 분해: main=혜택1, subs=혜택2~)",
+         "cards":cards}
+    json.dump(out, open(os.path.join(BASE,"banksalad_seed.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"뱅샐 meta → banksalad_seed.json (cards {len(cards)}, main {sum(1 for c in cards.values() if c['main'])})")
+
 if __name__=="__main__":
     today=datetime.date.today().isoformat()
     try: scrape_toss_fees()
     except Exception as e: print("toss fee scrape err", e)
     try: scrape_cardgorilla_meta()
     except Exception as e: print("cg meta scrape err", e)
+    try: scrape_banksalad_meta()
+    except Exception as e: print("bs meta scrape err", e)
     try: diagnose()
     except Exception as e: print("diagnose err", e)
     curated=json.load(open(os.path.join(BASE,"products.json"),encoding="utf-8"))
