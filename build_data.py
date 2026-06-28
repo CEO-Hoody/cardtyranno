@@ -256,6 +256,31 @@ except FileNotFoundError:
 except Exception as _e5:
     print("residential_meta 병합 오류:", _e5)
 
+def _fmt_man_local(won):
+    """원 → 'N만원'/'N만M천원'(앱 헤드라인 표기)."""
+    won = int(won or 0)
+    if won <= 0: return ""
+    man, cheon = won // 10000, (won % 10000) // 1000
+    return f"{man}만{cheon}천원" if cheon else f"{man}만원"
+
+# 뱅크샐러드 서술형 티어 병합 (collector/banksalad_seed.json main/subs → main_benefit/sub_benefits, 빈값만 채움)
+try:
+    _bsd2 = json.load(open(os.path.join(OUT,"collector/banksalad_seed.json"),encoding="utf-8")).get("cards",{})
+    _bsd_nk = {_nk(k): v for k, v in _bsd2.items()}
+    _bmf = 0
+    for _iss,_lst in CARDS.items():
+        for _c in _lst:
+            _info = _bsd_nk.get(_nk(_c["name"])) or {}
+            if _info.get("main") and not _c.get("main_benefit"):
+                _c["main_benefit"] = _info["main"]; _bmf += 1
+            if _info.get("subs") and not _c.get("sub_benefits"):
+                _c["sub_benefits"] = _info["subs"]
+    print(f"뱅샐 서술티어 병합: 주요혜택 {_bmf}")
+except FileNotFoundError:
+    print("banksalad_seed.json 없음 — 뱅샐 티어 병합 스킵")
+except Exception as _e6:
+    print("뱅샐 티어 병합 오류:", _e6)
+
 # 저작권 햇징: 플랫폼 소개문구 미사용 — 카드명/유형 기반으로 자체 작성한 독창적 설명으로 통일
 def _gendesc(name):
     rules=[
@@ -384,6 +409,36 @@ if _bs:
 _aj=_ld("scrape/ajungdang_events.json")
 if _aj:
     for _it in _aj.get("fuel_cards",[]): _ev(_it["name"],_it["issuer"],"아정당",_it["amount"],True)
+# 토스 앱 캡처(toss_seismo_seed) → 카드별 '토스' 이벤트(헤드라인 총액)
+_ts=_ld("collector/toss_seismo_seed.json")
+if _ts:
+    for _e in _ts.get("events",[]):
+        _amt="최대 "+_fmt_man_local(_e.get("headline_won") or _e.get("reward_won") or 0)
+        for _cn in _e.get("cards",[]): _ev(_cn,_e.get("issuer",""),"토스",_amt,True)
+# 카카오페이 앱 캡처(kakaopay_seed) → 카드별 '카카오페이' 이벤트
+_kp=_ld("collector/kakaopay_seed.json")
+if _kp:
+    for _e in _kp.get("events",[]):
+        _amt="최대 "+_fmt_man_local(_e.get("headline_won") or _e.get("reward_won") or 0)
+        for _cn in _e.get("cards",[]): _ev(_cn,_e.get("issuer",""),"카카오페이",_amt,True)
+# 뱅크샐러드 시드(banksalad_seed) → 카드별 '뱅크샐러드' 이벤트(총액). issuer는 카드 유니버스에서 추론.
+_bsev=_ld("collector/banksalad_seed.json")
+if _bsev:
+    for _cn,_info in _bsev.get("cards",{}).items():
+        if _info.get("no_event") or not _info.get("reward_won"): continue
+        _ev(_cn,"","뱅크샐러드",_info.get("reward_text") or ("최대 "+_fmt_man_local(_info["reward_won"])),True)
+# 토스/카카오페이 발급사별 최대 헤드라인 → ISSUE 비교표의 빈 칸('-') 채움
+def _iss_max(_evs):
+    _m={}
+    for _e in _evs:
+        _i=_ISSMAP.get(_e.get("issuer",""),_e.get("issuer",""))
+        _w=int(_e.get("headline_won") or _e.get("reward_won") or 0)
+        if _w>_m.get(_i,0): _m[_i]=_w
+    return _m
+_tmax=_iss_max(_ts.get("events",[]) if _ts else []); _kmax=_iss_max(_kp.get("events",[]) if _kp else [])
+for _row in ISSUE:
+    if _tmax.get(_row["issuer"]) and _row.get("toss","-") in ("","-"): _row["toss"]="최대 "+_fmt_man_local(_tmax[_row["issuer"]])
+    if _kmax.get(_row["issuer"]) and _row.get("kakaopay","-") in ("","-"): _row["kakaopay"]="최대 "+_fmt_man_local(_kmax[_row["issuer"]])
 _EVMAP={_nk(c["name"]):c.get("events",[]) for lst in CARDS.values() for c in lst}
 # 주요/부가 혜택·전월실적 맵(이름 정규화 키) — DB card 테이블엔 컬럼이 없어 export 시 이 맵으로 주입.
 _MBMAP={}
