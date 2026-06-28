@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """카드티라노 데이터 빌더 v2 — 카드메타(연회비 포함)·발급이벤트·플랫폼비교를 SQLite에 적재 후 site/*.json export."""
 import os, json, sqlite3, shutil
-OUT="/sessions/busy-charming-mayer/mnt/제휴마케팅 콜렉터"; SITE=os.path.join(OUT,"site")
+OUT="/sessions/busy-charming-mayer/mnt/제휴마케팅 콜렉터"
+if not os.path.isdir(OUT): OUT=os.path.dirname(os.path.abspath(__file__))  # 포터블: 샌드박스 외(맥/Actions)면 스크립트 폴더
+SITE=os.path.join(OUT,"site")
 DBL="/tmp/cardtyrano.db"; DBF=os.path.join(OUT,"cardtyrano.db")
 # 카드 콘텐츠(자체 작성) export
 try:

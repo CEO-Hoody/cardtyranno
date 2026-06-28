@@ -1,0 +1,228 @@
+{
+ "_note": "카드 상세 혜택의 사실 데이터(영역·할인율·tier·한도)만 구조화. 플랫폼/카드사 소개 문구는 미수집. 한도(amount)는 목록에 없으면 null로 두고 점진 보강. 출처: 카드사 공식·카드고릴라·뱅크샐러드 교차확인(2026-06).",
+ "KB국민 굿데이카드": {
+  "prev_spend": "30만원", "max_benefit": "연 70.8만원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"},
+                   {"id":"g2","scope":"통합","amount":null,"unit":"월","applies":["음식점·카페·편의점·약국","학원·휘트니스"]}],
+  "items": [
+   {"areas":["주유","충전"],"type":"할인","method":"청구","value":"리터당 60원","tier":"기본","limit":"g1"},
+   {"areas":["통신","인터넷","케이블TV"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["버스","지하철","택시"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["음식점","카페","편의점","약국"],"type":"할인","method":"청구","value":"10%","tier":"추가","limit":"g2"},
+   {"areas":["학원","휘트니스"],"type":"할인","method":"청구","value":"10%","tier":"추가","limit":"g2"}
+  ]
+ },
+ "신한카드 Deep Oil": {
+  "prev_spend": "30만원", "max_benefit": "월 42,500원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["주유","충전"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["주차장"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "신한카드 B.Big(삑)": {
+  "prev_spend": "30만원", "max_benefit": "월 48,000원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["대중교통"],"type":"할인","method":"청구","value":"최대 1만 8천원","tier":"기본","limit":"g1"},
+   {"areas":["택시"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "LOCA 365": {
+  "prev_spend": "50만원", "max_benefit": "월 36,500원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["아파트관리비"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["공과금"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "D4카드의정석 II": {
+  "prev_spend": "30만원", "max_benefit": "월 36,300원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["커피(스타벅스·투썸·커피빈·폴바셋)"],"type":"할인","method":"청구","value":"55%","tier":"기본","limit":"g1"},
+   {"areas":["대중교통"],"type":"할인","method":"청구","value":"33%","tier":"기본","limit":"g1"},
+   {"areas":["편의점"],"type":"할인","method":"청구","value":"11%","tier":"기본","limit":"g1"},
+   {"areas":["영화관"],"type":"할인","method":"청구","value":"할인","tier":"기본","limit":"g1"}
+  ]
+ },
+ "신한카드 처음(ANNIVERSE)": {
+  "prev_spend": "30만원", "max_benefit": "월 36,000원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["음식점"],"type":"적립","method":"포인트","value":"5%","tier":"기본","limit":"g1"},
+   {"areas":["커피전문점"],"type":"적립","method":"포인트","value":"5%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "신한카드 Mr.Life": {
+  "prev_spend": "30만원", "max_benefit": "생활할인 월 3천~1만원(실적별)",
+  "limit_groups": [{"id":"g1","scope":"통합","amount":null,"unit":"월","applies":["공과금","통신","대형마트"]}],
+  "items": [
+   {"areas":["전기요금","도시가스","공과금"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["통신(SKT·KT·LGU+)"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["대형마트(이마트·홈플러스·롯데마트)"],"type":"할인","method":"청구","value":"일 1회 최대 5천원","tier":"기본","limit":"g1"}
+  ]
+ },
+ "삼성 iD SELECT ALL 카드": {
+  "prev_spend": "40만원", "max_benefit": "월 통합 7천~1.5만원(실적별)",
+  "limit_groups": [{"id":"g1","scope":"통합","amount":null,"unit":"월","applies":["선택형 할인 전체"]}],
+  "items": [
+   {"areas":["아파트관리비","통신"],"type":"할인","method":"청구","value":"10%","tier":"선택","limit":"g1"},
+   {"areas":["교육비"],"type":"할인","method":"청구","value":"10%","tier":"선택","limit":"g1"},
+   {"areas":["국내 전가맹점"],"type":"할인","method":"청구","value":"0.7%","tier":"선택","limit":"g1"},
+   {"areas":["음식점","편의점","할인점","주유"],"type":"할인","method":"청구","value":"7%","tier":"선택","limit":"g1"},
+   {"areas":["온라인쇼핑","배달앱","병원","약국"],"type":"할인","method":"청구","value":"7%","tier":"선택","limit":"g1"},
+   {"areas":["디지털콘텐츠","온라인멤버십"],"type":"할인","method":"청구","value":"50%","tier":"기본","limit":"g1"},
+   {"areas":["다이소","여행","도서","와인"],"type":"할인","method":"청구","value":"5%","tier":"기본","limit":"g1"},
+   {"areas":["해외"],"type":"할인","method":"청구","value":"2%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "현대카드 M": {
+  "prev_spend": "50만원", "max_benefit": "M포인트 적립(추가 월 1만M)",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"무제한"},
+                   {"id":"g2","scope":"통합","amount":10000,"unit":"월M","applies":["온라인몰","일반음식점","해외"]}],
+  "items": [
+   {"areas":["국내외 전가맹점"],"type":"적립","method":"M포인트","value":"1.5%","tier":"기본","limit":"g1"},
+   {"areas":["온라인몰","일반음식점","해외"],"type":"적립","method":"M포인트","value":"5%","tier":"추가","limit":"g2"}
+  ]
+ },
+ "하나 클럽SK카드(CLUB SK)": {
+  "prev_spend": "40만원", "max_benefit": "실적 100만원 이상 시 최대 혜택",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"},
+                   {"id":"g2","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["SK주유소"],"type":"할인","method":"청구","value":"리터당 100~150원","tier":"기본","limit":"g1"},
+   {"areas":["SK충전소"],"type":"할인","method":"청구","value":"리터당 35~70원","tier":"기본","limit":"g1"},
+   {"areas":["SKT 통신요금"],"type":"할인","method":"청구","value":"2,000~15,000원","tier":"기본","limit":"g2"},
+   {"areas":["마트","외식","학원"],"type":"할인","method":"청구","value":"5~10%","tier":"추가","limit":"g2"},
+   {"areas":["대중교통"],"type":"할인","method":"청구","value":"3.5~7%","tier":"추가","limit":"g2"},
+   {"areas":["커피"],"type":"할인","method":"청구","value":"2.5~5%","tier":"추가","limit":"g2"},
+   {"areas":["영화"],"type":"할인","method":"청구","value":"1,500~3,000원","tier":"추가","limit":"g2"}
+  ]
+ },
+ "삼성카드 taptap O": {
+  "prev_spend": "30만원", "max_benefit": "영역별 월 5천~1만원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["통신(이동통신요금)"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["대중교통(버스·지하철·택시)"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["커피(스타벅스)"],"type":"할인","method":"청구","value":"50%","tier":"기본","limit":"g1"},
+   {"areas":["영화(CGV·롯데시네마)"],"type":"할인","method":"청구","value":"5천원(월2회)","tier":"기본","limit":"g1"},
+   {"areas":["쇼핑","편의점"],"type":"할인","method":"청구","value":"7%","tier":"기본","limit":"g1"},
+   {"areas":["해외"],"type":"적립","method":"빅포인트","value":"1.3%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "KB국민 굿데이올림카드": {
+  "prev_spend": "30만원", "max_benefit": "월 최대 77,400원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["대중교통","통신"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["음식점","편의점","커피"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["대형마트","학원"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["해외"],"type":"적립","method":"캐시백","value":"5%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "KB국민 My WE:SH 카드": {
+  "prev_spend": "40만원", "max_benefit": "선택 영역 월 1~2만원",
+  "limit_groups": [{"id":"g1","scope":"통합","amount":null,"unit":"월","applies":["선택 서비스팩"]}],
+  "items": [
+   {"areas":["배달","커피"],"type":"할인","method":"청구","value":"5%","tier":"선택","limit":"g1"},
+   {"areas":["택시","커피","영화관"],"type":"할인","method":"청구","value":"택시·커피 5% / 영화 30%","tier":"선택","limit":"g1"},
+   {"areas":["미용실","스포츠","올리브영","온라인서점"],"type":"할인","method":"청구","value":"5%","tier":"선택","limit":"g1"}
+  ]
+ },
+ "LOCA LIKIT 2.0": {
+  "prev_spend": "40만원", "max_benefit": "스타벅스·영화 각 월 1만원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["모든 가맹점"],"type":"할인","method":"청구","value":"기본 할인","tier":"기본","limit":"g1"},
+   {"areas":["스타벅스"],"type":"할인","method":"청구","value":"월 1만원 한도","tier":"기본","limit":"g1"},
+   {"areas":["영화"],"type":"할인","method":"청구","value":"월 1만원 한도","tier":"기본","limit":"g1"}
+  ]
+ },
+ "삼성카드 & MILEAGE PLATINUM (스카이패스)": {
+  "prev_spend": "없음", "max_benefit": "마일리지 적립 한도 없음(기본)",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"무제한"},
+                   {"id":"g2","scope":"통합","amount":2000,"unit":"월마일","applies":["선택 영역"]}],
+  "items": [
+   {"areas":["국내외 전가맹점"],"type":"적립","method":"스카이패스","value":"1,000원당 1마일","tier":"기본","limit":"g1"},
+   {"areas":["국내 백화점·주유·커피·편의점·택시 또는 해외"],"type":"적립","method":"스카이패스","value":"1,000원당 2마일","tier":"선택","limit":"g2"}
+  ]
+ },
+ "삼성 iD SELECT ON 카드": {
+  "prev_spend": "40만원", "max_benefit": "월 통합 한도(실적별)",
+  "limit_groups": [{"id":"g1","scope":"통합","amount":null,"unit":"월","applies":["선택형 할인"]}],
+  "items": [
+   {"areas":["음식점","온라인몰(금·토·일)"],"type":"할인","method":"청구","value":"10%","tier":"선택","limit":"g1"},
+   {"areas":["생활편의"],"type":"할인","method":"청구","value":"5%","tier":"선택","limit":"g1"},
+   {"areas":["인앱결제","디지털콘텐츠"],"type":"할인","method":"청구","value":"50%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "카드의정석 SHOPPING+": {
+  "prev_spend": "30만원", "max_benefit": "월 통합 1만원(실적별)",
+  "limit_groups": [{"id":"g1","scope":"통합","amount":null,"unit":"월","applies":["온·오프 쇼핑","간편결제"]}],
+  "items": [
+   {"areas":["온라인·오프라인 쇼핑"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["간편결제"],"type":"할인","method":"청구","value":"5%","tier":"추가","limit":"g1"},
+   {"areas":["주말 주유"],"type":"할인","method":"청구","value":"리터당 60원","tier":"기본","limit":"g1"}
+  ]
+ },
+ "트래블로그 신용카드": {
+  "prev_spend": "없음", "max_benefit": "해외·여행 3% 적립(월 10만 하나머니)",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"무제한"},
+                   {"id":"g2","scope":"통합","amount":100000,"unit":"월하나머니","applies":["해외","항공","면세점","여행"]}],
+  "items": [
+   {"areas":["국내외 전가맹점"],"type":"적립","method":"하나머니","value":"1%","tier":"기본","limit":"g1"},
+   {"areas":["해외","항공","면세점","여행"],"type":"적립","method":"하나머니","value":"3%","tier":"추가","limit":"g2"}
+  ]
+ },
+ "LOCA LIKIT 1.2 카드": {
+  "prev_spend": "없음", "max_benefit": "스타벅스·영화 각 월 1만원",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["모든 가맹점"],"type":"할인","method":"청구","value":"1.2%","tier":"기본","limit":"g1"},
+   {"areas":["해외"],"type":"할인","method":"청구","value":"2%","tier":"기본","limit":"g1"},
+   {"areas":["스타벅스","영화"],"type":"할인","method":"청구","value":"월 1만원 한도","tier":"추가","limit":"g1"}
+  ]
+ },
+ "카드의정석 2": {
+  "prev_spend": "없음", "max_benefit": "분기별 최대 15,000원",
+  "limit_groups": [{"id":"g1","scope":"통합","amount":15000,"unit":"분기","applies":["전가맹점"]}],
+  "items": [
+   {"areas":["국내외 전가맹점"],"type":"할인","method":"청구","value":"1.2%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "토스 LIKIT ALL": {
+  "prev_spend": "50만원", "max_benefit": "모든 가맹점 1% + 주유·편의점",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["모든 가맹점"],"type":"할인","method":"청구","value":"1%","tier":"기본","limit":"g1"},
+   {"areas":["주유소·충전소"],"type":"할인","method":"청구","value":"5,000원","tier":"기본","limit":"g1"},
+   {"areas":["편의점"],"type":"할인","method":"청구","value":"1,000원","tier":"기본","limit":"g1"},
+   {"areas":["국내외 전가맹점"],"type":"적립","method":"L.POINT","value":"0.2%","tier":"기본","limit":"g1"}
+  ]
+ },
+ "KB NEED Pay 카드": {
+  "prev_spend": "40만원", "max_benefit": "간편결제 월 3만원·연 36만원",
+  "limit_groups": [{"id":"g1","scope":"통합","amount":30000,"unit":"월","applies":["간편결제"]},
+                   {"id":"g2","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["KB Pay"],"type":"할인","method":"청구","value":"15%","tier":"기본","limit":"g1"},
+   {"areas":["네이버페이","카카오페이","토스페이"],"type":"할인","method":"청구","value":"10%","tier":"기본","limit":"g1"},
+   {"areas":["디지털콘텐츠","구독멤버십"],"type":"할인","method":"청구","value":"30%","tier":"추가","limit":"g2"},
+   {"areas":["온라인패션몰(무신사·지그재그·29CM·에이블리)"],"type":"할인","method":"청구","value":"5%","tier":"추가","limit":"g2"},
+   {"areas":["해외"],"type":"할인","method":"청구","value":"2%","tier":"기본","limit":"g2"}
+  ]
+ },
+ "삼성 iD SIMPLE 카드": {
+  "prev_spend": "없음", "max_benefit": "무실적 0.7~1% 한도없음",
+  "limit_groups": [{"id":"g1","scope":"개별","amount":null,"unit":"무제한"},
+                   {"id":"g2","scope":"개별","amount":null,"unit":"월"}],
+  "items": [
+   {"areas":["국내외 전가맹점(건당 10만원 미만)"],"type":"할인","method":"청구","value":"0.7%","tier":"기본","limit":"g1"},
+   {"areas":["국내외 전가맹점(건당 10만원 이상)"],"type":"할인","method":"청구","value":"1%","tier":"기본","limit":"g1"},
+   {"areas":["온라인쇼핑몰 멤버십"],"type":"할인","method":"청구","value":"50%","tier":"추가","limit":"g2"},
+   {"areas":["영화"],"type":"할인","method":"청구","value":"3,000원","tier":"추가","limit":"g2"}
+  ]
+ }
+}

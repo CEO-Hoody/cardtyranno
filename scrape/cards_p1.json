@@ -1,0 +1,72 @@
+{
+  "삼성카드": [
+    {"name": "토스 삼성카드", "fee": "국내전용 : 15,000원 해외겸용 : 15,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/toss_samsung.png", "url": "https://card-lounge.toss.im/card/10279"},
+    {"name": "삼성카드 taptap O", "fee": "국내전용 : 10,000원 해외겸용 : 10,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/2936.png", "url": "https://card-lounge.toss.im/card/17"},
+    {"name": "Toss taptap S", "fee": "국내전용 : 10,000원 해외겸용 : 10,000원", "img": "https://static.toss.im/assets/credit-card/samsung-taptap-s.png", "url": "https://card-lounge.toss.im/card/16"},
+    {"name": "THE 1 (스카이패스)", "fee": "국내전용: 245,000원 해외겸용: 250,000원 (AMEX)", "img": "https://static.toss.im/assets/credit-card/6809.png", "url": "https://card-lounge.toss.im/card/10409"},
+    {"name": "삼성 iD 달달할인 카드", "fee": "국내전용 : 29,000원 해외겸용 : 29,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/samsung-id-monthly-discount-bubble.png", "url": "https://card-lounge.toss.im/card/1366"},
+    {"name": "삼성 iD PLUG-IN 카드", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/samsung_iDPLUG-IN.png", "url": "https://card-lounge.toss.im/card/10275"},
+    {"name": "삼성 iD EV 카드", "fee": "국내전용 : 15,000원 해외겸용 : 15,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/1797.png", "url": "https://card-lounge.toss.im/card/5461"},
+    {"name": "T나는혜택 삼성카드", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/1912.png", "url": "https://card-lounge.toss.im/card/5854"},
+    {"name": "신세계이마트 삼성카드 SFC 7", "fee": "국내전용 : 18,000원 해외겸용 : 20,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/1958.png", "url": "https://card-lounge.toss.im/card/5936"},
+    {"name": "국민행복 삼성카드 V2", "fee": "없음", "img": "https://static.toss.im/assets/credit-card/2025070120.png", "url": "https://card-lounge.toss.im/card/5463"},
+    {"name": "신세계이마트 삼성카드 7", "fee": "국내전용 : 18,000원 해외겸용 : 20,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/samsung-sinsegae-emart.png", "url": "https://card-lounge.toss.im/card/947"},
+    {"name": "SSG.COM 삼성카드", "fee": "국내전용 : 15,000원 해외겸용 : 15,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/1653.png", "url": "https://card-lounge.toss.im/card/5165"}
+  ],
+  "현대카드": [
+    {"name": "현대카드 M", "fee": "국내전용 : 30,000원 해외겸용 : 30,000원 (VISA/AMEX)", "img": "https://static.toss.im/assets/credit-card/wood.png", "url": "https://card-lounge.toss.im/card/1827"},
+    {"name": "현대카드 ZERO Edition3 (포인트형)", "fee": "국내전용 : 15,000원 국내외겸용 : 15,000원 (Visa/Amex)", "img": "https://static.toss.im/assets/credit-card/2266.png", "url": "https://card-lounge.toss.im/card/1822"},
+    {"name": "현대카드 ZERO Edition3 (할인형)", "fee": "국내전용 : 15,000원 국내외겸용 : 15,000원 (Visa/Amex)", "img": "https://static.toss.im/assets/credit-card/2266.png", "url": "https://card-lounge.toss.im/card/1820"},
+    {"name": "현대카드 MX Black Edition2", "fee": "국내전용 : 200,000원 해외겸용 : 200,000원 (Visa)", "img": "https://static.toss.im/assets/credit-card/2803.png", "url": "https://card-lounge.toss.im/card/1900"},
+    {"name": "현대카드 Z family Edition 2", "fee": "국내전용 : 20,000원 국내외겸용 : 20,000원 (Visa/Amex)", "img": "https://static.toss.im/assets/credit-card/10192.png", "url": "https://card-lounge.toss.im/card/1833"},
+    {"name": "대한항공카드 the First Edition2", "fee": "국내전용 : 800,000원 해외겸용 : 800,000원 (VISA)", "img": "https://static.toss.im/assets/credit-card/credit-card-new/hd_koreanair_the_first_edition2.png", "url": "https://card-lounge.toss.im/card/10341"},
+    {"name": "현대카드 Z work Edition 2", "fee": "국내전용 : 20,000원 국내외겸용 : 20,000원 (Visa/Amex)", "img": "https://static.toss.im/assets/credit-card/10194.png", "url": "https://card-lounge.toss.im/card/1835"},
+    {"name": "현대카드 Z play", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (Visa/Amex)", "img": "https://static.toss.im/assets/credit-card/10188.png", "url": "https://card-lounge.toss.im/card/1831"},
+    {"name": "네이버 현대카드 Edition2", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (VISA)", "img": "https://static.toss.im/assets/credit-card/hyundai-naver-edition2.png", "url": "https://card-lounge.toss.im/card/10211"},
+    {"name": "Kia Members 신용카드 Edition2", "fee": "국내전용 : 30,000원 해외겸용 : 30,000원 (VISA/AMEX)", "img": "https://static.toss.im/assets/credit-card/3045.png", "url": "https://card-lounge.toss.im/card/7224"},
+    {"name": "Hyundai EV카드", "fee": "국내전용 : 30,000원 해외겸용 : 30,000원 (VISA/AMEX)", "img": "https://static.toss.im/assets/credit-card/2133.png", "url": "https://card-lounge.toss.im/card/6288"},
+    {"name": "NOL 카드", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (VISA/AMEX)", "img": "https://static.toss.im/assets/credit-card/2078.png", "url": "https://card-lounge.toss.im/card/6172"}
+  ],
+  "신한카드": [
+    {"name": "토스 신한카드 Mr.Life", "fee": "국내전용 : 15,000원 해외겸용 : 18,000원 (VISA)", "img": "https://static.toss.im/assets/credit-card/3480.png", "url": "https://card-lounge.toss.im/card/1259"},
+    {"name": "토스 신한카드 YOLO ⓘ", "fee": "국내전용 : 15,000원 해외겸용 : 18,000원 (Visa)", "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_toss_yolo.png", "url": "https://card-lounge.toss.im/card/1261"},
+    {"name": "신한카드 Deep Oil", "fee": "국내전용 : 10,000원 해외겸용 : 13,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/2025070113.png", "url": "https://card-lounge.toss.im/card/34"},
+    {"name": "신한카드 Simple Plan+", "fee": "국내전용 : 47,000원 해외겸용(Master) : 50,000원", "img": "https://static.toss.im/assets/credit-card/credit-card-new/sh_simple_plan_plus_core.png", "url": "https://card-lounge.toss.im/card/11561"},
+    {"name": "신한카드 처음(ANNIVERSE)", "fee": "국내전용 : 15,000원 해외겸용 : 18,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/2934.png", "url": "https://card-lounge.toss.im/card/10023"},
+    {"name": "신한카드 The CLASSIC-Y", "fee": "해외겸용: 100,000원 (UnionPay) 해외겸용: 105,000원 (VISA, Master)", "img": "https://static.toss.im/assets/credit-card/credit-card-new/%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%20The%20CLASSIC-Y.png", "url": "https://card-lounge.toss.im/card/6088"},
+    {"name": "신한카드 SOL트래블", "fee": "국내전용 : 27,000원 해외겸용 : 30,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/8325.png", "url": "https://card-lounge.toss.im/card/10385"},
+    {"name": "RPM Platinum#", "fee": "국내전용 : 27,000원 해외겸용 : 30,000원 (VISA,AMEX)", "img": "https://static.toss.im/assets/credit-card/2256.png", "url": "https://card-lounge.toss.im/card/5079"},
+    {"name": "신한카드 Deep Making", "fee": "해외겸용: 30,000원 (URS(JCB) , VISA)", "img": "https://static.toss.im/assets/credit-card/1174.png", "url": "https://card-lounge.toss.im/card/1174"},
+    {"name": "K-패스 신한카드", "fee": "국내전용 : 7,000원 해외겸용 : 10,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/2795.png", "url": "https://card-lounge.toss.im/card/1893"},
+    {"name": "신한카드 EVerywhere", "fee": "국내전용 : 19,000원 해외겸용 : 22,000원 (VISA)", "img": "https://static.toss.im/assets/credit-card/2025090105.png", "url": "https://card-lounge.toss.im/card/1458"},
+    {"name": "신한카드 국민행복", "fee": "없음", "img": "", "url": "https://card-lounge.toss.im/card/1605"}
+  ],
+  "KB국민카드": [
+    {"name": "KB국민 굿데이카드", "fee": "국내전용 : 5,000원 국내외겸용 : 10,000원 (VISA, Master, JCB, AMEX, UPI)", "img": "https://static.toss.im/assets/credit-card/1121.png", "url": "https://card-lounge.toss.im/card/1121"},
+    {"name": "KB국민 굿데이올림카드", "fee": "K-WORLD(UPI) : 15,000원 국내외겸용 : 20,000원 (VISA, Master, AMEX)", "img": "https://static.toss.im/assets/credit-card/kb_goodday_olim.png", "url": "https://card-lounge.toss.im/card/50"},
+    {"name": "KB 청춘대로 톡톡카드", "fee": "국내전용 : 10,000원 (K-WORLD(JCB)) 해외겸용 : 12,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/55.png", "url": "https://card-lounge.toss.im/card/55"},
+    {"name": "KB국민 다담카드", "fee": "K-WORLD(UPI) : 15,000원 국내외겸용 : 20,000원 (VISA, Master)", "img": "https://static.toss.im/assets/credit-card/kb_dadam.png", "url": "https://card-lounge.toss.im/card/701"},
+    {"name": "KB국민 My WE:SH 카드", "fee": "국내전용 : 15,000원 해외겸용 : 15,000원 (Master/Amex)", "img": "https://static.toss.im/assets/credit-card/1468.png", "url": "https://card-lounge.toss.im/card/1467"},
+    {"name": "KB국민 Easy on카드", "fee": "K-WORLD(UPI타입) : 20,000원 국내외겸용(Master) : 20,000원", "img": "https://static.toss.im/assets/credit-card/1097.png", "url": "https://card-lounge.toss.im/card/1097"},
+    {"name": "KB국민 WE:SH Travel", "fee": "국내전용 : 25,000원 국내외겸용 : 25,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/2801.png", "url": "https://card-lounge.toss.im/card/1906"},
+    {"name": "KB국민 WE:SH Daily 카드", "fee": "국내전용 : 15,000원 해외겸용 : 15,000원 (K-World(JCB),Master)", "img": "https://static.toss.im/assets/credit-card/2862.png", "url": "https://card-lounge.toss.im/card/1951"},
+    {"name": "KB국민 iMND 카드", "fee": "없음", "img": "https://static.toss.im/assets/credit-card/1874.png", "url": "https://card-lounge.toss.im/card/5759"},
+    {"name": "쿠팡 와우카드", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (VISA)", "img": "https://static.toss.im/assets/credit-card/2025070104.png", "url": "https://card-lounge.toss.im/card/6090"},
+    {"name": "T-economy", "fee": "국내전용 : 15,000원 해외겸용 : 15,000원 (Master/JCB(K-WORLD))", "img": "https://static.toss.im/assets/credit-card/1932.png", "url": "https://card-lounge.toss.im/card/5884"},
+    {"name": "KB국민 알뜰폰 Hub Ⅱ카드", "fee": "국내전용 : 15,000원 해외겸용 : 15,000원 (Master)", "img": "", "url": "https://card-lounge.toss.im/card/6336"}
+  ],
+  "롯데카드": [
+    {"name": "토스 LIKIT ALL", "fee": "국내전용 : 14,000원 해외겸용 : 15,000원 (Visa)", "img": "https://static.toss.im/assets/credit-card/1418.png", "url": "https://card-lounge.toss.im/card/1418"},
+    {"name": "LOCA LIKIT 1.2 카드", "fee": "국내전용 : 10,000원 해외겸용 : 10,000원 (Master/Amex)", "img": "https://static.toss.im/assets/credit-card/1677.png", "url": "https://card-lounge.toss.im/card/5083"},
+    {"name": "LOCA 365", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (Master/visa/Amex)", "img": "https://static.toss.im/assets/credit-card/1477.png", "url": "https://card-lounge.toss.im/card/1477"},
+    {"name": "LOCA LIKIT Eat", "fee": "국내전용 : 10,000원 해외겸용 : 10,000원 (Master,Amex)", "img": "https://static.toss.im/assets/credit-card/1770.png", "url": "https://card-lounge.toss.im/card/1699"},
+    {"name": "LOCA LIKIT", "fee": "국내전용 : 10,000원 해외겸용 : 10,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/1305.png", "url": "https://card-lounge.toss.im/card/1583"},
+    {"name": "LOCA LIKIT Shop", "fee": "국내전용 : 10,000원 해외겸용 : 10,000원 (MASTER, AMEX)", "img": "https://static.toss.im/assets/credit-card/1810.png", "url": "https://card-lounge.toss.im/card/1731"},
+    {"name": "디지로카 Link", "fee": "국내전용 : 30,000원 해외겸용(Master) : 30,000원", "img": "https://static.toss.im/assets/credit-card/new/lotte_DiGiLOCA_LINK.png", "url": "https://card-lounge.toss.im/card/10489"},
+    {"name": "LOCA LIKIT Play", "fee": "국내전용 : 10,000원 해외겸용 : 10,000원 (Master,Amex)", "img": "https://static.toss.im/assets/credit-card/1771.png", "url": "https://card-lounge.toss.im/card/1701"},
+    {"name": "롯데멤버스 카드", "fee": "국내전용 : 30,000원 해외겸용 : 30,000원 (Master)", "img": "https://static.toss.im/assets/credit-card/10214.png", "url": "https://card-lounge.toss.im/card/10143"},
+    {"name": "LG구독엔로카", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (MASTER/AMEX)", "img": "https://static.toss.im/assets/credit-card/lottecard-lg-subscribe.png", "url": "https://card-lounge.toss.im/card/10207"},
+    {"name": "Trip to 로카", "fee": "국내전용 : 20,000원 해외겸용 : 20,000원 (Master/AMEX)", "img": "", "url": "https://card-lounge.toss.im/card/1703"},
+    {"name": "LOCA Lite", "fee": "국내전용 : 1,000원 해외겸용 : 1,000원 (Master, Amex)", "img": "", "url": "https://card-lounge.toss.im/card/5892"}
+  ]
+}
