@@ -189,6 +189,36 @@ def export_json(con):
         cgid=str((maps.get("cardgorilla") or {}).get("id") or "")
         img=CG_IMG.get(cgid) or CARDS_IMG.get(_nk(name))   # 8080 실패 시 cards.json 저장 이미지로 폴백
         out.append({"id":pid,"name":name,"issuer":issuer,"img":img,"platforms":maps,"events":evs})
+    # ── 동등상품 병합(굿데이=KB국민 굿데이 등): 발급사 접두어만 다른 변형을 1상품으로 ──
+    _ISSPFX=sorted(['KB국민카드','KB국민','국민카드','국민','KB','신한카드','신한','삼성카드','삼성','현대카드','현대',
+      '롯데카드','롯데','우리카드','우리','하나카드','하나','NH농협카드','NH농협','농협','BC카드','BC','IBK기업은행','IBK기업','IBK','기업'],key=len,reverse=True)
+    def _stripiss(n):
+        s=(n or "").strip()
+        for t in _ISSPFX:
+            if s.startswith(t):
+                r=s[len(t):].strip(); return r if r else s
+        return s
+    def _ecanon(n): return _nk(_stripiss(n))
+    _grp={}; _order=[]
+    for p in out:
+        k=_ecanon(p["name"])
+        if not k or k not in _grp:
+            if k: _grp[k]=p; _order.append(k)
+            else: _order.append(id(p)); _grp[id(p)]=p
+            continue
+        keep=_grp[k]
+        if len(p["name"])>len(keep["name"]): keep["name"]=p["name"]   # 발급사 접두 포함(정식명) 우선
+        if not keep.get("img") and p.get("img"): keep["img"]=p["img"]
+        for pl,m in (p.get("platforms") or {}).items(): keep.setdefault("platforms",{}).setdefault(pl,m)
+        byp={e["platform"]:e for e in keep["events"]}               # 플랫폼별 max reward_won, 동률이면 분해(bonus>0) 우선
+        for e in p["events"]:
+            cur=byp.get(e["platform"])
+            if (not cur) or (e["reward_won"]>cur["reward_won"]) or (e["reward_won"]==cur["reward_won"] and (e.get("bonus_won") or 0)>(cur.get("bonus_won") or 0)):
+                byp[e["platform"]]=e
+        keep["events"]=list(byp.values())
+    _merged=[_grp[k] for k in _order]
+    if len(_merged)<len(out): print(f"동등상품 병합: {len(out)}→{len(_merged)} ({len(out)-len(_merged)}건 통합)")
+    out=_merged
     os.makedirs(SITE,exist_ok=True)
     MONTH="2026-06"
     json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"products":out},
@@ -595,8 +625,9 @@ def _won_of(s):
     if not t: return 0
     m = re.search(r"(\d+)\s*\+\s*(\d+)\s*만", t)          # 'A+B만원' = A+B
     if m: return (int(m.group(1)) + int(m.group(2))) * 10000
-    t = re.sub(r"\d+\s*만\s*원?\s*(?:이상|이용\s*시|사용\s*시|결제\s*시|자동납부)", " ", t)  # 임계 제거
-    t = re.sub(r"/\s*\d+\s*만\s*원?", " ", t)             # '/30만원' 한도 제거
+    t = re.sub(r"(\d+)\s*/\s*\d+\s*만", r"\1만", t)        # 'A/B만'(브랜드별 15/14만) = 첫 값(A)만
+    t = re.sub(r"\d+\s*만\s*원?\s*(?:이상|이용\s*시|사용\s*시|결제\s*시|자동납부|쓰고|쓰면|쓸\s*때)", " ", t)  # 임계('N만원 쓰고/쓰면' 포함) 제거
+    t = re.sub(r"/\s*\d+\s*만\s*원?", " ", t)             # '3만원/30만원' 한도 제거
     vals = [int(x) * 10000 for x in re.findall(r"(\d+)\s*만\s*원?", t)]
     vals += [int(x) for x in re.findall(r"(\d{4,6})\s*원", t)]   # '39000원'
     vals = [v for v in vals if 0 < v <= 1_500_000]       # 1인 캐시백 현실 상한(105만 등 프리미엄 해외 혜택 허용)
@@ -604,11 +635,16 @@ def _won_of(s):
 
 def _text_bd(text, total):
     """reward_text의 '+' 구분 티어에서 부가(원) 추정 — 토스/카카오 시드용.
-    첫 구간=주요(임계 결제 캐시백), 이후 '+' 구간 합=부가. 분해 불가 시 0. 전체 미만으로 캡."""
+    ① 첫 구간(결제 캐시백)에 금액이 있으면 주요=그 금액, 부가=전체-주요(시드 텍스트가 일부 티어만 담아도 정확).
+    ② 첫 구간에 금액이 없으면(예 '20만원 이상') 폴백: 부가=이후 구간 합. 분해 불가 시 0(전체 미만 캡)."""
     parts = re.split(r"\s*\+\s*", text or "")
     if len(parts) < 2: return 0
-    bonus = sum(_won_of(p) for p in parts[1:])
-    return min(bonus, max((total or 0) - 10000, 0))
+    total = total or 0
+    main = _won_of(parts[0])                       # 첫 티어 = 결제 캐시백(주요)
+    if main > 0:
+        return total - main if 0 < main < total else 0   # 부가 = 전체 - 주요
+    bonus = sum(_won_of(p) for p in parts[1:])      # 폴백: 첫 구간 금액 없음 → 이후 합
+    return min(bonus, max(total - 10000, 0))
 
 def scrape_cardgorilla_meta():
     """카드고릴라 카드 상세에서 연회비·전월실적·주요혜택(재작성)을 수집해 scrape/cg_meta.json 작성."""
