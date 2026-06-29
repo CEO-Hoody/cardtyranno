@@ -1584,22 +1584,18 @@ Promise.all([
  if(!P&&focusNk){var fp=PE.filter(function(p){return _nk(p.name)===focusNk;})[0];if(fp){var mx=0;(fp.events||[]).forEach(function(e){if((e.reward_won||0)>mx){mx=e.reward_won;P=e.platform;}});}}
  if(!P){root.innerHTML='<div class="empty" style="padding:60px 0">플랫폼 정보가 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
  function evOf(p){return (p.events||[]).filter(function(e){return e.platform===P&&e.reward_won;}).sort(function(a,b){return b.reward_won-a.reward_won;})[0];}
- // 캠페인 키 = 이벤트 랜딩 URL(쿼리·해시 제거). 같은 URL = 같은 발급 캐시백(캠페인).
- function _cu(p,e){var pp=(p.platforms||{})[P]||{};var u=(e&&e.url)||pp.url||'';return (''+u).split('?')[0].split('#')[0].replace(/\/+$/,'');}
- var platGroup=PE.map(function(p){var e=evOf(p);return e?{p:p,e:e,cu:_cu(p,e)}:null;}).filter(Boolean).sort(function(a,b){return b.e.reward_won-a.e.reward_won;});
+ // 리워드 그룹 키 = 같은 월·플랫폼·카드사·조건(=캐시백 금액). 데이터는 당월(month) 단위라 (플랫폼,카드사,reward_won)로 묶음.
+ var platGroup=PE.map(function(p){var e=evOf(p);return e?{p:p,e:e}:null;}).filter(Boolean).sort(function(a,b){return b.e.reward_won-a.e.reward_won;});
  if(!platGroup.length){root.innerHTML='<div class="empty" style="padding:60px 0">이 플랫폼의 발급 캐시백이 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
  var anchor=(focusNk?platGroup.filter(function(g){return _nk(g.p.name)===focusNk;})[0]:null)||platGroup[0];
- var campaignCu=anchor.cu;
- var sameCu=campaignCu?platGroup.filter(function(g){return g.cu===campaignCu;}):[anchor];
- // 진짜 캠페인 = 2개 이상이 같은 URL 공유 & 플랫폼 전체는 아님(네이버 등 제네릭 랜딩 제외). 그 외 = 진입 카드 1건.
- var isCampaign=(sameCu.length>=2 && sameCu.length<platGroup.length);
- var group=(isCampaign?sameCu.slice():[anchor]).sort(function(a,b){return b.e.reward_won-a.e.reward_won;});
+ var aIss=(anchor.p.issuer||''),aR=anchor.e.reward_won;
+ var group=platGroup.filter(function(g){return (g.p.issuer||'')===aIss && g.e.reward_won===aR;}).sort(function(a,b){return (a.p.name||'').localeCompare(b.p.name||'','ko');});
  var focusIdx=0;for(var gi=0;gi<group.length;gi++){if(group[gi]===anchor){focusIdx=gi;break;}}
  var col=PBC[P]||'#888',pnm=PNM[P]||P;
  Promise.all(months.map(function(m){return m===_cm?Promise.resolve(null):fetch('history/'+m+'.json').then(function(r){return r.json();}).catch(function(){return null;});})).then(function(MS){
   var head='<div class="rg-head"><div><div class="rg-pchip"><i style="background:'+col+'"></i><b>'+pnm+'</b><span class="mono">플랫폼</span></div>'
    +'<h1 class="rg-h">이번달 발급 캐시백</h1>'
-   +'<p class="rg-sub">'+(group.length>1?(pnm+'의 이 발급 캐시백 이벤트에 <b>'+group.length+'개 카드</b>가 함께 들어 있어요.'):(pnm+'에서 <b>'+anchor.p.name+'</b>를 발급하면 받는 캐시백이에요.'))+'</p>'
+   +'<p class="rg-sub">'+(group.length>1?(pnm+'에서 <b>'+aIss+'</b> · 같은 조건(최대 '+_wm(aR)+')으로 받는 발급 캐시백이에요. <b>'+group.length+'개 카드</b>가 들어 있어요.'):(pnm+'에서 <b>'+anchor.p.name+'</b>를 발급하면 받는 캐시백이에요.'))+'</p>'
    +'<a class="rg-cta" id="rgHeadCta" href="#" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div>'
    +'<div class="rg-deco"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div></div>';
   var listRows=group.map(function(g,i){var p=g.p,e=g.e;var pc=PLATEC[i%6];var ink=(pc.indexOf('navy')>=0)?'#fff':'#000';
@@ -1649,7 +1645,7 @@ Promise.all([
    if(op&&opw>S.total)orows.push({tag:'다른 플랫폼 · 더 큼',tagBg:'var(--block-lime)',tagFg:'#000',name:p.name,issuer:p.issuer,plat:op.platform,amt:opw,img:p.img,href:'events.html?platform='+op.platform+'&n='+encodeURIComponent(p.name)});
    var si=PE.filter(function(q){return q.issuer===p.issuer&&_nk(q.name)!==nk;}).map(function(q){var ee=evOf(q);return ee?{q:q,w:ee.reward_won}:null;}).filter(Boolean).sort(function(a,b){return b.w-a.w;})[0];
    if(si)orows.push({tag:'같은 카드사 · '+pnm,tagBg:'var(--surface-soft)',tagFg:'rgba(0,0,0,.7)',name:si.q.name,issuer:si.q.issuer,plat:P,amt:si.w,img:si.q.img,href:'events.html?platform='+P+'&n='+encodeURIComponent(si.q.name)});
-   var top=group[0];if(top&&top.e.reward_won!==S.total)orows.push({tag:'이번달 최대 혜택',tagBg:'#000',tagFg:'#fff',name:top.p.name,issuer:top.p.issuer,plat:P,amt:top.e.reward_won,img:top.p.img,href:'events.html?platform='+P+'&n='+encodeURIComponent(top.p.name)});
+   var pmax=platGroup[0];if(pmax&&pmax.e.reward_won>S.total&&_nk(pmax.p.name)!==nk)orows.push({tag:'이번달 최대 혜택',tagBg:'#000',tagFg:'#fff',name:pmax.p.name,issuer:pmax.p.issuer,plat:P,amt:pmax.e.reward_won,img:pmax.p.img,href:'events.html?platform='+P+'&n='+encodeURIComponent(pmax.p.name)});
    var othersHtml=orows.length?('<div class="rg-sec"><h2 class="rg-t">이런 이벤트도 있어요</h2><div class="rg-others">'+orows.map(function(o){var oc=PBC[o.plat]||'#888';return '<a class="rg-orow" href="'+o.href+'"><div class="rg-pl" style="width:54px">'+imgTag(o.img)+'</div><div><span class="rg-otag" style="background:'+o.tagBg+';color:'+o.tagFg+'">'+o.tag+'</span><div class="rg-pn"><b style="font-size:15px">'+o.name+'</b></div><div class="rg-pi"><i style="display:inline-block;width:6px;height:6px;border-radius:50%;background:'+oc+';margin-right:5px"></i>'+(o.issuer||'')+' · '+(PNM[o.plat]||o.plat)+'</div></div><div class="rg-pcash"><div class="l">캐시백</div><div class="v">'+_wm(o.amt)+'</div></div><svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>';}).join('')+'</div></div>'):'';
    var foot='<div class="rg-foot">· 표기된 캐시백·조건은 공개 데이터 수집 시점 기준이며 실제 적용 금액·조건은 달라질 수 있어요. <b>상세한 캐시백 정보는 각 플랫폼사에서 최종 확인하세요.</b> 카드티라노는 발급을 중개·접수하지 않는 광고·정보제공 매체입니다.</div>';
    document.getElementById('rgDyn').innerHTML=chart+comp+coach+othersHtml+foot;
