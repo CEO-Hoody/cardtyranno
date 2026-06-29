@@ -1071,6 +1071,17 @@ ISSUE_BODY=('<style>'
  '.pcardm-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}'
  '.pcardm .pmc{flex:1;min-width:56px;text-align:center;background:var(--surface2);border-radius:10px;padding:7px 6px}'
  '.pcardm .pmc.mx{background:#000000;color:#fff}.pcardm .pmc-n{font-size:9.5px;opacity:.7}.pcardm .pmc-v{font-size:13px;font-weight:800;margin-top:2px}'
+ # 모바일 B안: 미니 막대 슬롯(접힘/펼침)
+ '.pbar-card{border:1px solid var(--line);border-radius:16px;padding:15px 16px;margin-bottom:11px;background:var(--surface);cursor:pointer}'
+ '.pbar-hd{font-weight:800;font-size:15.5px;letter-spacing:-.3px}.pbar-hd .psub{font-family:var(--font-mono,monospace);font-size:9px;color:var(--dim);margin-left:7px;font-weight:400}'
+ '.pbar-rows{display:flex;flex-direction:column;gap:9px;margin-top:12px}'
+ '.pbar-row{display:flex;align-items:center;gap:9px}.pbar-row .dot{width:7px;height:7px;border-radius:50%;flex:0 0 auto}'
+ '.pbar-row .pn{width:64px;flex:0 0 auto;font-weight:540;font-size:12px;color:rgba(0,0,0,.6);white-space:nowrap;display:inline-flex;align-items:center;gap:3px}.pbar-row .pn.best{color:#000}.pbar-row .pn svg{width:11px;height:11px;color:#000}'
+ '.pbar-row .tr{flex:1;height:9px;border-radius:50px;background:var(--surface2);overflow:hidden}.pbar-row .tr i{display:block;height:100%;border-radius:50px}'
+ '.pbar-row .amt{width:42px;text-align:right;flex:0 0 auto;font-weight:700;font-size:13px;color:rgba(0,0,0,.55);white-space:nowrap}.pbar-row .amt.best{color:#000}'
+ '.pbar-row.extra{display:none}.pbar-card.open .pbar-row.extra{display:flex}'
+ '.pbar-toggle{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:13px;padding-top:12px;border-top:1px solid var(--hairline-soft);cursor:pointer;font-weight:540;font-size:12.5px;color:rgba(0,0,0,.6)}'
+ '.pbar-toggle .chev{transition:transform .3s}.pbar-card.open .pbar-toggle .chev{transform:rotate(180deg)}'
  '@media(max-width:680px){.pcmp-hero{padding:28px 22px}.pcmp-hero h1{font-size:29px}.pcmp-spread{flex-direction:column;align-items:flex-start}.pcmp-spread .splate{width:128px;align-self:flex-end;margin-top:-30px}.pbasis{flex-direction:column;align-items:stretch;gap:8px}.pchips{flex-wrap:wrap}.ptblwrap{display:none}.pcardlist{display:block}}'
  # 이번달 캐시백 = 가로 플레이트 카드 3열 그리드(시안: 발급 이벤트.dc.html repeat(3,1fr))
  '#view-ev #list{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:6px}'
@@ -1166,9 +1177,12 @@ var PNAME={cardgorilla:"카드고릴라",banksalad:"뱅크샐러드",toss:"토�
 function renderPlatToggle(){var el=document.getElementById('platToggle');if(!el)return;el.innerHTML=PORD.map(function(pk){var on=!!VIS[pk];return '<button class="ptogb'+(on?' on':'')+'" data-pt="'+pk+'"><i style="background:'+(PBC[pk]||"#888")+'"></i>'+(PSHORT[pk]||PNAME[pk]||pk)+'</button>';}).join('');}
 var _pt=document.getElementById('platToggle');if(_pt)_pt.addEventListener('click',function(e){var b=e.target.closest('button[data-pt]');if(!b)return;var pk=b.getAttribute('data-pt');var on=PORD.filter(function(k){return VIS[k];}).length;if(VIS[pk]&&on<=2)return;VIS[pk]=VIS[pk]?0:1;renderPlatToggle();renderProd();renderIss();});
 // 기준 플랫폼 칩(테이블 정렬 기준 변경) — cmp-prod 내부에 렌더되므로 위임 처리
-document.getElementById('cmp-prod').addEventListener('click',function(e){var b=e.target.closest('#pchips button');if(!b)return;e.preventDefault();basis=b.dataset.b;renderProd();renderIss();});
+// 모바일 B안 막대 슬롯: '+N곳 더보기' 토글 + 카드 탭 시 상세 이동(위임)
+function _pbarClick(e){var tg=e.target.closest('.pbar-toggle');if(tg){var card=tg.closest('.pbar-card');if(card){var op=card.classList.toggle('open');var more=card.getAttribute('data-more');var l=tg.querySelector('.lbl');if(l)l.textContent=op?'접기':('+'+more+'곳 더보기');}return true;}var pc=e.target.closest('.pbar-card');if(pc&&pc.getAttribute('data-href')){location.href=pc.getAttribute('data-href');return true;}return false;}
+document.getElementById('cmp-prod').addEventListener('click',function(e){if(_pbarClick(e))return;var b=e.target.closest('#pchips button');if(!b)return;e.preventDefault();basis=b.dataset.b;renderProd();renderIss();});
 // 카드사별: 기준 플랫폼·카드사 필터·정렬 위임 처리
 document.getElementById('cmp-iss').addEventListener('click',function(e){
+ if(_pbarClick(e))return;
  var pb=e.target.closest('[data-pchips] button');if(pb){e.preventDefault();basis=pb.getAttribute('data-b');renderProd();renderIss();return;}
  var fb=e.target.closest('[data-if]');if(fb){issFilter=fb.getAttribute('data-if');renderIss();return;}
  var sb=e.target.closest('[data-is]');if(sb){issSort=sb.getAttribute('data-is');renderIss();return;}});
@@ -1232,8 +1246,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   var head='<div class="ptr hd" style="grid-template-columns:'+gc+'"><div>카드사 ('+rows.length+')</div>'+VL.map(function(pk){return '<div'+(pk===basis?' style="color:var(--text);font-weight:800"':'')+'>'+_pdk(pk,true)+'</div>';}).join('')+'</div>';
   var body=rows.map(function(r){var cells=VL.map(function(pk){var o=r.o[pk];var v=mval(o,cashMode);if(!v)return '<span class="cell"><span class="chip no">–</span></span>';var top=(v===r.mx);return '<a class="cell" href="issue.html?issuer='+encodeURIComponent(r.iss)+'&plat='+encodeURIComponent(PN[pk]||pk)+'"><span class="chip'+(top?' mx':'')+'">'+(top?HEART:'')+_chipW(v)+'</span>'+(cashMode==='t'?_capBD(o):'')+'</a>';}).join('');
    return '<div class="ptr" style="grid-template-columns:'+gc+'"><a class="pc" href="issue.html?issuer='+encodeURIComponent(r.iss)+'"><span class="issmk"><svg viewBox="2 3.6 20 16.4" aria-hidden="true"><use href="#mk"/></svg></span><div><div class="pcn">'+_es(r.iss)+'</div><div class="pci" style="font-family:inherit;font-size:11.5px;color:var(--sub)">보유 '+r.count+'종 · 대표 '+_es(r.rep)+'</div></div></a>'+cells+'</div>'+_nudge(r.o);}).join('');
-  var mc='<div class="pcardlist">'+rows.map(function(r){var c2=VL.filter(function(pk){return mval(r.o[pk],cashMode);}).sort(function(a,b){return mval(r.o[b],cashMode)-mval(r.o[a],cashMode);}).map(function(pk){var v=mval(r.o[pk],cashMode);return '<div class="pmc'+(v===r.mx?' mx':'')+'"><div class="pmc-n">'+PN[pk]+'</div><div class="pmc-v">'+(v===r.mx?HEART:'')+_chipW(v)+'</div></div>';}).join('');
-   return '<a class="pcardm" href="issue.html?issuer='+encodeURIComponent(r.iss)+'"><div class="pcardm-top"><div class="pcardm-info"><div class="pcn">'+_es(r.iss)+'</div><div class="pci">보유 '+r.count+'종 · 대표 '+_es(r.rep)+'</div></div><div class="pcardm-best"><div class="bl">최대</div><div class="bv">'+_chipW(r.mx)+'</div></div></div><div class="pcardm-chips">'+c2+'</div>'+_nudge(r.o)+'</a>';}).join('')+'</div>';
+  var mc='<div class="pcardlist">'+rows.map(function(r){return _pbar('issue.html?issuer='+encodeURIComponent(r.iss),_es(r.iss),'보유 '+r.count+'종 · 대표 '+_es(r.rep),r.o);}).join('')+'</div>';
   var note='<div class="pcmpnote"><span class="dot"></span><svg viewBox="0 0 24 24" width="13" height="13" style="color:#000"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg> = 이 카드사의 최고 궁합(커플) 플랫폼 · 셀을 누르면 그 카드사·플랫폼 캐시백 목록으로 · 금액은 수집 시점 기준이에요.</div>';
   document.getElementById('cmp-iss').innerHTML=rows.length?(ctl+chips+'<div class="ptblwrap"><div class="ptbl">'+head+body+'</div></div>'+mc+note):'<div class="empty">데이터 준비 중</div>';
  };
@@ -1251,6 +1264,15 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   var el=document.getElementById('pcmp-spread');if(!el)return;
   if(best&&gap>0){el.innerHTML='<div class="pcmp-spread"><div><div class="sl">이 달의 최대 격차</div><div class="st">'+best.name+', 채널 따라<br>최대 '+_wm(gap)+' 차이</div><div class="ss">'+PN[bp]+' '+_wm(mxv)+' · '+PN[wp]+' '+_wm(mnv)+'</div></div><div class="splate">'+imgTag(best.img)+'</div></div>';}else{el.innerHTML='';}})();
  function _chipW(w){var s=_wm(w);return s.replace('만원','만').replace('원','');}
+ // 모바일 B안: 카드(사)별 미니 막대 슬롯 — 표시 플랫폼 중 상위3 기본, +N곳 더보기로 전체
+ function _pbar(href,title,sub,o){var VL=visList();
+  var bars=VL.map(function(pk){return {pk:pk,v:mval(o[pk],cashMode)};}).filter(function(x){return x.v>0;}).sort(function(a,b){return b.v-a.v;});
+  if(!bars.length)return '';var mx=bars[0].v;
+  function row(x,i,ex){var best=(i===0);return '<div class="pbar-row'+(ex?' extra':'')+'"><span class="dot" style="background:'+(PBC[x.pk]||"#888")+'"></span><span class="pn'+(best?" best":"")+'">'+(best?HEART:'')+(PN[x.pk]||x.pk)+'</span><span class="tr"><i style="width:'+Math.max(6,Math.round(x.v/mx*100))+'%;background:'+(best?"#000":"#cfcfcf")+'"></i></span><span class="amt'+(best?" best":"")+'">'+_chipW(x.v)+'</span></div>';}
+  var html=bars.map(function(x,i){return row(x,i,i>=3);}).join('');
+  var more=bars.length-3;
+  var tg=more>0?'<div class="pbar-toggle"><span class="lbl">+'+more+'곳 더보기</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>':'';
+  return '<div class="pbar-card" data-href="'+href+'" data-more="'+(more>0?more:0)+'"><div class="pbar-hd">'+title+(sub?'<span class="psub">'+sub+'</span>':'')+'</div><div class="pbar-rows">'+html+'</div>'+tg+'</div>';}
  // 인라인 넛지: 전체1위 ≠ 주요1위 & 주요격차 ≥ 2만원 → 크림 띠(전체 모드 한정)
  function _nudge(o){if(cashMode!=='t')return '';var ks=PORD.filter(function(pk){return o[pk]&&o[pk].t;});if(ks.length<2)return '';
   var bt=ks.reduce(function(a,b){return o[b].t>o[a].t?b:a;});var bm=ks.reduce(function(a,b){return o[b].m>o[a].m?b:a;});
@@ -1268,9 +1290,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   var chips='<div class="pbasis"><div><div class="bl">기준 플랫폼</div><div class="bt">'+PN[basis]+' 캐시백 순으로 정렬돼요</div></div><div class="pchips" id="pchips">'+PORD.map(function(pk){return '<button data-b="'+pk+'"'+(pk===basis?' class="on"':'')+'>'+_pdk(pk,true)+'</button>';}).join('')+'</div></div>';
   var note='<div class="pcmpnote"><span class="dot"></span><svg viewBox="0 0 24 24" width="13" height="13" style="color:#000"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg> = 이 카드의 최고 궁합(커플) 플랫폼 · 행 최대값 · 셀을 누르면 이번달 캐시백 상세로 이동 · 금액은 수집 시점 기준이에요.</div>';
   // 모바일 시안: 카드별 스택 카드(플레이트+이름+최대+사이트별 캐시백 칩, 최대=검은칩)
-  var pcards='<div class="pcardlist">'+rows.map(function(c){var vals=VL.map(function(pk){return mval(c.o[pk],cashMode);});var mx=Math.max.apply(null,vals);
-    var chips2=VL.filter(function(pk){return mval(c.o[pk],cashMode);}).sort(function(a,b){return mval(c.o[b],cashMode)-mval(c.o[a],cashMode);}).map(function(pk){var v=mval(c.o[pk],cashMode);return '<div class="pmc'+(v===mx?' mx':'')+'"><div class="pmc-n">'+PN[pk]+'</div><div class="pmc-v">'+(v===mx?HEART:'')+_chipW(v)+'</div></div>';}).join('');
-    return '<a class="pcardm" href="carddetail.html?n='+encodeURIComponent(c.name||'')+'" data-track="cmp" data-label="'+(c.name||'')+'"><div class="pcardm-top"><div class="pcimg">'+imgTag(c.img)+'</div><div class="pcardm-info"><div class="pcn">'+c.name+'</div><div class="pci">'+c.issuer+'</div></div><div class="pcardm-best"><div class="bl">최대</div><div class="bv">'+_chipW(mx)+'</div></div></div><div class="pcardm-chips">'+chips2+'</div>'+_nudge(c.o)+'</a>';}).join('')+'</div>';
+  var pcards='<div class="pcardlist">'+rows.map(function(c){return _pbar('carddetail.html?n='+encodeURIComponent(c.name||''),c.name,c.issuer,c.o);}).join('')+'</div>';
   document.getElementById('cmp-prod').innerHTML=rows.length?(chips+'<div class="ptblwrap"><div class="ptbl">'+head+body+'</div></div>'+pcards+note):'<div class="empty">교차비교 카드가 없어요.</div>';
   if(window.repairImages)repairImages();};
  renderProd();renderPlatToggle();
