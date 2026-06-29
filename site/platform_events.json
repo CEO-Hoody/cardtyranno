@@ -56,8 +56,8 @@
      "reward_won": 579000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 470000,
-     "bonus_won": 109000,
+     "main_won": 200000,
+     "bonus_won": 379000,
      "breakdown": [
       {
        "text": "57.9만원 혜택",
@@ -179,8 +179,8 @@
      "reward_won": 579000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 470000,
-     "bonus_won": 109000,
+     "main_won": 200000,
+     "bonus_won": 379000,
      "breakdown": [
       {
        "text": "57.9만원 혜택",
@@ -273,8 +273,8 @@
      "reward_won": 579000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 470000,
-     "bonus_won": 109000,
+     "main_won": 200000,
+     "bonus_won": 379000,
      "breakdown": [
       {
        "text": "57.9만원 혜택",
@@ -376,8 +376,8 @@
      "reward_won": 125000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
-     "main_won": 75000,
-     "bonus_won": 50000,
+     "main_won": 90000,
+     "bonus_won": 35000,
      "breakdown": [
       {
        "text": "12.5만원 캐시백",
@@ -473,8 +473,8 @@
      "reward_won": 640000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 330000,
-     "bonus_won": 310000,
+     "main_won": 180000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "64만원 혜택",
@@ -527,8 +527,15 @@
      "reward_won": 494000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
-     "main_won": 494000,
-     "bonus_won": 0
+     "main_won": 120000,
+     "bonus_won": 374000,
+     "breakdown": [
+      {
+       "text": "49.4만원 혜택",
+       "won": 494000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "naver",
@@ -618,8 +625,8 @@
      "reward_won": 1170000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
-     "main_won": 1160000,
-     "bonus_won": 10000,
+     "main_won": 110000,
+     "bonus_won": 1060000,
      "breakdown": [
       {
        "text": "117만원 캐시백",
@@ -712,8 +719,8 @@
      "reward_won": 685000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
-     "main_won": 135000,
-     "bonus_won": 550000,
+     "main_won": 170000,
+     "bonus_won": 515000,
      "breakdown": [
       {
        "text": "68.5만원 캐시백",
@@ -896,15 +903,8 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 720000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "78만원 혜택",
-       "won": 780000,
-       "cond": false
-      }
-     ]
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -1014,8 +1014,8 @@
      "reward_won": 670000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 360000,
-     "bonus_won": 310000,
+     "main_won": 200000,
+     "bonus_won": 470000,
      "breakdown": [
       {
        "text": "67만원 혜택",
@@ -1256,8 +1256,8 @@
      "reward_won": 175000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
-     "main_won": 25000,
-     "bonus_won": 150000,
+     "main_won": 80000,
+     "bonus_won": 95000,
      "breakdown": [
       {
        "text": "17.5만원 캐시백",
@@ -1310,8 +1310,8 @@
      "reward_won": 570000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/8",
-     "main_won": 470000,
-     "bonus_won": 100000,
+     "main_won": 20000,
+     "bonus_won": 550000,
      "breakdown": [
       {
        "text": "57만원 혜택",
@@ -1407,8 +1407,15 @@
      "reward_won": 124000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
-     "main_won": 124000,
-     "bonus_won": 0
+     "main_won": 100000,
+     "bonus_won": 24000,
+     "breakdown": [
+      {
+       "text": "기존회원 12.4만원 혜택",
+       "won": 124000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "naver",
@@ -1472,8 +1479,8 @@
      "reward_won": 860000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
-     "main_won": 260000,
-     "bonus_won": 600000,
+     "main_won": 230000,
+     "bonus_won": 630000,
      "breakdown": [
       {
        "text": "86만원 캐시백",
@@ -1970,8 +1977,8 @@
      "reward_won": 450000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
-     "main_won": 350000,
-     "bonus_won": 100000,
+     "main_won": 130000,
+     "bonus_won": 320000,
      "breakdown": [
       {
        "text": "45만원 캐시백",
@@ -2040,8 +2047,8 @@
      "reward_won": 450000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
-     "main_won": 350000,
-     "bonus_won": 100000,
+     "main_won": 130000,
+     "bonus_won": 320000,
      "breakdown": [
       {
        "text": "45만원 캐시백",
@@ -2110,8 +2117,8 @@
      "reward_won": 450000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
-     "main_won": 350000,
-     "bonus_won": 100000,
+     "main_won": 130000,
+     "bonus_won": 320000,
      "breakdown": [
       {
        "text": "45만원 캐시백",
@@ -2602,8 +2609,15 @@
      "reward_won": 494000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
-     "main_won": 494000,
-     "bonus_won": 0
+     "main_won": 120000,
+     "bonus_won": 374000,
+     "breakdown": [
+      {
+       "text": "49.4만원 혜택",
+       "won": 494000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "banksalad",
@@ -2701,8 +2715,8 @@
      "reward_won": 559000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 450000,
-     "bonus_won": 109000,
+     "main_won": 180000,
+     "bonus_won": 379000,
      "breakdown": [
       {
        "text": "55.9만원 혜택+라운지 이용권",
@@ -2939,8 +2953,8 @@
      "reward_won": 130000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 120000,
-     "bonus_won": 10000,
+     "main_won": 90000,
+     "bonus_won": 40000,
      "breakdown": [
       {
        "text": "13만원 혜택",
@@ -3225,8 +3239,15 @@
      "reward_won": 200000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 100000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "20만원 혜택",
+       "won": 200000,
+       "cond": false
+      }
+     ]
     }
    ]
   },
@@ -3252,8 +3273,15 @@
      "reward_won": 200000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 100000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "20만원 혜택",
+       "won": 200000,
+       "cond": false
+      }
+     ]
     }
    ]
   },
@@ -3279,8 +3307,8 @@
      "reward_won": 860000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
-     "main_won": 260000,
-     "bonus_won": 600000,
+     "main_won": 230000,
+     "bonus_won": 630000,
      "breakdown": [
       {
        "text": "86만원 캐시백",
@@ -3341,8 +3369,8 @@
      "reward_won": 860000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
-     "main_won": 260000,
-     "bonus_won": 600000,
+     "main_won": 230000,
+     "bonus_won": 630000,
      "breakdown": [
       {
        "text": "86만원 캐시백",
@@ -3447,8 +3475,8 @@
      "reward_won": 860000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
-     "main_won": 260000,
-     "bonus_won": 600000,
+     "main_won": 230000,
+     "bonus_won": 630000,
      "breakdown": [
       {
        "text": "86만원 캐시백",
@@ -3522,8 +3550,8 @@
      "reward_won": 860000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
-     "main_won": 260000,
-     "bonus_won": 600000,
+     "main_won": 230000,
+     "bonus_won": 630000,
      "breakdown": [
       {
        "text": "86만원 캐시백",
@@ -3585,8 +3613,8 @@
      "reward_won": 125000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
-     "main_won": 75000,
-     "bonus_won": 50000,
+     "main_won": 90000,
+     "bonus_won": 35000,
      "breakdown": [
       {
        "text": "12.5만원 캐시백",
@@ -3648,8 +3676,8 @@
      "reward_won": 125000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
-     "main_won": 75000,
-     "bonus_won": 50000,
+     "main_won": 90000,
+     "bonus_won": 35000,
      "breakdown": [
       {
        "text": "12.5만원 캐시백",
@@ -3711,8 +3739,8 @@
      "reward_won": 125000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
-     "main_won": 75000,
-     "bonus_won": 50000,
+     "main_won": 90000,
+     "bonus_won": 35000,
      "breakdown": [
       {
        "text": "12.5만원 캐시백",
@@ -3801,8 +3829,8 @@
      "reward_won": 640000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 330000,
-     "bonus_won": 310000,
+     "main_won": 180000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "64만원 혜택",
@@ -3891,8 +3919,8 @@
      "reward_won": 640000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 330000,
-     "bonus_won": 310000,
+     "main_won": 180000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "64만원 혜택",
@@ -3981,8 +4009,8 @@
      "reward_won": 640000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 330000,
-     "bonus_won": 310000,
+     "main_won": 180000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "64만원 혜택",
@@ -4051,8 +4079,8 @@
      "reward_won": 670000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 360000,
-     "bonus_won": 310000,
+     "main_won": 200000,
+     "bonus_won": 470000,
      "breakdown": [
       {
        "text": "67만원 혜택",
@@ -4234,8 +4262,8 @@
      "reward_won": 789000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 670000,
-     "bonus_won": 119000,
+     "main_won": 200000,
+     "bonus_won": 589000,
      "breakdown": [
       {
        "text": "78.9만원 혜택",
@@ -4308,8 +4336,8 @@
      "reward_won": 789000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 670000,
-     "bonus_won": 119000,
+     "main_won": 200000,
+     "bonus_won": 589000,
      "breakdown": [
       {
        "text": "78.9만원 혜택",
@@ -4378,8 +4406,8 @@
      "reward_won": 789000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 670000,
-     "bonus_won": 119000,
+     "main_won": 200000,
+     "bonus_won": 589000,
      "breakdown": [
       {
        "text": "78.9만원 혜택",
@@ -4452,8 +4480,8 @@
      "reward_won": 579000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 470000,
-     "bonus_won": 109000,
+     "main_won": 200000,
+     "bonus_won": 379000,
      "breakdown": [
       {
        "text": "57.9만원 혜택",
@@ -4534,8 +4562,8 @@
      "reward_won": 349000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 230000,
-     "bonus_won": 119000,
+     "main_won": 190000,
+     "bonus_won": 159000,
      "breakdown": [
       {
        "text": "34.9만원 혜택",
@@ -4608,8 +4636,8 @@
      "reward_won": 349000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 230000,
-     "bonus_won": 119000,
+     "main_won": 190000,
+     "bonus_won": 159000,
      "breakdown": [
       {
        "text": "34.9만원 혜택",
@@ -4658,8 +4686,8 @@
      "reward_won": 579000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
-     "main_won": 470000,
-     "bonus_won": 109000,
+     "main_won": 200000,
+     "bonus_won": 379000,
      "breakdown": [
       {
        "text": "57.9만원 혜택",
@@ -4808,8 +4836,8 @@
      "reward_won": 175000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
-     "main_won": 25000,
-     "bonus_won": 150000,
+     "main_won": 80000,
+     "bonus_won": 95000,
      "breakdown": [
       {
        "text": "17.5만원 캐시백",
@@ -4902,8 +4930,8 @@
      "reward_won": 175000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
-     "main_won": 25000,
-     "bonus_won": 150000,
+     "main_won": 80000,
+     "bonus_won": 95000,
      "breakdown": [
       {
        "text": "17.5만원 캐시백",
@@ -5025,15 +5053,8 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 690000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "75만원 혜택",
-       "won": 750000,
-       "cond": false
-      }
-     ]
+     "main_won": 750000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -5087,15 +5108,8 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 690000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "75만원 혜택",
-       "won": 750000,
-       "cond": false
-      }
-     ]
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -5145,15 +5159,8 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 690000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "75만원 혜택",
-       "won": 750000,
-       "cond": false
-      }
-     ]
+     "main_won": 750000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -5207,15 +5214,8 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 690000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "75만원 혜택",
-       "won": 750000,
-       "cond": false
-      }
-     ]
+     "main_won": 750000,
+     "bonus_won": 0
     }
    ]
   },
@@ -5278,15 +5278,8 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 690000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "75만원 혜택",
-       "won": 750000,
-       "cond": false
-      }
-     ]
+     "main_won": 750000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -5372,15 +5365,8 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 720000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "78만원 혜택",
-       "won": 780000,
-       "cond": false
-      }
-     ]
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -5482,15 +5468,8 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 720000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "78만원 혜택",
-       "won": 780000,
-       "cond": false
-      }
-     ]
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -5588,15 +5567,8 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 720000,
-     "bonus_won": 60000,
-     "breakdown": [
-      {
-       "text": "78만원 혜택",
-       "won": 780000,
-       "cond": false
-      }
-     ]
+     "main_won": 780000,
+     "bonus_won": 0
     },
     {
      "platform": "kakaopay",
@@ -6363,8 +6335,8 @@
      "reward_won": 590000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 280000,
-     "bonus_won": 310000,
+     "main_won": 130000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "59만원 혜택",
@@ -6397,8 +6369,8 @@
      "reward_won": 590000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 280000,
-     "bonus_won": 310000,
+     "main_won": 130000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "59만원 혜택",
@@ -6440,8 +6412,8 @@
      "reward_won": 590000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 280000,
-     "bonus_won": 310000,
+     "main_won": 130000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "59만원 혜택",
@@ -6494,8 +6466,8 @@
      "reward_won": 590000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/4",
-     "main_won": 280000,
-     "bonus_won": 310000,
+     "main_won": 130000,
+     "bonus_won": 460000,
      "breakdown": [
       {
        "text": "59만원 혜택",
