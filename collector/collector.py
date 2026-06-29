@@ -929,6 +929,23 @@ if __name__=="__main__":
             "url":ev_url}
         cg_inj+=1
     if cg_inj: print(f"카드고릴라 이벤트 라벨 주입 {cg_inj}건")
+    # 카드사 자체 이벤트: 거주지 수집 issuer_seed.json 주입(네이버/아정당과 동일 패턴, platform='issuer')
+    try:
+        _iss=json.load(open(os.path.join(BASE,"issuer_seed.json"),encoding="utf-8")).get("cards",{})
+        _bi3={_nk(p["name"]):p for p in products}; _isn=0
+        for nm,info in _iss.items():
+            p=_bi3.get(_nk(nm))
+            if not p or not info.get("reward_won"): continue
+            u=info.get("url","")
+            p.setdefault("platforms",{})["issuer"]={"id":"","url":u}
+            injected[(p["name"],"issuer")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
+                                            "period_start":info.get("period_start"),"period_end":info.get("period_end"),"url":u}
+            if info.get("main_won") is not None or info.get("bonus_won"):
+                BREAKDOWN[(p["name"],"issuer")]={"main":info.get("main_won") or 0,"bonus":info.get("bonus_won") or 0}
+            _isn+=1
+        if _isn: print(f"카드사 자체 이벤트 주입 {_isn}건")
+    except FileNotFoundError: print("issuer_seed.json 없음 — 카드사 직접수집 주입 스킵(정상)")
+    except Exception as _e6: print("issuer seed err", _e6)
     print(f"총 상품 {len(products)}개 수집 시작")
     run(products, today, injected=injected or None)
     try: export_card_meta(products)

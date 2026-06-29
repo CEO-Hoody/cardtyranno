@@ -1,0 +1,6 @@
+{
+ "_comment": "카드사 자체 이벤트 거주지 수집 결과. collect_issuer_local.py(로컬 맥)가 채웁니다. 비어있으면 collector가 주입을 스킵합니다(정상).",
+ "as_of": "2026-06",
+ "source": "issuer_local",
+ "cards": {}
+}

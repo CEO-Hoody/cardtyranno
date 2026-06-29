@@ -1,0 +1,12 @@
+{
+ "_comment": "카드사별 '이벤트(진행중) 리스트' 페이지 URL. 사이트 개편으로 자주 바뀌므로, 처음 실행 후 0건인 카드사는 브라우저에서 해당 카드사 '이벤트' 메뉴 URL을 복사해 교체하세요. 각 카드사당 여러 URL을 배열로 넣으면 모두 탐색합니다. (삼성카드는 2026-06 기준 동작 확인)",
+ "삼성카드": ["https://www.samsungcard.com/personal/event/ing/UHPPBE1401M0.jsp"],
+ "현대카드": ["https://www.hyundaicard.com/cpe/ev/CPEVA0101_01.hc"],
+ "KB국민카드": ["https://card.kbcard.com/CRD/DVIEW/HCAMCXEVTIBXC0001"],
+ "신한카드": ["https://www.shinhancard.com/pconts/html/benefit/event/MOBFM281.html"],
+ "롯데카드": ["https://www.lottecard.co.kr/app/LPEVNAEventIngList.lc"],
+ "우리카드": ["https://pc.wooricard.com/dcpc/yh1/evt/evt/H1EVT0001.do"],
+ "하나카드": ["https://www.hanacard.co.kr/OPI41000000D.web"],
+ "NH농협카드": ["https://card.nonghyup.com/IDPCC0102.act"],
+ "IBK기업은행": ["https://card.ibk.co.kr/uib/jsp/guest/event/EventList.jsp"]
+}
