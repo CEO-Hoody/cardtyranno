@@ -1115,13 +1115,40 @@ ISSUE_BODY=('<style>'
  '.pcb-strat{display:grid;grid-template-columns:170px 1fr;border:1px solid var(--hairline);border-radius:16px;overflow:hidden;text-decoration:none;color:#000}.pcb-strat img{width:170px;height:100%;object-fit:cover;display:block}.pcb-strat .mono{font:700 9px ui-monospace,Menlo,monospace;color:rgba(0,0,0,.5);text-transform:uppercase}.pcb-strat>div{padding:18px 22px;display:flex;flex-direction:column;justify-content:center}.pcb-strat .t{font-weight:700;font-size:18px;letter-spacing:-.4px;margin-top:5px}.pcb-strat .d{font-size:13px;color:rgba(0,0,0,.6);margin-top:6px}.pcb-strat .go{font-weight:540;font-size:13px;margin-top:12px}'
  '.pcb-ad{background:var(--block-coral);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;color:#000}.pcb-ad .mono{font:700 9px ui-monospace,Menlo,monospace;opacity:.6;text-transform:uppercase}.pcb-ad .t{font-weight:700;font-size:18px;letter-spacing:-.4px;line-height:1.2}.pcb-ad .d{font-size:12px;color:rgba(0,0,0,.6);margin-top:5px}.pcb-ad .go{font-weight:540;font-size:13px}'
  '@media(max-width:680px){.pcmp-banners{grid-template-columns:1fr}.pcb-strat{grid-template-columns:110px 1fr}.pcb-strat img{width:110px}}'
+ # 캐시백 메인 — 이벤트 단위(가이드 B)
+ '#view-ev{max-width:880px;margin:0 auto}'
+ '.ev2-hd{display:flex;align-items:center;gap:8px;padding:2px 0 0}.ev2-h{font-weight:330;font-size:30px;letter-spacing:-1.1px;margin:0}'
+ '.ev2-month{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;border-radius:50px;background:var(--surface-soft);font-weight:540;font-size:12px}'
+ '.ev2-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
+ '.ev2-iss{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:7px 13px;border-radius:50px;background:var(--block-lilac);font-weight:540;font-size:12.5px;cursor:pointer}.ev2-iss b{font-weight:800}.ev2-iss .x{font-size:11px;opacity:.6}'
+ '.ev2-plats{display:flex;gap:7px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:13px 0 0;scrollbar-width:none}.ev2-plats::-webkit-scrollbar{display:none}'
+ '.ev2pl{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:50px;border:1px solid var(--line);background:#fff;color:rgba(0,0,0,.7);font-weight:540;font-size:12.5px;cursor:pointer;white-space:nowrap;font-family:inherit}.ev2pl.on{background:#000;color:#fff;border-color:#000}.ev2pl .dot{width:7px;height:7px;border-radius:50%;flex:0 0 auto}'
+ '.ev2-bar{display:flex;align-items:center;justify-content:space-between;padding:13px 0 0;gap:10px}.ev2-cnt{font-weight:540;font-size:12.5px;color:rgba(0,0,0,.55)}'
+ '.ev2-sortb{display:inline-flex;align-items:center;gap:5px;font-weight:540;font-size:13px;color:rgba(0,0,0,.6);background:0;border:0;cursor:pointer;font-family:inherit}.ev2-sortb svg{width:13px;height:13px}'
+ '#view-ev #list{display:flex;flex-direction:column;gap:10px;margin-top:13px}'
+ '.ev2c{display:grid;grid-template-columns:1fr auto;grid-template-areas:"plwrap cash" "mid mid" "cond go";gap:12px 10px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:15px 16px;background:#fff;text-decoration:none;color:#000}'
+ '.ev2c.top{background:var(--block-lime);border-color:#000}'
+ '.ev2c-plwrap{grid-area:plwrap;display:flex;align-items:center;gap:7px;min-width:0}'
+ '.ev2c-pl{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:50px;background:#000;color:#fff;flex-shrink:0;white-space:nowrap}.ev2c-pl .dot{width:7px;height:7px;border-radius:50%}.ev2c-pl .pn{font-weight:600;font-size:12px}'
+ '.ev2c-topb{font:700 8px var(--font-mono,monospace);background:var(--accent-magenta);color:#fff;padding:3px 7px;border-radius:50px;flex-shrink:0;letter-spacing:.4px}'
+ '.ev2c-cash{grid-area:cash;justify-self:end;font-weight:700;font-size:23px;letter-spacing:-.6px;white-space:nowrap}'
+ '.ev2c-mid{grid-area:mid;display:flex;align-items:center;gap:9px;min-width:0}'
+ '.ev2c-plate{width:34px;flex:0 0 auto;aspect-ratio:1.586/1;border-radius:6px;overflow:hidden;background:var(--surface-soft)}.ev2c-plate img{width:100%;height:100%;object-fit:cover;display:block;opacity:.95}'
+ '.ev2c-pname{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.ev2c-iss{font-weight:700;font-size:14px}.ev2c-prod{font-weight:400;font-size:13px;color:rgba(0,0,0,.55);margin-left:6px}'
+ '.ev2c-cond{grid-area:cond;font-weight:400;font-size:12px;color:rgba(0,0,0,.55);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}'
+ '.ev2c-go{grid-area:go;justify-self:end;display:inline-flex;align-items:center;gap:5px;padding:9px 15px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:13px;flex-shrink:0;white-space:nowrap}.ev2c-go svg{width:13px;height:13px}'
+ '@media(min-width:761px){.ev2-h{font-size:34px}.ev2-plats{flex-wrap:wrap;overflow:visible}'
+ '.ev2c{grid-template-columns:auto 1fr auto auto;grid-template-areas:"plwrap mid cash go" "plwrap cond cash go";column-gap:18px;row-gap:3px;padding:16px 20px}'
+ '.ev2c-cash{justify-self:end}.ev2c-go{justify-self:end}}'
  '</style>'
  '<div class="wrap"><section><div class="sec-h"><h2 id="issTitle">이번달 캐시백</h2></div>'
  '<div id="view-ev">'
- '<a class="evhero" href="issue.html?v=cmp"><svg class="evh-wm" viewBox="2 3.6 20 16.4" aria-hidden="true"><use href="#mk"/></svg><div class="evh-body"><div class="eb">이번 달 최대</div><div class="evh-t">이번 달, 카드값<br>최대 <b id="evhMax">119만원</b> 돌려받기</div><span class="evh-cta">플랫폼별 비교 ↗</span></div></a>'
- '<div class="cmpctl"><div class="ctlrow"><span class="ctll">정렬</span><button class="ctlb on" data-esort="amt">금액순</button><button class="ctlb" data-esort="plat">플랫폼순</button><button class="ctlb" data-esort="iss">카드사순</button></div>'
- '<div class="ctlrow"><span class="ctll">플랫폼</span><button class="ctlf on" data-eplat="">전체</button><button class="ctlf" data-eplat="카드고릴라">카드고릴라</button><button class="ctlf" data-eplat="뱅크샐러드">뱅크샐러드</button><button class="ctlf" data-eplat="토스">토스</button><button class="ctlf" data-eplat="아정당">아정당</button><button class="ctlf" data-eplat="네이버페이">네이버페이</button><button class="ctlf" data-eplat="카카오페이">카카오페이</button></div></div>'
- '<div class="tabs" id="tabs"></div><div id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
+ '<div class="ev2-hd"><h1 class="ev2-h">캐시백</h1><span class="ev2-month"><span id="evMonth">2026.06</span></span></div>'
+ '<p class="ev2-sub">이번 달, 어디서 받는 게 가장 이득인지.</p>'
+ '<div class="ev2-iss" id="evIssFilt" style="display:none">카드사 <b id="evIssFiltT"></b><span class="x">✕</span></div>'
+ '<div class="ev2-plats" id="evPlats"></div>'
+ '<div class="ev2-bar"><span class="ev2-cnt" id="evCnt">이벤트 –건</span><button class="ev2-sortb" id="evSortBtn">캐시백 많은 순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></div>'
+ '<div id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="view-cmp" style="display:none">'
  '<div class="pcmp-hero"><div class="eb">PLATFORM COMPARE · 플랫폼 비교</div><h1>같은 카드, 채널마다<br>다른 캐시백.</h1><p>토스·카드고릴라·아정당·카카오페이·네이버페이·뱅크샐러드의 발급 캐시백을 한 표로 모았어요.</p></div>'
  '<div id="pcmp-spread"></div>'
@@ -1137,7 +1164,7 @@ ISSUE_BODY=('<style>'
  '</div>'
  '</section></div>')
 ISSUE_JS=r"""
-var EV=[],ORD=[],cur="전체",evSort="amt",evPlat="";
+var EV=[],ORD=[],cur="전체",evSort="cash",evPlat="",evVis={},issuerFilter="",evMonth="";
 var PRODALL=[],pSort="amt",pFilter="",basis="cardgorilla",renderProd=function(){},renderIss=function(){},issFilter="",issSort="amt",cashMode="t";
 function _spl(e){var t=e.reward_won||0;var m=(e.main_won!=null?e.main_won:null);var b=(e.bonus_won||0);
  if(m==null){if(b>=t)b=0;m=Math.max(t-b,0);}else{if(m>t)m=t;b=Math.max(t-m,0);}
@@ -1146,14 +1173,35 @@ function mval(o,md){return !o?0:(md==='m'?o.m:md==='b'?o.b:o.t);}
 function _capBD(o){if(!o||(o.b<=0&&o.m>=o.t))return '';return '<div class="cap">주'+Math.round(o.m/10000)+'·부'+Math.round(o.b/10000)+'</div>';}
 var PCOL={"카드고릴라":"#ff4d4f","뱅크샐러드":"#2f6bff","아정당":"#3b5bdb","카카오페이":"#e8b800","토스":"#3182f6","네이버페이":"#03c75a","네이버":"#03c75a"};
 function pcol(p){return PCOL[p]||"#7a8088";}
-function render(){var items=(cur==="전체"?EV:EV.filter(x=>x.issuer===cur)).slice();
- if(evPlat)items=items.filter(x=>x.platform===evPlat);
- items.sort(function(a,b){return evSort==='plat'?(a.platform||'').localeCompare(b.platform||'','ko'):evSort==='iss'?(a.issuer||'').localeCompare(b.issuer||'','ko'):(num(b.benefit)-num(a.benefit));});
- var L=document.getElementById('list');if(!items.length){L.innerHTML='<div class="empty">조건에 맞는 이벤트가 없어요.</div>';return;}
- L.innerHTML=items.map(function(x){
-   return '<a class="evc" href="events.html?n='+encodeURIComponent(x.card)+(x.pk?'&p='+x.pk:'')+'"><div class="evc-plate">'+imgTag(x.img)+'</div><span class="evc-pf">'+_pdk(x.pk,true)+'</span><div><div class="evc-nm">'+x.card+'</div><div class="evc-iss">'+x.issuer+(x.period?' · '+x.period:'')+'</div></div><div class="evc-foot"><div><div class="evc-amtl">최대 혜택</div><div class="evc-amt">'+x.benefit+'</div></div><span class="evc-go">자세히 ›</span></div></a>';}).join("");}
-function tabs(){var T=["전체"].concat(ORD);var t=document.getElementById('tabs');t.innerHTML=T.map(function(o){var c=o==="전체"?EV.length:EV.filter(x=>x.issuer===o).length;return '<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'<span class="cnt">'+c+'</span></div>';}).join("");
- t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
+// 가이드 B: 이벤트 단위 리스트 — 플랫폼칩(검정+dot)·캐시백 금액(대형)·카드사(굵게)·상품(연회색)·조건·자세히
+var _SORTLBL={cash:'캐시백 많은 순',due:'마감 임박순'};
+function _evFiltered(){var sel=PORD.filter(function(k){return evVis[k];});
+ var items=EV.slice();
+ if(issuerFilter)items=items.filter(function(x){return x.issuer===issuerFilter;});
+ if(sel.length)items=items.filter(function(x){return sel.indexOf(x.pk)>=0;});
+ items.sort(function(a,b){if(evSort==='due'){var ax=a.pe||'9999',bx=b.pe||'9999';return ax<bx?-1:ax>bx?1:(b.won-a.won);}return (b.won-a.won)||((a.pe||'9999')<(b.pe||'9999')?-1:1);});
+ return items;}
+function render(){var items=_evFiltered();
+ var cn=document.getElementById('evCnt');if(cn)cn.textContent='이벤트 '+items.length+'건';
+ var sb=document.getElementById('evSortBtn');if(sb)sb.firstChild.textContent=_SORTLBL[evSort]+' ';
+ var fi=document.getElementById('evIssFilt');if(fi)fi.style.display=issuerFilter?'':'none';
+ if(fi&&issuerFilter){var ft=document.getElementById('evIssFiltT');if(ft)ft.textContent=issuerFilter;}
+ var L=document.getElementById('list');if(!items.length){L.innerHTML='<div class="empty" style="padding:40px 0;text-align:center;color:rgba(0,0,0,.5)">조건에 맞는 이벤트가 없어요.</div>';return;}
+ var topWon=items[0]?items[0].won:0;
+ L.innerHTML=items.map(function(x){var top=(evSort==='cash'&&x.won>0&&x.won===topWon);
+   var href='events.html?platform='+x.pk+'&n='+encodeURIComponent(x.card);
+   var cond=x.period?('마감 '+x.period.replace(/^~/,'')):(x.text||'발급 이벤트 진행 중');
+   return '<a class="ev2c'+(top?' top':'')+'" href="'+href+'">'
+    +'<div class="ev2c-plwrap"><span class="ev2c-pl"><span class="dot" style="background:'+(PBC[x.pk]||"#888")+'"></span><span class="pn">'+(PN[x.pk]||x.platform)+'</span></span>'+(top?'<span class="ev2c-topb">최고</span>':'')+'</div>'
+    +'<div class="ev2c-cash">'+(x.won?_wm(x.won):x.benefit)+'</div>'
+    +'<div class="ev2c-mid"><div class="ev2c-plate">'+imgTag(x.img)+'</div><div class="ev2c-pname"><span class="ev2c-iss">'+x.issuer+'</span><span class="ev2c-prod">'+x.card+'</span></div></div>'
+    +'<div class="ev2c-cond">'+cond+'</div>'
+    +'<span class="ev2c-go">자세히 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></a>';}).join("");
+ if(window.repairImages)repairImages();}
+function renderPlats(){var el=document.getElementById('evPlats');if(!el)return;var sel=PORD.filter(function(k){return evVis[k];});
+ var all='<button class="ev2pl'+(sel.length?'':' on')+'" data-ep="">전체</button>';
+ el.innerHTML=all+PORD.map(function(pk){return '<button class="ev2pl'+(evVis[pk]?' on':'')+'" data-ep="'+pk+'"><span class="dot" style="background:'+(PBC[pk]||"#888")+'"></span>'+(PN[pk]||pk)+'</button>';}).join('');}
+function tabs(){}
 // 발급이벤트 / 플랫폼비교는 별도 화면(서브탭 제거). ?v=cmp로 진입 화면 결정.
 document.querySelector('.subnav2').onclick=function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('.subnav2 button').forEach(x=>x.classList.remove('on'));b.classList.add('on');var iss=b.dataset.c==='iss';document.getElementById('cmp-iss').style.display=iss?'':'none';document.getElementById('cmp-prod').style.display=iss?'none':'';var cn=document.getElementById('cmpnote-iss');if(cn)cn.style.display=iss?'':'none';};
 // 캐시백 기준 토글(전체/주요/부가) — 두 탭 동시 갱신
@@ -1173,15 +1221,17 @@ document.getElementById('cmp-iss').addEventListener('click',function(e){
  var fb=e.target.closest('[data-if]');if(fb){issFilter=fb.getAttribute('data-if');renderIss();return;}
  var sb=e.target.closest('[data-is]');if(sb){issSort=sb.getAttribute('data-is');renderIss();return;}});
 // 발급이벤트 화면 정렬(금액/플랫폼/카드사)+플랫폼 필터
-document.getElementById('view-ev').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
- if(b.dataset.esort!==undefined){evSort=b.dataset.esort;document.querySelectorAll('[data-esort]').forEach(x=>x.classList.remove('on'));b.classList.add('on');render();}
- else if(b.dataset.eplat!==undefined){evPlat=b.dataset.eplat;document.querySelectorAll('[data-eplat]').forEach(x=>x.classList.remove('on'));b.classList.add('on');render();}});
+document.getElementById('view-ev').addEventListener('click',function(e){
+ var pl=e.target.closest('button[data-ep]');if(pl){var pk=pl.getAttribute('data-ep');if(!pk){evVis={};}else{evVis[pk]=evVis[pk]?0:1;}renderPlats();render();return;}
+ var sb=e.target.closest('#evSortBtn');if(sb){evSort=(evSort==='cash'?'due':'cash');render();return;}
+ var xf=e.target.closest('#evIssFilt');if(xf){issuerFilter='';render();return;}});
 // 진입 화면 결정: ?v=cmp면 플랫폼 비교, 아니면 발급 이벤트 (서브탭 없이 분리)
 (function(){var isCmp=new URLSearchParams(location.search).get('v')==='cmp';
  document.getElementById('view-ev').style.display=isCmp?'none':'';
  document.getElementById('view-cmp').style.display=isCmp?'':'none';
- var t=document.getElementById('issTitle');if(t)t.textContent=isCmp?'사이트 비교':'이번달 캐시백';
- document.title=(isCmp?'사이트 비교':'이번달 캐시백')+' | 카드티라노';})();
+ var t=document.getElementById('issTitle');var sh=t?t.closest('.sec-h'):null;
+ if(isCmp){if(t)t.textContent='한눈에 비교';if(sh)sh.style.display='';}else if(sh){sh.style.display='none';}
+ document.title=(isCmp?'한눈에 비교':'이번 달 캐시백')+' | 카드티라노';})();
 function num(s){var m=(s||"").match(/([0-9]+(?:\.[0-9]+)?)\s*만/);return m?parseFloat(m[1]):-1;}
 // 발급이벤트(EV) 목록은 아래 platform_events.json 집계에서 구성(5개 플랫폼·네이버 포함). 구형 events.json(네이버 0건) 의존 제거.
 // 카드사·카드상품 비교 모두 콜렉터 platform_events.json에서 집계(뱅샐·아정당 포함, 카카오페이 제외)
@@ -1206,13 +1256,14 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  // (0) 발급이벤트 EV 목록 = 전 플랫폼(네이버 포함) 평탄화. 각 행은 실제 플랫폼 이벤트로 아웃링크.
  (function(){var tmp=[],mx={};
   prods.forEach(function(p){var iss=p.issuer||'기타';(p.events||[]).forEach(function(e){var _pp=(p.platforms||{})[e.platform]||{};var u=_best(e.platform,e.url||_pp.url,_pp.id);if(e.platform==='cardgorilla'){var _cg=_cgUrl(iss,_pp.id);if(_cg)u=_cg;}
-   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),pk:e.platform,benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),pe:(e.period_end||''),won:(e.reward_won||0),img:(p.img||IMG[_nk2(p.name)]||'')});
+   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),pk:e.platform,benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),pe:(e.period_end||''),won:(e.reward_won||0),text:(e.reward_text||''),img:(p.img||IMG[_nk2(p.name)]||'')});
    mx[iss]=Math.max(mx[iss]||0,e.reward_won||0);});});
   EV=tmp;ORD=Object.keys(mx).sort(function(a,b){return mx[b]-mx[a];});
   var _mxv=Math.max.apply(null,tmp.map(function(x){return x.won||0;}).concat([0]));var _eh=document.getElementById('evhMax');if(_eh&&_mxv)_eh.textContent=_wm(_mxv);
-  var sp=new URLSearchParams(location.search);var qi=sp.get('issuer');if(qi&&(qi==='전체'||ORD.indexOf(qi)>=0))cur=qi;
-  var qp=sp.get('plat');if(qp){evPlat=qp;var pb=document.querySelector('[data-eplat="'+qp+'"]');if(pb){document.querySelectorAll('[data-eplat]').forEach(function(x){x.classList.remove('on');});pb.classList.add('on');}}
-  tabs();render();var at=document.querySelector('#tabs .tab.active');if(at)at.scrollIntoView({inline:'center',block:'nearest'});})();
+  evMonth=(A[0].month||'').replace('-','.');var _em=document.getElementById('evMonth');if(_em&&evMonth)_em.textContent=evMonth;
+  var sp=new URLSearchParams(location.search);var qi=sp.get('issuer');if(qi&&ORD.indexOf(qi)>=0)issuerFilter=qi;
+  var qp=sp.get('plat');if(qp){for(var _k in PN){if(PN[_k]===qp||_k===qp){evVis[_k]=1;break;}}}
+  renderPlats();render();})();
  // (1) 카드사별 비교 — 카드사 × 플랫폼 최대 집계 + 보유 종수·대표카드 (시안 표형)
  function _es(s){return String(s==null?'':s).replace(/[<>&]/g,'');}
  var byIss={},issMeta={};
