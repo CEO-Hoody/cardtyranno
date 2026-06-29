@@ -1312,7 +1312,7 @@ fetch('data.json').then(r=>r.json()).then(function(j){var d=j.items.find(x=>x.id
 CONTENT_BODY=('<style>'
  # 강조 컴카드(이달의 PICK)
  '.tip-pick{display:grid;grid-template-columns:300px 1fr;background:var(--block-lime);border-radius:22px;overflow:hidden;text-decoration:none;color:#000;box-shadow:0 12px 30px rgba(0,0,0,.1);margin:24px 0 0}'
- '.tip-pick-img{position:relative;background:var(--surface-soft)}.tip-pick-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:100%}'
+ '.tip-pick-img{position:relative;display:flex;align-items:center;justify-content:center;background:var(--block-navy);min-height:158px}.tip-pick-img svg{width:104px;height:80px;color:#fff;opacity:.92}'
  '.tip-pick-badge{position:absolute;left:16px;top:16px;font-family:var(--font-mono,monospace);font-size:9px;background:var(--accent-magenta);color:#fff;padding:5px 11px;border-radius:50px}'
  '.tip-pick-body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}'
  '.tip-pick-eb{font-family:var(--font-mono,monospace);font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.55)}'
@@ -1327,7 +1327,7 @@ CONTENT_BODY=('<style>'
  '.tip-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin-top:10px}'
  '.tip-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--hairline-soft);text-decoration:none;color:#000}'
  '.tip-row:hover .tip-rt{color:var(--accent,#000);text-decoration:underline}'
- '.tip-thumb{width:96px;height:64px;border-radius:12px;object-fit:cover;flex:0 0 auto;display:block;background:var(--surface-soft)}'
+ '.tip-thumb{width:96px;height:64px;border-radius:12px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;overflow:hidden}.tip-thumb svg{width:34px;height:26px;color:#33402a;opacity:.85}'
  '.tip-rcat{font-family:var(--font-mono,monospace);font-size:9px;color:rgba(0,0,0,.45)}'
  '.tip-rt{font-weight:700;font-size:15px;letter-spacing:-.3px;line-height:1.35;margin-top:4px}'
  # 상세(detail) — 기존 유지 클래스
@@ -1337,7 +1337,7 @@ CONTENT_BODY=('<style>'
  '@media(max-width:760px){'
  '.tip-pick{grid-template-columns:1fr}.tip-pick-img img{height:158px;min-height:0}.tip-pick-body{padding:18px 18px 20px}.tip-pick-t{font-size:20px}.tip-pick-d{font-size:13px}.tip-pick-cta{width:100%;justify-content:center;font-size:15px}'
  '.tip-list{grid-template-columns:1fr;gap:0}'
- '.tip-thumb{width:74px;height:56px}.tip-rt{font-size:14px}'
+ '.tip-thumb{width:74px;height:56px}.tip-thumb svg{width:28px;height:22px}.tip-rt{font-size:14px}'
  '.adt .ah{font-size:24px}'
  '}'
  '</style>'
@@ -1354,12 +1354,12 @@ var CATIMG={'발급 팁':'img/guide/issue.svg','할인 활용':'img/guide/discou
 var CATBG={'발급 팁':'var(--block-lime)','기초 상식':'var(--block-cream)','할인 활용':'var(--block-mint)','여행':'var(--block-mint)'};
 function _thumb(x){return x.img||CATIMG[x.cat]||'img/guide/reco.svg';}
 function _catsOf(k){for(var i=0;i<TYPES.length;i++)if(TYPES[i].k===k)return TYPES[i].cats;return [k];}
-function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><img class="tip-thumb" src="'+_thumb(x)+'" alt="" loading="lazy"><div style="min-width:0"><div class="tip-rcat">'+(x.cat||'')+'</div><div class="tip-rt">'+x.title+'</div></div></a>';}
+function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><span class="tip-thumb" style="background:'+(CATBG[x.cat]||'var(--block-lime)')+'"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span><div style="min-width:0"><div class="tip-rcat">'+(x.cat||'')+'</div><div class="tip-rt">'+x.title+'</div></div></a>';}
 function renderList(){var cats=_catsOf(cur);var items=C.filter(function(x){return cats.indexOf(x.cat)>=0;});document.getElementById('list').innerHTML=items.length?items.map(rowHtml).join(''):'<div class="empty" style="grid-column:1/-1;padding:30px 0">글이 없어요.</div>';}
 function tabs(){var t=document.getElementById('tipTabs');t.innerHTML=TYPES.map(function(ty){return '<button class="tip-tab'+(cur===ty.k?' on':'')+'" data-k="'+ty.k+'">'+ty.h+'</button>';}).join('');
  t.querySelectorAll('.tip-tab').forEach(function(b){b.onclick=function(){cur=b.dataset.k;tabs();renderList();};});}
 function pick(){var st=C.filter(function(x){return x.cat==='발급 팁';})[0]||C[0];var el=document.getElementById('tipPick');if(!st||!el)return;
- el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><img src="'+_thumb(st)+'" alt="">'+'<span class="tip-pick-badge">이달의 PICK</span></div>'
+ el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg><span class="tip-pick-badge">이달의 PICK</span></div>'
   +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.06</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
  var hero=d.img?'<div class="ghero"><img src="'+d.img+'" alt="'+d.cat+'" loading="eager"/></div>':'';
