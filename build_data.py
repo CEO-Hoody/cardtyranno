@@ -611,45 +611,12 @@ for ev in EVENTS:
     cur.execute("INSERT INTO event(issuer,card,platform,benefit,period,url) VALUES(?,?,?,?,?,?)",(ev["issuer"],ev["card"],ev["platform"],ev["benefit"],ev["period"],ev["url"]))
 con.commit()
 
-# ===== 주요/부가 구조화 + 통합 소스맵(이름 매칭 갭 보완) =====
-# 모든 소스(카드고릴라·뱅샐·거주지)의 main/sub를 _nk 키로 모아 export 시 느슨 매칭 → 적용률↑.
-_ALLMAIN={}; _ALLSUB={}
-def _absorb(mp_main, mp_sub):
-    for _k,_v in (mp_main or {}).items():
-        if _v: _ALLMAIN.setdefault(_nk(_k), _v)
-    for _k,_v in (mp_sub or {}).items():
-        if _v: _ALLSUB.setdefault(_nk(_k), _v)
-for _f in ["scrape/cg_meta.json","scrape/residential_meta.json"]:
-    _sd=_ld(_f) or {}; _absorb(_sd.get("mainByName"), _sd.get("subByName"))
-_bsd3=(_ld("collector/banksalad_seed.json") or {}).get("cards",{})
-_absorb({k:v.get("main") for k,v in _bsd3.items()}, {k:v.get("subs") for k,v in _bsd3.items()})
-def _srcget(mp, n):
-    k=_nk(n)
-    if k in mp: return mp[k]
-    k2=_nk(_re.sub(r"^토스\s+","",n))
-    if k2 in mp: return mp[k2]
-    for sk,sv in mp.items():
-        if len(sk)>=7 and (sk in k or k in sk): return sv
-    return None
-def _mtier(t):
-    """주요 텍스트 → {spend, reward, eff, text}. 'N만원 이상/사용/쓰고 … M(+K)만원'."""
-    if not t: return None
-    th=_re.search(r"(\d[\d,]*)\s*만\s*원?\s*(?:이상|사용|쓰고|쓰면)", t)
-    rw=_re.search(r"(?:이상|사용|쓰고|쓰면|시|최대)[^0-9]*?(\d+)(?:\s*\+\s*(\d+))?\s*만\s*원", t)
-    sp=int(th.group(1).replace(",",""))*10000 if th else None
-    rwon=(int(rw.group(1))+(int(rw.group(2)) if rw.group(2) else 0))*10000 if rw else None
-    if not rwon: return None
-    return {"spend":sp,"reward":rwon,"eff":(round(rwon/sp*100) if sp else None),"text":t}
-_SUBCAT=[(r"해외",("해외","🌍")),(r"리볼빙|이월약정",("리볼빙","🔄")),(r"멤버십|구독|스트리밍",("멤버십","📺")),
-         (r"자동납부|정기결제|생활요금|공과금|관리비",("자동납부","📅")),(r"마케팅|수신\s*동의|정보\s*동의",("마케팅동의","✅")),
-         (r"쿠폰|상품권|백화점|마이샵",("쿠폰","🎁")),(r"추가\s*이용|추가이용|더\s*받|추가로",("추가이용","➕")),
-         (r"라운지|마일리지|항공|여행",("여행","✈️"))]
-def _stier(t):
-    rw=_re.search(r"(\d[\d,]*)\s*만\s*원", t or "")
-    cat,icon="기타","•"
-    for pat,(c,ic) in _SUBCAT:
-        if _re.search(pat, t or ""): cat,icon=c,ic; break
-    return {"cat":cat,"icon":icon,"reward":(int(rw.group(1).replace(",",""))*10000 if rw else None),"text":t}
+# >>> MAC-OWNED: 주요/부가 구조화 — 실제 로직은 tier_enrich.py(맥 소유). 코워크 재export 시 이 블록·아래 호출 보존 필수.
+# 통합 소스맵 빌드(카드고릴라·뱅샐·거주지). export 루프에서 _te.enrich_card()로 main_tier/sub_tiers 부착.
+# 회귀 시 복구: python tier_guard.py --fix
+import tier_enrich as _te
+_SRC_MAIN, _SRC_SUB = _te.build_src_maps(OUT)
+# <<< MAC-OWNED <<<
 
 # ===== export =====
 def export():
@@ -673,16 +640,9 @@ def export():
             _mb=_MBMAP.get(_nk(n)) or _MBMAP.get(_bn) or {}
             _card={"id":_gid[0],"name":n,"img":img,"fee":fee,"benefit":b,"source":src,"url":apply.get(iss,""),
                         "events":_EVMAP.get(_nk(n),[]),"rank":_RANKMAP.get(_nk(n)),"detail":_det,"plat":_plat}
-            _mtext=_mb.get("main_benefit") or _srcget(_ALLMAIN, n)      # 느슨 매칭으로 적용률↑
-            _stext=_mb.get("sub_benefits") or _srcget(_ALLSUB, n)
-            if _mtext:
-                _card["main_benefit"]=_mtext
-                _mt=_mtier(_mtext)                                       # 주요 → {임계,보상,효율}
-                if _mt: _card["main_tier"]=_mt
-            if _stext:
-                _slist=_stext if isinstance(_stext,list) else [_stext]
-                _card["sub_benefits"]=_slist
-                _card["sub_tiers"]=[_stier(s) for s in _slist]           # 부가 → [{조건카테고리,보상}]
+            # >>> MAC-OWNED: 구조화 부착 (tier_enrich) — 느슨매칭 + main_tier/sub_tiers. 코워크 재export 시 보존 필수.
+            _te.enrich_card(_card, n, _SRC_MAIN, _SRC_SUB, _mb.get("main_benefit"), _mb.get("sub_benefits"))
+            # <<< MAC-OWNED <<<
             if _mb.get("premonth"): _card["premonth"]=_mb["premonth"]
             raw.append(_card)
         # 동등상품 병합: (발급사, 접두어제거 정규화) 동일 → 풍부한 쪽을 대표로 합치기
@@ -706,3 +666,14 @@ export(); con.close(); shutil.copy(DBL,DBF)
 import collections
 tot=sum(len(v) for v in CARDS.values())
 print("cards:",tot,"| issue rows:",len(ISSUE),"| events:",len(EVENTS))
+
+# >>> MAC-OWNED: 구조화 회귀 자가검증 — 커버리지 급락 시 로그에 경고(코워크 재export로 enrich 누락되면 여기서 드러남).
+try:
+    _cj=json.load(open(os.path.join(SITE,"cards.json"),encoding="utf-8"))["cards"]
+    _n,_mb,_mt=_te.coverage(_cj)
+    print(f"구조화 커버리지 → main_benefit {_mb} · main_tier {_mt} / {_n}장")
+    if _mt < 70:
+        print(f"⚠️⚠️ 회귀 의심! main_tier {_mt} < 70 — tier_enrich 연결 끊겼을 수 있음. `python tier_guard.py --fix` 확인.")
+except Exception as _e:
+    print("구조화 자가검증 skip:",_e)
+# <<< MAC-OWNED <<<
