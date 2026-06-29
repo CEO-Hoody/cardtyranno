@@ -27,7 +27,7 @@ def plat_url(plat, pid):
     }.get(plat)
 
 # ── 용각류 파서 모듈 분리(2026-06): 공통=cardutil / 플랫폼별 파서 ──
-from cardutil import _nk, parse_won, _fmt_man, is_june2026, parse_breakdown   # 공통 유틸
+from cardutil import _nk, parse_won, _fmt_man, is_current_month, current_month_kst, parse_breakdown   # 공통 유틸
 from brachio import parse_cardgorilla                        # 카드고릴라
 from apato import parse_banksalad                            # 뱅크샐러드
 from diplo import parse_toss                                 # 토스
@@ -220,7 +220,7 @@ def export_json(con):
     if len(_merged)<len(out): print(f"동등상품 병합: {len(out)}→{len(_merged)} ({len(out)-len(_merged)}건 통합)")
     out=_merged
     os.makedirs(SITE,exist_ok=True)
-    MONTH="2026-06"
+    MONTH=current_month_kst()   # KST 기준 'YYYY-MM' — 매달 자동 전환(history/{MONTH}.json 신규 생성)
     json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"products":out},
               open(os.path.join(SITE,"platform_events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/platform_events.json ({len(out)} products)")
@@ -288,7 +288,7 @@ def run(products, today, injected=None, june_only=True):
         for plat,info in p.get("platforms",{}).items():
             fetched = (injected or {}).get((p["name"],plat), "LIVE") if injected else "LIVE"
             if fetched=="LIVE": fetched=collect_platform(plat,info)
-            if june_only and fetched and not is_june2026(fetched): fetched=None  # 6월 이벤트 우선
+            if june_only and fetched and not is_current_month(fetched): fetched=None  # 현재월(KST) 이벤트 우선
             res=record_event(con,pid,plat,fetched,today)
             amt=fetched["reward_text"] if fetched else "-"
             print(f"  [{today}] {p['name'][:18]:<18} {plat:<11} {res:<7} {amt}")

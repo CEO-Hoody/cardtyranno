@@ -2,6 +2,12 @@
 """공용 유틸 (용각류 콜렉터 공통). 이름정규화·금액파싱·표기·월필터.
 순수 함수만 — 네트워크/DB 의존성 없음(단위테스트 용이)."""
 import re
+import datetime as _dt
+
+def current_month_kst():
+    """현재 월(KST 기준) 'YYYY-MM'. 클라우드 Action이 UTC라 9시간 보정 필수
+    (cron 06:05 KST = 21:05 UTC 전날 → 보정 안 하면 월말 새벽에 전월로 계산됨)."""
+    return (_dt.datetime.utcnow() + _dt.timedelta(hours=9)).strftime("%Y-%m")
 
 def _nk(n):
     """카드명 정규화 키: 공백/괄호/구분기호 제거 + 소문자."""
@@ -71,9 +77,16 @@ def parse_breakdown(text, total_won):
         main = total
     return (main, bonus, comps[:8])
 
-def is_june2026(ev):
-    """6월(2026.06) 이벤트만 우선 필터. 기간 미표기는 현행으로 간주."""
+def is_current_month(ev, ym=None):
+    """현재 월(KST) 이벤트만 우선 필터. 기간 미표기는 현행으로 간주.
+    ym 미지정 시 current_month_kst() 사용 → 매달 자동 전환(7월엔 7월 이벤트)."""
     if not ev:
         return False
+    ym = ym or current_month_kst()           # "2026-07"
+    y, m = ym.split("-"); mi = int(m)          # ("2026","07"), 7
     s = (ev.get("period_start") or "") + (ev.get("period_end") or "") + (ev.get("reward_text") or "")
-    return ("2026.6" in s) or ("2026.06" in s) or ("2026-06" in s) or (not ev.get("period_start"))
+    return any(v in s for v in (f"{y}-{m}", f"{y}.{m}", f"{y}.{mi}", f"{y}-{mi}")) or (not ev.get("period_start"))
+
+# 하위호환 별칭(혹시 다른 호출부가 있어도 동적 동작). 신규 코드는 is_current_month 사용.
+def is_june2026(ev):
+    return is_current_month(ev)
