@@ -546,7 +546,7 @@ def header(active):
        ("charts","chart.html","티라노 차트","캐시백 추이·랭킹 데이터",False),
        ("content","content.html","티라노 TIP","발급 전략·꿀팁 콘텐츠",False),
        ("community","community.html","커뮤니티","발급 후기·정보 공유",False),
-       ("about","#","카드티라노란?","서비스 소개",True)]
+       ("about","about.html","카드티라노란?","서비스 소개",False)]
     _st='<span class="soon-tag">예정</span>'
     gnb="".join('<a href="%s" class="%s%s"><span class="nm">%s%s</span><span class="sub">%s</span></a>'%(u,("on" if k==active else ""),(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
     drawer="".join('<a href="%s" class="%s"><div class="dt"><div class="dn">%s%s</div><div class="ds">%s</div></div><svg class="dchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>'%(u,("on" if k==active else "")+(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
@@ -2212,8 +2212,140 @@ def _seo_static_index():
       +intro+'<div class="seo-tbl-wrap">'+table+'</div>'+rank+links+'</div></section>')
 SEO_STATIC_INDEX=_seo_static_index()
 
+# ===== ABOUT (카드티라노란?) =====
+ABOUT_BODY=(r'''<style>
+.ab{font-family:'Pretendard','Pretendard Variable',-apple-system,sans-serif}
+.ab .eb{font-family:var(--font-mono,monospace);font-size:12px;letter-spacing:.7px;text-transform:uppercase}
+.ab .sec{padding:0 0 84px}
+.ab .block{border-radius:24px;position:relative;overflow:hidden}
+.ab-hero{background:var(--block-lilac);padding:72px 64px}
+.ab-hero h1{font-weight:330;font-size:64px;line-height:1.02;letter-spacing:-2.2px;margin:18px 0 0;max-width:760px}
+.ab-hero p{font-weight:400;font-size:18px;line-height:1.5;margin:26px 0 0;max-width:560px;color:rgba(0,0,0,.72)}
+.ab-wm{position:absolute;right:-40px;bottom:-56px;width:300px;opacity:.16;color:#000}
+.ab-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none}.ab-cta svg{width:17px;height:17px}
+.ab-cta2{display:inline-flex;align-items:center;padding:14px 24px;border-radius:50px;background:rgba(255,255,255,.7);font-weight:540;font-size:15px;text-decoration:none;color:#000}
+.ab-g2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ab-h2{font-weight:330;font-size:46px;line-height:1.04;letter-spacing:-1.5px;margin:14px 0 0}
+.ab-card{border:1px solid var(--hairline);border-radius:20px;padding:30px 32px;background:#fff}
+.ab-bar{flex:1;height:12px;border-radius:50px;background:var(--surface-soft);overflow:hidden}.ab-bar i{display:block;height:100%;border-radius:50px}
+.ab-lime{background:var(--block-lime);padding:64px}
+.ab-navy{background:var(--block-navy);color:#fff;padding:72px 64px}
+.ab-navy h2{font-weight:330;font-size:50px;line-height:1.04;letter-spacing:-1.7px;margin:16px 0 0;max-width:780px}
+.ab-navy p{font-weight:400;font-size:17px;line-height:1.55;margin:16px 0 0;max-width:620px;color:rgba(255,255,255,.78)}.ab-navy p b{color:#fff;font-weight:700}
+.ab-stats{display:flex;gap:40px;margin-top:44px;flex-wrap:wrap}.ab-stats .v{font-weight:700;font-size:38px;letter-spacing:-1.2px}.ab-stats .l{font-weight:400;font-size:13.5px;color:rgba(255,255,255,.62);margin-top:4px}
+.ab-eg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.ab-ec{border-radius:20px;padding:28px 26px;display:flex;gap:22px;overflow:hidden;position:relative}
+.ab-ec .gl{flex-shrink:0;display:flex;align-items:center;justify-content:center}.ab-ec .gl svg{width:100%;height:auto;color:#000}
+.ab-ec .role{font-family:var(--font-mono,monospace);font-size:10px;color:rgba(0,0,0,.5)}
+.ab-ec .nm{font-weight:700;font-size:22px;letter-spacing:-.5px;margin-top:6px}
+.ab-ec .tag{font-weight:540;font-size:14px;margin-top:10px;color:rgba(0,0,0,.85)}
+.ab-ec .ds{font-weight:400;font-size:13.5px;line-height:1.5;margin-top:6px;color:rgba(0,0,0,.62)}
+.ab-cream{background:var(--block-cream);border-radius:24px;padding:80px 64px;text-align:center}
+.ab-cream h2{font-weight:330;font-size:52px;line-height:1.08;letter-spacing:-1.8px;margin:18px auto 0;max-width:820px}
+.ab-co-card{background:#000;color:#fff;border-radius:24px;padding:48px 44px}
+.ab-co-card h3{font-weight:330;font-size:30px;letter-spacing:-.9px;line-height:1.15;margin:0}
+@media(max-width:760px){
+ .ab-hero{padding:36px 24px}.ab-hero h1{font-size:34px;letter-spacing:-1.2px}.ab-hero p{font-size:15px}
+ .ab .sec{padding:0 0 48px}
+ .ab-g2{grid-template-columns:1fr;gap:28px}
+ .ab-h2{font-size:28px}
+ .ab-lime{padding:32px 24px}.ab-lime .ab-g2{gap:28px}
+ .ab-navy{padding:40px 24px}.ab-navy h2{font-size:30px;letter-spacing:-1px}.ab-navy p{font-size:15px}
+ .ab-stats{gap:24px}.ab-stats .v{font-size:30px}
+ .ab-eg{grid-template-columns:1fr;gap:12px}.ab-ec{grid-column:auto!important;flex-direction:row!important;align-items:center!important}.ab-ec .gl{width:96px!important}
+ .ab-cream{padding:40px 24px}.ab-cream h2{font-size:30px;letter-spacing:-1px}
+ .ab-card{padding:22px 20px}
+ .ab-hero-ctas{flex-wrap:wrap}
+}
+</style>'''
+ # 공룡 5종 글리프(이 페이지 전용)
+ '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>'
+ '<symbol id="d-brachio" viewBox="0 0 120 100"><g fill="currentColor"><rect x="36" y="62" width="9" height="30" rx="4"/><rect x="50" y="64" width="9" height="28" rx="4"/><rect x="68" y="64" width="9" height="28" rx="4"/><rect x="80" y="62" width="9" height="30" rx="4"/><ellipse cx="64" cy="58" rx="30" ry="18"/><path d="M90 56 Q110 52 118 64 Q104 60 90 66 Z"/><path d="M46 60 Q30 50 30 30 Q30 13 41 9 Q34 22 43 35 Q49 49 58 55 Z"/><ellipse cx="36" cy="11" rx="9.5" ry="7.5"/><path d="M28 9 q-6 -1 -8 3 q5 1 8 -1 z"/></g></symbol>'
+ '<symbol id="d-ptera" viewBox="0 0 120 100"><g fill="currentColor"><polygon points="60,52 6,28 16,40 34,54"/><polygon points="60,52 114,28 104,40 86,54"/><ellipse cx="60" cy="56" rx="12" ry="17"/><path d="M56 42 Q50 31 36 30 Q52 24 60 33 L78 26 Q74 37 65 42 Z"/><rect x="52" y="70" width="7" height="20" rx="3"/><rect x="61" y="70" width="7" height="20" rx="3"/></g></symbol>'
+ '<symbol id="d-eoraptor" viewBox="0 0 120 100"><g fill="currentColor"><path d="M58 56 Q88 56 116 68 Q90 62 60 65 Z"/><path d="M48 58 l9 0 -3 32 -8 0 z"/><path d="M60 58 l9 0 -2 32 -8 0 z"/><path d="M38 54 Q31 39 43 31 Q52 22 61 29 Q68 34 65 49 L63 60 L43 60 Q38 59 38 54 Z"/><path d="M47 33 Q43 20 32 16 Q27 12 21 15 Q28 18 28 25 Q32 31 45 38 Z"/><ellipse cx="24" cy="14" rx="8.5" ry="6.5"/><path d="M16 13 q-7 0 -9 3 q6 1 9 -1 z"/><path d="M45 42 Q52 47 52 54 Q47 49 42 49 Z"/></g></symbol>'
+ '<symbol id="d-quetzal" viewBox="0 0 140 92"><g fill="currentColor"><path d="M70 40 Q40 15 7 33 Q34 33 51 46 Q30 46 17 59 Q44 50 68 50 Z"/><path d="M70 40 Q100 15 133 33 Q106 33 89 46 Q110 46 123 59 Q96 50 72 50 Z"/><ellipse cx="70" cy="46" rx="8" ry="14"/><path d="M68 35 Q66 22 76 16 Q70 15 65 21 Q62 29 64 38 Z"/><path d="M74 17 L106 9 L77 23 Z"/><polygon points="76,16 72,3 84,15"/></g></symbol>'
+ '<symbol id="d-maia" viewBox="0 0 120 100"><g><path fill="currentColor" d="M44 70 Q40 38 66 34 Q92 32 96 60 Q97 68 92 73 Z"/><path fill="currentColor" d="M92 62 Q106 62 113 72 Q100 66 90 68 Z"/><path fill="currentColor" d="M52 44 Q40 25 23 26 Q33 17 46 23 Q58 29 62 42 Z"/><ellipse cx="21" cy="27" rx="9" ry="7" fill="currentColor"/><path fill="currentColor" d="M13 29 q-9 1 -11 5 q8 2 13 -1 z"/><polygon points="25,21 29,10 34,21" fill="currentColor"/><ellipse cx="52" cy="80" rx="40" ry="11" fill="currentColor"/><g fill="#fff" stroke="currentColor" stroke-width="2.2"><ellipse cx="36" cy="75" rx="7.5" ry="10"/><ellipse cx="52" cy="77" rx="8" ry="10.5"/><ellipse cx="68" cy="75" rx="7.5" ry="10"/></g></g></symbol>'
+ '</defs></svg>'
+ '<div class="ab"><div class="wrap">'
+ # HERO
+ '<section class="sec" style="padding-top:40px"><div class="block ab-hero"><svg class="ab-wm" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>'
+ '<div class="eb" style="color:rgba(0,0,0,.55)">카드티라노란?</div>'
+ '<h1>받을 수 있는 혜택을,<br>다 받게.</h1>'
+ '<p>카드 혜택은 분명히 거기 있습니다. 다만 너무 흩어져 있고, 너무 자주 바뀝니다. 그 손해를 끝내려고 — 카드티라노가 나섰습니다.</p>'
+ '<div class="ab-hero-ctas" style="display:flex;gap:12px;margin-top:34px;flex-wrap:wrap">'
+ '<a class="ab-cta" href="issue.html?v=cmp">한눈에 비교 시작하기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>'
+ '<a class="ab-cta2" href="issue.html">이번 달 캐시백 보기</a></div></div></section>'
+ # PROBLEM
+ '<section class="sec"><div class="ab-g2">'
+ '<div><div class="eb" style="color:var(--accent-magenta)">정보의 비대칭</div>'
+ '<h2 class="ab-h2">같은 카드인데,<br>받는 혜택이 다릅니다</h2>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:22px 0 0;color:rgba(0,0,0,.72)">토스·카드고릴라·아정당·카카오페이·뱅크샐러드. 같은 카드를 발급해도 <b style="font-weight:700">어디서 받느냐에 따라 캐시백이 수십만 원씩</b> 차이 납니다. 그리고 그 금액은 매달 바뀝니다.</p>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:16px 0 0;color:rgba(0,0,0,.72)">혜택 정보는 카드사와 플랫폼만 훤히 알고, 정작 받아야 할 사용자는 모릅니다. 우리는 이 정보의 비대칭이 카드 시장에서 <b style="font-weight:700">가장 불공평한 지점</b>이라고 생각했습니다.</p></div>'
+ '<div class="ab-card"><div class="mono" style="font-size:10px;color:rgba(0,0,0,.45);margin-bottom:6px">같은 카드 · 같은 달 · 플랫폼별 캐시백</div>'
+ '<div style="font-weight:700;font-size:17px;letter-spacing:-.3px;margin-bottom:20px">트래블 캐시백 카드</div>'
+ '<div style="display:flex;flex-direction:column;gap:13px">'
+ + "".join('<div style="display:flex;align-items:center;gap:12px"><span style="width:64px;font-weight:540;font-size:13px;white-space:nowrap">%s</span><div class="ab-bar"><i style="width:%s;background:%s"></i></div><span style="width:52px;text-align:right;font-weight:700;font-size:14px;white-space:nowrap;color:%s">%s</span></div>'%(n,w,f,t,v) for n,v,w,f,t in [
+   ("토스","14만","100%","#000","#000"),("아정당","11만","78%","#cfcfcf","rgba(0,0,0,.55)"),("고릴라","9만","64%","#cfcfcf","rgba(0,0,0,.55)"),("카카오","8만","57%","#cfcfcf","rgba(0,0,0,.55)"),("뱅샐","7만","50%","#cfcfcf","rgba(0,0,0,.55)")])
+ + '</div><div style="font-weight:400;font-size:12.5px;color:rgba(0,0,0,.5);margin-top:18px;line-height:1.5">같은 카드인데 최대 <b style="font-weight:700;color:#000">2배 차이</b>. 어디가 가장 많이 주는지, 직접 비교는 사실상 불가능합니다.</div></div>'
+ '</div></section>'
+ # SOLUTION 한눈에 비교
+ '<section class="sec"><div class="block ab-lime"><div class="ab-g2">'
+ '<div><div class="eb" style="color:rgba(0,0,0,.55)">한눈에 비교</div>'
+ '<h2 class="ab-h2">흩어진 혜택을,<br>한곳에 모았습니다</h2>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:22px 0 0;color:rgba(0,0,0,.74)">6개 발급 플랫폼의 신규 발급 캐시백, 가맹점 결제 할인, 무이자 할부까지 — 매달 수집하고 분석해, <b style="font-weight:700">\'가장 많이 주는 곳\'을 골라 한눈에</b> 보여드립니다.</p>'
+ '<p style="font-weight:540;font-size:16px;line-height:1.5;margin:16px 0 0">"이 카드, 어디서 받아야 제일 이득이지?"에 대한 답을, 검색 없이.</p>'
+ '<p style="font-weight:400;font-size:15px;line-height:1.5;margin:18px 0 0;color:rgba(0,0,0,.66)">복잡한 건 우리가 할게요. 당신은 가장 이득인 결과만 보면 됩니다.</p></div>'
+ '<div style="background:#fff;border-radius:20px;padding:28px 30px;box-shadow:0 4px 16px rgba(0,0,0,.06)">'
+ '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px"><span class="mono" style="font-size:10px;color:rgba(0,0,0,.45)">6개 플랫폼 → 가장 이득인 1곳</span><span style="width:26px;height:26px;border-radius:50%;background:var(--block-lime);display:flex;align-items:center;justify-content:center"><svg viewBox="2 3.6 20 16.4" style="width:16px;height:16px"><use href="#mk"/></svg></span></div>'
+ '<div style="display:flex;flex-direction:column;gap:10px">'
+ + "".join('<div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:12px;background:%s;border:%s"><span style="width:8px;height:8px;border-radius:50%%;background:%s;flex-shrink:0"></span><span style="font-weight:540;font-size:13.5px;flex:1;color:%s">%s</span>%s<span style="font-weight:700;font-size:15px;white-space:nowrap;color:%s">%s</span></div>'%(bg,bd,dot,nc,nm,('<span class="mono" style="font-size:8px;background:#000;color:#fff;padding:3px 8px;border-radius:50px">최고</span>' if win else ''),vc,v) for nm,v,dot,win,bg,bd,nc,vc in [
+   ("토스","14만원","#3182F6",True,"var(--block-lime)","1px solid #000","#000","#000"),
+   ("아정당","11만원","#1B64DA",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("카드고릴라","9만원","#FF6A13",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("카카오페이","8만원","#FEE500",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("뱅크샐러드","7만원","#19C37D",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("네이버페이","6만원","#03C75A",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)")])
+ + '</div></div></div></div></section>'
+ # SKYSCANNER VISION
+ '<section class="sec"><div class="block ab-navy"><svg viewBox="0 0 140 92" style="position:absolute;right:34px;top:40px;width:170px;opacity:.16;color:#fff"><use href="#d-quetzal"/></svg>'
+ '<div class="eb" style="color:rgba(255,255,255,.6)">우리가 꿈꾸는 것</div>'
+ '<h2>카드 시장의 스카이스캐너를<br>꿈꿉니다</h2>'
+ '<p>항공권을 살 때 우리는 더 이상 항공사 사이트를 일일이 돌지 않습니다. 한 곳에서 <b>모든 항공사를 비교</b>하고, 가장 싼 항공권을 찾으니까요.</p>'
+ '<p>카드도 그래야 한다고 믿습니다. <b>모든 발급 플랫폼의 혜택을 한 화면에서 비교</b>해, 가장 이득인 곳을 찾는 곳. 카드티라노가 그 자리를 만들고 있습니다.</p>'
+ '<div class="ab-stats">'
+ + "".join('<div><div class="v">%s</div><div class="l">%s</div></div>'%(v,l) for v,l in [("6개","발급 플랫폼 통합 비교"),("매달","전수 수집·재분석"),("4인","사이트·사업·마케팅·분석 전문")])
+ + '</div></div></section>'
+ # EXPERTS 공룡
+ '<section class="sec"><div style="max-width:680px"><div class="eb" style="color:var(--accent-magenta)">곁의 전문가</div>'
+ '<h2 class="ab-h2">데이터를 읽는 공룡 넷</h2>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:20px 0 0;color:rgba(0,0,0,.72)">자동화만으로는 \'진짜 좋은 카드\'를 가려낼 수 없습니다. 조건의 함정, 실적의 무게, 갱신 시점의 미묘한 차이는 결국 사람이 읽어야 하니까요. 그래서 카드티라노 곁에는 <b style="font-weight:700">사이트를 만든 사람과 사업·마케팅·분석을 맡은 전문가들</b>이 있습니다.</p></div>'
+ '<div class="ab-eg">'
+ + "".join('<div class="ab-ec" style="background:%s;%s;%s"><div class="gl" style="width:%s"><svg viewBox="%s"><use href="%s"/></svg></div><div style="min-width:0"><div class="role">%s</div><div class="nm">%s</div><div class="tag">%s</div><div class="ds">%s</div></div></div>'%(bg,span,flex,gw,vb,ic,role,nm,tag,desc) for ic,vb,nm,role,tag,desc,bg,span,flex,gw in [
+   ("#d-eoraptor","0 0 120 100","에오랍토르","창립자 · 메이커","최초의 공룡","카드티라노를 기획하고, 만들고, 디자인했습니다. 가장 먼저 나타난 공룡처럼 — 이 모든 것의 시작.","var(--block-lilac)","grid-column:span 2","flex-direction:row;align-items:center","140px"),
+   ("#d-maia","0 0 120 100","마이아사우라","캐시백·이벤트 분석","좋은 건 놓치지 않습니다","매달 바뀌는 캐시백과 발급 이벤트를 꼼꼼히 살펴, 가장 이득인 것을 골라냅니다.","var(--block-mint)","","flex-direction:column;align-items:flex-start","104px"),
+   ("#d-ptera","0 0 120 100","프테라노돈","마케팅 총괄","멀리, 빠르게 알립니다","카드티라노가 찾은 가장 이득인 선택을, 필요한 사람에게 가장 빠르게 전합니다.","var(--block-pink)","","flex-direction:column;align-items:flex-start","104px"),
+   ("#d-brachio","0 0 120 100","브라키오","CBO · 사업 총괄","크게, 멀리 내다봅니다","서비스가 단단히 설 수 있는 사업 기반을 다지고, 카드사·플랫폼 등 파트너와의 협업을 만들어 카드티라노가 더 멀리 나아갈 길을 엽니다.","var(--block-cream)","grid-column:span 2","flex-direction:row;align-items:center","140px")])
+ + '</div>'
+ '<p style="font-weight:400;font-size:14px;line-height:1.55;margin:26px auto 0;max-width:680px;color:rgba(0,0,0,.6);text-align:center">데이터가 숫자를 모으고, 전문가가 그 숫자에 맥락을 입힙니다. 그래서 카드티라노의 추천에는 늘 <b style="font-weight:700;color:#000">근거</b>가 있습니다.</p></section>'
+ # BELIEF
+ '<section class="sec"><div class="ab-cream"><div class="eb" style="color:rgba(0,0,0,.5)">우리의 믿음</div>'
+ '<h2>혜택은 부지런한 사람만의<br>것이 아니어야 합니다</h2>'
+ '<p style="font-weight:400;font-size:17px;line-height:1.55;margin:24px auto 0;max-width:560px;color:rgba(0,0,0,.7)">정보를 더 가졌다는 이유로 누군가는 더 받고, 모른다는 이유로 누군가는 덜 받는 일. 카드티라노는 그 격차를 메우려 합니다.</p>'
+ '<p style="font-weight:540;font-size:22px;letter-spacing:-.5px;margin:28px auto 0;max-width:560px">누구나, 받을 수 있는 혜택을 다 받는 것. 그게 우리가 만들고 싶은 카드 시장입니다.</p></div></section>'
+ # COMPANY
+ '<section class="sec"><div class="ab-g2">'
+ '<div><div style="display:flex;align-items:center;gap:11px;margin-bottom:20px"><svg viewBox="2 3.6 20 16.4" style="width:34px;height:34px"><use href="#mk"/></svg><span style="font-weight:700;font-size:22px;letter-spacing:-.5px">CARD<span style="font-weight:340">TYRANNO</span></span></div>'
+ '<p style="font-weight:400;font-size:17px;line-height:1.55;color:rgba(0,0,0,.74)"><b style="font-weight:700">데이터로 카드 혜택을 큐레이션하는 핀테크 스타트업</b>입니다. (운영: 쥬라기랩스) 오직 사용자 편에서, 흩어진 혜택을 모으고 분석해 가장 유리한 선택을 안내합니다.</p>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:18px 0 0;color:rgba(0,0,0,.66)">가장 강한 포식자가 먹잇감을 놓치지 않듯 — 당신이 받아야 할 혜택도, 카드티라노가 놓치지 않겠습니다.</p></div>'
+ '<div class="ab-co-card"><h3>이번 달, 당신에게<br>가장 유리한 선택은?</h3>'
+ '<p style="font-weight:400;font-size:15px;line-height:1.5;margin:16px 0 0;color:rgba(255,255,255,.7)">매달 쌓이는 데이터와 전문가의 시선으로 카드티라노가 안내합니다.</p>'
+ '<a class="sans" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#fff;color:#000;font-weight:540;font-size:15px;margin-top:26px;text-decoration:none" href="issue.html?v=cmp">한눈에 비교 시작하기 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div>'
+ '</div></section>'
+ '</div></div>')
+
 # ===== BUILD =====
 page("index.html",BRAND+" | 카드 발급 캐시백·할인 혜택 비교","같은 카드도 채널 따라 혜택이 달라요. 토스·카드고릴라·아정당·카카오페이의 발급 캐시백·할인을 카드티라노가 매달 비교해 드려요.","/index.html",INDEX_BODY+SEO_STATIC_INDEX,INDEX_JS,faq_jsonld(),searchbar=False,catstrip=False,active="")
+page("about.html",BRAND+" | 카드티라노란? · 서비스 소개","흩어진 카드 혜택을 모아 가장 이득인 발급처를 한눈에 비교해 드리는 카드티라노 소개 — 정보의 비대칭을 줄이는 카드 비교 핀테크(쥬라기랩스).","/about.html",ABOUT_BODY,"",active="about")
 page("discount.html",BRAND+" | 카드 할인 혜택 (가맹점·업종별)","네이버·쿠팡·무신사·이마트·GS25 등 가맹점의 카드 즉시할인·청구할인·캐시백·무이자할부를 업종·카드사별로.","/discount.html",DISC_BODY,DISC_JS,searchbar=True,catstrip=True,active="discount")
 page("cards.html",BRAND+" | 카드 찾기 (카드사별 신용카드)","삼성·현대·신한·KB국민·롯데·우리·하나·NH농협·BC·IBK 카드사별 대표 신용카드를 플레이트 이미지·연회비·혜택으로 비교.","/cards.html",CARDS_BODY,CARDS_JS,active="cards")
 page("issue.html",BRAND+" | 이번달 캐시백 (플랫폼별 비교)","카드사별 신규 발급 캐시백을 아정당·카드고릴라·토스·카카오페이 등 플랫폼별로 비교. 이번달 캐시백 리스트와 최대 혜택 비교표.","/issue.html",ISSUE_BODY,ISSUE_JS,active="issue")
