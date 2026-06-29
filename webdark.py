@@ -675,7 +675,8 @@ INDEX_BODY=('<div class="wrap">'
  '.nhc-cmp-bars{display:flex;flex-direction:column;gap:9px}'
  '.nhc-cmp-row{display:flex;align-items:center;gap:9px}.nhc-cmp-row i{width:8px;height:8px;border-radius:50%;flex-shrink:0}.nhc-cmp-row .nm{width:58px;font-weight:540;font-size:11px;white-space:nowrap;flex-shrink:0}'
  '.nhc-cmp-row .tr{flex:1;height:9px;border-radius:50px;background:#f1f1ef;overflow:hidden}.nhc-cmp-row .tr i{display:block;height:100%;border-radius:50px;width:0;background:#cfcfcf;border-radius:50px}'
- '.nhc-plate{width:300px;flex-shrink:0;position:relative;z-index:1;transform:rotate(-8deg);aspect-ratio:1.586/1;border-radius:14px;background:var(--block-lilac);box-shadow:0 20px 44px rgba(0,0,0,.22);overflow:hidden}'
+ '.nhc-plate{width:300px;flex-shrink:0;position:relative;z-index:1;transform:rotate(-8deg);aspect-ratio:1.586/1;border-radius:14px;background:var(--surface-soft);box-shadow:0 20px 44px rgba(0,0,0,.22);overflow:hidden}'
+ '.nhc-plate img{width:100%;height:100%;object-fit:cover;display:block}'
  '.nhc-plate .pn{position:absolute;left:18px;bottom:16px;font-weight:700;font-size:20px;line-height:1.05;max-width:80%}'
  '.nhc-plate .pi{position:absolute;left:18px;top:16px;font-family:var(--font-mono,monospace);font-size:10px;text-transform:uppercase;opacity:.6}'
  '.nhc-plate .pf{position:absolute;right:-5%;bottom:-10%;width:48%;height:48%;opacity:.16;color:#000}'
@@ -763,7 +764,7 @@ Promise.all([
   if(_e=document.getElementById('heroS2Amt'))_e.textContent='최대 '+_won(bMx);
   if(_e=document.getElementById('heroS2Sub'))_e.innerHTML='6개 플랫폼을 비교한 결과, <b>'+bm.n+'에서 받을 때</b> 캐시백이 가장 커요.';
   if(_e=document.getElementById('heroS2'))_e.setAttribute('href',href(best.name));
-  if(_e=document.getElementById('heroS2Plate'))_e.innerHTML='<span class="pi">'+(best.issuer||'')+'</span><span class="pn">'+best.name+'</span><svg class="pf" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>';}
+  if(_e=document.getElementById('heroS2Plate'))_e.innerHTML=plate(best.name,best.img);}
  var im={};PE.forEach(function(p){var k=p.issuer||'';if(!k)return;(p.events||[]).forEach(function(e){if((e.reward_won||0)>(im[k]||0))im[k]=e.reward_won;});});
  var ta=Object.keys(im).map(function(k){return[k,im[k]];}).sort(function(a,b){return b[1]-a[1];}).slice(0,8);
  var lt=document.getElementById('liveTk');if(lt&&ta.length){var s=ta.map(function(r){return r[0].replace('카드','')+' '+_won(r[1]);}).join('     /     ');lt.textContent=s+'     /     '+s;}
@@ -1519,7 +1520,7 @@ EVENTDETAIL_BODY=('<style>'
  '.rg-plist{display:flex;flex-direction:column;gap:8px;margin-top:14px}'
  '.rg-prow{display:grid;grid-template-columns:auto 1fr auto auto;gap:16px;align-items:center;border:1px solid var(--hairline);background:#fff;border-radius:14px;padding:12px 16px;cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit}'
  '.rg-prow.sel{border:2px solid #000;background:var(--surface-soft)}'
- '.rg-pl{width:62px;flex-shrink:0;aspect-ratio:1.586/1;border-radius:8px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:5px}.rg-pl span{font-weight:700;font-size:11px;line-height:1;position:relative;z-index:1}.rg-pl svg{position:absolute;right:-5%;bottom:-10%;width:52%}'
+ '.rg-pl{width:62px;flex-shrink:0;aspect-ratio:1.586/1;border-radius:8px;overflow:hidden;background:var(--surface-soft)}.rg-pl img{width:100%;height:100%;object-fit:cover;display:block}'
  '.rg-pn{display:flex;align-items:center;gap:7px}.rg-pn b{font-weight:700;font-size:16px}.rg-pi{font-family:var(--font-mono,monospace);font-size:10px;opacity:.5;margin-top:3px}'
  '.rg-tag{font-family:var(--font-mono,monospace);font-size:9px;padding:3px 8px;border-radius:50px}.rg-tag.mx{background:#000;color:#fff}.rg-tag.se{background:var(--accent-magenta);color:#fff}'
  '.rg-pcash{text-align:right}.rg-pcash .l{font-family:var(--font-mono,monospace);font-size:9px;opacity:.45}.rg-pcash .v{font-weight:700;font-size:20px;letter-spacing:-.4px;white-space:nowrap}'
@@ -1602,7 +1603,7 @@ Promise.all([
    +'<a class="rg-cta" id="rgHeadCta" href="#" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div>'
    +'<div class="rg-deco"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div></div>';
   var listRows=group.map(function(g,i){var p=g.p,e=g.e;var pc=PLATEC[i%6];var ink=(pc.indexOf('navy')>=0)?'#fff':'#000';
-   return '<button type="button" class="rg-prow'+(i===focusIdx?' sel':'')+'" data-i="'+i+'"><div class="rg-pl" style="background:'+pc+';color:'+ink+';opacity:1"><span>'+_short(p.name)+'</span><svg viewBox="0 0 24 24" style="color:'+ink+';opacity:.16"><use href="#mk"/></svg></div>'
+   return '<button type="button" class="rg-prow'+(i===focusIdx?' sel':'')+'" data-i="'+i+'"><div class="rg-pl">'+imgTag(p.img)+'</div>'
     +'<div><div class="rg-pn"><b>'+p.name+'</b>'+(i===0?'<span class="rg-tag mx">최대</span>':'')+'<span class="rg-tag se" data-sel hidden>선택됨</span></div><div class="rg-pi">'+(p.issuer||'')+'</div></div>'
     +'<div class="rg-pcash"><div class="l">최대 캐시백</div><div class="v">'+_wm(e.reward_won)+'</div></div>'
     +'<svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button>';
@@ -1645,11 +1646,11 @@ Promise.all([
     +'<div class="rg-coach-body"><div class="t">'+recMsg+'</div><div class="rg-coach-leg"><span>○ 추천 — 지금 발급</span><span>△ 보류 — 추이 지켜보기</span><span>✕ 비추천 — 다음 달 권장</span></div></div></div></div>';
    var nk=_nk(p.name);var orows=[];
    var op=null,opw=0;(p.events||[]).forEach(function(x){if(x.platform!==P&&(x.reward_won||0)>opw){opw=x.reward_won;op=x;}});
-   if(op&&opw>S.total)orows.push({tag:'다른 플랫폼 · 더 큼',tagBg:'var(--block-lime)',tagFg:'#000',name:p.name,issuer:p.issuer,plat:op.platform,amt:opw,href:'events.html?platform='+op.platform+'&n='+encodeURIComponent(p.name)});
+   if(op&&opw>S.total)orows.push({tag:'다른 플랫폼 · 더 큼',tagBg:'var(--block-lime)',tagFg:'#000',name:p.name,issuer:p.issuer,plat:op.platform,amt:opw,img:p.img,href:'events.html?platform='+op.platform+'&n='+encodeURIComponent(p.name)});
    var si=PE.filter(function(q){return q.issuer===p.issuer&&_nk(q.name)!==nk;}).map(function(q){var ee=evOf(q);return ee?{q:q,w:ee.reward_won}:null;}).filter(Boolean).sort(function(a,b){return b.w-a.w;})[0];
-   if(si)orows.push({tag:'같은 카드사 · '+pnm,tagBg:'var(--surface-soft)',tagFg:'rgba(0,0,0,.7)',name:si.q.name,issuer:si.q.issuer,plat:P,amt:si.w,href:'events.html?platform='+P+'&n='+encodeURIComponent(si.q.name)});
-   var top=group[0];if(top&&top.e.reward_won!==S.total)orows.push({tag:'이번달 최대 혜택',tagBg:'#000',tagFg:'#fff',name:top.p.name,issuer:top.p.issuer,plat:P,amt:top.e.reward_won,href:'events.html?platform='+P+'&n='+encodeURIComponent(top.p.name)});
-   var othersHtml=orows.length?('<div class="rg-sec"><h2 class="rg-t">이런 이벤트도 있어요</h2><div class="rg-others">'+orows.map(function(o){var oc=PBC[o.plat]||'#888';return '<a class="rg-orow" href="'+o.href+'"><div class="rg-pl" style="background:var(--surface-soft);color:#000;width:54px"><span>'+_short(o.name)+'</span></div><div><span class="rg-otag" style="background:'+o.tagBg+';color:'+o.tagFg+'">'+o.tag+'</span><div class="rg-pn"><b style="font-size:15px">'+o.name+'</b></div><div class="rg-pi"><i style="display:inline-block;width:6px;height:6px;border-radius:50%;background:'+oc+';margin-right:5px"></i>'+(o.issuer||'')+' · '+(PNM[o.plat]||o.plat)+'</div></div><div class="rg-pcash"><div class="l">캐시백</div><div class="v">'+_wm(o.amt)+'</div></div><svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>';}).join('')+'</div></div>'):'';
+   if(si)orows.push({tag:'같은 카드사 · '+pnm,tagBg:'var(--surface-soft)',tagFg:'rgba(0,0,0,.7)',name:si.q.name,issuer:si.q.issuer,plat:P,amt:si.w,img:si.q.img,href:'events.html?platform='+P+'&n='+encodeURIComponent(si.q.name)});
+   var top=group[0];if(top&&top.e.reward_won!==S.total)orows.push({tag:'이번달 최대 혜택',tagBg:'#000',tagFg:'#fff',name:top.p.name,issuer:top.p.issuer,plat:P,amt:top.e.reward_won,img:top.p.img,href:'events.html?platform='+P+'&n='+encodeURIComponent(top.p.name)});
+   var othersHtml=orows.length?('<div class="rg-sec"><h2 class="rg-t">이런 이벤트도 있어요</h2><div class="rg-others">'+orows.map(function(o){var oc=PBC[o.plat]||'#888';return '<a class="rg-orow" href="'+o.href+'"><div class="rg-pl" style="width:54px">'+imgTag(o.img)+'</div><div><span class="rg-otag" style="background:'+o.tagBg+';color:'+o.tagFg+'">'+o.tag+'</span><div class="rg-pn"><b style="font-size:15px">'+o.name+'</b></div><div class="rg-pi"><i style="display:inline-block;width:6px;height:6px;border-radius:50%;background:'+oc+';margin-right:5px"></i>'+(o.issuer||'')+' · '+(PNM[o.plat]||o.plat)+'</div></div><div class="rg-pcash"><div class="l">캐시백</div><div class="v">'+_wm(o.amt)+'</div></div><svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>';}).join('')+'</div></div>'):'';
    var foot='<div class="rg-foot">· 표기된 캐시백·조건은 공개 데이터 수집 시점 기준이며 실제 적용 금액·조건은 달라질 수 있어요. <b>상세한 캐시백 정보는 각 플랫폼사에서 최종 확인하세요.</b> 카드티라노는 발급을 중개·접수하지 않는 광고·정보제공 매체입니다.</div>';
    document.getElementById('rgDyn').innerHTML=chart+comp+coach+othersHtml+foot;
    var _ppd=(p.platforms||{})[P]||{};var edUrl=_best(P,e.url||_ppd.url,_ppd.id);if(P==='cardgorilla'){var _cg=_cgUrl(p.issuer,_ppd.id);if(_cg)edUrl=_cg;}if(!edUrl)edUrl=e.url||'#';
