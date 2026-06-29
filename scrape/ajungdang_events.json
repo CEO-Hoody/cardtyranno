@@ -1,29 +1,144 @@
 {
- "platform": "아정당",
- "captured": "2026-06-21",
- "note": "아정당 6월 카드 발급 이벤트. 사실 데이터(카드사·금액·카드명)만 수집. 소개 문구 미수집.",
+ "platform": "ajungdang",
+ "captured": "2026-06-30",
+ "note": "collect_ajd_local v2 자동생성(거주지 렌더+유니버스 매칭).",
  "issuer_cashback": [
-  {"issuer":"KB국민카드","amount":"최대 85만원"},
-  {"issuer":"우리카드","amount":"최대 77만원"},
-  {"issuer":"현대카드","amount":"최대 72만원"},
-  {"issuer":"롯데카드","amount":"최대 66만원"},
-  {"issuer":"삼성카드","amount":"최대 61.1만원"},
-  {"issuer":"신한카드","amount":"최대 54만원"},
-  {"issuer":"NH농협카드","amount":"최대 20.5만원"},
-  {"issuer":"KB국민카드(체크)","amount":"최대 3만원"}
+  {
+   "issuer": "KB국민카드",
+   "amount": "최대 85만원"
+  },
+  {
+   "issuer": "우리카드",
+   "amount": "최대 77만원"
+  },
+  {
+   "issuer": "롯데카드",
+   "amount": "최대 66만원"
+  },
+  {
+   "issuer": "삼성카드",
+   "amount": "최대 61.1만원"
+  },
+  {
+   "issuer": "신한카드",
+   "amount": "최대 54만원"
+  },
+  {
+   "issuer": "NH농협카드",
+   "amount": "최대 20.5만원"
+  }
  ],
  "fuel_cards": [
-  {"name":"신한카드 Deep Oil","issuer":"신한카드","amount":"최대 54만원"},
-  {"name":"taptap DRIVE","issuer":"삼성카드","amount":"최대 93.8만원"},
-  {"name":"KB국민 굿데이카드","issuer":"KB국민카드","amount":"최대 55만원 캐시백"},
-  {"name":"에너지플러스 현대카드","issuer":"현대카드","amount":"최대 60만원 캐시백"},
-  {"name":"BC 바로 MACAO 카드","issuer":"BC카드","amount":"주유소 최대 10% 할인"}
+  {
+   "name": "올바른 FLEX 카드",
+   "issuer": "NH농협카드",
+   "amount": "최대 20.5만원"
+  },
+  {
+   "name": "zgm.streaming카드",
+   "issuer": "NH농협카드",
+   "amount": "최대 20.5만원"
+  },
+  {
+   "name": "zgm.play카드",
+   "issuer": "NH농협카드",
+   "amount": "최대 20.5만원"
+  },
+  {
+   "name": "굿데이카드",
+   "issuer": "KB국민카드",
+   "amount": "최대 85만원"
+  },
+  {
+   "name": "KB국민 My WE:SH 카드",
+   "issuer": "KB국민카드",
+   "amount": "최대 85만원"
+  },
+  {
+   "name": "KB YOU Prime 카드",
+   "issuer": "KB국민카드",
+   "amount": "최대 85만원"
+  },
+  {
+   "name": "KB국민 굿데이카드",
+   "issuer": "KB국민카드",
+   "amount": "최대 85만원"
+  },
+  {
+   "name": "노리2 체크카드(KB Pay)",
+   "issuer": "KB국민카드",
+   "amount": "최대 3만원"
+  },
+  {
+   "name": "LOCA LIKIT",
+   "issuer": "롯데카드",
+   "amount": "최대 66만원"
+  },
+  {
+   "name": "디지로카 London",
+   "issuer": "롯데카드",
+   "amount": "최대 66만원"
+  },
+  {
+   "name": "디지로카 Paris",
+   "issuer": "롯데카드",
+   "amount": "최대 66만원"
+  },
+  {
+   "name": "디지로카 Las Vegas",
+   "issuer": "롯데카드",
+   "amount": "최대 66만원"
+  },
+  {
+   "name": "신한카드 Mr.Life",
+   "issuer": "신한카드",
+   "amount": "최대 54만원"
+  },
+  {
+   "name": "신한카드 Deep Oil",
+   "issuer": "신한카드",
+   "amount": "최대 54만원"
+  },
+  {
+   "name": "신한카드 Point Plan+",
+   "issuer": "신한카드",
+   "amount": "최대 54만원"
+  },
+  {
+   "name": "신한카드 처음(ANNIVERSE)",
+   "issuer": "신한카드",
+   "amount": "최대 54만원"
+  },
+  {
+   "name": "알리익스프레스 신한카드",
+   "issuer": "신한카드",
+   "amount": "최대 54만원"
+  },
+  {
+   "name": "카드의정석 2",
+   "issuer": "우리카드",
+   "amount": "최대 77만원"
+  },
+  {
+   "name": "우리카드 7CORE",
+   "issuer": "우리카드",
+   "amount": "최대 77만원"
+  },
+  {
+   "name": "우리카드 MILE&POINT",
+   "issuer": "우리카드",
+   "amount": "최대 77만원"
+  },
+  {
+   "name": "삼성 iD ON 카드",
+   "issuer": "삼성카드",
+   "amount": "최대 61.1만원"
+  },
+  {
+   "name": "삼성 iD STATION 카드 (HD현대오일뱅크)",
+   "issuer": "삼성카드",
+   "amount": "최대 61.1만원"
+  }
  ],
- "recommended": [
-  {"name":"iD로 구독 SELECT","issuer":"삼성카드","theme":"디지털/구독"},
-  {"name":"LOCA365","issuer":"롯데카드","theme":"공과금/관리비"},
-  {"name":"카드의정석2","issuer":"우리카드","theme":"전가맹점"},
-  {"name":"신한카드 Mr.Life","issuer":"신한카드","theme":"생활"},
-  {"name":"Triple in LOCA","issuer":"롯데카드","theme":"통신/렌탈"}
- ]
+ "recommended": []
 }

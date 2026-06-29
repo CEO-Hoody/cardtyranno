@@ -1,6 +1,6 @@
 {
  "month": "2026-06",
- "updated": "2026-06-29",
+ "updated": "2026-06-30",
  "issuers": {
   "신한카드": {
    "banksalad": 840000,
@@ -23,11 +23,13 @@
    "naver": 780000,
    "ajungdang": 770000,
    "banksalad": 780000,
+   "issuer": 240000,
    "toss": 810000
   },
   "롯데카드": {
    "cardgorilla": 670000,
    "naver": 644000,
+   "issuer": 490000,
    "banksalad": 840000,
    "kakaopay": 100000,
    "toss": 810000,
@@ -45,6 +47,7 @@
    "naver": 750000,
    "cardgorilla": 890000,
    "banksalad": 750000,
+   "issuer": 600000,
    "kakaopay": 720000
   },
   "KB국민카드": {
@@ -56,6 +59,7 @@
    "toss": 810000
   },
   "하나카드": {
+   "issuer": 20000,
    "cardgorilla": 570000,
    "naver": 570000,
    "toss": 570000
@@ -138,7 +142,8 @@
    "issuer": "롯데카드",
    "platforms": {
     "cardgorilla": 640000,
-    "naver": 634000
+    "naver": 634000,
+    "issuer": 490000
    },
    "max": 640000
   },
@@ -177,6 +182,7 @@
     "naver": 725000,
     "cardgorilla": 685000,
     "banksalad": 675000,
+    "issuer": 600000,
     "kakaopay": 440000
    },
    "max": 725000
@@ -202,7 +208,8 @@
     "kakaopay": 780000,
     "naver": 780000,
     "ajungdang": 770000,
-    "banksalad": 750000
+    "banksalad": 750000,
+    "issuer": 240000
    },
    "max": 780000
   },
@@ -212,7 +219,8 @@
    "platforms": {
     "banksalad": 820000,
     "cardgorilla": 670000,
-    "naver": 644000
+    "naver": 644000,
+    "issuer": 490000
    },
    "max": 820000
   },
@@ -220,9 +228,10 @@
    "name": "the Orange",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 600000,
     "cardgorilla": 250000
    },
-   "max": 250000
+   "max": 600000
   },
   {
    "name": "I-Mileage (대한항공)",
@@ -245,9 +254,10 @@
    "name": "하나 나라사랑카드",
    "issuer": "하나카드",
    "platforms": {
+    "issuer": 20000,
     "cardgorilla": 10000
    },
-   "max": 10000
+   "max": 20000
   },
   {
    "name": "트라이플러스 삼성카드",
@@ -294,6 +304,7 @@
    "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 600000,
+    "issuer": 600000,
     "naver": 600000
    },
    "max": 600000
@@ -305,7 +316,8 @@
     "naver": 750000,
     "cardgorilla": 730000,
     "banksalad": 690000,
-    "kakaopay": 690000
+    "kakaopay": 690000,
+    "issuer": 240000
    },
    "max": 750000
   },
@@ -316,7 +328,8 @@
     "cardgorilla": 790000,
     "naver": 750000,
     "banksalad": 720000,
-    "kakaopay": 720000
+    "kakaopay": 720000,
+    "issuer": 240000
    },
    "max": 790000
   },
@@ -327,7 +340,8 @@
     "cardgorilla": 760000,
     "naver": 750000,
     "banksalad": 720000,
-    "kakaopay": 720000
+    "kakaopay": 720000,
+    "issuer": 240000
    },
    "max": 760000
   },
@@ -337,7 +351,8 @@
    "platforms": {
     "cardgorilla": 890000,
     "banksalad": 750000,
-    "naver": 750000
+    "naver": 750000,
+    "issuer": 240000
    },
    "max": 890000
   },
@@ -345,17 +360,19 @@
    "name": "현대카드 ZERO Up(할인형)",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 60000,
     "cardgorilla": 30000
    },
-   "max": 30000
+   "max": 60000
   },
   {
    "name": "현대카드 ZERO Up(포인트형)",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 60000,
     "cardgorilla": 30000
    },
-   "max": 30000
+   "max": 60000
   },
   {
    "name": "현대카드MY BUSINESS M F&B",
@@ -562,33 +579,37 @@
    "name": "현대카드O",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 280000,
     "cardgorilla": 15000
    },
-   "max": 15000
+   "max": 280000
   },
   {
    "name": "현대카드S",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 600000,
     "kakaopay": 440000,
     "cardgorilla": 15000
    },
-   "max": 440000
+   "max": 600000
   },
   {
    "name": "현대카드D",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 600000,
     "kakaopay": 440000,
     "cardgorilla": 15000
    },
-   "max": 440000
+   "max": 600000
   },
   {
    "name": "현대카드H",
    "issuer": "현대카드",
    "platforms": {
     "kakaopay": 440000,
+    "issuer": 280000,
     "cardgorilla": 15000
    },
    "max": 440000
@@ -597,17 +618,19 @@
    "name": "현대카드T",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 280000,
     "cardgorilla": 15000
    },
-   "max": 15000
+   "max": 280000
   },
   {
    "name": "현대카드 X Cut",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 500000,
     "cardgorilla": 30000
    },
-   "max": 30000
+   "max": 500000
   },
   {
    "name": "현대카드 X Save",
@@ -693,8 +716,7 @@
    "name": "KB NEED Pay 카드",
    "issuer": "KB국민카드",
    "platforms": {
-    "cardgorilla": 860000,
-    "naver": 830000
+    "cardgorilla": 860000
    },
    "max": 860000
   },
@@ -767,7 +789,8 @@
     "banksalad": 840000,
     "ajungdang": 660000,
     "cardgorilla": 640000,
-    "naver": 634000
+    "naver": 634000,
+    "issuer": 490000
    },
    "max": 840000
   },
@@ -799,7 +822,8 @@
    "platforms": {
     "banksalad": 820000,
     "cardgorilla": 670000,
-    "naver": 644000
+    "naver": 644000,
+    "issuer": 490000
    },
    "max": 820000
   },
@@ -1039,6 +1063,7 @@
    "platforms": {
     "banksalad": 500000,
     "cardgorilla": 500000,
+    "issuer": 500000,
     "naver": 500000
    },
    "max": 500000
@@ -1047,43 +1072,48 @@
    "name": "현대카드 MX Black Edition2",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 500000,
     "cardgorilla": 200000
    },
-   "max": 200000
+   "max": 500000
   },
   {
    "name": "현대카드 Summit",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 500000,
     "cardgorilla": 250000
    },
-   "max": 250000
+   "max": 500000
   },
   {
    "name": "the Green Edition3",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 500000,
     "cardgorilla": 150000
    },
-   "max": 150000
+   "max": 500000
   },
   {
    "name": "the Pink Edition2",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 500000,
     "cardgorilla": 150000
    },
-   "max": 150000
+   "max": 500000
   },
   {
    "name": "American Express® Green Card Edition2",
    "issuer": "현대카드",
    "platforms": {
+    "issuer": 500000,
     "banksalad": 250000,
     "cardgorilla": 250000,
     "naver": 250000
    },
-   "max": 250000
+   "max": 500000
   },
   {
    "name": "트래블러스 체크카드(토심이)",
@@ -1209,7 +1239,8 @@
     "toss": 810000,
     "ajungdang": 660000,
     "naver": 644000,
-    "cardgorilla": 590000
+    "cardgorilla": 590000,
+    "issuer": 490000
    },
    "max": 840000
   },

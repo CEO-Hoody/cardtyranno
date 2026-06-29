@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-29",
+ "updated": "2026-06-30",
  "month": "2026-06",
  "order": [
   "삼성카드",
@@ -176,7 +176,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
    "won": 125000
   },
   {
@@ -214,6 +214,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
    "won": 634000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "LOCA 365 카드",
+   "platform": "issuer",
+   "benefit": "최대 49만원 캐시백",
+   "period": "",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
+   "won": 490000
   },
   {
    "issuer": "삼성카드",
@@ -308,6 +317,15 @@
   {
    "issuer": "현대카드",
    "card": "현대카드 M",
+   "platform": "issuer",
+   "benefit": "최대 60만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
+   "won": 600000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 M",
    "platform": "카카오페이",
    "benefit": "최대 44만원 캐시백",
    "period": "~06/30",
@@ -356,7 +374,7 @@
    "platform": "네이버페이",
    "benefit": "최대 83만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
    "won": 830000
   },
   {
@@ -414,6 +432,15 @@
    "won": 750000
   },
   {
+   "issuer": "우리카드",
+   "card": "카드의정석 2",
+   "platform": "issuer",
+   "benefit": "최대 24만원 캐시백",
+   "period": "",
+   "url": "https://pc.wooricard.com/dcpc/yh1/bnf/bnf02/prgevnt/H1BNF202S00.do",
+   "won": 240000
+  },
+  {
    "issuer": "롯데카드",
    "card": "LOCA LIKIT 2.0",
    "platform": "뱅크샐러드",
@@ -439,6 +466,24 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
    "won": 644000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "LOCA LIKIT 2.0",
+   "platform": "issuer",
+   "benefit": "최대 49만원 캐시백",
+   "period": "",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
+   "won": 490000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "the Orange",
+   "platform": "issuer",
+   "benefit": "최대 60만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
+   "won": 600000
   },
   {
    "issuer": "현대카드",
@@ -475,6 +520,15 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/1",
    "won": 15000
+  },
+  {
+   "issuer": "하나카드",
+   "card": "하나 나라사랑카드",
+   "platform": "issuer",
+   "benefit": "최대 2만원 캐시백",
+   "period": "",
+   "url": "https://www.hanacard.co.kr/OPP99999998N.web?Code=moevent",
+   "won": 20000
   },
   {
    "issuer": "하나카드",
@@ -545,7 +599,7 @@
    "platform": "네이버페이",
    "benefit": "최대 57만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=CCHN",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=044",
    "won": 570000
   },
   {
@@ -614,6 +668,15 @@
   {
    "issuer": "현대카드",
    "card": "에너지플러스 현대카드",
+   "platform": "issuer",
+   "benefit": "최대 60만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
+   "won": 600000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "에너지플러스 현대카드",
    "platform": "네이버페이",
    "benefit": "최대 60만원 캐시백",
    "period": "",
@@ -658,6 +721,15 @@
   },
   {
    "issuer": "현대카드",
+   "card": "대한항공카드 060",
+   "platform": "issuer",
+   "benefit": "최대 24만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=50U984&amp;searchWord=",
+   "won": 240000
+  },
+  {
+   "issuer": "현대카드",
    "card": "대한항공카드 300",
    "platform": "카드고릴라",
    "benefit": "최대 79만원 캐시백",
@@ -691,6 +763,15 @@
    "period": "~06/30",
    "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1682bce0eb334818c07cb3",
    "won": 720000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "대한항공카드 300",
+   "platform": "issuer",
+   "benefit": "최대 24만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=O4P983&amp;searchWord=",
+   "won": 240000
   },
   {
    "issuer": "현대카드",
@@ -730,6 +811,15 @@
   },
   {
    "issuer": "현대카드",
+   "card": "대한항공카드 120",
+   "platform": "issuer",
+   "benefit": "최대 24만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=50U984&amp;searchWord=",
+   "won": 240000
+  },
+  {
+   "issuer": "현대카드",
    "card": "대한항공카드 the First Edition2",
    "platform": "카드고릴라",
    "benefit": "최대 89만원 캐시백",
@@ -757,12 +847,39 @@
   },
   {
    "issuer": "현대카드",
+   "card": "대한항공카드 the First Edition2",
+   "platform": "issuer",
+   "benefit": "최대 24만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=O4P983&amp;searchWord=",
+   "won": 240000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 ZERO Up(할인형)",
+   "platform": "issuer",
+   "benefit": "최대 6만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=92H973&amp;searchWord=",
+   "won": 60000
+  },
+  {
+   "issuer": "현대카드",
    "card": "현대카드 ZERO Up(할인형)",
    "platform": "카드고릴라",
    "benefit": "최대 3만원 캐시백",
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 30000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 ZERO Up(포인트형)",
+   "platform": "issuer",
+   "benefit": "최대 6만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=92H973&amp;searchWord=",
+   "won": 60000
   },
   {
    "issuer": "현대카드",
@@ -1082,11 +1199,29 @@
   {
    "issuer": "현대카드",
    "card": "현대카드O",
+   "platform": "issuer",
+   "benefit": "최대 28만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
+   "won": 280000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드O",
    "platform": "카드고릴라",
    "benefit": "최대 1.5만원 캐시백",
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 15000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드S",
+   "platform": "issuer",
+   "benefit": "최대 60만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
+   "won": 600000
   },
   {
    "issuer": "현대카드",
@@ -1105,6 +1240,15 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 15000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드D",
+   "platform": "issuer",
+   "benefit": "최대 60만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
+   "won": 600000
   },
   {
    "issuer": "현대카드",
@@ -1132,6 +1276,15 @@
    "period": "~06/30",
    "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
    "won": 440000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드H",
+   "platform": "issuer",
+   "benefit": "최대 28만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
+   "won": 280000
   },
   {
    "issuer": "현대카드",
@@ -1145,11 +1298,29 @@
   {
    "issuer": "현대카드",
    "card": "현대카드T",
+   "platform": "issuer",
+   "benefit": "최대 28만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
+   "won": 280000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드T",
    "platform": "카드고릴라",
    "benefit": "최대 1.5만원 캐시백",
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 15000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 X Cut",
+   "platform": "issuer",
+   "benefit": "최대 50만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
+   "won": 500000
   },
   {
    "issuer": "현대카드",
@@ -1220,7 +1391,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
    "won": 125000
   },
   {
@@ -1324,15 +1495,6 @@
   },
   {
    "issuer": "KB국민카드",
-   "card": "KB NEED Pay 카드",
-   "platform": "네이버페이",
-   "benefit": "최대 83만원 캐시백",
-   "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
-   "won": 830000
-  },
-  {
-   "issuer": "KB국민카드",
    "card": "KB YOU Prime 카드",
    "platform": "카드고릴라",
    "benefit": "최대 86만원 캐시백",
@@ -1373,7 +1535,7 @@
    "platform": "네이버페이",
    "benefit": "최대 83만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
    "won": 830000
   },
   {
@@ -1454,7 +1616,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
    "won": 125000
   },
   {
@@ -1481,7 +1643,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
    "won": 125000
   },
   {
@@ -1508,7 +1670,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
    "won": 125000
   },
   {
@@ -1546,6 +1708,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
    "won": 634000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "디지로카 London",
+   "platform": "issuer",
+   "benefit": "최대 49만원 캐시백",
+   "period": "",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
+   "won": 490000
   },
   {
    "issuer": "롯데카드",
@@ -1645,6 +1816,15 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
    "won": 644000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "LOCA LIKIT 1.5",
+   "platform": "issuer",
+   "benefit": "최대 49만원 캐시백",
+   "period": "",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
+   "won": 490000
   },
   {
    "issuer": "BC 바로카드",
@@ -2288,10 +2468,28 @@
   {
    "issuer": "현대카드",
    "card": "American Express® Gold Card Edition2",
+   "platform": "issuer",
+   "benefit": "최대 50만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=Z22888&amp;searchWord=",
+   "won": 500000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "American Express® Gold Card Edition2",
    "platform": "네이버페이",
    "benefit": "최대 50만원 캐시백",
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+   "won": 500000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 MX Black Edition2",
+   "platform": "issuer",
+   "benefit": "최대 50만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
    "won": 500000
   },
   {
@@ -2306,11 +2504,29 @@
   {
    "issuer": "현대카드",
    "card": "현대카드 Summit",
+   "platform": "issuer",
+   "benefit": "최대 50만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
+   "won": 500000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "현대카드 Summit",
    "platform": "카드고릴라",
    "benefit": "최대 25만원 캐시백",
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 250000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "the Green Edition3",
+   "platform": "issuer",
+   "benefit": "최대 50만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
+   "won": 500000
   },
   {
    "issuer": "현대카드",
@@ -2324,11 +2540,29 @@
   {
    "issuer": "현대카드",
    "card": "the Pink Edition2",
+   "platform": "issuer",
+   "benefit": "최대 50만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
+   "won": 500000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "the Pink Edition2",
    "platform": "카드고릴라",
    "benefit": "최대 15만원 캐시백",
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/7",
    "won": 150000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "American Express® Green Card Edition2",
+   "platform": "issuer",
+   "benefit": "최대 50만원 캐시백",
+   "period": "",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=Z22888&amp;searchWord=",
+   "won": 500000
   },
   {
    "issuer": "현대카드",
@@ -2563,6 +2797,15 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/4",
    "won": 590000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "LOCA LIKIT",
+   "platform": "issuer",
+   "benefit": "최대 49만원 캐시백",
+   "period": "",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
+   "won": 490000
   },
   {
    "issuer": "롯데카드",
