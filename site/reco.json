@@ -40,8 +40,8 @@
      "reward_won": 120000,
      "reward_text": "30만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만",
      "period_end": "2026-06-30",
-     "main_won": 10000,
-     "bonus_won": 0
+     "main_won": 110000,
+     "bonus_won": 10000
     }
    ]
   },
@@ -119,16 +119,16 @@
      "reward_won": 850000,
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 850000,
-     "bonus_won": 0
+     "main_won": 250000,
+     "bonus_won": 600000
     },
     {
      "platform": "kakaopay",
      "reward_won": 850000,
      "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
      "period_end": "2026-06-30",
-     "main_won": 30000,
-     "bonus_won": 0
+     "main_won": 190000,
+     "bonus_won": 660000
     },
     {
      "platform": "banksalad",
@@ -185,8 +185,8 @@
      "reward_won": 850000,
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 850000,
-     "bonus_won": 0
+     "main_won": 250000,
+     "bonus_won": 600000
     },
     {
      "platform": "naver",
@@ -262,16 +262,16 @@
      "reward_won": 850000,
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 850000,
-     "bonus_won": 0
+     "main_won": 250000,
+     "bonus_won": 600000
     },
     {
      "platform": "kakaopay",
      "reward_won": 850000,
      "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
      "period_end": "2026-06-30",
-     "main_won": 30000,
-     "bonus_won": 0
+     "main_won": 190000,
+     "bonus_won": 660000
     },
     {
      "platform": "banksalad",
@@ -321,16 +321,16 @@
      "reward_won": 850000,
      "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 850000,
-     "bonus_won": 0
+     "main_won": 250000,
+     "bonus_won": 600000
     },
     {
      "platform": "kakaopay",
      "reward_won": 850000,
      "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
      "period_end": "2026-06-30",
-     "main_won": 30000,
-     "bonus_won": 0
+     "main_won": 190000,
+     "bonus_won": 660000
     },
     {
      "platform": "toss",
@@ -414,8 +414,8 @@
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 540000,
-     "bonus_won": 0
+     "main_won": 500000,
+     "bonus_won": 40000
     },
     {
      "platform": "naver",
@@ -430,8 +430,8 @@
      "reward_won": 390000,
      "reward_text": "마케팅 동의+35만원 이상 이용 시 25만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
      "period_end": "2026-06-30",
-     "main_won": 10000,
-     "bonus_won": 0
+     "main_won": 20000,
+     "bonus_won": 370000
     }
    ]
   },
@@ -483,8 +483,8 @@
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 540000,
-     "bonus_won": 0
+     "main_won": 500000,
+     "bonus_won": 40000
     },
     {
      "platform": "naver",
@@ -499,8 +499,8 @@
      "reward_won": 390000,
      "reward_text": "마케팅 동의+35만원 이상 이용 시 25만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
      "period_end": "2026-06-30",
-     "main_won": 10000,
-     "bonus_won": 0
+     "main_won": 20000,
+     "bonus_won": 370000
     }
    ]
   },
@@ -534,8 +534,8 @@
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 660000,
-     "bonus_won": 0
+     "main_won": 650000,
+     "bonus_won": 10000
     },
     {
      "platform": "cardgorilla",
@@ -585,8 +585,8 @@
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 660000,
-     "bonus_won": 0
+     "main_won": 650000,
+     "bonus_won": 10000
     },
     {
      "platform": "cardgorilla",
@@ -636,8 +636,8 @@
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 660000,
-     "bonus_won": 0
+     "main_won": 650000,
+     "bonus_won": 10000
     },
     {
      "platform": "cardgorilla",
@@ -746,7 +746,7 @@
      "reward_text": "마케팅 동의+30만원 이상 이용 시 20만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
      "period_end": "2026-06-30",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 310000
     }
    ]
   },
@@ -789,8 +789,8 @@
      "reward_won": 660000,
      "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 660000,
-     "bonus_won": 0
+     "main_won": 650000,
+     "bonus_won": 10000
     },
     {
      "platform": "naver",
@@ -848,8 +848,8 @@
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 540000,
-     "bonus_won": 0
+     "main_won": 500000,
+     "bonus_won": 40000
     },
     {
      "platform": "naver",
@@ -908,7 +908,7 @@
      "reward_text": "마케팅 동의+30만원 이상 이용 시 20만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
      "period_end": "2026-06-30",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 310000
     }
    ]
   },
@@ -1061,8 +1061,8 @@
      "reward_won": 205000,
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 205000,
-     "bonus_won": 0
+     "main_won": 55000,
+     "bonus_won": 150000
     },
     {
      "platform": "banksalad",
@@ -1077,8 +1077,8 @@
      "reward_won": 195000,
      "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
      "period_end": "2026-06-30",
-     "main_won": 50000,
-     "bonus_won": 0
+     "main_won": 105000,
+     "bonus_won": 90000
     },
     {
      "platform": "cardgorilla",
@@ -1145,8 +1145,8 @@
      "reward_won": 750000,
      "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
      "period_end": "2026-06-30",
-     "main_won": 60000,
-     "bonus_won": 0
+     "main_won": 170000,
+     "bonus_won": 580000
     },
     {
      "platform": "naver",
@@ -1205,8 +1205,8 @@
      "reward_won": 750000,
      "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
      "period_end": "2026-06-30",
-     "main_won": 60000,
-     "bonus_won": 0
+     "main_won": 170000,
+     "bonus_won": 580000
     },
     {
      "platform": "naver",
@@ -1297,8 +1297,8 @@
      "reward_won": 720000,
      "reward_text": "25만원 이상 이용 시 12만원 캐시백 + 해외 최대 60만",
      "period_end": "2026-06-30",
-     "main_won": 600000,
-     "bonus_won": 0
+     "main_won": 120000,
+     "bonus_won": 600000
     }
    ]
   },
@@ -1339,8 +1339,8 @@
      "reward_won": 460000,
      "reward_text": "20만원 이상 이용 시 15만 토스포인트 + 해외 30만",
      "period_end": "2026-06-30",
-     "main_won": 300000,
-     "bonus_won": 0
+     "main_won": 160000,
+     "bonus_won": 300000
     }
    ]
   },
@@ -1408,8 +1408,8 @@
      "reward_won": 780000,
      "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
      "period_end": "2026-06-30",
-     "main_won": 60000,
-     "bonus_won": 0
+     "main_won": 200000,
+     "bonus_won": 580000
     },
     {
      "platform": "naver",
@@ -1424,8 +1424,8 @@
      "reward_won": 770000,
      "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 770000,
-     "bonus_won": 0
+     "main_won": 710000,
+     "bonus_won": 60000
     },
     {
      "platform": "banksalad",
@@ -1476,8 +1476,8 @@
      "reward_won": 780000,
      "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
      "period_end": "2026-06-30",
-     "main_won": 60000,
-     "bonus_won": 0
+     "main_won": 200000,
+     "bonus_won": 580000
     },
     {
      "platform": "naver",
@@ -1492,8 +1492,8 @@
      "reward_won": 770000,
      "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 770000,
-     "bonus_won": 0
+     "main_won": 710000,
+     "bonus_won": 60000
     }
    ]
   },
@@ -1536,8 +1536,8 @@
      "reward_won": 780000,
      "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
      "period_end": "2026-06-30",
-     "main_won": 60000,
-     "bonus_won": 0
+     "main_won": 200000,
+     "bonus_won": 580000
     },
     {
      "platform": "naver",
@@ -1552,8 +1552,8 @@
      "reward_won": 770000,
      "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 770000,
-     "bonus_won": 0
+     "main_won": 710000,
+     "bonus_won": 60000
     }
    ]
   },
@@ -1595,8 +1595,8 @@
      "reward_won": 780000,
      "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
      "period_end": "2026-06-30",
-     "main_won": 60000,
-     "bonus_won": 0
+     "main_won": 200000,
+     "bonus_won": 580000
     },
     {
      "platform": "naver",
@@ -1654,8 +1654,8 @@
      "reward_won": 720000,
      "reward_text": "25만원 이상 이용 시 12만원 캐시백 + 해외 최대 60만",
      "period_end": "2026-06-30",
-     "main_won": 600000,
-     "bonus_won": 0
+     "main_won": 120000,
+     "bonus_won": 600000
     }
    ]
   },
@@ -1705,8 +1705,8 @@
      "reward_won": 690000,
      "reward_text": "25만원 이상 이용 시 9만원 캐시백 + 해외 최대 60만",
      "period_end": "2026-06-30",
-     "main_won": 600000,
-     "bonus_won": 0
+     "main_won": 90000,
+     "bonus_won": 600000
     }
    ]
   },
@@ -1772,8 +1772,8 @@
      "reward_won": 750000,
      "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
      "period_end": "2026-06-30",
-     "main_won": 60000,
-     "bonus_won": 0
+     "main_won": 170000,
+     "bonus_won": 580000
     },
     {
      "platform": "naver",
@@ -1913,8 +1913,8 @@
      "reward_won": 611000,
      "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 611000,
-     "bonus_won": 0
+     "main_won": 491000,
+     "bonus_won": 120000
     },
     {
      "platform": "cardgorilla",
@@ -1947,16 +1947,16 @@
      "reward_won": 611000,
      "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 611000,
-     "bonus_won": 0
+     "main_won": 491000,
+     "bonus_won": 120000
     },
     {
      "platform": "kakaopay",
      "reward_won": 440000,
      "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
      "period_end": "2026-06-30",
-     "main_won": 300000,
-     "bonus_won": 0
+     "main_won": 110000,
+     "bonus_won": 330000
     },
     {
      "platform": "cardgorilla",
@@ -2054,8 +2054,8 @@
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 540000,
-     "bonus_won": 0
+     "main_won": 500000,
+     "bonus_won": 40000
     },
     {
      "platform": "naver",
@@ -2095,8 +2095,8 @@
      "reward_won": 540000,
      "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 540000,
-     "bonus_won": 0
+     "main_won": 500000,
+     "bonus_won": 40000
     }
    ]
   },
@@ -2137,8 +2137,8 @@
      "reward_won": 570000,
      "reward_text": "2만원 쓰면 2만원 + 해외 최대 50만 + 일본 여행 5만 캐시백",
      "period_end": "2026-06-30",
-     "main_won": 50000,
-     "bonus_won": 0
+     "main_won": 20000,
+     "bonus_won": 550000
     }
    ]
   },
@@ -2347,16 +2347,16 @@
      "reward_won": 455000,
      "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
      "period_end": "2026-07-31",
-     "main_won": 15000,
-     "bonus_won": 10000
+     "main_won": 395000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
      "reward_won": 440000,
      "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
      "period_end": "2026-06-30",
-     "main_won": 300000,
-     "bonus_won": 0
+     "main_won": 110000,
+     "bonus_won": 330000
     },
     {
      "platform": "banksalad",
@@ -2396,8 +2396,8 @@
      "reward_won": 455000,
      "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
      "period_end": "2026-07-31",
-     "main_won": 15000,
-     "bonus_won": 10000
+     "main_won": 395000,
+     "bonus_won": 60000
     },
     {
      "platform": "cardgorilla",
@@ -2836,8 +2836,8 @@
      "reward_won": 205000,
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 205000,
-     "bonus_won": 0
+     "main_won": 55000,
+     "bonus_won": 150000
     },
     {
      "platform": "banksalad",
@@ -2887,16 +2887,16 @@
      "reward_won": 205000,
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
      "period_end": null,
-     "main_won": 205000,
-     "bonus_won": 0
+     "main_won": 55000,
+     "bonus_won": 150000
     },
     {
      "platform": "kakaopay",
      "reward_won": 195000,
      "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
      "period_end": "2026-06-30",
-     "main_won": 50000,
-     "bonus_won": 0
+     "main_won": 105000,
+     "bonus_won": 90000
     },
     {
      "platform": "cardgorilla",
@@ -3019,8 +3019,8 @@
      "reward_won": 135000,
      "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동이체 시 최대 3.5만",
      "period_end": "2026-06-30",
-     "main_won": 35000,
-     "bonus_won": 0
+     "main_won": 85000,
+     "bonus_won": 50000
     },
     {
      "platform": "cardgorilla",
@@ -3043,8 +3043,8 @@
      "reward_won": 125000,
      "reward_text": "20만원 이상 + 마케팅 동의 시 토스포인트 9만 + 자동이체 3.5만",
      "period_end": "2026-06-30",
-     "main_won": 35000,
-     "bonus_won": 0
+     "main_won": 10000,
+     "bonus_won": 115000
     }
    ]
   },
@@ -3392,8 +3392,8 @@
      "reward_won": 65000,
      "reward_text": "5만원 이용 시 5만원 캐시백 + 추가 5만↑ 연회비 캐시백",
      "period_end": "2026-06-30",
-     "main_won": 50000,
-     "bonus_won": 0
+     "main_won": 15000,
+     "bonus_won": 50000
     },
     {
      "platform": "cardgorilla",
