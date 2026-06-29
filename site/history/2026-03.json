@@ -1,7 +1,7 @@
 {
  "month": "2026-03",
  "updated": "2026-06-29",
- "source": "banksalad(기존 수기)+cardgorilla/아정당 거주지 백필(과거 이벤트 id 스캔). 네이버=과거 promotionId 소스 없어 미수집.",
+ "source": "banksalad(기존 수기)+cardgorilla/아정당 거주지 백필. 아정당 88만초과 오취득 필터. 네이버=과거 소스 없어 제외.",
  "issuers": {
   "우리카드": {
    "banksalad": 585000
@@ -24,8 +24,7 @@
    "ajungdang": 370000
   },
   "삼성카드": {
-   "banksalad": 280000,
-   "ajungdang": 949000
+   "banksalad": 280000
   },
   "NH농협카드": {
    "banksalad": 250000,
@@ -40,30 +39,6 @@
  },
  "cards": [
   {
-   "name": "taptap DRIVE",
-   "issuer": "삼성카드",
-   "platforms": {
-    "ajungdang": 949000
-   },
-   "max": 949000
-  },
-  {
-   "name": "삼성 iD SELECT ALL 카드",
-   "issuer": "삼성카드",
-   "platforms": {
-    "ajungdang": 949000
-   },
-   "max": 949000
-  },
-  {
-   "name": "삼성 iD SELECT ON 카드",
-   "issuer": "삼성카드",
-   "platforms": {
-    "ajungdang": 949000
-   },
-   "max": 949000
-  },
-  {
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
    "platforms": {
@@ -72,7 +47,7 @@
    "max": 563000
   },
   {
-   "name": "디지로카 Las Vegas",
+   "name": "디지로카 Paris",
    "issuer": "롯데카드",
    "platforms": {
     "ajungdang": 563000
@@ -88,7 +63,7 @@
    "max": 563000
   },
   {
-   "name": "디지로카 Paris",
+   "name": "디지로카 Las Vegas",
    "issuer": "롯데카드",
    "platforms": {
     "ajungdang": 563000
@@ -112,14 +87,6 @@
    "max": 370000
   },
   {
-   "name": "Haru(Hoshino Resorts)",
-   "issuer": "신한카드",
-   "platforms": {
-    "ajungdang": 360000
-   },
-   "max": 360000
-  },
-  {
    "name": "신한카드 Edu Plan+",
    "issuer": "신한카드",
    "platforms": {
@@ -136,6 +103,14 @@
    "max": 360000
   },
   {
+   "name": "Haru(Hoshino Resorts)",
+   "issuer": "신한카드",
+   "platforms": {
+    "ajungdang": 360000
+   },
+   "max": 360000
+  },
+  {
    "name": "BC 바로 ZONE 카드",
    "issuer": "BC 바로카드",
    "platforms": {
@@ -144,7 +119,7 @@
    "max": 340000
   },
   {
-   "name": "신한카드 Deep Oil",
+   "name": "알리익스프레스 신한카드",
    "issuer": "신한카드",
    "platforms": {
     "ajungdang": 340000
@@ -168,7 +143,7 @@
    "max": 340000
   },
   {
-   "name": "알리익스프레스 신한카드",
+   "name": "신한카드 Deep Oil",
    "issuer": "신한카드",
    "platforms": {
     "ajungdang": 340000
@@ -216,16 +191,16 @@
    "max": 30000
   },
   {
-   "name": "클래시 트래블카드",
-   "issuer": "NH농협카드",
+   "name": "현대카드 M",
+   "issuer": "현대카드",
    "platforms": {
     "cardgorilla": 30000
    },
    "max": 30000
   },
   {
-   "name": "현대카드 M",
-   "issuer": "현대카드",
+   "name": "클래시 트래블카드",
+   "issuer": "NH농협카드",
    "platforms": {
     "cardgorilla": 30000
    },

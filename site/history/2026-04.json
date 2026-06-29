@@ -1,7 +1,7 @@
 {
  "month": "2026-04",
  "updated": "2026-06-29",
- "source": "banksalad(기존 수기)+cardgorilla/아정당 거주지 백필(과거 이벤트 id 스캔). 네이버=과거 promotionId 소스 없어 미수집.",
+ "source": "banksalad(기존 수기)+cardgorilla/아정당 거주지 백필. 아정당 88만초과 오취득 필터. 네이버=과거 소스 없어 제외.",
  "issuers": {
   "우리카드": {
    "banksalad": 590000,
@@ -24,8 +24,7 @@
    "cardgorilla": 465000
   },
   "삼성카드": {
-   "banksalad": 270000,
-   "ajungdang": 938000
+   "banksalad": 270000
   },
   "NH농협카드": {
    "banksalad": 240000,
@@ -37,30 +36,6 @@
  },
  "cards": [
   {
-   "name": "taptap DRIVE",
-   "issuer": "삼성카드",
-   "platforms": {
-    "ajungdang": 938000
-   },
-   "max": 938000
-  },
-  {
-   "name": "삼성 iD SELECT ALL 카드",
-   "issuer": "삼성카드",
-   "platforms": {
-    "ajungdang": 938000
-   },
-   "max": 938000
-  },
-  {
-   "name": "삼성 iD SELECT ON 카드",
-   "issuer": "삼성카드",
-   "platforms": {
-    "ajungdang": 938000
-   },
-   "max": 938000
-  },
-  {
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
    "platforms": {
@@ -69,7 +44,7 @@
    "max": 633000
   },
   {
-   "name": "디지로카 Las Vegas",
+   "name": "디지로카 Paris",
    "issuer": "롯데카드",
    "platforms": {
     "ajungdang": 633000
@@ -85,7 +60,7 @@
    "max": 633000
   },
   {
-   "name": "디지로카 Paris",
+   "name": "디지로카 Las Vegas",
    "issuer": "롯데카드",
    "platforms": {
     "ajungdang": 633000
@@ -117,6 +92,14 @@
    "max": 560000
   },
   {
+   "name": "신한카드 Simple Plan+",
+   "issuer": "신한카드",
+   "platforms": {
+    "ajungdang": 540000
+   },
+   "max": 540000
+  },
+  {
    "name": "신한카드 Air One",
    "issuer": "신한카드",
    "platforms": {
@@ -131,22 +114,6 @@
     "ajungdang": 540000
    },
    "max": 540000
-  },
-  {
-   "name": "신한카드 Simple Plan+",
-   "issuer": "신한카드",
-   "platforms": {
-    "ajungdang": 540000
-   },
-   "max": 540000
-  },
-  {
-   "name": "Haru(Hoshino Resorts)",
-   "issuer": "신한카드",
-   "platforms": {
-    "ajungdang": 530000
-   },
-   "max": 530000
   },
   {
    "name": "신한카드 Edu Plan+",
@@ -165,7 +132,15 @@
    "max": 530000
   },
   {
-   "name": "신한카드 Deep Oil",
+   "name": "Haru(Hoshino Resorts)",
+   "issuer": "신한카드",
+   "platforms": {
+    "ajungdang": 530000
+   },
+   "max": 530000
+  },
+  {
+   "name": "알리익스프레스 신한카드",
    "issuer": "신한카드",
    "platforms": {
     "ajungdang": 510000
@@ -189,20 +164,12 @@
    "max": 510000
   },
   {
-   "name": "알리익스프레스 신한카드",
+   "name": "신한카드 Deep Oil",
    "issuer": "신한카드",
    "platforms": {
     "ajungdang": 510000
    },
    "max": 510000
-  },
-  {
-   "name": "카드의정석 I&U+",
-   "issuer": "우리카드",
-   "platforms": {
-    "cardgorilla": 470000
-   },
-   "max": 470000
   },
   {
    "name": "카드의정석 TEN",
@@ -214,6 +181,14 @@
   },
   {
    "name": "카드의정석2 EVERY DISCOUNT",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 470000
+   },
+   "max": 470000
+  },
+  {
+   "name": "카드의정석 I&U+",
    "issuer": "우리카드",
    "platforms": {
     "cardgorilla": 470000
@@ -245,7 +220,7 @@
    "max": 465000
   },
   {
-   "name": "zgm.play카드",
+   "name": "zgm.streaming카드",
    "issuer": "NH농협카드",
    "platforms": {
     "cardgorilla": 220000
@@ -253,7 +228,7 @@
    "max": 220000
   },
   {
-   "name": "zgm.streaming카드",
+   "name": "zgm.play카드",
    "issuer": "NH농협카드",
    "platforms": {
     "cardgorilla": 220000
