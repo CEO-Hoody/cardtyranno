@@ -33,6 +33,7 @@ from apato import parse_banksalad                            # 뱅크샐러드
 from diplo import parse_toss                                 # 토스
 from bronto import parse_ajd_rsc                             # 아정당
 from mamenchi import parse_naver                             # 네이버페이
+from stego import parse_meta_from_text, parse_meta_from_json # 카드 메타(연회비·혜택·전월실적) 파서 — 복원
 
 # ---------- 라이브 수집(Actions용; requests 필요) ----------
 def fetch(url, headers=None, timeout=20):
@@ -51,11 +52,26 @@ def collect_platform(plat, info):
     pid = info["id"]
     try:
         if plat=="cardgorilla":
-            return parse_cardgorilla(fetch(f"https://api.card-gorilla.com/v1/cards/{pid}").json(), pid)
+            _cg_j=fetch(f"https://api.card-gorilla.com/v1/cards/{pid}").json()
+            try:
+                _m=parse_meta_from_json(_cg_j, json.dumps(_cg_j, ensure_ascii=False))
+                if _m: CARD_META[("cardgorilla",str(pid))]=_m
+            except Exception: pass
+            return parse_cardgorilla(_cg_j, pid)
         if plat=="banksalad":
-            return parse_banksalad(fetch(f"https://www.banksalad.com/product/cards/{pid}").text, pid)
+            _bs_h=fetch(f"https://www.banksalad.com/product/cards/{pid}").text
+            try:
+                _m=parse_meta_from_text(_bs_h)
+                if _m: CARD_META[("banksalad",str(pid))]=_m
+            except Exception: pass
+            return parse_banksalad(_bs_h, pid)
         if plat=="toss":
-            return parse_toss(fetch(f"https://card-lounge.toss.im/card/{pid}").text, pid)
+            _ts_h=fetch(f"https://card-lounge.toss.im/card/{pid}").text
+            try:
+                _m=parse_meta_from_text(_ts_h)
+                if _m: CARD_META[("toss",str(pid))]=_m
+            except Exception: pass
+            return parse_toss(_ts_h, pid)
         if plat=="naver":
             co=info.get("company","CCNH"); iss=info.get("issuer",co)
             promo=info.get("promotionId"); prod=info.get("productId") or pid
@@ -162,6 +178,10 @@ def export_json(con):
             mw,bw,comps=parse_breakdown(r[1],r[2])   # reward_text→메인/부가 분해
             ov=BREAKDOWN.get((name,r[0]))            # 거주지 수집 이벤트상세 분해값 우선
             if ov: mw,bw=ov["main"],ov["bonus"]
+            elif r[0]=="cardgorilla":                # 카드고릴라(NEW-6): 주요=cg 결제 캐시백, 부가=전체-주요(전체=reward_won 유지)
+                _cm=CG_MAIN_NK.get(_nk(name),0)
+                if 0<_cm<(r[2] or 0):                # 주요가 전체 미만일 때만(전체>주요 → 부가 존재)
+                    mw=_cm; bw=(r[2] or 0)-_cm
             e={"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4],
                "main_won":mw,"bonus_won":bw}
             if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
@@ -169,6 +189,36 @@ def export_json(con):
         cgid=str((maps.get("cardgorilla") or {}).get("id") or "")
         img=CG_IMG.get(cgid) or CARDS_IMG.get(_nk(name))   # 8080 실패 시 cards.json 저장 이미지로 폴백
         out.append({"id":pid,"name":name,"issuer":issuer,"img":img,"platforms":maps,"events":evs})
+    # ── 동등상품 병합(굿데이=KB국민 굿데이 등): 발급사 접두어만 다른 변형을 1상품으로 ──
+    _ISSPFX=sorted(['KB국민카드','KB국민','국민카드','국민','KB','신한카드','신한','삼성카드','삼성','현대카드','현대',
+      '롯데카드','롯데','우리카드','우리','하나카드','하나','NH농협카드','NH농협','농협','BC카드','BC','IBK기업은행','IBK기업','IBK','기업'],key=len,reverse=True)
+    def _stripiss(n):
+        s=(n or "").strip()
+        for t in _ISSPFX:
+            if s.startswith(t):
+                r=s[len(t):].strip(); return r if r else s
+        return s
+    def _ecanon(n): return _nk(_stripiss(n))
+    _grp={}; _order=[]
+    for p in out:
+        k=_ecanon(p["name"])
+        if not k or k not in _grp:
+            if k: _grp[k]=p; _order.append(k)
+            else: _order.append(id(p)); _grp[id(p)]=p
+            continue
+        keep=_grp[k]
+        if len(p["name"])>len(keep["name"]): keep["name"]=p["name"]   # 발급사 접두 포함(정식명) 우선
+        if not keep.get("img") and p.get("img"): keep["img"]=p["img"]
+        for pl,m in (p.get("platforms") or {}).items(): keep.setdefault("platforms",{}).setdefault(pl,m)
+        byp={e["platform"]:e for e in keep["events"]}               # 플랫폼별 max reward_won, 동률이면 분해(bonus>0) 우선
+        for e in p["events"]:
+            cur=byp.get(e["platform"])
+            if (not cur) or (e["reward_won"]>cur["reward_won"]) or (e["reward_won"]==cur["reward_won"] and (e.get("bonus_won") or 0)>(cur.get("bonus_won") or 0)):
+                byp[e["platform"]]=e
+        keep["events"]=list(byp.values())
+    _merged=[_grp[k] for k in _order]
+    if len(_merged)<len(out): print(f"동등상품 병합: {len(out)}→{len(_merged)} ({len(out)-len(_merged)}건 통합)")
+    out=_merged
     os.makedirs(SITE,exist_ok=True)
     MONTH="2026-06"
     json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"products":out},
@@ -290,6 +340,8 @@ def _cg_catalog():
 CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
 CG_IMG={}      # cardgorilla_id → 카드 플레이트 이미지 URL(상품 메타 매핑)
 BREAKDOWN={}   # (카드명, 플랫폼) → {"main":원, "bonus":원}  거주지 수집 이벤트상세 분해값(메인/부가 override)
+CG_MAIN_NK={}  # _nk(카드명) → 주요(원)  카드고릴라 주요 캐시백(결제 임계 캐시백). 부가=전체(reward_won)-주요 로 export에서 산출
+CARD_META={}   # (platform, pid) → {annual_fee, benefits, spending_req}  stego 카드 메타(연회비·혜택·전월실적) — 복원
 
 def discover_products(limit=400):
     """카드고릴라 events?type=CBK(현재 진행 캐시백 이벤트) → 매핑 카드 자동 발굴.
@@ -425,6 +477,8 @@ def _merge_seismo_seed(platform, seed_file, injected, products):
                 cur=injected.get(key) if isinstance(injected.get(key),dict) else {}
                 u=eurl or cur.get("url","")
                 injected[key]={"reward_won":rw,"reward_text":rtext,"period_start":ps,"period_end":pe,"url":u}
+                _bw=_text_bd(rtext,rw)                  # 부가 수치(NEW-6): reward_text '+' 티어 → BREAKDOWN
+                if _bw>0: BREAKDOWN[key]={"main":max(rw-_bw,0),"bonus":_bw}
                 if u: p["platforms"][platform]["url"]=u
                 n+=1
     if n or nnew: print(f"세이스모({platform}) 시드 보강 {n}건 (신규상품 {nnew}건)")
@@ -564,6 +618,34 @@ def _cg_benefits(detail):
             main=t
     return main, subs[:6]
 
+def _won_of(s):
+    """혜택 1줄에서 '받는 금액'(원) 추정. 임계('N만원 이상/이용 시')·한도('/30만원')는 제거,
+    'A+B만원'은 합산, 비현실 캡(>100만)은 마케팅 한도로 보고 제외. 카드고릴라 주요/부가 수치화용."""
+    t = (s or "").replace(",", "")
+    if not t: return 0
+    m = re.search(r"(\d+)\s*\+\s*(\d+)\s*만", t)          # 'A+B만원' = A+B
+    if m: return (int(m.group(1)) + int(m.group(2))) * 10000
+    t = re.sub(r"(\d+)\s*/\s*\d+\s*만", r"\1만", t)        # 'A/B만'(브랜드별 15/14만) = 첫 값(A)만
+    t = re.sub(r"\d+\s*만\s*원?\s*(?:이상|이용\s*시|사용\s*시|결제\s*시|자동납부|쓰고|쓰면|쓸\s*때)", " ", t)  # 임계('N만원 쓰고/쓰면' 포함) 제거
+    t = re.sub(r"/\s*\d+\s*만\s*원?", " ", t)             # '3만원/30만원' 한도 제거
+    vals = [int(x) * 10000 for x in re.findall(r"(\d+)\s*만\s*원?", t)]
+    vals += [int(x) for x in re.findall(r"(\d{4,6})\s*원", t)]   # '39000원'
+    vals = [v for v in vals if 0 < v <= 1_500_000]       # 1인 캐시백 현실 상한(105만 등 프리미엄 해외 혜택 허용)
+    return max(vals) if vals else 0
+
+def _text_bd(text, total):
+    """reward_text의 '+' 구분 티어에서 부가(원) 추정 — 토스/카카오 시드용.
+    ① 첫 구간(결제 캐시백)에 금액이 있으면 주요=그 금액, 부가=전체-주요(시드 텍스트가 일부 티어만 담아도 정확).
+    ② 첫 구간에 금액이 없으면(예 '20만원 이상') 폴백: 부가=이후 구간 합. 분해 불가 시 0(전체 미만 캡)."""
+    parts = re.split(r"\s*\+\s*", text or "")
+    if len(parts) < 2: return 0
+    total = total or 0
+    main = _won_of(parts[0])                       # 첫 티어 = 결제 캐시백(주요)
+    if main > 0:
+        return total - main if 0 < main < total else 0   # 부가 = 전체 - 주요
+    bonus = sum(_won_of(p) for p in parts[1:])      # 폴백: 첫 구간 금액 없음 → 이후 합
+    return min(bonus, max(total - 10000, 0))
+
 def scrape_cardgorilla_meta():
     """카드고릴라 카드 상세에서 연회비·전월실적·주요혜택(재작성)을 수집해 scrape/cg_meta.json 작성."""
     SCR=os.path.join(os.path.dirname(BASE),"scrape"); os.makedirs(SCR,exist_ok=True)
@@ -571,7 +653,7 @@ def scrape_cardgorilla_meta():
     for p in _load_seed():
         cid=(p.get("platforms",{}).get("cardgorilla") or {}).get("id")
         if cid and cid not in ids: ids.append(cid)
-    byId={}; feeN={}; pmN={}; benN={}; mainN={}; subN={}
+    byId={}; feeN={}; pmN={}; benN={}; mainN={}; subN={}; mwN={}; bwN={}
     ok=0
     for cid in ids:
         try: j=fetch(f"https://api.card-gorilla.com/v1/cards/{cid}", timeout=20).json()
@@ -582,11 +664,14 @@ def scrape_cardgorilla_meta():
         fee=_cg_fee(j.get("annual_fee_basic")); pm=int(j.get("pre_month_money") or 0)
         # 주요/부가 혜택 분리 (이벤트 상세 혜택1/2/3 구조)
         _main,_subs=_cg_benefits((j.get("event") or {}).get("detail"))
-        byId[str(cid)]={"name":nm,"fee":fee,"premonth":pm,"main":_main,"subs":_subs}
+        _mw=_won_of(_main); _bw=sum(_won_of(s) for s in (_subs or []))   # 주요/부가 수치(원) — NEW-6
+        byId[str(cid)]={"name":nm,"fee":fee,"premonth":pm,"main":_main,"subs":_subs,"main_won":_mw,"bonus_won":_bw}
         if fee: feeN.setdefault(nk,fee)
         if pm:  pmN.setdefault(nk,pm)
         if _main: mainN.setdefault(nk,_main)
         if _subs: subN.setdefault(nk,_subs)
+        if _mw>0: mwN.setdefault(nk,_mw)
+        if _bw>0: bwN.setdefault(nk,_bw)
         # 본문 카드 블록에서 카드별 한줄 혜택(name↔bene) 추출 → 자체 표현으로 재작성해 적재
         blob=json.dumps(j,ensure_ascii=False)
         for mm in re.finditer(r'<b class="name">([^<]{1,40})</b>\s*<i class="bene">([^<]{1,60})</i>',blob):
@@ -597,9 +682,9 @@ def scrape_cardgorilla_meta():
             if rb: benN.setdefault(_nk(mm.group(2)),rb)
     if byId:
         json.dump({"_updated":datetime.date.today().isoformat(),"byId":byId,"feeByName":feeN,"premonthByName":pmN,
-                   "benefitByName":benN,"mainByName":mainN,"subByName":subN},
+                   "benefitByName":benN,"mainByName":mainN,"subByName":subN,"mainWonByName":mwN,"bonusWonByName":bwN},
                   open(os.path.join(SCR,"cg_meta.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
-        print(f"cg meta → scrape/cg_meta.json (cards {ok}, fee {len(feeN)}, premonth {len(pmN)}, benefit {len(benN)}, main {len(mainN)}, sub {len(subN)})")
+        print(f"cg meta → scrape/cg_meta.json (cards {ok}, fee {len(feeN)}, premonth {len(pmN)}, benefit {len(benN)}, main {len(mainN)}, sub {len(subN)}, 부가수치 {len(bwN)})")
     else:
         print("cg meta: 수집 0건 — 기존 파일 유지")
 
@@ -661,12 +746,35 @@ def scrape_banksalad_meta():
               open(os.path.join(SCR2,"banksalad_chart.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"뱅샐 chart → scrape/banksalad_chart.json ({len(chart)} 카드)")
 
+def export_card_meta(products):
+    """수집된 카드 메타정보(stego: 연회비·혜택·전월실적)를 scrape/card_meta.json으로 저장 — 복원."""
+    SCR=os.path.join(os.path.dirname(BASE),"scrape"); os.makedirs(SCR,exist_ok=True)
+    by_name={}
+    for p in products:
+        nk=_nk(p["name"]); entry={"name":p["name"],"issuer":p.get("issuer","")}
+        for plat,info in p.get("platforms",{}).items():
+            pid=str(info.get("id",""))
+            m=CARD_META.get((plat,pid))
+            if m:
+                for k in ("annual_fee","benefits","spending_req"):
+                    if m.get(k) and not entry.get(k): entry[k]=m[k]
+        if any(entry.get(k) for k in ("annual_fee","benefits","spending_req")):
+            by_name[nk]=entry
+    json.dump({"_updated":datetime.date.today().isoformat(),"cards":by_name},
+              open(os.path.join(SCR,"card_meta.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    print(f"card meta → scrape/card_meta.json ({len(by_name)} cards)")
+
 if __name__=="__main__":
     today=datetime.date.today().isoformat()
     try: scrape_toss_fees()
     except Exception as e: print("toss fee scrape err", e)
     try: scrape_cardgorilla_meta()
     except Exception as e: print("cg meta scrape err", e)
+    try:                                          # 카드고릴라 주요 수치 → CG_MAIN_NK (export_json에서 부가=전체-주요)
+        _cgm=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","cg_meta.json"),encoding="utf-8"))
+        CG_MAIN_NK.update({k:v for k,v in (_cgm.get("mainWonByName") or {}).items() if v})
+        print(f"cardgorilla 주요 수치 적재: {len(CG_MAIN_NK)}건")
+    except Exception as e: print("cg main load err", e)
     try: scrape_banksalad_meta()
     except Exception as e: print("bs meta scrape err", e)
     try: diagnose()
@@ -696,13 +804,21 @@ if __name__=="__main__":
     try:
         aj=json.load(open(os.path.join(BASE,"ajd_seed.json"),encoding="utf-8")).get("cards",{})
         bynk={_nk(p["name"]):p for p in products}
+        try: _ressub=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("subByName",{})
+        except Exception: _ressub={}
+        _abn=0
         for nm,info in aj.items():
             p=bynk.get(_nk(nm))
             if not p or not info.get("reward_won"): continue
             p.setdefault("platforms",{})["ajungdang"]={"id":info.get("ajd_id",""),"url":info.get("url","")}
-            injected[(p["name"],"ajungdang")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
+            _rw=info["reward_won"]
+            injected[(p["name"],"ajungdang")]={"reward_won":_rw,"reward_text":info.get("reward_text"),
                                                "period_start":None,"period_end":None,"url":info.get("url","")}
-        if injected: print(f"아정당 로컬 주입 {len(injected)}건")
+            _abw=_text_bd(info.get("reward_text") or "", _rw)        # 시드 텍스트 '+' 티어
+            if _abw<=0:                                              # 없으면 거주지 부가 티어(subByName)
+                _abw=min(sum(_won_of(s) for s in (_ressub.get(_nk(nm)) or [])), max(_rw-10000,0))
+            if _abw>0: BREAKDOWN[(p["name"],"ajungdang")]={"main":max(_rw-_abw,0),"bonus":_abw}; _abn+=1
+        if injected: print(f"아정당 로컬 주입 {len(injected)}건 (부가 분해 {_abn}건)")
     except FileNotFoundError:
         pass
     except Exception as e:
@@ -772,6 +888,8 @@ if __name__=="__main__":
                 if rw:
                     injected[(p["name"],"kakaopay")]={"reward_won":rw,"reward_text":rtext,
                         "period_start":ps,"period_end":pe,"url":eurl}
+                    _kbw=_text_bd(rtext,rw)            # 부가 수치(NEW-6): reward_text '+' 티어 → BREAKDOWN
+                    if _kbw>0: BREAKDOWN[(p["name"],"kakaopay")]={"main":max(rw-_kbw,0),"bonus":_kbw}
                     _kn+=1
         if _kn: print(f"세이스모(카카오페이) 주입 {_kn}건 (신규상품 {_knew}건)")
     except FileNotFoundError: pass
@@ -811,5 +929,24 @@ if __name__=="__main__":
             "url":ev_url}
         cg_inj+=1
     if cg_inj: print(f"카드고릴라 이벤트 라벨 주입 {cg_inj}건")
+    # 카드사 자체 이벤트: 거주지 수집 issuer_seed.json 주입(네이버/아정당과 동일 패턴, platform='issuer')
+    try:
+        _iss=json.load(open(os.path.join(BASE,"issuer_seed.json"),encoding="utf-8")).get("cards",{})
+        _bi3={_nk(p["name"]):p for p in products}; _isn=0
+        for nm,info in _iss.items():
+            p=_bi3.get(_nk(nm))
+            if not p or not info.get("reward_won"): continue
+            u=info.get("url","")
+            p.setdefault("platforms",{})["issuer"]={"id":"","url":u}
+            injected[(p["name"],"issuer")]={"reward_won":info["reward_won"],"reward_text":info.get("reward_text"),
+                                            "period_start":info.get("period_start"),"period_end":info.get("period_end"),"url":u}
+            if info.get("main_won") is not None or info.get("bonus_won"):
+                BREAKDOWN[(p["name"],"issuer")]={"main":info.get("main_won") or 0,"bonus":info.get("bonus_won") or 0}
+            _isn+=1
+        if _isn: print(f"카드사 자체 이벤트 주입 {_isn}건")
+    except FileNotFoundError: print("issuer_seed.json 없음 — 카드사 직접수집 주입 스킵(정상)")
+    except Exception as _e6: print("issuer seed err", _e6)
     print(f"총 상품 {len(products)}개 수집 시작")
     run(products, today, injected=injected or None)
+    try: export_card_meta(products)
+    except Exception as e: print("card meta export err", e)

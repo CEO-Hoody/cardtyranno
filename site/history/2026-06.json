@@ -290,16 +290,6 @@
    "max": 124000
   },
   {
-   "name": "굿데이카드",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "cardgorilla": 860000,
-    "ajungdang": 850000,
-    "naver": 830000
-   },
-   "max": 860000
-  },
-  {
    "name": "에너지플러스 현대카드",
    "issuer": "현대카드",
    "platforms": {
@@ -703,7 +693,8 @@
    "name": "KB NEED Pay 카드",
    "issuer": "KB국민카드",
    "platforms": {
-    "cardgorilla": 860000
+    "cardgorilla": 860000,
+    "naver": 830000
    },
    "max": 860000
   },

@@ -209,6 +209,28 @@ except FileNotFoundError:
 except Exception as _e3:
     print("toss_fees 병합 오류:", _e3)
 
+# 카드 메타정보(연회비·혜택·전월실적) 병합 — collector stego가 수집한 card_meta.json (복원)
+_nkd=lambda n: _re.sub(r"[\s()（）·\-_/+.]+","",(n or "")).lower()   # 점(.)까지 제거(콜렉터 _nk 정합)
+try:
+    _cmJ=json.load(open(os.path.join(OUT,"scrape","card_meta.json"),encoding="utf-8")).get("cards",{})
+    _cmJ2={_nkd(k):v for k,v in _cmJ.items()}
+    _cmn=0
+    for _iss,_clist in CARDS.items():
+        for _c in _clist:
+            _m=_cmJ.get(_nk(_c["name"])) or _cmJ2.get(_nkd(_c["name"]))
+            if not _m: continue
+            if _m.get("annual_fee") and not str(_c.get("fee") or "").strip():
+                _c["fee"]=_m["annual_fee"]; _cmn+=1
+            if _m.get("spending_req") and not _c.get("premonth"):
+                _c["premonth"]=_m["spending_req"]
+            if _m.get("benefits") and not _c.get("benefit"):
+                _c["benefit"]=" / ".join(_m["benefits"][:3]); _cmn+=1
+    if _cmn: print(f"card_meta.json 병합 {_cmn}건")
+except FileNotFoundError:
+    print("card_meta.json 없음 — stego 메타 병합 스킵(정상)")
+except Exception as _e4b:
+    print("card_meta 병합 오류:", _e4b)
+
 # 카드고릴라 메타 병합 (collector.scrape_cardgorilla_meta → scrape/cg_meta.json)
 # 연회비(빈값만)·전월실적(premonth)·주요혜택(재작성본 _cgben). 이름 정규화 기준.
 try:

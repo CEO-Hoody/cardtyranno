@@ -176,7 +176,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
    "won": 125000
   },
   {
@@ -356,7 +356,7 @@
    "platform": "네이버페이",
    "benefit": "최대 83만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
    "won": 830000
   },
   {
@@ -545,7 +545,7 @@
    "platform": "네이버페이",
    "benefit": "최대 57만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=044",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=CCHN",
    "won": 570000
   },
   {
@@ -601,33 +601,6 @@
    "period": "~06/30",
    "url": "https://toss.im/_m/LUWffhjw",
    "won": 100000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "굿데이카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 86만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 860000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "굿데이카드",
-   "platform": "아정당",
-   "benefit": "최대 85만원 캐시백",
-   "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/246",
-   "won": 850000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "굿데이카드",
-   "platform": "네이버페이",
-   "benefit": "최대 83만원 캐시백",
-   "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-   "won": 830000
   },
   {
    "issuer": "현대카드",
@@ -1247,7 +1220,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
    "won": 125000
   },
   {
@@ -1351,6 +1324,15 @@
   },
   {
    "issuer": "KB국민카드",
+   "card": "KB NEED Pay 카드",
+   "platform": "네이버페이",
+   "benefit": "최대 83만원 캐시백",
+   "period": "",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
+   "won": 830000
+  },
+  {
+   "issuer": "KB국민카드",
    "card": "KB YOU Prime 카드",
    "platform": "카드고릴라",
    "benefit": "최대 86만원 캐시백",
@@ -1391,7 +1373,7 @@
    "platform": "네이버페이",
    "benefit": "최대 83만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
    "won": 830000
   },
   {
@@ -1472,7 +1454,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
    "won": 125000
   },
   {
@@ -1499,7 +1481,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
    "won": 125000
   },
   {
@@ -1526,7 +1508,7 @@
    "platform": "네이버페이",
    "benefit": "최대 12.5만원 캐시백",
    "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=CCBC",
    "won": 125000
   },
   {
