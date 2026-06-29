@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://cardtyranno.com/</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
-<url><loc>https://cardtyranno.com/discount.html</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
-<url><loc>https://cardtyranno.com/cards.html</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
-<url><loc>https://cardtyranno.com/issue.html</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
-<url><loc>https://cardtyranno.com/content.html</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
-<url><loc>https://cardtyranno.com/chart.html</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
-<url><loc>https://cardtyranno.com/search.html</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
-<url><loc>https://cardtyranno.com/installment.html</loc><lastmod>2026-06-21</lastmod><changefreq>daily</changefreq></url>
+<url><loc>https://cardtyranno.com/</loc><lastmod>2026-06-30</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://cardtyranno.com/discount.html</loc><lastmod>2026-06-30</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+<url><loc>https://cardtyranno.com/issue.html</loc><lastmod>2026-06-30</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+<url><loc>https://cardtyranno.com/cards.html</loc><lastmod>2026-06-30</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://cardtyranno.com/content.html</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://cardtyranno.com/chart.html</loc><lastmod>2026-06-30</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cardtyranno.com/events.html</loc><lastmod>2026-06-30</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cardtyranno.com/cashback.html</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://cardtyranno.com/installment.html</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://cardtyranno.com/trends.html</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://cardtyranno.com/community.html</loc><lastmod>2026-06-30</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://cardtyranno.com/business.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+<url><loc>https://cardtyranno.com/search.html</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq><priority>0.4</priority></url>
+<url><loc>https://cardtyranno.com/terms.html</loc><lastmod>2026-06-30</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+<url><loc>https://cardtyranno.com/privacy.html</loc><lastmod>2026-06-30</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
