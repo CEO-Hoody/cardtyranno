@@ -1,41 +1,31 @@
 {
- "month": "2026-03",
+ "month": "2026-02",
  "updated": "2026-06-29",
  "source": "banksalad(기존 수기)+cardgorilla/아정당 거주지 백필(과거 이벤트 id 스캔). 네이버=과거 promotionId 소스 없어 미수집.",
  "issuers": {
+  "BC 바로카드": {
+   "cardgorilla": 250000
+  },
   "우리카드": {
-   "banksalad": 585000
-  },
-  "KB국민카드": {
-   "banksalad": 570000,
-   "ajungdang": 270000
-  },
-  "롯데카드": {
-   "banksalad": 410000,
-   "ajungdang": 563000,
-   "cardgorilla": 130000
-  },
-  "현대카드": {
-   "banksalad": 400000,
-   "cardgorilla": 30000
+   "cardgorilla": 39000
   },
   "신한카드": {
-   "banksalad": 330000,
    "ajungdang": 370000
   },
+  "KB국민카드": {
+   "ajungdang": 220000
+  },
+  "롯데카드": {
+   "ajungdang": 540000
+  },
   "삼성카드": {
-   "banksalad": 280000,
-   "ajungdang": 949000
+   "ajungdang": 961000
   },
   "NH농협카드": {
-   "banksalad": 250000,
    "cardgorilla": 30000
   },
   "현대백화점": {
-   "banksalad": 10000
-  },
-  "BC 바로카드": {
-   "cardgorilla": 340000
+   "cardgorilla": 10000
   }
  },
  "cards": [
@@ -43,57 +33,57 @@
    "name": "taptap DRIVE",
    "issuer": "삼성카드",
    "platforms": {
-    "ajungdang": 949000
+    "ajungdang": 961000
    },
-   "max": 949000
+   "max": 961000
   },
   {
    "name": "삼성 iD SELECT ALL 카드",
    "issuer": "삼성카드",
    "platforms": {
-    "ajungdang": 949000
+    "ajungdang": 961000
    },
-   "max": 949000
+   "max": 961000
   },
   {
    "name": "삼성 iD SELECT ON 카드",
    "issuer": "삼성카드",
    "platforms": {
-    "ajungdang": 949000
+    "ajungdang": 961000
    },
-   "max": 949000
+   "max": 961000
   },
   {
    "name": "LOCA LIKIT",
    "issuer": "롯데카드",
    "platforms": {
-    "ajungdang": 563000
+    "ajungdang": 540000
    },
-   "max": 563000
+   "max": 540000
   },
   {
    "name": "디지로카 Las Vegas",
    "issuer": "롯데카드",
    "platforms": {
-    "ajungdang": 563000
+    "ajungdang": 540000
    },
-   "max": 563000
+   "max": 540000
   },
   {
    "name": "디지로카 London",
    "issuer": "롯데카드",
    "platforms": {
-    "ajungdang": 563000
+    "ajungdang": 540000
    },
-   "max": 563000
+   "max": 540000
   },
   {
    "name": "디지로카 Paris",
    "issuer": "롯데카드",
    "platforms": {
-    "ajungdang": 563000
+    "ajungdang": 540000
    },
-   "max": 563000
+   "max": 540000
   },
   {
    "name": "신한카드 Air One",
@@ -136,14 +126,6 @@
    "max": 360000
   },
   {
-   "name": "BC 바로 ZONE 카드",
-   "issuer": "BC 바로카드",
-   "platforms": {
-    "cardgorilla": 340000
-   },
-   "max": 340000
-  },
-  {
    "name": "신한카드 Deep Oil",
    "issuer": "신한카드",
    "platforms": {
@@ -176,44 +158,44 @@
    "max": 340000
   },
   {
+   "name": "BC 바로 MACAO 카드",
+   "issuer": "BC 바로카드",
+   "platforms": {
+    "cardgorilla": 250000
+   },
+   "max": 250000
+  },
+  {
    "name": "KB국민 My WE:SH 카드",
    "issuer": "KB국민카드",
    "platforms": {
-    "ajungdang": 270000
+    "ajungdang": 220000
    },
-   "max": 270000
+   "max": 220000
   },
   {
    "name": "KB국민 굿데이카드",
    "issuer": "KB국민카드",
    "platforms": {
-    "ajungdang": 270000
+    "ajungdang": 220000
    },
-   "max": 270000
+   "max": 220000
   },
   {
    "name": "굿데이카드",
    "issuer": "KB국민카드",
    "platforms": {
-    "ajungdang": 270000
+    "ajungdang": 220000
    },
-   "max": 270000
+   "max": 220000
   },
   {
-   "name": "롯데 국민행복카드",
-   "issuer": "롯데카드",
+   "name": "카드의정석 EVERY MILE SKYPASS",
+   "issuer": "우리카드",
    "platforms": {
-    "cardgorilla": 130000
+    "cardgorilla": 39000
    },
-   "max": 130000
-  },
-  {
-   "name": "노리2 체크카드(KB Pay)",
-   "issuer": "KB국민카드",
-   "platforms": {
-    "ajungdang": 30000
-   },
-   "max": 30000
+   "max": 39000
   },
   {
    "name": "클래시 트래블카드",
@@ -224,12 +206,28 @@
    "max": 30000
   },
   {
-   "name": "현대카드 M",
-   "issuer": "현대카드",
+   "name": "D4카드의정석Ⅱ",
+   "issuer": "우리카드",
    "platforms": {
-    "cardgorilla": 30000
+    "cardgorilla": 12000
    },
-   "max": 30000
+   "max": 12000
+  },
+  {
+   "name": "DA카드의정석Ⅱ",
+   "issuer": "우리카드",
+   "platforms": {
+    "cardgorilla": 12000
+   },
+   "max": 12000
+  },
+  {
+   "name": "현대백화점카드",
+   "issuer": "현대백화점",
+   "platforms": {
+    "cardgorilla": 10000
+   },
+   "max": 10000
   }
  ]
 }
