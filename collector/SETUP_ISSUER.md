@@ -24,7 +24,8 @@ python3 -m playwright install chromium
 ## 2. 이벤트 URL 확인·편집  ⚠ 중요
 카드사 이벤트 페이지 URL은 개편으로 자주 바뀝니다. `issuer_event_urls.json` 에 카드사별 **'이벤트(진행중) 리스트' URL** 을 넣습니다(여러 개면 배열로).
 - 확인법: 브라우저에서 카드사 홈 → **이벤트** 메뉴 클릭 → 주소창 URL 복사 → JSON에 붙여넣기.
-- 삼성카드는 2026-06 기준 동작 확인됨(`personal/event/ing/UHPPBE1401M0.jsp`). 나머지는 best-effort 기본값이라 **처음 실행 후 0건이면 교체**하세요.
+- **2026-06 브라우저 확인(6개):** 삼성 `personal/event/ing/UHPPBE1401M0.jsp` · 현대 `cpb/ev/CPBEV0101_01.hc` · KB국민 `card.kbcard.com/BON/DVIEW/HBBMCXCRVNEC0001` · 신한 `mob/MOBFM829N/MOBFM829R01.shc`(상세=`/pconts/html/benefit/event/{id}.html`) · 롯데 `app/LPBNFDA_V100.lc` · 우리 `dcpc/yh1/bnf/bnf02/prgevnt/H1BNF202S00.do`.
+- **best-effort(3개, 맥에서 0건이면 교체):** 하나(iframe 사이트)·NH농협(무거운 SPA)·IBK(은행 도메인, 원격 확인 불가). 맥에서 해당 카드사 이벤트 메뉴 URL을 직접 복사해 넣으세요.
 
 ## 3. 수집 실행
 ```bash
