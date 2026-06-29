@@ -616,7 +616,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   var VL=visList(),gc='1.6fr repeat('+VL.length+',1fr)';
   rows.forEach(function(r){var mx=0;VL.forEach(function(pk){var v=mval(r.o[pk],cashMode);if(v>mx)mx=v;});r.mx=mx;});
   rows.sort(function(a,b){return b.mx-a.mx;});
-  var ctl='<div class="cmphd2"><span class="dd2 dd2-static">정렬 · 최고 캐시백순</span></div>';
+  var ctl='';
   var chips='';
   var head='<div class="ptr hd" style="grid-template-columns:'+gc+'"><div>카드사 ('+rows.length+')</div>'+VL.map(function(pk){return '<div>'+_pdk(pk,true)+'</div>';}).join('')+'</div>';
   var body=rows.map(function(r){var cells=VL.map(function(pk){var o=r.o[pk];var v=mval(o,cashMode);if(!v)return '<span class="cell"><span class="chip no">–</span></span>';var top=(v===r.mx);return '<a class="cell" href="issue.html?issuer='+encodeURIComponent(r.iss)+'&plat='+encodeURIComponent(PN[pk]||pk)+'"><span class="chip'+(top?' mx':'')+'">'+(top?HEART:'')+_chipW(v)+'</span>'+(cashMode==='t'?_capBD(o):'')+'</a>';}).join('');
@@ -656,7 +656,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   rows.sort(function(a,b){return b.mx-a.mx;});
   var ISSL=['전체'].concat(Object.keys(TBL.reduce(function(a,c){if(c.issuer)a[c.issuer]=1;return a;},{})));
   var ddm=ISSL.map(function(x){var on=(x==='전체'&&!prodIssF)||x===prodIssF;return '<button data-iss="'+(x==='전체'?'':x)+'"'+(on?' class="on"':'')+'>'+x+'</button>';}).join('');
-  var ctl='<div class="cmphd2"><div class="dd2"><button class="dd2b" id="prodIssBtn">카드사 · '+(prodIssF||'전체')+' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="dd2menu" id="prodIssMenu">'+ddm+'</div></div><span class="dd2 dd2-static">정렬 · 최고 캐시백순</span></div>';
+  var ctl='<div class="cmphd2"><div class="dd2"><button class="dd2b" id="prodIssBtn">카드사 · '+(prodIssF||'전체')+' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="dd2menu" id="prodIssMenu">'+ddm+'</div></div></div>';
   var head='<div class="ptr hd" style="grid-template-columns:'+gc+'"><div>카드 ('+rows.length+')</div>'+VL.map(function(pk){return '<div>'+_pdk(pk,true)+'</div>';}).join('')+'</div>';
   var body=rows.map(function(c){
    var vals=VL.map(function(pk){return mval(c.o[pk],cashMode);});var mx=Math.max.apply(null,vals);
