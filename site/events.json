@@ -603,33 +603,6 @@
    "won": 100000
   },
   {
-   "issuer": "KB국민카드",
-   "card": "굿데이카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 86만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 860000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "굿데이카드",
-   "platform": "아정당",
-   "benefit": "최대 85만원 캐시백",
-   "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/246",
-   "won": 850000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "굿데이카드",
-   "platform": "네이버페이",
-   "benefit": "최대 83만원 캐시백",
-   "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
-   "won": 830000
-  },
-  {
    "issuer": "현대카드",
    "card": "에너지플러스 현대카드",
    "platform": "카드고릴라",

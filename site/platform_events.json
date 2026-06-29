@@ -360,8 +360,8 @@
      "reward_won": 135000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18593b0aaffa3c8f306f00",
-     "main_won": 85000,
-     "bonus_won": 50000,
+     "main_won": 100000,
+     "bonus_won": 35000,
      "breakdown": [
       {
        "text": "20만원 이상 이용 시 10만원 캐시백 + 자동이체 시 최대 3.5만",
@@ -744,8 +744,20 @@
      "reward_won": 440000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 160000,
+     "bonus_won": 280000,
+     "breakdown": [
+      {
+       "text": "20만 카카오페이포인트 + 7~9월 6",
+       "won": 200000,
+       "cond": false
+      },
+      {
+       "text": "8만(3개월)",
+       "won": 80000,
+       "cond": false
+      }
+     ]
     }
    ]
   },
@@ -787,8 +799,15 @@
      "reward_won": 860000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
-     "main_won": 860000,
-     "bonus_won": 0
+     "main_won": 230000,
+     "bonus_won": 630000,
+     "breakdown": [
+      {
+       "text": "86만원 캐시백",
+       "won": 860000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "ajungdang",
@@ -1450,76 +1469,6 @@
      "url": "https://toss.im/_m/LUWffhjw",
      "main_won": 100000,
      "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 24,
-   "name": "굿데이카드",
-   "issuer": "KB국민카드",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/106/card_img/20264/106card.png",
-   "platforms": {
-    "ajungdang": {
-     "id": "246",
-     "url": "https://www.ajd.co.kr/card/event/detail/246"
-    },
-    "cardgorilla": {
-     "id": "106",
-     "url": "https://www.card-gorilla.com/event/detail/3"
-    },
-    "naver": {
-     "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "86만원 캐시백",
-     "reward_won": 860000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/event/detail/3",
-     "main_won": 230000,
-     "bonus_won": 630000,
-     "breakdown": [
-      {
-       "text": "86만원 캐시백",
-       "won": 860000,
-       "cond": false
-      }
-     ]
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-     "reward_won": 850000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/246",
-     "main_won": 250000,
-     "bonus_won": 600000,
-     "breakdown": [
-      {
-       "text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-       "won": 850000,
-       "cond": false
-      }
-     ]
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
-     "reward_won": 830000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=CCKM",
-     "main_won": 200000,
-     "bonus_won": 630000,
-     "breakdown": [
-      {
-       "text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
-       "won": 830000,
-       "cond": false
-      }
-     ]
     }
    ]
   },
@@ -2305,8 +2254,8 @@
      "reward_won": 65000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a195ac047a5727be5c4af3d",
-     "main_won": 15000,
-     "bonus_won": 50000,
+     "main_won": 50000,
+     "bonus_won": 15000,
      "breakdown": [
       {
        "text": "5만원 이용 시 5만원 캐시백 + 추가 5만↑ 연회비 캐시백",
@@ -2656,8 +2605,20 @@
      "reward_won": 440000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 160000,
+     "bonus_won": 280000,
+     "breakdown": [
+      {
+       "text": "20만 카카오페이포인트 + 7~9월 6",
+       "won": 200000,
+       "cond": false
+      },
+      {
+       "text": "8만(3개월)",
+       "won": 80000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "cardgorilla",
@@ -2772,8 +2733,20 @@
      "reward_won": 440000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 160000,
+     "bonus_won": 280000,
+     "breakdown": [
+      {
+       "text": "20만 카카오페이포인트 + 7~9월 6",
+       "won": 200000,
+       "cond": false
+      },
+      {
+       "text": "8만(3개월)",
+       "won": 80000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "cardgorilla",
@@ -2808,8 +2781,20 @@
      "reward_won": 440000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 160000,
+     "bonus_won": 280000,
+     "breakdown": [
+      {
+       "text": "20만 카카오페이포인트 + 7~9월 6",
+       "won": 200000,
+       "cond": false
+      },
+      {
+       "text": "8만(3개월)",
+       "won": 80000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "cardgorilla",
@@ -2844,8 +2829,20 @@
      "reward_won": 440000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 160000,
+     "bonus_won": 280000,
+     "breakdown": [
+      {
+       "text": "20만 카카오페이포인트 + 7~9월 6",
+       "won": 200000,
+       "cond": false
+      },
+      {
+       "text": "8만(3개월)",
+       "won": 80000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "cardgorilla",
@@ -3094,8 +3091,8 @@
      "reward_won": 455000,
      "period_end": "2026-07-31",
      "url": "https://toss.im/_m/banBQDY5",
-     "main_won": 395000,
-     "bonus_won": 60000,
+     "main_won": 120000,
+     "bonus_won": 335000,
      "breakdown": [
       {
        "text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6",
@@ -3170,8 +3167,8 @@
      "reward_won": 455000,
      "period_end": "2026-07-31",
      "url": "https://toss.im/_m/banBQDY5",
-     "main_won": 395000,
-     "bonus_won": 60000,
+     "main_won": 120000,
+     "bonus_won": 335000,
      "breakdown": [
       {
        "text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6",
@@ -4820,8 +4817,8 @@
      "reward_won": 195000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7",
-     "main_won": 105000,
-     "bonus_won": 90000,
+     "main_won": 100000,
+     "bonus_won": 95000,
      "breakdown": [
       {
        "text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
@@ -4914,8 +4911,8 @@
      "reward_won": 195000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7",
-     "main_won": 105000,
-     "bonus_won": 90000,
+     "main_won": 100000,
+     "bonus_won": 95000,
      "breakdown": [
       {
        "text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
@@ -6130,8 +6127,20 @@
      "reward_won": 440000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0
+     "main_won": 160000,
+     "bonus_won": 280000,
+     "breakdown": [
+      {
+       "text": "20만 카카오페이포인트 + 7~9월 6",
+       "won": 200000,
+       "cond": false
+      },
+      {
+       "text": "8만(3개월)",
+       "won": 80000,
+       "cond": false
+      }
+     ]
     },
     {
      "platform": "cardgorilla",
@@ -6482,8 +6491,8 @@
      "reward_won": 460000,
      "period_end": "2026-06-30",
      "url": "https://toss.im/_m/7xU5L2v8",
-     "main_won": 160000,
-     "bonus_won": 300000,
+     "main_won": 150000,
+     "bonus_won": 310000,
      "breakdown": [
       {
        "text": "20만원 이상 이용 시 15만 토스포인트 + 해외 30만",
