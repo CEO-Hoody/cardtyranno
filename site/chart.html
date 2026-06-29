@@ -575,8 +575,9 @@ function initUI(){
  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(!reduce)slideIv=setInterval(function(){setSlide((slide+1)%2);},4200);
 }
-fetch('cards.json').then(function(r){return r.json();}).then(function(cj){
- for(var k in cj.cards){(cj.cards[k]||[]).forEach(function(c){NAME2[_nk(c.name)]={id:c.id,img:c.img};});}
+Promise.all([fetch('cards.json').then(function(r){return r.json();}),fetch('platform_events.json').then(function(r){return r.json();}).catch(function(){return {products:[]};})]).then(function(A){
+ var cj=A[0],PEIMG={};((A[1].products)||[]).forEach(function(p){if(p.img&&!PEIMG[_nk(p.name)])PEIMG[_nk(p.name)]=p.img;});
+ for(var k in cj.cards){(cj.cards[k]||[]).forEach(function(c){NAME2[_nk(c.name)]={id:c.id,img:c.img||PEIMG[_nk(c.name)]||''};});}
  var months=['2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'];
  return fetch('history/index.json').then(function(r){return r.json();}).then(function(idx){if(idx&&idx.months&&idx.months.length)months=idx.months.slice(-6);return months;}).catch(function(){return months;});
 }).then(function(months){

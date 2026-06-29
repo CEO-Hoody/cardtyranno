@@ -764,7 +764,7 @@ INDEX_BODY=('<div class="wrap">'
  '<a class="ntip-card" id="tipLatest" href="content.html"><div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">티라노TIP · 2026.06</div><div class="th">불러오는 중…</div></div></a></section>'
  +FAQ_HTML+'</div>')
 INDEX_JS=r"""
-var PMETA={cardgorilla:{n:'카드고릴라',c:'#FF6A13'},banksalad:{n:'뱅크샐러드',c:'#19C37D'},toss:{n:'토스',c:'#3182F6'},ajungdang:{n:'아정당',c:'#1B64DA'},naver:{n:'네이버페이',c:'#03C75A'},kakaopay:{n:'카카오페이',c:'#FEE500'}};
+var PMETA={cardgorilla:{n:'카드고릴라',c:'#FF6A13'},banksalad:{n:'뱅크샐러드',c:'#19C37D'},toss:{n:'토스',c:'#3182F6'},ajungdang:{n:'아정당',c:'#1B64DA'},naver:{n:'네이버페이',c:'#03C75A'},kakaopay:{n:'카카오페이',c:'#FEE500'},issuer:{n:'카드사 직접',c:'#7a8088'}};
 function _nk2(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
 function _won(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
 Promise.all([
@@ -786,7 +786,7 @@ Promise.all([
  var cmpTop=cmpRows.length?cmpRows[0].v:0;var cbb=document.getElementById('heroCmpBars');
  if(cbb){cbb.innerHTML=cmpRows.map(function(r,ri){var w=cmpTop?Math.max(8,Math.round(r.v/cmpTop*100)):8;return '<div class="nhc-cmp-row"><i style="background:'+r.m.c+'"></i><span class="nm">'+r.m.n+'</span><div class="tr"><i style="width:'+w+'%;background:'+(ri===0?'#000':'#cfcfcf')+'"></i></div></div>';}).join('');}
  // 히어로 슬라이드2 · 이번달 최고 캐시백 상품 배너
- if(best){var bMx=0,bPlat='';(best.events||[]).forEach(function(e){if((e.reward_won||0)>bMx){bMx=e.reward_won;bPlat=e.platform;}});var bm=PMETA[bPlat]||{n:bPlat};var _e;
+ if(best){var bMx=0,bPlat='';(best.events||[]).forEach(function(e){if(e.platform!=='issuer'&&(e.reward_won||0)>bMx){bMx=e.reward_won;bPlat=e.platform;}});var bm=PMETA[bPlat]||{n:bPlat};var _e;
   if(_e=document.getElementById('heroS2Name'))_e.textContent=best.name;
   if(_e=document.getElementById('heroS2Amt'))_e.textContent='최대 '+_won(bMx);
   if(_e=document.getElementById('heroS2Sub'))_e.innerHTML='6개 플랫폼을 비교한 결과, <b>'+bm.n+'에서 받을 때</b> 캐시백이 가장 커요.';
@@ -808,7 +808,7 @@ Promise.all([
  // B · 이번달 최고 커플 (카드사 8종 ❤ 최고 플랫폼) — ① 전체 캐시백 최대 플랫폼, 동점이면 공동 1위
  (function(){var ISS8=['삼성카드','현대카드','KB국민카드','신한카드','롯데카드','우리카드','하나카드','BC카드'];
   function alias(s){s=s||'';if(/국민/.test(s))return 'KB국민카드';if(/^비씨|^bc/i.test(s))return 'BC카드';if(/신한/.test(s))return '신한카드';if(/현대/.test(s))return '현대카드';if(/삼성/.test(s))return '삼성카드';if(/롯데/.test(s))return '롯데카드';if(/우리/.test(s))return '우리카드';if(/하나/.test(s))return '하나카드';return s;}
-  var cpl={};PE.forEach(function(p){var iss=alias(p.issuer||'');if(!iss)return;var o=cpl[iss]||(cpl[iss]={});(p.events||[]).forEach(function(e){var w=e.reward_won||0;if(!w)return;var pp=o[e.platform]||(o[e.platform]={tot:0,max:0,prods:{}});pp.tot+=w;if(w>pp.max)pp.max=w;pp.prods[_nk2(p.name)]=1;});});
+  var cpl={};PE.forEach(function(p){var iss=alias(p.issuer||'');if(!iss)return;var o=cpl[iss]||(cpl[iss]={});(p.events||[]).forEach(function(e){var w=e.reward_won||0;if(!w||e.platform==='issuer')return;var pp=o[e.platform]||(o[e.platform]={tot:0,max:0,prods:{}});pp.tot+=w;if(w>pp.max)pp.max=w;pp.prods[_nk2(p.name)]=1;});});
   var cg=document.getElementById('cplGrid');if(!cg)return;
   var rows=ISS8.map(function(iss){var o=cpl[iss];if(!o)return null;
    var arr=Object.keys(o).map(function(pk){return{pk:pk,tot:o[pk].tot,max:o[pk].max,cnt:Object.keys(o[pk].prods).length};}).sort(function(a,b){return b.tot-a.tot;});
@@ -937,12 +937,13 @@ function render(){
 }
 function chips(id,arr,key,cls){var el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(function(x){return '<button class="'+cls+(st[key]===x?' on':'')+'" data-v="'+x+'">'+x+'</button>';}).join('');
  el.querySelectorAll('button').forEach(function(b){b.onclick=function(){st[key]=b.dataset.v;el.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');if(key!=='iss')render();};});}
-fetch('cards.json').then(function(r){return r.json();}).then(function(cj){
+Promise.all([fetch('cards.json').then(function(r){return r.json();}),fetch('platform_events.json').then(function(r){return r.json();}).catch(function(){return {products:[]};})]).then(function(A){
+ var cj=A[0],PEIMG={};((A[1].products)||[]).forEach(function(p){if(p.img&&!PEIMG[_nkc(p.name)])PEIMG[_nkc(p.name)]=p.img;});
  var ord=cj.order||Object.keys(cj.cards||{});
  return fetch('history/index.json').then(function(r){return r.json();}).then(function(idx){var ms=(idx.months||[]);var m=ms.length?ms[ms.length-1]:'2026-06';return fetch('history/'+m+'.json').then(function(r){return r.json();});}).catch(function(){return {cards:[]};}).then(function(hist){
   var H={};((hist.cards)||[]).forEach(function(hc){H[_nkc(hc.name)]=hc;});
   ord.forEach(function(iss){(cj.cards[iss]||[]).forEach(function(c){var n=_nkc(c.name);var h=H[n]||{};var bp=bestPlat(h.platforms);var rk=parseInt(c.rank);
-    ALL.push({id:c.id,name:c.name,issuer:iss,img:c.img,benefit:c.benefit||'',fee:c.fee||'',feeN:_feeNum(c.fee),cats:catsOf(c.benefit||''),rankN:(c.rank&&!isNaN(rk))?rk:9999,cash:h.max||0,pkey:bp.key,platform:PKO[bp.key]||'',pColor:PCO[bp.key]||'#888'});});});
+    ALL.push({id:c.id,name:c.name,issuer:iss,img:c.img||PEIMG[n]||'',benefit:c.benefit||'',fee:c.fee||'',feeN:_feeNum(c.fee),cats:catsOf(c.benefit||''),rankN:(c.rank&&!isNaN(rk))?rk:9999,cash:h.max||0,pkey:bp.key,platform:PKO[bp.key]||'',pColor:PCO[bp.key]||'#888'});});});
   initUI(ord);render();
  });
 }).catch(function(){var L=document.getElementById('list');if(L)L.innerHTML='<div class="cfx-empty">데이터를 불러오지 못했어요.</div>';});
@@ -1962,8 +1963,9 @@ function initUI(){
  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(!reduce)slideIv=setInterval(function(){setSlide((slide+1)%2);},4200);
 }
-fetch('cards.json').then(function(r){return r.json();}).then(function(cj){
- for(var k in cj.cards){(cj.cards[k]||[]).forEach(function(c){NAME2[_nk(c.name)]={id:c.id,img:c.img};});}
+Promise.all([fetch('cards.json').then(function(r){return r.json();}),fetch('platform_events.json').then(function(r){return r.json();}).catch(function(){return {products:[]};})]).then(function(A){
+ var cj=A[0],PEIMG={};((A[1].products)||[]).forEach(function(p){if(p.img&&!PEIMG[_nk(p.name)])PEIMG[_nk(p.name)]=p.img;});
+ for(var k in cj.cards){(cj.cards[k]||[]).forEach(function(c){NAME2[_nk(c.name)]={id:c.id,img:c.img||PEIMG[_nk(c.name)]||''};});}
  var months=['2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'];
  return fetch('history/index.json').then(function(r){return r.json();}).then(function(idx){if(idx&&idx.months&&idx.months.length)months=idx.months.slice(-6);return months;}).catch(function(){return months;});
 }).then(function(months){
