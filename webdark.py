@@ -1290,53 +1290,63 @@ fetch('data.json').then(r=>r.json()).then(function(j){var d=j.items.find(x=>x.id
 
 # ===== CONTENT =====
 CONTENT_BODY=('<style>'
- '.tip-hero{background:var(--block-lime,#dceeb1);border-radius:24px;padding:42px 40px;margin:24px 0 0;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;position:relative;overflow:hidden}'
- '.tip-eb{font:800 11.5px var(--font-mono,monospace);letter-spacing:.04em;text-transform:uppercase;color:rgba(0,0,0,.55)}'
- '.tip-h{font-weight:340;font-size:40px;letter-spacing:-1.2px;margin:12px 0 0;line-height:1.06}'
- '.tip-sub{font-size:15.5px;color:rgba(0,0,0,.66);margin:12px 0 0;max-width:500px;line-height:1.5}'
- '.tip-cta{display:inline-flex;align-items:center;gap:7px;background:#000;color:#fff;font-weight:600;font-size:14px;padding:12px 22px;border-radius:50px;text-decoration:none;margin-top:20px}'
- '.tip-hero-badge{flex:0 0 auto;font:800 10.5px var(--font-mono,monospace);letter-spacing:.04em;background:rgba(0,0,0,.86);color:#fff;border-radius:50px;padding:7px 13px}'
- '.tip-types{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}'
- '.tip-type{border:1px solid var(--hairline,#e6e6e6);border-radius:16px;padding:16px 18px;cursor:pointer;background:#fff;transition:border-color .14s;display:flex;align-items:center;gap:13px}'
- '.tip-type:hover{border-color:#000}.tip-type.on{border-color:#000;background:var(--surface-soft,#f4f4f5)}'
- '.tip-type .tt-ic{display:inline-flex;width:40px;height:40px;border-radius:11px;align-items:center;justify-content:center;flex:0 0 auto}'
- '.tip-type .tt-ic .ic{width:20px;height:20px;color:#000}'
- '.tip-type .tt-tag{font:800 9.5px var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.04em;color:rgba(0,0,0,.45)}'
- '.tip-type .tt-h{font-size:15px;font-weight:800;margin:3px 0 0;letter-spacing:-.2px}'
- '.tip-type .tt-d,.tip-type .tt-go{display:none}'
- '.tip-list{display:flex;flex-direction:column;gap:2px;margin-top:12px}'
- '.tip-row{display:flex;align-items:flex-start;gap:14px;padding:18px 4px;border-top:1px solid var(--hairline);text-decoration:none;color:#000}'
- '.tip-row:hover{background:var(--surface-soft)}'
- '.tip-cat{font-size:11px;font-weight:700;padding:4px 11px;border-radius:50px;background:var(--block-lime);color:#000;white-space:nowrap;flex:0 0 auto;margin-top:2px}'
- '.tip-rt{font-size:17px;font-weight:700;letter-spacing:-.3px}.tip-rs{font-size:13.5px;color:rgba(0,0,0,.58);margin-top:4px;line-height:1.45}'
- '.tip-min{font-size:12px;color:rgba(0,0,0,.45);margin-top:6px}'
- '.tip-sech{font-size:12px;font-weight:700;color:rgba(0,0,0,.55);margin:40px 0 0;text-transform:uppercase;letter-spacing:.4px}'
- '@media(max-width:760px){.tip-types{grid-template-columns:1fr}.tip-h{font-size:26px}.tip-hero{padding:28px 22px;flex-direction:column}.tip-hero-badge{order:-1;align-self:flex-start}}'
+ # 강조 컴카드(이달의 PICK)
+ '.tip-pick{display:grid;grid-template-columns:300px 1fr;background:var(--block-lime);border-radius:22px;overflow:hidden;text-decoration:none;color:#000;box-shadow:0 12px 30px rgba(0,0,0,.1);margin:24px 0 0}'
+ '.tip-pick-img{position:relative;background:var(--surface-soft)}.tip-pick-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:100%}'
+ '.tip-pick-badge{position:absolute;left:16px;top:16px;font-family:var(--font-mono,monospace);font-size:9px;background:var(--accent-magenta);color:#fff;padding:5px 11px;border-radius:50px}'
+ '.tip-pick-body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}'
+ '.tip-pick-eb{font-family:var(--font-mono,monospace);font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.55)}'
+ '.tip-pick-t{font-weight:700;font-size:26px;letter-spacing:-.7px;line-height:1.25;margin-top:10px}'
+ '.tip-pick-d{font-weight:400;font-size:14.5px;line-height:1.5;color:rgba(0,0,0,.62);margin-top:10px}'
+ '.tip-pick-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:50px;background:#000;color:#fff;font-weight:600;font-size:15px;margin-top:20px;align-self:flex-start}.tip-pick-cta svg{width:16px;height:16px}'
+ # 가로 탭
+ '.tip-tabs{display:flex;gap:28px;border-bottom:1px solid var(--hairline);margin:26px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}.tip-tabs::-webkit-scrollbar{display:none}'
+ '.tip-tab{background:0;border:0;padding:0 0 13px;font-family:inherit;font-weight:480;font-size:15px;letter-spacing:-.2px;white-space:nowrap;color:rgba(0,0,0,.5);border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;flex:0 0 auto}'
+ '.tip-tab.on{font-weight:700;color:#000;border-bottom-color:#000}'
+ # 썸네일 리스트 (데스크탑 2열)
+ '.tip-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin-top:10px}'
+ '.tip-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--hairline-soft);text-decoration:none;color:#000}'
+ '.tip-row:hover .tip-rt{color:var(--accent,#000);text-decoration:underline}'
+ '.tip-thumb{width:96px;height:64px;border-radius:12px;object-fit:cover;flex:0 0 auto;display:block;background:var(--surface-soft)}'
+ '.tip-rcat{font-family:var(--font-mono,monospace);font-size:9px;color:rgba(0,0,0,.45)}'
+ '.tip-rt{font-weight:700;font-size:15px;letter-spacing:-.3px;line-height:1.35;margin-top:4px}'
+ # 상세(detail) — 기존 유지 클래스
+ '.adt .ghero{border-radius:16px;overflow:hidden;margin-bottom:18px}.adt .ghero img{width:100%;display:block}'
+ '.adt .ah{font-weight:340;font-size:32px;letter-spacing:-1px;line-height:1.2;margin:14px 0 0}.adt .asum{font-size:16px;color:rgba(0,0,0,.6);margin:12px 0 0;line-height:1.5}'
+ '.adt p{font-size:15.5px;line-height:1.75;margin:16px 0 0;color:rgba(0,0,0,.82)}.adt .bk2{display:inline-block;margin-top:30px;font-weight:600;font-size:14px}'
+ '@media(max-width:760px){'
+ '.tip-pick{grid-template-columns:1fr}.tip-pick-img img{height:158px;min-height:0}.tip-pick-body{padding:18px 18px 20px}.tip-pick-t{font-size:20px}.tip-pick-d{font-size:13px}.tip-pick-cta{width:100%;justify-content:center;font-size:15px}'
+ '.tip-list{grid-template-columns:1fr;gap:0}'
+ '.tip-thumb{width:74px;height:56px}.tip-rt{font-size:14px}'
+ '.adt .ah{font-size:24px}'
+ '}'
  '</style>'
  '<div class="wrap"><section id="listwrap">'
- '<div class="tip-hero"><div><div class="tip-eb">이번달 캐시백 획득 전략 · 2026.06</div><h1 class="tip-h">6월엔 어떤 카드를,<br>어느 플랫폼에서</h1><p class="tip-sub">카드사별로 이번 달 캐시백이 가장 큰 플랫폼과 상품, 마감 임박 이벤트까지 한 번에 정리했어요.</p><a class="tip-cta" id="tipStrat" href="content.html">전략 보기 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div><div class="tip-hero-badge">이달의 1순위</div></div>'
- '<div class="tip-types" id="tipTypes"></div>'
- '<div class="tip-sech" id="tipSech">최신 글</div>'
- '<div class="tip-list" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section>'
+ '<div style="padding:24px 0 0"><h1 style="font-weight:330;font-size:34px;letter-spacing:-1.2px;margin:0">티라노 TIP</h1><p style="font-weight:400;font-size:14px;color:rgba(0,0,0,.6);margin:5px 0 0">전문가가 매달 직접 뜯어본 카드 전략.</p></div>'
+ '<div id="tipPick"></div>'
+ '<div class="tip-tabs" id="tipTabs"></div>'
+ '<div class="tip-list" id="list"><div class="empty" style="grid-column:1/-1"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section>'
  '<div id="detail" style="display:none"></div></div>')
 CONTENT_JS=r"""
-var C=[],cur="전체";
-var TYPES=[{k:'발급 팁',tag:'STRATEGY',h:'이달의 캐시백 획득 전략',d:'지금 받아야 할 카드와 채널, 놓치면 아까운 캐시백 타이밍.',ic:'ic-search',bg:'var(--block-lime)'},
- {k:'기초 상식',tag:'KNOWLEDGE',h:'카드 지식',d:'연회비·전월실적·적립 vs 할인 — 처음 고르는 사람을 위한 쉬운 설명.',ic:'ic-grid',bg:'var(--block-cream)'},
- {k:'할인 활용',tag:'ANATOMY',h:'신용카드 해부',d:'카드 한 장을 영역별로 뜯어보고 손익까지 따져봐요.',ic:'ic-cart',bg:'var(--block-mint)'}];
+var C=[],cur='발급 팁';
+var TYPES=[{k:'발급 팁',h:'이달의 캐시백 전략',cats:['발급 팁']},{k:'기초 상식',h:'카드 지식',cats:['기초 상식','여행']},{k:'할인 활용',h:'신용카드 해부',cats:['할인 활용']}];
+var CATIMG={'발급 팁':'img/guide/issue.svg','할인 활용':'img/guide/discount.svg','기초 상식':'img/guide/basic.svg','여행':'img/guide/travel.svg'};
 var CATBG={'발급 팁':'var(--block-lime)','기초 상식':'var(--block-cream)','할인 활용':'var(--block-mint)','여행':'var(--block-mint)'};
-function _rt(b){var n=(b||[]).join('').length;return Math.max(2,Math.round(n/450))+'분';}
-function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><span class="tip-cat">'+x.cat+'</span><div><div class="tip-rt">'+x.title+'</div>'+(x.summary?'<div class="tip-rs">'+x.summary+'</div>':'')+'<div class="tip-min">읽는 데 '+_rt(x.body)+'</div></div></a>';}
-function renderList(){var items=cur==="전체"?C:C.filter(function(x){return x.cat===cur;});document.getElementById('list').innerHTML=items.length?items.map(rowHtml).join(''):'<div class="empty" style="padding:30px 0">글이 없어요.</div>';document.getElementById('tipSech').textContent=cur==="전체"?'최신 글':cur+' 글';}
-function types(){var t=document.getElementById('tipTypes');t.innerHTML=TYPES.map(function(ty){var on=cur===ty.k;return '<div class="tip-type'+(on?' on':'')+'" data-k="'+ty.k+'"><span class="tt-ic" style="background:'+(ty.bg||'var(--surface-soft)')+'"><svg class="ic"><use href="#'+ty.ic+'"/></svg></span><div class="tt-tag">'+ty.tag+'</div><div class="tt-h">'+ty.h+'</div><div class="tt-d">'+ty.d+'</div><div class="tt-go">보러가기 ›</div></div>';}).join('');
- t.querySelectorAll('.tip-type').forEach(function(b){b.onclick=function(){cur=(cur===b.dataset.k)?'전체':b.dataset.k;types();renderList();};});}
+function _thumb(x){return x.img||CATIMG[x.cat]||'img/guide/reco.svg';}
+function _catsOf(k){for(var i=0;i<TYPES.length;i++)if(TYPES[i].k===k)return TYPES[i].cats;return [k];}
+function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><img class="tip-thumb" src="'+_thumb(x)+'" alt="" loading="lazy"><div style="min-width:0"><div class="tip-rcat">'+(x.cat||'')+'</div><div class="tip-rt">'+x.title+'</div></div></a>';}
+function renderList(){var cats=_catsOf(cur);var items=C.filter(function(x){return cats.indexOf(x.cat)>=0;});document.getElementById('list').innerHTML=items.length?items.map(rowHtml).join(''):'<div class="empty" style="grid-column:1/-1;padding:30px 0">글이 없어요.</div>';}
+function tabs(){var t=document.getElementById('tipTabs');t.innerHTML=TYPES.map(function(ty){return '<button class="tip-tab'+(cur===ty.k?' on':'')+'" data-k="'+ty.k+'">'+ty.h+'</button>';}).join('');
+ t.querySelectorAll('.tip-tab').forEach(function(b){b.onclick=function(){cur=b.dataset.k;tabs();renderList();};});}
+function pick(){var st=C.filter(function(x){return x.cat==='발급 팁';})[0]||C[0];var el=document.getElementById('tipPick');if(!st||!el)return;
+ el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><img src="'+_thumb(st)+'" alt="">'+'<span class="tip-pick-badge">이달의 PICK</span></div>'
+  +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.06</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
  var hero=d.img?'<div class="ghero"><img src="'+d.img+'" alt="'+d.cat+'" loading="eager"/></div>':'';
- el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노TIP</a></div>';document.title=d.title+' | 카드티라노';}
+ el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노 TIP</a></div>';document.title=d.title+' | 카드티라노';}
 var id=new URLSearchParams(location.search).get('id');
 fetch('content.json').then(function(r){return r.json();}).then(function(j){C=j.items;if(id!==null){var d=C.find(function(x){return String(x.id)===String(id);});if(d){detail(d);return;}}
- var st=C.filter(function(x){return /발급|전략/.test(x.cat||'');})[0]||C[0];var sb=document.getElementById('tipStrat');if(sb&&st)sb.setAttribute('href','content.html?id='+encodeURIComponent(st.id));
- types();renderList();});
+ pick();tabs();renderList();});
 """
 
 # ===== CARD DETAIL =====
