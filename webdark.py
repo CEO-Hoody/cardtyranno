@@ -1578,6 +1578,11 @@ Promise.all([
 ]).then(function(A){
  var _now=new Date();var _cm=_now.getFullYear()+'-'+('0'+(_now.getMonth()+1)).slice(-2);
  var PE=A[0].products||[],cj=A[1].cards||{},HIX=A[2].months||[];
+ var CARDMAP={};for(var _ck in cj){(cj[_ck]||[]).forEach(function(c){var n=_nk(c.name);if(!CARDMAP[n])CARDMAP[n]=c;});}   // 카드명→cards.json 카드(main_tier·sub_tiers)
+ // 부가 유형 → 아웃라인 글리프(이모지 금지·DS) + 짧은 조건문
+ var CATSVG={'해외':'<circle cx="12" cy="12" r="8"/><path d="M4 12h16"/><path d="M12 4c2.5 2.3 3.8 5 3.8 8s-1.3 5.7-3.8 8c-2.5-2.3-3.8-5-3.8-8s1.3-5.7 3.8-8z"/>','자동납부':'<rect x="4" y="5.5" width="16" height="15" rx="2.5"/><path d="M4 10h16M8.5 3v4M15.5 3v4"/>','리볼빙':'<path d="M20 11a8 8 0 1 0-1.6 5"/><path d="M20 5.5V11h-5.5"/>','멤버십':'<rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M9 21h6M12 17v4"/>','여행':'<path d="M21 4L3 11l6 2.2L11 20l3-5 5-11z"/><path d="M9 13.2L14 8"/>','마케팅동의':'<path d="M5 12.5l4.2 4.2L19 6.8"/>','쿠폰':'<path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2 2 2 0 0 0 0-4z"/><path d="M14 6v12"/>','추가이용':'<path d="M12 5v14M5 12h14"/>','오프라인':'<path d="M4 9l1.2-4h13.6L20 9"/><path d="M5 9v10h14V9"/><path d="M4 9h16"/><path d="M9.5 19v-5h5v5"/>','연회비':'<rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M3 10h18"/>','간편결제':'<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/>','신규':'<path d="M12 3.5l1.7 5.8 5.8 1.7-5.8 1.7-1.7 5.8-1.7-5.8-5.8-1.7 5.8-1.7z"/>'};
+ function catIcon(cat){var p=CATSVG[cat]||'<path d="M12 5v14M5 12h14"/>';return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';}
+ var CATCOND={'해외':'해외 결제 시','자동납부':'자동납부 등록 시','멤버십':'OTT·멤버십 결제 시','여행':'여행 결제 시','마케팅동의':'마케팅 수신 동의 시','쿠폰':'쿠폰 사용 시','리볼빙':'리볼빙 약정 시','추가이용':'추가 이용 시','오프라인':'오프라인 결제 시','연회비':'연회비 캐시백','간편결제':'간편결제 이용 시','신규':'신규 발급 시'};
  var months=HIX.slice().sort().filter(function(m){return m<_cm;}).slice(-3).concat([_cm]);
  var ID2={};for(var k in cj){(cj[k]||[]).forEach(function(c){if(c.id!=null)ID2[String(c.id)]=_nk(c.name);});}
  var root=document.getElementById('edroot');
@@ -1632,12 +1637,15 @@ Promise.all([
     +'<div class="rg-sums"><div><div class="l">당월 전체</div><div class="v">'+(S.total?_wm(S.total):'—')+'</div></div><div><div class="l">주요</div><div class="v" style="color:var(--block-navy)">'+(S.main?_wm(S.main):'—')+'</div></div><div><div class="l">부가</div><div class="v" style="color:rgba(31,29,61,.55)">'+(S.sub?_wm(S.sub):'—')+'</div></div></div></div>'
     +'<div class="rg-bars'+(hasCur?'':' rg-note')+'">'+bars+emptyNote+'</div>'
     +'<div class="rg-legend"><span><i style="background:var(--accent-magenta)"></i>이번달 · 주요</span><span><i style="background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),var(--accent-magenta)"></i>이번달 · 부가</span><span><i style="background:var(--block-navy)"></i>직전 3개월</span></div></div></div>';
-   var subItems='';var bd=(e.breakdown||[]).filter(function(b){return b.won&&b.won>0&&b.won<S.total;});
-   if(S.sub>0){if(bd.length){subItems=bd.map(function(b){return '<div class="rg-sub"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><div><div class="t">부가 캐시백</div><div class="c">'+(b.text||'조건 충족 시')+'</div></div><span class="v">+'+_wm(b.won)+'</span></div>';}).join('');}
-    else{subItems='<div class="rg-sub"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><div><div class="t">부가 캐시백</div><div class="c">조건 충족 시</div></div><span class="v">+'+_wm(S.sub)+'</span></div>';}}
+   // 구성 = cards.json의 구조화된 main_tier(주요)·sub_tiers(부가 유형별). tier_enrich.py 산출.
+   var _cd=CARDMAP[_nk(p.name)]||{};var _mt=_cd.main_tier,_st=(_cd.sub_tiers||[]);
+   var mainReward=(_mt&&_mt.reward)?_mt.reward:S.main;
+   var subItems='';
+   if(_st.length){subItems=_st.map(function(s){return '<div class="rg-sub" title="'+(s.text||'').replace(/"/g,'')+'"><span class="ic">'+catIcon(s.cat)+'</span><div><div class="t">'+(s.cat||'부가')+'</div><div class="c">'+(CATCOND[s.cat]||'조건 충족 시')+'</div></div><span class="v">+'+_wm(s.reward)+'</span></div>';}).join('');}
+   else if(S.sub>0){subItems='<div class="rg-sub"><span class="ic">'+catIcon('')+'</span><div><div class="t">부가 캐시백</div><div class="c">조건 충족 시</div></div><span class="v">+'+_wm(S.sub)+'</span></div>';}
    var comp='<div class="rg-sec"><div class="rg-eb">캐시백 구성</div><h2 class="rg-t">전체 캐시백 구성</h2><p class="rg-hint" style="margin-top:4px"><b style="font-weight:700;color:#000">'+p.name+'</b> 기준 · 주요(조건 금액 이상 이용 시) + 부가(조건별)</p>'
-    +'<div class="rg-main"><div class="l">주요 캐시백</div><div class="row"><span class="t">조건 금액 이상 이용 시</span><span class="v">'+(S.main?_wm(S.main):'—')+'</span></div></div>'
-    +(S.sub>0?('<div class="rg-subh">부가 캐시백 · 조건별</div><div class="rg-subs">'+subItems+'</div>'):'<div class="rg-subh">부가 캐시백</div><div class="rg-subnone">이 상품은 부가 캐시백 없이 주요 캐시백으로 구성돼요.</div>')+'</div>';
+    +'<div class="rg-main"><div class="l">주요 캐시백</div><div class="row"><span class="t">조건 금액 이상 이용 시</span><span class="v">'+(mainReward?_wm(mainReward):'—')+'</span></div></div>'
+    +(subItems?('<div class="rg-subh">부가 캐시백 · 유형별</div><div class="rg-subs">'+subItems+'</div>'):'<div class="rg-subh">부가 캐시백</div><div class="rg-subnone">이 상품은 부가 캐시백 없이 주요 캐시백으로 구성돼요.</div>')+'</div>';
    var maxOther=0;(p.events||[]).forEach(function(x){if(x.platform!==P&&(x.reward_won||0)>maxOther)maxOther=x.reward_won;});
    var rec=(S.total>=maxOther)?'rec':(S.total>=maxOther*0.8?'hold':'no');
    var recLab=rec==='rec'?'추천':(rec==='hold'?'보류':'비추천');var recCls=rec==='rec'?'':(rec==='hold'?'hold':'no');
