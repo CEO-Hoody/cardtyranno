@@ -539,7 +539,7 @@ Promise.all([
   +'<div class="cdt-plot" id="cdtPlot"></div></div>';
  // ===== 발급 이벤트 통합 =====
  var rows=plats.map(function(p,pi){var top=(pi===0);
-  var href='events.html?n='+encodeURIComponent(card.name)+'&p='+p.key;
+  var href='events.html?platform='+p.key+'&n='+encodeURIComponent(card.name);
   return '<a class="cde-row'+(top?' top':'')+'" href="'+href+'" data-track="plat" data-label="'+p.name+'">'
    +'<div class="cde-pi"><span class="pdot" style="background:'+(PCOL[p.name]||'#888')+'"></span><div><div class="cde-pn"><b>'+p.name+'</b>'+(top?'<span class="cde-tag">최대</span>':'')+'</div>'+(p.cond?'<div class="cde-cond">'+p.cond+'</div>':'')+'</div></div>'
    +'<div class="cde-cash"><div class="cl">캐시백</div><div class="cv">'+_wmc(p.won)+'</div></div>'
@@ -567,7 +567,7 @@ Promise.all([
  var acc=document.getElementById('cdAcc'),accHd=document.getElementById('cdAccHd');
  if(accHd)accHd.onclick=function(){acc.classList.toggle('open');};
  // 하단 고정 플로팅 CTA — 최대 캐시백 플랫폼 이벤트로 이동
- if(topP){var fhref='events.html?n='+encodeURIComponent(card.name)+'&p='+topP.key;
+ if(topP){var fhref='events.html?platform='+topP.key+'&n='+encodeURIComponent(card.name);
   document.getElementById('cdFloat').innerHTML='<div class="cdf"><div class="wrap"><div class="lab">최대 캐시백 <b>'+_wmc(maxCash)+'</b> · '+topP.name+'에서 가장 큼</div><a class="go" href="'+fhref+'">'+topP.name+' 이벤트 보기 '+_ARW+'</a></div></div>';}
  // ===== 차트 데이터(히스토리 스냅샷) 비동기 로드 =====
  var _now=new Date();var _cm=_now.getFullYear()+'-'+('0'+(_now.getMonth()+1)).slice(-2);
