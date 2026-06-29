@@ -539,7 +539,7 @@ Promise.all([
   var dval=prevA?(_man(curV)-_man(prevA.v)):0;
   var grid=[0,scaleMan*0.25,scaleMan*0.5,scaleMan*0.75,scaleMan].map(function(g){return '<div class="ed-grid" style="bottom:'+(g/scaleMan*100)+'%"><span>'+Math.round(g)+'만</span></div>';}).join('');
   var bars=series.map(function(s,i){var last=(i===series.length-1);
-   if(s.v==null||s.v<=0){return '<div class="ed-col"><div class="ed-mwrap"><span class="ed-val miss">—</span><div class="ed-bar miss"></div></div><span class="ed-mlbl">'+_mlabel(s.m)+'</span></div>';}
+   if(s.v==null||s.v<=0){return '<div class="ed-col"><div class="ed-mwrap"><span class="ed-val miss">—</span></div><span class="ed-mlbl">'+_mlabel(s.m)+'</span></div>';}
    var hp=Math.max(s.v/scale*100,3);
    var mC=last?'var(--accent-magenta)':'var(--block-navy)';var bC=last?'#ffc4dd':'#b9b2e6';
    var bb=(s.bb||0);if(bb>=s.v)bb=0;var mm=Math.max(s.v-bb,0);
