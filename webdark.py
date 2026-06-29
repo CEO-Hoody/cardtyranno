@@ -1583,14 +1583,22 @@ Promise.all([
  if(!P&&focusNk){var fp=PE.filter(function(p){return _nk(p.name)===focusNk;})[0];if(fp){var mx=0;(fp.events||[]).forEach(function(e){if((e.reward_won||0)>mx){mx=e.reward_won;P=e.platform;}});}}
  if(!P){root.innerHTML='<div class="empty" style="padding:60px 0">플랫폼 정보가 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
  function evOf(p){return (p.events||[]).filter(function(e){return e.platform===P&&e.reward_won;}).sort(function(a,b){return b.reward_won-a.reward_won;})[0];}
- var group=PE.map(function(p){var e=evOf(p);return e?{p:p,e:e}:null;}).filter(Boolean).sort(function(a,b){return b.e.reward_won-a.e.reward_won;});
- if(!group.length){root.innerHTML='<div class="empty" style="padding:60px 0">이 플랫폼의 발급 캐시백이 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
- var focusIdx=0;if(focusNk){for(var gi=0;gi<group.length;gi++){if(_nk(group[gi].p.name)===focusNk){focusIdx=gi;break;}}}
+ // 캠페인 키 = 이벤트 랜딩 URL(쿼리·해시 제거). 같은 URL = 같은 발급 캐시백(캠페인).
+ function _cu(p,e){var pp=(p.platforms||{})[P]||{};var u=(e&&e.url)||pp.url||'';return (''+u).split('?')[0].split('#')[0].replace(/\/+$/,'');}
+ var platGroup=PE.map(function(p){var e=evOf(p);return e?{p:p,e:e,cu:_cu(p,e)}:null;}).filter(Boolean).sort(function(a,b){return b.e.reward_won-a.e.reward_won;});
+ if(!platGroup.length){root.innerHTML='<div class="empty" style="padding:60px 0">이 플랫폼의 발급 캐시백이 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
+ var anchor=(focusNk?platGroup.filter(function(g){return _nk(g.p.name)===focusNk;})[0]:null)||platGroup[0];
+ var campaignCu=anchor.cu;
+ var sameCu=campaignCu?platGroup.filter(function(g){return g.cu===campaignCu;}):[anchor];
+ // 진짜 캠페인 = 2개 이상이 같은 URL 공유 & 플랫폼 전체는 아님(네이버 등 제네릭 랜딩 제외). 그 외 = 진입 카드 1건.
+ var isCampaign=(sameCu.length>=2 && sameCu.length<platGroup.length);
+ var group=(isCampaign?sameCu.slice():[anchor]).sort(function(a,b){return b.e.reward_won-a.e.reward_won;});
+ var focusIdx=0;for(var gi=0;gi<group.length;gi++){if(group[gi]===anchor){focusIdx=gi;break;}}
  var col=PBC[P]||'#888',pnm=PNM[P]||P;
  Promise.all(months.map(function(m){return m===_cm?Promise.resolve(null):fetch('history/'+m+'.json').then(function(r){return r.json();}).catch(function(){return null;});})).then(function(MS){
   var head='<div class="rg-head"><div><div class="rg-pchip"><i style="background:'+col+'"></i><b>'+pnm+'</b><span class="mono">플랫폼</span></div>'
    +'<h1 class="rg-h">이번달 발급 캐시백</h1>'
-   +'<p class="rg-sub">'+pnm+'에서 지금 발급하면 받는 캐시백 묶음이에요. <b>'+group.length+'개 카드</b>가 이 캐시백에 들어 있어요.</p>'
+   +'<p class="rg-sub">'+(group.length>1?(pnm+'의 이 발급 캐시백 이벤트에 <b>'+group.length+'개 카드</b>가 함께 들어 있어요.'):(pnm+'에서 <b>'+anchor.p.name+'</b>를 발급하면 받는 캐시백이에요.'))+'</p>'
    +'<a class="rg-cta" id="rgHeadCta" href="#" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div>'
    +'<div class="rg-deco"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div></div>';
   var listRows=group.map(function(g,i){var p=g.p,e=g.e;var pc=PLATEC[i%6];var ink=(pc.indexOf('navy')>=0)?'#fff':'#000';
@@ -1599,7 +1607,7 @@ Promise.all([
     +'<div class="rg-pcash"><div class="l">최대 캐시백</div><div class="v">'+_wm(e.reward_won)+'</div></div>'
     +'<svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button>';
   }).join('');
-  var listSec='<div class="rg-sec"><div class="rg-sec-h"><div><div class="rg-eb">발급 캐시백 그룹</div><h2 class="rg-t">이 캐시백을 받는 카드</h2></div><span class="rg-hint">상품을 누르면 아래 차트·구성이 바뀌어요</span></div><div class="rg-plist" id="rgList">'+listRows+'</div></div>';
+  var listSec=group.length>1?('<div class="rg-sec"><div class="rg-sec-h"><div><div class="rg-eb">발급 캐시백 그룹</div><h2 class="rg-t">이 캐시백을 받는 카드</h2></div><span class="rg-hint">상품을 누르면 아래 차트·구성이 바뀌어요</span></div><div class="rg-plist" id="rgList">'+listRows+'</div></div>'):'';
   root.innerHTML=head+listSec+'<div id="rgDyn"></div>';
   function buildSeries(p,e){var nk=_nk(p.name);var total=e.reward_won||0,bonus=e.bonus_won||0;if(bonus>=total)bonus=0;var main=Math.max(total-bonus,0);
    var series=months.map(function(m,i){if(m===_cm)return {m:m,v:total,main:main,sub:bonus,cur:true};
@@ -1651,12 +1659,12 @@ Promise.all([
    if(window.repairImages)repairImages();
   }
   var listEl=document.getElementById('rgList');
-  listEl.addEventListener('click',function(ev2){var b=ev2.target.closest('.rg-prow');if(!b)return;var i=+b.getAttribute('data-i');
+  if(listEl){listEl.addEventListener('click',function(ev2){var b=ev2.target.closest('.rg-prow');if(!b)return;var i=+b.getAttribute('data-i');
    listEl.querySelectorAll('.rg-prow').forEach(function(x){x.classList.remove('sel');var s=x.querySelector('[data-sel]');if(s)s.hidden=true;});
-   b.classList.add('sel');var sb=b.querySelector('[data-sel]');if(sb)sb.hidden=false;renderDyn(i);});
+   b.classList.add('sel');var sb=b.querySelector('[data-sel]');if(sb)sb.hidden=false;renderDyn(i);});}
   renderDyn(focusIdx);
-  var selB=listEl.querySelector('.rg-prow.sel [data-sel]');if(selB)selB.hidden=false;
-  if(focusIdx>0){var fb=listEl.querySelector('.rg-prow[data-i="'+focusIdx+'"]');if(fb)fb.scrollIntoView({block:'nearest'});}
+  if(listEl){var selB=listEl.querySelector('.rg-prow.sel [data-sel]');if(selB)selB.hidden=false;
+  if(focusIdx>0){var fb=listEl.querySelector('.rg-prow[data-i="'+focusIdx+'"]');if(fb)fb.scrollIntoView({block:'nearest'});}}
  });
 }).catch(function(){var r=document.getElementById('edroot');if(r)r.innerHTML='<div class="empty" style="padding:60px 0">데이터를 불러오지 못했어요.</div>';});
 """
