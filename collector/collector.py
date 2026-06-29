@@ -473,6 +473,10 @@ def _merge_seismo_seed(platform, seed_file, injected, products):
         return 0
     except Exception as e:
         print(f"{platform} seismo seed err", e); return 0
+    _sm=sd.get("month")                                 # stale 가드: 앱캡처는 매달 수동 업로드 → 전월 캡처 섞임 방지
+    if _sm and _sm!=current_month_kst():
+        print(f"⚠️ {platform} 앱캡처 시드 stale(시드={_sm}, 현재={current_month_kst()}) — 주입 SKIP. 새 캡처 업로드 후 재빌드 필요.")
+        return 0
     bynk={_nk(p["name"]):p for p in products}; n=0; nnew=0
     for ev in sd.get("events",[]):
         rw=ev.get("reward_won") or 0; rtext=ev.get("reward_text"); eurl=ev.get("url","")
@@ -889,6 +893,10 @@ if __name__=="__main__":
     # reward_won=국내 이용 메인 캐시백(타 플랫폼과 비교 가능한 발급 캐시백). 공개 웹 URL이 없어 아웃링크는 비부착.
     try:
         kp=json.load(open(os.path.join(BASE,"kakaopay_seed.json"),encoding="utf-8"))
+        _km=kp.get("month")                             # stale 가드(앱캡처 — 전월 캡처 섞임 방지)
+        if _km and _km!=current_month_kst():
+            print(f"⚠️ 카카오페이 앱캡처 시드 stale(시드={_km}, 현재={current_month_kst()}) — 주입 SKIP. 새 캡처 업로드 후 재빌드 필요.")
+            kp={"events":[]}
         _bk={_nk(p["name"]):p for p in products}; _kn=0; _knew=0
         for ev in kp.get("events",[]):
             rw=ev.get("headline_won") or ev.get("reward_won") or 0; rtext=ev.get("reward_text")   # 기준 통일: 전체 혜택(최대 헤드라인). 카카오페이포인트=원 1:1
