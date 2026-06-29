@@ -178,10 +178,10 @@ def export_json(con):
             mw,bw,comps=parse_breakdown(r[1],r[2])   # reward_text→메인/부가 분해
             ov=BREAKDOWN.get((name,r[0]))            # 거주지 수집 이벤트상세 분해값 우선
             if ov: mw,bw=ov["main"],ov["bonus"]
-            elif r[0]=="cardgorilla":                # 카드고릴라 cg_meta 수치 분해(NEW-6) — 전체=reward_won 유지, 부가만 주입
-                _cb=CG_BONUS_NK.get(_nk(name),0)
-                if _cb>0:
-                    bw=min(_cb,max((r[2] or 0)-10000,0)); mw=max((r[2] or 0)-bw,0)
+            elif r[0]=="cardgorilla":                # 카드고릴라(NEW-6): 주요=cg 결제 캐시백, 부가=전체-주요(전체=reward_won 유지)
+                _cm=CG_MAIN_NK.get(_nk(name),0)
+                if 0<_cm<(r[2] or 0):                # 주요가 전체 미만일 때만(전체>주요 → 부가 존재)
+                    mw=_cm; bw=(r[2] or 0)-_cm
             e={"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4],
                "main_won":mw,"bonus_won":bw}
             if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
@@ -310,7 +310,7 @@ def _cg_catalog():
 CG_EVENTS={}   # cardgorilla_id → {subject(=카드고릴라 자체 이벤트 라벨), title, start, end}
 CG_IMG={}      # cardgorilla_id → 카드 플레이트 이미지 URL(상품 메타 매핑)
 BREAKDOWN={}   # (카드명, 플랫폼) → {"main":원, "bonus":원}  거주지 수집 이벤트상세 분해값(메인/부가 override)
-CG_BONUS_NK={} # _nk(카드명) → 부가(원)  카드고릴라 cg_meta 수치 분해(주요=총액-부가는 export에서 reward_won 기준 산출)
+CG_MAIN_NK={}  # _nk(카드명) → 주요(원)  카드고릴라 주요 캐시백(결제 임계 캐시백). 부가=전체(reward_won)-주요 로 export에서 산출
 CARD_META={}   # (platform, pid) → {annual_fee, benefits, spending_req}  stego 카드 메타(연회비·혜택·전월실적) — 복원
 
 def discover_products(limit=400):
@@ -599,7 +599,7 @@ def _won_of(s):
     t = re.sub(r"/\s*\d+\s*만\s*원?", " ", t)             # '/30만원' 한도 제거
     vals = [int(x) * 10000 for x in re.findall(r"(\d+)\s*만\s*원?", t)]
     vals += [int(x) for x in re.findall(r"(\d{4,6})\s*원", t)]   # '39000원'
-    vals = [v for v in vals if 0 < v <= 1_000_000]       # 1인 캐시백 현실 상한
+    vals = [v for v in vals if 0 < v <= 1_500_000]       # 1인 캐시백 현실 상한(105만 등 프리미엄 해외 혜택 허용)
     return max(vals) if vals else 0
 
 def _text_bd(text, total):
@@ -734,11 +734,11 @@ if __name__=="__main__":
     except Exception as e: print("toss fee scrape err", e)
     try: scrape_cardgorilla_meta()
     except Exception as e: print("cg meta scrape err", e)
-    try:                                          # 카드고릴라 부가 수치 → CG_BONUS_NK (export_json에서 reward_won 기준 주입)
+    try:                                          # 카드고릴라 주요 수치 → CG_MAIN_NK (export_json에서 부가=전체-주요)
         _cgm=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","cg_meta.json"),encoding="utf-8"))
-        CG_BONUS_NK.update({k:v for k,v in (_cgm.get("bonusWonByName") or {}).items() if v})
-        print(f"cardgorilla 부가 수치 적재: {len(CG_BONUS_NK)}건")
-    except Exception as e: print("cg bonus load err", e)
+        CG_MAIN_NK.update({k:v for k,v in (_cgm.get("mainWonByName") or {}).items() if v})
+        print(f"cardgorilla 주요 수치 적재: {len(CG_MAIN_NK)}건")
+    except Exception as e: print("cg main load err", e)
     try: scrape_banksalad_meta()
     except Exception as e: print("bs meta scrape err", e)
     try: diagnose()
