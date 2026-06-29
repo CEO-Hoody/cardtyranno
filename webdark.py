@@ -1509,7 +1509,7 @@ EVENTDETAIL_BODY=('<style>'
  '.rg-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:8px 0 4px}'
  '.rg-pchip{display:inline-flex;align-items:center;gap:10px;background:var(--surface-soft);padding:8px 16px 8px 12px;border-radius:50px}.rg-pchip i{width:14px;height:14px;border-radius:50%}.rg-pchip b{font-weight:700;font-size:24px;letter-spacing:-.6px;line-height:1}.rg-pchip .mono{font-family:var(--font-mono,monospace);font-size:10px;color:rgba(0,0,0,.45)}'
  '.rg-h{font-weight:340;font-size:38px;line-height:1.02;letter-spacing:-1.2px;margin:14px 0 0}'
- '.rg-sub{font-weight:400;font-size:15px;color:rgba(0,0,0,.62);margin:10px 0 0}.rg-sub b{font-weight:700}'
+ '.rg-hsub{font-weight:400;font-size:15px;color:rgba(0,0,0,.62);margin:10px 0 0;word-break:keep-all}.rg-hsub b{font-weight:700}'
  '.rg-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;margin-top:18px}.rg-cta svg{width:17px;height:17px}'
  '.rg-deco{width:200px;height:160px;flex-shrink:0;background:var(--block-lime);border-radius:20px;display:flex;align-items:center;justify-content:center;overflow:hidden}.rg-deco svg{width:96px;height:80px;color:#33402a;opacity:.9}'
  '.rg-sec{margin-top:30px}'
@@ -1550,7 +1550,8 @@ EVENTDETAIL_BODY=('<style>'
  '.rg-otag{display:inline-block;padding:4px 10px;border-radius:50px;font-family:var(--font-mono,monospace);font-size:9px;text-transform:uppercase;margin-bottom:6px}'
  '.rg-foot{font-size:12px;color:rgba(0,0,0,.45);margin:28px 0 10px;line-height:1.6}.rg-foot b{font-weight:600;color:rgba(0,0,0,.6)}'
  '.rg-float{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--hairline);padding:12px 0}.rg-float .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}.rg-float .lab{font-size:14px;font-weight:540;color:rgba(0,0,0,.62)}.rg-float .lab b{color:#000;font-weight:700}.rg-float .go{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;white-space:nowrap}.rg-float .go svg{width:16px;height:16px}'
- '@media(max-width:680px){.rg-head{grid-template-columns:1fr;gap:14px}.rg-deco{width:100%;height:96px}.rg-h{font-size:25px}.rg-prow{grid-template-columns:auto 1fr auto;gap:12px}.rg-parr{display:none}.rg-chart{padding:18px}.rg-bars{height:130px;gap:10px}.rg-subs{grid-template-columns:1fr}.rg-coach{grid-template-columns:1fr;gap:14px;text-align:center}.rg-coach-leg{justify-content:center}.rg-float .lab{display:none}.rg-float .go{flex:1;justify-content:center}.mtab{display:none}}'
+ # 모바일 시안: 헤더는 텍스트 좌 + 작은 일러스트 우(나란히), 인-헤더 CTA 숨김(하단 플로팅만), 헤드라인 축소
+ '@media(max-width:680px){.rg-head{gap:12px}.rg-deco{width:92px;height:74px}.rg-deco svg{width:54px;height:46px}.rg-h{font-size:23px;margin-top:10px}.rg-pchip{padding:6px 13px 6px 9px}.rg-pchip b{font-size:19px}.rg-pchip i{width:11px;height:11px}.rg-hsub{font-size:12px;margin-top:7px}.rg-cta{display:none}.rg-prow{grid-template-columns:auto 1fr auto;gap:12px}.rg-parr{display:none}.rg-chart{padding:18px}.rg-bars{height:130px;gap:10px}.rg-subs{grid-template-columns:1fr}.rg-coach{grid-template-columns:1fr;gap:14px;text-align:center}.rg-coach-leg{justify-content:center}.rg-float .lab{display:none}.rg-float .go{flex:1;justify-content:center}.mtab{display:none}}'
  '@media(prefers-reduced-motion:reduce){.rg-bar,.rg-curbar{transition:none}}'
  '</style>'
  '<div class="rg-wrap"><a class="rg-back" href="issue.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>이번달 캐시백으로</a>'
@@ -1589,13 +1590,16 @@ Promise.all([
  if(!platGroup.length){root.innerHTML='<div class="empty" style="padding:60px 0">이 플랫폼의 발급 캐시백이 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
  var anchor=(focusNk?platGroup.filter(function(g){return _nk(g.p.name)===focusNk;})[0]:null)||platGroup[0];
  var aIss=(anchor.p.issuer||''),aR=anchor.e.reward_won;
- var group=platGroup.filter(function(g){return (g.p.issuer||'')===aIss && g.e.reward_won===aR;}).sort(function(a,b){return (a.p.name||'').localeCompare(b.p.name||'','ko');});
+ // 리워드 그룹 = collector가 부여한 reward_group(월·플랫폼·카드사·조건) 우선, 없으면 동일 키로 파생
+ function _rgk(g){return g.e.reward_group||(P+'|'+(g.p.issuer||'')+'|'+g.e.reward_won);}
+ var aKey=_rgk(anchor);
+ var group=platGroup.filter(function(g){return _rgk(g)===aKey;}).sort(function(a,b){return (a.p.name||'').localeCompare(b.p.name||'','ko');});
  var focusIdx=0;for(var gi=0;gi<group.length;gi++){if(group[gi]===anchor){focusIdx=gi;break;}}
  var col=PBC[P]||'#888',pnm=PNM[P]||P;
  Promise.all(months.map(function(m){return m===_cm?Promise.resolve(null):fetch('history/'+m+'.json').then(function(r){return r.json();}).catch(function(){return null;});})).then(function(MS){
   var head='<div class="rg-head"><div><div class="rg-pchip"><i style="background:'+col+'"></i><b>'+pnm+'</b><span class="mono">플랫폼</span></div>'
    +'<h1 class="rg-h">이번달 발급 캐시백</h1>'
-   +'<p class="rg-sub">'+(group.length>1?(pnm+'에서 <b>'+aIss+'</b> · 같은 조건(최대 '+_wm(aR)+')으로 받는 발급 캐시백이에요. <b>'+group.length+'개 카드</b>가 들어 있어요.'):(pnm+'에서 <b>'+anchor.p.name+'</b>를 발급하면 받는 캐시백이에요.'))+'</p>'
+   +'<p class="rg-hsub">'+(group.length>1?('<b>'+aIss+'</b> · 같은 조건(최대 '+_wm(aR)+') 발급 캐시백 · <b>'+group.length+'개 카드</b>'):('<b>'+anchor.p.name+'</b> 발급 캐시백'))+'</p>'
    +'<a class="rg-cta" id="rgHeadCta" href="#" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div>'
    +'<div class="rg-deco"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div></div>';
   var listRows=group.map(function(g,i){var p=g.p,e=g.e;var pc=PLATEC[i%6];var ink=(pc.indexOf('navy')>=0)?'#fff':'#000';

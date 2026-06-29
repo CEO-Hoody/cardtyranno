@@ -221,7 +221,21 @@ def export_json(con):
     out=_merged
     os.makedirs(SITE,exist_ok=True)
     MONTH=current_month_kst()   # KST 기준 'YYYY-MM' — 매달 자동 전환(history/{MONTH}.json 신규 생성)
-    json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"products":out},
+    # ── 리워드 그룹 스키마: 같은 (월·플랫폼·카드사·조건[reward_won]) 발급 캐시백을 하나의 그룹으로 ──
+    # 각 이벤트에 reward_group(=그룹 id) 부여 + 상단 reward_groups 인덱스 노출(다른 화면에서 재사용).
+    _rg={}
+    for p in out:
+        _iss=p.get("issuer") or ""
+        for e in (p.get("events") or []):
+            if not e.get("reward_won"): continue
+            gid="%s|%s|%s|%d"%(MONTH,e["platform"],_iss,int(e["reward_won"] or 0))
+            e["reward_group"]=gid
+            g=_rg.get(gid)
+            if not g:
+                g=_rg[gid]={"month":MONTH,"platform":e["platform"],"issuer":_iss,"reward_won":e["reward_won"],"reward_text":e.get("reward_text"),"cards":[]}
+            g["cards"].append(p["name"])
+    for _gid in _rg: _rg[_gid]["count"]=len(_rg[_gid]["cards"])
+    json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"reward_groups":_rg,"products":out},
               open(os.path.join(SITE,"platform_events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/platform_events.json ({len(out)} products)")
     # ── 발급이벤트 목록(events.json) = platform_events 평탄화(5개 플랫폼·네이버 포함). 구형 build_data 산출물(네이버 0건) 대체 ──
