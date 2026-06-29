@@ -1151,7 +1151,6 @@ ISSUE_BODY=('<style>'
  '<div id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="view-cmp" style="display:none">'
  '<div class="pcmp-hero"><div class="eb">PLATFORM COMPARE · 플랫폼 비교</div><h1>같은 카드, 채널마다<br>다른 캐시백.</h1><p>토스·카드고릴라·아정당·카카오페이·네이버페이·뱅크샐러드의 발급 캐시백을 한 표로 모았어요.</p></div>'
- '<div id="pcmp-spread"></div>'
  '<div class="pcmp-emb"><div><div class="t">카드 ❤ 플랫폼, 최고 궁합 비교</div><div class="s">가장 잘 맞는 발급 플랫폼을 찾아요</div></div><span class="emb"><span class="dh"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span><svg class="ht" viewBox="0 0 24 24"><use href="#ic-heart-f"/></svg><span class="dh r"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span></span></div>'
  '<div class="subnav2"><button data-c="iss" class="on">카드사별 비교</button><button data-c="prod">카드별 비교</button></div>'
  '<div class="ptogwrap"><span class="ptogl">표시 플랫폼 · 2개 이상</span><div class="ptog" id="platToggle"></div></div>'
@@ -1159,8 +1158,6 @@ ISSUE_BODY=('<style>'
  '<div class="cmplegend"><span><i class="lg-t"></i>전체 = 주요 + 부가</span><span><i class="lg-m"></i>주요 = 발급·결제 기본 캐시백</span></div></div>'
  '<div id="cmp-iss"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
  '<div id="cmp-prod" style="display:none"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
- '<div class="pcmp-banners"><a class="pcb-strat" href="content.html"><img src="assets/tip-headers/header-strategy.png" alt="이번 달 발급 전략"><div><div class="mono">티라노TIP</div><div class="t">이번 달 어디서 받는 게 이득일까?</div><div class="d">카드사별 최대 플랫폼과 마감 임박 이벤트를 정리했어요.</div><span class="go">전략 보기 ›</span></div></a>'
- '<a class="pcb-ad" href="cards.html" rel="sponsored nofollow"><div class="mono">광고(AD) · 제휴</div><div><div class="t">해외 수수료 면제 여행카드</div><div class="d">최대 금액 기준, 조건 충족 시</div></div><span class="go">자세히 ›</span></a></div>'
  '</div>'
  '</section></div>')
 ISSUE_JS=r"""
@@ -1296,10 +1293,6 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  PRODALL=TBL;
  // 기준 플랫폼 기본값 = 비표시 셀이 가장 적은(=커버리지 큰) 플랫폼
  (function(){var cnt={};PORD.forEach(function(pk){cnt[pk]=0;});TBL.forEach(function(c){PORD.forEach(function(pk){if(c.o[pk])cnt[pk]++;});});var bp=PORD[0],mx=-1;PORD.forEach(function(pk){if(cnt[pk]>mx){mx=cnt[pk];bp=pk;}});if(mx>0)basis=bp;})();
- // 이 달의 최대 격차(피처카드) — 플랫폼 간 전체 캐시백 max-min 차이가 가장 큰 카드
- (function(){var best=null,gap=-1,bp,wp,mxv,mnv;TBL.forEach(function(c){var ks=PORD.filter(function(pk){return c.o[pk];});if(ks.length<2)return;var mx=Math.max.apply(null,ks.map(function(pk){return c.o[pk].t;})),mn=Math.min.apply(null,ks.map(function(pk){return c.o[pk].t;}));if(mx-mn>gap){gap=mx-mn;best=c;mxv=mx;mnv=mn;bp=ks.reduce(function(a,b){return c.o[b].t>c.o[a].t?b:a;});wp=ks.reduce(function(a,b){return c.o[b].t<c.o[a].t?b:a;});}});
-  var el=document.getElementById('pcmp-spread');if(!el)return;
-  if(best&&gap>0){el.innerHTML='<div class="pcmp-spread"><div><div class="sl">이 달의 최대 격차</div><div class="st">'+best.name+', 채널 따라<br>최대 '+_wm(gap)+' 차이</div><div class="ss">'+PN[bp]+' '+_wm(mxv)+' · '+PN[wp]+' '+_wm(mnv)+'</div></div><div class="splate">'+imgTag(best.img)+'</div></div>';}else{el.innerHTML='';}})();
  function _chipW(w){var s=_wm(w);return s.replace('만원','만').replace('원','');}
  // 모바일 B안: 카드(사)별 미니 막대 슬롯 — 표시 플랫폼 중 상위3 기본, +N곳 더보기로 전체
  function _pbar(href,title,sub,o){var VL=visList();
