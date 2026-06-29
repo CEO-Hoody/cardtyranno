@@ -858,125 +858,111 @@ fetch('data.json').then(r=>r.json()).then(function(j){DATA=j.items;if(Q){var s=d
 
 # ===== CARDS =====
 CARDS_BODY=('<style>'
- '.cf-hero{background:var(--block-cream);border-radius:24px;padding:44px 40px;margin:24px 0 0}'
- '.cf-eb{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:rgba(0,0,0,.55)}'
- '.cf-h{font-weight:340;font-size:46px;letter-spacing:-1.4px;margin:12px 0 0}'
- '.cf-sub{font-weight:400;font-size:16px;color:rgba(0,0,0,.66);margin:12px 0 0}'
- '.cf-filt{margin-top:26px;display:flex;flex-direction:column;gap:13px}'
- '.cf-frow{display:flex;align-items:flex-start;gap:14px}'
- '.cf-fl{font-size:11.5px;font-weight:700;color:rgba(0,0,0,.5);text-transform:uppercase;letter-spacing:.4px;flex:0 0 78px;padding-top:9px}'
- '.cf-chips{display:flex;flex-wrap:wrap;gap:7px;flex:1}'
- '.cf-chips button{font-weight:500;font-size:13.5px;padding:9px 15px;border-radius:50px;border:1px solid var(--hairline);background:var(--surface-soft);color:#000;cursor:pointer;white-space:nowrap}'
- '.cf-chips button.on{background:#000;color:#fff;border-color:#000}'
- '.cf-feew{display:flex;align-items:center;gap:12px;flex:1;padding-top:5px}'
- '.cf-feew input{flex:1;max-width:300px;accent-color:#000}.cf-feel{font-weight:700;font-size:13px;min-width:64px}'
- '.cf-bar{display:flex;align-items:center;justify-content:space-between;margin:26px 0 16px;gap:12px;flex-wrap:wrap}'
- '.cf-cnt{font-weight:500;font-size:14px;color:rgba(0,0,0,.7)}'
- '.cf-sort{display:inline-flex;gap:3px;background:var(--surface-soft);border-radius:50px;padding:3px}'
- '.cf-sort button{border:0;background:transparent;padding:8px 15px;border-radius:50px;font-weight:500;font-size:13px;cursor:pointer;color:#000}'
- '.cf-sort button.on{background:#000;color:#fff}'
- '.cf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}'
- '.cf-card{border:1px solid var(--hairline);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:13px;text-decoration:none;color:#000;position:relative;background:#fff;transition:border-color .15s}'
- '.cf-card:hover{border-color:#000}'
- '.cf-info{display:flex;flex-direction:column;gap:11px;flex:1;min-width:0}'
- '.cf-sortbtn{display:none;align-items:center;gap:6px;border:1px solid var(--hairline);background:var(--surface-soft);color:#000;font-weight:500;font-size:13.5px;padding:9px 15px;border-radius:50px;cursor:pointer}'
- '.cf-scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60}.cf-scrim.open{display:block}'
- '.cf-sheet{position:fixed;left:0;right:0;bottom:0;background:#fff;border-radius:20px 20px 0 0;padding:6px 16px calc(18px + env(safe-area-inset-bottom));z-index:61;transform:translateY(110%);transition:transform .25s}.cf-sheet.open{transform:none}'
- '.cf-sheet-h{font-weight:700;font-size:12px;color:rgba(0,0,0,.5);padding:14px 4px 6px;text-align:center;letter-spacing:.4px}'
- '.cf-sheet button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:15px 6px;font-size:16px;font-weight:500;border-top:1px solid var(--hairline-soft);cursor:pointer;color:#000}.cf-sheet button.on{font-weight:800}'
- '.cf-fav{position:absolute;right:13px;top:13px;width:34px;height:34px;border-radius:50px;background:rgba(255,255,255,.88);display:flex;align-items:center;justify-content:center;color:var(--dim);z-index:2;cursor:pointer}'
- '.cf-fav.on{color:var(--accent-magenta)}.cf-fav svg{width:19px;height:19px}'
- '.cf-plate{width:100%;aspect-ratio:1.586/1;border-radius:10px;overflow:hidden;border:1px solid var(--hairline-soft)}.cf-plate img{width:100%;height:100%;object-fit:cover;display:block}'
- '.cf-nm{font-weight:700;font-size:17.5px;letter-spacing:-.3px;padding-right:30px}'
- '.cf-iss{font-size:12px;color:rgba(0,0,0,.5);margin-top:-4px}'
- '.cf-ev{align-self:flex-start;font-size:11px;font-weight:700;padding:3px 10px;border-radius:50px;background:var(--block-lime);color:#000}'
- '.cf-perks{display:flex;flex-direction:column;gap:6px}'
- '.cf-perk{display:flex;align-items:flex-start;gap:7px;font-size:13px;font-weight:400;line-height:1.35;color:rgba(0,0,0,.82)}'
- '.cf-perk svg{width:15px;height:15px;color:var(--success);flex:0 0 auto;margin-top:2px}'
- '.cf-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:11px;border-top:1px solid var(--hairline-soft)}'
- '.cf-fee2{font-size:12.5px;color:rgba(0,0,0,.6)}'
- '.cf-go{font-weight:540;font-size:13px;padding:9px 16px;border-radius:50px;background:#000;color:#fff}'
- '.cf-empty{text-align:center;padding:64px 0;color:rgba(0,0,0,.5)}.cf-empty svg{width:46px;height:46px;opacity:.25}'
- '@media(max-width:900px){.cf-grid{grid-template-columns:1fr 1fr}}'
- '@media(max-width:600px){.cf-hero{padding:30px 20px}.cf-h{font-size:29px}.cf-grid{grid-template-columns:1fr}.cf-frow{flex-direction:column;gap:6px}.cf-fl{flex-basis:auto;padding-top:0}.cf-chips{flex-wrap:wrap}.cf-chips button{font-size:13px;padding:8px 13px}'
-   '.cf-card{flex-direction:row;align-items:stretch;gap:13px;padding:13px}'
-   '.cf-plate{width:104px;flex:0 0 104px;align-self:flex-start}'
-   '.cf-nm{padding-right:0;font-size:15.5px}.cf-fav{right:11px;top:11px;width:30px;height:30px}.cf-fav svg{width:17px;height:17px}'
-   '.cf-perks .cf-perk:nth-child(n+2){display:none}'
-   '.cf-feew input{max-width:none}.cf-bar{align-items:center}.cf-sort{display:none}.cf-sortbtn{display:inline-flex}}'
+ '.cfx{max-width:880px;margin:0 auto}'
+ '.cfx-top{padding:20px 0 0}.cfx-h{font-weight:330;font-size:30px;letter-spacing:-1.1px;margin:0}.cfx-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
+ '.cfx-search{display:flex;align-items:center;gap:9px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;margin-top:14px}.cfx-search svg{width:17px;height:17px;color:rgba(0,0,0,.45);flex:0 0 auto}.cfx-search input{flex:1;min-width:0;border:0;outline:0;background:0;font-family:inherit;font-size:14px;color:#000}'
+ '.cfx-cats{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:14px 0 0;scrollbar-width:none}.cfx-cats::-webkit-scrollbar{display:none}'
+ '.cfx-cat{flex:0 0 auto;padding:8px 14px;border-radius:50px;border:1px solid var(--line);background:var(--surface-soft);color:rgba(0,0,0,.7);font-weight:540;font-size:12.5px;cursor:pointer;white-space:nowrap;font-family:inherit}.cfx-cat.on{background:#000;color:#fff;border-color:#000}'
+ '.cfx-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0 0;gap:10px}'
+ '.cfx-fbtn{display:inline-flex;align-items:center;gap:6px;font-weight:540;font-size:13px;background:0;border:0;cursor:pointer;font-family:inherit;color:#000}.cfx-fbtn svg{width:15px;height:15px}.cfx-fbtn .n{background:var(--accent-magenta);color:#fff;border-radius:50px;font-size:10px;padding:1px 6px;font-family:var(--font-mono,monospace)}'
+ '.cfx-sortb{display:inline-flex;align-items:center;gap:5px;font-weight:540;font-size:13px;color:rgba(0,0,0,.6);background:0;border:0;cursor:pointer;font-family:inherit}.cfx-sortb svg{width:13px;height:13px}'
+ '.cfx-list{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}'
+ '.cfr{display:flex;gap:13px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:14px 15px;text-decoration:none;color:#000;min-height:44px;background:#fff;min-width:0}'
+ '.cfr-plate{width:62px;flex:0 0 auto;aspect-ratio:1.586/1;border-radius:8px;overflow:hidden;background:var(--surface-soft);box-shadow:0 3px 8px rgba(0,0,0,.12)}.cfr-plate img{width:100%;height:100%;object-fit:cover;display:block}'
+ '.cfr-mid{flex:1;min-width:0}.cfr-iss{font-family:var(--font-mono,monospace);font-size:9px;color:rgba(0,0,0,.45);text-transform:uppercase}.cfr-nm{font-weight:700;font-size:15px;letter-spacing:-.3px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
+ '.cfr-meta{display:flex;align-items:center;gap:7px;margin-top:7px;flex-wrap:wrap}'
+ '.cfr-rank{font-family:var(--font-mono,monospace);font-size:9px;display:inline-flex;align-items:center;gap:3px;color:var(--accent-magenta)}.cfr-rank svg{width:10px;height:10px}'
+ '.cfr-heart{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:50px;background:var(--surface-soft);white-space:nowrap}.cfr-heart svg{width:10px;height:10px;color:#000}.cfr-heart .dot{width:6px;height:6px;border-radius:50%}.cfr-heart .pn{font-weight:540;font-size:10.5px}'
+ '.cfr-right{text-align:right;flex:0 0 auto}.cfr-rl{font-family:var(--font-mono,monospace);font-size:8px;color:rgba(0,0,0,.42)}.cfr-rv{font-weight:700;font-size:19px;letter-spacing:-.5px;white-space:nowrap}'
+ '.cfx-empty{text-align:center;padding:60px 0;color:rgba(0,0,0,.5)}'
+ '.cfx-scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60}.cfx-scrim.open{display:block}'
+ '.cfx-sheet{position:fixed;left:0;right:0;bottom:0;background:#fff;border-radius:20px 20px 0 0;padding:8px 18px calc(20px + env(safe-area-inset-bottom));z-index:61;transform:translateY(110%);transition:transform .25s;max-width:560px;margin:0 auto}.cfx-sheet.open{transform:none}'
+ '.cfx-sheet-h{font-weight:700;font-size:15px;padding:16px 2px 12px}'
+ '.cfx-shsort button{display:block;width:100%;text-align:left;border:0;background:0;padding:15px 4px;font-size:16px;font-weight:500;border-top:1px solid var(--hairline-soft);cursor:pointer;color:#000;font-family:inherit}.cfx-shsort button.on{font-weight:800}'
+ '.cfx-fl{font-weight:700;font-size:11.5px;color:rgba(0,0,0,.5);text-transform:uppercase;letter-spacing:.4px;margin:14px 0 9px}'
+ '.cfx-chips{display:flex;flex-wrap:wrap;gap:7px}.cfx-chips button{font-weight:500;font-size:13px;padding:8px 13px;border-radius:50px;border:1px solid var(--line);background:var(--surface-soft);color:#000;cursor:pointer;font-family:inherit}.cfx-chips button.on{background:#000;color:#fff;border-color:#000}'
+ '.cfx-feew{display:flex;align-items:center;gap:12px;margin-top:4px}.cfx-feew input{flex:1;accent-color:#000}.cfx-feel{font-weight:700;font-size:13px;min-width:80px;text-align:right}'
+ '.cfx-apply{width:100%;margin-top:18px;padding:14px;border-radius:14px;background:#000;color:#fff;font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:inherit}'
+ '@media(min-width:761px){.cfx-h{font-size:34px}.cfx-list{grid-template-columns:1fr 1fr;gap:12px}.cfx-cats{flex-wrap:wrap;overflow:visible}}'
  '</style>'
- '<div class="wrap">'
- '<div class="cf-hero"><div class="cf-eb">FIND A CARD</div><h1 class="cf-h">혜택부터 골라보세요.</h1>'
- '<p class="cf-sub">혜택과 업종을 고르면 리워드 순으로 카드를 정렬해드려요.</p></div>'
- '<div class="cf-filt">'
-   '<div class="cf-frow"><span class="cf-fl">혜택</span><div class="cf-chips" id="cfBtype"></div></div>'
-   '<div class="cf-frow"><span class="cf-fl">업종</span><div class="cf-chips" id="cfCat"></div></div>'
-   '<div class="cf-frow"><span class="cf-fl">카드사</span><div class="cf-chips" id="cfIss"></div></div>'
-   '<div class="cf-frow"><span class="cf-fl">이번달 이벤트</span><div class="cf-chips" id="cfEv"></div></div>'
-   '<div class="cf-frow"><span class="cf-fl">연회비</span><div class="cf-feew"><input type="range" id="cfFee" min="0" max="100000" step="5000" value="100000"><span class="cf-feel" id="cfFeeL">무제한</span></div></div>'
- '</div>'
- '<div class="cf-bar"><div class="cf-cnt" id="cfCnt"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div>'
-   '<div class="cf-sort" id="cfSort"><button data-s="reward" class="on">리워드순</button><button data-s="pop">인기순</button><button data-s="fee">연회비순</button></div>'
-   '<button class="cf-sortbtn" id="cfSortBtn">리워드순 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button></div>'
- '<div class="cf-scrim" id="cfScrim"></div>'
- '<div class="cf-sheet" id="cfSheet"><div class="cf-sheet-h">정렬</div><button data-s="reward" class="on">리워드순</button><button data-s="pop">인기순</button><button data-s="fee">연회비순</button></div>'
- '<div class="cf-grid" id="list"></div>'
- '<div class="cf-empty" id="cfEmpty" style="display:none"><svg><use href="#ic-grid"/></svg><div style="margin-top:10px">조건에 맞는 카드가 없어요.</div></div>'
- '</div>')
+ '<div class="wrap"><div class="cfx">'
+ '<div class="cfx-top"><h1 class="cfx-h">카드찾기</h1><p class="cfx-sub">조건을 고르면, 받을 수 있는 카드를 캐시백 순으로.</p></div>'
+ '<div class="cfx-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M19.5 19.5l-4.7-4.7"/></svg><input id="cfQ" type="search" placeholder="카드명·혜택으로 검색" autocomplete="off"></div>'
+ '<div class="cfx-cats" id="cfCats"></div>'
+ '<div class="cfx-bar"><button class="cfx-fbtn" id="cfFiltBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2.2"/><circle cx="8" cy="17" r="2.2"/></svg>연회비·카드사<span class="n" id="cfFiltN" style="display:none"></span></button>'
+ '<button class="cfx-sortb" id="cfSortBtn">최고 캐시백순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></div>'
+ '<div class="cfx-list" id="list"><div class="cfx-empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+ '<div class="cfx-empty" id="cfEmpty" style="display:none">조건에 맞는 카드가 없어요.</div>'
+ '<div class="cfx-scrim" id="cfScrim"></div>'
+ '<div class="cfx-sheet" id="cfSortSheet"><div class="cfx-sheet-h">정렬</div><div class="cfx-shsort"><button data-s="cash" class="on">최고 캐시백순</button><button data-s="rank">티라노 순위순</button><button data-s="fee">연회비 낮은순</button></div></div>'
+ '<div class="cfx-sheet" id="cfFiltSheet"><div class="cfx-sheet-h">연회비 · 카드사</div>'
+ '<div class="cfx-fl">카드사</div><div class="cfx-chips" id="cfIss"></div>'
+ '<div class="cfx-fl">연회비</div><div class="cfx-feew"><input type="range" id="cfFee" min="0" max="100000" step="5000" value="100000"><span class="cfx-feel" id="cfFeeL">무제한</span></div>'
+ '<button class="cfx-apply" id="cfApply">적용하기</button></div>'
+ '</div></div>')
 CARDS_JS=r"""
-var ALL=[],EVN={},EVMX={},PEIMG={},st={btype:'전체',cat:'전체',iss:'전체',ev:'전체',fee:100000,sort:'reward'};
+var PKO={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
+var PCO={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
+var PORDK=['toss','cardgorilla','banksalad','ajungdang','naver','kakaopay'];
+var ALL=[],st={cat:'전체',iss:'전체',fee:100000,sort:'cash',q:''};
+var CATS=['전체','여행','쇼핑','교통','구독','생활요금'];
+var CATKW={'여행':['여행','항공','해외','면세','라운지','마일','트래블','호텔'],'쇼핑':['쇼핑','백화점','온라인','아울렛','쿠팡','11번가','마트','편의점','다이닝','외식','적립'],'교통':['교통','대중교통','버스','지하철','하이패스','주유','충전','자동차','대중'],'구독':['구독','멤버십','스트리밍','넷플','유튜브','ott','영화','문화','카페','커피'],'생활요금':['통신','공과금','관리비','자동이체','렌탈','요금','공공','생활']};
 function _nkc(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
 function _feeNum(s){s=(''+s);var m=s.match(/([0-9.]+)\s*만/);if(m)return Math.round(parseFloat(m[1])*10000);m=s.replace(/[, ]/g,'').match(/([0-9]{4,})/);return m?parseInt(m[1]):0;}
+function wman(v){if(v==null||v===0)return '0';var m=v/10000;return (m>=10?Math.round(m):Math.round(m*10)/10)+'만원';}
 function _wm(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
-var CHK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 6.8"/></svg>';
-var BTYPES=['전체','할인','적립'];
-var CATS=['전체','식음료','쇼핑','주유','통신','여행','마트','카페','문화','구독','자동차','병원'];
-var CATKW={'식음료':['외식','식당','음식','배달','맛집','다이닝'],'쇼핑':['쇼핑','백화점','온라인','아울렛','쿠팡','11번가'],'주유':['주유','충전','lpg','전기차','정유'],'통신':['통신','휴대폰','요금'],'여행':['여행','항공','해외','면세','라운지','마일','트래블','호텔'],'마트':['마트','편의점','대형마트','이마트','홈플러스'],'카페':['카페','커피','스타벅스','투썸'],'문화':['영화','문화','도서','ott','스트리밍','공연'],'구독':['구독','멤버십','스트리밍','넷플','유튜브'],'자동차':['자동차','차량','하이패스','정비','렌터카'],'병원':['병원','의료','약국','헬스','피트니스']};
-function btypeOf(b,hasEv){var r=[];if(/적립|캐시백|포인트|마일/.test(b))r.push('적립');if(/할인/.test(b))r.push('할인');if(!r.length)r.push('할인');return r;}
 function catsOf(b){var lb=(b||'').toLowerCase(),r=[];for(var c in CATKW){if(CATKW[c].some(function(k){return lb.indexOf(k)>=0;}))r.push(c);}return r;}
-function perksOf(b){var a=(b||'').split(/[·,\/・\n]+/).map(function(x){return x.trim();}).filter(Boolean);return a.length?a.slice(0,3):[b];}
-function chips(id,arr,key){var el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(function(x){return '<button data-v="'+x+'"'+(st[key]===x?' class="on"':'')+'>'+x+'</button>';}).join('');
- el.querySelectorAll('button').forEach(function(b){b.onclick=function(){st[key]=b.dataset.v;el.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');render();};});}
+function bestPlat(pl){var bk=null,bv=-1;PORDK.forEach(function(k){var v=(pl||{})[k];if(v!=null&&v>bv){bv=v;bk=k;}});return {key:bk,val:bv};}
+var STAR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l2.4 5 5.4.7-3.9 3.7 1 5.4-4.9-2.7-4.9 2.7 1-5.4L4.2 9.7 9.6 9z"/></svg>';
+var HRT='<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg>';
 function pass(c){
- if(st.btype!=='전체'&&c.btype.indexOf(st.btype)<0)return false;
  if(st.cat!=='전체'&&c.cats.indexOf(st.cat)<0)return false;
  if(st.iss!=='전체'&&c.issuer!==st.iss)return false;
- if(st.ev==='있음'&&!c.ev)return false; if(st.ev==='없음'&&c.ev)return false;
  if(st.fee<100000&&c.feeN>st.fee)return false;
+ if(st.q){var q=st.q.toLowerCase();if((c.name+' '+c.issuer+' '+c.benefit).toLowerCase().indexOf(q)<0)return false;}
  return true;}
 function render(){
  var rows=ALL.filter(pass);
- rows.sort(function(a,b){if(st.sort==='fee')return a.feeN-b.feeN;if(st.sort==='pop')return b.pop-a.pop;return (b.reward-a.reward)||(b.ev-a.ev);});
- document.getElementById('cfCnt').textContent=rows.length+'개 카드'+(st.iss!=='전체'?' · '+st.iss:'')+(st.cat!=='전체'?' · '+st.cat:'')+(st.btype!=='전체'?' · '+st.btype:'');
- document.getElementById('cfEmpty').style.display=rows.length?'none':'block';
- document.getElementById('list').innerHTML=rows.map(function(c){
-  var fav='<span class="cf-fav'+(isFav(c.id)?' on':'')+'" onclick="event.preventDefault();event.stopPropagation();favClick(this,'+c.id+')">'+favSvg(isFav(c.id))+'</span>';
-  var perks=c.perks.map(function(p){return '<div class="cf-perk">'+CHK+'<span>'+p+'</span></div>';}).join('');
-  var ev=c.ev?'<span class="cf-ev">발급 이벤트'+(c.ev>1?' '+c.ev+'곳':'')+'</span>':'';
-  return '<a class="cf-card" href="carddetail.html?id='+c.id+'">'+fav+'<div class="cf-plate">'+imgTag(c.img)+'</div><div class="cf-info"><div class="cf-nm">'+c.name+'</div><div class="cf-iss">'+c.issuer+'</div>'+ev+'<div class="cf-perks">'+perks+'</div><div class="cf-foot"><span class="cf-fee2">'+(c.fee?'연회비 '+c.fee:'연회비 정보 없음')+'</span><span class="cf-go">자세히</span></div></div></a>';
+ rows.sort(function(a,b){if(st.sort==='fee')return a.feeN-b.feeN;if(st.sort==='rank')return a.rankN-b.rankN;return (b.cash-a.cash)||(a.rankN-b.rankN);});
+ var L=document.getElementById('list'),E=document.getElementById('cfEmpty');
+ if(!rows.length){L.innerHTML='';E.style.display='block';return;}E.style.display='none';
+ L.innerHTML=rows.map(function(c){
+  var rank=c.rankN<9999?'<span class="cfr-rank">'+STAR+'티라노 '+c.rankN+'위</span>':'';
+  var heart=c.pkey?'<span class="cfr-heart">'+HRT+'<span class="dot" style="background:'+c.pColor+'"></span><span class="pn">'+c.platform+'</span></span>':'';
+  return '<a class="cfr" href="carddetail.html?id='+c.id+'"><div class="cfr-plate">'+imgTag(c.img)+'</div>'
+   +'<div class="cfr-mid"><div class="cfr-iss">'+c.issuer+'</div><div class="cfr-nm">'+c.name+'</div><div class="cfr-meta">'+rank+heart+'</div></div>'
+   +'<div class="cfr-right"><div class="cfr-rl">최대 캐시백</div><div class="cfr-rv">'+(c.cash?wman(c.cash):'–')+'</div></div></a>';
  }).join('');
  if(window.repairImages)repairImages();
 }
-Promise.all([fetch('cards.json').then(function(r){return r.json();}),fetch('platform_events.json?t='+Date.now()).then(function(r){return r.json();}).catch(function(){return{products:[]};})]).then(function(A){
- var cj=A[0].cards||{},ord=A[0].order||[];
- (A[1].products||[]).forEach(function(p){var n=_nkc(p.name);var evs=(p.events||[]).filter(function(e){return e.reward_won;});EVN[n]=new Set(evs.map(function(e){return e.platform;})).size;var mx=0;evs.forEach(function(e){if(e.reward_won>mx)mx=e.reward_won;});EVMX[n]=mx;if(p.img)PEIMG[n]=p.img;});
- ord.forEach(function(iss){(cj[iss]||[]).forEach(function(c,i){var n=_nkc(c.name);var ev=EVN[n]||0;var rk=(c.rank&&c.rank!=='None')?parseInt(c.rank):9999;
-   ALL.push({id:c.id,name:c.name,issuer:iss,img:c.img||PEIMG[n],benefit:c.benefit||'',fee:c.fee||'',feeN:_feeNum(c.fee),reward:Math.round((EVMX[n]||0)/10000),pop:-(isNaN(rk)?9999:rk)-i*0.001,ev:ev,btype:btypeOf(c.benefit||'',ev>0),cats:catsOf(c.benefit||''),perks:perksOf(c.benefit||'')});});});
- var availCats=['전체'].concat(CATS.slice(1).filter(function(c){return ALL.some(function(x){return x.cats.indexOf(c)>=0;});}));   // 대상 상품 있는 업종만
+function chips(id,arr,key,cls){var el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(function(x){return '<button class="'+cls+(st[key]===x?' on':'')+'" data-v="'+x+'">'+x+'</button>';}).join('');
+ el.querySelectorAll('button').forEach(function(b){b.onclick=function(){st[key]=b.dataset.v;el.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');if(key!=='iss')render();};});}
+fetch('cards.json').then(function(r){return r.json();}).then(function(cj){
+ var ord=cj.order||Object.keys(cj.cards||{});
+ return fetch('history/index.json').then(function(r){return r.json();}).then(function(idx){var ms=(idx.months||[]);var m=ms.length?ms[ms.length-1]:'2026-06';return fetch('history/'+m+'.json').then(function(r){return r.json();});}).catch(function(){return {cards:[]};}).then(function(hist){
+  var H={};((hist.cards)||[]).forEach(function(hc){H[_nkc(hc.name)]=hc;});
+  ord.forEach(function(iss){(cj.cards[iss]||[]).forEach(function(c){var n=_nkc(c.name);var h=H[n]||{};var bp=bestPlat(h.platforms);var rk=parseInt(c.rank);
+    ALL.push({id:c.id,name:c.name,issuer:iss,img:c.img,benefit:c.benefit||'',fee:c.fee||'',feeN:_feeNum(c.fee),cats:catsOf(c.benefit||''),rankN:(c.rank&&!isNaN(rk))?rk:9999,cash:h.max||0,pkey:bp.key,platform:PKO[bp.key]||'',pColor:PCO[bp.key]||'#888'});});});
+  initUI(ord);render();
+ });
+}).catch(function(){var L=document.getElementById('list');if(L)L.innerHTML='<div class="cfx-empty">데이터를 불러오지 못했어요.</div>';});
+function initUI(ord){
+ chips('cfCats',CATS,'cat','cfx-cat');
  var availIss=['전체'].concat(ord.filter(function(o){return ALL.some(function(x){return x.issuer===o;});}));
- chips('cfBtype',BTYPES,'btype');chips('cfCat',availCats,'cat');chips('cfIss',availIss,'iss');chips('cfEv',['전체','있음','없음'],'ev');
+ chips('cfIss',availIss,'iss','');
+ var q=document.getElementById('cfQ');q.oninput=function(){st.q=q.value.trim();render();};
+ var scrim=document.getElementById('cfScrim'),sortSheet=document.getElementById('cfSortSheet'),filtSheet=document.getElementById('cfFiltSheet');
+ function close(){scrim.classList.remove('open');sortSheet.classList.remove('open');filtSheet.classList.remove('open');}
+ document.getElementById('cfSortBtn').onclick=function(){scrim.classList.add('open');sortSheet.classList.add('open');};
+ document.getElementById('cfFiltBtn').onclick=function(){scrim.classList.add('open');filtSheet.classList.add('open');};
+ scrim.onclick=close;
+ var SL={cash:'최고 캐시백순',rank:'티라노 순위순',fee:'연회비 낮은순'};
+ sortSheet.querySelectorAll('button').forEach(function(b){b.onclick=function(){st.sort=b.dataset.s;sortSheet.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});document.getElementById('cfSortBtn').firstChild.textContent=SL[b.dataset.s]+' ';render();close();};});
  var fr=document.getElementById('cfFee'),fl=document.getElementById('cfFeeL');
- fr.oninput=function(){st.fee=parseInt(fr.value);fl.textContent=(st.fee>=100000?'무제한':_wm(st.fee)+' 이하');render();};
- var SLABEL={reward:'리워드순',pop:'인기순',fee:'연회비순'};
- function setSort(v){st.sort=v;document.querySelectorAll('#cfSort button,#cfSheet button').forEach(function(x){x.classList.toggle('on',x.dataset.s===v);});var sb=document.getElementById('cfSortBtn');if(sb)sb.firstChild.textContent=SLABEL[v]+' ';render();}
- document.getElementById('cfSort').querySelectorAll('button').forEach(function(b){b.onclick=function(){setSort(b.dataset.s);};});
- var sheet=document.getElementById('cfSheet'),scrim=document.getElementById('cfScrim');
- function closeSheet(){sheet.classList.remove('open');scrim.classList.remove('open');}
- document.getElementById('cfSortBtn').onclick=function(){sheet.classList.add('open');scrim.classList.add('open');};
- scrim.onclick=closeSheet;
- sheet.querySelectorAll('button').forEach(function(b){b.onclick=function(){setSort(b.dataset.s);closeSheet();};});
- render();
-}).catch(function(){document.getElementById('cfCnt').textContent='데이터를 불러오지 못했어요.';});
+ fr.oninput=function(){st.fee=parseInt(fr.value);fl.textContent=(st.fee>=100000?'무제한':_wm(st.fee)+' 이하');};
+ document.getElementById('cfApply').onclick=function(){updFiltN();render();close();};
+}
+function updFiltN(){var n=0;if(st.iss!=='전체')n++;if(st.fee<100000)n++;var el=document.getElementById('cfFiltN');if(!el)return;if(n){el.textContent=n;el.style.display='';}else el.style.display='none';}
 """
 
 # ===== ISSUE =====
