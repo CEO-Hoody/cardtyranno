@@ -1,6 +1,230 @@
 {
- "_comment": "카드사 자체 이벤트 거주지 수집 결과. collect_issuer_local.py(로컬 맥)가 채웁니다. 비어있으면 collector가 주입을 스킵합니다(정상).",
  "as_of": "2026-06",
  "source": "issuer_local",
- "cards": {}
+ "cards": {
+  "현대카드 M": {
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "main_won": 600000,
+   "bonus_won": 0,
+   "reward_text": "최대 60만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord="
+  },
+  "현대카드 Summit": {
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "main_won": 500000,
+   "bonus_won": 0,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc"
+  },
+  "현대카드 MX Black Edition2": {
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "main_won": 500000,
+   "bonus_won": 0,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc"
+  },
+  "the Pink Edition2": {
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "main_won": 500000,
+   "bonus_won": 0,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc"
+  },
+  "the Green Edition3": {
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "main_won": 500000,
+   "bonus_won": 0,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc"
+  },
+  "현대카드 X Cut": {
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "main_won": 500000,
+   "bonus_won": 0,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc"
+  },
+  "현대카드D": {
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "main_won": 600000,
+   "bonus_won": 0,
+   "reward_text": "최대 60만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord="
+  },
+  "현대카드S": {
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "main_won": 600000,
+   "bonus_won": 0,
+   "reward_text": "최대 60만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord="
+  },
+  "the Orange": {
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "main_won": 600000,
+   "bonus_won": 0,
+   "reward_text": "최대 60만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord="
+  },
+  "에너지플러스 현대카드": {
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "main_won": 600000,
+   "bonus_won": 0,
+   "reward_text": "최대 60만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord="
+  },
+  "American Express® Green Card Edition2": {
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "main_won": 100000,
+   "bonus_won": 400000,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=Z22888&amp;searchWord="
+  },
+  "American Express® Gold Card Edition2": {
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "main_won": 100000,
+   "bonus_won": 400000,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=Z22888&amp;searchWord="
+  },
+  "현대카드 ZERO Up(할인형)": {
+   "issuer": "현대카드",
+   "reward_won": 60000,
+   "main_won": 60000,
+   "bonus_won": 0,
+   "reward_text": "최대 6만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=92H973&amp;searchWord="
+  },
+  "현대카드 ZERO Up(포인트형)": {
+   "issuer": "현대카드",
+   "reward_won": 60000,
+   "main_won": 60000,
+   "bonus_won": 0,
+   "reward_text": "최대 6만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=92H973&amp;searchWord="
+  },
+  "대한항공카드 300": {
+   "issuer": "현대카드",
+   "reward_won": 240000,
+   "main_won": 240000,
+   "bonus_won": 0,
+   "reward_text": "최대 24만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=O4P983&amp;searchWord="
+  },
+  "대한항공카드 the First Edition2": {
+   "issuer": "현대카드",
+   "reward_won": 240000,
+   "main_won": 240000,
+   "bonus_won": 0,
+   "reward_text": "최대 24만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=O4P983&amp;searchWord="
+  },
+  "대한항공카드 060": {
+   "issuer": "현대카드",
+   "reward_won": 240000,
+   "main_won": 240000,
+   "bonus_won": 0,
+   "reward_text": "최대 24만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=50U984&amp;searchWord="
+  },
+  "대한항공카드 120": {
+   "issuer": "현대카드",
+   "reward_won": 240000,
+   "main_won": 240000,
+   "bonus_won": 0,
+   "reward_text": "최대 24만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=50U984&amp;searchWord="
+  },
+  "현대카드H": {
+   "issuer": "현대카드",
+   "reward_won": 280000,
+   "main_won": 280000,
+   "bonus_won": 0,
+   "reward_text": "최대 28만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord="
+  },
+  "현대카드O": {
+   "issuer": "현대카드",
+   "reward_won": 280000,
+   "main_won": 280000,
+   "bonus_won": 0,
+   "reward_text": "최대 28만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord="
+  },
+  "현대카드T": {
+   "issuer": "현대카드",
+   "reward_won": 280000,
+   "main_won": 280000,
+   "bonus_won": 0,
+   "reward_text": "최대 28만원 (현대카드 발급 이벤트)",
+   "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord="
+  },
+  "LOCA LIKIT": {
+   "issuer": "롯데카드",
+   "reward_won": 490000,
+   "main_won": 490000,
+   "bonus_won": 0,
+   "reward_text": "최대 49만원 (롯데카드 발급 이벤트)",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc"
+  },
+  "LOCA 365 카드": {
+   "issuer": "롯데카드",
+   "reward_won": 490000,
+   "main_won": 490000,
+   "bonus_won": 0,
+   "reward_text": "최대 49만원 (롯데카드 발급 이벤트)",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc"
+  },
+  "디지로카 London": {
+   "issuer": "롯데카드",
+   "reward_won": 490000,
+   "main_won": 490000,
+   "bonus_won": 0,
+   "reward_text": "최대 49만원 (롯데카드 발급 이벤트)",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc"
+  },
+  "LOCA LIKIT 1.5": {
+   "issuer": "롯데카드",
+   "reward_won": 490000,
+   "main_won": 490000,
+   "bonus_won": 0,
+   "reward_text": "최대 49만원 (롯데카드 발급 이벤트)",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc"
+  },
+  "LOCA LIKIT 2.0": {
+   "issuer": "롯데카드",
+   "reward_won": 490000,
+   "main_won": 490000,
+   "bonus_won": 0,
+   "reward_text": "최대 49만원 (롯데카드 발급 이벤트)",
+   "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc"
+  },
+  "카드의정석 2": {
+   "issuer": "우리카드",
+   "reward_won": 240000,
+   "main_won": 240000,
+   "bonus_won": 0,
+   "reward_text": "최대 24만원 (우리카드 발급 이벤트)",
+   "url": "https://pc.wooricard.com/dcpc/yh1/bnf/bnf02/prgevnt/H1BNF202S00.do"
+  },
+  "하나 나라사랑카드": {
+   "issuer": "하나카드",
+   "reward_won": 20000,
+   "main_won": 20000,
+   "bonus_won": 0,
+   "reward_text": "최대 2만원 (하나카드 발급 이벤트)",
+   "url": "https://www.hanacard.co.kr/OPP99999998N.web?Code=moevent"
+  }
+ }
 }
