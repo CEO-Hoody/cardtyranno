@@ -1511,7 +1511,7 @@ EVENTDETAIL_BODY=('<style>'
  '.rg-h{font-weight:340;font-size:38px;line-height:1.02;letter-spacing:-1.2px;margin:14px 0 0}'
  '.rg-hsub{font-weight:400;font-size:15px;color:rgba(0,0,0,.62);margin:10px 0 0;word-break:keep-all}.rg-hsub b{font-weight:700}'
  '.rg-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;margin-top:18px}.rg-cta svg{width:17px;height:17px}'
- '.rg-deco{width:200px;height:160px;flex-shrink:0;background:var(--block-lime);border-radius:20px;display:flex;align-items:center;justify-content:center;overflow:hidden}.rg-deco svg{width:96px;height:80px;color:#33402a;opacity:.9}'
+ '.rg-deco{width:210px;flex-shrink:0;display:flex;align-items:center;justify-content:center}.rg-deco svg{width:100%;height:auto;display:block;overflow:visible}'
  '.rg-sec{margin-top:30px}'
  '.rg-sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}'
  '.rg-eb{font-family:var(--font-mono,monospace);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:rgba(0,0,0,.5)}'
@@ -1551,13 +1551,14 @@ EVENTDETAIL_BODY=('<style>'
  '.rg-foot{font-size:12px;color:rgba(0,0,0,.45);margin:28px 0 10px;line-height:1.6}.rg-foot b{font-weight:600;color:rgba(0,0,0,.6)}'
  '.rg-float{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--hairline);padding:12px 0}.rg-float .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}.rg-float .lab{font-size:14px;font-weight:540;color:rgba(0,0,0,.62)}.rg-float .lab b{color:#000;font-weight:700}.rg-float .go{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;white-space:nowrap}.rg-float .go svg{width:16px;height:16px}'
  # 모바일 시안: 헤더는 텍스트 좌 + 작은 일러스트 우(나란히), 인-헤더 CTA 숨김(하단 플로팅만), 헤드라인 축소
- '@media(max-width:680px){.rg-head{gap:12px}.rg-deco{width:92px;height:74px}.rg-deco svg{width:54px;height:46px}.rg-h{font-size:23px;margin-top:10px}.rg-pchip{padding:6px 13px 6px 9px}.rg-pchip b{font-size:19px}.rg-pchip i{width:11px;height:11px}.rg-hsub{font-size:12px;margin-top:7px}.rg-cta{display:none}.rg-prow{grid-template-columns:auto 1fr auto;gap:12px}.rg-parr{display:none}.rg-chart{padding:18px}.rg-bars{height:130px;gap:10px}.rg-subs{grid-template-columns:1fr}.rg-coach{grid-template-columns:1fr;gap:14px;text-align:center}.rg-coach-leg{justify-content:center}.rg-float .lab{display:none}.rg-float .go{flex:1;justify-content:center}.mtab{display:none}}'
+ '@media(max-width:680px){.rg-head{gap:12px}.rg-deco{width:104px}.rg-h{font-size:23px;margin-top:10px}.rg-pchip{padding:6px 13px 6px 9px}.rg-pchip b{font-size:19px}.rg-pchip i{width:11px;height:11px}.rg-hsub{font-size:12px;margin-top:7px}.rg-cta{display:none}.rg-prow{grid-template-columns:auto 1fr auto;gap:12px}.rg-parr{display:none}.rg-chart{padding:18px}.rg-bars{height:130px;gap:10px}.rg-subs{grid-template-columns:1fr}.rg-coach{grid-template-columns:1fr;gap:14px;text-align:center}.rg-coach-leg{justify-content:center}.rg-float .lab{display:none}.rg-float .go{flex:1;justify-content:center}.mtab{display:none}}'
  '@media(prefers-reduced-motion:reduce){.rg-bar,.rg-curbar{transition:none}}'
  '</style>'
  '<div class="rg-wrap"><a class="rg-back" href="issue.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>이번달 캐시백으로</a>'
  '<div id="edroot"><div class="empty" style="padding:60px 0"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="rgFloat"></div>')
 EVENTDETAIL_JS=r"""
+var EGG='<svg viewBox="0 0 250 210" aria-hidden="true"><ellipse cx="128" cy="174" rx="104" ry="26" fill="#e7d9b6"/><ellipse cx="128" cy="170" rx="96" ry="22" fill="#f1e6c8"/><g stroke="rgba(0,0,0,.22)" stroke-width="1.6"><ellipse cx="70" cy="150" rx="15" ry="20" fill="#fbf6ea" transform="rotate(-14 70 150)"/><ellipse cx="186" cy="150" rx="15" ry="20" fill="#fbf6ea" transform="rotate(14 186 150)"/><ellipse cx="103" cy="142" rx="15" ry="20" fill="#fff9ee" transform="rotate(-7 103 142)"/><ellipse cx="153" cy="142" rx="15" ry="20" fill="#fff9ee" transform="rotate(7 153 142)"/></g><g transform="translate(64,8) scale(5)" fill="#1f1d3d"><path d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill-rule="evenodd" d="M15.8 4.6 h2.6 a2.6 2.6 0 0 1 2.6 2.6 v1.7 a2.6 2.6 0 0 1 -2.6 2.6 h-2.6 a2.6 2.6 0 0 1 -2.6 -2.6 v-1.7 a2.6 2.6 0 0 1 2.6 -2.6 z M17.75 7.4 a0.85 0.85 0 1 0 1.7 0 a0.85 0.85 0 1 0 -1.7 0 z M18.4 9.5 h2.6 v1 h-2.6 z"/></g><g stroke="rgba(0,0,0,.24)" stroke-width="1.6"><ellipse cx="92" cy="166" rx="16" ry="21" fill="#ffffff" transform="rotate(-9 92 166)"/><ellipse cx="128" cy="170" rx="17" ry="22" fill="#fffdf7" transform="rotate(2 128 170)"/><ellipse cx="164" cy="166" rx="16" ry="21" fill="#ffffff" transform="rotate(11 164 166)"/></g></svg>';
 var PBC={cardgorilla:'#FF6A13',banksalad:'#19C37D',toss:'#3182F6',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
 var PNM={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
 var PLATEC=['var(--block-lilac)','var(--block-coral)','var(--block-mint)','var(--block-cream)','var(--block-navy)','var(--block-lime)'];
@@ -1601,7 +1602,7 @@ Promise.all([
    +'<h1 class="rg-h">이번달 발급 캐시백</h1>'
    +'<p class="rg-hsub">'+(group.length>1?('<b>'+aIss+'</b> · 같은 조건(최대 '+_wm(aR)+') 발급 캐시백 · <b>'+group.length+'개 카드</b>'):('<b>'+anchor.p.name+'</b> 발급 캐시백'))+'</p>'
    +'<a class="rg-cta" id="rgHeadCta" href="#" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div>'
-   +'<div class="rg-deco"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div></div>';
+   +'<div class="rg-deco">'+EGG+'</div></div>';
   var listRows=group.map(function(g,i){var p=g.p,e=g.e;var pc=PLATEC[i%6];var ink=(pc.indexOf('navy')>=0)?'#fff':'#000';
    return '<button type="button" class="rg-prow'+(i===focusIdx?' sel':'')+'" data-i="'+i+'"><div class="rg-pl">'+imgTag(p.img)+'</div>'
     +'<div><div class="rg-pn"><b>'+p.name+'</b>'+(i===0?'<span class="rg-tag mx">최대</span>':'')+'<span class="rg-tag se" data-sel hidden>선택됨</span></div><div class="rg-pi">'+(p.issuer||'')+'</div></div>'
