@@ -27,12 +27,18 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .util .wrap{display:flex;justify-content:flex-end;gap:18px;height:34px;align-items:center}
 .util a:hover{color:var(--text)}
 .hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hd .row{display:flex;align-items:center;gap:24px;height:64px}
+.hd .row{display:flex;align-items:stretch;gap:22px;min-height:66px}
 .logo{font-size:21px;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:7px}
 .logo .rx{width:23px;height:23px;color:var(--text);display:block;flex:0 0 auto}.logo b{color:var(--text);font-weight:400}
-.gnb{display:flex;gap:22px;font-size:15px;font-weight:700}
-.gnb a{color:#55555e;padding:6px 0;position:relative}.gnb a:hover,.gnb a.on{color:var(--accent)}
-.gnb a.on::after{content:"";position:absolute;left:0;right:0;bottom:-21px;height:3px;background:var(--accent)}
+.gnb{display:flex;gap:20px;align-items:stretch}
+.gnb a{display:flex;flex-direction:column;justify-content:center;gap:3px;color:inherit;position:relative;padding:14px 0}
+.gnb a .nm{font-weight:500;font-size:15px;letter-spacing:-.2px;color:#55555e;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+.gnb a .sub{font-weight:400;font-size:11px;color:rgba(0,0,0,.5);white-space:nowrap}
+.gnb a:hover .nm{color:#000}
+.gnb a.on .nm{color:#000;font-weight:700}
+.gnb a.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#000}
+.gnb a.soon{opacity:.55}
+.gnb .soon-tag{font-family:var(--font-mono,monospace);font-size:8px;font-weight:600;background:var(--surface-soft);color:rgba(0,0,0,.45);padding:2px 6px;border-radius:50px;letter-spacing:0}
 .hd .right{margin-left:auto;display:flex;align-items:center;gap:14px}
 .icbtn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#55555e;border:1px solid var(--line);cursor:pointer}
 .ic{width:20px;height:20px;display:block;flex:0 0 auto}
@@ -210,8 +216,16 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .foot .brand{flex:1;min-width:220px}.foot .brand .lg{font-size:20px;font-weight:900;letter-spacing:-1px}.foot .brand .lg b{color:var(--text);font-weight:400}.foot .brand p{font-size:12px;color:var(--sub);margin-top:12px;line-height:1.7;max-width:400px}
 .legal{border-top:1px solid var(--line);padding:18px 0 40px;font-size:11.5px;color:var(--dim);line-height:1.8}.legal .biz{margin-top:8px}
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.16);opacity:0;visibility:hidden;transition:.2s;z-index:60}.scrim.on{opacity:1;visibility:visible}
-.drawer{position:fixed;top:0;left:0;bottom:0;width:270px;max-width:82%;background:#ffffff;border-right:1px solid var(--line);transform:translateX(-100%);transition:.24s;z-index:61;padding:20px}.drawer.on{transform:translateX(0)}
-.drawer a{display:block;padding:13px 6px;font-size:16px;font-weight:800;border-bottom:1px solid var(--line)}
+.drawer{position:fixed;top:0;left:0;bottom:0;width:320px;max-width:88%;background:#ffffff;border-right:1px solid var(--line);transform:translateX(-100%);transition:.24s;z-index:61;padding:0;overflow-y:auto}.drawer.on{transform:translateX(0)}
+.drawer-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--hairline)}
+.drawer-x{width:34px;height:34px;border-radius:50%;background:var(--surface-soft);border:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text);flex:0 0 auto}.drawer-x svg{width:18px;height:18px}
+.drawer a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;border-bottom:1px solid var(--hairline-soft);color:inherit}
+.drawer a .dn{font-weight:700;font-size:16px;letter-spacing:-.2px;display:inline-flex;align-items:center;gap:6px}
+.drawer a .ds{font-weight:400;font-size:12px;color:rgba(0,0,0,.5);margin-top:2px}
+.drawer a.on .dn{color:var(--accent)}
+.drawer a.soon{opacity:.55}
+.drawer a .dchev{width:18px;height:18px;color:rgba(0,0,0,.3);flex:0 0 auto}
+.drawer .soon-tag{font-family:var(--font-mono,monospace);font-size:8px;font-weight:600;background:var(--surface-soft);color:rgba(0,0,0,.45);padding:2px 6px;border-radius:50px;letter-spacing:0}
 /* 인터랙션: 카드 플레이트·광고배너 호버 */
 .ctile .plate img{transition:transform .18s ease}.ctile:hover .plate img{transform:scale(1.07)}
 .adbanner img{transition:transform .25s ease}.adbanner{transition:box-shadow .18s,transform .18s}.adbanner:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.12)}.adbanner:hover img{transform:scale(1.02)}
@@ -389,6 +403,12 @@ HELPERS = r"""
 (function(){var mt=document.getElementById('mtab');if(!mt)return;var pn=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');var qs=location.search||'';var cur='';
  if(pn==='cards'||pn==='carddetail')cur='cards';else if(pn==='issue')cur=/v=cmp/.test(qs)?'compare':'issue';else if(pn===''||pn==='index')cur='home';
  mt.querySelectorAll('a').forEach(function(a){if(a.dataset.tab===cur)a.classList.add('on');});})();
+// 상단 GNB 활성(서버 active로 구분 안 되는 issue?v=cmp·events 등 보정)
+(function(){var gnb=document.querySelector('.gnb');if(!gnb)return;var pn=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');var qs=location.search||'';var href=null;
+ if(pn==='issue')href=/v=cmp/.test(qs)?'issue.html?v=cmp':'issue.html';
+ else if(pn==='events')href='issue.html';else if(pn==='cards'||pn==='carddetail')href='cards.html';
+ else if(pn==='chart'||pn==='trends')href='chart.html';else if(pn==='content')href='content.html';else if(pn==='community')href='community.html';
+ if(href)gnb.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===href);});})();
 function _purl(plat,id){id=String(id||'').trim();if(!id)return '';return ({cardgorilla:'https://www.card-gorilla.com/card/detail/'+id,banksalad:'https://www.banksalad.com/product/cards/'+id,toss:'https://card-lounge.toss.im/card/'+id,ajungdang:'https://www.ajd.co.kr/card/event/detail/'+id}[plat])||'';}
 function favSvg(f){return '<svg class="ic"><use href="#ic-heart'+(f?'-f':'')+'"/></svg>';}
 function favClick(el,id){var f=toggleFav(id);el.innerHTML=favSvg(f);el.classList.toggle('on',f);if(f){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}if(window._fr)try{window._fr();}catch(e){}}
@@ -445,7 +465,7 @@ function bindTrack(){document.addEventListener('click',function(ev){
  el=t.closest('.item');if(el){track('item',(el.querySelector('.l2')||{}).textContent||el.textContent);return;}
  el=t.closest('.rk,.crow');if(el){track('rank',(el.querySelector('.rn,.cn')||{}).textContent||'');return;}
 },true);}
-function bindUI(){var d=document.getElementById('drawer'),s=document.getElementById('scrim'),m=document.getElementById('menuBtn');if(m)m.onclick=function(){d.classList.add('on');s.classList.add('on');};if(s)s.onclick=function(){d.classList.remove('on');s.classList.remove('on');};
+function bindUI(){var d=document.getElementById('drawer'),s=document.getElementById('scrim'),m=document.getElementById('menuBtn');if(m)m.onclick=function(){d.classList.add('on');s.classList.add('on');};if(s)s.onclick=function(){d.classList.remove('on');s.classList.remove('on');};var dx=document.getElementById('drawerX');if(dx)dx.onclick=function(){d.classList.remove('on');s.classList.remove('on');};
  function go(){var q=(document.getElementById('siteSearch')||{}).value||'';location.href='search.html?q='+encodeURIComponent(q);}
  var f=document.getElementById('siteSearch');if(f)f.addEventListener('keydown',function(e){if(e.key==='Enter')go();});
  ['searchGo','searchGo2'].forEach(function(id){var b=document.getElementById(id);if(b)b.onclick=go;});
@@ -519,12 +539,19 @@ ICONS=('<svg width="0" height="0" style="position:absolute" aria-hidden="true"><
  '</defs></svg>')
 
 def header(active):
-    L=[("cards","cards.html","카드찾기",""),("compare","issue.html?v=cmp","플랫폼 비교","캐시백 가장 많이 주는 사이트를 확인해보세요!"),("issue","issue.html","이번달 캐시백",""),
-       ("charts","chart.html","티라노차트",""),("content","content.html","티라노TIP",""),("community","community.html","커뮤니티","")]
-    gnb="".join('<a href="%s" class="%s"%s>%s</a>'%(u,("on" if k==active else ""),(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
-    drawer="".join('<a href="%s"%s>%s</a>'%(u,(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
+    # 전역 네비게이션(가이드): 순서·명칭 + 메뉴별 서브텍스트. (key,url,name,sub,soon)
+    L=[("compare","issue.html?v=cmp","한눈에 비교","카드·카드사별 캐시백 한 표에서",False),
+       ("issue","issue.html","캐시백","이번 달 플랫폼별 최대 캐시백",False),
+       ("cards","cards.html","카드찾기","조건으로 내 카드 탐색",False),
+       ("charts","chart.html","티라노 차트","캐시백 추이·랭킹 데이터",False),
+       ("content","content.html","티라노 TIP","발급 전략·꿀팁 콘텐츠",False),
+       ("community","community.html","커뮤니티","발급 후기·정보 공유",False),
+       ("about","#","카드티라노란?","서비스 소개",True)]
+    _st='<span class="soon-tag">예정</span>'
+    gnb="".join('<a href="%s" class="%s%s"><span class="nm">%s%s</span><span class="sub">%s</span></a>'%(u,("on" if k==active else ""),(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
+    drawer="".join('<a href="%s" class="%s"><div class="dt"><div class="dn">%s%s</div><div class="ds">%s</div></div><svg class="dchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>'%(u,("on" if k==active else "")+(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
     return (ICONS+'<div class="scrim" id="scrim"></div><aside class="drawer" id="drawer">'
-            '<div class="logo" style="margin-bottom:10px"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div>'+drawer+'</aside>'
+            '<div class="drawer-hd"><div class="logo"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div><button class="drawer-x" id="drawerX" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'+drawer+'</aside>'
             '<div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:contact@cardtyranno.com">제휴·광고 문의</a></div></div>'
             '<header class="hd"><div class="wrap row">'
             '<span class="icbtn menu" id="menuBtn">☰</span>'
