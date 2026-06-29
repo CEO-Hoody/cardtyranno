@@ -27,12 +27,18 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .util .wrap{display:flex;justify-content:flex-end;gap:18px;height:34px;align-items:center}
 .util a:hover{color:var(--text)}
 .hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hd .row{display:flex;align-items:center;gap:24px;height:64px}
+.hd .row{display:flex;align-items:stretch;gap:22px;min-height:66px}
 .logo{font-size:21px;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:7px}
 .logo .rx{width:23px;height:23px;color:var(--text);display:block;flex:0 0 auto}.logo b{color:var(--text);font-weight:400}
-.gnb{display:flex;gap:22px;font-size:15px;font-weight:700}
-.gnb a{color:#55555e;padding:6px 0;position:relative}.gnb a:hover,.gnb a.on{color:var(--accent)}
-.gnb a.on::after{content:"";position:absolute;left:0;right:0;bottom:-21px;height:3px;background:var(--accent)}
+.gnb{display:flex;gap:20px;align-items:stretch}
+.gnb a{display:flex;flex-direction:column;justify-content:center;gap:3px;color:inherit;position:relative;padding:14px 0}
+.gnb a .nm{font-weight:500;font-size:15px;letter-spacing:-.2px;color:#55555e;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+.gnb a .sub{font-weight:400;font-size:11px;color:rgba(0,0,0,.5);white-space:nowrap}
+.gnb a:hover .nm{color:#000}
+.gnb a.on .nm{color:#000;font-weight:700}
+.gnb a.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#000}
+.gnb a.soon{opacity:.55}
+.gnb .soon-tag{font-family:var(--font-mono,monospace);font-size:8px;font-weight:600;background:var(--surface-soft);color:rgba(0,0,0,.45);padding:2px 6px;border-radius:50px;letter-spacing:0}
 .hd .right{margin-left:auto;display:flex;align-items:center;gap:14px}
 .icbtn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#55555e;border:1px solid var(--line);cursor:pointer}
 .ic{width:20px;height:20px;display:block;flex:0 0 auto}
@@ -210,8 +216,16 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .foot .brand{flex:1;min-width:220px}.foot .brand .lg{font-size:20px;font-weight:900;letter-spacing:-1px}.foot .brand .lg b{color:var(--text);font-weight:400}.foot .brand p{font-size:12px;color:var(--sub);margin-top:12px;line-height:1.7;max-width:400px}
 .legal{border-top:1px solid var(--line);padding:18px 0 40px;font-size:11.5px;color:var(--dim);line-height:1.8}.legal .biz{margin-top:8px}
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.16);opacity:0;visibility:hidden;transition:.2s;z-index:60}.scrim.on{opacity:1;visibility:visible}
-.drawer{position:fixed;top:0;left:0;bottom:0;width:270px;max-width:82%;background:#ffffff;border-right:1px solid var(--line);transform:translateX(-100%);transition:.24s;z-index:61;padding:20px}.drawer.on{transform:translateX(0)}
-.drawer a{display:block;padding:13px 6px;font-size:16px;font-weight:800;border-bottom:1px solid var(--line)}
+.drawer{position:fixed;top:0;left:0;bottom:0;width:320px;max-width:88%;background:#ffffff;border-right:1px solid var(--line);transform:translateX(-100%);transition:.24s;z-index:61;padding:0;overflow-y:auto}.drawer.on{transform:translateX(0)}
+.drawer-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--hairline)}
+.drawer-x{width:34px;height:34px;border-radius:50%;background:var(--surface-soft);border:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text);flex:0 0 auto}.drawer-x svg{width:18px;height:18px}
+.drawer a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;border-bottom:1px solid var(--hairline-soft);color:inherit}
+.drawer a .dn{font-weight:700;font-size:16px;letter-spacing:-.2px;display:inline-flex;align-items:center;gap:6px}
+.drawer a .ds{font-weight:400;font-size:12px;color:rgba(0,0,0,.5);margin-top:2px}
+.drawer a.on .dn{color:var(--accent)}
+.drawer a.soon{opacity:.55}
+.drawer a .dchev{width:18px;height:18px;color:rgba(0,0,0,.3);flex:0 0 auto}
+.drawer .soon-tag{font-family:var(--font-mono,monospace);font-size:8px;font-weight:600;background:var(--surface-soft);color:rgba(0,0,0,.45);padding:2px 6px;border-radius:50px;letter-spacing:0}
 /* 인터랙션: 카드 플레이트·광고배너 호버 */
 .ctile .plate img{transition:transform .18s ease}.ctile:hover .plate img{transform:scale(1.07)}
 .adbanner img{transition:transform .25s ease}.adbanner{transition:box-shadow .18s,transform .18s}.adbanner:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.12)}.adbanner:hover img{transform:scale(1.02)}
@@ -389,6 +403,12 @@ HELPERS = r"""
 (function(){var mt=document.getElementById('mtab');if(!mt)return;var pn=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');var qs=location.search||'';var cur='';
  if(pn==='cards'||pn==='carddetail')cur='cards';else if(pn==='issue')cur=/v=cmp/.test(qs)?'compare':'issue';else if(pn===''||pn==='index')cur='home';
  mt.querySelectorAll('a').forEach(function(a){if(a.dataset.tab===cur)a.classList.add('on');});})();
+// 상단 GNB 활성(서버 active로 구분 안 되는 issue?v=cmp·events 등 보정)
+(function(){var gnb=document.querySelector('.gnb');if(!gnb)return;var pn=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');var qs=location.search||'';var href=null;
+ if(pn==='issue')href=/v=cmp/.test(qs)?'issue.html?v=cmp':'issue.html';
+ else if(pn==='events')href='issue.html';else if(pn==='cards'||pn==='carddetail')href='cards.html';
+ else if(pn==='chart'||pn==='trends')href='chart.html';else if(pn==='content')href='content.html';else if(pn==='community')href='community.html';
+ if(href)gnb.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===href);});})();
 function _purl(plat,id){id=String(id||'').trim();if(!id)return '';return ({cardgorilla:'https://www.card-gorilla.com/card/detail/'+id,banksalad:'https://www.banksalad.com/product/cards/'+id,toss:'https://card-lounge.toss.im/card/'+id,ajungdang:'https://www.ajd.co.kr/card/event/detail/'+id}[plat])||'';}
 function favSvg(f){return '<svg class="ic"><use href="#ic-heart'+(f?'-f':'')+'"/></svg>';}
 function favClick(el,id){var f=toggleFav(id);el.innerHTML=favSvg(f);el.classList.toggle('on',f);if(f){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}if(window._fr)try{window._fr();}catch(e){}}
@@ -445,7 +465,7 @@ function bindTrack(){document.addEventListener('click',function(ev){
  el=t.closest('.item');if(el){track('item',(el.querySelector('.l2')||{}).textContent||el.textContent);return;}
  el=t.closest('.rk,.crow');if(el){track('rank',(el.querySelector('.rn,.cn')||{}).textContent||'');return;}
 },true);}
-function bindUI(){var d=document.getElementById('drawer'),s=document.getElementById('scrim'),m=document.getElementById('menuBtn');if(m)m.onclick=function(){d.classList.add('on');s.classList.add('on');};if(s)s.onclick=function(){d.classList.remove('on');s.classList.remove('on');};
+function bindUI(){var d=document.getElementById('drawer'),s=document.getElementById('scrim'),m=document.getElementById('menuBtn');if(m)m.onclick=function(){d.classList.add('on');s.classList.add('on');};if(s)s.onclick=function(){d.classList.remove('on');s.classList.remove('on');};var dx=document.getElementById('drawerX');if(dx)dx.onclick=function(){d.classList.remove('on');s.classList.remove('on');};
  function go(){var q=(document.getElementById('siteSearch')||{}).value||'';location.href='search.html?q='+encodeURIComponent(q);}
  var f=document.getElementById('siteSearch');if(f)f.addEventListener('keydown',function(e){if(e.key==='Enter')go();});
  ['searchGo','searchGo2'].forEach(function(id){var b=document.getElementById(id);if(b)b.onclick=go;});
@@ -519,12 +539,19 @@ ICONS=('<svg width="0" height="0" style="position:absolute" aria-hidden="true"><
  '</defs></svg>')
 
 def header(active):
-    L=[("cards","cards.html","카드찾기",""),("compare","issue.html?v=cmp","플랫폼 비교","캐시백 가장 많이 주는 사이트를 확인해보세요!"),("issue","issue.html","이번달 캐시백",""),
-       ("charts","chart.html","티라노차트",""),("content","content.html","티라노TIP",""),("community","community.html","커뮤니티","")]
-    gnb="".join('<a href="%s" class="%s"%s>%s</a>'%(u,("on" if k==active else ""),(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
-    drawer="".join('<a href="%s"%s>%s</a>'%(u,(' title="%s"'%tip if tip else ''),t) for k,u,t,tip in L)
+    # 전역 네비게이션(가이드): 순서·명칭 + 메뉴별 서브텍스트. (key,url,name,sub,soon)
+    L=[("compare","issue.html?v=cmp","한눈에 비교","카드·카드사별 캐시백 한 표에서",False),
+       ("issue","issue.html","캐시백","이번 달 플랫폼별 최대 캐시백",False),
+       ("cards","cards.html","카드찾기","조건으로 내 카드 탐색",False),
+       ("charts","chart.html","티라노 차트","캐시백 추이·랭킹 데이터",False),
+       ("content","content.html","티라노 TIP","발급 전략·꿀팁 콘텐츠",False),
+       ("community","community.html","커뮤니티","발급 후기·정보 공유",False),
+       ("about","about.html","카드티라노란?","서비스 소개",False)]
+    _st='<span class="soon-tag">예정</span>'
+    gnb="".join('<a href="%s" class="%s%s"><span class="nm">%s%s</span><span class="sub">%s</span></a>'%(u,("on" if k==active else ""),(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
+    drawer="".join('<a href="%s" class="%s"><div class="dt"><div class="dn">%s%s</div><div class="ds">%s</div></div><svg class="dchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>'%(u,("on" if k==active else "")+(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
     return (ICONS+'<div class="scrim" id="scrim"></div><aside class="drawer" id="drawer">'
-            '<div class="logo" style="margin-bottom:10px"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div>'+drawer+'</aside>'
+            '<div class="drawer-hd"><div class="logo"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div><button class="drawer-x" id="drawerX" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'+drawer+'</aside>'
             '<div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:contact@cardtyranno.com">제휴·광고 문의</a></div></div>'
             '<header class="hd"><div class="wrap row">'
             '<span class="icbtn menu" id="menuBtn">☰</span>'
@@ -1263,53 +1290,63 @@ fetch('data.json').then(r=>r.json()).then(function(j){var d=j.items.find(x=>x.id
 
 # ===== CONTENT =====
 CONTENT_BODY=('<style>'
- '.tip-hero{background:var(--block-lime,#dceeb1);border-radius:24px;padding:42px 40px;margin:24px 0 0;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;position:relative;overflow:hidden}'
- '.tip-eb{font:800 11.5px var(--font-mono,monospace);letter-spacing:.04em;text-transform:uppercase;color:rgba(0,0,0,.55)}'
- '.tip-h{font-weight:340;font-size:40px;letter-spacing:-1.2px;margin:12px 0 0;line-height:1.06}'
- '.tip-sub{font-size:15.5px;color:rgba(0,0,0,.66);margin:12px 0 0;max-width:500px;line-height:1.5}'
- '.tip-cta{display:inline-flex;align-items:center;gap:7px;background:#000;color:#fff;font-weight:600;font-size:14px;padding:12px 22px;border-radius:50px;text-decoration:none;margin-top:20px}'
- '.tip-hero-badge{flex:0 0 auto;font:800 10.5px var(--font-mono,monospace);letter-spacing:.04em;background:rgba(0,0,0,.86);color:#fff;border-radius:50px;padding:7px 13px}'
- '.tip-types{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}'
- '.tip-type{border:1px solid var(--hairline,#e6e6e6);border-radius:16px;padding:16px 18px;cursor:pointer;background:#fff;transition:border-color .14s;display:flex;align-items:center;gap:13px}'
- '.tip-type:hover{border-color:#000}.tip-type.on{border-color:#000;background:var(--surface-soft,#f4f4f5)}'
- '.tip-type .tt-ic{display:inline-flex;width:40px;height:40px;border-radius:11px;align-items:center;justify-content:center;flex:0 0 auto}'
- '.tip-type .tt-ic .ic{width:20px;height:20px;color:#000}'
- '.tip-type .tt-tag{font:800 9.5px var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.04em;color:rgba(0,0,0,.45)}'
- '.tip-type .tt-h{font-size:15px;font-weight:800;margin:3px 0 0;letter-spacing:-.2px}'
- '.tip-type .tt-d,.tip-type .tt-go{display:none}'
- '.tip-list{display:flex;flex-direction:column;gap:2px;margin-top:12px}'
- '.tip-row{display:flex;align-items:flex-start;gap:14px;padding:18px 4px;border-top:1px solid var(--hairline);text-decoration:none;color:#000}'
- '.tip-row:hover{background:var(--surface-soft)}'
- '.tip-cat{font-size:11px;font-weight:700;padding:4px 11px;border-radius:50px;background:var(--block-lime);color:#000;white-space:nowrap;flex:0 0 auto;margin-top:2px}'
- '.tip-rt{font-size:17px;font-weight:700;letter-spacing:-.3px}.tip-rs{font-size:13.5px;color:rgba(0,0,0,.58);margin-top:4px;line-height:1.45}'
- '.tip-min{font-size:12px;color:rgba(0,0,0,.45);margin-top:6px}'
- '.tip-sech{font-size:12px;font-weight:700;color:rgba(0,0,0,.55);margin:40px 0 0;text-transform:uppercase;letter-spacing:.4px}'
- '@media(max-width:760px){.tip-types{grid-template-columns:1fr}.tip-h{font-size:26px}.tip-hero{padding:28px 22px;flex-direction:column}.tip-hero-badge{order:-1;align-self:flex-start}}'
+ # 강조 컴카드(이달의 PICK)
+ '.tip-pick{display:grid;grid-template-columns:300px 1fr;background:var(--block-lime);border-radius:22px;overflow:hidden;text-decoration:none;color:#000;box-shadow:0 12px 30px rgba(0,0,0,.1);margin:24px 0 0}'
+ '.tip-pick-img{position:relative;background:var(--surface-soft)}.tip-pick-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:100%}'
+ '.tip-pick-badge{position:absolute;left:16px;top:16px;font-family:var(--font-mono,monospace);font-size:9px;background:var(--accent-magenta);color:#fff;padding:5px 11px;border-radius:50px}'
+ '.tip-pick-body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}'
+ '.tip-pick-eb{font-family:var(--font-mono,monospace);font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.55)}'
+ '.tip-pick-t{font-weight:700;font-size:26px;letter-spacing:-.7px;line-height:1.25;margin-top:10px}'
+ '.tip-pick-d{font-weight:400;font-size:14.5px;line-height:1.5;color:rgba(0,0,0,.62);margin-top:10px}'
+ '.tip-pick-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:50px;background:#000;color:#fff;font-weight:600;font-size:15px;margin-top:20px;align-self:flex-start}.tip-pick-cta svg{width:16px;height:16px}'
+ # 가로 탭
+ '.tip-tabs{display:flex;gap:28px;border-bottom:1px solid var(--hairline);margin:26px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}.tip-tabs::-webkit-scrollbar{display:none}'
+ '.tip-tab{background:0;border:0;padding:0 0 13px;font-family:inherit;font-weight:480;font-size:15px;letter-spacing:-.2px;white-space:nowrap;color:rgba(0,0,0,.5);border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;flex:0 0 auto}'
+ '.tip-tab.on{font-weight:700;color:#000;border-bottom-color:#000}'
+ # 썸네일 리스트 (데스크탑 2열)
+ '.tip-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin-top:10px}'
+ '.tip-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--hairline-soft);text-decoration:none;color:#000}'
+ '.tip-row:hover .tip-rt{color:var(--accent,#000);text-decoration:underline}'
+ '.tip-thumb{width:96px;height:64px;border-radius:12px;object-fit:cover;flex:0 0 auto;display:block;background:var(--surface-soft)}'
+ '.tip-rcat{font-family:var(--font-mono,monospace);font-size:9px;color:rgba(0,0,0,.45)}'
+ '.tip-rt{font-weight:700;font-size:15px;letter-spacing:-.3px;line-height:1.35;margin-top:4px}'
+ # 상세(detail) — 기존 유지 클래스
+ '.adt .ghero{border-radius:16px;overflow:hidden;margin-bottom:18px}.adt .ghero img{width:100%;display:block}'
+ '.adt .ah{font-weight:340;font-size:32px;letter-spacing:-1px;line-height:1.2;margin:14px 0 0}.adt .asum{font-size:16px;color:rgba(0,0,0,.6);margin:12px 0 0;line-height:1.5}'
+ '.adt p{font-size:15.5px;line-height:1.75;margin:16px 0 0;color:rgba(0,0,0,.82)}.adt .bk2{display:inline-block;margin-top:30px;font-weight:600;font-size:14px}'
+ '@media(max-width:760px){'
+ '.tip-pick{grid-template-columns:1fr}.tip-pick-img img{height:158px;min-height:0}.tip-pick-body{padding:18px 18px 20px}.tip-pick-t{font-size:20px}.tip-pick-d{font-size:13px}.tip-pick-cta{width:100%;justify-content:center;font-size:15px}'
+ '.tip-list{grid-template-columns:1fr;gap:0}'
+ '.tip-thumb{width:74px;height:56px}.tip-rt{font-size:14px}'
+ '.adt .ah{font-size:24px}'
+ '}'
  '</style>'
  '<div class="wrap"><section id="listwrap">'
- '<div class="tip-hero"><div><div class="tip-eb">이번달 캐시백 획득 전략 · 2026.06</div><h1 class="tip-h">6월엔 어떤 카드를,<br>어느 플랫폼에서</h1><p class="tip-sub">카드사별로 이번 달 캐시백이 가장 큰 플랫폼과 상품, 마감 임박 이벤트까지 한 번에 정리했어요.</p><a class="tip-cta" id="tipStrat" href="content.html">전략 보기 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div><div class="tip-hero-badge">이달의 1순위</div></div>'
- '<div class="tip-types" id="tipTypes"></div>'
- '<div class="tip-sech" id="tipSech">최신 글</div>'
- '<div class="tip-list" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section>'
+ '<div style="padding:24px 0 0"><h1 style="font-weight:330;font-size:34px;letter-spacing:-1.2px;margin:0">티라노 TIP</h1><p style="font-weight:400;font-size:14px;color:rgba(0,0,0,.6);margin:5px 0 0">전문가가 매달 직접 뜯어본 카드 전략.</p></div>'
+ '<div id="tipPick"></div>'
+ '<div class="tip-tabs" id="tipTabs"></div>'
+ '<div class="tip-list" id="list"><div class="empty" style="grid-column:1/-1"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section>'
  '<div id="detail" style="display:none"></div></div>')
 CONTENT_JS=r"""
-var C=[],cur="전체";
-var TYPES=[{k:'발급 팁',tag:'STRATEGY',h:'이달의 캐시백 획득 전략',d:'지금 받아야 할 카드와 채널, 놓치면 아까운 캐시백 타이밍.',ic:'ic-search',bg:'var(--block-lime)'},
- {k:'기초 상식',tag:'KNOWLEDGE',h:'카드 지식',d:'연회비·전월실적·적립 vs 할인 — 처음 고르는 사람을 위한 쉬운 설명.',ic:'ic-grid',bg:'var(--block-cream)'},
- {k:'할인 활용',tag:'ANATOMY',h:'신용카드 해부',d:'카드 한 장을 영역별로 뜯어보고 손익까지 따져봐요.',ic:'ic-cart',bg:'var(--block-mint)'}];
+var C=[],cur='발급 팁';
+var TYPES=[{k:'발급 팁',h:'이달의 캐시백 전략',cats:['발급 팁']},{k:'기초 상식',h:'카드 지식',cats:['기초 상식','여행']},{k:'할인 활용',h:'신용카드 해부',cats:['할인 활용']}];
+var CATIMG={'발급 팁':'img/guide/issue.svg','할인 활용':'img/guide/discount.svg','기초 상식':'img/guide/basic.svg','여행':'img/guide/travel.svg'};
 var CATBG={'발급 팁':'var(--block-lime)','기초 상식':'var(--block-cream)','할인 활용':'var(--block-mint)','여행':'var(--block-mint)'};
-function _rt(b){var n=(b||[]).join('').length;return Math.max(2,Math.round(n/450))+'분';}
-function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><span class="tip-cat">'+x.cat+'</span><div><div class="tip-rt">'+x.title+'</div>'+(x.summary?'<div class="tip-rs">'+x.summary+'</div>':'')+'<div class="tip-min">읽는 데 '+_rt(x.body)+'</div></div></a>';}
-function renderList(){var items=cur==="전체"?C:C.filter(function(x){return x.cat===cur;});document.getElementById('list').innerHTML=items.length?items.map(rowHtml).join(''):'<div class="empty" style="padding:30px 0">글이 없어요.</div>';document.getElementById('tipSech').textContent=cur==="전체"?'최신 글':cur+' 글';}
-function types(){var t=document.getElementById('tipTypes');t.innerHTML=TYPES.map(function(ty){var on=cur===ty.k;return '<div class="tip-type'+(on?' on':'')+'" data-k="'+ty.k+'"><span class="tt-ic" style="background:'+(ty.bg||'var(--surface-soft)')+'"><svg class="ic"><use href="#'+ty.ic+'"/></svg></span><div class="tt-tag">'+ty.tag+'</div><div class="tt-h">'+ty.h+'</div><div class="tt-d">'+ty.d+'</div><div class="tt-go">보러가기 ›</div></div>';}).join('');
- t.querySelectorAll('.tip-type').forEach(function(b){b.onclick=function(){cur=(cur===b.dataset.k)?'전체':b.dataset.k;types();renderList();};});}
+function _thumb(x){return x.img||CATIMG[x.cat]||'img/guide/reco.svg';}
+function _catsOf(k){for(var i=0;i<TYPES.length;i++)if(TYPES[i].k===k)return TYPES[i].cats;return [k];}
+function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><img class="tip-thumb" src="'+_thumb(x)+'" alt="" loading="lazy"><div style="min-width:0"><div class="tip-rcat">'+(x.cat||'')+'</div><div class="tip-rt">'+x.title+'</div></div></a>';}
+function renderList(){var cats=_catsOf(cur);var items=C.filter(function(x){return cats.indexOf(x.cat)>=0;});document.getElementById('list').innerHTML=items.length?items.map(rowHtml).join(''):'<div class="empty" style="grid-column:1/-1;padding:30px 0">글이 없어요.</div>';}
+function tabs(){var t=document.getElementById('tipTabs');t.innerHTML=TYPES.map(function(ty){return '<button class="tip-tab'+(cur===ty.k?' on':'')+'" data-k="'+ty.k+'">'+ty.h+'</button>';}).join('');
+ t.querySelectorAll('.tip-tab').forEach(function(b){b.onclick=function(){cur=b.dataset.k;tabs();renderList();};});}
+function pick(){var st=C.filter(function(x){return x.cat==='발급 팁';})[0]||C[0];var el=document.getElementById('tipPick');if(!st||!el)return;
+ el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><img src="'+_thumb(st)+'" alt="">'+'<span class="tip-pick-badge">이달의 PICK</span></div>'
+  +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.06</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
  var hero=d.img?'<div class="ghero"><img src="'+d.img+'" alt="'+d.cat+'" loading="eager"/></div>':'';
- el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노TIP</a></div>';document.title=d.title+' | 카드티라노';}
+ el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노 TIP</a></div>';document.title=d.title+' | 카드티라노';}
 var id=new URLSearchParams(location.search).get('id');
 fetch('content.json').then(function(r){return r.json();}).then(function(j){C=j.items;if(id!==null){var d=C.find(function(x){return String(x.id)===String(id);});if(d){detail(d);return;}}
- var st=C.filter(function(x){return /발급|전략/.test(x.cat||'');})[0]||C[0];var sb=document.getElementById('tipStrat');if(sb&&st)sb.setAttribute('href','content.html?id='+encodeURIComponent(st.id));
- types();renderList();});
+ pick();tabs();renderList();});
 """
 
 # ===== CARD DETAIL =====
@@ -1503,71 +1540,108 @@ Promise.all([
 
 # ===== EVENT DETAIL (이벤트 상세, 차트 최우선) =====
 EVENTDETAIL_BODY=('<style>'
- '#root,.rg-wrap{}'
+ '.rg-only-mo{display:none}'
  '.rg-wrap{max-width:1080px;margin:0 auto;padding:0 20px 96px}'
- '.rg-back{display:inline-flex;align-items:center;gap:6px;color:var(--text);font-weight:600;font-size:14px;padding:16px 0 6px}'
- '.rg-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:8px 0 4px}'
- '.rg-pchip{display:inline-flex;align-items:center;gap:10px;background:var(--surface-soft);padding:8px 16px 8px 12px;border-radius:50px}.rg-pchip i{width:14px;height:14px;border-radius:50%}.rg-pchip b{font-weight:700;font-size:24px;letter-spacing:-.6px;line-height:1}.rg-pchip .mono{font-family:var(--font-mono,monospace);font-size:10px;color:rgba(0,0,0,.45)}'
- '.rg-h{font-weight:340;font-size:38px;line-height:1.02;letter-spacing:-1.2px;margin:14px 0 0}'
+ '.rg-back{display:inline-flex;align-items:center;gap:7px;color:rgba(0,0,0,.55);font-weight:480;font-size:14px;padding:18px 0 0}.rg-back svg{width:16px;height:16px}'
+ # 헤더
+ '.rg-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:14px 0 6px}'
+ '.rg-pchip{display:inline-flex;align-items:center;gap:10px;background:var(--surface-soft);padding:8px 16px 8px 12px;border-radius:50px}.rg-pchip i{width:14px;height:14px;border-radius:50%;flex:0 0 auto}.rg-pchip b{font-weight:700;font-size:26px;letter-spacing:-.6px;line-height:1}.rg-pchip .pl{font-family:var(--font-mono,monospace);font-size:10px;color:rgba(0,0,0,.45);margin-left:2px}'
+ '.rg-h{font-weight:340;font-size:40px;line-height:1.02;letter-spacing:-1.3px;margin:14px 0 0}'
  '.rg-hsub{font-weight:400;font-size:15px;color:rgba(0,0,0,.62);margin:10px 0 0;word-break:keep-all}.rg-hsub b{font-weight:700}'
- '.rg-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;margin-top:18px}.rg-cta svg{width:17px;height:17px}'
- '.rg-deco{width:200px;height:160px;flex-shrink:0;background:var(--block-lime);border-radius:20px;display:flex;align-items:center;justify-content:center;overflow:hidden}.rg-deco svg{width:96px;height:80px;color:#33402a;opacity:.9}'
- '.rg-sec{margin-top:30px}'
- '.rg-sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}'
- '.rg-eb{font-family:var(--font-mono,monospace);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:rgba(0,0,0,.5)}'
- '.rg-t{font-weight:340;font-size:24px;letter-spacing:-.6px;margin:6px 0 0}'
- '.rg-hint{font-weight:400;font-size:13px;color:rgba(0,0,0,.5)}'
+ '.rg-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;margin-top:20px}.rg-cta svg{width:17px;height:17px}'
+ '.rg-deco{width:230px;flex-shrink:0;display:flex;align-items:center;justify-content:center}.rg-deco svg{width:100%;height:auto;display:block;overflow:visible}'
+ # 상품 리스트
+ '.rg-sec{padding:24px 0 0}'
+ '.rg-listhd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}'
+ '.rg-listhd h2{font-weight:340;font-size:24px;letter-spacing:-.6px;margin:0}.rg-listhd .hint{font-weight:400;font-size:13px;color:rgba(0,0,0,.5)}'
  '.rg-plist{display:flex;flex-direction:column;gap:8px;margin-top:14px}'
  '.rg-prow{display:grid;grid-template-columns:auto 1fr auto auto;gap:16px;align-items:center;border:1px solid var(--hairline);background:#fff;border-radius:14px;padding:12px 16px;cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit}'
  '.rg-prow.sel{border:2px solid #000;background:var(--surface-soft)}'
  '.rg-pl{width:62px;flex-shrink:0;aspect-ratio:1.586/1;border-radius:8px;overflow:hidden;background:var(--surface-soft)}.rg-pl img{width:100%;height:100%;object-fit:cover;display:block}'
- '.rg-pn{display:flex;align-items:center;gap:7px}.rg-pn b{font-weight:700;font-size:16px}.rg-pi{font-family:var(--font-mono,monospace);font-size:10px;opacity:.5;margin-top:3px}'
- '.rg-tag{font-family:var(--font-mono,monospace);font-size:9px;padding:3px 8px;border-radius:50px}.rg-tag.mx{background:#000;color:#fff}.rg-tag.se{background:var(--accent-magenta);color:#fff}'
+ '.rg-pn{display:flex;align-items:center;gap:7px}.rg-pn b{font-weight:700;font-size:16px}'
+ '.rg-pi{font-family:var(--font-mono,monospace);font-size:10px;opacity:.5;margin-top:3px}'
+ '.rg-tag{font-family:var(--font-mono,monospace);font-size:9px;padding:3px 8px;border-radius:50px;white-space:nowrap}.rg-tag.mx{background:#000;color:#fff}.rg-tag.se{background:var(--accent-magenta);color:#fff}'
  '.rg-pcash{text-align:right}.rg-pcash .l{font-family:var(--font-mono,monospace);font-size:9px;opacity:.45}.rg-pcash .v{font-weight:700;font-size:20px;letter-spacing:-.4px;white-space:nowrap}'
  '.rg-parr{width:18px;height:18px;color:rgba(0,0,0,.35)}'
- '.rg-chart{background:var(--block-lime);border-radius:22px;padding:28px 30px;margin-top:14px}'
+ # 차트
+ '.rg-chart{background:var(--block-lime);border-radius:22px;padding:30px 34px;margin-top:24px}'
  '.rg-chart-h{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:10px}'
+ '.rg-ceb{font-family:var(--font-mono,monospace);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:rgba(0,0,0,.55)}'
+ '.rg-ct{font-weight:340;font-size:26px;letter-spacing:-.7px;margin:6px 0 0}'
  '.rg-sums{display:flex;gap:18px}.rg-sums>div{text-align:right}.rg-sums .l{font-family:var(--font-mono,monospace);font-size:9px;opacity:.5}.rg-sums .v{font-weight:700;font-size:22px}'
- '.rg-bars{display:flex;align-items:flex-end;gap:16px;height:190px;margin-top:22px}.rg-bars.rg-note{position:relative}'
+ '.rg-bars{display:flex;align-items:flex-end;gap:18px;height:200px;margin-top:24px}.rg-bars.empty{position:relative}'
  '.rg-col{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}'
  '.rg-col .lbl{font-weight:700;font-size:14px}.rg-col .mm{font-family:var(--font-mono,monospace);font-size:11px;color:rgba(0,0,0,.55)}'
  '.rg-bar{width:54%;max-width:62px;border-radius:8px 8px 0 0;background:var(--block-navy);transition:height .4s}'
  '.rg-bar.miss{background:repeating-linear-gradient(135deg,transparent,transparent 5px,rgba(0,0,0,.05) 5px,rgba(0,0,0,.05) 6px);border:1.5px dashed rgba(0,0,0,.22);border-bottom:none}'
  '.rg-curbar{width:54%;max-width:62px;border-radius:8px 8px 0 0;overflow:hidden;display:flex;flex-direction:column;transition:height .4s}.rg-curbar .sub{background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),var(--accent-magenta)}.rg-curbar .main{flex:1;background:var(--accent-magenta)}'
  '.rg-note-c{position:absolute;left:0;right:0;top:42%;text-align:center}.rg-note-c span{font-weight:540;font-size:13px;color:rgba(0,0,0,.55);background:rgba(220,238,177,.9);padding:6px 14px;border-radius:50px}'
- '.rg-legend{display:flex;align-items:center;gap:18px;margin-top:18px;flex-wrap:wrap}.rg-legend span{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:rgba(0,0,0,.6)}.rg-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}'
- '.rg-main{background:var(--block-navy);color:#fff;border-radius:18px;padding:22px 26px;margin-top:14px}.rg-main .l{font-family:var(--font-mono,monospace);font-size:10px;opacity:.6;margin-bottom:12px}.rg-main .row{display:flex;align-items:center;justify-content:space-between;gap:16px}.rg-main .row .t{font-weight:540;font-size:16px;opacity:.92}.rg-main .row .v{font-weight:700;font-size:24px;letter-spacing:-.5px;white-space:nowrap}'
- '.rg-subh{font-family:var(--font-mono,monospace);font-size:10px;color:rgba(0,0,0,.5);margin:16px 0 12px}'
+ '.rg-legend{display:flex;align-items:center;gap:18px;margin-top:18px;flex-wrap:wrap}.rg-legend span.lg{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:rgba(0,0,0,.6)}.rg-legend i{width:12px;height:12px;border-radius:3px;display:inline-block;flex:0 0 auto}.rg-lg-mag{background:var(--accent-magenta)}.rg-lg-sub{background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),var(--accent-magenta)}.rg-lg-navy{background:var(--block-navy)}'
+ # 구성
+ '.rg-comp{padding:30px 0 0}'
+ '.rg-comp-eb{font-family:var(--font-mono,monospace);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:rgba(0,0,0,.5)}'
+ '.rg-comp-t{font-weight:340;font-size:26px;letter-spacing:-.7px;margin:6px 0 4px}'
+ '.rg-comp-p{font-weight:400;font-size:13px;color:rgba(0,0,0,.55);margin:0 0 16px}.rg-comp-p b{font-weight:700;color:#000}'
+ '.rg-main{background:var(--block-navy);color:#fff;border-radius:18px;padding:24px 28px}.rg-main .l{font-family:var(--font-mono,monospace);font-size:10px;opacity:.6;margin-bottom:14px}.rg-main .row{display:flex;align-items:center;justify-content:space-between;gap:16px}.rg-main .row .t{font-weight:540;font-size:16px;opacity:.92}.rg-main .row .v{font-weight:700;font-size:26px;letter-spacing:-.6px;white-space:nowrap}'
+ '.rg-subh{font-family:var(--font-mono,monospace);font-size:10px;color:rgba(0,0,0,.5);margin:14px 0 12px}'
  '.rg-subs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}'
- '.rg-sub{border:1px solid var(--hairline);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px}.rg-sub .ic{width:38px;height:38px;border-radius:50%;background:var(--surface-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0}.rg-sub .ic svg{width:20px;height:20px;color:#000}.rg-sub .t{font-weight:700;font-size:14px}.rg-sub .c{font-size:12px;color:rgba(0,0,0,.55);margin-top:2px}.rg-sub .v{font-weight:700;font-size:14px;margin-left:auto;white-space:nowrap}'
- '.rg-subnone{color:rgba(0,0,0,.5);font-size:13px;padding:6px 0}'
- '.rg-coach{background:var(--surface-soft);border-radius:20px;padding:26px 28px;margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}'
- '.rg-coach-ring{width:84px;height:84px;border-radius:50%;border:3px solid currentColor;color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto}.rg-coach-ring.hold{color:#cf9220}.rg-coach-ring.no{color:rgba(0,0,0,.3)}.rg-coach-ring span{width:46px;height:46px;border-radius:50%;border:3px solid currentColor;display:block}'
- '.rg-coach-badge{text-align:center}.rg-coach-badge .lab{font-weight:700;font-size:16px;margin-top:10px}.rg-coach-badge .mono{font-family:var(--font-mono,monospace);font-size:9px;opacity:.5;margin-top:2px}'
- '.rg-coach-body .t{font-weight:540;font-size:19px;letter-spacing:-.4px;line-height:1.35}.rg-coach-leg{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap}.rg-coach-leg span{font-size:13px;color:rgba(0,0,0,.65)}'
- '.rg-others{display:flex;flex-direction:column;gap:10px;margin-top:14px}'
- '.rg-orow{display:grid;grid-template-columns:auto 1fr auto auto;gap:16px;align-items:center;border:1px solid var(--hairline);border-radius:16px;padding:14px 18px;text-decoration:none;color:#000}'
+ '.rg-sub{border:1px solid var(--hairline);border-radius:14px;padding:16px;display:flex;align-items:center;gap:13px}.rg-sub .ic{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}.rg-sub .ic svg{width:21px;height:21px;color:#000}.rg-sub .t{font-weight:700;font-size:14px}.rg-sub .c{font-weight:400;font-size:12px;color:rgba(0,0,0,.55);margin-top:2px}.rg-sub .v{font-weight:700;font-size:15px;margin-left:auto;white-space:nowrap}'
+ '.rg-subnone{color:rgba(0,0,0,.5);font-size:13px;padding:4px 0}'
+ # 티라노 코칭
+ '.rg-coach{background:var(--surface-soft);border-radius:20px;padding:26px 28px;margin-top:30px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}'
+ '.rg-coach-badge{text-align:center}.rg-coach-ring{width:84px;height:84px;border-radius:50%;border:3px solid currentColor;color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto}.rg-coach-ring.hold{color:#cf9220}.rg-coach-ring.no{color:rgba(0,0,0,.35)}.rg-coach-ring span{width:46px;height:46px;border-radius:50%;border:3px solid currentColor;display:block}'
+ '.rg-coach-badge .lab{font-weight:700;font-size:16px;margin-top:10px}.rg-coach-badge .mono{font-family:var(--font-mono,monospace);font-size:9px;opacity:.5;margin-top:2px}'
+ '.rg-coach-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}.rg-coach-head svg{width:20px;height:20px}.rg-coach-head .eb{font-family:var(--font-mono,monospace);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:rgba(0,0,0,.5)}'
+ '.rg-coach-molab{font-weight:700;font-size:14px;color:var(--success);margin-bottom:4px}.rg-coach-molab.hold{color:#cf9220}.rg-coach-molab.no{color:rgba(0,0,0,.55)}'
+ '.rg-coach-t{font-weight:540;font-size:19px;letter-spacing:-.4px;line-height:1.35}'
+ '.rg-coach-leg{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap}.rg-coach-leg span{display:inline-flex;align-items:center;gap:7px;font-weight:480;font-size:13px;color:rgba(0,0,0,.65)}.rg-coach-leg .dot{width:20px;height:20px;flex:0 0 auto}.rg-coach-leg .dot.o{border:2px solid var(--success);border-radius:50%}'
+ # 이런 이벤트도
+ '.rg-others-sec{padding:30px 0 0}.rg-others-sec h2{font-weight:340;font-size:24px;letter-spacing:-.6px;margin:0 0 14px}'
+ '.rg-others{display:flex;flex-direction:column;gap:10px}'
+ '.rg-orow{display:grid;grid-template-columns:auto 1fr auto auto;gap:16px;align-items:center;border:1px solid var(--hairline);border-radius:16px;padding:14px 18px;text-decoration:none;color:#000}.rg-orow .rg-pl{width:54px}'
  '.rg-otag{display:inline-block;padding:4px 10px;border-radius:50px;font-family:var(--font-mono,monospace);font-size:9px;text-transform:uppercase;margin-bottom:6px}'
- '.rg-foot{font-size:12px;color:rgba(0,0,0,.45);margin:28px 0 10px;line-height:1.6}.rg-foot b{font-weight:600;color:rgba(0,0,0,.6)}'
- '.rg-float{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--hairline);padding:12px 0}.rg-float .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}.rg-float .lab{font-size:14px;font-weight:540;color:rgba(0,0,0,.62)}.rg-float .lab b{color:#000;font-weight:700}.rg-float .go{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;white-space:nowrap}.rg-float .go svg{width:16px;height:16px}'
- # 모바일 시안: 헤더는 텍스트 좌 + 작은 일러스트 우(나란히), 인-헤더 CTA 숨김(하단 플로팅만), 헤드라인 축소
- '@media(max-width:680px){.rg-head{gap:12px}.rg-deco{width:92px;height:74px}.rg-deco svg{width:54px;height:46px}.rg-h{font-size:23px;margin-top:10px}.rg-pchip{padding:6px 13px 6px 9px}.rg-pchip b{font-size:19px}.rg-pchip i{width:11px;height:11px}.rg-hsub{font-size:12px;margin-top:7px}.rg-cta{display:none}.rg-prow{grid-template-columns:auto 1fr auto;gap:12px}.rg-parr{display:none}.rg-chart{padding:18px}.rg-bars{height:130px;gap:10px}.rg-subs{grid-template-columns:1fr}.rg-coach{grid-template-columns:1fr;gap:14px;text-align:center}.rg-coach-leg{justify-content:center}.rg-float .lab{display:none}.rg-float .go{flex:1;justify-content:center}.mtab{display:none}}'
- '@media(prefers-reduced-motion:reduce){.rg-bar,.rg-curbar{transition:none}}'
+ # 방어 문구
+ '.rg-foot{font-weight:400;font-size:12px;line-height:1.6;color:rgba(0,0,0,.45);padding:28px 0 0}.rg-foot b{font-weight:600;color:rgba(0,0,0,.6)}'
+ # 하단 고정 CTA
+ '.rg-float{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--hairline);padding:14px 0}.rg-float .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}.rg-float .lab{font-weight:540;font-size:14px;color:rgba(0,0,0,.62)}.rg-float .lab b{color:#000;font-weight:700}.rg-float .go{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none;white-space:nowrap}.rg-float .go svg{width:17px;height:17px}'
+ # ===== 모바일 시안 (≤680) — PC와 분리 =====
+ '@media(max-width:680px){'
+ '.rg-only-pc{display:none!important}.rg-only-mo{display:inline}'
+ '.rg-head{grid-template-columns:1fr auto;gap:10px;align-items:center}'
+ '.rg-pchip{padding:6px 13px 6px 9px}.rg-pchip i{width:11px;height:11px}.rg-pchip b{font-size:19px}'
+ '.rg-h{font-size:25px;margin-top:10px}.rg-hsub{font-size:12px;margin-top:7px}'
+ '.rg-deco{width:110px}'
+ '.rg-listhd h2{font-size:16px}.rg-listhd .hint{font-size:11px}'
+ '.rg-prow{grid-template-columns:auto 1fr auto;gap:12px;padding:9px 12px}.rg-pl{width:48px}.rg-pn b{font-size:14px}.rg-pcash .v{font-size:16px}'
+ '.rg-chart{padding:18px}.rg-ct{font-size:11px;font-family:var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.4px;color:rgba(0,0,0,.55);margin:0}'
+ '.rg-bars{height:120px;gap:10px;margin-top:14px}.rg-bar,.rg-curbar{max-width:34px}.rg-col .lbl{font-size:11px}.rg-col .mm{font-size:8px}'
+ '.rg-legend{gap:12px;margin-top:12px}.rg-legend span.lg{font-size:10px;gap:5px}.rg-legend i{width:9px;height:9px;border-radius:2px}'
+ '.rg-comp-t{font-size:16px;margin:0 0 2px}.rg-comp-p{font-size:11px;margin-bottom:10px}'
+ '.rg-main{border-radius:14px;padding:16px 18px}.rg-main .row .t{font-size:13px}.rg-main .row .v{font-size:18px}.rg-main .l{margin-bottom:0;display:none}'
+ '.rg-subs{grid-template-columns:1fr;gap:7px}.rg-sub{padding:11px 13px;gap:11px}.rg-sub .ic{width:34px;height:34px}.rg-sub .ic svg{width:18px;height:18px}.rg-sub .t{font-size:13px}.rg-sub .v{font-size:14px}'
+ '.rg-coach{grid-template-columns:auto 1fr;gap:14px;padding:18px;border-radius:16px}.rg-coach-ring{width:56px;height:56px}.rg-coach-ring span{width:30px;height:30px}.rg-coach-t{font-size:12px;font-weight:400;color:rgba(0,0,0,.65);line-height:1.45;margin-top:4px}'
+ '.rg-float .go{flex:1;justify-content:center}'
+ '.mtab{display:none}'
+ '}'
  '</style>'
- '<div class="rg-wrap"><a class="rg-back" href="issue.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>이번달 캐시백으로</a>'
+ '<div class="rg-wrap"><a class="rg-back" href="issue.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5"/><path d="M11 6l-6 6 6 6"/></svg>이번달 캐시백<span class="rg-only-pc">으로</span></a>'
  '<div id="edroot"><div class="empty" style="padding:60px 0"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="rgFloat"></div>')
 EVENTDETAIL_JS=r"""
+var EGG='<svg viewBox="0 0 250 210" aria-hidden="true"><ellipse cx="128" cy="174" rx="104" ry="26" fill="#e7d9b6"/><ellipse cx="128" cy="170" rx="96" ry="22" fill="#f1e6c8"/><g stroke="rgba(0,0,0,.22)" stroke-width="1.6"><ellipse cx="70" cy="150" rx="15" ry="20" fill="#fbf6ea" transform="rotate(-14 70 150)"/><ellipse cx="186" cy="150" rx="15" ry="20" fill="#fbf6ea" transform="rotate(14 186 150)"/><ellipse cx="103" cy="142" rx="15" ry="20" fill="#fff9ee" transform="rotate(-7 103 142)"/><ellipse cx="153" cy="142" rx="15" ry="20" fill="#fff9ee" transform="rotate(7 153 142)"/></g><g transform="translate(64,8) scale(5)" fill="#1f1d3d"><path d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill-rule="evenodd" d="M15.8 4.6 h2.6 a2.6 2.6 0 0 1 2.6 2.6 v1.7 a2.6 2.6 0 0 1 -2.6 2.6 h-2.6 a2.6 2.6 0 0 1 -2.6 -2.6 v-1.7 a2.6 2.6 0 0 1 2.6 -2.6 z M17.75 7.4 a0.85 0.85 0 1 0 1.7 0 a0.85 0.85 0 1 0 -1.7 0 z M18.4 9.5 h2.6 v1 h-2.6 z"/></g><g stroke="rgba(0,0,0,.24)" stroke-width="1.6"><ellipse cx="92" cy="166" rx="16" ry="21" fill="#ffffff" transform="rotate(-9 92 166)"/><ellipse cx="128" cy="170" rx="17" ry="22" fill="#fffdf7" transform="rotate(2 128 170)"/><ellipse cx="164" cy="166" rx="16" ry="21" fill="#ffffff" transform="rotate(11 164 166)"/></g></svg>';
+var TYR='<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>';
 var PBC={cardgorilla:'#FF6A13',banksalad:'#19C37D',toss:'#3182F6',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
 var PNM={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
-var PLATEC=['var(--block-lilac)','var(--block-coral)','var(--block-mint)','var(--block-cream)','var(--block-navy)','var(--block-lime)'];
 function _nk(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
 function _wm(n){if(!n)return'';if(n>=10000)return(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원';return n.toLocaleString()+'원';}
 function _man(n){return n?Math.round(n/10000):0;}
 function _mlabel(m){var mm=(''+m).split('-')[1];return mm?(parseInt(mm,10)+'월'):m;}
-function _short(nm){nm=(nm||'').replace(/^(삼성|현대|KB국민|국민|신한|롯데|우리|하나|BC|비씨|NH농협|농협|IBK기업|기업|토스)카?드?\s*/,'');return nm.slice(0,4)||(nm||'').slice(0,4);}
-var ARW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>';
-var UR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M9 7h8v8"/></svg>';
+function _esc(s){return (''+(s||'')).replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+// 부가 유형 → 아웃라인 글리프 + 파스텔 배경 + 짧은 조건문 (이모지 금지·DS)
+var CATSVG={'해외':'<circle cx="12" cy="12" r="8"/><path d="M4 12h16"/><path d="M12 4c2.5 2.3 3.8 5 3.8 8s-1.3 5.7-3.8 8c-2.5-2.3-3.8-5-3.8-8s1.3-5.7 3.8-8z"/>','자동납부':'<rect x="4" y="5.5" width="16" height="15" rx="2.5"/><path d="M4 10h16M8.5 3v4M15.5 3v4"/>','리볼빙':'<path d="M20 11a8 8 0 1 0-1.6 5"/><path d="M20 5.5V11h-5.5"/>','멤버십':'<rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M9 21h6M12 17v4"/>','여행':'<path d="M21 4L3 11l6 2.2L11 20l3-5 5-11z"/><path d="M9 13.2L14 8"/>','마케팅동의':'<path d="M5 12.5l4.2 4.2L19 6.8"/>','쿠폰':'<path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2 2 2 0 0 0 0-4z"/><path d="M14 6v12"/>','추가이용':'<path d="M12 5v14M5 12h14"/>','오프라인':'<path d="M4 9l1.2-4h13.6L20 9"/><path d="M5 9v10h14V9"/><path d="M4 9h16"/><path d="M9.5 19v-5h5v5"/>','연회비':'<rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M3 10h18"/>','간편결제':'<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/>','신규':'<path d="M12 3.5l1.7 5.8 5.8 1.7-5.8 1.7-1.7 5.8-1.7-5.8-5.8-1.7 5.8-1.7z"/>'};
+var CATBG={'해외':'var(--block-mint)','자동납부':'var(--block-lime)','멤버십':'var(--block-lilac)','여행':'var(--block-coral)','마케팅동의':'var(--block-cream)','쿠폰':'var(--block-pink)','리볼빙':'var(--surface-soft)','추가이용':'var(--surface-soft)','오프라인':'var(--block-mint)','연회비':'var(--block-cream)','간편결제':'var(--block-lilac)','신규':'var(--block-lime)'};
+var CATCOND={'해외':'해외 결제 시','자동납부':'자동납부 등록 시','멤버십':'OTT·멤버십 결제 시','여행':'여행 결제 시','마케팅동의':'마케팅 수신 동의 시','쿠폰':'쿠폰 사용 시','리볼빙':'리볼빙 약정 시','추가이용':'추가 이용 시','오프라인':'오프라인 결제 시','연회비':'연회비 캐시백','간편결제':'간편결제 이용 시','신규':'신규 발급 시'};
+function catIcon(cat){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+(CATSVG[cat]||'<path d="M12 5v14M5 12h14"/>')+'</svg>';}
 var _qp=new URLSearchParams(location.search);
 var qPlat=_qp.get('platform')||_qp.get('p')||'';var qn=_qp.get('n')||'';var qid=_qp.get('card')||_qp.get('id')||'';
 Promise.all([
@@ -1578,45 +1652,56 @@ Promise.all([
  var _now=new Date();var _cm=_now.getFullYear()+'-'+('0'+(_now.getMonth()+1)).slice(-2);
  var PE=A[0].products||[],cj=A[1].cards||{},HIX=A[2].months||[];
  var months=HIX.slice().sort().filter(function(m){return m<_cm;}).slice(-3).concat([_cm]);
- var ID2={};for(var k in cj){(cj[k]||[]).forEach(function(c){if(c.id!=null)ID2[String(c.id)]=_nk(c.name);});}
+ var CARDMAP={},ID2={};for(var _k in cj){(cj[_k]||[]).forEach(function(c){var n=_nk(c.name);if(!CARDMAP[n])CARDMAP[n]=c;if(c.id!=null)ID2[String(c.id)]=n;});}
  var root=document.getElementById('edroot');
  var focusNk=qn?_nk(qn):(qid&&ID2[String(qid)]?ID2[String(qid)]:'');
  var P=qPlat;
  if(!P&&focusNk){var fp=PE.filter(function(p){return _nk(p.name)===focusNk;})[0];if(fp){var mx=0;(fp.events||[]).forEach(function(e){if((e.reward_won||0)>mx){mx=e.reward_won;P=e.platform;}});}}
  if(!P){root.innerHTML='<div class="empty" style="padding:60px 0">플랫폼 정보가 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
  function evOf(p){return (p.events||[]).filter(function(e){return e.platform===P&&e.reward_won;}).sort(function(a,b){return b.reward_won-a.reward_won;})[0];}
- // 리워드 그룹 키 = 같은 월·플랫폼·카드사·조건(=캐시백 금액). 데이터는 당월(month) 단위라 (플랫폼,카드사,reward_won)로 묶음.
  var platGroup=PE.map(function(p){var e=evOf(p);return e?{p:p,e:e}:null;}).filter(Boolean).sort(function(a,b){return b.e.reward_won-a.e.reward_won;});
  if(!platGroup.length){root.innerHTML='<div class="empty" style="padding:60px 0">이 플랫폼의 발급 캐시백이 없어요. <a class="accent" href="issue.html">이번달 캐시백</a></div>';return;}
  var anchor=(focusNk?platGroup.filter(function(g){return _nk(g.p.name)===focusNk;})[0]:null)||platGroup[0];
  var aIss=(anchor.p.issuer||''),aR=anchor.e.reward_won;
- // 리워드 그룹 = collector가 부여한 reward_group(월·플랫폼·카드사·조건) 우선, 없으면 동일 키로 파생
  function _rgk(g){return g.e.reward_group||(P+'|'+(g.p.issuer||'')+'|'+g.e.reward_won);}
  var aKey=_rgk(anchor);
  var group=platGroup.filter(function(g){return _rgk(g)===aKey;}).sort(function(a,b){return (a.p.name||'').localeCompare(b.p.name||'','ko');});
  var focusIdx=0;for(var gi=0;gi<group.length;gi++){if(group[gi]===anchor){focusIdx=gi;break;}}
- var col=PBC[P]||'#888',pnm=PNM[P]||P;
+ var col=PBC[P]||'#888',pnm=PNM[P]||P,N=group.length;
+ var ARW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>';
+ var UR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M9 7h8v8"/></svg>';
  Promise.all(months.map(function(m){return m===_cm?Promise.resolve(null):fetch('history/'+m+'.json').then(function(r){return r.json();}).catch(function(){return null;});})).then(function(MS){
-  var head='<div class="rg-head"><div><div class="rg-pchip"><i style="background:'+col+'"></i><b>'+pnm+'</b><span class="mono">플랫폼</span></div>'
+  // ── 헤더 (PC: 칩+제목+부제+CTA+알일러스트 / 모바일: 칩(플랫폼라벨X)+제목+부제+작은알, CTA는 하단 플로팅만) ──
+  var subFull=pnm+'에서 지금 발급하면 받는 캐시백 묶음이에요. <b>'+N+'개 카드</b>가 이 캐시백에 들어 있어요.';
+  var subMo='<b>'+N+'개 카드</b>가 들어 있어요.';
+  var sub=(N>1)?('<span class="rg-only-pc">'+subFull+'</span><span class="rg-only-mo">'+subMo+'</span>'):('<b>'+anchor.p.name+'</b> 발급 캐시백');
+  var head='<div class="rg-head"><div>'
+   +'<div class="rg-pchip"><i style="background:'+col+'"></i><b>'+pnm+'</b><span class="pl rg-only-pc">플랫폼</span></div>'
    +'<h1 class="rg-h">이번달 발급 캐시백</h1>'
-   +'<p class="rg-hsub">'+(group.length>1?('<b>'+aIss+'</b> · 같은 조건(최대 '+_wm(aR)+') 발급 캐시백 · <b>'+group.length+'개 카드</b>'):('<b>'+anchor.p.name+'</b> 발급 캐시백'))+'</p>'
-   +'<a class="rg-cta" id="rgHeadCta" href="#" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div>'
-   +'<div class="rg-deco"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div></div>';
-  var listRows=group.map(function(g,i){var p=g.p,e=g.e;var pc=PLATEC[i%6];var ink=(pc.indexOf('navy')>=0)?'#fff':'#000';
-   return '<button type="button" class="rg-prow'+(i===focusIdx?' sel':'')+'" data-i="'+i+'"><div class="rg-pl">'+imgTag(p.img)+'</div>'
-    +'<div><div class="rg-pn"><b>'+p.name+'</b>'+(i===0?'<span class="rg-tag mx">최대</span>':'')+'<span class="rg-tag se" data-sel hidden>선택됨</span></div><div class="rg-pi">'+(p.issuer||'')+'</div></div>'
-    +'<div class="rg-pcash"><div class="l">최대 캐시백</div><div class="v">'+_wm(e.reward_won)+'</div></div>'
-    +'<svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button>';
-  }).join('');
-  var listSec=group.length>1?('<div class="rg-sec"><div class="rg-sec-h"><div><div class="rg-eb">발급 캐시백 그룹</div><h2 class="rg-t">이 캐시백을 받는 카드</h2></div><span class="rg-hint">상품을 누르면 아래 차트·구성이 바뀌어요</span></div><div class="rg-plist" id="rgList">'+listRows+'</div></div>'):'';
+   +'<p class="rg-hsub">'+sub+'</p>'
+   +'<a class="rg-cta rg-only-pc" id="rgHeadCta" href="#" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a>'
+   +'</div><div class="rg-deco">'+EGG+'</div></div>';
+  // ── 상품 리스트 (그룹 2개 이상일 때만) ──
+  var listSec='';
+  if(N>1){
+   var rows=group.map(function(g,i){var p=g.p;var top=(i===0);
+    return '<button type="button" class="rg-prow'+(i===focusIdx?' sel':'')+'" data-i="'+i+'">'
+     +'<div class="rg-pl">'+imgTag(p.img)+'</div>'
+     +'<div><div class="rg-pn"><b>'+p.name+'</b>'+(top?'<span class="rg-tag mx rg-only-pc">최대</span>':'')+'<span class="rg-tag se" data-sel hidden><span class="rg-only-pc">선택됨</span><span class="rg-only-mo">선택</span></span></div><div class="rg-pi">'+(p.issuer||'')+'</div></div>'
+     +'<div class="rg-pcash"><div class="l rg-only-pc">최대 캐시백</div><div class="v">'+_wm(g.e.reward_won)+'</div></div>'
+     +'<svg class="rg-parr rg-only-pc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button>';
+   }).join('');
+   listSec='<div class="rg-sec"><div class="rg-listhd"><h2>이 캐시백을 받는 카드</h2><span class="hint">상품을 누르면 아래 차트·구성이 바뀌어요</span></div><div class="rg-plist" id="rgList">'+rows+'</div></div>';
+  }
   root.innerHTML=head+listSec+'<div id="rgDyn"></div>';
   function buildSeries(p,e){var nk=_nk(p.name);var total=e.reward_won||0,bonus=e.bonus_won||0;if(bonus>=total)bonus=0;var main=Math.max(total-bonus,0);
-   var series=months.map(function(m,i){if(m===_cm)return {m:m,v:total,main:main,sub:bonus,cur:true};
+   var series=months.map(function(m,i){if(m===_cm)return {m:m,v:total,sub:bonus,cur:true};
     var snap=MS[i],v=null;if(snap){var c=(snap.cards||[]).filter(function(x){return _nk(x.name)===nk;})[0];if(c&&c.max)v=c.max;
      if(v==null&&snap.issuers&&p.issuer&&snap.issuers[p.issuer]){var im=snap.issuers[p.issuer];var vv=Object.keys(im).map(function(kk){return im[kk];});if(vv.length)v=Math.max.apply(null,vv);}}
     return {m:m,v:v};});
    return {series:series,total:total,main:main,sub:bonus};}
   function renderDyn(i){var g=group[i],p=g.p,e=g.e;var S=buildSeries(p,e);
+   // 차트
    var vals=S.series.filter(function(s){return s.v!=null&&s.v>0;}).map(function(s){return s.v;});
    var peak=vals.length?Math.max.apply(null,vals):S.total;var scale=Math.max(peak*1.12,10000);
    var bars=S.series.map(function(s){
@@ -1626,36 +1711,42 @@ Promise.all([
     var hp2=Math.max(s.v/scale*100,4);
     return '<div class="rg-col"><div class="lbl">'+_man(s.v)+'만</div><div class="rg-bar" style="height:'+hp2+'%"></div><div class="mm">'+_mlabel(s.m)+'</div></div>';
    }).join('');
-   var hasCur=S.total>0;var emptyNote=hasCur?'':'<div class="rg-note-c"><span>이번 달 집계된 캐시백이 아직 없어요</span></div>';
-   var chart='<div class="rg-sec"><div class="rg-chart"><div class="rg-chart-h"><div><div class="rg-eb">티라노차트 · 캐시백 추이</div><h2 class="rg-t">'+p.name+' · 최근 4개월</h2></div>'
-    +'<div class="rg-sums"><div><div class="l">당월 전체</div><div class="v">'+(S.total?_wm(S.total):'—')+'</div></div><div><div class="l">주요</div><div class="v" style="color:var(--block-navy)">'+(S.main?_wm(S.main):'—')+'</div></div><div><div class="l">부가</div><div class="v" style="color:rgba(31,29,61,.55)">'+(S.sub?_wm(S.sub):'—')+'</div></div></div></div>'
-    +'<div class="rg-bars'+(hasCur?'':' rg-note')+'">'+bars+emptyNote+'</div>'
-    +'<div class="rg-legend"><span><i style="background:var(--accent-magenta)"></i>이번달 · 주요</span><span><i style="background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),var(--accent-magenta)"></i>이번달 · 부가</span><span><i style="background:var(--block-navy)"></i>직전 3개월</span></div></div></div>';
-   var subItems='';var bd=(e.breakdown||[]).filter(function(b){return b.won&&b.won>0&&b.won<S.total;});
-   if(S.sub>0){if(bd.length){subItems=bd.map(function(b){return '<div class="rg-sub"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><div><div class="t">부가 캐시백</div><div class="c">'+(b.text||'조건 충족 시')+'</div></div><span class="v">+'+_wm(b.won)+'</span></div>';}).join('');}
-    else{subItems='<div class="rg-sub"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><div><div class="t">부가 캐시백</div><div class="c">조건 충족 시</div></div><span class="v">+'+_wm(S.sub)+'</span></div>';}}
-   var comp='<div class="rg-sec"><div class="rg-eb">캐시백 구성</div><h2 class="rg-t">전체 캐시백 구성</h2><p class="rg-hint" style="margin-top:4px"><b style="font-weight:700;color:#000">'+p.name+'</b> 기준 · 주요(조건 금액 이상 이용 시) + 부가(조건별)</p>'
-    +'<div class="rg-main"><div class="l">주요 캐시백</div><div class="row"><span class="t">조건 금액 이상 이용 시</span><span class="v">'+(S.main?_wm(S.main):'—')+'</span></div></div>'
-    +(S.sub>0?('<div class="rg-subh">부가 캐시백 · 조건별</div><div class="rg-subs">'+subItems+'</div>'):'<div class="rg-subh">부가 캐시백</div><div class="rg-subnone">이 상품은 부가 캐시백 없이 주요 캐시백으로 구성돼요.</div>')+'</div>';
+   var emptyNote=(S.total>0)?'':'<div class="rg-note-c"><span>이번 달 집계된 캐시백이 아직 없어요</span></div>';
+   var chart='<div class="rg-chart"><div class="rg-chart-h"><div><div class="rg-ceb rg-only-pc">티라노차트 · 캐시백 추이</div><h2 class="rg-ct">'+p.name+' · 최근 4개월</h2></div>'
+    +'<div class="rg-sums rg-only-pc"><div><div class="l">당월 전체</div><div class="v">'+(S.total?_wm(S.total):'—')+'</div></div><div><div class="l">주요</div><div class="v" style="color:var(--block-navy)">'+(S.main?_wm(S.main):'—')+'</div></div><div><div class="l">부가</div><div class="v" style="color:rgba(31,29,61,.55)">'+(S.sub?_wm(S.sub):'—')+'</div></div></div></div>'
+    +'<div class="rg-bars'+(S.total>0?'':' empty')+'">'+bars+emptyNote+'</div>'
+    +'<div class="rg-legend"><span class="lg"><i class="rg-lg-mag"></i><span class="rg-only-pc">이번달 · 주요 캐시백</span><span class="rg-only-mo">주요</span></span><span class="lg"><i class="rg-lg-sub"></i><span class="rg-only-pc">이번달 · 부가 캐시백</span><span class="rg-only-mo">부가</span></span><span class="lg"><i class="rg-lg-navy"></i><span class="rg-only-pc">직전 3개월 합계</span><span class="rg-only-mo">직전 합계</span></span></div></div>';
+   // 구성 (cards.json main_tier·sub_tiers)
+   var cd=CARDMAP[_nk(p.name)]||{};var mt=cd.main_tier,st=(cd.sub_tiers||[]);
+   var mainReward=(mt&&mt.reward)?mt.reward:S.main;
+   var subItems='';
+   if(st.length){subItems=st.map(function(s){return '<div class="rg-sub" title="'+_esc(s.text)+'"><span class="ic" style="background:'+(CATBG[s.cat]||'var(--surface-soft)')+'">'+catIcon(s.cat)+'</span><div><div class="t">'+(s.cat||'부가')+'</div><div class="c">'+(CATCOND[s.cat]||'조건 충족 시')+'</div></div><span class="v">+'+_wm(s.reward)+'</span></div>';}).join('');}
+   else if(S.sub>0){subItems='<div class="rg-sub"><span class="ic" style="background:var(--surface-soft)">'+catIcon('')+'</span><div><div class="t">부가 캐시백</div><div class="c">조건 충족 시</div></div><span class="v">+'+_wm(S.sub)+'</span></div>';}
+   var comp='<div class="rg-comp"><div class="rg-comp-eb rg-only-pc">캐시백 구성</div><h2 class="rg-comp-t">전체 캐시백 구성</h2><p class="rg-comp-p"><b>'+p.name+'</b> 기준<span class="rg-only-pc"> · 주요(조건 금액 이상 이용 시) + 부가(조건별)</span></p>'
+    +'<div class="rg-main"><div class="l">주요 캐시백</div><div class="row"><span class="t">조건 금액 이상 이용 시</span><span class="v">'+(mainReward?_wm(mainReward):'—')+'</span></div></div>'
+    +(subItems?('<div class="rg-subh">부가 캐시백<span class="rg-only-pc"> · 조건 카테고리별</span></div><div class="rg-subs">'+subItems+'</div>'):'<div class="rg-subh">부가 캐시백</div><div class="rg-subnone">이 상품은 부가 캐시백 없이 주요 캐시백으로 구성돼요.</div>')+'</div>';
+   // 티라노 코칭
    var maxOther=0;(p.events||[]).forEach(function(x){if(x.platform!==P&&(x.reward_won||0)>maxOther)maxOther=x.reward_won;});
    var rec=(S.total>=maxOther)?'rec':(S.total>=maxOther*0.8?'hold':'no');
    var recLab=rec==='rec'?'추천':(rec==='hold'?'보류':'비추천');var recCls=rec==='rec'?'':(rec==='hold'?'hold':'no');
-   var recColor=rec==='rec'?'var(--success)':(rec==='hold'?'#cf9220':'rgba(0,0,0,.55)');
-   var recMsg=rec==='rec'?(p.name+'은 지금 '+pnm+' 발급이 유리해요.'+(maxOther?' 다른 채널보다 최대 '+_wm(S.total-maxOther)+' 더 받아요.':'')):(rec==='hold'?(pnm+' 캐시백도 괜찮지만, 다른 채널이 최대 '+_wm(maxOther-S.total)+' 더 클 수 있어요.'):('다른 채널이 최대 '+_wm(maxOther-S.total)+' 더 커요. 비교 후 결정하세요.'));
-   var coach='<div class="rg-sec"><div class="rg-eb">티라노 코칭</div><h2 class="rg-t">발급 적기</h2><div class="rg-coach"><div class="rg-coach-badge"><span class="rg-coach-ring '+recCls+'"><span></span></span><div class="lab" style="color:'+recColor+'">'+recLab+'</div><div class="mono">티라노 코칭</div></div>'
-    +'<div class="rg-coach-body"><div class="t">'+recMsg+'</div><div class="rg-coach-leg"><span>○ 추천 — 지금 발급</span><span>△ 보류 — 추이 지켜보기</span><span>✕ 비추천 — 다음 달 권장</span></div></div></div></div>';
+   var isPeak=vals.length?(S.total>=Math.max.apply(null,vals)):true;
+   var recMsg=rec==='rec'?(p.name+'은 지금이 발급 적기예요. 당월 전체 '+_wm(S.total)+(isPeak?'으로 최근 4개월 중 가장 커요.':'으로 발급 캐시백이 좋아요.')):(rec==='hold'?(pnm+' 캐시백도 괜찮지만, 다른 채널이 최대 '+_wm(maxOther-S.total)+' 더 클 수 있어요.'):('다른 채널이 최대 '+_wm(maxOther-S.total)+' 더 커요. 비교 후 결정하세요.'));
+   var coach='<div class="rg-coach"><div class="rg-coach-badge"><span class="rg-coach-ring '+recCls+'"><span></span></span><div class="lab rg-only-pc" style="color:'+(rec==='rec'?'var(--success)':(rec==='hold'?'#cf9220':'rgba(0,0,0,.55)'))+'">'+recLab+'</div><div class="mono rg-only-pc">티라노 코칭</div></div>'
+    +'<div><div class="rg-coach-head rg-only-pc">'+TYR+'<span class="eb">티라노 코칭</span></div><div class="rg-coach-molab rg-only-mo '+recCls+'">'+recLab+' · 티라노 코칭</div><div class="rg-coach-t">'+recMsg+'</div>'
+    +'<div class="rg-coach-leg rg-only-pc"><span><span class="dot o"></span>추천 — 지금 발급</span><span><svg class="dot" viewBox="0 0 24 24" style="color:rgba(0,0,0,.6)"><path d="M12 5l8 14H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>보류 — 추이 지켜보기</span><span><svg class="dot" viewBox="0 0 24 24" style="color:rgba(0,0,0,.6)"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>비추천 — 다음 달 권장</span></div></div></div>';
+   // 이런 이벤트도 있어요 (PC만 — 모바일 시안에 없음)
    var nk=_nk(p.name);var orows=[];
    var op=null,opw=0;(p.events||[]).forEach(function(x){if(x.platform!==P&&(x.reward_won||0)>opw){opw=x.reward_won;op=x;}});
    if(op&&opw>S.total)orows.push({tag:'다른 플랫폼 · 더 큼',tagBg:'var(--block-lime)',tagFg:'#000',name:p.name,issuer:p.issuer,plat:op.platform,amt:opw,img:p.img,href:'events.html?platform='+op.platform+'&n='+encodeURIComponent(p.name)});
    var si=PE.filter(function(q){return q.issuer===p.issuer&&_nk(q.name)!==nk;}).map(function(q){var ee=evOf(q);return ee?{q:q,w:ee.reward_won}:null;}).filter(Boolean).sort(function(a,b){return b.w-a.w;})[0];
    if(si)orows.push({tag:'같은 카드사 · '+pnm,tagBg:'var(--surface-soft)',tagFg:'rgba(0,0,0,.7)',name:si.q.name,issuer:si.q.issuer,plat:P,amt:si.w,img:si.q.img,href:'events.html?platform='+P+'&n='+encodeURIComponent(si.q.name)});
    var pmax=platGroup[0];if(pmax&&pmax.e.reward_won>S.total&&_nk(pmax.p.name)!==nk)orows.push({tag:'이번달 최대 혜택',tagBg:'#000',tagFg:'#fff',name:pmax.p.name,issuer:pmax.p.issuer,plat:P,amt:pmax.e.reward_won,img:pmax.p.img,href:'events.html?platform='+P+'&n='+encodeURIComponent(pmax.p.name)});
-   var othersHtml=orows.length?('<div class="rg-sec"><h2 class="rg-t">이런 이벤트도 있어요</h2><div class="rg-others">'+orows.map(function(o){var oc=PBC[o.plat]||'#888';return '<a class="rg-orow" href="'+o.href+'"><div class="rg-pl" style="width:54px">'+imgTag(o.img)+'</div><div><span class="rg-otag" style="background:'+o.tagBg+';color:'+o.tagFg+'">'+o.tag+'</span><div class="rg-pn"><b style="font-size:15px">'+o.name+'</b></div><div class="rg-pi"><i style="display:inline-block;width:6px;height:6px;border-radius:50%;background:'+oc+';margin-right:5px"></i>'+(o.issuer||'')+' · '+(PNM[o.plat]||o.plat)+'</div></div><div class="rg-pcash"><div class="l">캐시백</div><div class="v">'+_wm(o.amt)+'</div></div><svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>';}).join('')+'</div></div>'):'';
-   var foot='<div class="rg-foot">· 표기된 캐시백·조건은 공개 데이터 수집 시점 기준이며 실제 적용 금액·조건은 달라질 수 있어요. <b>상세한 캐시백 정보는 각 플랫폼사에서 최종 확인하세요.</b> 카드티라노는 발급을 중개·접수하지 않는 광고·정보제공 매체입니다.</div>';
-   document.getElementById('rgDyn').innerHTML=chart+comp+coach+othersHtml+foot;
+   var others=orows.length?('<div class="rg-others-sec rg-only-pc"><h2>이런 이벤트도 있어요</h2><div class="rg-others">'+orows.map(function(o){var oc=PBC[o.plat]||'#888';return '<a class="rg-orow" href="'+o.href+'"><div class="rg-pl">'+imgTag(o.img)+'</div><div><span class="rg-otag" style="background:'+o.tagBg+';color:'+o.tagFg+'">'+o.tag+'</span><div class="rg-pn"><b style="font-size:15px">'+o.name+'</b></div><div class="rg-pi"><i style="display:inline-block;width:6px;height:6px;border-radius:50%;background:'+oc+';margin-right:5px"></i>'+(o.issuer||'')+' · '+(PNM[o.plat]||o.plat)+'</div></div><div class="rg-pcash"><div class="l">캐시백</div><div class="v">'+_wm(o.amt)+'</div></div><svg class="rg-parr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>';}).join('')+'</div></div>'):'';
+   var foot='<p class="rg-foot"><span class="rg-only-pc">· 표기된 캐시백·조건·효율은 공개 데이터 수집 시점 기준이며 실제 적용 금액·조건은 달라질 수 있어요. </span>· <b>상세한 캐시백 정보는 각 플랫폼사에서 최종 확인하세요.</b> 카드티라노는 발급을 중개·접수하지 않는 광고·정보제공 매체입니다.</p>';
+   document.getElementById('rgDyn').innerHTML=chart+comp+coach+others+foot;
    var _ppd=(p.platforms||{})[P]||{};var edUrl=_best(P,e.url||_ppd.url,_ppd.id);if(P==='cardgorilla'){var _cg=_cgUrl(p.issuer,_ppd.id);if(_cg)edUrl=_cg;}if(!edUrl)edUrl=e.url||'#';
    var hc=document.getElementById('rgHeadCta');if(hc)hc.setAttribute('href',edUrl);
-   document.getElementById('rgFloat').innerHTML='<div class="rg-float"><div class="in"><div class="lab"><b>'+pnm+'</b> 발급 캐시백 · 최대 '+_wm(S.total)+'</div><a class="go" href="'+edUrl+'" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div></div>';
+   document.getElementById('rgFloat').innerHTML='<div class="rg-float"><div class="in"><div class="lab rg-only-pc"><b>'+pnm+'</b> 발급 캐시백 · 최대 '+_wm(S.total)+'</div><a class="go" href="'+edUrl+'" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div></div>';
    document.title=pnm+' 발급 캐시백 · '+p.name+' | 카드티라노';
    if(window.repairImages)repairImages();
   }
@@ -2131,8 +2222,140 @@ def _seo_static_index():
       +intro+'<div class="seo-tbl-wrap">'+table+'</div>'+rank+links+'</div></section>')
 SEO_STATIC_INDEX=_seo_static_index()
 
+# ===== ABOUT (카드티라노란?) =====
+ABOUT_BODY=(r'''<style>
+.ab{font-family:'Pretendard','Pretendard Variable',-apple-system,sans-serif}
+.ab .eb{font-family:var(--font-mono,monospace);font-size:12px;letter-spacing:.7px;text-transform:uppercase}
+.ab .sec{padding:0 0 84px}
+.ab .block{border-radius:24px;position:relative;overflow:hidden}
+.ab-hero{background:var(--block-lilac);padding:72px 64px}
+.ab-hero h1{font-weight:330;font-size:64px;line-height:1.02;letter-spacing:-2.2px;margin:18px 0 0;max-width:760px}
+.ab-hero p{font-weight:400;font-size:18px;line-height:1.5;margin:26px 0 0;max-width:560px;color:rgba(0,0,0,.72)}
+.ab-wm{position:absolute;right:-40px;bottom:-56px;width:300px;opacity:.16;color:#000}
+.ab-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none}.ab-cta svg{width:17px;height:17px}
+.ab-cta2{display:inline-flex;align-items:center;padding:14px 24px;border-radius:50px;background:rgba(255,255,255,.7);font-weight:540;font-size:15px;text-decoration:none;color:#000}
+.ab-g2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ab-h2{font-weight:330;font-size:46px;line-height:1.04;letter-spacing:-1.5px;margin:14px 0 0}
+.ab-card{border:1px solid var(--hairline);border-radius:20px;padding:30px 32px;background:#fff}
+.ab-bar{flex:1;height:12px;border-radius:50px;background:var(--surface-soft);overflow:hidden}.ab-bar i{display:block;height:100%;border-radius:50px}
+.ab-lime{background:var(--block-lime);padding:64px}
+.ab-navy{background:var(--block-navy);color:#fff;padding:72px 64px}
+.ab-navy h2{font-weight:330;font-size:50px;line-height:1.04;letter-spacing:-1.7px;margin:16px 0 0;max-width:780px}
+.ab-navy p{font-weight:400;font-size:17px;line-height:1.55;margin:16px 0 0;max-width:620px;color:rgba(255,255,255,.78)}.ab-navy p b{color:#fff;font-weight:700}
+.ab-stats{display:flex;gap:40px;margin-top:44px;flex-wrap:wrap}.ab-stats .v{font-weight:700;font-size:38px;letter-spacing:-1.2px}.ab-stats .l{font-weight:400;font-size:13.5px;color:rgba(255,255,255,.62);margin-top:4px}
+.ab-eg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.ab-ec{border-radius:20px;padding:28px 26px;display:flex;gap:22px;overflow:hidden;position:relative}
+.ab-ec .gl{flex-shrink:0;display:flex;align-items:center;justify-content:center}.ab-ec .gl svg{width:100%;height:auto;color:#000}
+.ab-ec .role{font-family:var(--font-mono,monospace);font-size:10px;color:rgba(0,0,0,.5)}
+.ab-ec .nm{font-weight:700;font-size:22px;letter-spacing:-.5px;margin-top:6px}
+.ab-ec .tag{font-weight:540;font-size:14px;margin-top:10px;color:rgba(0,0,0,.85)}
+.ab-ec .ds{font-weight:400;font-size:13.5px;line-height:1.5;margin-top:6px;color:rgba(0,0,0,.62)}
+.ab-cream{background:var(--block-cream);border-radius:24px;padding:80px 64px;text-align:center}
+.ab-cream h2{font-weight:330;font-size:52px;line-height:1.08;letter-spacing:-1.8px;margin:18px auto 0;max-width:820px}
+.ab-co-card{background:#000;color:#fff;border-radius:24px;padding:48px 44px}
+.ab-co-card h3{font-weight:330;font-size:30px;letter-spacing:-.9px;line-height:1.15;margin:0}
+@media(max-width:760px){
+ .ab-hero{padding:36px 24px}.ab-hero h1{font-size:34px;letter-spacing:-1.2px}.ab-hero p{font-size:15px}
+ .ab .sec{padding:0 0 48px}
+ .ab-g2{grid-template-columns:1fr;gap:28px}
+ .ab-h2{font-size:28px}
+ .ab-lime{padding:32px 24px}.ab-lime .ab-g2{gap:28px}
+ .ab-navy{padding:40px 24px}.ab-navy h2{font-size:30px;letter-spacing:-1px}.ab-navy p{font-size:15px}
+ .ab-stats{gap:24px}.ab-stats .v{font-size:30px}
+ .ab-eg{grid-template-columns:1fr;gap:12px}.ab-ec{grid-column:auto!important;flex-direction:row!important;align-items:center!important}.ab-ec .gl{width:96px!important}
+ .ab-cream{padding:40px 24px}.ab-cream h2{font-size:30px;letter-spacing:-1px}
+ .ab-card{padding:22px 20px}
+ .ab-hero-ctas{flex-wrap:wrap}
+}
+</style>'''
+ # 공룡 5종 글리프(이 페이지 전용)
+ '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>'
+ '<symbol id="d-brachio" viewBox="0 0 120 100"><g fill="currentColor"><rect x="36" y="62" width="9" height="30" rx="4"/><rect x="50" y="64" width="9" height="28" rx="4"/><rect x="68" y="64" width="9" height="28" rx="4"/><rect x="80" y="62" width="9" height="30" rx="4"/><ellipse cx="64" cy="58" rx="30" ry="18"/><path d="M90 56 Q110 52 118 64 Q104 60 90 66 Z"/><path d="M46 60 Q30 50 30 30 Q30 13 41 9 Q34 22 43 35 Q49 49 58 55 Z"/><ellipse cx="36" cy="11" rx="9.5" ry="7.5"/><path d="M28 9 q-6 -1 -8 3 q5 1 8 -1 z"/></g></symbol>'
+ '<symbol id="d-ptera" viewBox="0 0 120 100"><g fill="currentColor"><polygon points="60,52 6,28 16,40 34,54"/><polygon points="60,52 114,28 104,40 86,54"/><ellipse cx="60" cy="56" rx="12" ry="17"/><path d="M56 42 Q50 31 36 30 Q52 24 60 33 L78 26 Q74 37 65 42 Z"/><rect x="52" y="70" width="7" height="20" rx="3"/><rect x="61" y="70" width="7" height="20" rx="3"/></g></symbol>'
+ '<symbol id="d-eoraptor" viewBox="0 0 120 100"><g fill="currentColor"><path d="M58 56 Q88 56 116 68 Q90 62 60 65 Z"/><path d="M48 58 l9 0 -3 32 -8 0 z"/><path d="M60 58 l9 0 -2 32 -8 0 z"/><path d="M38 54 Q31 39 43 31 Q52 22 61 29 Q68 34 65 49 L63 60 L43 60 Q38 59 38 54 Z"/><path d="M47 33 Q43 20 32 16 Q27 12 21 15 Q28 18 28 25 Q32 31 45 38 Z"/><ellipse cx="24" cy="14" rx="8.5" ry="6.5"/><path d="M16 13 q-7 0 -9 3 q6 1 9 -1 z"/><path d="M45 42 Q52 47 52 54 Q47 49 42 49 Z"/></g></symbol>'
+ '<symbol id="d-quetzal" viewBox="0 0 140 92"><g fill="currentColor"><path d="M70 40 Q40 15 7 33 Q34 33 51 46 Q30 46 17 59 Q44 50 68 50 Z"/><path d="M70 40 Q100 15 133 33 Q106 33 89 46 Q110 46 123 59 Q96 50 72 50 Z"/><ellipse cx="70" cy="46" rx="8" ry="14"/><path d="M68 35 Q66 22 76 16 Q70 15 65 21 Q62 29 64 38 Z"/><path d="M74 17 L106 9 L77 23 Z"/><polygon points="76,16 72,3 84,15"/></g></symbol>'
+ '<symbol id="d-maia" viewBox="0 0 120 100"><g><path fill="currentColor" d="M44 70 Q40 38 66 34 Q92 32 96 60 Q97 68 92 73 Z"/><path fill="currentColor" d="M92 62 Q106 62 113 72 Q100 66 90 68 Z"/><path fill="currentColor" d="M52 44 Q40 25 23 26 Q33 17 46 23 Q58 29 62 42 Z"/><ellipse cx="21" cy="27" rx="9" ry="7" fill="currentColor"/><path fill="currentColor" d="M13 29 q-9 1 -11 5 q8 2 13 -1 z"/><polygon points="25,21 29,10 34,21" fill="currentColor"/><ellipse cx="52" cy="80" rx="40" ry="11" fill="currentColor"/><g fill="#fff" stroke="currentColor" stroke-width="2.2"><ellipse cx="36" cy="75" rx="7.5" ry="10"/><ellipse cx="52" cy="77" rx="8" ry="10.5"/><ellipse cx="68" cy="75" rx="7.5" ry="10"/></g></g></symbol>'
+ '</defs></svg>'
+ '<div class="ab"><div class="wrap">'
+ # HERO
+ '<section class="sec" style="padding-top:40px"><div class="block ab-hero"><svg class="ab-wm" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>'
+ '<div class="eb" style="color:rgba(0,0,0,.55)">카드티라노란?</div>'
+ '<h1>받을 수 있는 혜택을,<br>다 받게.</h1>'
+ '<p>카드 혜택은 분명히 거기 있습니다. 다만 너무 흩어져 있고, 너무 자주 바뀝니다. 그 손해를 끝내려고 — 카드티라노가 나섰습니다.</p>'
+ '<div class="ab-hero-ctas" style="display:flex;gap:12px;margin-top:34px;flex-wrap:wrap">'
+ '<a class="ab-cta" href="issue.html?v=cmp">한눈에 비교 시작하기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>'
+ '<a class="ab-cta2" href="issue.html">이번 달 캐시백 보기</a></div></div></section>'
+ # PROBLEM
+ '<section class="sec"><div class="ab-g2">'
+ '<div><div class="eb" style="color:var(--accent-magenta)">정보의 비대칭</div>'
+ '<h2 class="ab-h2">같은 카드인데,<br>받는 혜택이 다릅니다</h2>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:22px 0 0;color:rgba(0,0,0,.72)">토스·카드고릴라·아정당·카카오페이·뱅크샐러드. 같은 카드를 발급해도 <b style="font-weight:700">어디서 받느냐에 따라 캐시백이 수십만 원씩</b> 차이 납니다. 그리고 그 금액은 매달 바뀝니다.</p>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:16px 0 0;color:rgba(0,0,0,.72)">혜택 정보는 카드사와 플랫폼만 훤히 알고, 정작 받아야 할 사용자는 모릅니다. 우리는 이 정보의 비대칭이 카드 시장에서 <b style="font-weight:700">가장 불공평한 지점</b>이라고 생각했습니다.</p></div>'
+ '<div class="ab-card"><div class="mono" style="font-size:10px;color:rgba(0,0,0,.45);margin-bottom:6px">같은 카드 · 같은 달 · 플랫폼별 캐시백</div>'
+ '<div style="font-weight:700;font-size:17px;letter-spacing:-.3px;margin-bottom:20px">트래블 캐시백 카드</div>'
+ '<div style="display:flex;flex-direction:column;gap:13px">'
+ + "".join('<div style="display:flex;align-items:center;gap:12px"><span style="width:64px;font-weight:540;font-size:13px;white-space:nowrap">%s</span><div class="ab-bar"><i style="width:%s;background:%s"></i></div><span style="width:52px;text-align:right;font-weight:700;font-size:14px;white-space:nowrap;color:%s">%s</span></div>'%(n,w,f,t,v) for n,v,w,f,t in [
+   ("토스","14만","100%","#000","#000"),("아정당","11만","78%","#cfcfcf","rgba(0,0,0,.55)"),("고릴라","9만","64%","#cfcfcf","rgba(0,0,0,.55)"),("카카오","8만","57%","#cfcfcf","rgba(0,0,0,.55)"),("뱅샐","7만","50%","#cfcfcf","rgba(0,0,0,.55)")])
+ + '</div><div style="font-weight:400;font-size:12.5px;color:rgba(0,0,0,.5);margin-top:18px;line-height:1.5">같은 카드인데 최대 <b style="font-weight:700;color:#000">2배 차이</b>. 어디가 가장 많이 주는지, 직접 비교는 사실상 불가능합니다.</div></div>'
+ '</div></section>'
+ # SOLUTION 한눈에 비교
+ '<section class="sec"><div class="block ab-lime"><div class="ab-g2">'
+ '<div><div class="eb" style="color:rgba(0,0,0,.55)">한눈에 비교</div>'
+ '<h2 class="ab-h2">흩어진 혜택을,<br>한곳에 모았습니다</h2>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:22px 0 0;color:rgba(0,0,0,.74)">6개 발급 플랫폼의 신규 발급 캐시백, 가맹점 결제 할인, 무이자 할부까지 — 매달 수집하고 분석해, <b style="font-weight:700">\'가장 많이 주는 곳\'을 골라 한눈에</b> 보여드립니다.</p>'
+ '<p style="font-weight:540;font-size:16px;line-height:1.5;margin:16px 0 0">"이 카드, 어디서 받아야 제일 이득이지?"에 대한 답을, 검색 없이.</p>'
+ '<p style="font-weight:400;font-size:15px;line-height:1.5;margin:18px 0 0;color:rgba(0,0,0,.66)">복잡한 건 우리가 할게요. 당신은 가장 이득인 결과만 보면 됩니다.</p></div>'
+ '<div style="background:#fff;border-radius:20px;padding:28px 30px;box-shadow:0 4px 16px rgba(0,0,0,.06)">'
+ '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px"><span class="mono" style="font-size:10px;color:rgba(0,0,0,.45)">6개 플랫폼 → 가장 이득인 1곳</span><span style="width:26px;height:26px;border-radius:50%;background:var(--block-lime);display:flex;align-items:center;justify-content:center"><svg viewBox="2 3.6 20 16.4" style="width:16px;height:16px"><use href="#mk"/></svg></span></div>'
+ '<div style="display:flex;flex-direction:column;gap:10px">'
+ + "".join('<div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:12px;background:%s;border:%s"><span style="width:8px;height:8px;border-radius:50%%;background:%s;flex-shrink:0"></span><span style="font-weight:540;font-size:13.5px;flex:1;color:%s">%s</span>%s<span style="font-weight:700;font-size:15px;white-space:nowrap;color:%s">%s</span></div>'%(bg,bd,dot,nc,nm,('<span class="mono" style="font-size:8px;background:#000;color:#fff;padding:3px 8px;border-radius:50px">최고</span>' if win else ''),vc,v) for nm,v,dot,win,bg,bd,nc,vc in [
+   ("토스","14만원","#3182F6",True,"var(--block-lime)","1px solid #000","#000","#000"),
+   ("아정당","11만원","#1B64DA",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("카드고릴라","9만원","#FF6A13",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("카카오페이","8만원","#FEE500",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("뱅크샐러드","7만원","#19C37D",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)"),
+   ("네이버페이","6만원","#03C75A",False,"var(--surface-soft)","1px solid transparent","rgba(0,0,0,.7)","rgba(0,0,0,.55)")])
+ + '</div></div></div></div></section>'
+ # SKYSCANNER VISION
+ '<section class="sec"><div class="block ab-navy"><svg viewBox="0 0 140 92" style="position:absolute;right:34px;top:40px;width:170px;opacity:.16;color:#fff"><use href="#d-quetzal"/></svg>'
+ '<div class="eb" style="color:rgba(255,255,255,.6)">우리가 꿈꾸는 것</div>'
+ '<h2>카드 시장의 스카이스캐너를<br>꿈꿉니다</h2>'
+ '<p>항공권을 살 때 우리는 더 이상 항공사 사이트를 일일이 돌지 않습니다. 한 곳에서 <b>모든 항공사를 비교</b>하고, 가장 싼 항공권을 찾으니까요.</p>'
+ '<p>카드도 그래야 한다고 믿습니다. <b>모든 발급 플랫폼의 혜택을 한 화면에서 비교</b>해, 가장 이득인 곳을 찾는 곳. 카드티라노가 그 자리를 만들고 있습니다.</p>'
+ '<div class="ab-stats">'
+ + "".join('<div><div class="v">%s</div><div class="l">%s</div></div>'%(v,l) for v,l in [("6개","발급 플랫폼 통합 비교"),("매달","전수 수집·재분석"),("4인","사이트·사업·마케팅·분석 전문")])
+ + '</div></div></section>'
+ # EXPERTS 공룡
+ '<section class="sec"><div style="max-width:680px"><div class="eb" style="color:var(--accent-magenta)">곁의 전문가</div>'
+ '<h2 class="ab-h2">데이터를 읽는 공룡 넷</h2>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:20px 0 0;color:rgba(0,0,0,.72)">자동화만으로는 \'진짜 좋은 카드\'를 가려낼 수 없습니다. 조건의 함정, 실적의 무게, 갱신 시점의 미묘한 차이는 결국 사람이 읽어야 하니까요. 그래서 카드티라노 곁에는 <b style="font-weight:700">사이트를 만든 사람과 사업·마케팅·분석을 맡은 전문가들</b>이 있습니다.</p></div>'
+ '<div class="ab-eg">'
+ + "".join('<div class="ab-ec" style="background:%s;%s;%s"><div class="gl" style="width:%s"><svg viewBox="%s"><use href="%s"/></svg></div><div style="min-width:0"><div class="role">%s</div><div class="nm">%s</div><div class="tag">%s</div><div class="ds">%s</div></div></div>'%(bg,span,flex,gw,vb,ic,role,nm,tag,desc) for ic,vb,nm,role,tag,desc,bg,span,flex,gw in [
+   ("#d-eoraptor","0 0 120 100","에오랍토르","창립자 · 메이커","최초의 공룡","카드티라노를 기획하고, 만들고, 디자인했습니다. 가장 먼저 나타난 공룡처럼 — 이 모든 것의 시작.","var(--block-lilac)","grid-column:span 2","flex-direction:row;align-items:center","140px"),
+   ("#d-maia","0 0 120 100","마이아사우라","캐시백·이벤트 분석","좋은 건 놓치지 않습니다","매달 바뀌는 캐시백과 발급 이벤트를 꼼꼼히 살펴, 가장 이득인 것을 골라냅니다.","var(--block-mint)","","flex-direction:column;align-items:flex-start","104px"),
+   ("#d-ptera","0 0 120 100","프테라노돈","마케팅 총괄","멀리, 빠르게 알립니다","카드티라노가 찾은 가장 이득인 선택을, 필요한 사람에게 가장 빠르게 전합니다.","var(--block-pink)","","flex-direction:column;align-items:flex-start","104px"),
+   ("#d-brachio","0 0 120 100","브라키오","CBO · 사업 총괄","크게, 멀리 내다봅니다","서비스가 단단히 설 수 있는 사업 기반을 다지고, 카드사·플랫폼 등 파트너와의 협업을 만들어 카드티라노가 더 멀리 나아갈 길을 엽니다.","var(--block-cream)","grid-column:span 2","flex-direction:row;align-items:center","140px")])
+ + '</div>'
+ '<p style="font-weight:400;font-size:14px;line-height:1.55;margin:26px auto 0;max-width:680px;color:rgba(0,0,0,.6);text-align:center">데이터가 숫자를 모으고, 전문가가 그 숫자에 맥락을 입힙니다. 그래서 카드티라노의 추천에는 늘 <b style="font-weight:700;color:#000">근거</b>가 있습니다.</p></section>'
+ # BELIEF
+ '<section class="sec"><div class="ab-cream"><div class="eb" style="color:rgba(0,0,0,.5)">우리의 믿음</div>'
+ '<h2>혜택은 부지런한 사람만의<br>것이 아니어야 합니다</h2>'
+ '<p style="font-weight:400;font-size:17px;line-height:1.55;margin:24px auto 0;max-width:560px;color:rgba(0,0,0,.7)">정보를 더 가졌다는 이유로 누군가는 더 받고, 모른다는 이유로 누군가는 덜 받는 일. 카드티라노는 그 격차를 메우려 합니다.</p>'
+ '<p style="font-weight:540;font-size:22px;letter-spacing:-.5px;margin:28px auto 0;max-width:560px">누구나, 받을 수 있는 혜택을 다 받는 것. 그게 우리가 만들고 싶은 카드 시장입니다.</p></div></section>'
+ # COMPANY
+ '<section class="sec"><div class="ab-g2">'
+ '<div><div style="display:flex;align-items:center;gap:11px;margin-bottom:20px"><svg viewBox="2 3.6 20 16.4" style="width:34px;height:34px"><use href="#mk"/></svg><span style="font-weight:700;font-size:22px;letter-spacing:-.5px">CARD<span style="font-weight:340">TYRANNO</span></span></div>'
+ '<p style="font-weight:400;font-size:17px;line-height:1.55;color:rgba(0,0,0,.74)"><b style="font-weight:700">데이터로 카드 혜택을 큐레이션하는 핀테크 스타트업</b>입니다. (운영: 쥬라기랩스) 오직 사용자 편에서, 흩어진 혜택을 모으고 분석해 가장 유리한 선택을 안내합니다.</p>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:18px 0 0;color:rgba(0,0,0,.66)">가장 강한 포식자가 먹잇감을 놓치지 않듯 — 당신이 받아야 할 혜택도, 카드티라노가 놓치지 않겠습니다.</p></div>'
+ '<div class="ab-co-card"><h3>이번 달, 당신에게<br>가장 유리한 선택은?</h3>'
+ '<p style="font-weight:400;font-size:15px;line-height:1.5;margin:16px 0 0;color:rgba(255,255,255,.7)">매달 쌓이는 데이터와 전문가의 시선으로 카드티라노가 안내합니다.</p>'
+ '<a class="sans" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#fff;color:#000;font-weight:540;font-size:15px;margin-top:26px;text-decoration:none" href="issue.html?v=cmp">한눈에 비교 시작하기 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div>'
+ '</div></section>'
+ '</div></div>')
+
 # ===== BUILD =====
 page("index.html",BRAND+" | 카드 발급 캐시백·할인 혜택 비교","같은 카드도 채널 따라 혜택이 달라요. 토스·카드고릴라·아정당·카카오페이의 발급 캐시백·할인을 카드티라노가 매달 비교해 드려요.","/index.html",INDEX_BODY+SEO_STATIC_INDEX,INDEX_JS,faq_jsonld(),searchbar=False,catstrip=False,active="")
+page("about.html",BRAND+" | 카드티라노란? · 서비스 소개","흩어진 카드 혜택을 모아 가장 이득인 발급처를 한눈에 비교해 드리는 카드티라노 소개 — 정보의 비대칭을 줄이는 카드 비교 핀테크(쥬라기랩스).","/about.html",ABOUT_BODY,"",active="about")
 page("discount.html",BRAND+" | 카드 할인 혜택 (가맹점·업종별)","네이버·쿠팡·무신사·이마트·GS25 등 가맹점의 카드 즉시할인·청구할인·캐시백·무이자할부를 업종·카드사별로.","/discount.html",DISC_BODY,DISC_JS,searchbar=True,catstrip=True,active="discount")
 page("cards.html",BRAND+" | 카드 찾기 (카드사별 신용카드)","삼성·현대·신한·KB국민·롯데·우리·하나·NH농협·BC·IBK 카드사별 대표 신용카드를 플레이트 이미지·연회비·혜택으로 비교.","/cards.html",CARDS_BODY,CARDS_JS,active="cards")
 page("issue.html",BRAND+" | 이번달 캐시백 (플랫폼별 비교)","카드사별 신규 발급 캐시백을 아정당·카드고릴라·토스·카카오페이 등 플랫폼별로 비교. 이번달 캐시백 리스트와 최대 혜택 비교표.","/issue.html",ISSUE_BODY,ISSUE_JS,active="issue")
