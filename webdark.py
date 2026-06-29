@@ -1783,36 +1783,171 @@ Promise.all([
 
 # ===== CHART (독자 인기순위) =====
 CHART_BODY=('<style>'
- '.crow{display:flex;align-items:center;gap:15px;padding:14px 4px;border-bottom:1px solid var(--line)}'
- '.crow .no{width:26px;font-size:18px;font-weight:900;text-align:center;font-style:italic}.crow .no.top{color:var(--accent)}'
- '.crow .pl{width:74px;height:47px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;overflow:hidden;border-radius:6px;background:#eef0f3}'
- '.crow .pl img{width:100%;height:100%;object-fit:cover;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.14)}.crow .pl .ph{font-size:22px}'
- '.crow .ci{flex:1;min-width:0}.crow .cn{font-size:14.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
- '.crow .cs{font-size:11.5px;color:var(--sub);margin-top:3px}.crow .src{color:var(--dim)}'
+ '.ch-wrap{max-width:880px;margin:0 auto}'
+ '.ch-top{padding:20px 0 0}.ch-h1{font-weight:330;font-size:30px;letter-spacing:-1px;margin:0}.ch-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
+ # 히어로 롤링 캐러셀
+ '.ch-hero{margin-top:16px}.ch-vp{overflow:hidden;border-radius:20px}'
+ '.ch-track{display:flex;width:200%;transition:transform .6s cubic-bezier(.4,0,.2,1)}'
+ '.ch-slide{width:50%;flex-shrink:0;position:relative;overflow:hidden;padding:20px 18px}'
+ '.ch-s1{background:var(--block-lime)}.ch-s2{background:var(--block-lilac);min-height:198px}'
+ '.ch-face{position:absolute;opacity:.12;color:#000;pointer-events:none}'
+ '.ch-eb{font-family:var(--font-mono,monospace);font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:rgba(0,0,0,.6)}'
+ '.ch-idxrow{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:8px}.ch-idx{font-weight:330;font-size:34px;letter-spacing:-1.2px;white-space:nowrap}'
+ '.ch-up{display:inline-flex;align-items:center;gap:2px;font-weight:700;font-size:12px}.ch-up svg{width:12px;height:12px}'
+ '.ch-s1 .cap{font-weight:400;font-size:12px;color:rgba(0,0,0,.65);margin-top:3px}'
+ '.ch-spark{display:flex;align-items:flex-end;gap:7px;height:62px;margin-top:14px}.ch-spark .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}.ch-spark .b{width:64%;max-width:22px;border-radius:4px 4px 0 0;min-height:2px}'
+ '.ch-s2 h2{font-weight:330;font-size:24px;letter-spacing:-.8px;margin:8px 0 0}.ch-s2 .amt{font-weight:700;font-size:21px;letter-spacing:-.5px;margin-top:5px}'
+ '.ch-s2 .who{font-weight:400;font-size:12px;color:rgba(0,0,0,.7);margin:7px 0 0}.ch-s2 .who b{font-weight:700}'
+ '.ch-s2 .cta{display:inline-flex;align-items:center;gap:6px;padding:10px 15px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:13px;margin-top:13px;cursor:pointer;border:0;font-family:inherit}.ch-s2 .cta svg{width:14px;height:14px}'
+ '.ch-plate{position:absolute;right:-14px;bottom:14px;width:108px;transform:rotate(-9deg);border-radius:9px;overflow:hidden;box-shadow:0 12px 24px rgba(0,0,0,.2);aspect-ratio:1.586/1;background:var(--block-cream)}.ch-plate img{width:100%;height:100%;object-fit:cover;display:block}'
+ '.ch-dots{display:flex;justify-content:center;gap:7px;margin-top:12px}.ch-dot{height:7px;width:7px;border-radius:50px;cursor:pointer;transition:all .3s;background:rgba(0,0,0,.22);border:0;padding:0}.ch-dot.on{width:22px;background:#000}'
+ # 카드 패널
+ '.ch-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 18px;margin-top:18px}'
+ '.ch-cardh{display:flex;align-items:flex-end;justify-content:space-between;gap:10px}.ch-ct{font-weight:330;font-size:23px;letter-spacing:-.7px;margin:5px 0 0}'
+ # 추이
+ '.ch-bars{display:flex;align-items:flex-end;gap:10px;height:150px;margin-top:22px}.ch-bars .col{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px}'
+ '.ch-bars .v{font-weight:700;font-size:12px;white-space:nowrap}.ch-bars .bar{width:62%;max-width:34px;border-radius:6px 6px 0 0;min-height:2px}.ch-bars .bar.empty{background:transparent;border:1.5px dashed var(--hairline);min-height:18px}'
+ '.ch-bars .ml{font-family:var(--font-mono,monospace);font-size:9px;color:rgba(0,0,0,.5)}'
+ '.ch-sum{display:flex;gap:8px;margin-top:18px}.ch-sum .box{flex:1;background:var(--surface-soft);border-radius:13px;padding:13px 14px}.ch-sum .l{font-family:var(--font-mono,monospace);font-size:8px;color:rgba(0,0,0,.45)}.ch-sum .bb{font-weight:700;font-size:17px;margin-top:3px}'
+ # 플랫폼 드롭다운
+ '.ch-dd{position:relative}.ch-ddbtn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:50px;background:var(--surface-soft);font-weight:540;font-size:12px;cursor:pointer;border:0;font-family:inherit}.ch-ddbtn svg{width:12px;height:12px}'
+ '.ch-ddmenu{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:6px;z-index:9;min-width:148px;display:none}.ch-ddmenu.open{display:block}'
+ '.ch-ddmenu button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:9px 11px;border-radius:8px;background:0;border:0;font-family:inherit;font-size:13px;font-weight:540;cursor:pointer;color:#000}.ch-ddmenu button:hover{background:var(--surface-soft)}.ch-ddmenu button.on{font-weight:700}.ch-ddmenu button .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}'
+ # 랭킹
+ '.ch-chips{display:flex;gap:7px;white-space:nowrap}.ch-chip{padding:7px 14px;border-radius:50px;background:var(--surface-soft);font-weight:540;font-size:12.5px;color:rgba(0,0,0,.65);cursor:pointer;border:0;font-family:inherit}.ch-chip.on{background:#000;color:#fff}'
+ '.ch-rows{display:flex;flex-direction:column;margin-top:12px}'
+ '.ch-rrow{display:flex;align-items:center;gap:12px;padding:13px 4px;border-top:1px solid var(--hairline-soft);text-decoration:none;color:#000;min-height:44px}.ch-rrow:first-child{border-top:0}'
+ '.ch-rk{width:24px;flex:0 0 auto;text-align:center;font-weight:700;font-size:17px}'
+ '.ch-rmid{flex:1;min-width:0}.ch-rname{font-weight:700;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ch-rmeta{font-weight:400;font-size:11.5px;color:rgba(0,0,0,.5);margin-top:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}'
+ '.ch-iss{font-family:var(--font-mono,monospace);font-size:9px;color:rgba(0,0,0,.45);text-transform:uppercase}'
+ '.ch-hchip{display:inline-flex;align-items:center;gap:4px;cursor:pointer}.ch-hchip svg{width:10px;height:10px;color:#000}.ch-hchip .dot{width:6px;height:6px;border-radius:50%}.ch-hchip .pn{font-weight:540;font-size:10.5px;color:#000}'
+ '.ch-rright{text-align:right;flex:0 0 auto}.ch-rrl{font-family:var(--font-mono,monospace);font-size:8px;color:rgba(0,0,0,.42)}.ch-rrv{font-weight:700;font-size:16px;letter-spacing:-.4px;white-space:nowrap}.ch-rd{font-family:var(--font-mono,monospace);font-size:8px;white-space:nowrap;margin-top:1px}'
+ # PC 보정
+ '@media(min-width:761px){'
+ '.ch-h1{font-size:34px}'
+ '.ch-slide{padding:32px 34px;display:flex;align-items:center;gap:24px}.ch-s2{min-height:0}'
+ '.ch-s1 .left{flex:1}.ch-idx{font-size:46px}'
+ '.ch-spark{height:96px;width:240px;margin-top:0;flex:0 0 auto}.ch-spark .b{max-width:30px}'
+ '.ch-s2 .body{flex:1}.ch-s2 h2{font-size:32px}.ch-s2 .amt{font-size:24px}'
+ '.ch-plate{position:static;width:170px;flex:0 0 auto}'
+ '.ch-ct{font-size:26px}'
+ '.ch-bars{height:200px;gap:16px}.ch-bars .bar{max-width:56px;width:56%}.ch-bars .v{font-size:15px}.ch-bars .ml{font-size:11px}'
+ '.ch-rname{font-size:16px}'
+ '}'
  '</style>'
- '<div class="wrap">'
- +tybnr("chart.html","CARDTYRANNO · 티라노차트","시중 플랫폼 순위를 한 표로","토스·카드고릴라·뱅크샐러드 2곳 이상에서 공통 발급되는 범용 카드만 순위 평균을 냈어요.")
- +'<section><div class="sec-h"><h2>티라노차트</h2></div>'
- '<div class="muted" style="font-size:12.5px;padding-bottom:10px">여러 플랫폼에서 공통 발급되는 범용 카드 순위 평균이에요. (특정 채널 전용 제휴카드 제외)</div>'
- '<div class="tabs" id="tabs"></div><div id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section></div>')
+ '<div class="wrap"><div class="ch-wrap">'
+ '<div class="ch-top"><h1 class="ch-h1">티라노 차트</h1><p class="ch-sub">캐시백이 어떻게 움직이는지, 데이터로.</p></div>'
+ '<div class="ch-hero"><div class="ch-vp"><div class="ch-track" id="chTrack">'
+ '<div class="ch-slide ch-s1"><svg class="ch-face" viewBox="2 3.6 20 16.4" style="right:-12px;top:-16px;width:84px"><use href="#mk"/></svg>'
+ '<div class="left"><div class="ch-eb">이번 달 캐시백 지수</div><div class="ch-idxrow"><div class="ch-idx" id="chIdx">–</div><span class="ch-up" id="chDelta"></span></div><div class="cap">전 플랫폼 통합 최고 캐시백 · 전월 대비</div></div>'
+ '<div class="ch-spark" id="chSpark"></div></div>'
+ '<div class="ch-slide ch-s2"><svg class="ch-face" viewBox="2 3.6 20 16.4" style="left:-12px;bottom:-18px;width:90px"><use href="#mk"/></svg>'
+ '<div class="body"><div class="ch-eb">이번 달 캐시백 1위</div><h2 id="chTopName">–</h2><div class="amt" id="chTopAmt"></div><p class="who" id="chTopWho"></p>'
+ '<button class="cta" id="chTopCta">차트 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button></div>'
+ '<div class="ch-plate" id="chTopPlate"></div></div>'
+ '</div></div>'
+ '<div class="ch-dots"><button class="ch-dot on" id="chDot0"></button><button class="ch-dot" id="chDot1"></button></div></div>'
+ '<div class="ch-card"><div class="ch-cardh"><div><div class="ch-eb" style="font-size:10px">최근 6개월</div><h2 class="ch-ct">통합 캐시백 추이</h2></div>'
+ '<div class="ch-dd"><button class="ch-ddbtn" id="chPfBtn">전체 플랫폼 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="ch-ddmenu" id="chPfMenu"></div></div></div>'
+ '<div class="ch-bars" id="chTrend"></div>'
+ '<div class="ch-sum"><div class="box"><div class="l">6개월 최고</div><div class="bb" id="chHi">–</div></div><div class="box"><div class="l">평균</div><div class="bb" id="chAvg">–</div></div></div></div>'
+ '<div class="ch-card"><div class="ch-cardh" style="align-items:center"><h2 class="ch-ct" style="margin:0">티라노 랭킹</h2>'
+ '<div class="ch-chips"><button class="ch-chip on" id="chChipPop">인기 차트</button><button class="ch-chip" id="chChipCash">캐시백 차트</button></div></div>'
+ '<div class="ch-rows" id="chRank"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
+ '</div></div>')
 CHART_JS=r"""
-var R=[],ORD=[],cur="전체";
-function render(){var items=cur==="전체"?R:R.filter(function(x){return x.issuer===cur;});
- document.getElementById('list').innerHTML=items.map(function(x,i){var rs=[];if(x.toss)rs.push('토스 '+x.toss+'위');if(x.cg)rs.push('고릴라 '+x.cg+'위');if(x.bs)rs.push('뱅샐 '+x.bs+'위');
-  var href=(x.id!=null)?('carddetail.html?id='+x.id):'cards.html';var rk=i+1;
-  return '<a class="crow" href="'+href+'"><span class="no'+(rk<=3?' top':'')+'">'+rk+'</span><span class="pl">'+imgTag(x.img)+'</span><div class="ci"><div class="cn">'+x.name+'</div><div class="cs">'+(x.issuer||'')+' · <span class="src">'+rs.join(' / ')+'</span></div></div></a>';}).join("");}
-function tabs(){var T=["전체"].concat(ORD);var t=document.getElementById('tabs');t.innerHTML=T.map(function(o){return '<div class="tab'+(o===cur?' active':'')+'" data-t="'+o+'">'+o+'</div>';}).join("");
- t.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cur=b.dataset.t;t.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};});}
+var PKO={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
+var PCO={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
+var PORDK=['toss','cardgorilla','banksalad','ajungdang','naver','kakaopay'];
+var MD=[],NAME2={},CUR=null,PREV=null,platFilter='all',chMode='pop',POP=[],CASH=[],slide=0,slideIv=null;
 function _nk(s){return (s||'').replace(/[\s()（）·\-_/+]+/g,'').toLowerCase();}
-/* 채널 전용 제휴카드 제외: (1)카드명에 토스/toss 포함, (2)1개 플랫폼에서만 노출되는 카드.
-   → 여러 플랫폼(토스·카드고릴라·뱅크샐러드)에서 공통 발급되는 범용 카드만 순위 산출. */
-function _isChannelExclusive(n){n=(n||'').toLowerCase();return n.indexOf('토스')>=0||n.indexOf('toss')>=0;}
-function _platCount(x){var c=0;if(x.toss)c++;if(x.cg)c++;if(x.bs)c++;return c;}
-function _universal(x){return _platCount(x)>=2&&!_isChannelExclusive(x.name);}
-Promise.all([fetch('rank.json').then(r=>r.json()),fetch('cards.json').then(r=>r.json())]).then(function(a){
- R=(a[0].items||[]).filter(_universal);var m={};for(var k in a[1].cards){(a[1].cards[k]||[]).forEach(function(c){m[_nk(c.name)]=c.id;});}
- R.forEach(function(x){var k=_nk(x.name);if(m[k]!=null)x.id=m[k];else{var alt=_nk((x.name||'').replace(/^토스\s*/,''));if(m[alt]!=null)x.id=m[alt];}});
- ORD=[...new Set(R.map(function(x){return x.issuer;}).filter(Boolean))];tabs();render();});
+function wman(v){if(v==null||v===0)return '0';var m=v/10000;return (m>=10?Math.round(m):Math.round(m*10)/10)+'만원';}
+function wmm(v){return wman(v).replace('만원','만');}
+function mlabel(ym){var p=(ym||'').split('-');return p.length>1?parseInt(p[1],10)+'월':ym;}
+function idImg(name){return NAME2[_nk(name)]||NAME2[_nk((name||'').replace(/^토스\s*/,''))]||{};}
+function chx(n){n=(n||'').toLowerCase();return n.indexOf('토스')>=0||n.indexOf('toss')>=0;}
+function platsOf(c){return Object.keys(c.platforms||{}).filter(function(k){return c.platforms[k]!=null;});}
+function bestPlat(c){var bk=null,bv=-1;PORDK.forEach(function(k){var v=(c.platforms||{})[k];if(v!=null&&v>bv){bv=v;bk=k;}});return {key:bk,val:bv};}
+function monthMax(md,f){var mx=0;((md||{}).cards||[]).forEach(function(c){var v=f==='all'?c.max:(c.platforms||{})[f];if(v!=null&&v>mx)mx=v;});return mx;}
+function avgList(md){var cs=((md||{}).cards||[]).filter(function(c){return platsOf(c).length>=2&&!chx(c.name);});var rk={};
+ PORDK.forEach(function(k){var arr=cs.filter(function(c){return (c.platforms||{})[k]!=null;}).sort(function(a,b){return b.platforms[k]-a.platforms[k];});arr.forEach(function(c,i){(rk[c.name]=rk[c.name]||[]).push(i+1);});});
+ return cs.map(function(c){var rs=rk[c.name]||[];var a=rs.reduce(function(s,x){return s+x;},0)/(rs.length||1);return {name:c.name,issuer:c.issuer,avg:a,n:rs.length};}).sort(function(a,b){return a.avg-b.avg;});}
+function posMap(list){var m={};list.forEach(function(x,i){m[x.name]=i+1;});return m;}
+function deltaHtml(prev,cur){var t,c;if(prev==null){t='NEW';c='var(--success)';}else{var d=prev-cur;if(d>0){t='▲ '+d;c='var(--success)';}else if(d<0){t='▼ '+(-d);c='var(--accent-magenta)';}else{t='— 0';c='rgba(0,0,0,.4)';}}return '<div class="ch-rd" style="color:'+c+'">'+t+'</div>';}
+function rkColor(i){return i===0?'var(--accent-magenta)':(i<3?'#000':'rgba(0,0,0,.35)');}
+function renderHero(){
+ var cm=monthMax(CUR,'all'),pm=PREV?monthMax(PREV,'all'):0;
+ document.getElementById('chIdx').textContent=wman(cm);
+ var de=document.getElementById('chDelta');
+ if(pm>0){var pct=Math.round((cm-pm)/pm*100);var up=pct>=0;de.style.color=up?'var(--success)':'var(--accent-magenta)';
+  de.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transform:'+(up?'none':'rotate(180deg)')+'"><path d="M5 15l7-7 7 7"/></svg>'+Math.abs(pct)+'%';}else de.textContent='';
+ var sv=MD.map(function(md){return monthMax(md,'all');});var smax=Math.max.apply(null,sv)||1;
+ document.getElementById('chSpark').innerHTML=sv.map(function(v,i){var last=i===sv.length-1;return '<div class="col"><div class="b" style="height:'+(v/smax*100)+'%;background:'+(last?'#000':'rgba(0,0,0,.28)')+'"></div></div>';}).join('');
+ var t=CASH[0];if(t){document.getElementById('chTopName').textContent=t.name;document.getElementById('chTopAmt').textContent='최대 '+t.cash;
+  document.getElementById('chTopWho').innerHTML='<b>'+t.issuer+'</b> · '+t.platform+'에서 최고';
+  var pl=document.getElementById('chTopPlate');pl.innerHTML=t.img?imgTag(t.img):'';
+  document.getElementById('chTopCta').onclick=function(){if(t.id!=null)location.href='carddetail.html?id='+t.id;else document.getElementById('chRank').scrollIntoView({behavior:'smooth'});};}
+}
+function setSlide(i,manual){slide=i;document.getElementById('chTrack').style.transform='translateX(-'+(i*50)+'%)';
+ document.getElementById('chDot0').className='ch-dot'+(i===0?' on':'');document.getElementById('chDot1').className='ch-dot'+(i===1?' on':'');
+ if(manual&&slideIv){clearInterval(slideIv);slideIv=null;}}
+function renderTrend(){
+ var vals=MD.map(function(md){return {m:mlabel(md.month),v:monthMax(md,platFilter)};});
+ var mx=Math.max.apply(null,vals.map(function(x){return x.v;}))||1;
+ document.getElementById('chTrend').innerHTML=vals.map(function(x,i){var last=i===vals.length-1;var empty=!x.v;
+  return '<div class="col"><div class="v" style="color:'+(last?'var(--accent-magenta)':'#000')+'">'+(empty?'–':wmm(x.v))+'</div>'
+   +(empty?'<div class="bar empty"></div>':'<div class="bar" style="height:'+(x.v/mx*100)+'%;background:'+(last?'var(--accent-magenta)':'var(--block-navy)')+'"></div>')
+   +'<div class="ml">'+x.m+'</div></div>';}).join('');
+ var nz=vals.map(function(x){return x.v;}).filter(function(v){return v;});
+ document.getElementById('chHi').textContent=nz.length?wman(Math.max.apply(null,nz)):'–';
+ document.getElementById('chAvg').textContent=nz.length?wman(Math.round(nz.reduce(function(s,v){return s+v;},0)/nz.length)):'–';
+}
+function renderPfMenu(){
+ var opts=[['all','전체 플랫폼','#000']].concat(PORDK.map(function(k){return [k,PKO[k],PCO[k]];}));
+ document.getElementById('chPfMenu').innerHTML=opts.map(function(o){return '<button data-f="'+o[0]+'" class="'+(platFilter===o[0]?'on':'')+'"><span class="dot" style="background:'+o[2]+'"></span>'+o[1]+'</button>';}).join('');
+}
+function renderRank(){
+ var box=document.getElementById('chRank');
+ if(chMode==='pop'){
+  box.innerHTML=POP.length?POP.map(function(r,i){return '<a class="ch-rrow" href="'+(r.id!=null?'carddetail.html?id='+r.id:'cards.html')+'"><span class="ch-rk" style="color:'+rkColor(i)+'">'+(i+1)+'</span>'
+   +'<div class="ch-rmid"><div class="ch-rname">'+r.name+'</div><div class="ch-rmeta">'+r.issuer+' · '+r.n+'개 플랫폼 평균</div></div>'
+   +'<div class="ch-rright"><div class="ch-rrl">평균 순위</div><div class="ch-rrv">'+r.avg+'</div>'+r.deltaHtml+'</div></a>';}).join(''):'<div class="empty" style="padding:24px 0">데이터가 없어요.</div>';
+ }else{
+  box.innerHTML=CASH.length?CASH.map(function(r,i){return '<a class="ch-rrow" href="'+(r.id!=null?'carddetail.html?id='+r.id:'cards.html')+'"><span class="ch-rk" style="color:'+rkColor(i)+'">'+(i+1)+'</span>'
+   +'<div class="ch-rmid"><div class="ch-rname">'+r.name+'</div><div class="ch-rmeta"><span class="ch-iss">'+r.issuer+'</span>'
+   +'<span class="ch-hchip" data-ev="events.html?platform='+r.pkey+'&n='+encodeURIComponent(r.name)+'"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg><span class="dot" style="background:'+r.pColor+'"></span><span class="pn">'+r.platform+'</span></span></div></div>'
+   +'<div class="ch-rright"><div class="ch-rrl">최고 캐시백</div><div class="ch-rrv">'+r.cash+'</div>'+r.deltaHtml+'</div></a>';}).join(''):'<div class="empty" style="padding:24px 0">데이터가 없어요.</div>';
+ }
+}
+function initUI(){
+ document.getElementById('chDot0').onclick=function(){setSlide(0,true);};
+ document.getElementById('chDot1').onclick=function(){setSlide(1,true);};
+ var cp=document.getElementById('chChipPop'),cc=document.getElementById('chChipCash');
+ cp.onclick=function(){chMode='pop';cp.className='ch-chip on';cc.className='ch-chip';renderRank();};
+ cc.onclick=function(){chMode='cash';cc.className='ch-chip on';cp.className='ch-chip';renderRank();};
+ var btn=document.getElementById('chPfBtn'),menu=document.getElementById('chPfMenu');
+ btn.onclick=function(e){e.stopPropagation();menu.classList.toggle('open');};
+ menu.onclick=function(e){var b=e.target.closest('button[data-f]');if(!b)return;platFilter=b.getAttribute('data-f');btn.firstChild.textContent=(platFilter==='all'?'전체 플랫폼':PKO[platFilter])+' ';renderTrend();renderPfMenu();menu.classList.remove('open');};
+ document.addEventListener('click',function(){menu.classList.remove('open');});
+ document.getElementById('chRank').addEventListener('click',function(e){var h=e.target.closest('.ch-hchip');if(h&&h.dataset.ev){e.preventDefault();e.stopPropagation();location.href=h.dataset.ev;}});
+ var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(!reduce)slideIv=setInterval(function(){setSlide((slide+1)%2);},4200);
+}
+fetch('cards.json').then(function(r){return r.json();}).then(function(cj){
+ for(var k in cj.cards){(cj.cards[k]||[]).forEach(function(c){NAME2[_nk(c.name)]={id:c.id,img:c.img};});}
+ var months=['2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'];
+ return fetch('history/index.json').then(function(r){return r.json();}).then(function(idx){if(idx&&idx.months&&idx.months.length)months=idx.months.slice(-6);return months;}).catch(function(){return months;});
+}).then(function(months){
+ return Promise.all(months.map(function(m){return fetch('history/'+m+'.json').then(function(r){return r.json();}).catch(function(){return {month:m,cards:[]};});}));
+}).then(function(arr){
+ MD=arr;CUR=MD[MD.length-1]||{cards:[]};PREV=MD.length>1?MD[MD.length-2]:null;
+ var curMaxList=((CUR.cards)||[]).slice().sort(function(a,b){return (b.max||0)-(a.max||0);});
+ var prevMaxPos=PREV?posMap(((PREV.cards)||[]).slice().sort(function(a,b){return (b.max||0)-(a.max||0);})):{};
+ CASH=curMaxList.map(function(c,i){var bp=bestPlat(c);var im=idImg(c.name);return {name:c.name,issuer:c.issuer,cash:wman(c.max),pkey:bp.key,platform:PKO[bp.key]||bp.key,pColor:PCO[bp.key]||'#888',id:im.id,img:im.img,deltaHtml:deltaHtml(prevMaxPos[c.name],i+1)};});
+ var curAvg=avgList(CUR);var prevAvgPos=PREV?posMap(avgList(PREV)):{};var curAvgPos=posMap(curAvg);
+ POP=curAvg.map(function(x){var im=idImg(x.name);return {name:x.name,issuer:x.issuer,avg:(Math.round(x.avg*10)/10)+'위',n:x.n,id:im.id,deltaHtml:deltaHtml(prevAvgPos[x.name],curAvgPos[x.name])};});
+ renderHero();renderTrend();renderPfMenu();renderRank();initUI();
+});
 """
 
 # ===== FAVORITES (관심카드) =====
