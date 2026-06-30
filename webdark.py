@@ -588,7 +588,7 @@ var _CTLINK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 var _CTKAKAO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11H8l-4 3.5z"/></svg>';
 var _CTMAIL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 5 8-5"/></svg>';
 var _CTIMG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M5 17l4.5-4 3 2.5L17 11l3 3"/></svg>';
-var _CTMK='<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>';
+var _CTMK='<svg viewBox="0 0 24 24"><use href="#mk"/></svg>';
 function _ctShClose(){var el=document.getElementById('ctShareSheet');if(el){el.classList.remove('on');document.body.style.overflow='';}}
 function ctShareSheet(url,title,text){var el=document.getElementById('ctShareSheet');
  if(!el){el=document.createElement('div');el.id='ctShareSheet';el.className='ctsh-bg';
@@ -851,7 +851,7 @@ INDEX_BODY=('<div class="wrap">'
  '<div class="nhc-vp"><div class="nhc-track" id="nhcTrack">'
  # 슬라이드 1 · 6개 사이트 비교
  '<div class="nhc-slide nhc-s1">'
- '<svg class="nhc-face" viewBox="2 3.6 20 16.4" aria-hidden="true"><use href="#mk"/></svg>'
+ '<svg class="nhc-face" viewBox="0 0 24 24" aria-hidden="true"><use href="#mk"/></svg>'
  '<div class="nhc-txt"><div class="nhe-eb">2026 JUNE</div>'
  '<h1 class="nhc-h">6개 사이트<br>캐시백, 한눈에.</h1>'
  '<p class="nhc-p">토스·카드고릴라·아정당·뱅크샐러드·카카오페이·네이버페이. <b>6개 카드 발급 사이트의 캐시백을 한 번에 비교</b>해 드려요.</p>'
@@ -861,7 +861,7 @@ INDEX_BODY=('<div class="wrap">'
  '</div>'
  # 슬라이드 2 · 이번달 최고 캐시백 상품 (JS가 채움)
  '<a class="nhc-slide nhc-s2" id="heroS2" href="issue.html?v=cmp">'
- '<svg class="nhc-face nhc-face-b" viewBox="2 3.6 20 16.4" aria-hidden="true"><use href="#mk"/></svg>'
+ '<svg class="nhc-face nhc-face-b" viewBox="0 0 24 24" aria-hidden="true"><use href="#mk"/></svg>'
  '<div class="nhc-txt"><div class="nhe-eb">이번달 최고 캐시백</div>'
  '<h1 class="nhc-h nhc-h2" id="heroS2Name">불러오는 중…</h1>'
  '<div class="nhc-amt" id="heroS2Amt"></div>'
@@ -873,7 +873,7 @@ INDEX_BODY=('<div class="wrap">'
  '<div class="nhc-dots" id="nhcDots"><span class="on" data-i="0" role="button" aria-label="슬라이드 1"></span><span data-i="1" role="button" aria-label="슬라이드 2"></span></div>'
  '</div>'
  '</div>'
- '<div class="nlive"><span class="nlive-tag"><i></i>LIVE</span><div class="nlive-vp"><div class="nlive-tk" id="liveTk">이번 달 최대 캐시백 <span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
+ '<div class="nlive"><span class="nlive-tag"><i></i>LIVE</span><div class="nlive-vp"><div class="nlive-tk" id="liveTk">이번 달 최대 캐시백 <span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div class="wrap">'
  '<div class="npod"><div class="npod-h"><div><div class="nhe-eb dim">이번 달 캐시백</div><h2 class="npod-t">이번 달 이벤트 TOP 3</h2><p class="npod-s">발급 이벤트 금액이 가장 큰 상품을 카드사별 1개씩 · 공개 데이터 기준 자동 정렬</p></div><a class="nmore" href="issue.html?v=cmp">플랫폼 비교 ›</a></div>'
  '<div class="npod-g" id="t3pod"></div></div>'
@@ -944,14 +944,14 @@ INDEX_BODY=('<div class="wrap">'
  '@media(max-width:760px){.nbest-g{grid-template-columns:1fr 1fr}.nbest-t,.nmos-t,.ntip-t{font-size:23px}.nmos{grid-template-columns:1fr}.ntip-card{flex-direction:column;align-items:stretch}.ntip-thumb{width:100%}}'
  '</style>'
  '<section class="ncpl-sec">'
- '<div class="ncpl-emb"><span class="dh l"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span><svg class="ht" viewBox="0 0 24 24"><use href="#ic-heart-f"/></svg><span class="dh r"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span></div>'
+ '<div class="ncpl-emb"><span class="dh l"><svg viewBox="0 0 24 24"><use href="#mk"/></svg></span><svg class="ht" viewBox="0 0 24 24"><use href="#ic-heart-f"/></svg><span class="dh r"><svg viewBox="0 0 24 24"><use href="#mk"/></svg></span></div>'
  '<h2 class="ncpl-t">이번달 최고 커플</h2>'
  '<p class="ncpl-s">카드사마다 이번 달 가장 잘 맞는 플랫폼을 찾았어요. <span class="dim">공개 데이터 기준 자동 정렬</span></p>'
  '<div class="ncpl-g" id="cplGrid"></div>'
  '</section>'
  # (예시 광고 배너 제거 — 실제 제휴 인벤토리 연동 전까지 미노출)
  '<section class="ntip-sec"><div class="ntip-h"><div><div class="nhe-eb dim">티라노TIP</div><h2 class="ntip-t">이번 달 발급 전략</h2></div><a class="nmore" href="content.html">전체 콘텐츠 ›</a></div>'
- '<a class="ntip-card" id="tipLatest" href="content.html"><div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">티라노TIP · 2026.07</div><div class="th">불러오는 중…</div></div></a></section>'
+ '<a class="ntip-card" id="tipLatest" href="content.html"><div class="ntip-thumb"><svg viewBox="0 0 24 24"><use href="#mk"/></svg></div><div class="tb"><div class="tm">티라노TIP · 2026.07</div><div class="th">불러오는 중…</div></div></a></section>'
  +FAQ_HTML+'</div>')
 INDEX_JS=r"""
 var PMETA={cardgorilla:{n:'카드고릴라',c:'#FF6A13'},banksalad:{n:'뱅크샐러드',c:'#19C37D'},toss:{n:'토스',c:'#3182F6'},ajungdang:{n:'아정당',c:'#1B64DA'},naver:{n:'네이버페이',c:'#03C75A'},kakaopay:{n:'카카오페이',c:'#FEE500'},issuer:{n:'카드사 직접',c:'#7a8088'}};
@@ -1015,7 +1015,7 @@ fetch('content.json').then(function(r){return r.json();}).then(function(cd){var 
  var hc=document.getElementById('heroTipCta');if(hc)hc.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
  var el=document.getElementById('tipLatest');if(!el)return;
  el.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
- el.innerHTML='<div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">'+(t.cat||'티라노TIP')+' · '+((cd.updated||'2026-07-01').slice(0,7).replace('-','.'))+'</div><div class="th">'+(t.title||'')+'</div><div class="ts">'+(t.summary||'')+'</div><div class="tgo">전략 보러가기 ›</div></div>';
+ el.innerHTML='<div class="ntip-thumb"><svg viewBox="0 0 24 24"><use href="#mk"/></svg></div><div class="tb"><div class="tm">'+(t.cat||'티라노TIP')+' · '+((cd.updated||'2026-07-01').slice(0,7).replace('-','.'))+'</div><div class="th">'+(t.title||'')+'</div><div class="ts">'+(t.summary||'')+'</div><div class="tgo">전략 보러가기 ›</div></div>';
 }).catch(function(){});
 // A · 히어로 롤링 캐러셀 (자동 4.2s + 도트 + prefers-reduced-motion 정지)
 (function(){var tr=document.getElementById('nhcTrack'),dots=document.getElementById('nhcDots'),wrap=document.getElementById('nhc');if(!tr||!dots)return;
@@ -1032,7 +1032,7 @@ fetch('content.json').then(function(r){return r.json();}).then(function(cd){var 
 DISC_BODY=('<div class="wrap"><section><div class="sec-h"><h2>카드 할인 혜택</h2></div>'
  '<div class="filterbar"><div class="seg" id="seg"><button data-g="전체" class="on">전체</button><button data-g="온라인">온라인</button><button data-g="오프라인">오프라인</button></div>'
  '<select id="tabSel"></select><select id="platSel"></select></div>'
- '<div class="list" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section></div>')
+ '<div class="list" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div></section></div>')
 DISC_JS=r"""
 var DATA=[],cur="전체",curG="전체",curPlat="전체",Q=(new URLSearchParams(location.search).get('q')||'').trim();
 function fmt(s){return (s&&s!=="-"&&s!=="없음")?s:"";}
@@ -1137,7 +1137,7 @@ CARDS_BODY=('<style>'
    '<div class="uf-meta"><span class="uf-cnt" id="ufCnt">카드 –개</span><button class="uf-reset" id="ufReset" type="button" style="display:none">초기화</button><span class="uf-mspacer"></span><button class="uf-sortb uf-msort" id="ufSortMo" type="button">캐시백 많은 순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></div>'
    '<div class="uf-pop" id="ufPopplat"></div><div class="uf-pop" id="ufPopiss"></div><div class="uf-pop" id="ufPoptype"></div><div class="uf-pop uf-pop-sort" id="ufPopsort"></div>'
  '</div>'
- '<div class="cfx-list" id="list"><div class="cfx-empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+ '<div class="cfx-list" id="list"><div class="cfx-empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div>'
  '<div class="cfx-empty" id="cfEmpty" style="display:none">조건에 맞는 카드가 없어요. <button class="uf-reset" type="button" id="ufEmptyReset" style="display:inline">조건 줄이기</button></div>'
  '<div class="uf-sheet-bg" id="ufSheetBg"><div class="uf-sheet" id="ufSheet" role="dialog" aria-modal="true" aria-label="필터"><div class="uf-grab"></div>'
    '<div class="uf-sheet-h"><span id="ufSheetTtl">필터</span><button class="uf-sheet-x" id="ufSheetX" type="button" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'
@@ -1478,15 +1478,15 @@ ISSUE_BODY=('<style>'
    '<div id="ufSheetBody"></div>'
    '<div class="uf-sheet-ft"><button class="r" id="ufFtReset" type="button">초기화</button><button class="a" id="ufFtApply" type="button">결과 보기</button></div>'
  '</div></div>'
- '<div id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
+ '<div id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="view-cmp" style="display:none">'
- '<div class="pcmp-emb"><div><div class="t" id="embT">카드사 ❤ 플랫폼, 최고 궁합</div><div class="s" id="embS">카드사별 최고 궁합 플랫폼</div></div><span class="emb"><span class="dh"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span><svg class="ht" viewBox="0 0 24 24"><use href="#ic-heart-f"/></svg><span class="dh r"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span></span></div>'
+ '<div class="pcmp-emb"><div><div class="t" id="embT">카드사 ❤ 플랫폼, 최고 궁합</div><div class="s" id="embS">카드사별 최고 궁합 플랫폼</div></div><span class="emb"><span class="dh"><svg viewBox="0 0 24 24"><use href="#mk"/></svg></span><svg class="ht" viewBox="0 0 24 24"><use href="#ic-heart-f"/></svg><span class="dh r"><svg viewBox="0 0 24 24"><use href="#mk"/></svg></span></span></div>'
  '<div class="cmpbar"><div class="subnav2"><button data-c="iss" class="on">카드사별 비교</button><button data-c="prod">카드별 비교</button></div>'
  '<div class="cmpbar-r"><div class="cashtog" id="cashtog"><span class="ctgl">캐시백 기준</span><button data-cm="t" class="on">전체</button><button data-cm="m">주요</button></div>'
  '<div class="dd2" id="prodIssWrap" style="display:none"><button class="dd2b" id="prodIssBtn">카드사 · 전체 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="dd2menu" id="prodIssMenu"></div></div></div></div>'
  '<div class="ptogwrap"><span class="ptogl">표시 플랫폼 · 2개 이상</span><div class="ptog" id="platToggle"></div></div>'
- '<div id="cmp-iss"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
- '<div id="cmp-prod" style="display:none"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+ '<div id="cmp-iss"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+ '<div id="cmp-prod" style="display:none"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div>'
  # 하단 배너(가이드 변경10) — PC: 전략(170px)+AD / 모바일: mint 전략
  '<div class="pcmp-banners"><a class="pcb-strat" href="content.html?id=19"><img src="assets/tip-headers/header-strategy.png" alt="2026년 7월 카드 캐시백 전략"><div><div class="mono">티라노TIP · 2026.07</div><div class="t">“최대 117만원”의 함정과 진짜 알짜 카드</div><div class="d">6개 플랫폼 7월 데이터 전수 분석 — 주요·효율·연회비·발급 플랫폼까지.</div><span class="go">7월 전략 보기 ›</span></div></a></div>'
  '<div class="pcmp-banner-mo"><a href="content.html?id=19"><div class="mono">티라노TIP · 2026.07</div><div class="t">“최대 117만원”의 함정과 진짜 알짜 카드</div><span class="go">7월 전략 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></a></div>'
@@ -1535,7 +1535,7 @@ function render(){var groups=_evGroups();
    var href='events.html?platform='+g.pk+'&n='+encodeURIComponent(g.rep);
    var cond=g.cards.length>1?('카드별 조건 상이'+(g.period?' · 마감 '+g.period.replace(/^~/,''):'')):(g.period?('마감 '+g.period.replace(/^~/,'')):(g.text||'발급 이벤트 진행 중'));
    var shown=g.cards.slice(0,3),over=g.cards.length-shown.length;
-   var stack=shown.map(function(c){return '<span class="ev2c-mp">'+(c.img?'<img src="'+encodeURI(c.img)+'" alt="" onerror="this.style.display=\'none\'">':'<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>')+'</span>';}).join('')+(over>0?'<span class="ev2c-more">+'+over+'</span>':'');
+   var stack=shown.map(function(c){return '<span class="ev2c-mp">'+(c.img?'<img src="'+encodeURI(c.img)+'" alt="" onerror="this.style.display=\'none\'">':'<svg viewBox="0 0 24 24"><use href="#mk"/></svg>')+'</span>';}).join('')+(over>0?'<span class="ev2c-more">+'+over+'</span>':'');
    return '<a class="ev2c'+(top?' top':'')+'" href="'+href+'">'
     +'<div class="ev2c-plwrap"><span class="ev2c-pl"><span class="dot" style="background:'+(PBC[g.pk]||"#888")+'"></span><span class="pn">'+(g.pk==='issuer'?(g.issuer||'카드사 공식'):(PN[g.pk]||g.platform))+'</span></span>'+(top?'<span class="ev2c-topb">최고</span>':'')+'</div>'
     +'<div class="ev2c-cash">최대 '+_wm(amt)+'</div>'
@@ -1635,7 +1635,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   var chips='';
   var head='<div class="ptr hd" style="grid-template-columns:'+gc+'"><div>카드사 ('+rows.length+')</div>'+VL.map(function(pk){return '<div>'+_pdk(pk,true)+'</div>';}).join('')+'</div>';
   var body=rows.map(function(r){var cells=VL.map(function(pk){var o=r.o[pk];var v=mval(o,cashMode);if(!v)return '<span class="cell"><span class="chip no">–</span></span>';var top=(v===r.mx);return '<a class="cell" href="issue.html?issuer='+encodeURIComponent(r.iss)+'&plat='+encodeURIComponent(PN[pk]||pk)+'"><span class="chip'+(top?' mx':'')+'">'+(top?HEART:'')+_chipW(v)+'</span>'+(cashMode==='t'?_capBD(o):'')+'</a>';}).join('');
-   return '<div class="ptr" style="grid-template-columns:'+gc+'"><a class="pc" href="issue.html?issuer='+encodeURIComponent(r.iss)+'"><span class="issmk"><svg viewBox="2 3.6 20 16.4" aria-hidden="true"><use href="#mk"/></svg></span><div><div class="pcn">'+_es(r.iss)+'</div><div class="pci" style="font-family:inherit;font-size:11.5px;color:var(--sub)">보유 '+r.count+'종 · 대표 '+_es(r.rep)+'</div></div></a>'+cells+'</div>';}).join('');
+   return '<div class="ptr" style="grid-template-columns:'+gc+'"><a class="pc" href="issue.html?issuer='+encodeURIComponent(r.iss)+'"><span class="issmk"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#mk"/></svg></span><div><div class="pcn">'+_es(r.iss)+'</div><div class="pci" style="font-family:inherit;font-size:11.5px;color:var(--sub)">보유 '+r.count+'종 · 대표 '+_es(r.rep)+'</div></div></a>'+cells+'</div>';}).join('');
   var mc='<div class="pcardlist">'+rows.map(function(r){return _pbar('issue.html?issuer='+encodeURIComponent(r.iss),_es(r.iss),'보유 '+r.count+'종 · 대표 '+_es(r.rep),r.o);}).join('')+'</div>';
   var note='<div class="pcmpnote"><span class="dot"></span><svg viewBox="0 0 24 24" width="13" height="13" style="color:#000"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg> = 이 카드사의 최고 궁합(커플) 플랫폼 · 셀을 누르면 그 카드사·플랫폼 캐시백 목록으로 · 캐시백 기준: 전체=주요+부가, 주요=발급·결제 기본 · 금액은 수집 시점 기준이에요.</div>';
   document.getElementById('cmp-iss').innerHTML=rows.length?(ctl+chips+'<div class="ptblwrap"><div class="ptbl">'+head+body+'</div></div>'+mc+note):'<div class="empty">데이터 준비 중</div>';
@@ -1757,7 +1757,7 @@ function ufInit(){var uf=_ufEl('uf');if(!uf||uf._b)return;uf._b=1;
 """
 
 # ===== DETAIL =====
-DETAIL_BODY='<div style="padding:12px 0"><div class="wrap"><a class="bk" href="discount.html">‹</a></div></div><div id="root"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+DETAIL_BODY='<div style="padding:12px 0"><div class="wrap"><a class="bk" href="discount.html">‹</a></div></div><div id="root"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div>'
 DETAIL_JS=r"""
 function fmt(s){return (s&&s!=="-"&&s!=="없음")?s:"-";}
 var id=Number(new URLSearchParams(location.search).get('id'));
@@ -1804,7 +1804,7 @@ CONTENT_BODY=('<style>'
  '<div style="padding:24px 0 0"><span class="pg-eb">CARD GUIDE</span><h1 style="font-weight:340;font-size:32px;letter-spacing:-.8px;line-height:1.05;margin:6px 0 0">티라노 TIP</h1><p style="font-weight:400;font-size:14px;color:rgba(0,0,0,.6);margin:5px 0 0">전문가가 매달 직접 뜯어본 카드 전략.</p></div>'
  '<div id="tipPick"></div>'
  '<div class="tip-tabs" id="tipTabs"></div>'
- '<div class="tip-list" id="list"><div class="empty" style="grid-column:1/-1"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section>'
+ '<div class="tip-list" id="list"><div class="empty" style="grid-column:1/-1"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div></section>'
  '<div id="detail" style="display:none"></div></div>')
 CONTENT_JS=r"""
 var C=[],cur='발급 팁';
@@ -1813,12 +1813,12 @@ var CATIMG={'발급 팁':'img/guide/issue.svg','할인 활용':'img/guide/discou
 var CATBG={'발급 팁':'var(--block-lime)','기초 상식':'var(--block-cream)','할인 활용':'var(--block-mint)','여행':'var(--block-mint)'};
 function _thumb(x){return x.img||CATIMG[x.cat]||'img/guide/reco.svg';}
 function _catsOf(k){for(var i=0;i<TYPES.length;i++)if(TYPES[i].k===k)return TYPES[i].cats;return [k];}
-function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><span class="tip-thumb" style="background:'+(CATBG[x.cat]||'var(--block-lime)')+'"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span><div style="min-width:0"><div class="tip-rcat">'+(x.cat||'')+'</div><div class="tip-rt">'+x.title+'</div></div></a>';}
+function rowHtml(x){return '<a class="tip-row" href="content.html?id='+x.id+'"><span class="tip-thumb" style="background:'+(CATBG[x.cat]||'var(--block-lime)')+'"><svg viewBox="0 0 24 24"><use href="#mk"/></svg></span><div style="min-width:0"><div class="tip-rcat">'+(x.cat||'')+'</div><div class="tip-rt">'+x.title+'</div></div></a>';}
 function renderList(){var cats=_catsOf(cur);var items=C.filter(function(x){return cats.indexOf(x.cat)>=0;});document.getElementById('list').innerHTML=items.length?items.map(rowHtml).join(''):'<div class="empty" style="grid-column:1/-1;padding:30px 0">글이 없어요.</div>';}
 function tabs(){var t=document.getElementById('tipTabs');t.innerHTML=TYPES.map(function(ty){return '<button class="tip-tab'+(cur===ty.k?' on':'')+'" data-k="'+ty.k+'">'+ty.h+'</button>';}).join('');
  t.querySelectorAll('.tip-tab').forEach(function(b){b.onclick=function(){cur=b.dataset.k;tabs();renderList();};});}
 function pick(){var st=C.filter(function(x){return x.cat==='발급 팁';})[0]||C[0];var el=document.getElementById('tipPick');if(!st||!el)return;
- el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg><span class="tip-pick-badge">이달의 PICK</span></div>'
+ el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><svg viewBox="0 0 24 24"><use href="#mk"/></svg><span class="tip-pick-badge">이달의 PICK</span></div>'
   +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.07</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
  if(d.html){el.innerHTML='<div class="adt">'+d.html+'<a class="bk2" href="content.html" style="display:inline-block;margin-top:32px">← 티라노 TIP</a></div>';ctSeo(d.title+' | 카드티라노',(d.summary||d.title),'content.html?id='+d.id);return;}
@@ -1902,7 +1902,7 @@ CARDDETAIL_BODY=('<style>'
  '@media(max-width:480px){.mtab{display:none}.cdf .lab{display:none}.cdf .go{flex:1;justify-content:center}}'
  '</style>'
  '<div style="padding:12px 0"><div class="wrap"><a class="bk" href="cards.html">‹</a></div></div>'
- '<div class="wrap"><div id="root"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
+ '<div class="wrap"><div id="root"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="cdFloat"></div>')
 CARDDETAIL_JS=r"""
 var _ARW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>';
@@ -2105,11 +2105,11 @@ EVENTDETAIL_BODY=('<style>'
  '}'
  '</style>'
  '<div class="rg-wrap"><a class="rg-back" href="issue.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5"/><path d="M11 6l-6 6 6 6"/></svg>이번달 캐시백<span class="rg-only-pc">으로</span></a>'
- '<div id="edroot"><div class="empty" style="padding:60px 0"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
+ '<div id="edroot"><div class="empty" style="padding:60px 0"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="rgFloat"></div>')
 EVENTDETAIL_JS=r"""
 var EGG='<svg viewBox="0 0 250 210" aria-hidden="true"><ellipse cx="128" cy="174" rx="104" ry="26" fill="#e7d9b6"/><ellipse cx="128" cy="170" rx="96" ry="22" fill="#f1e6c8"/><g stroke="rgba(0,0,0,.22)" stroke-width="1.6"><ellipse cx="70" cy="150" rx="15" ry="20" fill="#fbf6ea" transform="rotate(-14 70 150)"/><ellipse cx="186" cy="150" rx="15" ry="20" fill="#fbf6ea" transform="rotate(14 186 150)"/><ellipse cx="103" cy="142" rx="15" ry="20" fill="#fff9ee" transform="rotate(-7 103 142)"/><ellipse cx="153" cy="142" rx="15" ry="20" fill="#fff9ee" transform="rotate(7 153 142)"/></g><g transform="translate(64,8) scale(5)" fill="#1f1d3d"><path d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill-rule="evenodd" d="M15.8 4.6 h2.6 a2.6 2.6 0 0 1 2.6 2.6 v1.7 a2.6 2.6 0 0 1 -2.6 2.6 h-2.6 a2.6 2.6 0 0 1 -2.6 -2.6 v-1.7 a2.6 2.6 0 0 1 2.6 -2.6 z M17.75 7.4 a0.85 0.85 0 1 0 1.7 0 a0.85 0.85 0 1 0 -1.7 0 z M18.4 9.5 h2.6 v1 h-2.6 z"/></g><g stroke="rgba(0,0,0,.24)" stroke-width="1.6"><ellipse cx="92" cy="166" rx="16" ry="21" fill="#ffffff" transform="rotate(-9 92 166)"/><ellipse cx="128" cy="170" rx="17" ry="22" fill="#fffdf7" transform="rotate(2 128 170)"/><ellipse cx="164" cy="166" rx="16" ry="21" fill="#ffffff" transform="rotate(11 164 166)"/></g></svg>';
-var TYR='<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>';
+var TYR='<svg viewBox="0 0 24 24"><use href="#mk"/></svg>';
 var PBC={cardgorilla:'#FF6A13',banksalad:'#19C37D',toss:'#3182F6',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
 var PNM={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
 function _nk(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
@@ -2315,10 +2315,10 @@ CHART_BODY=('<style>'
  '<div class="wrap"><div class="ch-wrap">'
  '<div class="ch-top"><span class="pg-eb">CASHBACK DATA</span><h1 class="ch-h1">티라노 차트</h1><p class="ch-sub">캐시백이 어떻게 움직이는지, 데이터로.</p></div>'
  '<div class="ch-hero"><div class="ch-vp"><div class="ch-track" id="chTrack">'
- '<div class="ch-slide ch-s1"><svg class="ch-face" viewBox="2 3.6 20 16.4" style="right:-12px;top:-16px;width:84px"><use href="#mk"/></svg>'
+ '<div class="ch-slide ch-s1"><svg class="ch-face" viewBox="0 0 24 24" style="right:-12px;top:-16px;width:84px"><use href="#mk"/></svg>'
  '<div class="left"><div class="ch-eb">이번 달 캐시백 지수</div><div class="ch-idxrow"><div class="ch-idx" id="chIdx">–</div><span class="ch-up" id="chDelta"></span></div><div class="cap">전 플랫폼 통합 최고 캐시백 · 전월 대비</div></div>'
  '<div class="ch-spark" id="chSpark"></div></div>'
- '<div class="ch-slide ch-s2"><svg class="ch-face" viewBox="2 3.6 20 16.4" style="left:-12px;bottom:-18px;width:90px"><use href="#mk"/></svg>'
+ '<div class="ch-slide ch-s2"><svg class="ch-face" viewBox="0 0 24 24" style="left:-12px;bottom:-18px;width:90px"><use href="#mk"/></svg>'
  '<div class="body"><div class="ch-eb">이번 달 캐시백 1위</div><h2 id="chTopName">–</h2><div class="amt" id="chTopAmt"></div><p class="who" id="chTopWho"></p>'
  '<button class="cta" id="chTopCta">차트 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button></div>'
  '<div class="ch-plate" id="chTopPlate"></div></div>'
@@ -2330,7 +2330,7 @@ CHART_BODY=('<style>'
  '<div class="ch-sum"><div class="box"><div class="l">6개월 최고</div><div class="bb" id="chHi">–</div></div><div class="box"><div class="l">평균</div><div class="bb" id="chAvg">–</div></div></div></div>'
  '<div class="ch-card"><div class="ch-cardh" style="align-items:center"><h2 class="ch-ct" style="margin:0">티라노 랭킹</h2>'
  '<div class="ch-chips"><button class="ch-chip on" id="chChipPop">인기 차트</button><button class="ch-chip" id="chChipCash">캐시백 차트</button></div></div>'
- '<div class="ch-rows" id="chRank"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
+ '<div class="ch-rows" id="chRank"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '</div></div>')
 CHART_JS=r"""
 var PKO={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
@@ -2463,7 +2463,7 @@ FAV_BODY=('<style>'
  '<div class="pb-d" id="pbDesc">관심 카드에 다음 달 새 캐시백 이벤트가 등록되면 알려드려요.</div></div>'
  '<label class="pb-sw"><input type="checkbox" id="pushTg"><span class="pb-track"><span class="pb-thumb"></span></span></label></div>'
  '<div class="fv-seg" id="favSeg"><button type="button" data-s="card" class="on">카드 <b id="favNC">0</b></button><button type="button" data-s="evt">이벤트 <b id="favNE">0</b></button></div>'
- '<div class="fv-list" id="favCard"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+ '<div class="fv-list" id="favCard"><div class="empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div>'
  '<div class="fv-list" id="favEvt" style="display:none"></div>'
  '</section></div>')
 FAV_JS=r"""
@@ -2626,7 +2626,7 @@ function renderResults(q,res){
 }
 
 function renderNo(q){
- B().innerHTML='<div class="srch-no"><svg class="nmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>'+
+ B().innerHTML='<div class="srch-no"><svg class="nmk" viewBox="0 0 24 24"><use href="#mk"/></svg>'+
   '<h3>‘'+_e(q)+'’에 대한 결과가 없어요</h3>'+
   '<p>철자를 확인하거나 더 짧은 키워드로 검색해보세요. 카드명·혜택·플랫폼·콘텐츠를 찾을 수 있어요.</p>'+
   '<div class="srch-chips" style="justify-content:center">'+SUGGEST.map(function(t){return '<span class="srch-chip" data-q="'+_e(t)+'">'+_e(t)+'</span>';}).join('')+'</div></div>';
@@ -2972,7 +2972,7 @@ ABOUT_BODY=(r'''<style>
  '</defs></svg>'
  '<div class="ab"><div class="wrap">'
  # HERO
- '<section class="sec" style="padding-top:40px"><div class="block ab-hero"><svg class="ab-wm" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>'
+ '<section class="sec" style="padding-top:40px"><div class="block ab-hero"><svg class="ab-wm" viewBox="0 0 24 24"><use href="#mk"/></svg>'
  '<div class="eb" style="color:rgba(0,0,0,.55)">카드티라노란?</div>'
  '<h1>받을 수 있는 혜택을,<br>다 받게.</h1>'
  '<p>카드 혜택은 분명히 거기 있습니다. 다만 너무 흩어져 있고, 너무 자주 바뀝니다. 그 손해를 끝내려고 — 카드티라노가 나섰습니다.</p>'
@@ -3000,7 +3000,7 @@ ABOUT_BODY=(r'''<style>
  '<p style="font-weight:540;font-size:16px;line-height:1.5;margin:16px 0 0">"이 카드, 어디서 받아야 제일 이득이지?"에 대한 답을, 검색 없이.</p>'
  '<p style="font-weight:400;font-size:15px;line-height:1.5;margin:18px 0 0;color:rgba(0,0,0,.66)">복잡한 건 우리가 할게요. 당신은 가장 이득인 결과만 보면 됩니다.</p></div>'
  '<div style="background:#fff;border-radius:20px;padding:28px 30px;box-shadow:0 4px 16px rgba(0,0,0,.06)">'
- '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px"><span class="mono" style="font-size:10px;color:rgba(0,0,0,.45)">6개 플랫폼 → 가장 이득인 1곳</span><span style="width:26px;height:26px;border-radius:50%;background:var(--block-lime);display:flex;align-items:center;justify-content:center"><svg viewBox="2 3.6 20 16.4" style="width:16px;height:16px"><use href="#mk"/></svg></span></div>'
+ '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px"><span class="mono" style="font-size:10px;color:rgba(0,0,0,.45)">6개 플랫폼 → 가장 이득인 1곳</span><span style="width:26px;height:26px;border-radius:50%;background:var(--block-lime);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><use href="#mk"/></svg></span></div>'
  '<div style="display:flex;flex-direction:column;gap:10px">'
  + "".join('<div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:12px;background:%s;border:%s"><span style="width:8px;height:8px;border-radius:50%%;background:%s;flex-shrink:0"></span><span style="font-weight:540;font-size:13.5px;flex:1;color:%s">%s</span>%s<span style="font-weight:700;font-size:15px;white-space:nowrap;color:%s">%s</span></div>'%(bg,bd,dot,nc,nm,('<span class="mono" style="font-size:8px;background:#000;color:#fff;padding:3px 8px;border-radius:50px">최고</span>' if win else ''),vc,v) for nm,v,dot,win,bg,bd,nc,vc in [
    ("토스","14만원","#3182F6",True,"var(--block-lime)","1px solid #000","#000","#000"),
@@ -3038,7 +3038,7 @@ ABOUT_BODY=(r'''<style>
  '<p style="font-weight:540;font-size:22px;letter-spacing:-.5px;margin:28px auto 0;max-width:560px">누구나, 받을 수 있는 혜택을 다 받는 것. 그게 우리가 만들고 싶은 카드 시장입니다.</p></div></section>'
  # COMPANY
  '<section class="sec"><div class="ab-g2">'
- '<div><div style="display:flex;align-items:center;gap:11px;margin-bottom:20px"><svg viewBox="2 3.6 20 16.4" style="width:34px;height:34px"><use href="#mk"/></svg><span style="font-weight:700;font-size:22px;letter-spacing:-.5px">CARD<span style="font-weight:340">TYRANNO</span></span></div>'
+ '<div><div style="display:flex;align-items:center;gap:11px;margin-bottom:20px"><svg viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#mk"/></svg><span style="font-weight:700;font-size:22px;letter-spacing:-.5px">CARD<span style="font-weight:340">TYRANNO</span></span></div>'
  '<p style="font-weight:400;font-size:17px;line-height:1.55;color:rgba(0,0,0,.74)"><b style="font-weight:700">데이터로 카드 혜택을 큐레이션하는 핀테크 스타트업</b>입니다. (운영: 쥬라기랩스) 오직 사용자 편에서, 흩어진 혜택을 모으고 분석해 가장 유리한 선택을 안내합니다.</p>'
  '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:18px 0 0;color:rgba(0,0,0,.66)">가장 강한 포식자가 먹잇감을 놓치지 않듯 — 당신이 받아야 할 혜택도, 카드티라노가 놓치지 않겠습니다.</p></div>'
  '<div class="ab-co-card"><h3>이번 달, 당신에게<br>가장 유리한 선택은?</h3>'
@@ -3242,7 +3242,7 @@ DIAG_BODY=(r'''<style>
  </svg>'''
  r'''<div class="wrap"><div class="dg-wrap">
  <section class="dg-screen on" id="dgChooser">
-  <div class="dh-head"><span class="ti"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>진단하기</span><button class="dh-share" id="dhShare" type="button" aria-label="공유"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></div>
+  <div class="dh-head"><span class="ti"><svg viewBox="0 0 24 24"><use href="#mk"/></svg>진단하기</span><button class="dh-share" id="dhShare" type="button" aria-label="공유"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></div>
   <div class="dh-hero">
    <span class="eb">대표 진단</span>
    <div class="hrow"><div style="flex:1"><h2>60초 카드 진단</h2><div class="hd">6개 질문이면 내게 맞는 카드 1장과 지금 가장 큰 캐시백 플랫폼까지.</div></div><span class="tc"><svg viewBox="0 0 100 86"><use href="#tyr"/></svg></span></div>
@@ -3543,7 +3543,7 @@ function dhRenderGrid(cat){var g=document.getElementById('dhGrid');if(!g)return;
   if(t.soon)return '<div class="dh-tcard soon" style="background:'+t.bg+'">'+tag+inner+'</div>';
   return '<button type="button" class="dh-tcard" data-scn="'+t.scn+'" style="background:'+t.bg+'">'+tag+inner+'</button>';}).join('');}
 function dhRenderOthers(){var o=document.getElementById('dhOthers');if(!o)return;
- o.innerHTML=DOTHERS.map(function(x){return '<div class="dh-orow"><span class="pl" style="background:'+x.c+'"><svg viewBox="2 3.6 20 16.4" style="position:absolute;right:-6%;bottom:-10%;width:54%;height:auto;opacity:.16"><use href="#mk"/></svg></span><span style="min-width:0"><span class="who">'+x.who+'</span><span class="card">'+x.card+'</span></span></div>';}).join('');}
+ o.innerHTML=DOTHERS.map(function(x){return '<div class="dh-orow"><span class="pl" style="background:'+x.c+'"><svg viewBox="0 0 24 24" style="position:absolute;right:-6%;bottom:-10%;width:54%;height:auto;opacity:.16"><use href="#mk"/></svg></span><span style="min-width:0"><span class="who">'+x.who+'</span><span class="card">'+x.card+'</span></span></div>';}).join('');}
 function dhRefresh(){var r=document.getElementById('dhResume');if(!r)return;var j=load();if(j&&j.answers&&j.answers.length>0&&j.answers.length<QS.length){r.style.display='';var s=document.getElementById('dhResumeS');if(s)s.textContent='카드 진단 · '+j.answers.length+'/'+QS.length+' 단계';}else r.style.display='none';}
 function bind(){
  document.getElementById('dgStart').onclick=startFresh;
@@ -3700,7 +3700,7 @@ function val(id){return (document.getElementById(id).value||'').trim();}
 function err(id,m){var e=document.getElementById(id);if(e)e.textContent=m||'';}
 function V(){return document.getElementById('cmView');}
 function tag(cat){var b=BMAP[cat];return '<span class="cm-cat" style="background:'+(b?b.c:'#f0f0f1')+'">'+esc(b?b.s:cat)+'</span>';}
-function ava(cat){var b=BMAP[cat];return '<span class="cm-ava" style="background:'+(b?b.c:'#c5b0f4')+'"><svg viewBox="2 3.6 20 16.4" aria-hidden="true"><use href="#mk"/></svg></span>';}
+function ava(cat){var b=BMAP[cat];return '<span class="cm-ava" style="background:'+(b?b.c:'#c5b0f4')+'"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#mk"/></svg></span>';}
 function go(q){history.pushState({},'','community.html'+(q||''));route();}
 // 좌측 게시판 사이드바
 function renderBoards(){var n=document.getElementById('cmBoards');var all=[{k:'전체',s:'전체',c:'#000'}].concat(BOARDS);
@@ -3716,7 +3716,7 @@ function feed(){cmPage=1;var ttl=cmCat==='전체'?'카드 라운지':cmCat;
  V().innerHTML='<div class="cm-mh"><div><div class="cm-eb">COMMUNITY · '+esc(cmCat)+'</div><h2 class="cm-mt">'+esc(ttl)+'</h2></div><button class="cm-new" id="cmNew">글쓰기 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>'
   +'<div class="cm-chips" id="cmChips"></div>'
   +'<div class="cm-sortrow"><button class="cm-sort'+(cmSort==='new'?' on':'')+'" data-s="new">최신순</button><button class="cm-sort'+(cmSort==='popular'?' on':'')+'" data-s="popular">공감순</button><button class="cm-sort'+(cmSort==='cmt'?' on':'')+'" data-s="cmt">댓글순</button><span class="cm-sortnote">공개 데이터 기준 자동 정렬</span></div>'
-  +'<div class="cm-list" id="cmRows"><div class="cm-empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+  +'<div class="cm-list" id="cmRows"><div class="cm-empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div></div>'
   +'<button class="cm-more" id="cmMore" style="display:none">더 보기</button>';
  var ch=document.getElementById('cmChips');var all=['전체'].concat(BOARDS.map(function(b){return b.k;}));
  ch.innerHTML=all.map(function(k){return '<button class="cm-chip'+(k===cmCat?' on':'')+'" data-c="'+esc(k)+'">'+esc(BMAP[k]?BMAP[k].s:k)+'</button>';}).join('');
@@ -3755,7 +3755,7 @@ function writeForm(){V().innerHTML='<a class="cm-back" id="cmBack"><svg width="1
   if(!/^\d{4}$/.test(body.password)){err('wferr','비밀번호는 4자리 숫자예요.');return;}
   api('/api/posts',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)}).then(function(j){go('?id='+j.id);}).catch(function(e){err('wferr',e.message);});};}
 // 글 상세
-function detail(id){V().innerHTML='<div class="cm-empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div>';
+function detail(id){V().innerHTML='<div class="cm-empty"><span class="tload"><svg class="tmk" viewBox="0 0 24 24"><use href="#mk"/></svg>불러오는 중</span></div>';
  api('/api/posts/'+id).then(function(j){var p=j.post;document.title=p.title+' | 카드티라노 커뮤니티';
   var liked=lks('p'+id),scrap=scr('p'+id);
   var ct=p.card_event_id?('<a class="cm-d-card" href="'+(/\.html|^http/.test(p.card_event_id)?esc(p.card_event_id):('carddetail.html?n='+encodeURIComponent(p.card_event_id)))+'" rel="sponsored nofollow noopener"><div class="ct"><span class="cn">'+esc(p.card_event_id)+'</span><span class="cg">자세히 보기 ›</span></div><div class="disc">이용자 후기 · 최대 금액 기준, 조건 충족 시 · 카드티라노는 발급을 중개하지 않습니다.</div></a>'):'';

@@ -611,7 +611,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
  <symbol id="egg-hatch" viewBox="0 0 100 120"><g transform="rotate(20 72 18)"><path d="M56 16 L64 9 L78 13 L88 22 L75 25 L63 23 Z" fill="#F7E8CF"/><path d="M63 23 L75 25 L70 21 L65 22 Z" fill="#E9CFA3" opacity=".7"/></g><path d="M33 64 C29 46 36 28 50 28 C64 28 71 46 67 64 Z" fill="#FF7A1A"/><path d="M41 30 l3 -7 l4 7 Z M50 28 l3.5 -7 l3.5 7 Z M59 30 l4 -7 l3 7 Z" fill="#E85D00"/><path d="M42 64 C40 50 44 42 50 42 C56 42 60 50 58 64 Z" fill="#FFC182"/><circle cx="44" cy="46" r="2.8" fill="#2A1C0E"/><circle cx="56" cy="46" r="2.8" fill="#2A1C0E"/><circle cx="45.1" cy="45" r=".9" fill="#fff"/><circle cx="57.1" cy="45" r=".9" fill="#fff"/><path d="M45 55 q5 4 10 0" fill="none" stroke="#2A1C0E" stroke-width="2" stroke-linecap="round"/><path d="M22 65 L30 55 L37 63 L45 53 L52 62 L60 52 L68 62 L76 56 L80 65 C82 92 68 113 50 113 C33 113 18 95 22 65 Z" fill="#F7E8CF"/><path d="M50 113 C33 113 18 95 22 65 C28 84 41 96 64 100 C60 109 54 113 50 113 Z" fill="#E9CFA3" opacity=".5"/><ellipse cx="38" cy="86" rx="5" ry="6" fill="#E6A765" opacity=".8"/><ellipse cx="62" cy="90" rx="6" ry="7" fill="#E6A765" opacity=".8"/></symbol>
  </svg><div class="wrap"><div class="dg-wrap">
  <section class="dg-screen on" id="dgChooser">
-  <div class="dh-head"><span class="ti"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>진단하기</span><button class="dh-share" id="dhShare" type="button" aria-label="공유"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></div>
+  <div class="dh-head"><span class="ti"><svg viewBox="0 0 24 24"><use href="#mk"/></svg>진단하기</span><button class="dh-share" id="dhShare" type="button" aria-label="공유"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></div>
   <div class="dh-hero">
    <span class="eb">대표 진단</span>
    <div class="hrow"><div style="flex:1"><h2>60초 카드 진단</h2><div class="hd">6개 질문이면 내게 맞는 카드 1장과 지금 가장 큰 캐시백 플랫폼까지.</div></div><span class="tc"><svg viewBox="0 0 100 86"><use href="#tyr"/></svg></span></div>
@@ -840,7 +840,7 @@ var _CTLINK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 var _CTKAKAO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11H8l-4 3.5z"/></svg>';
 var _CTMAIL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 5 8-5"/></svg>';
 var _CTIMG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M5 17l4.5-4 3 2.5L17 11l3 3"/></svg>';
-var _CTMK='<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>';
+var _CTMK='<svg viewBox="0 0 24 24"><use href="#mk"/></svg>';
 function _ctShClose(){var el=document.getElementById('ctShareSheet');if(el){el.classList.remove('on');document.body.style.overflow='';}}
 function ctShareSheet(url,title,text){var el=document.getElementById('ctShareSheet');
  if(!el){el=document.createElement('div');el.id='ctShareSheet';el.className='ctsh-bg';
@@ -1158,7 +1158,7 @@ function dhRenderGrid(cat){var g=document.getElementById('dhGrid');if(!g)return;
   if(t.soon)return '<div class="dh-tcard soon" style="background:'+t.bg+'">'+tag+inner+'</div>';
   return '<button type="button" class="dh-tcard" data-scn="'+t.scn+'" style="background:'+t.bg+'">'+tag+inner+'</button>';}).join('');}
 function dhRenderOthers(){var o=document.getElementById('dhOthers');if(!o)return;
- o.innerHTML=DOTHERS.map(function(x){return '<div class="dh-orow"><span class="pl" style="background:'+x.c+'"><svg viewBox="2 3.6 20 16.4" style="position:absolute;right:-6%;bottom:-10%;width:54%;height:auto;opacity:.16"><use href="#mk"/></svg></span><span style="min-width:0"><span class="who">'+x.who+'</span><span class="card">'+x.card+'</span></span></div>';}).join('');}
+ o.innerHTML=DOTHERS.map(function(x){return '<div class="dh-orow"><span class="pl" style="background:'+x.c+'"><svg viewBox="0 0 24 24" style="position:absolute;right:-6%;bottom:-10%;width:54%;height:auto;opacity:.16"><use href="#mk"/></svg></span><span style="min-width:0"><span class="who">'+x.who+'</span><span class="card">'+x.card+'</span></span></div>';}).join('');}
 function dhRefresh(){var r=document.getElementById('dhResume');if(!r)return;var j=load();if(j&&j.answers&&j.answers.length>0&&j.answers.length<QS.length){r.style.display='';var s=document.getElementById('dhResumeS');if(s)s.textContent='카드 진단 · '+j.answers.length+'/'+QS.length+' 단계';}else r.style.display='none';}
 function bind(){
  document.getElementById('dgStart').onclick=startFresh;

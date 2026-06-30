@@ -570,7 +570,7 @@ var _CTLINK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 var _CTKAKAO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11H8l-4 3.5z"/></svg>';
 var _CTMAIL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 5 8-5"/></svg>';
 var _CTIMG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M5 17l4.5-4 3 2.5L17 11l3 3"/></svg>';
-var _CTMK='<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>';
+var _CTMK='<svg viewBox="0 0 24 24"><use href="#mk"/></svg>';
 function _ctShClose(){var el=document.getElementById('ctShareSheet');if(el){el.classList.remove('on');document.body.style.overflow='';}}
 function ctShareSheet(url,title,text){var el=document.getElementById('ctShareSheet');
  if(!el){el=document.createElement('div');el.id='ctShareSheet';el.className='ctsh-bg';
@@ -729,7 +729,7 @@ function renderResults(q,res){
 }
 
 function renderNo(q){
- B().innerHTML='<div class="srch-no"><svg class="nmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>'+
+ B().innerHTML='<div class="srch-no"><svg class="nmk" viewBox="0 0 24 24"><use href="#mk"/></svg>'+
   '<h3>‘'+_e(q)+'’에 대한 결과가 없어요</h3>'+
   '<p>철자를 확인하거나 더 짧은 키워드로 검색해보세요. 카드명·혜택·플랫폼·콘텐츠를 찾을 수 있어요.</p>'+
   '<div class="srch-chips" style="justify-content:center">'+SUGGEST.map(function(t){return '<span class="srch-chip" data-q="'+_e(t)+'">'+_e(t)+'</span>';}).join('')+'</div></div>';
