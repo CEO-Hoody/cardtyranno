@@ -1522,6 +1522,17 @@
     "American Express Green Edition2"
    ],
    "count": 1
+  },
+  "2026-07|naver|하나카드|570000": {
+   "month": "2026-07",
+   "platform": "naver",
+   "issuer": "하나카드",
+   "reward_won": 570000,
+   "reward_text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+   "cards": [
+    "하나 스카이패스 아멕스 플래티늄 카드"
+   ],
+   "count": 1
   }
  },
  "products": [
@@ -8846,6 +8857,37 @@
      "main_won": 35000,
      "bonus_won": 0,
      "reward_group": "2026-07|toss|IBK기업은행|90000"
+    }
+   ]
+  },
+  {
+   "id": 174,
+   "name": "하나 스카이패스 아멕스 플래티늄 카드",
+   "issuer": "하나카드",
+   "img": null,
+   "platforms": {
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865360&cardCompanyId=CCHN&cardIssuerCode=044"
+    }
+   },
+   "events": [
+    {
+     "platform": "naver",
+     "reward_text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+     "reward_won": 570000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865360&cardCompanyId=CCHN&cardIssuerCode=044",
+     "main_won": 70000,
+     "bonus_won": 500000,
+     "breakdown": [
+      {
+       "text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+       "won": 570000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|하나카드|570000"
     }
    ]
   }
