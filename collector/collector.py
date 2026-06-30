@@ -192,6 +192,11 @@ def export_json(con):
                     mw=_cm; bw=_tt-_cm
                 elif bw==0 and 0<_cb<_tt:            # 주요 없음 + 부가 수치 있음(자동납부 등) → 부가=bonusWon, 주요=전체-부가
                     bw=_cb; mw=_tt-_cb
+            # 분해 신뢰도 가드: 아정당 등은 거주지 main이 없으면 '전체-부가'로 main이 부풀 수 있음(예 74만-4만=70만).
+            # naver/아정당/카카오에서 main이 전체의 70% 이상이면 '분해 실패'로 보고 미방출(null).
+            # 프론트 splTier가 카드 main_tier 우선 사용·null 폴백하므로 표시엔 무해, raw 뻥튀기만 제거(혼동 방지).
+            if r[0] in ("naver","ajungdang","kakaopay") and mw and (r[2] or 0) and mw>=0.7*(r[2] or 0):
+                mw=None; bw=None
             e={"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4],
                "main_won":mw,"bonus_won":bw}
             if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
