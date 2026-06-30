@@ -734,7 +734,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  function _es(s){return String(s==null?'':s).replace(/[<>&]/g,'');}
  var byIss={},issMeta={};
  prods.forEach(function(p){if(!(p.events||[]).length)return;var iss=p.issuer||'기타';byIss[iss]=byIss[iss]||{};
-  var pmax=0;var _mt=MTIER[_nk2(p.name)];p.events.forEach(function(e){var w=e.reward_won||0;if(w>pmax)pmax=w;var c=byIss[iss][e.platform];if(!c||w>(c.t||0))byIss[iss][e.platform]=splTier(e,_mt);});
+  var pmax=0;var _mt=MTIER[_nk2(p.name)];p.events.forEach(function(e){var w=e.reward_won||0;if(w>pmax)pmax=w;var s=splTier(e,_mt);var c=byIss[iss][e.platform];if(!c){c=byIss[iss][e.platform]={t:0,m:0,b:0,_bm:-1};}if(s.t>c.t)c.t=s.t;/* 전체=최대 전체혜택 */if(s.b>c._bm){c._bm=s.b;c.m=s.m;c.b=s.b;}/* 주요·부가=부가혜택 최대 이벤트 기준 */});
   var m=issMeta[iss]=issMeta[iss]||{count:0,rep:'',repv:-1};m.count++;if(pmax>m.repv){m.repv=pmax;m.rep=p.name;}});
  var ISSROWS=Object.keys(byIss).map(function(iss){var o={};PORD.forEach(function(pk){var c=byIss[iss][pk];if(c&&c.t)o[pk]=c;});return {iss:iss,o:o,count:(issMeta[iss]||{}).count||0,rep:(issMeta[iss]||{}).rep||''};});
  var ISSF=[['','전체'],['삼성','삼성'],['현대','현대'],['KB국민','KB국민'],['신한','신한'],['롯데','롯데'],['우리','우리']];

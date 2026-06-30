@@ -1551,7 +1551,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  function _es(s){return String(s==null?'':s).replace(/[<>&]/g,'');}
  var byIss={},issMeta={};
  prods.forEach(function(p){if(!(p.events||[]).length)return;var iss=p.issuer||'기타';byIss[iss]=byIss[iss]||{};
-  var pmax=0;var _mt=MTIER[_nk2(p.name)];p.events.forEach(function(e){var w=e.reward_won||0;if(w>pmax)pmax=w;var c=byIss[iss][e.platform];if(!c||w>(c.t||0))byIss[iss][e.platform]=splTier(e,_mt);});
+  var pmax=0;var _mt=MTIER[_nk2(p.name)];p.events.forEach(function(e){var w=e.reward_won||0;if(w>pmax)pmax=w;var s=splTier(e,_mt);var c=byIss[iss][e.platform];if(!c){c=byIss[iss][e.platform]={t:0,m:0,b:0,_bm:-1};}if(s.t>c.t)c.t=s.t;/* 전체=최대 전체혜택 */if(s.b>c._bm){c._bm=s.b;c.m=s.m;c.b=s.b;}/* 주요·부가=부가혜택 최대 이벤트 기준 */});
   var m=issMeta[iss]=issMeta[iss]||{count:0,rep:'',repv:-1};m.count++;if(pmax>m.repv){m.repv=pmax;m.rep=p.name;}});
  var ISSROWS=Object.keys(byIss).map(function(iss){var o={};PORD.forEach(function(pk){var c=byIss[iss][pk];if(c&&c.t)o[pk]=c;});return {iss:iss,o:o,count:(issMeta[iss]||{}).count||0,rep:(issMeta[iss]||{}).rep||''};});
  var ISSF=[['','전체'],['삼성','삼성'],['현대','현대'],['KB국민','KB국민'],['신한','신한'],['롯데','롯데'],['우리','우리']];
@@ -2158,9 +2158,11 @@ Promise.all([
    if(rec==='rec'){recMsg='지금 '+pnm+'에서 발급하기 좋아요. 주요 캐시백 '+_wm(myMain)+'으로 다른 플랫폼과 같거나 더 높아요'+(isPeak?' · 최근 4개월 중 가장 커요.':'.');}
    else if(rec==='hold'){if(sibTriggered){recMsg='같은 '+(p.issuer||'카드사')+'의 <b>'+sibBest.name+'</b>이(가) 주요 캐시백 '+_wm(sibMain)+'으로 '+_wm(sibMain-myMain)+' 더 커요. '+p.name+'과(와) 함께 비교해 보세요.';}else{recMsg='전체 캐시백은 '+pnm+'이(가) 가장 크지만, 주요 캐시백은 '+(PNM[oMainPlat]||oMainPlat||'다른 플랫폼')+'이(가) '+_wm(Math.max(oMainMax-myMain,0))+' 더 커요. 조건을 비교해 보세요.';}}
    else{recMsg='주요·전체 캐시백 모두 다른 채널이 더 커요. 비교 후 결정하세요.';}
-   var coach='<div class="rg-coach"><div class="rg-coach-badge"><span class="rg-coach-ring '+recCls+'"><span></span></span><div class="lab rg-only-pc" style="color:'+(rec==='rec'?'var(--success)':(rec==='hold'?'#cf9220':'rgba(0,0,0,.55)'))+'">'+recLab+'</div><div class="mono rg-only-pc">티라노 코칭</div></div>'
+   // 코칭 도형: 추천=O(동심원)·보류=△·비추천=✕ (값에 따라 좌측 도형 자체가 바뀜)
+   var recSym=rec==='rec'?'<span></span>':(rec==='hold'?'<svg viewBox="0 0 24 24" style="width:42px;height:42px"><path d="M12 5l8 14H4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>':'<svg viewBox="0 0 24 24" style="width:42px;height:42px"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>');
+   var coach='<div class="rg-coach"><div class="rg-coach-badge"><span class="rg-coach-ring '+recCls+'">'+recSym+'</span><div class="lab rg-only-pc" style="color:'+(rec==='rec'?'var(--success)':(rec==='hold'?'#cf9220':'rgba(0,0,0,.55)'))+'">'+recLab+'</div><div class="mono rg-only-pc">티라노 코칭</div></div>'
     +'<div><div class="rg-coach-head rg-only-pc">'+TYR+'<span class="eb">티라노 코칭</span></div><div class="rg-coach-molab rg-only-mo '+recCls+'">'+recLab+' · 티라노 코칭</div><div class="rg-coach-t">'+recMsg+'</div>'
-    +'<div class="rg-coach-leg rg-only-pc"><span><span class="dot o"></span>추천 — 지금 발급</span><span><svg class="dot" viewBox="0 0 24 24" style="color:rgba(0,0,0,.6)"><path d="M12 5l8 14H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>보류 — 추이 지켜보기</span><span><svg class="dot" viewBox="0 0 24 24" style="color:rgba(0,0,0,.6)"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>비추천 — 다음 달 권장</span></div></div></div>';
+    +'</div></div>';
    // 이런 이벤트도 있어요 (PC만 — 모바일 시안에 없음)
    var nk=_nk(p.name);var orows=[];
    var op=null,opw=0;(p.events||[]).forEach(function(x){if(x.platform!==P&&(x.reward_won||0)>opw){opw=x.reward_won;op=x;}});
