@@ -472,12 +472,9 @@ function ctSeo(title,desc,canonPath){try{
 /* 만료 이벤트 제외 — period_end(마감일)가 오늘(KST) 이전이면 종료된 이벤트(예: 6월 마감). 비교표·캐시백 등에서 진행 중인 이벤트만 노출. period_end 없음=상시/미정이라 유지. */
 function ctToday(){try{return new Date(Date.now()+324e5).toISOString().slice(0,10);}catch(e){return '0000-00-00';}}
 function ctYM(){return ctToday().slice(0,7);}
-// 종료/묵은 이벤트 판별: ① 마감일 지남 ② reward_group 발행월이 전월 이하(콜렉터가 발행월을 정확히 찍으면 전 플랫폼 적용) ③ 네이버는 마감일·정확월 없어 URL promotionId(YYYYMMDD) 발행월로 판별
-function evExpired(e){if(!e)return false;
- var pe=e.period_end;if(pe&&String(pe).slice(0,10)<ctToday())return true;
- var rg=e.reward_group||'';var rgm=rg.indexOf('|')>0?rg.split('|')[0]:'';if(/^\d{4}-\d{2}$/.test(rgm)&&rgm<ctYM())return true;
- var m=/promotionId=(\d{4})(\d{2})/.exec(e.url||'');if(m&&(m[1]+'-'+m[2])<ctYM())return true;
- return false;}
+// 종료 이벤트 판별: 마감일(period_end)이 지난 건만 제외. 전월잔류(묵은) 이벤트는 콜렉터가 last_seen 월 필터로 소스(platform_events)에서 제거(a93e6a3) → 프론트는 platform_events를 그대로 신뢰.
+// ⚠️ 네이버 promotionId 발행월 휴리스틱은 제거: 네이버는 7월 프로모를 6월말 발행해 promotionId가 6월자라, 그 필터가 7월 네이버를 전부 오삭제했음(긴급 회귀). reward_group 발행월 휴리스틱도 콜렉터가 수집월로 재스탬프하므로 프론트에서 쓰지 않음.
+function evExpired(e){if(!e)return false;var pe=e.period_end;return !!(pe&&String(pe).slice(0,10)<ctToday());}
 function liveEvents(prods){(prods||[]).forEach(function(p){p.events=(p.events||[]).filter(function(e){return !evExpired(e);});});return (prods||[]).filter(function(p){return (p.events||[]).length;});}
 function splTier(e,mt){var t=(e.reward_won||0);mt=mt||0;
  // 카드 main_tier(주요 캐시백)를 최우선 — 플랫폼별 main_won은 채널마다 들쭉날쭉(네이버=전액·카카오 임의·뱅샐 0)이라 'events 전체 캐시백 구성'과 어긋남. 티어가 있으면 주요=티어로 통일, 부가=전체−주요.
@@ -3073,6 +3070,40 @@ DIAG_BODY=(r'''<style>
 @keyframes dgEggShake{0%,100%{transform:rotate(0)}20%{transform:rotate(-3.5deg)}40%{transform:rotate(2.5deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(3deg)}}
 @keyframes dgEggPop{0%{transform:scale(.4) translateY(8px);opacity:0}55%{transform:scale(1.14) translateY(-2px)}100%{transform:scale(1) translateY(0);opacity:1}}
 @media(prefers-reduced-motion:reduce){.egg-wrap,.egg-shake,.egg-hatch-wrap{animation:none}}
+/* 진단 메인 허브(#2) — 대표 진단 히어로 + 이어하기 + 카테고리 + 진단 콘텐츠 그리드 + 다른 사람 결과 */
+.dh-head{display:flex;align-items:center;justify-content:space-between;padding:8px 2px 4px}
+.dh-head .ti{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:15px;letter-spacing:-.3px}.dh-head .ti svg{width:20px;height:16px;color:#1a1714}
+.dh-share{width:36px;height:36px;border-radius:50%;background:var(--surface-soft);border:0;display:flex;align-items:center;justify-content:center;cursor:pointer}.dh-share svg{width:16px;height:16px}
+.dh-hero{margin-top:10px;background:var(--block-lilac);border-radius:24px;padding:24px 22px;position:relative;overflow:hidden}
+.dh-hero .eb{display:inline-block;font:700 9px var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.5px;background:#000;color:#fff;padding:4px 10px;border-radius:50px}
+.dh-hero .hrow{display:flex;align-items:center;gap:14px;margin-top:14px}
+.dh-hero h2{font-weight:340;font-size:26px;letter-spacing:-.9px;line-height:1.18;margin:0}
+.dh-hero .hd{font-weight:400;font-size:12.5px;color:rgba(0,0,0,.62);margin-top:7px;line-height:1.5}
+.dh-hero .tc{width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;flex-shrink:0}.dh-hero .tc svg{width:56px;height:48px;color:#1a1714}
+.dh-hero .acts{display:flex;gap:9px;margin-top:18px}
+.dh-cta{flex:1;text-align:center;padding:13px;border-radius:50px;background:#000;color:#fff;font-weight:600;font-size:14px;border:0;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;gap:8px}.dh-cta svg{width:16px;height:16px}
+.dh-resume{display:flex;align-items:center;gap:12px;margin-top:13px;border:1.5px solid var(--hairline);border-radius:16px;padding:13px 15px;cursor:pointer;background:#fff;width:100%;text-align:left;font-family:inherit}
+.dh-resume:active{transform:scale(.99)}
+.dh-resume .ic{width:34px;height:34px;border-radius:50%;background:var(--surface-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0}.dh-resume .ic svg{width:17px;height:17px}
+.dh-resume .t{font-weight:700;font-size:13px}.dh-resume .s{font-weight:400;font-size:11.5px;color:rgba(0,0,0,.55);margin-top:1px;display:block}
+.dh-resume .go{margin-left:auto;color:rgba(0,0,0,.3);display:inline-flex}.dh-resume .go svg{width:18px;height:18px}
+.dh-cats{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:18px 0 0;scrollbar-width:none}.dh-cats::-webkit-scrollbar{display:none}
+.dh-cat{flex:0 0 auto;padding:8px 14px;border-radius:50px;border:1.5px solid var(--hairline);background:#fff;color:rgba(0,0,0,.65);font-weight:540;font-size:12.5px;white-space:nowrap;cursor:pointer;font-family:inherit}.dh-cat.on{background:#000;color:#fff;border-color:#000}
+.dh-sect{font-weight:700;font-size:16px;letter-spacing:-.3px;margin:22px 0 0}
+.dh-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:13px}
+.dh-tcard{border:1px solid var(--hairline);border-radius:16px;padding:15px 14px;text-align:left;cursor:pointer;font-family:inherit;display:flex;flex-direction:column;position:relative;transition:transform .12s ease}
+.dh-tcard:active{transform:scale(.97)}
+.dh-tcard.soon{cursor:default;opacity:.6}
+.dh-tcard .tc{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center}.dh-tcard .tc svg{width:30px;height:26px;color:#1a1714}
+.dh-tcard .tt{font-weight:700;font-size:14px;letter-spacing:-.3px;margin-top:11px;line-height:1.25}
+.dh-tcard .td{font-weight:400;font-size:11px;color:rgba(0,0,0,.55);margin-top:4px;line-height:1.4}
+.dh-tcard .tm{font:600 8.5px var(--font-mono,monospace);color:rgba(0,0,0,.45);margin-top:9px;letter-spacing:.3px}
+.dh-tcard .badge{position:absolute;top:13px;right:13px;font:700 8px var(--font-mono,monospace);color:#fff;padding:3px 8px;border-radius:50px}.dh-tcard .badge.nw{background:var(--accent-magenta)}.dh-tcard .badge.so{background:rgba(0,0,0,.4)}
+.dh-others{display:flex;flex-direction:column;gap:10px;margin-top:13px}
+.dh-orow{display:flex;align-items:center;gap:12px;border:1px solid var(--hairline);border-radius:14px;padding:13px 15px}
+.dh-orow .pl{width:50px;flex-shrink:0;aspect-ratio:1.586/1;border-radius:6px;transform:rotate(-5deg);position:relative;overflow:hidden}
+.dh-orow .who{font-weight:400;font-size:11.5px;color:rgba(0,0,0,.5)}.dh-orow .card{font-weight:700;font-size:13.5px;letter-spacing:-.3px;margin-top:1px;display:block}
+@media(min-width:761px){.dh-hero{padding:32px 30px}.dh-hero h2{font-size:32px}.dh-hero .hd{font-size:14px}.dh-hero .tc{width:108px;height:108px}.dh-hero .tc svg{width:80px;height:68px}.dh-grid{grid-template-columns:repeat(3,1fr);gap:14px}.dh-cats{flex-wrap:wrap;overflow:visible}.dh-others{flex-direction:row}.dh-others .dh-orow{flex:1}}
 </style>'''
  r'''<svg style="display:none" aria-hidden="true">
  <symbol id="tyr" viewBox="0 0 100 86"><path fill="currentColor" d="M6 64 C 26 56 36 53 46 53 C 50 44 56 38 66 38 L 62 22 L 74 22 L 72 40 C 78 46 80 54 80 60 C 80 68 74 72 64 72 L 30 72 C 18 72 10 70 6 64 Z"/><rect x="30" y="68" width="9" height="15" rx="3" fill="currentColor"/><rect x="56" y="68" width="9" height="15" rx="3" fill="currentColor"/><path fill="currentColor" d="M58 52 c5 0 9 2 11 5 c-3 -1 -6 -1 -9 0 z"/><rect x="58" y="6" width="26" height="24" rx="6" fill="currentColor"/><circle cx="66" cy="14" r="2.4" fill="#fff"/><rect x="70" y="17" width="9" height="8" rx="1.4" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M70 21h9" stroke="#fff" stroke-width="1.4"/><path d="M74.5 17v8" stroke="#fff" stroke-width="1.4"/></symbol>
