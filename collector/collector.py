@@ -835,7 +835,11 @@ if __name__=="__main__":
     # 아정당: 로컬 수집(거주지 IP) 결과 ajd_seed.json 을 주입(라이브 호출 없이 병합)
     injected={}
     try:
-        aj=json.load(open(os.path.join(BASE,"ajd_seed.json"),encoding="utf-8")).get("cards",{})
+        _ajraw=json.load(open(os.path.join(BASE,"ajd_seed.json"),encoding="utf-8"))
+        _ajmon=_ajraw.get("as_of") or _ajraw.get("month")
+        if _ajmon and _ajmon!=current_month_kst():   # stale 안전망: 거주지 재수집 실패 시 전월 시드 오염 방지
+            print(f"⚠️ 아정당 시드 stale({_ajmon}≠{current_month_kst()}) — 주입 SKIP. 거주지 재수집 필요."); PENDING_PLATFORMS.add("ajungdang"); _ajraw={"cards":{}}
+        aj=_ajraw.get("cards",{})
         bynk={_nk(p["name"]):p for p in products}
         try: _ressub=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("subByName",{})
         except Exception: _ressub={}
@@ -858,7 +862,11 @@ if __name__=="__main__":
         print("ajd seed 병합 err", e)
     # 네이버: 캡처/로컬 수집 결과 naver_seed.json 주입(네이버는 데이터센터 404 → 라이브 호출 없이 병합)
     try:
-        nv=json.load(open(os.path.join(BASE,"naver_seed.json"),encoding="utf-8")).get("cards",{})
+        _nvraw=json.load(open(os.path.join(BASE,"naver_seed.json"),encoding="utf-8"))
+        _nvmon=_nvraw.get("as_of") or _nvraw.get("month")
+        if _nvmon and _nvmon!=current_month_kst():   # stale 안전망: 거주지 재수집 실패 시 전월 시드 오염 방지
+            print(f"⚠️ 네이버 시드 stale({_nvmon}≠{current_month_kst()}) — 주입 SKIP. 거주지 재수집 필요."); PENDING_PLATFORMS.add("naver"); _nvraw={"cards":{}}
+        nv=_nvraw.get("cards",{})
         _bn={_nk(p["name"]):p for p in products}; _nn=0; _nskip=0
         try: _resmain=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("mainByName",{})
         except Exception: _resmain={}   # 네이버 주요(거주지 렌더) — main_won 분해용

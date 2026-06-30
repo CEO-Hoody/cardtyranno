@@ -1113,8 +1113,8 @@
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 780000,
-     "bonus_won": 0
+     "main_won": 720000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
@@ -1189,8 +1189,8 @@
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 780000,
-     "bonus_won": 0
+     "main_won": 720000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
@@ -1249,8 +1249,8 @@
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 780000,
-     "bonus_won": 0
+     "main_won": 720000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
@@ -1308,8 +1308,8 @@
      "reward_won": 780000,
      "reward_text": "78만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 780000,
-     "bonus_won": 0
+     "main_won": 720000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
@@ -1479,8 +1479,8 @@
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 750000,
-     "bonus_won": 0
+     "main_won": 690000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
@@ -1519,8 +1519,8 @@
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 750000,
-     "bonus_won": 0
+     "main_won": 690000,
+     "bonus_won": 60000
     }
    ]
   },
@@ -1554,8 +1554,8 @@
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 750000,
-     "bonus_won": 0
+     "main_won": 690000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
@@ -1594,8 +1594,8 @@
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 750000,
-     "bonus_won": 0
+     "main_won": 690000,
+     "bonus_won": 60000
     }
    ]
   },
@@ -1629,8 +1629,8 @@
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
      "period_end": "2026-06-30",
-     "main_won": 750000,
-     "bonus_won": 0
+     "main_won": 690000,
+     "bonus_won": 60000
     },
     {
      "platform": "kakaopay",
