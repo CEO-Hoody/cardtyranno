@@ -71,14 +71,25 @@ _SUBCAT = [
     # 추가이용은 가장 포괄적이라 마지막(특정 유형 우선 매칭 후 남는 '더 쓰고/쓰고' 임계형 흡수)
     (r"추가\s*이용|추가이용|더\s*받|더\s*쓰|추가로|쓰고", ("추가이용", "➕")),
 ]
+def _reward_won(t):
+    """보상액(원): '만원' 금액 중 지출임계(직후 '이상')는 빼고 최댓값.
+    '5만원/30만원/50만원 받기'→50만(지출구간별 차등의 최대보상). 임계뿐이면 첫 금액 폴백."""
+    vals = []
+    for m in re.finditer(r"(\d[\d,]*)\s*만\s*원", t or ""):
+        if t[m.end():m.end()+4].lstrip().startswith("이상"):   # 'N만원 이상' = 지출 임계 → 제외
+            continue
+        vals.append(int(m.group(1).replace(",", "")) * 10000)
+    if vals:
+        return max(vals)
+    m = re.search(r"(\d[\d,]*)\s*만\s*원", t or "")
+    return int(m.group(1).replace(",", "")) * 10000 if m else None
+
 def stier(t):
     """부가 텍스트 → {cat, icon, reward, text} (조건 카테고리 분류)."""
-    rw = re.search(r"(\d[\d,]*)\s*만\s*원", t or "")
     cat, icon = "기타", "•"
     for pat, (c, ic) in _SUBCAT:
         if re.search(pat, t or "", re.I): cat, icon = c, ic; break  # NH PAY 등 대소문자 무시
-    return {"cat": cat, "icon": icon,
-            "reward": (int(rw.group(1).replace(",", "")) * 10000 if rw else None), "text": t}
+    return {"cat": cat, "icon": icon, "reward": _reward_won(t), "text": t}
 
 def enrich_card(card, name, src_main, src_sub, existing_main=None, existing_sub=None):
     """카드 dict에 main_benefit/main_tier/sub_benefits/sub_tiers를 부착(in-place)."""

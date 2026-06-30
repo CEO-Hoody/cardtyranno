@@ -856,6 +856,8 @@ if __name__=="__main__":
     try:
         nv=json.load(open(os.path.join(BASE,"naver_seed.json"),encoding="utf-8")).get("cards",{})
         _bn={_nk(p["name"]):p for p in products}; _nn=0; _nskip=0
+        try: _resmain=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("mainByName",{})
+        except Exception: _resmain={}   # 네이버 주요(거주지 렌더) — main_won 분해용
         NAVER_MAX=1_000_000   # 1인 캐시백 현실 상한. 초과액은 '총 행사규모/최대적립한도' 마케팅 수치로 보고 금액 비표시
         for nm,info in nv.items():
             p=_bn.get(_nk(nm))
@@ -870,7 +872,12 @@ if __name__=="__main__":
             if rw:                                  # 신뢰 가능한 금액만 교차비교 이벤트로 주입
                 injected[(p["name"],"naver")]={"reward_won":rw,"reward_text":rtext,
                                                "period_start":None,"period_end":None,"url":info.get("url","")}
-                if info.get("main_won") is not None or info.get("bonus_won"):   # 주(혜택1)/부가(추가혜택) 분해 반영
+                # 주요/부가 분해(events 페이지 분리표시): 시드 main_won 우선, 없으면 거주지 mainByName(네이버 주요)로 추정 → bonus=전체-주요.
+                _nmain=info.get("main_won")
+                if _nmain is None: _nmain=_won_of(_resmain.get(_nk(nm)) or "")
+                if _nmain and 0<_nmain<rw:
+                    BREAKDOWN[(p["name"],"naver")]={"main":_nmain,"bonus":rw-_nmain}
+                elif info.get("bonus_won"):
                     BREAKDOWN[(p["name"],"naver")]={"main":info.get("main_won") or 0,"bonus":info.get("bonus_won") or 0}
                 _nn+=1
         if _nn or _nskip: print(f"네이버 주입 {_nn}건 (금액 비현실 제외 {_nskip}건)")

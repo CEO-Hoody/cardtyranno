@@ -1731,8 +1731,15 @@
      "reward_won": 500000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 500000,
-     "bonus_won": 0,
+     "main_won": 140000,
+     "bonus_won": 360000,
+     "breakdown": [
+      {
+       "text": "최대 50만원 (네이버페이 신한카드 이벤트)",
+       "won": 500000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|500000"
     },
     {
@@ -1843,8 +1850,15 @@
      "reward_won": 500000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 500000,
-     "bonus_won": 0,
+     "main_won": 140000,
+     "bonus_won": 360000,
+     "breakdown": [
+      {
+       "text": "최대 50만원 (네이버페이 신한카드 이벤트)",
+       "won": 500000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|500000"
     },
     {
@@ -1934,8 +1948,15 @@
      "reward_won": 500000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 500000,
-     "bonus_won": 0,
+     "main_won": 140000,
+     "bonus_won": 360000,
+     "breakdown": [
+      {
+       "text": "최대 50만원 (네이버페이 신한카드 이벤트)",
+       "won": 500000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|500000"
     }
    ]
@@ -2018,8 +2039,15 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|IBK기업은행|125000"
     },
     {
@@ -2116,8 +2144,15 @@
      "reward_won": 634000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
+     "main_won": 190000,
+     "bonus_won": 444000,
+     "breakdown": [
+      {
+       "text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
+       "won": 634000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|롯데카드|634000"
     },
     {
@@ -2175,8 +2210,15 @@
      "reward_won": 464000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 464000,
-     "bonus_won": 0,
+     "main_won": 120000,
+     "bonus_won": 344000,
+     "breakdown": [
+      {
+       "text": "최대 46.4만원 (네이버페이 삼성카드 이벤트)",
+       "won": 464000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|삼성카드|464000"
     },
     {
@@ -2270,8 +2312,15 @@
      "reward_won": 440000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590508&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 440000,
-     "bonus_won": 0,
+     "main_won": 120000,
+     "bonus_won": 320000,
+     "breakdown": [
+      {
+       "text": "최대 44만원 (네이버페이 삼성카드 이벤트)",
+       "won": 440000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|삼성카드|440000"
     },
     {
@@ -2331,8 +2380,15 @@
      "reward_won": 725000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260528001782191066&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 725000,
-     "bonus_won": 0,
+     "main_won": 210000,
+     "bonus_won": 515000,
+     "breakdown": [
+      {
+       "text": "최대 72.5만원 (네이버페이 현대카드 이벤트)",
+       "won": 725000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|725000"
     },
     {
@@ -2502,8 +2558,15 @@
      "reward_won": 830000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 830000,
-     "bonus_won": 0,
+     "main_won": 170000,
+     "bonus_won": 660000,
+     "breakdown": [
+      {
+       "text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
+       "won": 830000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|KB국민카드|830000"
     }
    ]
@@ -2577,8 +2640,15 @@
      "reward_won": 780000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 200000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|우리카드|780000"
     },
     {
@@ -2691,8 +2761,15 @@
      "reward_won": 644000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 644000,
-     "bonus_won": 0,
+     "main_won": 200000,
+     "bonus_won": 444000,
+     "breakdown": [
+      {
+       "text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
+       "won": 644000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|롯데카드|644000"
     },
     {
@@ -2974,8 +3051,15 @@
      "reward_won": 175000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
-     "main_won": 175000,
-     "bonus_won": 0,
+     "main_won": 110000,
+     "bonus_won": 65000,
+     "breakdown": [
+      {
+       "text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
+       "won": 175000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|NH농협카드|175000"
     }
    ]
@@ -3023,8 +3107,15 @@
      "reward_won": 570000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=044",
-     "main_won": 570000,
-     "bonus_won": 0,
+     "main_won": 20000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+       "won": 570000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|하나카드|570000"
     },
     {
@@ -3116,8 +3207,15 @@
      "reward_won": 124000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590510&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 124000,
-     "bonus_won": 0,
+     "main_won": 100000,
+     "bonus_won": 24000,
+     "breakdown": [
+      {
+       "text": "최대 12.4만원 (네이버페이 삼성카드 이벤트)",
+       "won": 124000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|삼성카드|124000"
     },
     {
@@ -3195,8 +3293,15 @@
      "reward_won": 600000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590520&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 600000,
-     "bonus_won": 0,
+     "main_won": 100000,
+     "bonus_won": 500000,
+     "breakdown": [
+      {
+       "text": "최대 60만원 (네이버페이 현대카드 이벤트)",
+       "won": 600000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|600000"
     }
    ]
@@ -3235,8 +3340,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
@@ -3346,8 +3458,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
@@ -3440,8 +3559,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
@@ -3544,8 +3670,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
@@ -3696,8 +3829,15 @@
      "reward_won": 450000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 450000,
-     "bonus_won": 0,
+     "main_won": 130000,
+     "bonus_won": 320000,
+     "breakdown": [
+      {
+       "text": "최대 45만원 (네이버페이 현대카드 이벤트)",
+       "won": 450000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|450000"
     }
    ]
@@ -3762,8 +3902,15 @@
      "reward_won": 450000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 450000,
-     "bonus_won": 0,
+     "main_won": 130000,
+     "bonus_won": 320000,
+     "breakdown": [
+      {
+       "text": "최대 45만원 (네이버페이 현대카드 이벤트)",
+       "won": 450000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|450000"
     }
    ]
@@ -3828,8 +3975,15 @@
      "reward_won": 450000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 450000,
-     "bonus_won": 0,
+     "main_won": 130000,
+     "bonus_won": 320000,
+     "breakdown": [
+      {
+       "text": "최대 45만원 (네이버페이 현대카드 이벤트)",
+       "won": 450000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|450000"
     }
    ]
@@ -4901,8 +5055,15 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|IBK기업은행|125000"
     },
     {
@@ -5001,8 +5162,15 @@
      "reward_won": 464000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 464000,
-     "bonus_won": 0,
+     "main_won": 120000,
+     "bonus_won": 344000,
+     "breakdown": [
+      {
+       "text": "최대 46.4만원 (네이버페이 삼성카드 이벤트)",
+       "won": 464000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|삼성카드|464000"
     },
     {
@@ -5265,8 +5433,15 @@
      "reward_won": 830000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 830000,
-     "bonus_won": 0,
+     "main_won": 170000,
+     "bonus_won": 660000,
+     "breakdown": [
+      {
+       "text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
+       "won": 830000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|KB국민카드|830000"
     }
    ]
@@ -5453,8 +5628,15 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|IBK기업은행|125000"
     }
    ]
@@ -5512,8 +5694,15 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|IBK기업은행|125000"
     }
    ]
@@ -5571,8 +5760,15 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|IBK기업은행|125000"
     }
    ]
@@ -5662,8 +5858,15 @@
      "reward_won": 634000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
+     "main_won": 190000,
+     "bonus_won": 444000,
+     "breakdown": [
+      {
+       "text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
+       "won": 634000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|롯데카드|634000"
     },
     {
@@ -5759,8 +5962,15 @@
      "reward_won": 634000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
+     "main_won": 190000,
+     "bonus_won": 444000,
+     "breakdown": [
+      {
+       "text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
+       "won": 634000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|롯데카드|634000"
     }
    ]
@@ -5846,8 +6056,15 @@
      "reward_won": 634000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
+     "main_won": 190000,
+     "bonus_won": 444000,
+     "breakdown": [
+      {
+       "text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
+       "won": 634000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|롯데카드|634000"
     }
    ]
@@ -5916,8 +6133,15 @@
      "reward_won": 644000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 644000,
-     "bonus_won": 0,
+     "main_won": 200000,
+     "bonus_won": 444000,
+     "breakdown": [
+      {
+       "text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
+       "won": 644000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|롯데카드|644000"
     },
     {
@@ -6100,8 +6324,15 @@
      "reward_won": 559000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 559000,
-     "bonus_won": 0,
+     "main_won": 180000,
+     "bonus_won": 379000,
+     "breakdown": [
+      {
+       "text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
+       "won": 559000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|559000"
     }
    ]
@@ -6170,8 +6401,15 @@
      "reward_won": 559000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 559000,
-     "bonus_won": 0,
+     "main_won": 180000,
+     "bonus_won": 379000,
+     "breakdown": [
+      {
+       "text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
+       "won": 559000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|559000"
     },
     {
@@ -6236,8 +6474,15 @@
      "reward_won": 559000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 559000,
-     "bonus_won": 0,
+     "main_won": 180000,
+     "bonus_won": 379000,
+     "breakdown": [
+      {
+       "text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
+       "won": 559000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|559000"
     }
    ]
@@ -6323,8 +6568,15 @@
      "reward_won": 520000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 520000,
-     "bonus_won": 0,
+     "main_won": 160000,
+     "bonus_won": 360000,
+     "breakdown": [
+      {
+       "text": "최대 52만원 (네이버페이 신한카드 이벤트)",
+       "won": 520000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|520000"
     }
    ]
@@ -6351,8 +6603,15 @@
      "reward_won": 520000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 520000,
-     "bonus_won": 0,
+     "main_won": 160000,
+     "bonus_won": 360000,
+     "breakdown": [
+      {
+       "text": "최대 52만원 (네이버페이 신한카드 이벤트)",
+       "won": 520000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|520000"
     },
     {
@@ -6421,8 +6680,15 @@
      "reward_won": 520000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 520000,
-     "bonus_won": 0,
+     "main_won": 160000,
+     "bonus_won": 360000,
+     "breakdown": [
+      {
+       "text": "최대 52만원 (네이버페이 신한카드 이벤트)",
+       "won": 520000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|신한카드|520000"
     },
     {
@@ -6647,8 +6913,15 @@
      "reward_won": 175000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
-     "main_won": 175000,
-     "bonus_won": 0,
+     "main_won": 110000,
+     "bonus_won": 65000,
+     "breakdown": [
+      {
+       "text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
+       "won": 175000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|NH농협카드|175000"
     }
    ]
@@ -6738,8 +7011,15 @@
      "reward_won": 175000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
-     "main_won": 175000,
-     "bonus_won": 0,
+     "main_won": 110000,
+     "bonus_won": 65000,
+     "breakdown": [
+      {
+       "text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
+       "won": 175000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|NH농협카드|175000"
     }
    ]
@@ -6860,8 +7140,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 170000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 우리카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|우리카드|750000"
     }
    ]
@@ -6964,8 +7251,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 170000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 우리카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|우리카드|750000"
     }
    ]
@@ -7072,8 +7366,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 170000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 우리카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|우리카드|750000"
     }
    ]
@@ -7156,8 +7457,15 @@
      "reward_won": 780000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 200000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|우리카드|780000"
     },
     {
@@ -7257,8 +7565,15 @@
      "reward_won": 780000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 200000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|우리카드|780000"
     },
     {
@@ -7354,8 +7669,15 @@
      "reward_won": 780000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 200000,
+     "bonus_won": 580000,
+     "breakdown": [
+      {
+       "text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|우리카드|780000"
     }
    ]
@@ -7441,8 +7763,15 @@
      "reward_won": 500000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 500000,
-     "bonus_won": 0,
+     "main_won": 400000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "최대 50만원 (네이버페이 현대카드 이벤트)",
+       "won": 500000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|500000"
     }
    ]
@@ -7684,8 +8013,15 @@
      "reward_won": 250000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776761&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 250000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "최대 25만원 (네이버페이 현대카드 이벤트)",
+       "won": 250000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|현대카드|250000"
     }
    ]
@@ -8196,8 +8532,15 @@
      "reward_won": 644000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 644000,
-     "bonus_won": 0,
+     "main_won": 200000,
+     "bonus_won": 444000,
+     "breakdown": [
+      {
+       "text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
+       "won": 644000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|naver|롯데카드|644000"
     },
     {
