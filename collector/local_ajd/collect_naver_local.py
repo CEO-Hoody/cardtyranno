@@ -199,6 +199,19 @@ def main():
 
         b.close()
 
+    # 2.5) 수동 override 병합: 라이브 발견에 없어도 유지(강제 추가 카드). 발견값이 있으면 발견값 우선.
+    try:
+        _man = json.load(open(os.path.join(BASE, "naver_manual.json"), encoding="utf-8")).get("cards", {})
+        _added = 0
+        for _k, _v in _man.items():
+            if _k not in cards:
+                cards[_k] = _v; _added += 1
+        if _added:
+            print(f"naver_manual override 병합: {_added}건")
+    except FileNotFoundError:
+        pass
+    except Exception as _e:
+        print("naver_manual 병합 skip:", _e)
     # 3) 저장
     json.dump(raw, open(RAW, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     out = {"as_of": datetime.date.today().strftime("%Y-%m"),

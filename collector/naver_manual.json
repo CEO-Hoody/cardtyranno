@@ -1,0 +1,14 @@
+{
+ "_note": "네이버 수동 추가 카드(라이브 발견 누락분 강제 노출). collect_naver_local이 매 수집 후 병합 — 발견값 있으면 발견값 우선, 없으면 이 값 유지. main_won 직접 지정 시 주요/부가 분해됨. 전월 카드는 last_seen 필터가 자동 정리하므로 신월에 갱신 또는 제거할 것.",
+ "cards": {
+  "하나 스카이패스 아멕스 플래티늄 카드": {
+   "reward_won": 570000,
+   "main_won": 70000,
+   "reward_text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+   "company": "CCHN",
+   "issuer": "하나카드",
+   "promotionId": "20260626001981865360",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865360&cardCompanyId=CCHN&cardIssuerCode=044"
+  }
+ }
+}
