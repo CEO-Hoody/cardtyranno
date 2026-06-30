@@ -262,6 +262,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .nhe-p{font-weight:400;font-size:19px;line-height:1.5;margin:20px 0 0;max-width:480px;color:rgba(0,0,0,.72)}
 .nhe-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:600;font-size:16px;margin-top:30px;transition:transform .12s}
 .nhe-cta:active{transform:scale(.97)}
+.nhe-ctas{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:30px}.nhe-ctas .nhe-cta{margin-top:0}
+.nhe-cta.sec{background:#fff;color:#000;border:1.5px solid var(--line,#e6e6e6)}.nhe-cta.sec:hover{border-color:#000}
 .nhe-plate{position:absolute;right:40px;top:50%;transform:translateY(-50%) rotate(7deg);width:300px}
 .nhe-plate .hpcard{border-radius:14px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.22)}
 .nhe-plate img,.npc-plate img,.nrow .mp img{width:100%;display:block}
@@ -696,7 +698,8 @@ INDEX_BODY=('<div class="wrap">'
  '<div class="nhc-txt"><div class="nhe-eb">2026 JUNE</div>'
  '<h1 class="nhc-h">6개 사이트<br>캐시백, 한눈에.</h1>'
  '<p class="nhc-p">토스·카드고릴라·아정당·뱅크샐러드·카카오페이·네이버페이. <b>6개 카드 발급 사이트의 캐시백을 한 번에 비교</b>해 드려요.</p>'
- '<a class="nhe-cta" href="content.html">이번달 전문가 TIP <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div>'
+ '<div class="nhe-ctas"><a class="nhe-cta" id="heroTipCta" href="content.html">이번달 전문가 TIP <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>'
+ '<a class="nhe-cta sec" href="issue.html?v=cmp">한눈에 비교 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div></div>'
  '<div class="nhc-ill"><div class="nhc-cmp" id="heroCmp"><div class="nhc-cmp-h"><span class="mono">6개 플랫폼 캐시백</span><span class="mono nhc-cmp-top">최고값</span></div><div class="nhc-cmp-bars" id="heroCmpBars"></div></div></div>'
  '</div>'
  # 슬라이드 2 · 이번달 최고 캐시백 상품 (JS가 채움)
@@ -817,7 +820,7 @@ Promise.all([
  var best=null,bw=-1;PE.forEach(function(p){(p.events||[]).forEach(function(e){if((e.reward_won||0)>bw){bw=e.reward_won;best=p;}});});
  // 히어로 슬라이드1 · 6개 플랫폼 캐시백 비교 막대(최고값=검정 하이라이트)
  var platMax={};PE.forEach(function(p){(p.events||[]).forEach(function(e){var w=e.reward_won||0;if(w>(platMax[e.platform]||0))platMax[e.platform]=w;});});
- var cmpRows=Object.keys(PMETA).map(function(k){return{k:k,m:PMETA[k],v:platMax[k]||0};}).sort(function(a,b){return b.v-a.v;});
+ var cmpRows=Object.keys(PMETA).filter(function(k){return k!=='issuer';}).map(function(k){return{k:k,m:PMETA[k],v:platMax[k]||0};}).sort(function(a,b){return b.v-a.v;});
  var cmpTop=cmpRows.length?cmpRows[0].v:0;var cbb=document.getElementById('heroCmpBars');
  if(cbb){cbb.innerHTML=cmpRows.map(function(r,ri){var w=cmpTop?Math.max(8,Math.round(r.v/cmpTop*100)):8;return '<div class="nhc-cmp-row"><i style="background:'+r.m.c+'"></i><span class="nm">'+r.m.n+'</span><div class="tr"><i style="width:'+w+'%;background:'+(ri===0?'#000':'#cfcfcf')+'"></i></div></div>';}).join('');}
  // 히어로 슬라이드2 · 이번달 최고 캐시백 상품 배너
@@ -856,7 +859,9 @@ Promise.all([
  if(window.repairImages)repairImages();
 }).catch(function(){});
 // 티라노TIP 최신 전략 콘텐츠 1건
-fetch('content.json').then(function(r){return r.json();}).then(function(cd){var its=(cd.items||[]);var t=its.filter(function(x){return /전략|발급/.test(x.cat||'');})[0]||its[0];if(!t)return;var el=document.getElementById('tipLatest');if(!el)return;
+fetch('content.json').then(function(r){return r.json();}).then(function(cd){var its=(cd.items||[]);var t=its.filter(function(x){return /전략|발급/.test(x.cat||'');})[0]||its[0];if(!t)return;
+ var hc=document.getElementById('heroTipCta');if(hc)hc.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
+ var el=document.getElementById('tipLatest');if(!el)return;
  el.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
  el.innerHTML='<div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">'+(t.cat||'티라노TIP')+' · 2026.06</div><div class="th">'+(t.title||'')+'</div><div class="ts">'+(t.summary||'')+'</div><div class="tgo">전략 보러가기 ›</div></div>';
 }).catch(function(){});
