@@ -1,6 +1,6 @@
 {
- "updated": "2026-06-30",
- "month": "2026-06",
+ "updated": "2026-07-01",
+ "month": "2026-07",
  "order": [
   "삼성카드",
   "현대카드",
@@ -11,6 +11,7 @@
   "하나카드",
   "NH농협카드",
   "IBK기업은행",
+  "추가캐시백",
   "BC 바로카드",
   "현대백화점"
  ],
@@ -19,28 +20,28 @@
    "issuer": "신한카드",
    "card": "신한카드 Mr.Life",
    "platform": "뱅크샐러드",
-   "benefit": "최대 84만원 캐시백",
+   "benefit": "최대 83만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD000004",
-   "won": 840000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Mr.Life",
-   "platform": "카드고릴라",
-   "benefit": "최대 57.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 579000
+   "won": 830000
   },
   {
    "issuer": "신한카드",
    "card": "신한카드 Mr.Life",
    "platform": "아정당",
-   "benefit": "최대 54만원 캐시백",
+   "benefit": "최대 74만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/264",
-   "won": 540000
+   "url": "https://www.ajd.co.kr/card/event/detail/281",
+   "won": 740000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Mr.Life",
+   "platform": "카드고릴라",
+   "benefit": "최대 73만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 730000
   },
   {
    "issuer": "신한카드",
@@ -64,28 +65,28 @@
    "issuer": "신한카드",
    "card": "신한카드 Deep Oil",
    "platform": "뱅크샐러드",
-   "benefit": "최대 84만원 캐시백",
+   "benefit": "최대 83만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD000118",
-   "won": 840000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Deep Oil",
-   "platform": "카드고릴라",
-   "benefit": "최대 57.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 579000
+   "won": 830000
   },
   {
    "issuer": "신한카드",
    "card": "신한카드 Deep Oil",
    "platform": "아정당",
-   "benefit": "최대 54만원 캐시백",
+   "benefit": "최대 74만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/264",
-   "won": 540000
+   "url": "https://www.ajd.co.kr/card/event/detail/281",
+   "won": 740000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Deep Oil",
+   "platform": "카드고릴라",
+   "benefit": "최대 73만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 730000
   },
   {
    "issuer": "신한카드",
@@ -108,20 +109,20 @@
   {
    "issuer": "신한카드",
    "card": "신한카드 처음(ANNIVERSE)",
-   "platform": "카드고릴라",
-   "benefit": "최대 57.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 579000
+   "platform": "아정당",
+   "benefit": "최대 74만원 캐시백",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/281",
+   "won": 740000
   },
   {
    "issuer": "신한카드",
    "card": "신한카드 처음(ANNIVERSE)",
-   "platform": "아정당",
-   "benefit": "최대 54만원 캐시백",
-   "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/264",
-   "won": 540000
+   "platform": "카드고릴라",
+   "benefit": "최대 73만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 730000
   },
   {
    "issuer": "신한카드",
@@ -178,22 +179,13 @@
    "won": 125000
   },
   {
-   "issuer": "우리카드",
-   "card": "D4카드의정석Ⅱ",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.2만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 12000
-  },
-  {
    "issuer": "롯데카드",
    "card": "LOCA 365 카드",
    "platform": "카드고릴라",
-   "benefit": "최대 64만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 65만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 640000
+   "won": 650000
   },
   {
    "issuer": "롯데카드",
@@ -216,15 +208,6 @@
   {
    "issuer": "삼성카드",
    "card": "삼성 iD SELECT ALL 카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 49.4만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/1",
-   "won": 494000
-  },
-  {
-   "issuer": "삼성카드",
-   "card": "삼성 iD SELECT ALL 카드",
    "platform": "네이버페이",
    "benefit": "최대 46.4만원 캐시백",
    "period": "",
@@ -235,19 +218,19 @@
    "issuer": "삼성카드",
    "card": "삼성 iD SELECT ALL 카드",
    "platform": "뱅크샐러드",
-   "benefit": "최대 23만원 캐시백",
+   "benefit": "최대 25.7만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004534",
-   "won": 230000
+   "won": 257000
   },
   {
    "issuer": "삼성카드",
    "card": "삼성카드 taptap O",
    "platform": "뱅크샐러드",
-   "benefit": "최대 23만원 캐시백",
+   "benefit": "최대 25.7만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD003051",
-   "won": 230000
+   "won": 257000
   },
   {
    "issuer": "삼성카드",
@@ -288,20 +271,11 @@
   {
    "issuer": "현대카드",
    "card": "현대카드 M",
-   "platform": "카드고릴라",
-   "benefit": "최대 68.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 685000
-  },
-  {
-   "issuer": "현대카드",
-   "card": "현대카드 M",
    "platform": "뱅크샐러드",
-   "benefit": "최대 67.5만원 캐시백",
+   "benefit": "최대 71.5만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004305",
-   "won": 675000
+   "won": 715000
   },
   {
    "issuer": "현대카드",
@@ -322,21 +296,39 @@
    "won": 440000
   },
   {
+   "issuer": "현대카드",
+   "card": "현대카드 M",
+   "platform": "카드고릴라",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/7",
+   "won": 30000
+  },
+  {
    "issuer": "KB국민카드",
    "card": "KB국민 굿데이카드",
    "platform": "카드고릴라",
-   "benefit": "최대 86만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 87만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 860000
+   "won": 870000
   },
   {
    "issuer": "KB국민카드",
    "card": "KB국민 굿데이카드",
    "platform": "아정당",
+   "benefit": "최대 86만원 캐시백",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/289",
+   "won": 860000
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "KB국민 굿데이카드",
+   "platform": "뱅크샐러드",
    "benefit": "최대 85만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/246",
+   "url": "https://www.banksalad.com/product/cards/CARD000156",
    "won": 850000
   },
   {
@@ -351,29 +343,11 @@
   {
    "issuer": "KB국민카드",
    "card": "KB국민 굿데이카드",
-   "platform": "뱅크샐러드",
-   "benefit": "최대 84만원 캐시백",
-   "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD000156",
-   "won": 840000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "KB국민 굿데이카드",
    "platform": "네이버페이",
    "benefit": "최대 83만원 캐시백",
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
    "won": 830000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 2",
-   "platform": "카드고릴라",
-   "benefit": "최대 78만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 780000
   },
   {
    "issuer": "우리카드",
@@ -424,19 +398,28 @@
    "issuer": "롯데카드",
    "card": "LOCA LIKIT 2.0",
    "platform": "뱅크샐러드",
-   "benefit": "최대 82만원 캐시백",
+   "benefit": "최대 85만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004625",
-   "won": 820000
+   "won": 850000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "LOCA LIKIT 2.0",
+   "platform": "아정당",
+   "benefit": "최대 68만원 캐시백",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/275",
+   "won": 680000
   },
   {
    "issuer": "롯데카드",
    "card": "LOCA LIKIT 2.0",
    "platform": "카드고릴라",
-   "benefit": "최대 67만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 68만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 670000
+   "won": 680000
   },
   {
    "issuer": "롯데카드",
@@ -469,10 +452,10 @@
    "issuer": "현대카드",
    "card": "the Orange",
    "platform": "카드고릴라",
-   "benefit": "최대 25만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 250000
+   "won": 200000
   },
   {
    "issuer": "IBK기업은행",
@@ -487,10 +470,10 @@
    "issuer": "삼성카드",
    "card": "삼성 iD STATION 카드 (HD현대오일뱅크)",
    "platform": "아정당",
-   "benefit": "최대 61.1만원 캐시백",
+   "benefit": "최대 33.5만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/271",
-   "won": 611000
+   "url": "https://www.ajd.co.kr/card/event/detail/278",
+   "won": 335000
   },
   {
    "issuer": "삼성카드",
@@ -511,15 +494,6 @@
    "won": 20000
   },
   {
-   "issuer": "하나카드",
-   "card": "하나 나라사랑카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 1만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/8",
-   "won": 10000
-  },
-  {
    "issuer": "삼성카드",
    "card": "트라이플러스 삼성카드",
    "platform": "카드고릴라",
@@ -532,28 +506,28 @@
    "issuer": "NH농협카드",
    "card": "올바른 FLEX 카드",
    "platform": "아정당",
-   "benefit": "최대 20.5만원 캐시백",
+   "benefit": "최대 26.5만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/233",
-   "won": 205000
+   "url": "https://www.ajd.co.kr/card/event/detail/295",
+   "won": 265000
   },
   {
    "issuer": "NH농협카드",
    "card": "올바른 FLEX 카드",
    "platform": "뱅크샐러드",
-   "benefit": "최대 19.5만원 캐시백",
+   "benefit": "최대 23.5만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD000060",
-   "won": 195000
+   "won": 235000
   },
   {
    "issuer": "NH농협카드",
    "card": "올바른 FLEX 카드",
    "platform": "카드고릴라",
-   "benefit": "최대 17.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 21.5만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/9",
-   "won": 175000
+   "won": 215000
   },
   {
    "issuer": "NH농협카드",
@@ -563,15 +537,6 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
    "won": 175000
-  },
-  {
-   "issuer": "하나카드",
-   "card": "트래블로그+(플러스) 신용카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 57만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/8",
-   "won": 570000
   },
   {
    "issuer": "하나카드",
@@ -595,10 +560,10 @@
    "issuer": "삼성카드",
    "card": "THE iD. 1st",
    "platform": "카드고릴라",
-   "benefit": "최대 12.4만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 12.7만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/1",
-   "won": 124000
+   "won": 127000
   },
   {
    "issuer": "삼성카드",
@@ -626,6 +591,15 @@
    "period": "~06/30",
    "url": "https://toss.im/_m/LUWffhjw",
    "won": 100000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "에너지플러스 현대카드",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 60만원 캐시백",
+   "period": "",
+   "url": "https://www.banksalad.com/product/cards/CARD004633",
+   "won": 600000
   },
   {
    "issuer": "현대카드",
@@ -865,19 +839,19 @@
    "issuer": "현대카드",
    "card": "현대카드MY BUSINESS M F&B",
    "platform": "뱅크샐러드",
-   "benefit": "최대 45만원 캐시백",
+   "benefit": "최대 62만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004573",
-   "won": 450000
+   "won": 620000
   },
   {
    "issuer": "현대카드",
    "card": "현대카드MY BUSINESS M F&B",
    "platform": "카드고릴라",
-   "benefit": "최대 45만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 62만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 450000
+   "won": 620000
   },
   {
    "issuer": "현대카드",
@@ -892,19 +866,19 @@
    "issuer": "현대카드",
    "card": "현대카드MY BUSINESS M Retail",
    "platform": "뱅크샐러드",
-   "benefit": "최대 45만원 캐시백",
+   "benefit": "최대 62만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004574",
-   "won": 450000
+   "won": 620000
   },
   {
    "issuer": "현대카드",
    "card": "현대카드MY BUSINESS M Retail",
    "platform": "카드고릴라",
-   "benefit": "최대 45만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 62만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 450000
+   "won": 620000
   },
   {
    "issuer": "현대카드",
@@ -919,19 +893,19 @@
    "issuer": "현대카드",
    "card": "현대카드MY BUSINESS M E-seller",
    "platform": "뱅크샐러드",
-   "benefit": "최대 45만원 캐시백",
+   "benefit": "최대 62만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004575",
-   "won": 450000
+   "won": 620000
   },
   {
    "issuer": "현대카드",
    "card": "현대카드MY BUSINESS M E-seller",
    "platform": "카드고릴라",
-   "benefit": "최대 45만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 62만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 450000
+   "won": 620000
   },
   {
    "issuer": "현대카드",
@@ -982,10 +956,10 @@
    "issuer": "NH농협카드",
    "card": "zgm.휴가중카드",
    "platform": "카드고릴라",
-   "benefit": "최대 2.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/9",
-   "won": 25000
+   "won": 30000
   },
   {
    "issuer": "NH농협카드",
@@ -1000,10 +974,10 @@
    "issuer": "NH농협카드",
    "card": "zgm.the pay카드",
    "platform": "카드고릴라",
-   "benefit": "최대 1.2만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/9",
-   "won": 12000
+   "won": 30000
   },
   {
    "issuer": "NH농협카드",
@@ -1049,15 +1023,6 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/9",
    "won": 14000
-  },
-  {
-   "issuer": "NH농협카드",
-   "card": "올바른지구 카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/9",
-   "won": 15000
   },
   {
    "issuer": "NH농협카드",
@@ -1107,20 +1072,11 @@
   {
    "issuer": "삼성카드",
    "card": "삼성 iD SELECT ON 카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 49.4만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/1",
-   "won": 494000
-  },
-  {
-   "issuer": "삼성카드",
-   "card": "삼성 iD SELECT ON 카드",
    "platform": "뱅크샐러드",
-   "benefit": "최대 23만원 캐시백",
+   "benefit": "최대 25.7만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004532",
-   "won": 230000
+   "won": 257000
   },
   {
    "issuer": "현대카드",
@@ -1150,15 +1106,6 @@
    "won": 15000
   },
   {
-   "issuer": "신한카드",
-   "card": "신한카드 Globus",
-   "platform": "카드고릴라",
-   "benefit": "최대 55.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 559000
-  },
-  {
    "issuer": "현대카드",
    "card": "현대카드O",
    "platform": "issuer",
@@ -1166,15 +1113,6 @@
    "period": "",
    "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
    "won": 280000
-  },
-  {
-   "issuer": "현대카드",
-   "card": "현대카드O",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 15000
   },
   {
    "issuer": "현대카드",
@@ -1196,15 +1134,6 @@
   },
   {
    "issuer": "현대카드",
-   "card": "현대카드S",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 15000
-  },
-  {
-   "issuer": "현대카드",
    "card": "현대카드D",
    "platform": "issuer",
    "benefit": "최대 60만원 캐시백",
@@ -1223,15 +1152,6 @@
   },
   {
    "issuer": "현대카드",
-   "card": "현대카드D",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 15000
-  },
-  {
-   "issuer": "현대카드",
    "card": "현대카드H",
    "platform": "카카오페이",
    "benefit": "최대 44만원 캐시백",
@@ -1250,30 +1170,12 @@
   },
   {
    "issuer": "현대카드",
-   "card": "현대카드H",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 15000
-  },
-  {
-   "issuer": "현대카드",
    "card": "현대카드T",
    "platform": "issuer",
    "benefit": "최대 28만원 캐시백",
    "period": "",
    "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
    "won": 280000
-  },
-  {
-   "issuer": "현대카드",
-   "card": "현대카드T",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 15000
   },
   {
    "issuer": "현대카드",
@@ -1305,15 +1207,6 @@
   {
    "issuer": "롯데카드",
    "card": "롯데 국민행복카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 13만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 130000
-  },
-  {
-   "issuer": "롯데카드",
-   "card": "롯데 국민행복카드",
    "platform": "카카오페이",
    "benefit": "최대 10만원 캐시백",
    "period": "~06/30",
@@ -1334,7 +1227,7 @@
    "card": "클래시 트래블카드",
    "platform": "카드고릴라",
    "benefit": "최대 3만원 캐시백",
-   "period": "~06/30",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/9",
    "won": 30000
   },
@@ -1414,10 +1307,10 @@
    "issuer": "삼성카드",
    "card": "taptap DRIVE",
    "platform": "뱅크샐러드",
-   "benefit": "최대 23만원 캐시백",
+   "benefit": "최대 25.7만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD000171",
-   "won": 230000
+   "won": 257000
   },
   {
    "issuer": "삼성카드",
@@ -1429,48 +1322,39 @@
    "won": 10000
   },
   {
-   "issuer": "롯데카드",
-   "card": "롯데멤버스 카드 프리미엄",
-   "platform": "카드고릴라",
-   "benefit": "최대 20만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 200000
-  },
-  {
-   "issuer": "롯데카드",
-   "card": "롯데멤버스 카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 20만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 200000
-  },
-  {
    "issuer": "KB국민카드",
    "card": "KB NEED Pay 카드",
    "platform": "카드고릴라",
-   "benefit": "최대 86만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 87만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 860000
+   "won": 870000
   },
   {
    "issuer": "KB국민카드",
    "card": "KB YOU Prime 카드",
    "platform": "카드고릴라",
-   "benefit": "최대 86만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 87만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 860000
+   "won": 870000
   },
   {
    "issuer": "KB국민카드",
    "card": "KB YOU Prime 카드",
    "platform": "아정당",
+   "benefit": "최대 86만원 캐시백",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/289",
+   "won": 860000
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "KB YOU Prime 카드",
+   "platform": "뱅크샐러드",
    "benefit": "최대 85만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/246",
+   "url": "https://www.banksalad.com/product/cards/CARD004561",
    "won": 850000
   },
   {
@@ -1481,15 +1365,6 @@
    "period": "~06/30",
    "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c",
    "won": 850000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "KB YOU Prime 카드",
-   "platform": "뱅크샐러드",
-   "benefit": "최대 84만원 캐시백",
-   "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD004561",
-   "won": 840000
   },
   {
    "issuer": "KB국민카드",
@@ -1504,19 +1379,19 @@
    "issuer": "KB국민카드",
    "card": "KB국민 My WE:SH 카드",
    "platform": "카드고릴라",
-   "benefit": "최대 86만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 87만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 860000
+   "won": 870000
   },
   {
    "issuer": "KB국민카드",
    "card": "KB국민 My WE:SH 카드",
    "platform": "아정당",
-   "benefit": "최대 85만원 캐시백",
+   "benefit": "최대 86만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/246",
-   "won": 850000
+   "url": "https://www.ajd.co.kr/card/event/detail/289",
+   "won": 860000
   },
   {
    "issuer": "KB국민카드",
@@ -1531,19 +1406,28 @@
    "issuer": "KB국민카드",
    "card": "KB YOU Wish 카드",
    "platform": "카드고릴라",
+   "benefit": "최대 87만원 캐시백",
+   "period": "~7.31",
+   "url": "https://www.card-gorilla.com/card/2970",
+   "won": 870000
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "KB YOU Wish 카드",
+   "platform": "아정당",
    "benefit": "최대 86만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/3",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/289",
    "won": 860000
   },
   {
    "issuer": "KB국민카드",
    "card": "KB YOU Wish 카드",
    "platform": "뱅크샐러드",
-   "benefit": "최대 84만원 캐시백",
+   "benefit": "최대 85만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004613",
-   "won": 840000
+   "won": 850000
   },
   {
    "issuer": "IBK기업은행",
@@ -1648,10 +1532,10 @@
    "issuer": "롯데카드",
    "card": "디지로카 London",
    "platform": "카드고릴라",
-   "benefit": "최대 64만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 65만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 640000
+   "won": 650000
   },
   {
    "issuer": "롯데카드",
@@ -1693,10 +1577,10 @@
    "issuer": "롯데카드",
    "card": "디지로카 Las Vegas",
    "platform": "카드고릴라",
-   "benefit": "최대 64만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 65만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 640000
+   "won": 650000
   },
   {
    "issuer": "롯데카드",
@@ -1729,10 +1613,10 @@
    "issuer": "롯데카드",
    "card": "디지로카 Paris",
    "platform": "카드고릴라",
-   "benefit": "최대 64만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 65만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 640000
+   "won": 650000
   },
   {
    "issuer": "롯데카드",
@@ -1747,19 +1631,28 @@
    "issuer": "롯데카드",
    "card": "LOCA LIKIT 1.5",
    "platform": "뱅크샐러드",
-   "benefit": "최대 82만원 캐시백",
+   "benefit": "최대 85만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004614",
-   "won": 820000
+   "won": 850000
+  },
+  {
+   "issuer": "롯데카드",
+   "card": "LOCA LIKIT 1.5",
+   "platform": "아정당",
+   "benefit": "최대 68만원 캐시백",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/275",
+   "won": 680000
   },
   {
    "issuer": "롯데카드",
    "card": "LOCA LIKIT 1.5",
    "platform": "카드고릴라",
-   "benefit": "최대 67만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 68만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 670000
+   "won": 680000
   },
   {
    "issuer": "롯데카드",
@@ -1799,15 +1692,6 @@
   },
   {
    "issuer": "BC 바로카드",
-   "card": "BC 바로 Air Max 카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 4.3만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/card/detail/2927",
-   "won": 43000
-  },
-  {
-   "issuer": "BC 바로카드",
    "card": "BC 바로 ZONE 카드",
    "platform": "카드고릴라",
    "benefit": "최대 1.9만원 캐시백",
@@ -1819,19 +1703,19 @@
    "issuer": "신한카드",
    "card": "신한카드 Discount Plan+",
    "platform": "뱅크샐러드",
-   "benefit": "최대 84만원 캐시백",
+   "benefit": "최대 85만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004442",
-   "won": 840000
+   "won": 850000
   },
   {
    "issuer": "신한카드",
    "card": "신한카드 Discount Plan+",
    "platform": "카드고릴라",
-   "benefit": "최대 78.9만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 75만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 789000
+   "won": 750000
   },
   {
    "issuer": "신한카드",
@@ -1845,83 +1729,83 @@
   {
    "issuer": "신한카드",
    "card": "신한카드 Air One",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 85만원 캐시백",
+   "period": "",
+   "url": "https://www.banksalad.com/product/cards/CARD004324",
+   "won": 850000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Air One",
+   "platform": "카드고릴라",
+   "benefit": "최대 75만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 750000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Air One",
+   "platform": "네이버페이",
+   "benefit": "최대 55.9만원 캐시백",
+   "period": "",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+   "won": 559000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Air One",
+   "platform": "카카오페이",
+   "benefit": "최대 32만원 캐시백",
+   "period": "~06/30",
+   "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a190f140aaffa3c8f306f0d",
+   "won": 320000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Simple Plan+",
+   "platform": "카드고릴라",
+   "benefit": "최대 75만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 750000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Simple Plan+",
+   "platform": "네이버페이",
+   "benefit": "최대 55.9만원 캐시백",
+   "period": "",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+   "won": 559000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Point Plan",
    "platform": "뱅크샐러드",
    "benefit": "최대 84만원 캐시백",
    "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD004324",
+   "url": "https://www.banksalad.com/product/cards/CARD004569",
    "won": 840000
   },
   {
    "issuer": "신한카드",
-   "card": "신한카드 Air One",
-   "platform": "카드고릴라",
-   "benefit": "최대 78.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 789000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Air One",
-   "platform": "네이버페이",
-   "benefit": "최대 55.9만원 캐시백",
-   "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-   "won": 559000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Air One",
-   "platform": "카카오페이",
-   "benefit": "최대 32만원 캐시백",
-   "period": "~06/30",
-   "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a190f140aaffa3c8f306f0d",
-   "won": 320000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Simple Plan+",
-   "platform": "카드고릴라",
-   "benefit": "최대 78.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 789000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Simple Plan+",
-   "platform": "네이버페이",
-   "benefit": "최대 55.9만원 캐시백",
-   "period": "",
-   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-   "won": 559000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Point Plan",
-   "platform": "뱅크샐러드",
-   "benefit": "최대 83만원 캐시백",
-   "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD004569",
-   "won": 830000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Point Plan",
-   "platform": "카드고릴라",
-   "benefit": "최대 57.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 579000
-  },
-  {
-   "issuer": "신한카드",
    "card": "신한카드 Point Plan",
    "platform": "아정당",
-   "benefit": "최대 54만원 캐시백",
+   "benefit": "최대 74만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/264",
-   "won": 540000
+   "url": "https://www.ajd.co.kr/card/event/detail/281",
+   "won": 740000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Point Plan",
+   "platform": "카드고릴라",
+   "benefit": "최대 73만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 730000
   },
   {
    "issuer": "신한카드",
@@ -1935,29 +1819,38 @@
   {
    "issuer": "신한카드",
    "card": "Haru(Hoshino Resorts)",
+   "platform": "카드고릴라",
+   "benefit": "최대 74만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 740000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "Haru(Hoshino Resorts)",
    "platform": "네이버페이",
    "benefit": "최대 52만원 캐시백",
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
    "won": 520000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "Haru(Hoshino Resorts)",
-   "platform": "카드고릴라",
-   "benefit": "최대 34.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 349000
   },
   {
    "issuer": "신한카드",
    "card": "신한카드 Edu Plan+",
    "platform": "뱅크샐러드",
-   "benefit": "최대 83만원 캐시백",
+   "benefit": "최대 84만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004571",
-   "won": 830000
+   "won": 840000
+  },
+  {
+   "issuer": "신한카드",
+   "card": "신한카드 Edu Plan+",
+   "platform": "카드고릴라",
+   "benefit": "최대 74만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 740000
   },
   {
    "issuer": "신한카드",
@@ -1971,15 +1864,6 @@
   {
    "issuer": "신한카드",
    "card": "신한카드 Edu Plan+",
-   "platform": "카드고릴라",
-   "benefit": "최대 34.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 349000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Edu Plan+",
    "platform": "카카오페이",
    "benefit": "최대 32만원 캐시백",
    "period": "~06/30",
@@ -1989,47 +1873,47 @@
   {
    "issuer": "신한카드",
    "card": "알리익스프레스 신한카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 57.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 579000
+   "platform": "아정당",
+   "benefit": "최대 74만원 캐시백",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/281",
+   "won": 740000
   },
   {
    "issuer": "신한카드",
    "card": "알리익스프레스 신한카드",
-   "platform": "아정당",
-   "benefit": "최대 54만원 캐시백",
-   "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/264",
-   "won": 540000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 EVERY MILE SKYPASS",
    "platform": "카드고릴라",
-   "benefit": "최대 3.9만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 39000
+   "benefit": "최대 73만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/2",
+   "won": 730000
   },
   {
    "issuer": "NH농협카드",
    "card": "zgm.play카드",
    "platform": "아정당",
-   "benefit": "최대 20.5만원 캐시백",
+   "benefit": "최대 26.5만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/233",
-   "won": 205000
+   "url": "https://www.ajd.co.kr/card/event/detail/295",
+   "won": 265000
   },
   {
    "issuer": "NH농협카드",
    "card": "zgm.play카드",
    "platform": "뱅크샐러드",
-   "benefit": "최대 19.5만원 캐시백",
+   "benefit": "최대 23.5만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004425",
-   "won": 195000
+   "won": 235000
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "zgm.play카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 21.5만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/9",
+   "won": 215000
   },
   {
    "issuer": "NH농협카드",
@@ -2039,15 +1923,6 @@
    "period": "~06/30",
    "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7",
    "won": 195000
-  },
-  {
-   "issuer": "NH농협카드",
-   "card": "zgm.play카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 17.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/9",
-   "won": 175000
   },
   {
    "issuer": "NH농협카드",
@@ -2062,10 +1937,19 @@
    "issuer": "NH농협카드",
    "card": "zgm.streaming카드",
    "platform": "아정당",
-   "benefit": "최대 20.5만원 캐시백",
+   "benefit": "최대 26.5만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/233",
-   "won": 205000
+   "url": "https://www.ajd.co.kr/card/event/detail/295",
+   "won": 265000
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "zgm.streaming카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 21.5만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/9",
+   "won": 215000
   },
   {
    "issuer": "NH농협카드",
@@ -2075,15 +1959,6 @@
    "period": "~06/30",
    "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7",
    "won": 195000
-  },
-  {
-   "issuer": "NH농협카드",
-   "card": "zgm.streaming카드",
-   "platform": "카드고릴라",
-   "benefit": "최대 17.5만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/9",
-   "won": 175000
   },
   {
    "issuer": "NH농협카드",
@@ -2124,15 +1999,6 @@
   {
    "issuer": "우리카드",
    "card": "카드의정석 SHOPPING+",
-   "platform": "카드고릴라",
-   "benefit": "최대 75만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 750000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 SHOPPING+",
    "platform": "카카오페이",
    "benefit": "최대 75만원 캐시백",
    "period": "~06/30",
@@ -2146,15 +2012,6 @@
    "benefit": "최대 75만원 캐시백",
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-   "won": 750000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석2 EVERY DISCOUNT",
-   "platform": "카드고릴라",
-   "benefit": "최대 75만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
    "won": 750000
   },
   {
@@ -2169,15 +2026,6 @@
   {
    "issuer": "우리카드",
    "card": "카드의정석 TEN",
-   "platform": "카드고릴라",
-   "benefit": "최대 75만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 750000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 TEN",
    "platform": "카카오페이",
    "benefit": "최대 75만원 캐시백",
    "period": "~06/30",
@@ -2195,29 +2043,11 @@
   },
   {
    "issuer": "우리카드",
-   "card": "카드의정석2 EVERY POINT",
-   "platform": "카드고릴라",
-   "benefit": "최대 75만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 750000
-  },
-  {
-   "issuer": "우리카드",
    "card": "카드의정석 I&U+",
    "platform": "뱅크샐러드",
    "benefit": "최대 75만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004418",
-   "won": 750000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 I&U+",
-   "platform": "카드고릴라",
-   "benefit": "최대 75만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
    "won": 750000
   },
   {
@@ -2245,15 +2075,6 @@
    "benefit": "최대 78만원 캐시백",
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD004530",
-   "won": 780000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "우리카드 MILE&POINT",
-   "platform": "카드고릴라",
-   "benefit": "최대 78만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
    "won": 780000
   },
   {
@@ -2295,15 +2116,6 @@
   {
    "issuer": "우리카드",
    "card": "우리카드 7CORE",
-   "platform": "카드고릴라",
-   "benefit": "최대 78만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 780000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "우리카드 7CORE",
    "platform": "카카오페이",
    "benefit": "최대 78만원 캐시백",
    "period": "~06/30",
@@ -2340,15 +2152,6 @@
   {
    "issuer": "우리카드",
    "card": "the OPUS silver",
-   "platform": "카드고릴라",
-   "benefit": "최대 78만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 780000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "the OPUS silver",
    "platform": "카카오페이",
    "benefit": "최대 78만원 캐시백",
    "period": "~06/30",
@@ -2367,24 +2170,6 @@
   {
    "issuer": "현대카드",
    "card": "American Express® Gold Card Edition2",
-   "platform": "뱅크샐러드",
-   "benefit": "최대 50만원 캐시백",
-   "period": "",
-   "url": "https://www.banksalad.com/product/cards/CARD004602",
-   "won": 500000
-  },
-  {
-   "issuer": "현대카드",
-   "card": "American Express® Gold Card Edition2",
-   "platform": "카드고릴라",
-   "benefit": "최대 50만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 500000
-  },
-  {
-   "issuer": "현대카드",
-   "card": "American Express® Gold Card Edition2",
    "platform": "issuer",
    "benefit": "최대 50만원 캐시백",
    "period": "",
@@ -2399,6 +2184,24 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI",
    "won": 500000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "American Express® Gold Card Edition2",
+   "platform": "뱅크샐러드",
+   "benefit": "최대 40만원 캐시백",
+   "period": "",
+   "url": "https://www.banksalad.com/product/cards/CARD004602",
+   "won": 400000
+  },
+  {
+   "issuer": "현대카드",
+   "card": "American Express® Gold Card Edition2",
+   "platform": "카드고릴라",
+   "benefit": "최대 40만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/7",
+   "won": 400000
   },
   {
    "issuer": "현대카드",
@@ -2431,10 +2234,10 @@
    "issuer": "현대카드",
    "card": "현대카드 Summit",
    "platform": "카드고릴라",
-   "benefit": "최대 25만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 20만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/7",
-   "won": 250000
+   "won": 200000
   },
   {
    "issuer": "현대카드",
@@ -2512,19 +2315,19 @@
    "issuer": "KB국민카드",
    "card": "트래블러스 체크카드(토심이)",
    "platform": "카드고릴라",
-   "benefit": "최대 2.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 25000
+   "won": 30000
   },
   {
    "issuer": "KB국민카드",
    "card": "토심이 첵첵 체크카드",
    "platform": "카드고릴라",
-   "benefit": "최대 2.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 25000
+   "won": 30000
   },
   {
    "issuer": "KB국민카드",
@@ -2539,46 +2342,37 @@
    "issuer": "KB국민카드",
    "card": "노리2 체크카드(KB Pay)",
    "platform": "카드고릴라",
-   "benefit": "최대 2.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 25000
+   "won": 30000
   },
   {
    "issuer": "KB국민카드",
    "card": "KB 틴업 체크카드",
    "platform": "카드고릴라",
-   "benefit": "최대 2.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 25000
+   "won": 30000
   },
   {
    "issuer": "KB국민카드",
    "card": "트래블러스 체크카드",
    "platform": "카드고릴라",
-   "benefit": "최대 2.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 25000
+   "won": 30000
   },
   {
    "issuer": "KB국민카드",
    "card": "KB Youth Club 체크카드",
    "platform": "카드고릴라",
-   "benefit": "최대 2.5만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/3",
-   "won": 25000
-  },
-  {
-   "issuer": "삼성카드",
-   "card": "삼성 iD ON 카드",
-   "platform": "아정당",
-   "benefit": "최대 61.1만원 캐시백",
-   "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/271",
-   "won": 611000
+   "won": 30000
   },
   {
    "issuer": "삼성카드",
@@ -2588,6 +2382,15 @@
    "period": "~06/30",
    "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208ae1f94d85bad33f598",
    "won": 440000
+  },
+  {
+   "issuer": "삼성카드",
+   "card": "삼성 iD ON 카드",
+   "platform": "아정당",
+   "benefit": "최대 33.5만원 캐시백",
+   "period": "",
+   "url": "https://www.ajd.co.kr/card/event/detail/278",
+   "won": 335000
   },
   {
    "issuer": "삼성카드",
@@ -2653,15 +2456,6 @@
    "won": 19000
   },
   {
-   "issuer": "우리카드",
-   "card": "DA카드의정석Ⅱ",
-   "platform": "카드고릴라",
-   "benefit": "최대 1.2만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/5",
-   "won": 12000
-  },
-  {
    "issuer": "IBK기업은행",
    "card": "Daily With(데일리위드)카드",
    "platform": "카드고릴라",
@@ -2683,10 +2477,10 @@
    "issuer": "롯데카드",
    "card": "LOCA LIKIT",
    "platform": "아정당",
-   "benefit": "최대 66만원 캐시백",
+   "benefit": "최대 68만원 캐시백",
    "period": "",
-   "url": "https://www.ajd.co.kr/card/event/detail/255",
-   "won": 660000
+   "url": "https://www.ajd.co.kr/card/event/detail/275",
+   "won": 680000
   },
   {
    "issuer": "롯데카드",
@@ -2701,10 +2495,10 @@
    "issuer": "롯데카드",
    "card": "LOCA LIKIT",
    "platform": "카드고릴라",
-   "benefit": "최대 59만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 60만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 590000
+   "won": 600000
   },
   {
    "issuer": "롯데카드",
@@ -2719,19 +2513,19 @@
    "issuer": "롯데카드",
    "card": "LOCA LIKIT Eat",
    "platform": "카드고릴라",
-   "benefit": "최대 59만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 60만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 590000
+   "won": 600000
   },
   {
    "issuer": "롯데카드",
    "card": "LOCA LIKIT Play",
    "platform": "카드고릴라",
-   "benefit": "최대 59만원 캐시백",
-   "period": "~06/30",
+   "benefit": "최대 60만원 캐시백",
+   "period": "~07/31",
    "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 590000
+   "won": 600000
   },
   {
    "issuer": "롯데카드",
@@ -2743,24 +2537,6 @@
    "won": 790000
   },
   {
-   "issuer": "롯데카드",
-   "card": "디지로카 Link",
-   "platform": "카드고릴라",
-   "benefit": "최대 59만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/4",
-   "won": 590000
-  },
-  {
-   "issuer": "롯데카드",
-   "card": "디지로카 Link",
-   "platform": "토스",
-   "benefit": "최대 46만원 캐시백",
-   "period": "~06/30",
-   "url": "https://toss.im/_m/7xU5L2v8",
-   "won": 460000
-  },
-  {
    "issuer": "IBK기업은행",
    "card": "일상의 기쁨카드(신용)",
    "platform": "카드고릴라",
@@ -2770,22 +2546,40 @@
    "won": 12000
   },
   {
-   "issuer": "신한카드",
-   "card": "신한카드 플리 체크(산리오캐릭터즈)",
+   "issuer": "삼성카드",
+   "card": "삼성 iD SIMPLE 카드",
    "platform": "카드고릴라",
-   "benefit": "최대 1만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 10000
+   "benefit": "최대 7,000원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/1",
+   "won": 7000
   },
   {
-   "issuer": "신한카드",
-   "card": "신한카드 플리(체크)",
+   "issuer": "추가캐시백",
+   "card": "KB국민카드 생활대금 자동납부 신청",
    "platform": "카드고릴라",
-   "benefit": "최대 1만원 캐시백",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/event/detail/2",
-   "won": 10000
+   "benefit": "최대 4만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/card/detail/2949",
+   "won": 40000
+  },
+  {
+   "issuer": "NH농협카드",
+   "card": "zgm.일본여행중 카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 3만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/9",
+   "won": 30000
+  },
+  {
+   "issuer": "KB국민카드",
+   "card": "굿데이올림카드",
+   "platform": "카드고릴라",
+   "benefit": "최대 87만원 캐시백",
+   "period": "~07/31",
+   "url": "https://www.card-gorilla.com/event/detail/3",
+   "won": 870000
   }
  ]
 }

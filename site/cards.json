@@ -38,7 +38,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 23만원 캐시백"
+      "amount": "최대 25.7만원 캐시백"
      },
      {
       "platform": "토스",
@@ -363,7 +363,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 23만원 캐시백"
+      "amount": "최대 25.7만원 캐시백"
      }
     ],
     "rank": 1,
@@ -478,25 +478,7 @@
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2885",
      "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD004534"
-    },
-    "main_benefit": "30만원 이상 이용 시 12만원 캐시백",
-    "main_tier": {
-     "spend": 300000,
-     "reward": 120000,
-     "eff": 40,
-     "text": "30만원 이상 이용 시 12만원 캐시백"
-    },
-    "sub_benefits": [
-     "오프라인 가맹점에서 일시불 및 할부 결제 시 최대 30만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "오프라인",
-      "icon": "🏪",
-      "reward": 300000,
-      "text": "오프라인 가맹점에서 일시불 및 할부 결제 시 최대 30만원 캐시백"
-     }
-    ]
+    }
    },
    {
     "id": 21,
@@ -598,7 +580,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 23만원 캐시백"
+      "amount": "최대 25.7만원 캐시백"
      }
     ],
     "rank": 11,
@@ -653,13 +635,6 @@
     },
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2886"
-    },
-    "main_benefit": "30만원 이상 이용 시 12만원 캐시백",
-    "main_tier": {
-     "spend": 300000,
-     "reward": 120000,
-     "eff": 40,
-     "text": "30만원 이상 이용 시 12만원 캐시백"
     }
    },
    {
@@ -776,7 +751,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 23만원 캐시백"
+      "amount": "최대 25.7만원 캐시백"
      },
      {
       "platform": "토스",
@@ -819,7 +794,7 @@
      },
      {
       "platform": "아정당",
-      "amount": "최대 61.1만원"
+      "amount": "최대 33.5만원"
      },
      {
       "platform": "카카오페이",
@@ -905,7 +880,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 23만원 캐시백"
+      "amount": "최대 25.7만원 캐시백"
      },
      {
       "platform": "토스",
@@ -918,25 +893,7 @@
     ],
     "rank": null,
     "detail": null,
-    "plat": {},
-    "main_benefit": "20만원 쓰고 최대 12만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 120000,
-     "eff": 60,
-     "text": "20만원 쓰고 최대 12만원 받기"
-    },
-    "sub_benefits": [
-     "오프라인 가맹점에서 일시불 및 할부 결제 시 최대 30만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "오프라인",
-      "icon": "🏪",
-      "reward": 300000,
-      "text": "오프라인 가맹점에서 일시불 및 할부 결제 시 최대 30만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 32,
@@ -949,7 +906,7 @@
     "events": [
      {
       "platform": "아정당",
-      "amount": "최대 61.1만원"
+      "amount": "최대 33.5만원"
      }
     ],
     "rank": null,
@@ -1131,7 +1088,7 @@
      },
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 67.5만원 캐시백"
+      "amount": "최대 71.5만원 캐시백"
      },
      {
       "platform": "카카오페이",
@@ -1189,23 +1146,23 @@
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2669"
     },
-    "main_benefit": "20만원 이상 이용 시 17만원 캐시백",
+    "main_benefit": "20만원 이상 이용 시 10만원 캐시백",
     "main_tier": {
      "spend": 200000,
-     "reward": 170000,
-     "eff": 85,
-     "text": "20만원 이상 이용 시 17만원 캐시백"
+     "reward": 100000,
+     "eff": 50,
+     "text": "20만원 이상 이용 시 10만원 캐시백"
     },
     "sub_benefits": [
-     "해외 가맹점 이용 시 최대 50만원 캐시백",
+     "해외 가맹점 이용 시 최대 50.5만원 캐시백",
      "정기결제 이용 시 최대 1.5만원 캐시백"
     ],
     "sub_tiers": [
      {
       "cat": "해외",
       "icon": "🌍",
-      "reward": 500000,
-      "text": "해외 가맹점 이용 시 최대 50만원 캐시백"
+      "reward": 50000,
+      "text": "해외 가맹점 이용 시 최대 50.5만원 캐시백"
      },
      {
       "cat": "자동납부",
@@ -1507,12 +1464,12 @@
     "rank": 6,
     "detail": null,
     "plat": {},
-    "main_benefit": "60만원 이상 이용 시 40만원 캐시백",
+    "main_benefit": "60만원 이상 이용 시 30만원 캐시백",
     "main_tier": {
      "spend": 600000,
-     "reward": 400000,
-     "eff": 67,
-     "text": "60만원 이상 이용 시 40만원 캐시백"
+     "reward": 300000,
+     "eff": 50,
+     "text": "60만원 이상 이용 시 30만원 캐시백"
     },
     "sub_benefits": [
      "해외 온・오프라인 가맹점에서 15만원 이상 이용 시 10만원 캐시백"
@@ -1542,14 +1499,7 @@
     ],
     "rank": 20,
     "detail": null,
-    "plat": {},
-    "main_benefit": "40만원 이상 이용 시 25만원 캐시백",
-    "main_tier": {
-     "spend": 400000,
-     "reward": 250000,
-     "eff": 62,
-     "text": "40만원 이상 이용 시 25만원 캐시백"
-    }
+    "plat": {}
    },
    {
     "id": 59,
@@ -1611,14 +1561,7 @@
     ],
     "rank": 38,
     "detail": null,
-    "plat": {},
-    "main_benefit": "40만원 이상 이용 시 25만원 캐시백",
-    "main_tier": {
-     "spend": 400000,
-     "reward": 250000,
-     "eff": 62,
-     "text": "40만원 이상 이용 시 25만원 캐시백"
-    }
+    "plat": {}
    },
    {
     "id": 61,
@@ -1792,6 +1735,10 @@
      {
       "platform": "카드고릴라",
       "amount": "최대 60만원 캐시백"
+     },
+     {
+      "platform": "뱅크샐러드",
+      "amount": "최대 60만원 캐시백"
      }
     ],
     "rank": 67,
@@ -1849,42 +1796,6 @@
    },
    {
     "id": 69,
-    "name": "American Express® Gold Card Edition2",
-    "img": "",
-    "fee": "",
-    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
-    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
-    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
-    "events": [
-     {
-      "platform": "뱅크샐러드",
-      "amount": "최대 50만원 캐시백"
-     }
-    ],
-    "rank": null,
-    "detail": null,
-    "plat": {},
-    "main_benefit": "60만원 이상 이용 시 40만원 캐시백",
-    "main_tier": {
-     "spend": 600000,
-     "reward": 400000,
-     "eff": 67,
-     "text": "60만원 이상 이용 시 40만원 캐시백"
-    },
-    "sub_benefits": [
-     "해외 온・오프라인 가맹점에서 15만원 이상 이용 시 10만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 100000,
-      "text": "해외 온・오프라인 가맹점에서 15만원 이상 이용 시 10만원 캐시백"
-     }
-    ]
-   },
-   {
-    "id": 70,
     "name": "현대카드MY BUSINESS M F&B",
     "img": "",
     "fee": "",
@@ -1894,21 +1805,21 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 45만원 캐시백"
+      "amount": "최대 62만원 캐시백"
      }
     ],
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "20만원 이상 이용 시 13만원 캐시백",
+    "main_benefit": "20만원 이상 이용 시 10만원 캐시백",
     "main_tier": {
      "spend": 200000,
-     "reward": 130000,
-     "eff": 65,
-     "text": "20만원 이상 이용 시 13만원 캐시백"
+     "reward": 100000,
+     "eff": 50,
+     "text": "20만원 이상 이용 시 10만원 캐시백"
     },
     "sub_benefits": [
-     "해외 가맹점 이용 시 최대 30.5만원 캐시백",
+     "해외 가맹점 이용 시 최대 50.5만원 캐시백",
      "정기결제 이용 시 최대 1.5만원 캐시백"
     ],
     "sub_tiers": [
@@ -1916,7 +1827,50 @@
       "cat": "해외",
       "icon": "🌍",
       "reward": 50000,
-      "text": "해외 가맹점 이용 시 최대 30.5만원 캐시백"
+      "text": "해외 가맹점 이용 시 최대 50.5만원 캐시백"
+     },
+     {
+      "cat": "자동납부",
+      "icon": "📅",
+      "reward": 50000,
+      "text": "정기결제 이용 시 최대 1.5만원 캐시백"
+     }
+    ]
+   },
+   {
+    "id": 70,
+    "name": "현대카드MY BUSINESS M Retail",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "최대 62만원 캐시백"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {},
+    "main_benefit": "20만원 이상 이용 시 10만원 캐시백",
+    "main_tier": {
+     "spend": 200000,
+     "reward": 100000,
+     "eff": 50,
+     "text": "20만원 이상 이용 시 10만원 캐시백"
+    },
+    "sub_benefits": [
+     "해외 가맹점 이용 시 최대 50.5만원 캐시백",
+     "정기결제 이용 시 최대 1.5만원 캐시백"
+    ],
+    "sub_tiers": [
+     {
+      "cat": "해외",
+      "icon": "🌍",
+      "reward": 50000,
+      "text": "해외 가맹점 이용 시 최대 50.5만원 캐시백"
      },
      {
       "cat": "자동납부",
@@ -1928,7 +1882,7 @@
    },
    {
     "id": 71,
-    "name": "현대카드MY BUSINESS M Retail",
+    "name": "현대카드MY BUSINESS M E-seller",
     "img": "",
     "fee": "",
     "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
@@ -1937,21 +1891,21 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 45만원 캐시백"
+      "amount": "최대 62만원 캐시백"
      }
     ],
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "20만원 이상 이용 시 13만원 캐시백",
+    "main_benefit": "20만원 이상 이용 시 10만원 캐시백",
     "main_tier": {
      "spend": 200000,
-     "reward": 130000,
-     "eff": 65,
-     "text": "20만원 이상 이용 시 13만원 캐시백"
+     "reward": 100000,
+     "eff": 50,
+     "text": "20만원 이상 이용 시 10만원 캐시백"
     },
     "sub_benefits": [
-     "해외 가맹점 이용 시 최대 30.5만원 캐시백",
+     "해외 가맹점 이용 시 최대 50.5만원 캐시백",
      "정기결제 이용 시 최대 1.5만원 캐시백"
     ],
     "sub_tiers": [
@@ -1959,7 +1913,7 @@
       "cat": "해외",
       "icon": "🌍",
       "reward": 50000,
-      "text": "해외 가맹점 이용 시 최대 30.5만원 캐시백"
+      "text": "해외 가맹점 이용 시 최대 50.5만원 캐시백"
      },
      {
       "cat": "자동납부",
@@ -1971,44 +1925,37 @@
    },
    {
     "id": 72,
-    "name": "현대카드MY BUSINESS M E-seller",
+    "name": "American Express® Gold Card Edition2",
     "img": "",
     "fee": "",
-    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
     "source": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
     "url": "https://www.hyundaicard.com/cpc/cr/CPCCR0101_01.hc",
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 45만원 캐시백"
+      "amount": "최대 40만원 캐시백"
      }
     ],
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "20만원 이상 이용 시 13만원 캐시백",
+    "main_benefit": "60만원 이상 이용 시 30만원 캐시백",
     "main_tier": {
-     "spend": 200000,
-     "reward": 130000,
-     "eff": 65,
-     "text": "20만원 이상 이용 시 13만원 캐시백"
+     "spend": 600000,
+     "reward": 300000,
+     "eff": 50,
+     "text": "60만원 이상 이용 시 30만원 캐시백"
     },
     "sub_benefits": [
-     "해외 가맹점 이용 시 최대 30.5만원 캐시백",
-     "정기결제 이용 시 최대 1.5만원 캐시백"
+     "해외 온・오프라인 가맹점에서 15만원 이상 이용 시 10만원 캐시백"
     ],
     "sub_tiers": [
      {
       "cat": "해외",
       "icon": "🌍",
-      "reward": 50000,
-      "text": "해외 가맹점 이용 시 최대 30.5만원 캐시백"
-     },
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 50000,
-      "text": "정기결제 이용 시 최대 1.5만원 캐시백"
+      "reward": 100000,
+      "text": "해외 온・오프라인 가맹점에서 15만원 이상 이용 시 10만원 캐시백"
      }
     ]
    },
@@ -2118,14 +2065,7 @@
     ],
     "rank": null,
     "detail": null,
-    "plat": {},
-    "main_benefit": "40만원 이상 이용 시 25만원 캐시백",
-    "main_tier": {
-     "spend": 400000,
-     "reward": 250000,
-     "eff": 62,
-     "text": "40만원 이상 이용 시 25만원 캐시백"
-    }
+    "plat": {}
    },
    {
     "id": 78,
@@ -2162,12 +2102,12 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "60만원 이상 이용 시 40만원 캐시백",
+    "main_benefit": "60만원 이상 이용 시 30만원 캐시백",
     "main_tier": {
      "spend": 600000,
-     "reward": 400000,
-     "eff": 67,
-     "text": "60만원 이상 이용 시 40만원 캐시백"
+     "reward": 300000,
+     "eff": 50,
+     "text": "60만원 이상 이용 시 30만원 캐시백"
     },
     "sub_benefits": [
      "해외 온・오프라인 가맹점에서 15만원 이상 이용 시 10만원 캐시백"
@@ -2320,11 +2260,11 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 83만원 캐시백"
      },
      {
       "platform": "아정당",
-      "amount": "최대 54만원"
+      "amount": "최대 74만원"
      },
      {
       "platform": "카카오페이",
@@ -2387,12 +2327,12 @@
      "카드고릴라": "https://www.card-gorilla.com/card/detail/13",
      "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000004"
     },
-    "main_benefit": "최대 19만원 받기",
+    "main_benefit": "최대 18만원 받기",
     "main_tier": {
      "spend": null,
-     "reward": 190000,
+     "reward": 180000,
      "eff": null,
-     "text": "최대 19만원 받기"
+     "text": "최대 18만원 받기"
     },
     "sub_benefits": [
      "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
@@ -2439,11 +2379,11 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 83만원 캐시백"
      },
      {
       "platform": "아정당",
-      "amount": "최대 54만원"
+      "amount": "최대 74만원"
      },
      {
       "platform": "카카오페이",
@@ -2490,17 +2430,16 @@
      "카드고릴라": "https://www.card-gorilla.com/card/detail/39",
      "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000118"
     },
-    "main_benefit": "24만원 이상 이용 시 20만원 받기",
+    "main_benefit": "23만원 이상 이용 시 19만원 받기",
     "main_tier": {
-     "spend": 240000,
-     "reward": 200000,
+     "spend": 230000,
+     "reward": 190000,
      "eff": 83,
-     "text": "24만원 이상 이용 시 20만원 받기"
+     "text": "23만원 이상 이용 시 19만원 받기"
     },
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
-     "추가로 해외 가맹점 이용 시 3만원/30만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
     ],
     "sub_tiers": [
      {
@@ -2512,14 +2451,8 @@
      {
       "cat": "해외",
       "icon": "🌍",
-      "reward": 300000,
-      "text": "추가로 해외 가맹점 이용 시 3만원/30만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
+      "reward": 500000,
+      "text": "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
      }
     ],
     "premonth": "전월실적 30만원 이상"
@@ -2598,8 +2531,7 @@
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
      "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기",
-     "리볼빙 신규 연결 시 1만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "리볼빙 신규 연결 시 1만원 받기"
     ],
     "sub_tiers": [
      {
@@ -2619,12 +2551,6 @@
       "icon": "🔄",
       "reward": 10000,
       "text": "리볼빙 신규 연결 시 1만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
      }
     ]
    },
@@ -2665,7 +2591,7 @@
     "events": [
      {
       "platform": "아정당",
-      "amount": "최대 54만원"
+      "amount": "최대 74만원"
      }
     ],
     "rank": 18,
@@ -2706,17 +2632,16 @@
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2759"
     },
-    "main_benefit": "24만원 이상 이용 시 20만원 받기",
+    "main_benefit": "23만원 이상 이용 시 19만원 받기",
     "main_tier": {
-     "spend": 240000,
-     "reward": 200000,
+     "spend": 230000,
+     "reward": 190000,
      "eff": 83,
-     "text": "24만원 이상 이용 시 20만원 받기"
+     "text": "23만원 이상 이용 시 19만원 받기"
     },
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
-     "추가로 해외 가맹점 이용 시 3만원/30만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
     ],
     "sub_tiers": [
      {
@@ -2728,14 +2653,8 @@
      {
       "cat": "해외",
       "icon": "🌍",
-      "reward": 300000,
-      "text": "추가로 해외 가맹점 이용 시 3만원/30만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
+      "reward": 500000,
+      "text": "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
      }
     ],
     "premonth": "전월실적 30만원 이상"
@@ -2783,12 +2702,12 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "최대 18만원 받기",
+    "main_benefit": "최대 19만원 받기",
     "main_tier": {
      "spend": null,
-     "reward": 180000,
+     "reward": 190000,
      "eff": null,
-     "text": "최대 18만원 받기"
+     "text": "최대 19만원 받기"
     },
     "sub_benefits": [
      "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
@@ -2859,7 +2778,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 85만원 캐시백"
      }
     ],
     "rank": 13,
@@ -2875,8 +2794,7 @@
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
      "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기",
-     "리볼빙 신규 연결 시 1만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "리볼빙 신규 연결 시 1만원 받기"
     ],
     "sub_tiers": [
      {
@@ -2896,12 +2814,6 @@
       "icon": "🔄",
       "reward": 10000,
       "text": "리볼빙 신규 연결 시 1만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
      }
     ]
    },
@@ -2916,27 +2828,26 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 83만원 캐시백"
+      "amount": "최대 84만원 캐시백"
      },
      {
       "platform": "아정당",
-      "amount": "최대 54만원"
+      "amount": "최대 74만원"
      }
     ],
     "rank": 79,
     "detail": null,
     "plat": {},
-    "main_benefit": "24만원 이상 이용 시 20만원 받기",
+    "main_benefit": "23만원 이상 이용 시 19만원 받기",
     "main_tier": {
-     "spend": 240000,
-     "reward": 200000,
+     "spend": 230000,
+     "reward": 190000,
      "eff": 83,
-     "text": "24만원 이상 이용 시 20만원 받기"
+     "text": "23만원 이상 이용 시 19만원 받기"
     },
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
-     "추가로 해외 가맹점 이용 시 3만원/30만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
     ],
     "sub_tiers": [
      {
@@ -2948,14 +2859,8 @@
      {
       "cat": "해외",
       "icon": "🌍",
-      "reward": 300000,
-      "text": "추가로 해외 가맹점 이용 시 3만원/30만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
+      "reward": 500000,
+      "text": "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
      }
     ]
    },
@@ -2970,7 +2875,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 85만원 캐시백"
      },
      {
       "platform": "카카오페이",
@@ -2990,8 +2895,7 @@
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
      "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기",
-     "리볼빙 신규 연결 시 1만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "리볼빙 신규 연결 시 1만원 받기"
     ],
     "sub_tiers": [
      {
@@ -3011,12 +2915,6 @@
       "icon": "🔄",
       "reward": 10000,
       "text": "리볼빙 신규 연결 시 1만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
      }
     ]
    },
@@ -3057,39 +2955,7 @@
     "events": [],
     "rank": 61,
     "detail": null,
-    "plat": {},
-    "main_benefit": "25.5만원 이상 이용 시 18만원 받기",
-    "main_tier": {
-     "spend": 50000,
-     "reward": 180000,
-     "eff": 360,
-     "text": "25.5만원 이상 이용 시 18만원 받기"
-    },
-    "sub_benefits": [
-     "생활요금 자동납부 최대 4만원 받기",
-     "추가로 해외 가맹점 이용 시 3만원/30만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 40000,
-      "text": "생활요금 자동납부 최대 4만원 받기"
-     },
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 300000,
-      "text": "추가로 해외 가맹점 이용 시 3만원/30만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 109,
@@ -3125,9 +2991,9 @@
     },
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
-     "추가로 해외 가맹점 이용 시 3만원/7만원 받기",
+     "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기",
      "리볼빙 신규 연결 시 1만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "마지막으로 새로워진 신한 슈퍼SOL 설치하고 최대 2.1만원 상당 혜택 받기 !"
     ],
     "sub_tiers": [
      {
@@ -3139,8 +3005,8 @@
      {
       "cat": "해외",
       "icon": "🌍",
-      "reward": 70000,
-      "text": "추가로 해외 가맹점 이용 시 3만원/7만원 받기"
+      "reward": 500000,
+      "text": "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
      },
      {
       "cat": "리볼빙",
@@ -3149,19 +3015,170 @@
       "text": "리볼빙 신규 연결 시 1만원 받기"
      },
      {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
+      "cat": "기타",
+      "icon": "•",
+      "reward": 10000,
+      "text": "마지막으로 새로워진 신한 슈퍼SOL 설치하고 최대 2.1만원 상당 혜택 받기 !"
      }
     ]
    },
    {
     "id": 111,
-    "name": "ECO Plan",
+    "name": "Simple Plan+",
     "img": "",
     "fee": "",
-    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "benefit": "생활 영역 할인·적립 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "최대 85만원 캐시백"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {},
+    "main_benefit": "최대 20만원 받기",
+    "main_tier": {
+     "spend": null,
+     "reward": 200000,
+     "eff": null,
+     "text": "최대 20만원 받기"
+    },
+    "sub_benefits": [
+     "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+     "자동납부 최대 4만원 받기"
+    ],
+    "sub_tiers": [
+     {
+      "cat": "해외",
+      "icon": "🌍",
+      "reward": 500000,
+      "text": "해외 가맹점에서 추가 이용 시 최대 50만원 받기"
+     },
+     {
+      "cat": "자동납부",
+      "icon": "📅",
+      "reward": 40000,
+      "text": "자동납부 최대 4만원 받기"
+     }
+    ]
+   },
+   {
+    "id": 112,
+    "name": "신한카드 Deep On Platinum+",
+    "img": "",
+    "fee": "",
+    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "최대 84만원 캐시백"
+     },
+     {
+      "platform": "카카오페이",
+      "amount": "최대 39만원"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {},
+    "main_benefit": "최대 19만원 받기",
+    "main_tier": {
+     "spend": null,
+     "reward": 190000,
+     "eff": null,
+     "text": "최대 19만원 받기"
+    },
+    "sub_benefits": [
+     "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+     "자동납부 최대 4만원 받기"
+    ],
+    "sub_tiers": [
+     {
+      "cat": "해외",
+      "icon": "🌍",
+      "reward": 500000,
+      "text": "해외 가맹점에서 추가 이용 시 최대 50만원 받기"
+     },
+     {
+      "cat": "자동납부",
+      "icon": "📅",
+      "reward": 40000,
+      "text": "자동납부 최대 4만원 받기"
+     }
+    ]
+   },
+   {
+    "id": 113,
+    "name": "신한카드 Edu Plan+",
+    "img": "",
+    "fee": "",
+    "benefit": "취미·문화·생활 특화 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "최대 84만원 캐시백"
+     },
+     {
+      "platform": "카카오페이",
+      "amount": "최대 32만원"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {},
+    "main_benefit": "24만원 이상 이용 시 19만원 받기",
+    "main_tier": {
+     "spend": 240000,
+     "reward": 190000,
+     "eff": 79,
+     "text": "24만원 이상 이용 시 19만원 받기"
+    },
+    "sub_benefits": [
+     "생활요금 자동납부 최대 4만원 받기",
+     "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기",
+     "리볼빙 신규 연결 시 1만원 받기",
+     "마지막으로 새로워진 신한 슈퍼SOL 설치하고 최대 2.1만원 상당 혜택 받기 !"
+    ],
+    "sub_tiers": [
+     {
+      "cat": "자동납부",
+      "icon": "📅",
+      "reward": 40000,
+      "text": "생활요금 자동납부 최대 4만원 받기"
+     },
+     {
+      "cat": "해외",
+      "icon": "🌍",
+      "reward": 500000,
+      "text": "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
+     },
+     {
+      "cat": "리볼빙",
+      "icon": "🔄",
+      "reward": 10000,
+      "text": "리볼빙 신규 연결 시 1만원 받기"
+     },
+     {
+      "cat": "기타",
+      "icon": "•",
+      "reward": 10000,
+      "text": "마지막으로 새로워진 신한 슈퍼SOL 설치하고 최대 2.1만원 상당 혜택 받기 !"
+     }
+    ]
+   },
+   {
+    "id": 114,
+    "name": "신한카드 RPM+ Platinum#",
+    "img": "",
+    "fee": "",
+    "benefit": "주유·드라이브 영역 할인 중심 카드",
     "source": "https://www.shinhancard.com/pconts/html/card/main.html",
     "url": "https://www.shinhancard.com/pconts/html/card/main.html",
     "events": [
@@ -3200,7 +3217,50 @@
     ]
    },
    {
-    "id": 112,
+    "id": 115,
+    "name": "ECO Plan",
+    "img": "",
+    "fee": "",
+    "benefit": "국내외 가맹점 적립·할인 밸런스 카드",
+    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
+    "events": [
+     {
+      "platform": "뱅크샐러드",
+      "amount": "최대 83만원 캐시백"
+     }
+    ],
+    "rank": null,
+    "detail": null,
+    "plat": {},
+    "main_benefit": "최대 18만원 받기",
+    "main_tier": {
+     "spend": null,
+     "reward": 180000,
+     "eff": null,
+     "text": "최대 18만원 받기"
+    },
+    "sub_benefits": [
+     "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
+     "자동납부 최대 4만원 받기"
+    ],
+    "sub_tiers": [
+     {
+      "cat": "해외",
+      "icon": "🌍",
+      "reward": 500000,
+      "text": "해외 가맹점에서 추가 이용 시 최대 50만원 받기"
+     },
+     {
+      "cat": "자동납부",
+      "icon": "📅",
+      "reward": 40000,
+      "text": "자동납부 최대 4만원 받기"
+     }
+    ]
+   },
+   {
+    "id": 116,
     "name": "신한카드 B.Big(삑)",
     "img": "",
     "fee": "",
@@ -3210,7 +3270,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 83만원 캐시백"
      }
     ],
     "rank": null,
@@ -3249,200 +3309,6 @@
      ]
     },
     "plat": {},
-    "main_benefit": "최대 19만원 받기",
-    "main_tier": {
-     "spend": null,
-     "reward": 190000,
-     "eff": null,
-     "text": "최대 19만원 받기"
-    },
-    "sub_benefits": [
-     "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
-     "자동납부 최대 4만원 받기"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 500000,
-      "text": "해외 가맹점에서 추가 이용 시 최대 50만원 받기"
-     },
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 40000,
-      "text": "자동납부 최대 4만원 받기"
-     }
-    ]
-   },
-   {
-    "id": 113,
-    "name": "Simple Plan+",
-    "img": "",
-    "fee": "",
-    "benefit": "생활 영역 할인·적립 밸런스 카드",
-    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "events": [
-     {
-      "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
-     }
-    ],
-    "rank": null,
-    "detail": null,
-    "plat": {},
-    "main_benefit": "최대 19만원 받기",
-    "main_tier": {
-     "spend": null,
-     "reward": 190000,
-     "eff": null,
-     "text": "최대 19만원 받기"
-    },
-    "sub_benefits": [
-     "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
-     "자동납부 최대 4만원 받기"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 500000,
-      "text": "해외 가맹점에서 추가 이용 시 최대 50만원 받기"
-     },
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 40000,
-      "text": "자동납부 최대 4만원 받기"
-     }
-    ]
-   },
-   {
-    "id": 114,
-    "name": "신한카드 Deep On Platinum+",
-    "img": "",
-    "fee": "",
-    "benefit": "프리미엄 바우처·공항 라운지 혜택 카드",
-    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "events": [
-     {
-      "platform": "뱅크샐러드",
-      "amount": "최대 83만원 캐시백"
-     },
-     {
-      "platform": "카카오페이",
-      "amount": "최대 39만원"
-     }
-    ],
-    "rank": null,
-    "detail": null,
-    "plat": {},
-    "main_benefit": "최대 18만원 받기",
-    "main_tier": {
-     "spend": null,
-     "reward": 180000,
-     "eff": null,
-     "text": "최대 18만원 받기"
-    },
-    "sub_benefits": [
-     "해외 가맹점에서 추가 이용 시 최대 50만원 받기",
-     "자동납부 최대 4만원 받기"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 500000,
-      "text": "해외 가맹점에서 추가 이용 시 최대 50만원 받기"
-     },
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 40000,
-      "text": "자동납부 최대 4만원 받기"
-     }
-    ]
-   },
-   {
-    "id": 115,
-    "name": "신한카드 Edu Plan+",
-    "img": "",
-    "fee": "",
-    "benefit": "취미·문화·생활 특화 카드",
-    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "events": [
-     {
-      "platform": "뱅크샐러드",
-      "amount": "최대 83만원 캐시백"
-     },
-     {
-      "platform": "카카오페이",
-      "amount": "최대 32만원"
-     }
-    ],
-    "rank": null,
-    "detail": null,
-    "plat": {},
-    "main_benefit": "24만원 이상 이용 시 19만원 받기",
-    "main_tier": {
-     "spend": 240000,
-     "reward": 190000,
-     "eff": 79,
-     "text": "24만원 이상 이용 시 19만원 받기"
-    },
-    "sub_benefits": [
-     "생활요금 자동납부 최대 4만원 받기",
-     "추가로 해외 가맹점 이용 시 3만원/7만원 받기",
-     "리볼빙 신규 연결 시 1만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 40000,
-      "text": "생활요금 자동납부 최대 4만원 받기"
-     },
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 70000,
-      "text": "추가로 해외 가맹점 이용 시 3만원/7만원 받기"
-     },
-     {
-      "cat": "리볼빙",
-      "icon": "🔄",
-      "reward": 10000,
-      "text": "리볼빙 신규 연결 시 1만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
-     }
-    ]
-   },
-   {
-    "id": 116,
-    "name": "신한카드 RPM+ Platinum#",
-    "img": "",
-    "fee": "",
-    "benefit": "주유·드라이브 영역 할인 중심 카드",
-    "source": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "url": "https://www.shinhancard.com/pconts/html/card/main.html",
-    "events": [
-     {
-      "platform": "뱅크샐러드",
-      "amount": "최대 83만원 캐시백"
-     }
-    ],
-    "rank": null,
-    "detail": null,
-    "plat": {},
     "main_benefit": "최대 18만원 받기",
     "main_tier": {
      "spend": null,
@@ -3480,23 +3346,22 @@
     "events": [
      {
       "platform": "아정당",
-      "amount": "최대 54만원"
+      "amount": "최대 74만원"
      }
     ],
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "24만원 이상 이용 시 20만원 받기",
+    "main_benefit": "23만원 이상 이용 시 19만원 받기",
     "main_tier": {
-     "spend": 240000,
-     "reward": 200000,
+     "spend": 230000,
+     "reward": 190000,
      "eff": 83,
-     "text": "24만원 이상 이용 시 20만원 받기"
+     "text": "23만원 이상 이용 시 19만원 받기"
     },
     "sub_benefits": [
      "생활요금 자동납부 최대 4만원 받기",
-     "추가로 해외 가맹점 이용 시 3만원/30만원 받기",
-     "마이샵 쿠폰으로 최대 39,000원 받기"
+     "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
     ],
     "sub_tiers": [
      {
@@ -3508,14 +3373,8 @@
      {
       "cat": "해외",
       "icon": "🌍",
-      "reward": 300000,
-      "text": "추가로 해외 가맹점 이용 시 3만원/30만원 받기"
-     },
-     {
-      "cat": "쿠폰",
-      "icon": "🎁",
-      "reward": null,
-      "text": "마이샵 쿠폰으로 최대 39,000원 받기"
+      "reward": 500000,
+      "text": "추가로 해외 가맹점 이용 시 3만원/30만원/50만원 받기"
      }
     ]
    },
@@ -3568,11 +3427,11 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 85만원 캐시백"
      },
      {
       "platform": "아정당",
-      "amount": "최대 85만원"
+      "amount": "최대 86만원"
      },
      {
       "platform": "카카오페이",
@@ -3667,12 +3526,12 @@
      "카드고릴라": "https://www.card-gorilla.com/card/detail/106",
      "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD000156"
     },
-    "main_benefit": "25만원 쓰고 17만원 받기",
+    "main_benefit": "25만원 이상 이용 시 18+3만원 캐시백",
     "main_tier": {
      "spend": 250000,
-     "reward": 170000,
-     "eff": 68,
-     "text": "25만원 쓰고 17만원 받기"
+     "reward": 210000,
+     "eff": 84,
+     "text": "25만원 이상 이용 시 18+3만원 캐시백"
     },
     "sub_benefits": [
      "추가 이용 시 최대 30만원 캐시백",
@@ -3705,7 +3564,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 85만원 캐시백"
      }
     ],
     "rank": null,
@@ -3781,7 +3640,7 @@
     "sub_benefits": [
      "추가 이용 시 최대 30만원 캐시백",
      "해외 이용 이벤트 참여시 최대 30만원 캐시백",
-     "자동납부 신청 시 최대 3만원 혜택"
+     "자동납부 신청 시 최대 4만원 혜택"
     ],
     "sub_tiers": [
      {
@@ -3799,8 +3658,8 @@
      {
       "cat": "자동납부",
       "icon": "📅",
-      "reward": 30000,
-      "text": "자동납부 신청 시 최대 3만원 혜택"
+      "reward": 40000,
+      "text": "자동납부 신청 시 최대 4만원 혜택"
      }
     ]
    },
@@ -3858,7 +3717,7 @@
      },
      {
       "platform": "아정당",
-      "amount": "최대 85만원"
+      "amount": "최대 86만원"
      },
      {
       "platform": "카카오페이",
@@ -4042,7 +3901,7 @@
      },
      {
       "platform": "아정당",
-      "amount": "최대 85만원"
+      "amount": "최대 86만원"
      }
     ],
     "rank": 4,
@@ -4210,11 +4069,11 @@
      },
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 85만원 캐시백"
      },
      {
       "platform": "아정당",
-      "amount": "최대 85만원"
+      "amount": "최대 86만원"
      },
      {
       "platform": "카카오페이",
@@ -4265,35 +4124,39 @@
      },
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 85만원 캐시백"
+     },
+     {
+      "platform": "아정당",
+      "amount": "최대 86만원"
      }
     ],
     "rank": 31,
     "detail": null,
     "plat": {},
-    "main_benefit": "25만원 이상 이용 시, 20+3만원 캐시백",
+    "main_benefit": "25만원 이상 이용 시 18+3만원 캐시백",
     "main_tier": {
      "spend": 250000,
-     "reward": 230000,
-     "eff": 92,
-     "text": "25만원 이상 이용 시, 20+3만원 캐시백"
+     "reward": 210000,
+     "eff": 84,
+     "text": "25만원 이상 이용 시 18+3만원 캐시백"
     },
     "sub_benefits": [
-     "추가이용 시 최대 30만원 캐시백",
-     "해외 이용 이벤트 참여 시 최대 30만원 캐시백"
+     "추가 이용 시 최대 30만원 캐시백",
+     "해외 이용 이벤트 참여시 최대 30만원 캐시백"
     ],
     "sub_tiers": [
      {
       "cat": "추가이용",
       "icon": "➕",
       "reward": 300000,
-      "text": "추가이용 시 최대 30만원 캐시백"
+      "text": "추가 이용 시 최대 30만원 캐시백"
      },
      {
       "cat": "해외",
       "icon": "🌍",
       "reward": 300000,
-      "text": "해외 이용 이벤트 참여 시 최대 30만원 캐시백"
+      "text": "해외 이용 이벤트 참여시 최대 30만원 캐시백"
      }
     ]
    },
@@ -4360,7 +4223,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 84만원 캐시백"
+      "amount": "최대 85만원 캐시백"
      }
     ],
     "rank": null,
@@ -4376,7 +4239,7 @@
     "sub_benefits": [
      "추가 이용 시 최대 30만원 캐시백",
      "해외 이용 이벤트 참여시 최대 30만원 캐시백",
-     "자동납부 신청 시 최대 3만원 혜택"
+     "자동납부 신청 시 최대 4만원 혜택"
     ],
     "sub_tiers": [
      {
@@ -4394,8 +4257,8 @@
      {
       "cat": "자동납부",
       "icon": "📅",
-      "reward": 30000,
-      "text": "자동납부 신청 시 최대 3만원 혜택"
+      "reward": 40000,
+      "text": "자동납부 신청 시 최대 4만원 혜택"
      }
     ]
    },
@@ -4434,7 +4297,13 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "행사1. 신규 발급 시 5천원 캐시백"
+    "main_benefit": "3만원 이상 이용 시 3만원 캐시백",
+    "main_tier": {
+     "spend": 30000,
+     "reward": 30000,
+     "eff": 100,
+     "text": "3만원 이상 이용 시 3만원 캐시백"
+    }
    },
    {
     "id": 143,
@@ -4471,7 +4340,13 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "행사1. 신규 발급 시 5천원 캐시백"
+    "main_benefit": "3만원 이상 이용 시 3만원 캐시백",
+    "main_tier": {
+     "spend": 30000,
+     "reward": 30000,
+     "eff": 100,
+     "text": "3만원 이상 이용 시 3만원 캐시백"
+    }
    },
    {
     "id": 145,
@@ -4490,7 +4365,13 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "행사1. 신규 발급 시 5천원 캐시백"
+    "main_benefit": "3만원 이상 이용 시 3만원 캐시백",
+    "main_tier": {
+     "spend": 30000,
+     "reward": 30000,
+     "eff": 100,
+     "text": "3만원 이상 이용 시 3만원 캐시백"
+    }
    },
    {
     "id": 146,
@@ -4509,7 +4390,13 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "행사1. 신규 발급 시 5천원 캐시백"
+    "main_benefit": "3만원 이상 이용 시 3만원 캐시백",
+    "main_tier": {
+     "spend": 30000,
+     "reward": 30000,
+     "eff": 100,
+     "text": "3만원 이상 이용 시 3만원 캐시백"
+    }
    },
    {
     "id": 147,
@@ -4736,12 +4623,12 @@
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2330"
     },
-    "main_benefit": "25만원 이상 이용 시 20만원 뱅샐머니 받기",
+    "main_benefit": "30만원/300만원 이상 이용 시 17만원/20만원 뱅샐머니 받기",
     "main_tier": {
-     "spend": 250000,
-     "reward": 200000,
-     "eff": 80,
-     "text": "25만원 이상 이용 시 20만원 뱅샐머니 받기"
+     "spend": 3000000,
+     "reward": 170000,
+     "eff": 6,
+     "text": "30만원/300만원 이상 이용 시 17만원/20만원 뱅샐머니 받기"
     },
     "sub_benefits": [
      "해외 가맹점 이용 시 최대 60만원 캐시백",
@@ -4823,7 +4710,7 @@
      },
      {
       "platform": "아정당",
-      "amount": "최대 66만원"
+      "amount": "최대 68만원"
      }
     ],
     "rank": null,
@@ -4967,18 +4854,25 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "17만원 이상 이용 시 13만원 캐시백",
+    "main_benefit": "16만원 이상 구매 시 15만원 캐시백",
     "main_tier": {
-     "spend": 170000,
-     "reward": 130000,
-     "eff": 76,
-     "text": "17만원 이상 이용 시 13만원 캐시백"
+     "spend": 160000,
+     "reward": 150000,
+     "eff": 94,
+     "text": "16만원 이상 구매 시 15만원 캐시백"
     },
     "sub_benefits": [
+     "해외 가맹점 이용 시 최대 60만원 캐시백",
      "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
-     "해외 가맹점 이용 시 최대 30만원 캐시백"
+     "원하는 멤버십 선택하고 최대 3만원 할인 받기"
     ],
     "sub_tiers": [
+     {
+      "cat": "해외",
+      "icon": "🌍",
+      "reward": 600000,
+      "text": "해외 가맹점 이용 시 최대 60만원 캐시백"
+     },
      {
       "cat": "리볼빙",
       "icon": "🔄",
@@ -4986,13 +4880,13 @@
       "text": "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백"
      },
      {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 300000,
-      "text": "해외 가맹점 이용 시 최대 30만원 캐시백"
+      "cat": "멤버십",
+      "icon": "📺",
+      "reward": 30000,
+      "text": "원하는 멤버십 선택하고 최대 3만원 할인 받기"
      }
     ],
-    "premonth": 500000
+    "premonth": "전월실적 없음"
    },
    {
     "id": 159,
@@ -5071,13 +4965,6 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "15만원 이상 이용 시 10만원 캐시백",
-    "main_tier": {
-     "spend": 150000,
-     "reward": 100000,
-     "eff": 67,
-     "text": "15만원 이상 이용 시 10만원 캐시백"
-    },
     "premonth": "전월실적 50만원 이상"
    },
    {
@@ -5117,7 +5004,11 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 82만원 캐시백"
+      "amount": "최대 85만원 캐시백"
+     },
+     {
+      "platform": "아정당",
+      "amount": "최대 68만원"
      }
     ],
     "rank": 7,
@@ -5168,12 +5059,12 @@
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2987"
     },
-    "main_benefit": "25만원 이상 이용 시 최대 20만원 캐시백",
+    "main_benefit": "30만원 이상 이용 시 최대 21만원 캐시백",
     "main_tier": {
-     "spend": 250000,
-     "reward": 200000,
-     "eff": 80,
-     "text": "25만원 이상 이용 시 최대 20만원 캐시백"
+     "spend": 300000,
+     "reward": 210000,
+     "eff": 70,
+     "text": "30만원 이상 이용 시 최대 21만원 캐시백"
     },
     "sub_benefits": [
      "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
@@ -5205,18 +5096,22 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 82만원 캐시백"
+      "amount": "최대 85만원 캐시백"
+     },
+     {
+      "platform": "아정당",
+      "amount": "최대 68만원"
      }
     ],
     "rank": 14,
     "detail": null,
     "plat": {},
-    "main_benefit": "25만원 이상 이용 시 최대 20만원 캐시백",
+    "main_benefit": "30만원 이상 이용 시 최대 21만원 캐시백",
     "main_tier": {
-     "spend": 250000,
-     "reward": 200000,
-     "eff": 80,
-     "text": "25만원 이상 이용 시 최대 20만원 캐시백"
+     "spend": 300000,
+     "reward": 210000,
+     "eff": 70,
+     "text": "30만원 이상 이용 시 최대 21만원 캐시백"
     },
     "sub_benefits": [
      "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
@@ -5251,12 +5146,12 @@
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2330"
     },
-    "main_benefit": "25만원 이상 이용 시 18만원 캐시백",
+    "main_benefit": "30만원 이상 이용 시 18만원 캐시백",
     "main_tier": {
-     "spend": 250000,
+     "spend": 300000,
      "reward": 180000,
-     "eff": 72,
-     "text": "25만원 이상 이용 시 18만원 캐시백"
+     "eff": 60,
+     "text": "30만원 이상 이용 시 18만원 캐시백"
     },
     "sub_benefits": [
      "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
@@ -5327,21 +5222,17 @@
      {
       "platform": "뱅크샐러드",
       "amount": "최대 84만원 캐시백"
-     },
-     {
-      "platform": "아정당",
-      "amount": "최대 66만원"
      }
     ],
     "rank": 37,
     "detail": null,
     "plat": {},
-    "main_benefit": "25만원 이상 이용 시 18만원 캐시백",
+    "main_benefit": "30만원 이상 이용 시 18만원 캐시백",
     "main_tier": {
-     "spend": 250000,
+     "spend": 300000,
      "reward": 180000,
-     "eff": 72,
-     "text": "25만원 이상 이용 시 18만원 캐시백"
+     "eff": 60,
+     "text": "30만원 이상 이용 시 18만원 캐시백"
     },
     "sub_benefits": [
      "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
@@ -5374,21 +5265,17 @@
      {
       "platform": "뱅크샐러드",
       "amount": "최대 84만원 캐시백"
-     },
-     {
-      "platform": "아정당",
-      "amount": "최대 66만원"
      }
     ],
     "rank": 43,
     "detail": null,
     "plat": {},
-    "main_benefit": "25만원 이상 이용 시 18만원 캐시백",
+    "main_benefit": "30만원 이상 이용 시 18만원 캐시백",
     "main_tier": {
-     "spend": 250000,
+     "spend": 300000,
      "reward": 180000,
-     "eff": 72,
-     "text": "25만원 이상 이용 시 18만원 캐시백"
+     "eff": 60,
+     "text": "30만원 이상 이용 시 18만원 캐시백"
     },
     "sub_benefits": [
      "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
@@ -5447,21 +5334,17 @@
      {
       "platform": "뱅크샐러드",
       "amount": "최대 84만원 캐시백"
-     },
-     {
-      "platform": "아정당",
-      "amount": "최대 66만원"
      }
     ],
     "rank": 90,
     "detail": null,
     "plat": {},
-    "main_benefit": "25만원 이상 이용 시 18만원 캐시백",
+    "main_benefit": "30만원 이상 이용 시 18만원 캐시백",
     "main_tier": {
-     "spend": 250000,
+     "spend": 300000,
      "reward": 180000,
-     "eff": 72,
-     "text": "25만원 이상 이용 시 18만원 캐시백"
+     "eff": 60,
+     "text": "30만원 이상 이용 시 18만원 캐시백"
     },
     "sub_benefits": [
      "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백",
@@ -5644,12 +5527,12 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "25만원 이상 이용 시 20만원 뱅샐머니 받기",
+    "main_benefit": "30만원/300만원 이상 이용 시 17만원/20만원 뱅샐머니 받기",
     "main_tier": {
-     "spend": 250000,
-     "reward": 200000,
-     "eff": 80,
-     "text": "25만원 이상 이용 시 20만원 뱅샐머니 받기"
+     "spend": 3000000,
+     "reward": 170000,
+     "eff": 6,
+     "text": "30만원/300만원 이상 이용 시 17만원/20만원 뱅샐머니 받기"
     },
     "sub_benefits": [
      "해외 가맹점 이용 시 최대 60만원 캐시백",
@@ -5769,25 +5652,7 @@
     ],
     "rank": null,
     "detail": null,
-    "plat": {},
-    "main_benefit": "10만원 이상 이용 시 9만원 캐시백",
-    "main_tier": {
-     "spend": 100000,
-     "reward": 90000,
-     "eff": 90,
-     "text": "10만원 이상 이용 시 9만원 캐시백"
-    },
-    "sub_benefits": [
-     "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "리볼빙",
-      "icon": "🔄",
-      "reward": 10000,
-      "text": "일부결제금액이월약정(리볼빙) 신청 시 1만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 183,
@@ -5930,14 +5795,6 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 75만원 캐시백"
-     },
-     {
-      "platform": "아정당",
-      "amount": "최대 77만원"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 78만원"
      }
@@ -5973,24 +5830,6 @@
     "plat": {
      "카드고릴라": "https://www.card-gorilla.com/card/detail/2848"
     },
-    "main_benefit": "20만원 쓰고 20만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 200000,
-     "eff": 100,
-     "text": "20만원 쓰고 20만원 받기"
-    },
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ],
     "premonth": "전월실적 50만원 이상"
    },
    {
@@ -6002,10 +5841,6 @@
     "source": "https://card-lounge.toss.im/card/1959",
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
-     {
-      "platform": "뱅크샐러드",
-      "amount": "최대 75만원 캐시백"
-     },
      {
       "platform": "카카오페이",
       "amount": "최대 75만원"
@@ -6064,24 +5899,6 @@
      "카드고릴라": "https://www.card-gorilla.com/card/detail/85",
      "뱅크샐러드": "https://www.banksalad.com/product/cards/CARD003739"
     },
-    "main_benefit": "20만원 쓰고 17만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 170000,
-     "eff": 85,
-     "text": "20만원 쓰고 17만원 받기"
-    },
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ],
     "premonth": "전월실적 30만원 이상"
    },
    {
@@ -6101,7 +5918,7 @@
     "rank": 36,
     "detail": null,
     "plat": {},
-    "premonth": "전월실적 없음"
+    "premonth": "전월실적 50만원 이상"
    },
    {
     "id": 189,
@@ -6145,43 +5962,13 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 75만원 캐시백"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 75만원"
      }
     ],
     "rank": null,
     "detail": null,
-    "plat": {},
-    "main_benefit": "17만원 혜택",
-    "sub_benefits": [
-     "추가 이용 시 최대 2만원 혜택",
-     "해외 결제 시 최대 50만원 혜택",
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "추가이용",
-      "icon": "➕",
-      "reward": 20000,
-      "text": "추가 이용 시 최대 2만원 혜택"
-     },
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 500000,
-      "text": "해외 결제 시 최대 50만원 혜택"
-     },
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 192,
@@ -6193,43 +5980,13 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 75만원 캐시백"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 75만원"
      }
     ],
     "rank": null,
     "detail": null,
-    "plat": {},
-    "main_benefit": "17만원 혜택",
-    "sub_benefits": [
-     "추가 이용 시 최대 2만원 혜택",
-     "해외 결제 시 최대 50만원 혜택",
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "추가이용",
-      "icon": "➕",
-      "reward": 20000,
-      "text": "추가 이용 시 최대 2만원 혜택"
-     },
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 500000,
-      "text": "해외 결제 시 최대 50만원 혜택"
-     },
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 193,
@@ -6380,10 +6137,6 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 75만원 캐시백"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 75만원"
      }
@@ -6391,24 +6144,6 @@
     "rank": 74,
     "detail": null,
     "plat": {},
-    "main_benefit": "20만원 쓰고 17만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 170000,
-     "eff": 85,
-     "text": "20만원 쓰고 17만원 받기"
-    },
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ],
     "premonth": "전월실적 30만원 이상"
    },
    {
@@ -6486,39 +6221,13 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 78만원 캐시백"
-     },
-     {
-      "platform": "아정당",
-      "amount": "최대 77만원"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 78만원"
      }
     ],
     "rank": 24,
     "detail": null,
-    "plat": {},
-    "main_benefit": "20만원 쓰고 20만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 200000,
-     "eff": 100,
-     "text": "20만원 쓰고 20만원 받기"
-    },
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 206,
@@ -6530,39 +6239,13 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 78만원 캐시백"
-     },
-     {
-      "platform": "아정당",
-      "amount": "최대 77만원"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 78만원"
      }
     ],
     "rank": 32,
     "detail": null,
-    "plat": {},
-    "main_benefit": "20만원 쓰고 20만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 200000,
-     "eff": 100,
-     "text": "20만원 쓰고 20만원 받기"
-    },
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 207,
@@ -6575,18 +6258,7 @@
     "events": [],
     "rank": 39,
     "detail": null,
-    "plat": {},
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 208,
@@ -6611,35 +6283,13 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 78만원 캐시백"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 78만원"
      }
     ],
     "rank": 46,
     "detail": null,
-    "plat": {},
-    "main_benefit": "20만원 쓰고 20만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 200000,
-     "eff": 100,
-     "text": "20만원 쓰고 20만원 받기"
-    },
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 210,
@@ -6651,35 +6301,13 @@
     "url": "https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD101S00.do",
     "events": [
      {
-      "platform": "뱅크샐러드",
-      "amount": "최대 75만원 캐시백"
-     },
-     {
       "platform": "카카오페이",
       "amount": "최대 75만원"
      }
     ],
     "rank": 83,
     "detail": null,
-    "plat": {},
-    "main_benefit": "20만원 쓰고 17만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 170000,
-     "eff": 85,
-     "text": "20만원 쓰고 17만원 받기"
-    },
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 211,
@@ -6692,18 +6320,7 @@
     "events": [],
     "rank": 89,
     "detail": null,
-    "plat": {},
-    "sub_benefits": [
-     "자동납부·정기결제 시 최대 6만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "자동납부",
-      "icon": "📅",
-      "reward": 60000,
-      "text": "자동납부·정기결제 시 최대 6만원 캐시백"
-     }
-    ]
+    "plat": {}
    }
   ],
   "하나카드": [
@@ -7140,32 +6757,7 @@
     ],
     "rank": 15,
     "detail": null,
-    "plat": {},
-    "main_benefit": "혜택1. 아래 이벤트 대상 카드로 2만원 이상 이용 시 2만원 캐시백 받기",
-    "main_tier": {
-     "spend": 20000,
-     "reward": 20000,
-     "eff": 100,
-     "text": "혜택1. 아래 이벤트 대상 카드로 2만원 이상 이용 시 2만원 캐시백 받기"
-    },
-    "sub_benefits": [
-     "혜택2. 추가로 해외 가맹점 이용 시 5만원/30만원/50만원 받기",
-     "혜택3. 일본 여행 시 드리는 추가혜택 최대 5만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 500000,
-      "text": "혜택2. 추가로 해외 가맹점 이용 시 5만원/30만원/50만원 받기"
-     },
-     {
-      "cat": "여행",
-      "icon": "✈️",
-      "reward": 50000,
-      "text": "혜택3. 일본 여행 시 드리는 추가혜택 최대 5만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 234,
@@ -7249,32 +6841,7 @@
     ],
     "rank": null,
     "detail": null,
-    "plat": {},
-    "main_benefit": "혜택1. 아래 이벤트 대상 카드로 2만원 이상 이용 시 2만원 캐시백 받기",
-    "main_tier": {
-     "spend": 20000,
-     "reward": 20000,
-     "eff": 100,
-     "text": "혜택1. 아래 이벤트 대상 카드로 2만원 이상 이용 시 2만원 캐시백 받기"
-    },
-    "sub_benefits": [
-     "혜택2. 추가로 해외 가맹점 이용 시 5만원/30만원/50만원 받기",
-     "혜택3. 일본 여행 시 드리는 추가혜택 최대 5만원 캐시백"
-    ],
-    "sub_tiers": [
-     {
-      "cat": "해외",
-      "icon": "🌍",
-      "reward": 500000,
-      "text": "혜택2. 추가로 해외 가맹점 이용 시 5만원/30만원/50만원 받기"
-     },
-     {
-      "cat": "여행",
-      "icon": "✈️",
-      "reward": 50000,
-      "text": "혜택3. 일본 여행 시 드리는 추가혜택 최대 5만원 캐시백"
-     }
-    ]
+    "plat": {}
    },
    {
     "id": 239,
@@ -7311,22 +6878,22 @@
      },
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 19.5만원 캐시백"
+      "amount": "최대 23.5만원 캐시백"
      },
      {
       "platform": "아정당",
-      "amount": "최대 20.5만원"
+      "amount": "최대 26.5만원"
      }
     ],
     "rank": 29,
     "detail": null,
     "plat": {},
-    "main_benefit": "10만원 이상 이용 시 8만원 캐시백",
+    "main_benefit": "20만원 이상 이용 시 12만원 캐시백",
     "main_tier": {
-     "spend": 100000,
-     "reward": 80000,
-     "eff": 80,
-     "text": "10만원 이상 이용 시 8만원 캐시백"
+     "spend": 200000,
+     "reward": 120000,
+     "eff": 60,
+     "text": "20만원 이상 이용 시 12만원 캐시백"
     },
     "sub_benefits": [
      "NH PAY로 10만원 더 쓰고 4만원 받기",
@@ -7383,11 +6950,11 @@
      },
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 19.5만원 캐시백"
+      "amount": "최대 23.5만원 캐시백"
      },
      {
       "platform": "아정당",
-      "amount": "최대 20.5만원"
+      "amount": "최대 26.5만원"
      },
      {
       "platform": "카카오페이",
@@ -7397,12 +6964,12 @@
     "rank": 64,
     "detail": null,
     "plat": {},
-    "main_benefit": "11만원 쓰고 10만원 캐시백 받기",
+    "main_benefit": "20만원 쓰고 14만원 캐시백 받기",
     "main_tier": {
-     "spend": 110000,
-     "reward": 100000,
-     "eff": 91,
-     "text": "11만원 쓰고 10만원 캐시백 받기"
+     "spend": 200000,
+     "reward": 140000,
+     "eff": 70,
+     "text": "20만원 쓰고 14만원 캐시백 받기"
     },
     "sub_benefits": [
      "10만원 쓰고 4만원 캐시백 받기",
@@ -7446,7 +7013,7 @@
      },
      {
       "platform": "아정당",
-      "amount": "최대 20.5만원"
+      "amount": "최대 26.5만원"
      },
      {
       "platform": "카카오페이",
@@ -7456,12 +7023,12 @@
     "rank": 62,
     "detail": null,
     "plat": {},
-    "main_benefit": "10만원 이상 이용 시 8만원 캐시백",
+    "main_benefit": "20만원 이상 이용 시 12만원 캐시백",
     "main_tier": {
-     "spend": 100000,
-     "reward": 80000,
-     "eff": 80,
-     "text": "10만원 이상 이용 시 8만원 캐시백"
+     "spend": 200000,
+     "reward": 120000,
+     "eff": 60,
+     "text": "20만원 이상 이용 시 12만원 캐시백"
     },
     "sub_benefits": [
      "NH PAY로 10만원 더 쓰고 4만원 받기",
@@ -7726,7 +7293,25 @@
     ],
     "rank": 53,
     "detail": null,
-    "plat": {}
+    "plat": {},
+    "main_benefit": "대상 카드 온라인 신규 발급 후 10만원 이상 이용 시 최대 3만원 연회비 캐시백 + 공항라운지 무료 이용권",
+    "main_tier": {
+     "spend": 100000,
+     "reward": 30000,
+     "eff": 30,
+     "text": "대상 카드 온라인 신규 발급 후 10만원 이상 이용 시 최대 3만원 연회비 캐시백 + 공항라운지 무료 이용권"
+    },
+    "sub_benefits": [
+     "추가로 정기결제 이용하고 최대 5만원 더 받기"
+    ],
+    "sub_tiers": [
+     {
+      "cat": "자동납부",
+      "icon": "📅",
+      "reward": 50000,
+      "text": "추가로 정기결제 이용하고 최대 5만원 더 받기"
+     }
+    ]
    },
    {
     "id": 261,
@@ -7762,22 +7347,22 @@
     "rank": 92,
     "detail": null,
     "plat": {},
-    "main_benefit": "5만원 쓰고 5만원 캐시백 받기",
+    "main_benefit": "대상 카드 온라인 신규 발급 후 10만원 이상 이용 시 최대 3만원 연회비 캐시백 + 공항라운지 무료 이용권",
     "main_tier": {
-     "spend": 50000,
-     "reward": 50000,
-     "eff": 100,
-     "text": "5만원 쓰고 5만원 캐시백 받기"
+     "spend": 100000,
+     "reward": 30000,
+     "eff": 30,
+     "text": "대상 카드 온라인 신규 발급 후 10만원 이상 이용 시 최대 3만원 연회비 캐시백 + 공항라운지 무료 이용권"
     },
     "sub_benefits": [
-     "온라인 신규회원 10만원 이상 이용 시 연회비 캐시백 받기"
+     "추가로 정기결제 이용하고 최대 5만원 더 받기"
     ],
     "sub_tiers": [
      {
-      "cat": "연회비",
-      "icon": "💳",
-      "reward": 100000,
-      "text": "온라인 신규회원 10만원 이상 이용 시 연회비 캐시백 받기"
+      "cat": "자동납부",
+      "icon": "📅",
+      "reward": 50000,
+      "text": "추가로 정기결제 이용하고 최대 5만원 더 받기"
      }
     ]
    },
@@ -7792,18 +7377,18 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 19.5만원 캐시백"
+      "amount": "최대 23.5만원 캐시백"
      }
     ],
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "11만원 쓰고 10만원 캐시백 받기",
+    "main_benefit": "20만원 쓰고 14만원 캐시백 받기",
     "main_tier": {
-     "spend": 110000,
-     "reward": 100000,
-     "eff": 91,
-     "text": "11만원 쓰고 10만원 캐시백 받기"
+     "spend": 200000,
+     "reward": 140000,
+     "eff": 70,
+     "text": "20만원 쓰고 14만원 캐시백 받기"
     },
     "sub_benefits": [
      "10만원 쓰고 4만원 캐시백 받기",
@@ -7842,7 +7427,7 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 6.5만원 캐시백"
+      "amount": "최대 12.5만원 캐시백"
      },
      {
       "platform": "카카오페이",
@@ -7852,12 +7437,12 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "5만원 쓰고 5만원 캐시백 받기",
+    "main_benefit": "13만원 쓰고 11만원 캐시백 받기",
     "main_tier": {
-     "spend": 50000,
-     "reward": 50000,
-     "eff": 100,
-     "text": "5만원 쓰고 5만원 캐시백 받기"
+     "spend": 130000,
+     "reward": 110000,
+     "eff": 85,
+     "text": "13만원 쓰고 11만원 캐시백 받기"
     },
     "sub_benefits": [
      "온라인 신규회원 10만원 이상 이용 시 연회비 캐시백 받기"
@@ -7882,18 +7467,18 @@
     "events": [
      {
       "platform": "뱅크샐러드",
-      "amount": "최대 6.2만원 캐시백"
+      "amount": "최대 12.2만원 캐시백"
      }
     ],
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "5만원 쓰고 5만원 캐시백 받기",
+    "main_benefit": "13만원 쓰고 11만원 캐시백 받기",
     "main_tier": {
-     "spend": 50000,
-     "reward": 50000,
-     "eff": 100,
-     "text": "5만원 쓰고 5만원 캐시백 받기"
+     "spend": 130000,
+     "reward": 110000,
+     "eff": 85,
+     "text": "13만원 쓰고 11만원 캐시백 받기"
     },
     "sub_benefits": [
      "온라인 신규회원 10만원 이상 이용 시 연회비 캐시백 받기"
@@ -7924,12 +7509,12 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "10만원 이상 이용 시 8만원 캐시백",
+    "main_benefit": "20만원 이상 이용 시 12만원 캐시백",
     "main_tier": {
-     "spend": 100000,
-     "reward": 80000,
-     "eff": 80,
-     "text": "10만원 이상 이용 시 8만원 캐시백"
+     "spend": 200000,
+     "reward": 120000,
+     "eff": 60,
+     "text": "20만원 이상 이용 시 12만원 캐시백"
     },
     "sub_benefits": [
      "NH PAY로 10만원 더 쓰고 4만원 받기",
@@ -8168,12 +7753,12 @@
     "rank": null,
     "detail": null,
     "plat": {},
-    "main_benefit": "5만원 쓰고 5만원 캐시백 받기",
+    "main_benefit": "13만원 쓰고 11만원 캐시백 받기",
     "main_tier": {
-     "spend": 50000,
-     "reward": 50000,
-     "eff": 100,
-     "text": "5만원 쓰고 5만원 캐시백 받기"
+     "spend": 130000,
+     "reward": 110000,
+     "eff": 85,
+     "text": "13만원 쓰고 11만원 캐시백 받기"
     },
     "sub_benefits": [
      "온라인 신규회원 10만원 이상 이용 시 연회비 캐시백 받기"
@@ -8650,14 +8235,7 @@
     ],
     "rank": null,
     "detail": null,
-    "plat": {},
-    "main_benefit": "20만원 쓰고 9만원 받기",
-    "main_tier": {
-     "spend": 200000,
-     "reward": 90000,
-     "eff": 45,
-     "text": "20만원 쓰고 9만원 받기"
-    }
+    "plat": {}
    },
    {
     "id": 307,

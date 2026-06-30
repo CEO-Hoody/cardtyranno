@@ -700,6 +700,72 @@ function ctSeo(title,desc,canonPath){try{
  if(desc){desc=(''+desc).replace(/\s+/g,' ').trim().slice(0,158);_setMeta('meta[name="description"]',desc);_setMeta('meta[property="og:description"]',desc);_setMeta('meta[name="twitter:description"]',desc);}
  if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
 }catch(e){}}
+/* ===== 통합 검색필터(UF) 제네릭 팩토리 — 표준 .uf 마크업(id=uf)을 받아 플랫폼사·카드사(다중)+유형/정렬(단일) 구동. PC 팝오버·모바일 바텀시트·URL 동기화. cfg={plats:[{k,name,color}],issuers:[name],types:[[v,label]],sorts:[[v,label]],state:{vis,issF,type,sortK},onChange,countText(n),applyText(n),urlSync} ===== */
+function ufBuild(cfg){var root=document.getElementById('uf');if(!root)return {refresh:function(){},resetAll:function(){}};
+ var S=cfg.state,PL=cfg.plats||[],IS=cfg.issuers||[],TY=cfg.types||[],SO=cfg.sorts||[];
+ var CK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></svg>';
+ var XI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+ function el(id){return document.getElementById(id);}
+ function tlabel(){for(var i=0;i<TY.length;i++)if(TY[i][0]===S.type)return TY[i][1];return TY[0]?TY[0][1]:'';}
+ function slabel(){for(var i=0;i<SO.length;i++)if(SO[i][0]===S.sortK)return SO[i][1];return SO[0]?SO[0][1]:'';}
+ function optList(kind){if(kind==='plat')return PL.map(function(p){return '<div class="uf-opt'+(S.vis[p.k]?' on':'')+'" data-uf-k="'+p.k+'"><span class="uf-cb">'+CK+'</span><span class="dot" style="background:'+(p.color||'#888')+'"></span><span class="nm">'+p.name+'</span></div>';}).join('');
+  return IS.map(function(n){return '<div class="uf-opt'+(S.issF[n]?' on':'')+'" data-uf-k="'+n+'"><span class="uf-cb">'+CK+'</span><span class="nm">'+n+'</span></div>';}).join('');}
+ function seg(kind){var arr=kind==='type'?TY:SO,cur=kind==='type'?S.type:S.sortK;return '<div class="uf-seg" data-uf-seg="'+kind+'"'+(kind==='sort'?' style="flex-wrap:wrap"':'')+'>'+arr.map(function(t){return '<button type="button" data-v="'+t[0]+'" class="'+(cur===t[0]?'on':'')+'">'+t[1]+'</button>';}).join('')+'</div>';}
+ function sortRows(){return SO.map(function(s){return '<div class="uf-srow'+(S.sortK===s[0]?' on':'')+'" data-uf-s="'+s[0]+'"><span class="sl">'+s[1]+'</span>'+CK+'</div>';}).join('');}
+ function fillPop(w){if(w==='plat')el('ufPopplat').innerHTML='<div class="uf-poph"><span class="pt">플랫폼사</span><span class="pm">다중 선택</span></div>'+optList('plat')+'<div class="uf-popft"><button type="button" class="r" data-uf-clr="plat">초기화</button><button type="button" class="a" data-uf-close="1">적용</button></div>';
+  else if(w==='iss')el('ufPopiss').innerHTML='<div class="uf-poph"><span class="pt">카드사</span><span class="pm">다중 선택</span></div>'+optList('iss')+'<div class="uf-popft"><button type="button" class="r" data-uf-clr="iss">초기화</button><button type="button" class="a" data-uf-close="1">적용</button></div>';
+  else if(w==='type')el('ufPoptype').innerHTML='<div class="uf-poph"><span class="pt">캐시백 유형</span><span class="pm">단일</span></div><div style="margin-top:4px">'+seg('type')+'</div>';
+  else if(w==='sort')el('ufPopsort').innerHTML='<div class="uf-poph" style="padding:0 4px 4px;margin-bottom:2px"><span class="pt" style="font-size:12px;color:rgba(0,0,0,.45)">정렬</span></div>'+sortRows();}
+ function closePops(){['plat','iss','type','sort'].forEach(function(w){var p=el('ufPop'+w);if(p)p.classList.remove('open');});var dq=root.querySelectorAll('.uf-ddl[aria-expanded="true"]');for(var i=0;i<dq.length;i++)dq[i].setAttribute('aria-expanded','false');}
+ function openPop(w,trig){var p=el('ufPop'+w);if(!p)return;var was=p.classList.contains('open');closePops();if(was)return;fillPop(w);p.style.left=Math.max(0,trig.offsetLeft)+'px';p.style.top=(trig.offsetTop+trig.offsetHeight+8)+'px';p.classList.add('open');if(p.offsetLeft+p.offsetWidth>root.clientWidth)p.style.left=Math.max(0,root.clientWidth-p.offsetWidth)+'px';if(trig.hasAttribute('aria-expanded'))trig.setAttribute('aria-expanded','true');}
+ function fillSheet(){el('ufSheetBody').innerHTML=
+  '<div class="uf-sg"><div class="uf-sg-t">플랫폼사 <span>다중</span></div><div class="uf-sg-opts" data-uf-tags="plat">'+PL.map(function(p){return '<button type="button" class="uf-tag'+(S.vis[p.k]?' on':'')+'" data-uf-k="'+p.k+'"><span class="dot" style="background:'+(p.color||'#888')+'"></span>'+p.name+'</button>';}).join('')+'</div></div>'
+  +'<div class="uf-sg"><div class="uf-sg-t">카드사 <span>다중</span></div><div class="uf-sg-opts" data-uf-tags="iss">'+IS.map(function(n){return '<button type="button" class="uf-tag'+(S.issF[n]?' on':'')+'" data-uf-k="'+n+'">'+n+'</button>';}).join('')+'</div></div>'
+  +'<div class="uf-sg"><div class="uf-sg-t">캐시백 유형 <span>단일</span></div><div style="margin-top:11px">'+seg('type')+'</div></div>'
+  +'<div class="uf-sg"><div class="uf-sg-t">정렬</div><div style="margin-top:11px">'+seg('sort')+'</div></div>';}
+ function openSheet(){fillSheet();el('ufSheetBg').classList.add('open');document.body.style.overflow='hidden';}
+ function closeSheet(){var b=el('ufSheetBg');if(b)b.classList.remove('open');document.body.style.overflow='';}
+ function writeURL(){if(!cfg.urlSync)return;var sp=new URLSearchParams(location.search);
+  var pl=PL.filter(function(p){return S.vis[p.k];}).map(function(p){return p.k;});pl.length?sp.set('plat',pl.join(',')):sp.delete('plat');sp.delete('issuer');
+  var is=IS.filter(function(n){return S.issF[n];});is.length?sp.set('iss',is.join(',')):sp.delete('iss');
+  (TY[0]&&S.type!==TY[0][0])?sp.set('type',S.type):sp.delete('type');(SO[0]&&S.sortK!==SO[0][0])?sp.set('sort',S.sortK):sp.delete('sort');
+  var q=sp.toString();try{history.replaceState(null,'',location.pathname+(q?'?'+q:''));}catch(_){}}
+ function apply(){cfg.onChange();writeURL();}
+ function refresh(count){
+  var chips=PL.filter(function(p){return S.vis[p.k];}).map(function(p){return '<span class="uf-chip"><span class="dot" style="background:'+(p.color||'#888')+'"></span>'+p.name+'<span class="x" data-uf-rm-plat="'+p.k+'">'+XI+'</span></span>';})
+   .concat(IS.filter(function(n){return S.issF[n];}).map(function(n){return '<span class="uf-chip">'+n+'<span class="x" data-uf-rm-iss="'+n+'">'+XI+'</span></span>';})).join('');
+  var ch=el('ufChips');if(ch)ch.innerHTML=chips;
+  var np=PL.filter(function(p){return S.vis[p.k];}).length,ni=IS.filter(function(n){return S.issF[n];}).length,tot=np+ni;
+  var cp=el('ufCplat');if(cp)cp.textContent=np?String(np):'';var ci=el('ufCiss');if(ci)ci.textContent=ni?String(ni):'';
+  var fn=el('ufFn');if(fn){fn.textContent=tot?String(tot):'';fn.className='uf-fn'+(tot?'':' zero');}
+  var tt=el('ufTtype');if(tt)tt.textContent=tlabel();
+  ['ufSortPc','ufSortMo'].forEach(function(id){var b=el(id);if(b&&b.firstChild)b.firstChild.textContent=slabel()+' ';});
+  var rs=el('ufReset');if(rs)rs.style.display=tot?'':'none';
+  var cn=el('ufCnt');if(cn&&cfg.countText&&count!=null)cn.innerHTML=cfg.countText(count);
+  var fa=el('ufFtApply');if(fa&&count!=null)fa.textContent=(cfg.applyText?cfg.applyText(count):(count+'건 결과 보기'));}
+ function resetAll(){S.vis={};S.issF={};S.type=(TY[0]&&TY[0][0])||'main';S.sortK=(SO[0]&&SO[0][0])||'cash';closePops();apply();var sb=el('ufSheetBg');if(sb&&sb.classList.contains('open'))fillSheet();}
+ if(!root._b){root._b=1;
+  root.addEventListener('click',function(e){
+   var dd=e.target.closest('.uf-ddl');if(dd){e.stopPropagation();openPop(dd.getAttribute('data-uf'),dd);return;}
+   var spc=e.target.closest('#ufSortPc');if(spc){e.stopPropagation();openPop('sort',spc);return;}
+   var opt=e.target.closest('.uf-opt[data-uf-k]');if(opt){var pop=opt.closest('.uf-pop');var k=opt.getAttribute('data-uf-k');if(pop&&pop.id==='ufPopplat')S.vis[k]=S.vis[k]?0:1;else S.issF[k]=S.issF[k]?0:1;opt.classList.toggle('on');apply();return;}
+   var sg=e.target.closest('.uf-seg[data-uf-seg] button[data-v]');if(sg){var g=sg.closest('.uf-seg').getAttribute('data-uf-seg');if(g==='type')S.type=sg.getAttribute('data-v');else S.sortK=sg.getAttribute('data-v');var bb=sg.closest('.uf-seg').querySelectorAll('button');for(var j=0;j<bb.length;j++)bb[j].classList.toggle('on',bb[j]===sg);apply();return;}
+   var sr=e.target.closest('.uf-srow[data-uf-s]');if(sr){S.sortK=sr.getAttribute('data-uf-s');closePops();apply();return;}
+   var clr=e.target.closest('[data-uf-clr]');if(clr){var cg=clr.getAttribute('data-uf-clr');if(cg==='plat')S.vis={};else S.issF={};fillPop(cg);apply();return;}
+   if(e.target.closest('[data-uf-close]')){closePops();return;}
+   var rmp=e.target.closest('[data-uf-rm-plat]');if(rmp){S.vis[rmp.getAttribute('data-uf-rm-plat')]=0;apply();return;}
+   var rmi=e.target.closest('[data-uf-rm-iss]');if(rmi){S.issF[rmi.getAttribute('data-uf-rm-iss')]=0;apply();return;}
+   if(e.target.closest('#ufReset')){resetAll();return;}});
+  var fb=el('ufFbtn');if(fb)fb.onclick=openSheet;var sm=el('ufSortMo');if(sm)sm.onclick=openSheet;
+  var sheet=el('ufSheet');if(sheet)sheet.addEventListener('click',function(e){
+   var tag=e.target.closest('.uf-tag[data-uf-k]');if(tag){var box=tag.closest('[data-uf-tags]').getAttribute('data-uf-tags');var k=tag.getAttribute('data-uf-k');if(box==='plat')S.vis[k]=S.vis[k]?0:1;else S.issF[k]=S.issF[k]?0:1;tag.classList.toggle('on');apply();return;}
+   var sg=e.target.closest('.uf-seg[data-uf-seg] button[data-v]');if(sg){var g=sg.closest('.uf-seg').getAttribute('data-uf-seg');if(g==='type')S.type=sg.getAttribute('data-v');else S.sortK=sg.getAttribute('data-v');var bb=sg.closest('.uf-seg').querySelectorAll('button');for(var j=0;j<bb.length;j++)bb[j].classList.toggle('on',bb[j]===sg);apply();return;}});
+  var sx=el('ufSheetX');if(sx)sx.onclick=closeSheet;var bg=el('ufSheetBg');if(bg)bg.addEventListener('click',function(e){if(e.target===bg)closeSheet();});
+  var fr=el('ufFtReset');if(fr)fr.onclick=function(){S.vis={};S.issF={};S.type=(TY[0]&&TY[0][0])||'main';S.sortK=(SO[0]&&SO[0][0])||'cash';fillSheet();apply();};
+  var fa=el('ufFtApply');if(fa)fa.onclick=closeSheet;
+  document.addEventListener('click',function(e){if(!e.target.closest('#uf'))closePops();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePops();closeSheet();}});}
+ return {refresh:refresh,resetAll:resetAll};}
 // 공유하기: Web Share API 우선, 미지원 시 클립보드 복사 + 토스트
 function ctToast(msg){var t=document.getElementById('ctToast');if(!t){t=document.createElement('div');t.id='ctToast';t.className='ct-toast';document.body.appendChild(t);}t.textContent=msg;void t.offsetWidth;t.classList.add('on');clearTimeout(ctToast._t);ctToast._t=setTimeout(function(){t.classList.remove('on');},2000);}
 function _ctCopyFallback(text){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok;}catch(e){return false;}}
