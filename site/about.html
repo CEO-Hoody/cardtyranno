@@ -497,7 +497,13 @@ function ctSeo(title,desc,canonPath){try{
 /* 캐시백 주요/부가 분해(티어 인지) — 플랫폼 이벤트가 분해(bonus_won>0)면 그대로, 미분해(네이버·카카오 등 bonus=0·main=전체)면 카드 main_tier 보상으로 주요를 유도(부가=전체−주요). events 상세 '전체 캐시백 구성'(cards.json main_tier/sub_tiers)과 비교표·차트의 주요/부가 표기를 일치시킨다. mt=카드 main_tier.reward(원). */
 /* 만료 이벤트 제외 — period_end(마감일)가 오늘(KST) 이전이면 종료된 이벤트(예: 6월 마감). 비교표·캐시백 등에서 진행 중인 이벤트만 노출. period_end 없음=상시/미정이라 유지. */
 function ctToday(){try{return new Date(Date.now()+324e5).toISOString().slice(0,10);}catch(e){return '0000-00-00';}}
-function evExpired(e){var pe=e&&e.period_end;return !!(pe&&String(pe).slice(0,10)<ctToday());}
+function ctYM(){return ctToday().slice(0,7);}
+// 종료/묵은 이벤트 판별: ① 마감일 지남 ② reward_group 발행월이 전월 이하(콜렉터가 발행월을 정확히 찍으면 전 플랫폼 적용) ③ 네이버는 마감일·정확월 없어 URL promotionId(YYYYMMDD) 발행월로 판별
+function evExpired(e){if(!e)return false;
+ var pe=e.period_end;if(pe&&String(pe).slice(0,10)<ctToday())return true;
+ var rg=e.reward_group||'';var rgm=rg.indexOf('|')>0?rg.split('|')[0]:'';if(/^\d{4}-\d{2}$/.test(rgm)&&rgm<ctYM())return true;
+ var m=/promotionId=(\d{4})(\d{2})/.exec(e.url||'');if(m&&(m[1]+'-'+m[2])<ctYM())return true;
+ return false;}
 function liveEvents(prods){(prods||[]).forEach(function(p){p.events=(p.events||[]).filter(function(e){return !evExpired(e);});});return (prods||[]).filter(function(p){return (p.events||[]).length;});}
 function splTier(e,mt){var t=(e.reward_won||0);mt=mt||0;
  // 카드 main_tier(주요 캐시백)를 최우선 — 플랫폼별 main_won은 채널마다 들쭉날쭉(네이버=전액·카카오 임의·뱅샐 0)이라 'events 전체 캐시백 구성'과 어긋남. 티어가 있으면 주요=티어로 통일, 부가=전체−주요.
