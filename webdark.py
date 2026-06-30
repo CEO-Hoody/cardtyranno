@@ -1202,14 +1202,76 @@ ISSUE_BODY=('<style>'
  '.pcmp-banner-mo{display:none}'
  '.pcmp-banner-mo a{display:block;background:var(--block-mint);border-radius:14px;padding:16px 18px;text-decoration:none;color:#000;margin-top:16px}.pcmp-banner-mo .mono{font:700 8px ui-monospace,Menlo,monospace;opacity:.55;text-transform:uppercase}.pcmp-banner-mo .t{font-weight:700;font-size:15px;letter-spacing:-.3px;margin-top:5px}.pcmp-banner-mo .go{display:inline-flex;align-items:center;gap:6px;font-weight:540;font-size:12px;margin-top:8px}.pcmp-banner-mo .go svg{width:14px;height:14px}'
  '@media(max-width:680px){.pcmp-banners{display:none}.pcmp-banner-mo{display:block}}'
+ # ===== 통합 검색필터(UF) — 3필터(플랫폼사·카드사·캐시백유형)+정렬4 · PC 인라인 드롭다운 / 모바일 컴팩트바+바텀시트 =====
+ '.uf{position:relative;margin:14px 0 4px}'
+ '.uf-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}'
+ '.uf-fbtn{display:none}'
+ '.uf-ddls{display:flex;gap:10px;flex-wrap:wrap}'
+ '.uf-ddl{display:inline-flex;align-items:center;gap:7px;padding:10px 15px;border:1.5px solid var(--hairline);border-radius:50px;background:#fff;font-family:inherit;font-weight:540;font-size:14px;color:#000;cursor:pointer;white-space:nowrap}'
+ '.uf-ddl svg{width:14px;height:14px;opacity:.5}.uf-ddl .cv{transition:transform .2s}.uf-ddl[aria-expanded="true"] .cv{transform:rotate(180deg)}'
+ '.uf-ddl .uf-c{color:var(--accent-magenta);font-weight:700}.uf-ddl .uf-c:empty{display:none}.uf-ddl .uf-t{color:rgba(0,0,0,.55);font-weight:540}'
+ '.uf-spacer{flex:1}'
+ '.uf-sortb{display:inline-flex;align-items:center;gap:5px;font-weight:540;font-size:13.5px;color:rgba(0,0,0,.6);background:0;border:0;cursor:pointer;font-family:inherit;white-space:nowrap}.uf-sortb svg{width:13px;height:13px;opacity:.6}'
+ '.uf-msort{display:none}'
+ '.uf-chips{display:flex;gap:9px;flex-wrap:wrap}.uf-chips:empty{display:none}'
+ '.uf-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 8px 7px 13px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:13px;white-space:nowrap;border:0}'
+ '.uf-chip .dot{width:7px;height:7px;border-radius:50%;flex:0 0 auto}'
+ '.uf-chip .x{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto}.uf-chip .x svg{width:11px;height:11px;opacity:1}'
+ '.uf-meta{display:flex;align-items:center;gap:10px;margin-top:14px}'
+ '.uf-cnt{font-weight:540;font-size:13px;color:rgba(0,0,0,.55)}.uf-cnt b{color:#000;font-weight:700}'
+ '.uf-reset{font-weight:540;font-size:13px;color:rgba(0,0,0,.45);text-decoration:underline;text-underline-offset:2px;cursor:pointer;background:0;border:0;font-family:inherit}'
+ '.uf-mspacer{flex:1}'
+ # PC 팝오버
+ '.uf-pop{position:absolute;z-index:40;background:#fff;border:1px solid var(--hairline);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.12);padding:16px 18px;min-width:248px;display:none}.uf-pop.open{display:block}'
+ '.uf-pop-sort{padding:8px;min-width:208px}'
+ '.uf-poph{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.uf-poph .pt{font-weight:700;font-size:14px}.uf-poph .pm{font-weight:540;font-size:12px;color:rgba(0,0,0,.45)}'
+ '.uf-opt{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px solid var(--hairline-soft);cursor:pointer}.uf-opt:last-child{border-bottom:0}'
+ '.uf-cb{width:22px;height:22px;border-radius:6px;border:1.5px solid rgba(0,0,0,.2);background:#fff;display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto}.uf-cb svg{width:13px;height:13px;display:none}'
+ '.uf-opt.on .uf-cb{border-color:#000;background:#000}.uf-opt.on .uf-cb svg{display:block}'
+ '.uf-opt .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}.uf-opt .nm{font-weight:540;font-size:14px}'
+ '.uf-popft{display:flex;gap:8px;margin-top:14px}.uf-popft button{flex:1;text-align:center;padding:11px;border-radius:50px;font-weight:540;font-size:13.5px;font-family:inherit;cursor:pointer}.uf-popft .r{border:1.5px solid var(--hairline);background:#fff;color:#000}.uf-popft .a{border:0;background:#000;color:#fff}'
+ '.uf-srow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 12px;border-radius:10px;cursor:pointer;background:transparent}.uf-srow:hover{background:var(--surface-soft)}.uf-srow.on{background:var(--surface-soft)}.uf-srow .sl{font-weight:540;font-size:14px;color:rgba(0,0,0,.7)}.uf-srow.on .sl{font-weight:700;color:#000}.uf-srow svg{width:15px;height:15px;display:none}.uf-srow.on svg{display:block}'
+ # 캐시백 유형 세그먼트(팝오버·시트 공용)
+ '.uf-seg{display:inline-flex;align-items:center;gap:2px;padding:3px;border-radius:50px;background:var(--surface-soft);flex-wrap:wrap}.uf-seg button{font-family:inherit;font-weight:540;font-size:13px;padding:8px 16px;border-radius:50px;border:0;background:0;color:rgba(0,0,0,.6);cursor:pointer}.uf-seg button.on{background:#000;color:#fff;font-weight:600}'
+ # 모바일 바텀시트
+ '.uf-sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:1200;display:none;opacity:0;transition:opacity .2s}.uf-sheet-bg.open{display:block;opacity:1}'
+ '.uf-sheet{position:fixed;left:0;right:0;bottom:0;background:#fff;border-radius:26px 26px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.14);padding:8px 0 calc(20px + env(safe-area-inset-bottom));max-height:86vh;overflow:auto;transform:translateY(100%);transition:transform .26s cubic-bezier(.2,.8,.2,1)}.uf-sheet-bg.open .uf-sheet{transform:translateY(0)}'
+ '.uf-grab{width:44px;height:5px;border-radius:50px;background:var(--hairline);margin:6px auto 0}'
+ '.uf-sheet-h{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 0}.uf-sheet-h span{font-weight:700;font-size:18px;letter-spacing:-.4px}'
+ '.uf-sheet-x{width:32px;height:32px;border-radius:50%;background:var(--surface-soft);border:0;display:flex;align-items:center;justify-content:center;cursor:pointer}.uf-sheet-x svg{width:15px;height:15px}'
+ '.uf-sg{padding:18px 20px 0}.uf-sg-t{font-weight:700;font-size:14px}.uf-sg-t span{font-weight:400;font-size:12px;color:rgba(0,0,0,.45);margin-left:4px}'
+ '.uf-sg-opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}'
+ '.uf-tag{display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:50px;font-weight:540;font-size:13px;border:1.5px solid var(--hairline);background:#fff;color:#111;cursor:pointer}.uf-tag .dot{width:7px;height:7px;border-radius:50%}.uf-tag.on{border-color:#000;background:#000;color:#fff}'
+ '.uf-sheet-ft{display:flex;gap:9px;padding:20px 20px 0}.uf-sheet-ft button{padding:14px;border-radius:50px;font-weight:600;font-size:14px;font-family:inherit;cursor:pointer}.uf-sheet-ft .r{flex:1;border:1.5px solid var(--hairline);background:#fff;color:#000;font-weight:540}.uf-sheet-ft .a{flex:2;border:0;background:#000;color:#fff}'
+ '@media(max-width:760px){.uf-ddls{display:none}.uf-bar .uf-spacer,.uf-bar #ufSortPc{display:none}'
+ '.uf-fbtn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:50px;background:#000;color:#fff;flex-shrink:0;font-family:inherit;font-weight:600;font-size:13px;border:0;cursor:pointer}.uf-fbtn svg{width:15px;height:15px;opacity:1}.uf-fbtn .uf-fn{min-width:18px;height:18px;border-radius:50%;background:var(--accent-magenta);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;padding:0 5px}.uf-fbtn .uf-fn:empty,.uf-fbtn .uf-fn.zero{display:none}'
+ '.uf-bar{flex-wrap:nowrap;overflow:hidden}.uf-chips{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.uf-chips::-webkit-scrollbar{display:none}'
+ '.uf-msort{display:inline-flex}}'
  '</style>'
  '<div class="wrap"><section><div class="sec-h"><h2 id="issTitle">이번달 캐시백</h2></div>'
  '<div id="view-ev">'
  '<span class="pg-eb" style="padding-top:2px">MONTHLY CASHBACK</span><div class="ev2-hd"><h1 class="ev2-h">캐시백</h1><span class="ev2-month"><span id="evMonth">2026.06</span></span></div>'
  '<p class="ev2-sub">이번 달, 어디서 받는 게 가장 이득인지.</p>'
- '<div class="ev2-iss" id="evIssFilt" style="display:none">카드사 <b id="evIssFiltT"></b><span class="x">✕</span></div>'
- '<div class="ev2-plats" id="evPlats"></div>'
- '<div class="ev2-bar"><span class="ev2-cnt" id="evCnt">이벤트 –건</span><div class="ev2-sort" id="evSortSeg"><button data-s="won" class="on">전체 캐시백순</button><button data-s="main">주요 캐시백순</button></div></div>'
+ '<div class="uf" id="uf">'
+   '<div class="uf-bar">'
+     '<button class="uf-fbtn" id="ufFbtn" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>필터 <span class="uf-fn zero" id="ufFn"></span></button>'
+     '<div class="uf-ddls">'
+       '<button class="uf-ddl" type="button" data-uf="plat" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>플랫폼사 <span class="uf-c" id="ufCplat"></span> <svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+       '<button class="uf-ddl" type="button" data-uf="iss" aria-expanded="false">카드사 <span class="uf-c" id="ufCiss"></span> <svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+       '<button class="uf-ddl" type="button" data-uf="type" aria-expanded="false">캐시백 유형 <span class="uf-t" id="ufTtype">주요</span> <svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+     '</div>'
+     '<div class="uf-chips" id="ufChips"></div>'
+     '<div class="uf-spacer"></div>'
+     '<button class="uf-sortb" id="ufSortPc" type="button">캐시백 많은 순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+   '</div>'
+   '<div class="uf-meta"><span class="uf-cnt" id="evCnt">이벤트 –건</span><button class="uf-reset" id="ufReset" type="button" style="display:none">초기화</button><span class="uf-mspacer"></span><button class="uf-sortb uf-msort" id="ufSortMo" type="button">캐시백 많은 순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></div>'
+   '<div class="uf-pop" id="ufPopplat"></div><div class="uf-pop" id="ufPopiss"></div><div class="uf-pop" id="ufPoptype"></div><div class="uf-pop uf-pop-sort" id="ufPopsort"></div>'
+ '</div>'
+ '<div class="uf-sheet-bg" id="ufSheetBg"><div class="uf-sheet" id="ufSheet" role="dialog" aria-modal="true" aria-label="필터"><div class="uf-grab"></div>'
+   '<div class="uf-sheet-h"><span id="ufSheetTtl">필터</span><button class="uf-sheet-x" id="ufSheetX" type="button" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'
+   '<div id="ufSheetBody"></div>'
+   '<div class="uf-sheet-ft"><button class="r" id="ufFtReset" type="button">초기화</button><button class="a" id="ufFtApply" type="button">결과 보기</button></div>'
+ '</div></div>'
  '<div id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></div>'
  '<div id="view-cmp" style="display:none">'
  '<div class="pcmp-emb"><div><div class="t" id="embT">카드사 ❤ 플랫폼, 최고 궁합</div><div class="s" id="embS">카드사별 최고 궁합 플랫폼</div></div><span class="emb"><span class="dh"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span><svg class="ht" viewBox="0 0 24 24"><use href="#ic-heart-f"/></svg><span class="dh r"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></span></span></div>'
@@ -1227,6 +1289,13 @@ ISSUE_BODY=('<style>'
  '</section></div>')
 ISSUE_JS=r"""
 var EV=[],ORD=[],cur="전체",evSort="won",evPlat="",evVis={},issuerFilter="",evMonth="";
+// 통합 필터 상태: evVis=플랫폼사(다중), evIssF=카드사(다중), evType=캐시백유형(주요main/부가bonus/전체all), evSortK=정렬(cash/pop/iss/plat)
+var evIssF={},evType="main",evSortK="cash";
+var UFTYPES=[["main","주요"],["bonus","부가"],["all","전체"]];
+var UFSORTS=[["cash","캐시백 많은 순"],["pop","인기 순"],["iss","카드사 순"],["plat","플랫폼사 순"]];
+function ufTypeLabel(){var m={main:"주요",bonus:"부가",all:"전체"};return m[evType]||"주요";}
+function ufSortLabel(){for(var i=0;i<UFSORTS.length;i++)if(UFSORTS[i][0]===evSortK)return UFSORTS[i][1];return "캐시백 많은 순";}
+function ufTypeVal(g){return evType==="main"?(g.main||0):evType==="bonus"?(g.bonus||0):(g.won||0);}
 var PRODALL=[],pSort="amt",pFilter="",basis="cardgorilla",renderProd=function(){},renderIss=function(){},issFilter="",issSort="amt",cashMode="t",prodIssF="";
 function _spl(e){var t=e.reward_won||0;var m=(e.main_won!=null?e.main_won:null);var b=(e.bonus_won||0);
  if(m==null){if(b>=t)b=0;m=Math.max(t-b,0);}else{if(m>t)m=t;b=Math.max(t-m,0);}
@@ -1237,29 +1306,34 @@ var PCOL={"카드고릴라":"#ff4d4f","뱅크샐러드":"#2f6bff","아정당":"#
 function pcol(p){return PCOL[p]||"#7a8088";}
 // 가이드 B: 이벤트 단위 리스트 — 플랫폼칩(검정+dot)·캐시백 금액(대형)·카드사(굵게)·상품(연회색)·조건·자세히
 // 캐시백 메인 = 리워드그룹 슬롯(플랫폼·카드사·보상 동일 = 다중 카드 묶음). 시안: 겹친 플레이트+'+N'+'카드 N종'.
-function _evGroups(){var sel=PORD.filter(function(k){return evVis[k];});
- var items=EV.filter(function(x){return (!issuerFilter||x.issuer===issuerFilter)&&(!sel.length||sel.indexOf(x.pk)>=0);});
+function _evIssKeys(){return Object.keys(evIssF).filter(function(k){return evIssF[k];});}
+function _evGroups(){var sel=PORD.filter(function(k){return evVis[k];});var issl=_evIssKeys();
+ var items=EV.filter(function(x){return (!issl.length||issl.indexOf(x.issuer)>=0)&&(!sel.length||sel.indexOf(x.pk)>=0);});
  var gm={},order=[];
- items.forEach(function(x){var key=x.pk+'|'+x.issuer+'|'+x.won;var g=gm[key];if(!g){g=gm[key]={pk:x.pk,platform:x.platform,issuer:x.issuer,won:x.won,main:0,cards:[],pe:'',period:'',text:''};order.push(g);}
-  g.cards.push({name:x.card,img:x.img});if((x.main||0)>g.main)g.main=x.main||0;if(x.pe&&(!g.pe||x.pe<g.pe)){g.pe=x.pe;g.period=x.period;}if(!g.text&&x.text)g.text=x.text;});
+ items.forEach(function(x){var key=x.pk+'|'+x.issuer+'|'+x.won;var g=gm[key];if(!g){g=gm[key]={pk:x.pk,platform:x.platform,issuer:x.issuer,won:x.won,main:0,bonus:0,cards:[],pe:'',period:'',text:''};order.push(g);}
+  g.cards.push({name:x.card,img:x.img});if((x.main||0)>g.main)g.main=x.main||0;if((x.bonus||0)>g.bonus)g.bonus=x.bonus||0;if(x.pe&&(!g.pe||x.pe<g.pe)){g.pe=x.pe;g.period=x.period;}if(!g.text&&x.text)g.text=x.text;});
  // 대표 = 카드사명 제거한 가장 짧은 상품명(대표성). 플레이트는 이미지 있는 카드 우선.
  order.forEach(function(g){g.cards.sort(function(a,b){return (b.img?1:0)-(a.img?1:0);});g.rep=g.cards[0]?g.cards[0].name:g.issuer;});
- order.sort(function(a,b){return evSort==='main'?((b.main-a.main)||(b.won-a.won)):((b.won-a.won)||(b.main-a.main));});
+ // 정렬 4종: 캐시백많은순(선택 유형 기준)·인기순(카드 종수)·카드사순·플랫폼사순
+ order.sort(function(a,b){
+  if(evSortK==='iss')return (a.issuer||'').localeCompare(b.issuer||'','ko')||(b.won-a.won);
+  if(evSortK==='plat')return (PORD.indexOf(a.pk)-PORD.indexOf(b.pk))||(b.won-a.won);
+  if(evSortK==='pop')return (b.cards.length-a.cards.length)||(b.won-a.won);
+  return (ufTypeVal(b)-ufTypeVal(a))||(b.won-a.won);});
  return order;}
 function render(){var groups=_evGroups();
- var cn=document.getElementById('evCnt');if(cn)cn.textContent='이벤트 '+groups.length+'건';
- var fi=document.getElementById('evIssFilt');if(fi)fi.style.display=issuerFilter?'':'none';
- if(fi&&issuerFilter){var ft=document.getElementById('evIssFiltT');if(ft)ft.textContent=issuerFilter;}
- var L=document.getElementById('list');if(!groups.length){L.innerHTML='<div class="empty" style="padding:40px 0;text-align:center;color:rgba(0,0,0,.5)">조건에 맞는 이벤트가 없어요.</div>';return;}
- var topVal=groups[0]?(evSort==='main'?groups[0].main:groups[0].won):0;
- L.innerHTML=groups.map(function(g){var top=(topVal>0&&(evSort==='main'?g.main:g.won)===topVal);
+ if(window.ufRender)ufRender(groups.length);
+ var cn=document.getElementById('evCnt');if(cn)cn.innerHTML='이벤트 <b>'+groups.length+'</b>건';
+ var L=document.getElementById('list');if(!groups.length){L.innerHTML='<div class="empty" style="padding:40px 0;text-align:center;color:rgba(0,0,0,.5)">조건에 맞는 이벤트가 없어요. <button class="uf-reset" type="button" id="ufEmptyReset" style="display:inline">조건 줄이기</button></div>';var er=document.getElementById('ufEmptyReset');if(er)er.onclick=function(){if(window.ufResetAll)ufResetAll();};return;}
+ var topVal=0;groups.forEach(function(g){var v=ufTypeVal(g);if(v>topVal)topVal=v;});
+ L.innerHTML=groups.map(function(g){var tv=ufTypeVal(g);var top=(topVal>0&&tv===topVal);var amt=tv||g.won;
    var href='events.html?platform='+g.pk+'&n='+encodeURIComponent(g.rep);
    var cond=g.cards.length>1?('카드별 조건 상이'+(g.period?' · 마감 '+g.period.replace(/^~/,''):'')):(g.period?('마감 '+g.period.replace(/^~/,'')):(g.text||'발급 이벤트 진행 중'));
    var shown=g.cards.slice(0,3),over=g.cards.length-shown.length;
    var stack=shown.map(function(c){return '<span class="ev2c-mp">'+(c.img?'<img src="'+encodeURI(c.img)+'" alt="" onerror="this.style.display=\'none\'">':'<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>')+'</span>';}).join('')+(over>0?'<span class="ev2c-more">+'+over+'</span>':'');
    return '<a class="ev2c'+(top?' top':'')+'" href="'+href+'">'
     +'<div class="ev2c-plwrap"><span class="ev2c-pl"><span class="dot" style="background:'+(PBC[g.pk]||"#888")+'"></span><span class="pn">'+(PN[g.pk]||g.platform)+'</span></span>'+(top?'<span class="ev2c-topb">최고</span>':'')+'</div>'
-    +'<div class="ev2c-cash">최대 '+_wm(g.won)+'</div>'
+    +'<div class="ev2c-cash">최대 '+_wm(amt)+'</div>'
     +'<div class="ev2c-mid"><span class="ev2c-stack">'+stack+'</span><span class="ev2c-rep"><span class="rn">'+g.rep+'</span><span class="ev2c-cnt">카드 '+g.cards.length+'종</span></span></div>'
     +'<div class="ev2c-cond">'+cond+'</div>'
     +'<span class="ev2c-go">자세히 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></a>';}).join("");
@@ -1289,11 +1363,7 @@ document.getElementById('cmp-prod').addEventListener('click',function(e){_pbarCl
 document.getElementById('cmp-iss').addEventListener('click',function(e){_pbarClick(e);});
 // 드롭다운 외부 클릭 시 닫기
 document.addEventListener('click',function(e){if(!e.target.closest('.dd2'))document.querySelectorAll('.dd2menu.open').forEach(function(m){m.classList.remove('open');});});
-// 발급이벤트 화면 정렬(금액/플랫폼/카드사)+플랫폼 필터
-document.getElementById('view-ev').addEventListener('click',function(e){
- var pl=e.target.closest('button[data-ep]');if(pl){var pk=pl.getAttribute('data-ep');if(!pk){evVis={};}else{evVis[pk]=evVis[pk]?0:1;}renderPlats();render();return;}
- var sb=e.target.closest('#evSortSeg button[data-s]');if(sb){evSort=sb.getAttribute('data-s');document.querySelectorAll('#evSortSeg button').forEach(function(x){x.classList.toggle('on',x===sb);});render();return;}
- var xf=e.target.closest('#evIssFilt');if(xf){issuerFilter='';render();return;}});
+// 발급이벤트 화면 필터/정렬 = 통합 검색필터(UF). 컨트롤러는 ISSUE_JS 하단 ufInit()에서 바인딩.
 // 진입 화면 결정: ?v=cmp면 플랫폼 비교, 아니면 발급 이벤트 (서브탭 없이 분리)
 (function(){var isCmp=new URLSearchParams(location.search).get('v')==='cmp';
  document.getElementById('view-ev').style.display=isCmp?'none':'';
@@ -1325,14 +1395,18 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  // (0) 발급이벤트 EV 목록 = 전 플랫폼(네이버 포함) 평탄화. 각 행은 실제 플랫폼 이벤트로 아웃링크.
  (function(){var tmp=[],mx={};
   prods.forEach(function(p){var iss=p.issuer||'기타';(p.events||[]).forEach(function(e){var _pp=(p.platforms||{})[e.platform]||{};var u=_best(e.platform,e.url||_pp.url,_pp.id);if(e.platform==='cardgorilla'){var _cg=_cgUrl(iss,_pp.id);if(_cg)u=_cg;}
-   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),pk:e.platform,benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),pe:(e.period_end||''),won:(e.reward_won||0),main:(e.main_won!=null?e.main_won:(e.reward_won||0)),text:(e.reward_text||''),img:(p.img||IMG[_nk2(p.name)]||'')});
+   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),pk:e.platform,benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),pe:(e.period_end||''),won:(e.reward_won||0),main:(e.main_won!=null?e.main_won:(e.reward_won||0)),bonus:(e.bonus_won||0),text:(e.reward_text||''),img:(p.img||IMG[_nk2(p.name)]||'')});
    mx[iss]=Math.max(mx[iss]||0,e.reward_won||0);});});
   EV=tmp;ORD=Object.keys(mx).sort(function(a,b){return mx[b]-mx[a];});
   var _mxv=Math.max.apply(null,tmp.map(function(x){return x.won||0;}).concat([0]));var _eh=document.getElementById('evhMax');if(_eh&&_mxv)_eh.textContent=_wm(_mxv);
   evMonth=(A[0].month||'').replace('-','.');var _em=document.getElementById('evMonth');if(_em&&evMonth)_em.textContent=evMonth;
-  var sp=new URLSearchParams(location.search);var qi=sp.get('issuer');if(qi&&ORD.indexOf(qi)>=0)issuerFilter=qi;
-  var qp=sp.get('plat');if(qp){for(var _k in PN){if(PN[_k]===qp||_k===qp){evVis[_k]=1;break;}}}
-  renderPlats();render();})();
+  // 통합필터 URL 동기화 복원: plat(키 콤마)·iss(카드사명 콤마)·type(main/bonus/all)·sort(cash/pop/iss/plat). 레거시 issuer/plat 단수도 흡수.
+  var sp=new URLSearchParams(location.search);
+  var qiss=sp.get('iss')||sp.get('issuer');if(qiss)qiss.split(',').forEach(function(n){n=n.trim();if(n&&ORD.indexOf(n)>=0)evIssF[n]=1;});
+  var qp=sp.get('plat');if(qp)qp.split(',').forEach(function(t){t=t.trim();if(!t)return;if(PN[t]){evVis[t]=1;return;}for(var _k in PN){if(PN[_k]===t){evVis[_k]=1;break;}}});
+  var qt=sp.get('type');if(qt&&['main','bonus','all'].indexOf(qt)>=0)evType=qt;
+  var qs2=sp.get('sort');if(qs2&&['cash','pop','iss','plat'].indexOf(qs2)>=0)evSortK=qs2;
+  if(window.ufInit)ufInit();render();})();
  // (1) 카드사별 비교 — 카드사 × 플랫폼 최대 집계 + 보유 종수·대표카드 (시안 표형)
  function _es(s){return String(s==null?'':s).replace(/[<>&]/g,'');}
  var byIss={},issMeta={};
@@ -1400,6 +1474,75 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   if(window.repairImages)repairImages();};
  renderProd();renderPlatToggle();
 }).catch(function(){document.getElementById('cmp-iss').innerHTML='<div class="empty">데이터 준비 중</div>';document.getElementById('cmp-prod').innerHTML='<div class="empty">교차비교 데이터 준비 중이에요.</div>';});
+/* ===== 통합 검색필터(UF) 컨트롤러 — 플랫폼사·카드사(다중)·캐시백유형(단일)+정렬4 · PC 팝오버 / 모바일 바텀시트 · URL 동기화 ===== */
+function _ufEl(id){return document.getElementById(id);}
+function _ufIss(){return ORD||[];}
+var _UFCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></svg>';
+var _UFX='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+function ufOptList(kind){
+ if(kind==='plat')return PORD.map(function(pk){return '<div class="uf-opt'+(evVis[pk]?' on':'')+'" data-uf-k="'+pk+'"><span class="uf-cb">'+_UFCK+'</span><span class="dot" style="background:'+(PBC[pk]||"#888")+'"></span><span class="nm">'+(PN[pk]||pk)+'</span></div>';}).join('');
+ return _ufIss().map(function(n){return '<div class="uf-opt'+(evIssF[n]?' on':'')+'" data-uf-k="'+n+'"><span class="uf-cb">'+_UFCK+'</span><span class="nm">'+n+'</span></div>';}).join('');}
+function ufSeg(kind){var arr=kind==='type'?UFTYPES:UFSORTS,cur=kind==='type'?evType:evSortK;return '<div class="uf-seg" data-uf-seg="'+kind+'"'+(kind==='sort'?' style="flex-wrap:wrap"':'')+'>'+arr.map(function(t){return '<button type="button" data-v="'+t[0]+'" class="'+(cur===t[0]?'on':'')+'">'+t[1]+'</button>';}).join('')+'</div>';}
+function ufSortRows(){return UFSORTS.map(function(s){return '<div class="uf-srow'+(evSortK===s[0]?' on':'')+'" data-uf-s="'+s[0]+'"><span class="sl">'+s[1]+'</span>'+_UFCK+'</div>';}).join('');}
+function ufFillPop(which){
+ if(which==='plat')_ufEl('ufPopplat').innerHTML='<div class="uf-poph"><span class="pt">플랫폼사</span><span class="pm">다중 선택</span></div>'+ufOptList('plat')+'<div class="uf-popft"><button type="button" class="r" data-uf-clr="plat">초기화</button><button type="button" class="a" data-uf-close="1">적용</button></div>';
+ else if(which==='iss')_ufEl('ufPopiss').innerHTML='<div class="uf-poph"><span class="pt">카드사</span><span class="pm">다중 선택</span></div>'+ufOptList('iss')+'<div class="uf-popft"><button type="button" class="r" data-uf-clr="iss">초기화</button><button type="button" class="a" data-uf-close="1">적용</button></div>';
+ else if(which==='type')_ufEl('ufPoptype').innerHTML='<div class="uf-poph"><span class="pt">캐시백 유형</span><span class="pm">단일</span></div><div style="margin-top:4px">'+ufSeg('type')+'</div>';
+ else if(which==='sort')_ufEl('ufPopsort').innerHTML='<div class="uf-poph" style="padding:0 4px 4px;margin-bottom:2px"><span class="pt" style="font-size:12px;color:rgba(0,0,0,.45)">정렬</span></div>'+ufSortRows();}
+function ufCloseAllPops(){['plat','iss','type','sort'].forEach(function(w){var p=_ufEl('ufPop'+w);if(p)p.classList.remove('open');});var dq=document.querySelectorAll('.uf-ddl[aria-expanded="true"]');for(var i=0;i<dq.length;i++)dq[i].setAttribute('aria-expanded','false');}
+function ufOpenPop(which,trigger){var p=_ufEl('ufPop'+which);if(!p)return;var wasOpen=p.classList.contains('open');ufCloseAllPops();if(wasOpen)return;ufFillPop(which);
+ var uf=_ufEl('uf');p.style.left=Math.max(0,trigger.offsetLeft)+'px';p.style.top=(trigger.offsetTop+trigger.offsetHeight+8)+'px';p.classList.add('open');
+ if(uf&&p.offsetLeft+p.offsetWidth>uf.clientWidth)p.style.left=Math.max(0,uf.clientWidth-p.offsetWidth)+'px';
+ if(trigger.hasAttribute('aria-expanded'))trigger.setAttribute('aria-expanded','true');}
+function ufFillSheet(){_ufEl('ufSheetBody').innerHTML=
+ '<div class="uf-sg"><div class="uf-sg-t">플랫폼사 <span>다중</span></div><div class="uf-sg-opts" data-uf-tags="plat">'+PORD.map(function(pk){return '<button type="button" class="uf-tag'+(evVis[pk]?' on':'')+'" data-uf-k="'+pk+'"><span class="dot" style="background:'+(PBC[pk]||"#888")+'"></span>'+(PN[pk]||pk)+'</button>';}).join('')+'</div></div>'
+ +'<div class="uf-sg"><div class="uf-sg-t">카드사 <span>다중</span></div><div class="uf-sg-opts" data-uf-tags="iss">'+_ufIss().map(function(n){return '<button type="button" class="uf-tag'+(evIssF[n]?' on':'')+'" data-uf-k="'+n+'">'+n+'</button>';}).join('')+'</div></div>'
+ +'<div class="uf-sg"><div class="uf-sg-t">캐시백 유형 <span>단일</span></div><div style="margin-top:11px">'+ufSeg('type')+'</div></div>'
+ +'<div class="uf-sg"><div class="uf-sg-t">정렬</div><div style="margin-top:11px">'+ufSeg('sort')+'</div></div>';}
+function ufOpenSheet(){ufFillSheet();_ufEl('ufSheetBg').classList.add('open');document.body.style.overflow='hidden';}
+function ufCloseSheet(){var b=_ufEl('ufSheetBg');if(b)b.classList.remove('open');document.body.style.overflow='';}
+function ufRender(count){
+ var chips=PORD.filter(function(k){return evVis[k];}).map(function(pk){return '<span class="uf-chip"><span class="dot" style="background:'+(PBC[pk]||"#888")+'"></span>'+(PN[pk]||pk)+'<span class="x" data-uf-rm-plat="'+pk+'">'+_UFX+'</span></span>';})
+  .concat(_ufIss().filter(function(n){return evIssF[n];}).map(function(n){return '<span class="uf-chip">'+n+'<span class="x" data-uf-rm-iss="'+n+'">'+_UFX+'</span></span>';})).join('');
+ var ch=_ufEl('ufChips');if(ch)ch.innerHTML=chips;
+ var np=PORD.filter(function(k){return evVis[k];}).length,ni=_ufIss().filter(function(n){return evIssF[n];}).length,tot=np+ni;
+ var cp=_ufEl('ufCplat');if(cp)cp.textContent=np?String(np):'';var ci=_ufEl('ufCiss');if(ci)ci.textContent=ni?String(ni):'';
+ var fn=_ufEl('ufFn');if(fn){fn.textContent=tot?String(tot):'';fn.className='uf-fn'+(tot?'':' zero');}
+ var tt=_ufEl('ufTtype');if(tt)tt.textContent=ufTypeLabel();
+ ['ufSortPc','ufSortMo'].forEach(function(id){var b=_ufEl(id);if(b&&b.firstChild)b.firstChild.textContent=ufSortLabel()+' ';});
+ var rs=_ufEl('ufReset');if(rs)rs.style.display=tot?'':'none';
+ var fa=_ufEl('ufFtApply');if(fa&&count!=null)fa.textContent=count+'건 결과 보기';}
+function ufWriteURL(){var sp=new URLSearchParams(location.search);
+ var pl=PORD.filter(function(k){return evVis[k];});pl.length?sp.set('plat',pl.join(',')):sp.delete('plat');sp.delete('issuer');
+ var is=_ufIss().filter(function(n){return evIssF[n];});is.length?sp.set('iss',is.join(',')):sp.delete('iss');
+ evType!=='main'?sp.set('type',evType):sp.delete('type');evSortK!=='cash'?sp.set('sort',evSortK):sp.delete('sort');
+ var q=sp.toString();try{history.replaceState(null,'',location.pathname+(q?'?'+q:''));}catch(_){}}
+function ufApply(){render();ufWriteURL();}
+function ufResetAll(){evVis={};evIssF={};evType='main';evSortK='cash';ufCloseAllPops();ufApply();var sb=_ufEl('ufSheetBg');if(sb&&sb.classList.contains('open'))ufFillSheet();}
+function ufInit(){var uf=_ufEl('uf');if(!uf||uf._b)return;uf._b=1;
+ uf.addEventListener('click',function(e){
+  var dd=e.target.closest('.uf-ddl');if(dd){e.stopPropagation();ufOpenPop(dd.getAttribute('data-uf'),dd);return;}
+  var spc=e.target.closest('#ufSortPc');if(spc){e.stopPropagation();ufOpenPop('sort',spc);return;}
+  var opt=e.target.closest('.uf-opt[data-uf-k]');if(opt){var pop=opt.closest('.uf-pop');var k=opt.getAttribute('data-uf-k');if(pop&&pop.id==='ufPopplat')evVis[k]=evVis[k]?0:1;else evIssF[k]=evIssF[k]?0:1;opt.classList.toggle('on');ufApply();return;}
+  var seg=e.target.closest('.uf-seg[data-uf-seg] button[data-v]');if(seg){var sg=seg.closest('.uf-seg').getAttribute('data-uf-seg');if(sg==='type')evType=seg.getAttribute('data-v');else evSortK=seg.getAttribute('data-v');var bb=seg.closest('.uf-seg').querySelectorAll('button');for(var j=0;j<bb.length;j++)bb[j].classList.toggle('on',bb[j]===seg);ufApply();return;}
+  var sr=e.target.closest('.uf-srow[data-uf-s]');if(sr){evSortK=sr.getAttribute('data-uf-s');ufCloseAllPops();ufApply();return;}
+  var clr=e.target.closest('[data-uf-clr]');if(clr){var g=clr.getAttribute('data-uf-clr');if(g==='plat')evVis={};else evIssF={};ufFillPop(g);ufApply();return;}
+  if(e.target.closest('[data-uf-close]')){ufCloseAllPops();return;}
+  var rmp=e.target.closest('[data-uf-rm-plat]');if(rmp){evVis[rmp.getAttribute('data-uf-rm-plat')]=0;ufApply();return;}
+  var rmi=e.target.closest('[data-uf-rm-iss]');if(rmi){evIssF[rmi.getAttribute('data-uf-rm-iss')]=0;ufApply();return;}
+  if(e.target.closest('#ufReset')){ufResetAll();return;}});
+ var fb=_ufEl('ufFbtn');if(fb)fb.onclick=function(){ufOpenSheet();};
+ var sm=_ufEl('ufSortMo');if(sm)sm.onclick=function(){ufOpenSheet();};
+ var sheet=_ufEl('ufSheet');if(sheet)sheet.addEventListener('click',function(e){
+  var tag=e.target.closest('.uf-tag[data-uf-k]');if(tag){var box=tag.closest('[data-uf-tags]').getAttribute('data-uf-tags');var k=tag.getAttribute('data-uf-k');if(box==='plat')evVis[k]=evVis[k]?0:1;else evIssF[k]=evIssF[k]?0:1;tag.classList.toggle('on');render();ufWriteURL();return;}
+  var seg=e.target.closest('.uf-seg[data-uf-seg] button[data-v]');if(seg){var sg=seg.closest('.uf-seg').getAttribute('data-uf-seg');if(sg==='type')evType=seg.getAttribute('data-v');else evSortK=seg.getAttribute('data-v');var bb=seg.closest('.uf-seg').querySelectorAll('button');for(var j=0;j<bb.length;j++)bb[j].classList.toggle('on',bb[j]===seg);render();ufWriteURL();return;}});
+ var sx=_ufEl('ufSheetX');if(sx)sx.onclick=ufCloseSheet;
+ var bg=_ufEl('ufSheetBg');if(bg)bg.addEventListener('click',function(e){if(e.target===bg)ufCloseSheet();});
+ var fr=_ufEl('ufFtReset');if(fr)fr.onclick=function(){evVis={};evIssF={};evType='main';evSortK='cash';ufFillSheet();render();ufWriteURL();};
+ var fa=_ufEl('ufFtApply');if(fa)fa.onclick=ufCloseSheet;
+ document.addEventListener('click',function(e){if(!e.target.closest('#uf'))ufCloseAllPops();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'){ufCloseAllPops();ufCloseSheet();}});
+ ufRender();}
 """
 
 # ===== DETAIL =====
