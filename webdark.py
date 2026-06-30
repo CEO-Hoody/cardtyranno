@@ -207,9 +207,8 @@ table.cmp td .st{font-size:10px;display:block} .doth{display:inline-flex;align-i
 .adt p{font-size:15.5px;line-height:1.8;color:#44444c;margin:15px 0}.adt .bk2{display:inline-block;margin-top:24px;font-weight:800;color:var(--blue)}
 .adt .hl{font-weight:900;font-size:1.16em;color:var(--accent-magenta,#ff3d8b);letter-spacing:-.3px;white-space:nowrap}
 .adt .kw{font-weight:800;color:#000000;background:linear-gradient(transparent 62%,rgba(197,176,244,.55) 0)}
-.adt .tip{display:block;position:relative;background:var(--block-cream,#f7f3e9);border-left:3px solid var(--accent-magenta,#ff3d8b);border-radius:10px;padding:13px 16px 13px 44px;margin:18px 0;font-size:14.5px;line-height:1.65;color:#3a3a42}
-.adt .tip::before{content:"💡";position:absolute;left:15px;top:12px;font-size:16px}
-.adt .tip.warn{border-left-color:#e8843c}.adt .tip.warn::before{content:"⚠️"}
+.adt .tip{display:block;position:relative;background:var(--block-cream,#f7f3e9);border-left:3px solid var(--accent-magenta,#ff3d8b);border-radius:10px;padding:13px 16px;margin:18px 0;font-size:14.5px;line-height:1.65;color:#3a3a42}
+.adt .tip.warn{border-left-color:#e8843c}
 footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .foot{display:flex;gap:50px;padding:42px 0 10px;flex-wrap:wrap}
 .foot .col h4{font-size:12px;color:var(--dim);font-weight:800;margin-bottom:13px}.foot .col a{display:block;font-size:13.5px;color:#55555e;margin-bottom:9px}.foot .col a:hover{color:var(--accent)}
@@ -585,7 +584,7 @@ def header(active):
             +'<div class="drawer-share-wrap"><button class="drawer-share" id="drawerShare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M8 7l4-3.5L16 7"/><path d="M5.5 12v6.5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V12"/></svg>카드티라노 홈 공유하기</button></div></aside>'
             '<div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:contact@cardtyranno.com">제휴·광고 문의</a></div></div>'
             '<header class="hd"><div class="wrap row">'
-            '<span class="icbtn menu" id="menuBtn">☰</span>'
+            '<span class="icbtn menu" id="menuBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>'
             '<a class="logo" href="index.html"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></a>'
             '<nav class="gnb">'+gnb+'</nav>'
             '<div class="right"><div class="icbtn" id="searchGo"><svg class="ic"><use href="#ic-search"/></svg></div>'
@@ -2088,7 +2087,7 @@ FAV_BODY=('<style>'
  '</style>'
  '<div class="wrap"><section><div class="sec-h"><h2>관심 카드</h2></div>'
  '<div class="muted" style="font-size:12.5px;padding-bottom:8px">로그인 없이 이 브라우저에 저장돼요. 담은 카드를 한눈에 비교하세요.</div>'
- '<div class="pushbox" id="pushbox"><div class="pb-l"><div class="pb-t">🔔 새 이벤트 알림</div>'
+ '<div class="pushbox" id="pushbox"><div class="pb-l"><div class="pb-t"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg>새 이벤트 알림</div>'
  '<div class="pb-d" id="pbDesc">관심 카드에 다음 달 새 캐시백 이벤트가 등록되면 알려드려요.</div></div>'
  '<label class="pb-sw"><input type="checkbox" id="pushTg"><span class="pb-track"><span class="pb-thumb"></span></span></label></div>'
  '<div class="cgrid" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section></div>')
@@ -2305,20 +2304,20 @@ DASHBOARD_BODY=('<style>'
  '@media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.bar .bl{flex-basis:48%}.hgrid{grid-template-columns:repeat(2,1fr)}}'
  '</style>'
  '<div class="wrap dwrap"><div class="sec-h"><h2>카드티라노 대시보드</h2></div>'
- '<div class="dnote">📡 <b>스크래핑 헬스</b>는 콜렉터 산출물(platform_events.json)을 실시간 분석해 플랫폼·카드사별 수집 상태를 보여줍니다.<br>👣 아래 <b>방문 지표(시간/일/월별)</b>는 <b>이 브라우저</b> 로컬 집계예요. <b>전체 방문자</b>는 개인정보(IP) 미저장 <b>Cloudflare Web Analytics</b>(자동 연동됨)에서 집계됩니다.</div>'
- '<div class="dsec"><h3>🌐 Cloudflare 실측 방문 (전체 방문자)</h3>'
+ '<div class="dnote"><b>스크래핑 헬스</b>는 콜렉터 산출물(platform_events.json)을 실시간 분석해 플랫폼·카드사별 수집 상태를 보여줍니다.<br>아래 <b>방문 지표(시간/일/월별)</b>는 <b>이 브라우저</b> 로컬 집계예요. <b>전체 방문자</b>는 개인정보(IP) 미저장 <b>Cloudflare Web Analytics</b>(자동 연동됨)에서 집계됩니다.</div>'
+ '<div class="dsec"><h3>Cloudflare 실측 방문 (전체 방문자)</h3>'
  '<div class="kpis"><div class="kpi"><div class="n" id="cfPV">225</div><div class="l">페이지뷰 · 최근 24h</div></div>'
  '<div class="kpi"><div class="n" id="cfVisit">100</div><div class="l">방문(Visits) · 최근 24h</div></div>'
  '<div class="kpi"><div class="n">자동</div><div class="l">수집 방식(Automatic)</div></div>'
  '<div class="kpi"><div class="n" id="cfAsOf">06/27</div><div class="l">스냅샷 기준일</div></div></div>'
  '<div style="margin-top:4px"><a href="https://dash.cloudflare.com/?to=/:account/web-analytics" target="_blank" rel="noopener" style="display:inline-block;background:#f6821f;color:#fff;font-weight:800;font-size:13px;padding:11px 17px;border-radius:10px;text-decoration:none">Cloudflare에서 실시간 방문자 보기 ↗</a></div>'
  '<div class="dnote" style="margin-top:10px">위 수치는 Cloudflare Web Analytics <b>스냅샷</b>입니다(IP 미저장). <b>시간/일/월별 실시간 추세·국가·인기 페이지</b>는 위 버튼의 Cloudflare 대시보드에서 기간 필터로 확인하세요. (페이지 내 자동 실시간 표시는 토큰 기반 프록시 연동 시 가능 — 원하면 설정해 드립니다.)</div></div>'
- '<div class="dsec"><h3>📡 플랫폼별 스크래핑 상태</h3><div class="hgrid" id="hplat"></div><div id="hfresh" class="empty2"></div></div>'
+ '<div class="dsec"><h3>플랫폼별 스크래핑 상태</h3><div class="hgrid" id="hplat"></div><div id="hfresh" class="empty2"></div></div>'
  '<div class="dsec"><h3>카드사별 커버리지</h3><div id="hiss"></div></div>'
- '<div class="sec-h" style="margin-top:8px"><h2 style="font-size:18px">👣 방문 지표 (이 브라우저)</h2></div>'
- '<div class="dbtns"><button id="rf">↻ 새로고침</button><button id="csv">⬇ CSV 내보내기</button><button id="rs">🗑 이 브라우저 초기화</button></div>'
+ '<div class="sec-h" style="margin-top:8px"><h2 style="font-size:18px">방문 지표 (이 브라우저)</h2></div>'
+ '<div class="dbtns"><button id="rf">새로고침</button><button id="csv">CSV 내보내기</button><button id="rs">이 브라우저 초기화</button></div>'
  '<div class="kpis" id="kpis"></div><div id="secs"></div>'
- '<div class="dsec"><h3>🕒 최근 활동</h3><div id="log"></div></div></div>')
+ '<div class="dsec"><h3>최근 활동</h3><div id="log"></div></div></div>')
 DASHBOARD_JS=r"""
 // === 스크래핑 헬스 — 콜렉터 산출물(platform_events.json) 실시간 분석 ===
 (function(){var PN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};var PORD=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];var PC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a',kakaopay:'#e8b800'};
@@ -2349,15 +2348,15 @@ function render(){
  var first=Number(localStorage.getItem('ct_first')||0);var fd=first?new Date(first).toLocaleDateString('ko-KR'):'-';
  document.getElementById('kpis').innerHTML=kpi(pv,'페이지뷰')+kpi(ev.length,'총 이벤트')+kpi(new Set(ev.map(function(e){return e.p;})).size,'방문 페이지수')+kpi(fd,'첫 방문');
  var secs=[
-  ['📅 월별 방문(페이지뷰)', tbars(tagg(ev,'month'))],
-  ['🗓 일별 방문 (최근 14일)', tbars(tagg(ev,'day'))],
-  ['🕐 시간대별 방문', tbars(tagg(ev,'hour'))],
-  ['📄 페이지별 조회', bars(agg(ev,'pageview',function(e){return PG(e.l||e.p);}))],
-  ['🧭 메뉴 클릭', bars(agg(ev,'menu',function(e){return e.l;}))],
+  ['월별 방문(페이지뷰)', tbars(tagg(ev,'month'))],
+  ['일별 방문 (최근 14일)', tbars(tagg(ev,'day'))],
+  ['시간대별 방문', tbars(tagg(ev,'hour'))],
+  ['페이지별 조회', bars(agg(ev,'pageview',function(e){return PG(e.l||e.p);}))],
+  ['메뉴 클릭', bars(agg(ev,'menu',function(e){return e.l;}))],
   ['카드 클릭(상품)', bars(agg(ev,'card',function(e){return e.l;}))],
   ['필터·카드사 탭', bars(agg(ev,'filter',function(e){return e.l;}))],
-  ['📂 업종 카테고리 클릭', bars(agg(ev,'category',function(e){return e.l;}))],
-  ['🔗 플랫폼 상세 클릭', bars(agg(ev,'plat',function(e){return e.l;}))],
+  ['업종 카테고리 클릭', bars(agg(ev,'category',function(e){return e.l;}))],
+  ['플랫폼 상세 클릭', bars(agg(ev,'plat',function(e){return e.l;}))],
   ['카드사 공식 클릭', bars(agg(ev,'official',function(e){return e.l;}))],
   ['발급 이벤트 클릭', bars(agg(ev,'event',function(e){return e.l;}))],
   ['리스트/검색 클릭', bars(agg(ev,'item',function(e){return e.l;}))]
@@ -3286,7 +3285,7 @@ function feed(){cmPage=1;var ttl=cmCat==='전체'?'카드 라운지':cmCat;
  V().querySelectorAll('.cm-sort').forEach(function(b){b.onclick=function(){cmSort=b.getAttribute('data-s');feed();};});
  document.getElementById('cmMore').onclick=function(){cmPage++;loadList(false);};
  loadList(true);}
-function rowHtml(p){var img=p.image||p.img||'';return '<a class="cm-row" href="community.html?id='+p.id+'" data-id="'+p.id+'">'+tag(p.category)+'<div class="cm-rb"><div class="cm-rt">'+esc(p.title)+(p.comment_count?' <span style="color:var(--accent-magenta);font-weight:800">['+p.comment_count+']</span>':'')+'</div><div class="cm-rm">'+esc(p.author_nickname||'익명')+' · '+ago(p.created_at)+' · 조회 '+(p.views||0)+'</div></div><div class="cm-rs"><b>♥ '+(p.likes||0)+'</b><br>댓글 '+(p.comment_count||0)+'</div>'+(img?'<span class="cm-th"><img src="'+esc(img)+'" alt=""></span>':'')+'</a>';}
+function rowHtml(p){var img=p.image||p.img||'';return '<a class="cm-row" href="community.html?id='+p.id+'" data-id="'+p.id+'">'+tag(p.category)+'<div class="cm-rb"><div class="cm-rt">'+esc(p.title)+(p.comment_count?' <span style="color:var(--accent-magenta);font-weight:800">['+p.comment_count+']</span>':'')+'</div><div class="cm-rm">'+esc(p.author_nickname||'익명')+' · '+ago(p.created_at)+' · 조회 '+(p.views||0)+'</div></div><div class="cm-rs"><b><svg viewBox="0 0 24 24" width="11" height="11" style="vertical-align:-1px" fill="currentColor" aria-hidden="true"><path d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg> '+(p.likes||0)+'</b><br>댓글 '+(p.comment_count||0)+'</div>'+(img?'<span class="cm-th"><img src="'+esc(img)+'" alt=""></span>':'')+'</a>';}
 function loadList(reset){var R=document.getElementById('cmRows');if(!R)return;if(reset)R.innerHTML='';
  var srt=cmSort==='cmt'?'popular':cmSort;
  var q='?page='+cmPage+'&size=20&sort='+srt+(cmCat!=='전체'?'&category='+encodeURIComponent(cmCat):'');
@@ -3340,7 +3339,7 @@ function detail(id){V().innerHTML='<div class="cm-empty"><span class="tload"><sv
   document.getElementById('cmEdit').onclick=function(){editForm(p);};
  }).catch(function(e){V().innerHTML='<a class="cm-back" href="community.html">← 커뮤니티로</a><div class="cm-empty">'+esc(e.message)+'</div>';});}
 function renderCmts(cs,pid){var C=document.getElementById('cmCmts');if(!cs.length){C.innerHTML='<div style="color:#aaa;font-size:13px;padding:12px 0">첫 댓글을 남겨보세요.</div>';return;}
- C.innerHTML=cs.map(function(c){var liked=lks('c'+c.id);var rep=c.parent_id?' reply':'';return '<div class="cm-cmt'+rep+'"><div class="cm-cmt-h"><span class="cm-cmt-n">'+ava(BMAP[c.category]?c.category:'자유게시판').replace('cm-ava','cm-ava" style="width:20px;height:20px')+esc(c.author_nickname||'익명')+' <span class="cm-cmt-t">'+ago(c.created_at)+'</span></span><span><button class="cm-cmt-a lk'+(liked?' on':'')+'" data-lc="'+c.id+'">♥ <span>'+(c.likes||0)+'</span></button> <button class="cm-cmt-a" data-dc="'+c.id+'">삭제</button></span></div><div class="cm-cmt-c">'+esc(c.content)+'</div></div>';}).join('');
+ C.innerHTML=cs.map(function(c){var liked=lks('c'+c.id);var rep=c.parent_id?' reply':'';return '<div class="cm-cmt'+rep+'"><div class="cm-cmt-h"><span class="cm-cmt-n">'+ava(BMAP[c.category]?c.category:'자유게시판').replace('cm-ava','cm-ava" style="width:20px;height:20px')+esc(c.author_nickname||'익명')+' <span class="cm-cmt-t">'+ago(c.created_at)+'</span></span><span><button class="cm-cmt-a lk'+(liked?' on':'')+'" data-lc="'+c.id+'"><svg viewBox="0 0 24 24" width="11" height="11" style="vertical-align:-1px" fill="currentColor" aria-hidden="true"><path d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg> <span>'+(c.likes||0)+'</span></button> <button class="cm-cmt-a" data-dc="'+c.id+'">삭제</button></span></div><div class="cm-cmt-c">'+esc(c.content)+'</div></div>';}).join('');
  C.querySelectorAll('[data-lc]').forEach(function(b){b.onclick=function(){var cid=b.dataset.lc;api('/api/comments/'+cid+'/like',{method:'POST'}).then(function(r){b.querySelector('span').textContent=r.likes;b.classList.toggle('on',r.liked);setLk('c'+cid,r.liked);});};});
  C.querySelectorAll('[data-dc]').forEach(function(b){b.onclick=function(){var pw=prompt('댓글 비밀번호(4자리)');if(!pw)return;api('/api/comments/'+b.dataset.dc,{method:'DELETE',headers:{'content-type':'application/json'},body:JSON.stringify({password:pw})}).then(function(){detail(pid);}).catch(function(e){alert(e.message);});};});}
 function editForm(p){V().innerHTML='<a class="cm-back" id="cmBack"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>취소</a><div class="cm-form"><h3>글 수정</h3><div class="cm-bchips" id="efboards"></div><div class="cm-f"><label>비밀번호(4자리)</label><input id="efp" maxlength="4" inputmode="numeric"></div><div class="cm-f"><label>제목</label><input id="eft" maxlength="120"></div><div class="cm-f"><label>내용</label><textarea id="efb"></textarea></div><div class="cm-err" id="eferr"></div><div class="cm-actions"><button class="cm-btn" id="efsave">수정 저장</button></div></div>';
