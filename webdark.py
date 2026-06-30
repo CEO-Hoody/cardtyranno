@@ -19,7 +19,7 @@ CSS = r"""
 /* Canvas Design System 토큰(핸드오프 §2) */
 --ink:#000;--white:#fff;--surface-soft:#f7f7f5;--hairline:#e6e6e6;--hairline-soft:#f1f1f1;--block-lime:#dceeb1;--block-lilac:#c5b0f4;--block-cream:#f4ecd6;--block-pink:#efd4d4;--block-mint:#c8e6cd;--block-coral:#f3c9b6;--block-navy:#1f1d3d;--accent-magenta:#ff3d8b;--success:#1ea64a}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--text);font-family:'Pretendard','Pretendard Variable',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:'Pretendard','Pretendard Variable',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased;min-height:100vh}
 a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .muted{color:var(--sub)} .accent{color:var(--accent)} .empty{color:var(--sub);text-align:center;padding:46px 20px;font-size:14px}
@@ -783,10 +783,12 @@ def head(title,desc,path,extra_jsonld=None,noindex=False):
     ld="".join('<script type="application/ld+json">%s</script>'%json.dumps(b,ensure_ascii=False) for b in blocks)
     robots="noindex,nofollow" if noindex else "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
     return ('<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
+      # 본문/CSS 파싱 전 브라우저·인앱웹뷰 네이티브 로딩 화면을 흰색→라임으로(스플래시와 연결, 흰 플래시 제거)
+      '<style>html{background:#dceeb1}</style>'
       '<title>'+title+'</title>'
       '<meta name="description" content="'+desc+'"><meta name="keywords" content="'+kw+'">'
       '<meta name="robots" content="'+robots+'">'
-      '<meta name="theme-color" content="#ffffff"><link rel="canonical" href="'+BASE+path+'">'
+      '<meta name="theme-color" content="#dceeb1"><link rel="canonical" href="'+BASE+path+'">'
       +('<meta name="naver-site-verification" content="'+NAVER_SITE_VERIFICATION+'">' if NAVER_SITE_VERIFICATION else '')
       +('<meta name="google-site-verification" content="'+GOOGLE_SITE_VERIFICATION+'">' if GOOGLE_SITE_VERIFICATION else '')
       +'<link rel="alternate" type="application/rss+xml" title="카드티라노 카드 이벤트" href="'+BASE+'/rss.xml">'
