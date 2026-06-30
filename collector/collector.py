@@ -847,6 +847,7 @@ if __name__=="__main__":
         if _ajmon and _ajmon!=current_month_kst():   # stale 안전망: 거주지 재수집 실패 시 전월 시드 오염 방지
             print(f"⚠️ 아정당 시드 stale({_ajmon}≠{current_month_kst()}) — 주입 SKIP. 거주지 재수집 필요."); PENDING_PLATFORMS.add("ajungdang"); _ajraw={"cards":{}}
         aj=_ajraw.get("cards",{})
+        if not aj: print("⚠️ 아정당 수집 0건 — pending(업데이트 예정) 처리."); PENDING_PLATFORMS.add("ajungdang")
         bynk={_nk(p["name"]):p for p in products}
         try: _ressub=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("subByName",{})
         except Exception: _ressub={}
@@ -874,6 +875,7 @@ if __name__=="__main__":
         if _nvmon and _nvmon!=current_month_kst():   # stale 안전망: 거주지 재수집 실패 시 전월 시드 오염 방지
             print(f"⚠️ 네이버 시드 stale({_nvmon}≠{current_month_kst()}) — 주입 SKIP. 거주지 재수집 필요."); PENDING_PLATFORMS.add("naver"); _nvraw={"cards":{}}
         nv=_nvraw.get("cards",{})
+        if not nv: print("⚠️ 네이버 수집 0건(월 전환 직후 등) — pending(업데이트 예정) 처리."); PENDING_PLATFORMS.add("naver")
         _bn={_nk(p["name"]):p for p in products}; _nn=0; _nskip=0
         try: _resmain=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("mainByName",{})
         except Exception: _resmain={}   # 네이버 주요(거주지 렌더) — main_won 분해용
