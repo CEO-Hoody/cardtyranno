@@ -450,6 +450,12 @@ function ctSeo(title,desc,canonPath){try{
  if(desc){desc=(''+desc).replace(/\s+/g,' ').trim().slice(0,158);_setMeta('meta[name="description"]',desc);_setMeta('meta[property="og:description"]',desc);_setMeta('meta[name="twitter:description"]',desc);}
  if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
 }catch(e){}}
+/* 캐시백 주요/부가 분해(티어 인지) — 플랫폼 이벤트가 분해(bonus_won>0)면 그대로, 미분해(네이버·카카오 등 bonus=0·main=전체)면 카드 main_tier 보상으로 주요를 유도(부가=전체−주요). events 상세 '전체 캐시백 구성'(cards.json main_tier/sub_tiers)과 비교표·차트의 주요/부가 표기를 일치시킨다. mt=카드 main_tier.reward(원). */
+function splTier(e,mt){var t=(e.reward_won||0),b=(e.bonus_won||0),m=(e.main_won!=null?e.main_won:null);
+ if(b>0){if(m==null)m=Math.max(t-b,0);else{if(m>t)m=t;b=Math.max(t-m,0);}return {t:t,m:m,b:b};}
+ if(m!=null&&m<t)return {t:t,m:m,b:Math.max(t-m,0)};
+ mt=mt||0;if(mt>0&&mt<t)return {t:t,m:mt,b:Math.max(t-mt,0)};
+ return {t:t,m:(m==null?t:Math.min(m,t)),b:0};}
 /* ===== 통합 검색필터(UF) 제네릭 팩토리 — 표준 .uf 마크업(id=uf)을 받아 플랫폼사·카드사(다중)+유형/정렬(단일) 구동. PC 팝오버·모바일 바텀시트·URL 동기화. cfg={plats:[{k,name,color}],issuers:[name],types:[[v,label]],sorts:[[v,label]],state:{vis,issF,type,sortK},onChange,countText(n),applyText(n),urlSync} ===== */
 function ufBuild(cfg){var root=document.getElementById('uf');if(!root)return {refresh:function(){},resetAll:function(){}};
  var S=cfg.state,PL=cfg.plats||[],IS=cfg.issuers||[],TY=cfg.types||[],SO=cfg.sorts||[];
@@ -658,7 +664,7 @@ Promise.all([
    listSec='<div class="rg-sec"><div class="rg-listhd"><h2>이 캐시백을 받는 카드</h2><span class="hint">상품을 누르면 아래 차트·구성이 바뀌어요</span></div><div class="rg-plist" id="rgList">'+rows+'</div></div>';
   }
   root.innerHTML=head+listSec+'<div id="rgDyn"></div>';
-  function buildSeries(p,e){var nk=_nk(p.name);var total=e.reward_won||0,bonus=e.bonus_won||0;if(bonus>=total)bonus=0;var main=Math.max(total-bonus,0);
+  function buildSeries(p,e){var nk=_nk(p.name);var _cd=CARDMAP[nk]||{};var _s=splTier(e,_cd.main_tier&&_cd.main_tier.reward);var total=_s.t,bonus=_s.b,main=_s.m;
    var series=months.map(function(m,i){if(m===_cm)return {m:m,v:total,sub:bonus,cur:true};
     var snap=MS[i],v=null;if(snap){var c=(snap.cards||[]).filter(function(x){return _nk(x.name)===nk;})[0];if(c&&c.max)v=c.max;
      if(v==null&&snap.issuers&&p.issuer&&snap.issuers[p.issuer]){var im=snap.issuers[p.issuer];var vv=Object.keys(im).map(function(kk){return im[kk];});if(vv.length)v=Math.max.apply(null,vv);}}
@@ -691,7 +697,8 @@ Promise.all([
     +(subItems?('<div class="rg-subh">부가 캐시백<span class="rg-only-pc"> · 조건 카테고리별</span></div><div class="rg-subs">'+subItems+'</div>'):'<div class="rg-subh">부가 캐시백</div><div class="rg-subnone">이 상품은 부가 캐시백 없이 주요 캐시백으로 구성돼요.</div>')+'</div>';
    // 티라노 코칭
    // 같은 카드 상품의 플랫폼 간 비교(주요혜택 main_won · 전체혜택 reward_won)
-   function _mainOf(x){var t=x.reward_won||0,b=x.bonus_won||0;if(x.main_won!=null)return Math.min(x.main_won,t);if(b>=t)b=0;return Math.max(t-b,0);}
+   var _pmt=(CARDMAP[_nk(p.name)]||{}).main_tier;_pmt=_pmt&&_pmt.reward;
+   function _mainOf(x){return splTier(x,_pmt).m;}
    var myMain=_mainOf(e),myTotal=S.total;
    var oMainMax=0,oTotalMax=0,oMainPlat='';
    (p.events||[]).forEach(function(x){if(x.platform===P||x.platform==='issuer')return;var xm=_mainOf(x),xt=x.reward_won||0;if(xm>oMainMax){oMainMax=xm;oMainPlat=x.platform;}if(xt>oTotalMax)oTotalMax=xt;});

@@ -450,6 +450,12 @@ function ctSeo(title,desc,canonPath){try{
  if(desc){desc=(''+desc).replace(/\s+/g,' ').trim().slice(0,158);_setMeta('meta[name="description"]',desc);_setMeta('meta[property="og:description"]',desc);_setMeta('meta[name="twitter:description"]',desc);}
  if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
 }catch(e){}}
+/* 캐시백 주요/부가 분해(티어 인지) — 플랫폼 이벤트가 분해(bonus_won>0)면 그대로, 미분해(네이버·카카오 등 bonus=0·main=전체)면 카드 main_tier 보상으로 주요를 유도(부가=전체−주요). events 상세 '전체 캐시백 구성'(cards.json main_tier/sub_tiers)과 비교표·차트의 주요/부가 표기를 일치시킨다. mt=카드 main_tier.reward(원). */
+function splTier(e,mt){var t=(e.reward_won||0),b=(e.bonus_won||0),m=(e.main_won!=null?e.main_won:null);
+ if(b>0){if(m==null)m=Math.max(t-b,0);else{if(m>t)m=t;b=Math.max(t-m,0);}return {t:t,m:m,b:b};}
+ if(m!=null&&m<t)return {t:t,m:m,b:Math.max(t-m,0)};
+ mt=mt||0;if(mt>0&&mt<t)return {t:t,m:mt,b:Math.max(t-mt,0)};
+ return {t:t,m:(m==null?t:Math.min(m,t)),b:0};}
 /* ===== 통합 검색필터(UF) 제네릭 팩토리 — 표준 .uf 마크업(id=uf)을 받아 플랫폼사·카드사(다중)+유형/정렬(단일) 구동. PC 팝오버·모바일 바텀시트·URL 동기화. cfg={plats:[{k,name,color}],issuers:[name],types:[[v,label]],sorts:[[v,label]],state:{vis,issF,type,sortK},onChange,countText(n),applyText(n),urlSync} ===== */
 function ufBuild(cfg){var root=document.getElementById('uf');if(!root)return {refresh:function(){},resetAll:function(){}};
  var S=cfg.state,PL=cfg.plats||[],IS=cfg.issuers||[],TY=cfg.types||[],SO=cfg.sorts||[];
@@ -695,11 +701,12 @@ function _pick(e){var m=(e.main_won!=null?e.main_won:(e.reward_won||0));var b=(e
 function _bd(e){var b=(e.bonus_won||0);if(b<=0)return '';var m=(e.main_won!=null?e.main_won:(e.reward_won||0));return '<div class="bd">메인 <b>'+_wm(m)+'</b> + 부가 '+_wm(b)+' <span class="bdt">최대 합 '+_wm((e.reward_won||0))+'</span></div>';}
 function _nk2(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
 Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json').then(r=>r.json()).catch(function(){return {cards:{}};})]).then(function(A){
- var prods=(A[0].products||[]);var IMG={},cj=A[1].cards||{};for(var ik in cj){(cj[ik]||[]).forEach(function(c){if(c.img&&!IMG[_nk2(c.name)])IMG[_nk2(c.name)]=c.img;});}
+ var prods=(A[0].products||[]);var IMG={},MTIER={},cj=A[1].cards||{};for(var ik in cj){(cj[ik]||[]).forEach(function(c){var k=_nk2(c.name);if(c.img&&!IMG[k])IMG[k]=c.img;var r=c.main_tier&&c.main_tier.reward;if(r&&!MTIER[k])MTIER[k]=r;});}
  // (0) 발급이벤트 EV 목록 = 전 플랫폼(네이버 포함) 평탄화. 각 행은 실제 플랫폼 이벤트로 아웃링크.
  (function(){var tmp=[],mx={};
   prods.forEach(function(p){var iss=p.issuer||'기타';(p.events||[]).forEach(function(e){var _pp=(p.platforms||{})[e.platform]||{};var u=_best(e.platform,e.url||_pp.url,_pp.id);if(e.platform==='cardgorilla'){var _cg=_cgUrl(iss,_pp.id);if(_cg)u=_cg;}
-   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),pk:e.platform,benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),pe:(e.period_end||''),won:(e.reward_won||0),main:(e.main_won!=null?e.main_won:(e.reward_won||0)),bonus:(e.bonus_won||0),text:(e.reward_text||''),img:(p.img||IMG[_nk2(p.name)]||'')});
+   var _s=splTier(e,MTIER[_nk2(p.name)]);
+   tmp.push({issuer:iss,card:p.name,platform:(PN[e.platform]||e.platform),pk:e.platform,benefit:_rwd(e.reward_text,e.reward_won),url:u||('carddetail.html?n='+encodeURIComponent(p.name)),period:(e.period_end?('~'+String(e.period_end).slice(5).replace('-','/')):''),pe:(e.period_end||''),won:_s.t,main:_s.m,bonus:_s.b,text:(e.reward_text||''),img:(p.img||IMG[_nk2(p.name)]||'')});
    mx[iss]=Math.max(mx[iss]||0,e.reward_won||0);});});
   EV=tmp;ORD=Object.keys(mx).sort(function(a,b){return mx[b]-mx[a];});
   var _mxv=Math.max.apply(null,tmp.map(function(x){return x.won||0;}).concat([0]));var _eh=document.getElementById('evhMax');if(_eh&&_mxv)_eh.textContent=_wm(_mxv);
@@ -715,7 +722,7 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
  function _es(s){return String(s==null?'':s).replace(/[<>&]/g,'');}
  var byIss={},issMeta={};
  prods.forEach(function(p){if(!(p.events||[]).length)return;var iss=p.issuer||'기타';byIss[iss]=byIss[iss]||{};
-  var pmax=0;p.events.forEach(function(e){var w=e.reward_won||0;if(w>pmax)pmax=w;var c=byIss[iss][e.platform];if(!c||w>(c.t||0))byIss[iss][e.platform]=_spl(e);});
+  var pmax=0;var _mt=MTIER[_nk2(p.name)];p.events.forEach(function(e){var w=e.reward_won||0;if(w>pmax)pmax=w;var c=byIss[iss][e.platform];if(!c||w>(c.t||0))byIss[iss][e.platform]=splTier(e,_mt);});
   var m=issMeta[iss]=issMeta[iss]||{count:0,rep:'',repv:-1};m.count++;if(pmax>m.repv){m.repv=pmax;m.rep=p.name;}});
  var ISSROWS=Object.keys(byIss).map(function(iss){var o={};PORD.forEach(function(pk){var c=byIss[iss][pk];if(c&&c.t)o[pk]=c;});return {iss:iss,o:o,count:(issMeta[iss]||{}).count||0,rep:(issMeta[iss]||{}).rep||''};});
  var ISSF=[['','전체'],['삼성','삼성'],['현대','현대'],['KB국민','KB국민'],['신한','신한'],['롯데','롯데'],['우리','우리']];
