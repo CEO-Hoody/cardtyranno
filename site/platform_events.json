@@ -2938,8 +2938,8 @@
      "reward_won": 570000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=044",
-     "main_won": 570000,
-     "bonus_won": 0,
+     "main_won": 20000,
+     "bonus_won": 550000,
      "reward_group": "2026-07|naver|하나카드|570000"
     },
     {
