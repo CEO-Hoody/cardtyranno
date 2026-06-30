@@ -468,7 +468,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
    <p>2지선다만 누르면 끝. 당신께 맞는 카드와 지금 가장 큰 캐시백 플랫폼·마감 임박 이벤트까지 찾아드려요.</p>
   </div>
   <div style="padding:18px 0 0"><button class="dg-cta" id="dgStart">진단 시작하기 <svg><use href="#dg-right"/></svg></button>
-   <p class="dg-note">약 1분 소요 · 가입 없이 바로</p></div>
+   <p class="dg-note">약 1분 소요 · 가입 없이 바로</p><div style="text-align:center;margin-top:14px"><button id="dgShareIntro" style="display:inline-flex;align-items:center;gap:7px;background:none;border:1px solid var(--line,#e6e6e6);border-radius:50px;padding:10px 18px;font-weight:600;font-size:13px;color:var(--sub,#666);cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> 친구에게 공유</button></div></div>
  </section>
  <section class="dg-screen" id="dgQuestion">
   <div class="dg-top"><button class="dg-icnbtn" id="dgBack"><svg><use href="#dg-back"/></svg></button><span class="dg-step" id="dgStepN">01 / 06</span><button class="dg-icnbtn" id="dgClose"><svg><use href="#dg-x"/></svg></button></div>
@@ -491,7 +491,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
     <div class="dg-sec"><div class="dg-eb">왜 이 카드?</div><div class="dg-chips" id="dgWhy"></div></div>
     <div class="dg-sec"><div style="display:flex;align-items:baseline;justify-content:space-between"><div class="dg-eb">지금 발급 캐시백</div><div style="font-weight:400;font-size:11px;color:rgba(0,0,0,.5)" id="dgBarsCap">플랫폼 비교</div></div><div class="dg-bars" id="dgBars"></div></div>
     <div class="dg-sec"><div class="dg-eb">마감 임박 이벤트</div><div id="dgEvents" style="margin-top:8px"></div></div>
-    <div class="dg-rcta"><a class="dg-cta" id="dgGo" href="#">발급 이벤트 전체 보기 <svg><use href="#dg-right"/></svg></a><button class="dg-redo" id="dgRedo"><svg><use href="#dg-redo"/></svg> 다시 진단하기</button>
+    <div class="dg-rcta"><a class="dg-cta" id="dgGo" href="#">발급 이벤트 전체 보기 <svg><use href="#dg-right"/></svg></a><button class="dg-redo" id="dgRedo"><svg><use href="#dg-redo"/></svg> 다시 진단하기</button><button class="dg-redo" id="dgShareResult"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> 결과 공유</button>
      <div class="dg-foot">추천은 입력한 응답 + 공개 캐시백 데이터 기준이에요. 금액은 최대 금액 기준(조건 충족 시)이며 수집 시점에 따라 달라질 수 있어요.</div></div>
    </div>
   </div></div>
@@ -701,8 +701,12 @@ function finish(){var r=pickArch();if(!r){show('dgResult');document.getElementBy
  state.screen='result';show('dgResult');clearLS();
 }
 function startFresh(){state.step=0;state.answers=[];gotoStep(0);}
+function dgToast(m){var t=document.createElement("div");t.textContent=m;t.style.cssText="position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#000;color:#fff;padding:11px 18px;border-radius:50px;font-size:13px;font-weight:600;z-index:9999;opacity:0;transition:opacity .2s";document.body.appendChild(t);requestAnimationFrame(function(){t.style.opacity="1";});setTimeout(function(){t.style.opacity="0";setTimeout(function(){t.remove();},300);},1800);}
+function dgShare(isResult){var url=location.origin+"/diagnose.html";var text=isResult?"내 카드, 60초 만에 진단받았어요 — 카드티라노":"60초 2지선다로 내게 맞는 카드 찾기 — 카드티라노";if(navigator.share){navigator.share({title:"카드티라노 카드 진단",text:text,url:url}).catch(function(){});return;}var sx=text+" "+url;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(sx).then(function(){dgToast("링크를 복사했어요");},function(){window.prompt("아래 링크를 복사하세요",sx);});}else{window.prompt("아래 링크를 복사하세요",sx);}}
 function bind(){
  document.getElementById('dgStart').onclick=startFresh;
+ var _si=document.getElementById('dgShareIntro');if(_si)_si.onclick=function(){dgShare(false);};
+ var _sr=document.getElementById('dgShareResult');if(_sr)_sr.onclick=function(){dgShare(true);};
  document.getElementById('dgRedo').onclick=function(){clearLS();state.screen='intro';show('dgIntro');};
  document.getElementById('dgBack').onclick=function(){if(state.step<=0){state.screen='intro';show('dgIntro');}else gotoStep(state.step-1);};
  function close(){if(confirm('진단을 종료할까요? 진행 내용이 초기화됩니다.')){clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}}
