@@ -409,6 +409,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
  /* 터치타깃 */
  .pl,.chip,.tab,.ctlb,.ctlf,.subnav2 button{min-height:38px}
 }
+/* 리스트형 메인 페이지 타이틀 규격(타이틀 점검 가이드): mono 아이브로우 + display 32/34·w340·-0.8 */
+.pg-eb{font-family:var(--font-mono),'JetBrains Mono',ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.5);display:block;line-height:1.3}
 """
 
 HELPERS = r"""
@@ -899,7 +901,7 @@ fetch('data.json').then(r=>r.json()).then(function(j){DATA=j.items;if(Q){var s=d
 # ===== CARDS =====
 CARDS_BODY=('<style>'
  '.cfx{max-width:880px;margin:0 auto}'
- '.cfx-top{padding:20px 0 0}.cfx-h{font-weight:330;font-size:30px;letter-spacing:-1.1px;margin:0}.cfx-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
+ '.cfx-top{padding:20px 0 0}.cfx-h{font-weight:340;font-size:32px;letter-spacing:-.8px;line-height:1.05;margin:6px 0 0}.cfx-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
  '.cfx-search{display:flex;align-items:center;gap:9px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;margin-top:14px}.cfx-search svg{width:17px;height:17px;color:rgba(0,0,0,.45);flex:0 0 auto}.cfx-search input{flex:1;min-width:0;border:0;outline:0;background:0;font-family:inherit;font-size:14px;color:#000}'
  '.cfx-cats{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:14px 0 0;scrollbar-width:none}.cfx-cats::-webkit-scrollbar{display:none}'
  '.cfx-cat{flex:0 0 auto;padding:8px 14px;border-radius:50px;border:1px solid var(--line);background:var(--surface-soft);color:rgba(0,0,0,.7);font-weight:540;font-size:12.5px;cursor:pointer;white-space:nowrap;font-family:inherit}.cfx-cat.on{background:#000;color:#fff;border-color:#000}'
@@ -926,7 +928,7 @@ CARDS_BODY=('<style>'
  '@media(min-width:761px){.cfx-h{font-size:34px}.cfx-list{grid-template-columns:1fr 1fr;gap:12px}.cfx-cats{flex-wrap:wrap;overflow:visible}}'
  '</style>'
  '<div class="wrap"><div class="cfx">'
- '<div class="cfx-top"><h1 class="cfx-h">카드찾기</h1><p class="cfx-sub">조건을 고르면, 받을 수 있는 카드를 캐시백 순으로.</p></div>'
+ '<div class="cfx-top"><span class="pg-eb">FIND A CARD</span><h1 class="cfx-h">카드찾기</h1><p class="cfx-sub">조건을 고르면, 받을 수 있는 카드를 캐시백 순으로.</p></div>'
  '<div class="cfx-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M19.5 19.5l-4.7-4.7"/></svg><input id="cfQ" type="search" placeholder="카드명·혜택으로 검색" autocomplete="off"></div>'
  '<div class="cfx-cats" id="cfCats"></div>'
  '<div class="cfx-bar"><button class="cfx-fbtn" id="cfFiltBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2.2"/><circle cx="8" cy="17" r="2.2"/></svg>연회비·카드사<span class="n" id="cfFiltN" style="display:none"></span></button>'
@@ -1162,7 +1164,7 @@ ISSUE_BODY=('<style>'
  '@media(max-width:680px){.pcmp-banners{grid-template-columns:1fr}.pcb-strat{grid-template-columns:110px 1fr}.pcb-strat img{width:110px}}'
  # 캐시백 메인 — 이벤트 단위(가이드 B)
  '#view-ev{max-width:880px;margin:0 auto}'
- '.ev2-hd{display:flex;align-items:center;gap:8px;padding:2px 0 0}.ev2-h{font-weight:330;font-size:30px;letter-spacing:-1.1px;margin:0}'
+ '.ev2-hd{display:flex;align-items:center;gap:8px;padding:2px 0 0}.ev2-h{font-weight:340;font-size:32px;letter-spacing:-.8px;line-height:1.05;margin:0}'
  '.ev2-month{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;border-radius:50px;background:var(--surface-soft);font-weight:540;font-size:12px}'
  '.ev2-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
  '.ev2-iss{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:7px 13px;border-radius:50px;background:var(--block-lilac);font-weight:540;font-size:12.5px;cursor:pointer}.ev2-iss b{font-weight:800}.ev2-iss .x{font-size:11px;opacity:.6}'
@@ -1204,7 +1206,7 @@ ISSUE_BODY=('<style>'
  '</style>'
  '<div class="wrap"><section><div class="sec-h"><h2 id="issTitle">이번달 캐시백</h2></div>'
  '<div id="view-ev">'
- '<div class="ev2-hd"><h1 class="ev2-h">캐시백</h1><span class="ev2-month"><span id="evMonth">2026.06</span></span></div>'
+ '<span class="pg-eb" style="padding-top:2px">MONTHLY CASHBACK</span><div class="ev2-hd"><h1 class="ev2-h">캐시백</h1><span class="ev2-month"><span id="evMonth">2026.06</span></span></div>'
  '<p class="ev2-sub">이번 달, 어디서 받는 게 가장 이득인지.</p>'
  '<div class="ev2-iss" id="evIssFilt" style="display:none">카드사 <b id="evIssFiltT"></b><span class="x">✕</span></div>'
  '<div class="ev2-plats" id="evPlats"></div>'
@@ -1446,7 +1448,7 @@ CONTENT_BODY=('<style>'
  '}'
  '</style>'
  '<div class="wrap"><section id="listwrap">'
- '<div style="padding:24px 0 0"><h1 style="font-weight:330;font-size:34px;letter-spacing:-1.2px;margin:0">티라노 TIP</h1><p style="font-weight:400;font-size:14px;color:rgba(0,0,0,.6);margin:5px 0 0">전문가가 매달 직접 뜯어본 카드 전략.</p></div>'
+ '<div style="padding:24px 0 0"><span class="pg-eb">CARD GUIDE</span><h1 style="font-weight:340;font-size:32px;letter-spacing:-.8px;line-height:1.05;margin:6px 0 0">티라노 TIP</h1><p style="font-weight:400;font-size:14px;color:rgba(0,0,0,.6);margin:5px 0 0">전문가가 매달 직접 뜯어본 카드 전략.</p></div>'
  '<div id="tipPick"></div>'
  '<div class="tip-tabs" id="tipTabs"></div>'
  '<div class="tip-list" id="list"><div class="empty" style="grid-column:1/-1"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section>'
@@ -1466,8 +1468,9 @@ function pick(){var st=C.filter(function(x){return x.cat==='발급 팁';})[0]||C
  el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg><span class="tip-pick-badge">이달의 PICK</span></div>'
   +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.06</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
+ if(d.html){el.innerHTML='<div class="adt">'+d.html+'<a class="bk2" href="content.html" style="display:inline-block;margin-top:32px">← 티라노 TIP</a></div>';ctSeo(d.title+' | 카드티라노',(d.summary||d.title),'content.html?id='+d.id);return;}
  var hero=d.img?'<div class="ghero"><img src="'+d.img+'" alt="'+d.cat+'" loading="eager"/></div>':'';
- el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노 TIP</a></div>';ctSeo(d.title+' | 카드티라노',(d.summary||d.title),'content.html?id='+d.id);}
+ el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+(d.body||[]).map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노 TIP</a></div>';ctSeo(d.title+' | 카드티라노',(d.summary||d.title),'content.html?id='+d.id);}
 var id=new URLSearchParams(location.search).get('id');
 fetch('content.json').then(function(r){return r.json();}).then(function(j){C=j.items;if(id!==null){var d=C.find(function(x){return String(x.id)===String(id);});if(d){detail(d);return;}}
  pick();tabs();renderList();});
@@ -1901,7 +1904,7 @@ Promise.all([
 # ===== CHART (독자 인기순위) =====
 CHART_BODY=('<style>'
  '.ch-wrap{max-width:880px;margin:0 auto}'
- '.ch-top{padding:20px 0 0}.ch-h1{font-weight:330;font-size:30px;letter-spacing:-1px;margin:0}.ch-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
+ '.ch-top{padding:20px 0 0}.ch-h1{font-weight:340;font-size:32px;letter-spacing:-.8px;line-height:1.05;margin:6px 0 0}.ch-sub{font-weight:400;font-size:13px;color:rgba(0,0,0,.6);margin:5px 0 0}'
  # 히어로 롤링 캐러셀
  '.ch-hero{margin-top:16px}.ch-vp{overflow:hidden;border-radius:20px}'
  '.ch-track{display:flex;width:200%;transition:transform .6s cubic-bezier(.4,0,.2,1)}'
@@ -1953,7 +1956,7 @@ CHART_BODY=('<style>'
  '}'
  '</style>'
  '<div class="wrap"><div class="ch-wrap">'
- '<div class="ch-top"><h1 class="ch-h1">티라노 차트</h1><p class="ch-sub">캐시백이 어떻게 움직이는지, 데이터로.</p></div>'
+ '<div class="ch-top"><span class="pg-eb">CASHBACK DATA</span><h1 class="ch-h1">티라노 차트</h1><p class="ch-sub">캐시백이 어떻게 움직이는지, 데이터로.</p></div>'
  '<div class="ch-hero"><div class="ch-vp"><div class="ch-track" id="chTrack">'
  '<div class="ch-slide ch-s1"><svg class="ch-face" viewBox="2 3.6 20 16.4" style="right:-12px;top:-16px;width:84px"><use href="#mk"/></svg>'
  '<div class="left"><div class="ch-eb">이번 달 캐시백 지수</div><div class="ch-idxrow"><div class="ch-idx" id="chIdx">–</div><span class="ch-up" id="chDelta"></span></div><div class="cap">전 플랫폼 통합 최고 캐시백 · 전월 대비</div></div>'
@@ -2526,18 +2529,18 @@ ABOUT_BODY=(r'''<style>
 .ab .sec{padding:0 0 84px}
 .ab .block{border-radius:24px;position:relative;overflow:hidden}
 .ab-hero{background:var(--block-lilac);padding:72px 64px}
-.ab-hero h1{font-weight:330;font-size:64px;line-height:1.02;letter-spacing:-2.2px;margin:18px 0 0;max-width:760px}
+.ab-hero h1{font-weight:340;font-size:64px;line-height:1.02;letter-spacing:-2.2px;margin:18px 0 0;max-width:760px}
 .ab-hero p{font-weight:400;font-size:18px;line-height:1.5;margin:26px 0 0;max-width:560px;color:rgba(0,0,0,.72)}
 .ab-wm{position:absolute;right:-40px;bottom:-56px;width:300px;opacity:.16;color:#000}
 .ab-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:15px;text-decoration:none}.ab-cta svg{width:17px;height:17px}
 .ab-cta2{display:inline-flex;align-items:center;padding:14px 24px;border-radius:50px;background:rgba(255,255,255,.7);font-weight:540;font-size:15px;text-decoration:none;color:#000}
 .ab-g2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.ab-h2{font-weight:330;font-size:46px;line-height:1.04;letter-spacing:-1.5px;margin:14px 0 0}
+.ab-h2{font-weight:340;font-size:46px;line-height:1.04;letter-spacing:-1.5px;margin:14px 0 0}
 .ab-card{border:1px solid var(--hairline);border-radius:20px;padding:30px 32px;background:#fff}
 .ab-bar{flex:1;height:12px;border-radius:50px;background:var(--surface-soft);overflow:hidden}.ab-bar i{display:block;height:100%;border-radius:50px}
 .ab-lime{background:var(--block-lime);padding:64px}
 .ab-navy{background:var(--block-navy);color:#fff;padding:72px 64px}
-.ab-navy h2{font-weight:330;font-size:50px;line-height:1.04;letter-spacing:-1.7px;margin:16px 0 0;max-width:780px}
+.ab-navy h2{font-weight:340;font-size:50px;line-height:1.04;letter-spacing:-1.7px;margin:16px 0 0;max-width:780px}
 .ab-navy p{font-weight:400;font-size:17px;line-height:1.55;margin:16px 0 0;max-width:620px;color:rgba(255,255,255,.78)}.ab-navy p b{color:#fff;font-weight:700}
 .ab-stats{display:flex;gap:40px;margin-top:44px;flex-wrap:wrap}.ab-stats .v{font-weight:700;font-size:38px;letter-spacing:-1.2px}.ab-stats .l{font-weight:400;font-size:13.5px;color:rgba(255,255,255,.62);margin-top:4px}
 .ab-eg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
@@ -2548,9 +2551,9 @@ ABOUT_BODY=(r'''<style>
 .ab-ec .tag{font-weight:540;font-size:14px;margin-top:10px;color:rgba(0,0,0,.85)}
 .ab-ec .ds{font-weight:400;font-size:13.5px;line-height:1.5;margin-top:6px;color:rgba(0,0,0,.62)}
 .ab-cream{background:var(--block-cream);border-radius:24px;padding:80px 64px;text-align:center}
-.ab-cream h2{font-weight:330;font-size:52px;line-height:1.08;letter-spacing:-1.8px;margin:18px auto 0;max-width:820px}
+.ab-cream h2{font-weight:340;font-size:52px;line-height:1.08;letter-spacing:-1.8px;margin:18px auto 0;max-width:820px}
 .ab-co-card{background:#000;color:#fff;border-radius:24px;padding:48px 44px}
-.ab-co-card h3{font-weight:330;font-size:30px;letter-spacing:-.9px;line-height:1.15;margin:0}
+.ab-co-card h3{font-weight:340;font-size:30px;letter-spacing:-.9px;line-height:1.15;margin:0}
 @media(max-width:760px){
  .ab-hero{padding:36px 24px}.ab-hero h1{font-size:34px;letter-spacing:-1.2px}.ab-hero p{font-size:15px}
  .ab .sec{padding:0 0 48px}
