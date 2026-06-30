@@ -458,6 +458,13 @@ function isFav(id){return getFav().indexOf(id)>=0;}
 function toggleFav(id){var a=getFav();var i=a.indexOf(id);if(i>=0)a.splice(i,1);else a.push(id);setFav(a);updateFavCount();if(window.ctPushSync)try{ctPushSync();}catch(e){}return i<0;}
 function updateFavCount(){var el=document.getElementById('favCount');if(el){var n=getFav().length;el.textContent=n;el.style.display=n?'inline-block':'none';}}
 function _pg(){return location.pathname.split('/').pop()||'index.html';}
+// SEO: JS 렌더 상세(카드·이벤트·콘텐츠)에서 제목·설명·canonical·OG를 해당 항목으로 갱신(구글 렌더 색인 대응)
+function _setMeta(sel,val){var m=document.querySelector(sel);if(m&&val!=null)m.setAttribute('content',val);}
+function ctSeo(title,desc,canonPath){try{
+ if(title){document.title=title;_setMeta('meta[property="og:title"]',title);_setMeta('meta[name="twitter:title"]',title);}
+ if(desc){desc=(''+desc).replace(/\s+/g,' ').trim().slice(0,158);_setMeta('meta[name="description"]',desc);_setMeta('meta[property="og:description"]',desc);_setMeta('meta[name="twitter:description"]',desc);}
+ if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
+}catch(e){}}
 // 공유하기: Web Share API 우선, 미지원 시 클립보드 복사 + 토스트
 function ctToast(msg){var t=document.getElementById('ctToast');if(!t){t=document.createElement('div');t.id='ctToast';t.className='ct-toast';document.body.appendChild(t);}t.textContent=msg;void t.offsetWidth;t.classList.add('on');clearTimeout(ctToast._t);ctToast._t=setTimeout(function(){t.classList.remove('on');},2000);}
 function _ctCopyFallback(text){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok;}catch(e){return false;}}
@@ -604,7 +611,7 @@ FOOTER=('<footer><div class="wrap foot">'
  '<p>카드티라노는 여러 카드 중개 플랫폼의 카드·이벤트 혜택을 한곳에서 비교·분석해 드리는 정보 서비스입니다. 실제 카드 발급·심사는 각 카드사에서 진행됩니다.</p></div>'
  '<div class="col"><h4>서비스</h4><a href="cards.html">카드찾기</a><a href="issue.html">이번달 캐시백</a><a href="installment.html">무이자할부</a><a href="content.html">카드 가이드</a></div>'
  '<div class="col"><h4>회사</h4><a href="mailto:contact@cardtyranno.com">제휴·광고 문의</a><a href="business.html">사업자정보</a></div>'
- '<div class="col"><h4>약관·정책</h4><a href="terms.html">이용약관</a><a href="privacy.html">개인정보처리방침</a></div></div>'
+ '<div class="col"><h4>약관·정책</h4><a href="terms.html">이용약관</a><a href="privacy.html">개인정보처리방침</a><a href="sitemap.html">사이트맵</a></div></div>'
  '<div class="wrap legal">카드티라노는 카드사·제휴 플랫폼의 광고/정보를 제공하는 <b>광고·정보제공 매체</b>이며, 카드 발급을 중개·접수하지 않습니다. 카드 신청·발급·심사는 각 카드사에서 진행됩니다. 게시된 캐시백·이벤트는 제휴 플랫폼·카드사의 <b>공개 데이터를 기준으로 자동 정렬</b>되며, 금액은 <b>최대 금액 기준</b>(전월실적·사용처·한도 등 조건 충족 시)입니다. 게시된 혜택·캐시백·연회비는 수집 시점 기준이며 실제와 다를 수 있어 신청 전 각 카드사·플랫폼에서 최종 확인이 필요합니다. <b>일부 링크는 제휴(광고) 링크</b>로, 이를 통해 수수료를 받을 수 있습니다.'
  '<div class="biz muted">카드티라노(CardTyranno) · 쥬라기랩스 · 제휴/광고 contact@cardtyranno.com</div>'
  '<div class="biz">© 2026 CARDTYRANNO. All rights reserved.</div></div></footer>')
@@ -1449,7 +1456,7 @@ function pick(){var st=C.filter(function(x){return x.cat==='발급 팁';})[0]||C
   +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.06</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
  var hero=d.img?'<div class="ghero"><img src="'+d.img+'" alt="'+d.cat+'" loading="eager"/></div>':'';
- el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노 TIP</a></div>';document.title=d.title+' | 카드티라노';}
+ el.innerHTML='<div class="adt">'+hero+'<div class="acat" style="display:inline-block;background:'+(CATBG[d.cat]||'var(--block-lime)')+';color:#000;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700">'+d.cat+'</div><div class="ah">'+d.title+'</div>'+(d.summary?'<div class="asum">'+d.summary+'</div>':'')+d.body.map(function(p){return '<p>'+p+'</p>';}).join("")+'<a class="bk2" href="content.html">← 티라노 TIP</a></div>';ctSeo(d.title+' | 카드티라노',(d.summary||d.title),'content.html?id='+d.id);}
 var id=new URLSearchParams(location.search).get('id');
 fetch('content.json').then(function(r){return r.json();}).then(function(j){C=j.items;if(id!==null){var d=C.find(function(x){return String(x.id)===String(id);});if(d){detail(d);return;}}
  pick();tabs();renderList();});
@@ -1615,7 +1622,7 @@ Promise.all([
  // ===== 카드 혜택 = 최하단 접힘 아코디언 =====
  var accHtml='<div class="cda" id="cdAcc"><div class="cda-hd" id="cdAccHd"><div><div class="t">카드 혜택 · 상품 정보</div><div class="s">눌러서 펼치기 — 적립·할인 등 상품 상세</div></div><span class="cda-ic">'+_CHEV+'</span></div><div class="cda-bd">'+renderBenefit(card.detail)+'</div></div>';
  document.getElementById('root').innerHTML=heroHtml+chartHtml+eventsHtml+accHtml;
- document.title=card.name+' | 카드티라노';
+ ctSeo(card.name+' 혜택·발급 캐시백 | 카드티라노',(card.issuer?card.issuer+' ':'')+card.name+'의 영역별 카드 혜택·연회비·전월실적과 토스·카드고릴라·아정당 등 플랫폼별 발급 캐시백을 한눈에 비교.',(card.id!=null?'carddetail.html?id='+card.id:'carddetail.html?n='+encodeURIComponent(card.name)));
  // 아코디언 토글
  var acc=document.getElementById('cdAcc'),accHd=document.getElementById('cdAccHd');
  if(accHd)accHd.onclick=function(){acc.classList.toggle('open');};
@@ -1866,7 +1873,7 @@ Promise.all([
    var _ppd=(p.platforms||{})[P]||{};var edUrl=_best(P,e.url||_ppd.url,_ppd.id);if(P==='cardgorilla'){var _cg=_cgUrl(p.issuer,_ppd.id);if(_cg)edUrl=_cg;}if(!edUrl)edUrl=e.url||'#';
    var hc=document.getElementById('rgHeadCta');if(hc)hc.setAttribute('href',edUrl);
    document.getElementById('rgFloat').innerHTML='<div class="rg-float"><div class="in"><div class="lab rg-only-pc"><b>'+pnm+'</b> 발급 캐시백 · 최대 '+_wm(S.total)+'</div><a class="go" href="'+edUrl+'" target="_blank" rel="sponsored nofollow noopener">'+pnm+'에서 자세히보기 '+UR+'</a></div></div>';
-   document.title=pnm+' 발급 캐시백 · '+p.name+' | 카드티라노';
+   ctSeo(p.name+' '+pnm+' 발급 캐시백 | 카드티라노',p.name+'의 '+pnm+' 신규 발급 캐시백 금액·조건·마감과 최근 캐시백 추이를 확인하세요.','events.html?platform='+P+'&n='+encodeURIComponent(p.name));
    if(window.repairImages)repairImages();
   }
   var listEl=document.getElementById('rgList');
@@ -2473,7 +2480,7 @@ def _seo_static_index():
       '.seo-links ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
       '.seo-links a{display:inline-block;font-size:13px;font-weight:700;color:var(--text);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px}'
       '.seo-links a:hover{border-color:var(--accent)}</style>')
-    return ('<section class="seo-static">'+style+'<div class="wrap"><h2>이번 달 카드 발급 혜택·할인 한눈에 보기</h2>'
+    return ('<section class="seo-static">'+style+'<div class="wrap"><h2>카드 캐시백·카드 혜택·카드 발급 혜택, 한눈에 비교</h2>'
       +intro+'<div class="seo-tbl-wrap">'+table+'</div>'+rank+links+'</div></section>')
 SEO_STATIC_INDEX=_seo_static_index()
 
@@ -3347,6 +3354,40 @@ page("privacy.html",BRAND+" | 개인정보처리방침","카드티라노 개인�
      _legal_body("PRIVACY POLICY","개인정보처리방침","2026-06-28",_PRIV,_LGL_FOOT,cur="privacy.html"),active="")
 page("business.html",BRAND+" | 사업자정보","카드티라노(쥬라기랩스) 사업자정보 및 문의처.","/business.html",
      _legal_body("BUSINESS INFO","사업자정보","2026-06-28",_BIZ,_LGL_FOOT,cur="business.html"),active="")
+# ===== HTML 사이트맵 (전체 메뉴 · 크롤러/접근성용, 푸터에서 진입) =====
+_SMAP=[
+ ("카드 캐시백·혜택 비교",[
+   ("issue.html","이번달 카드 캐시백 — 플랫폼별 최대 발급 캐시백 비교"),
+   ("issue.html?v=cmp","한눈에 비교 — 카드사·카드별 캐시백 한 표"),
+   ("discount.html","카드 할인 혜택 — 가맹점·업종별 즉시할인·청구할인·캐시백"),
+   ("installment.html","무이자·부분무이자 할부 — 카드사·업종별"),
+   ("events.html","발급 이벤트 상세 — 캐시백 추이·발급 적기")]),
+ ("카드 찾기·추천",[
+   ("cards.html","카드 찾기 — 카드사별 신용카드 혜택·연회비 비교"),
+   ("diagnose.html","카드 진단 — 2지선다로 내게 맞는 카드·캐시백 추천"),
+   ("chart.html","티라노차트 — 카드 인기·캐시백 랭킹"),
+   ("trends.html","월별 캐시백 추이 — 발급 캐시백 변화 차트")]),
+ ("가이드·커뮤니티",[
+   ("content.html","카드 가이드 — 연회비 캐시백·전월실적·해외카드 꿀팁"),
+   ("community.html","커뮤니티 — 카드 발급 후기·정보 공유")]),
+ ("서비스 정보",[
+   ("about.html","카드티라노란? — 서비스 소개"),
+   ("business.html","사업자정보"),
+   ("terms.html","이용약관"),
+   ("privacy.html","개인정보처리방침")]),
+]
+SITEMAP_BODY=('<style>.smap{max-width:880px;margin:0 auto;padding:14px 0 8px}.smap h1{font-weight:330;font-size:30px;letter-spacing:-1.1px;margin:6px 0 0}'
+ '.smap .sub{font-weight:400;font-size:13.5px;color:var(--sub);margin:8px 0 0;line-height:1.6}'
+ '.smap section{margin-top:30px}.smap h2{font-size:16px;font-weight:800;letter-spacing:-.3px;margin:0 0 12px;padding-bottom:9px;border-bottom:1px solid var(--line)}'
+ '.smap ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 22px}'
+ '.smap li a{display:block;font-size:14px;font-weight:600;color:var(--text);text-decoration:none;padding:4px 0}.smap li a:hover{color:var(--accent);text-decoration:underline}'
+ '@media(max-width:620px){.smap ul{grid-template-columns:1fr}}'
+ '</style>'
+ '<div class="wrap"><div class="smap">'
+ '<h1>사이트맵</h1><p class="sub">카드티라노의 카드 캐시백·카드 혜택·카드 발급 혜택 비교 메뉴를 한곳에 모았어요. 원하는 카테고리로 바로 이동하세요.</p>'
+ +"".join('<section><h2>'+g+'</h2><ul>'+"".join('<li><a href="'+u+'">'+t+'</a></li>' for u,t in items)+'</ul></section>' for g,items in _SMAP)
+ +'</div></div>')
+page("sitemap.html",BRAND+" | 사이트맵 (전체 메뉴)","카드 캐시백·카드 혜택·카드 발급 혜택 비교 등 카드티라노 전체 메뉴를 한곳에. 이번달 캐시백, 카드 할인 혜택, 카드 찾기, 카드 진단, 무이자 할부까지.","/sitemap.html",SITEMAP_BODY,"",active="")
 
 # robots.txt — AI 크롤러 환영 (AEO)
 # ===== 관심카드 푸시 알림 서비스워커 (옵션 A: 백엔드 불필요, 로컬 체크) =====
@@ -3440,10 +3481,11 @@ _today=datetime.date.today().isoformat()
 # (path, changefreq, priority)
 SITEMAP_PAGES=[
  ("/","daily","1.0"),("/discount.html","daily","0.9"),("/issue.html","daily","0.9"),
- ("/cards.html","daily","0.8"),("/content.html","weekly","0.8"),("/chart.html","daily","0.7"),
- ("/events.html","daily","0.7"),("/cashback.html","weekly","0.6"),("/installment.html","weekly","0.6"),
- ("/trends.html","weekly","0.6"),("/community.html","daily","0.6"),("/business.html","monthly","0.4"),
- ("/search.html","weekly","0.4"),("/terms.html","yearly","0.2"),("/privacy.html","yearly","0.2"),
+ ("/cards.html","daily","0.8"),("/diagnose.html","weekly","0.8"),("/content.html","weekly","0.8"),
+ ("/chart.html","daily","0.7"),("/events.html","daily","0.7"),("/cashback.html","weekly","0.6"),
+ ("/installment.html","weekly","0.6"),("/trends.html","weekly","0.6"),("/community.html","daily","0.6"),
+ ("/about.html","monthly","0.5"),("/business.html","monthly","0.4"),("/search.html","weekly","0.4"),
+ ("/sitemap.html","monthly","0.3"),("/terms.html","yearly","0.2"),("/privacy.html","yearly","0.2"),
 ]
 sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for p,cf,pr in SITEMAP_PAGES:
