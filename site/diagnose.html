@@ -493,6 +493,15 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .s2-brow .bl{flex:1;font-weight:600;font-size:13px;letter-spacing:-.2px}.s2-brow .bl small{display:block;font-weight:400;font-size:11px;color:rgba(0,0,0,.5);margin-top:1px}
 .s2-brow .bv{font-weight:700;font-size:13.5px;letter-spacing:-.3px;white-space:nowrap}
 .s2-pf{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;padding:6px 13px;border-radius:50px}
+/* === 공룡알 부화 일러스트 === */
+.egg-wrap,.egg-shake,.egg-hatch-wrap{display:inline-block;line-height:0}
+.egg-wrap{transform-origin:50% 88%;animation:dgEggWob 1.9s ease-in-out infinite}
+.egg-shake{transform-origin:50% 88%;animation:dgEggShake 2.6s ease-in-out infinite}
+.egg-hatch-wrap{animation:dgEggPop .62s cubic-bezier(.2,.9,.3,1.35) both}
+@keyframes dgEggWob{0%,100%{transform:rotate(-3.5deg)}50%{transform:rotate(3.5deg)}}
+@keyframes dgEggShake{0%,100%{transform:rotate(0)}20%{transform:rotate(-3.5deg)}40%{transform:rotate(2.5deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(3deg)}}
+@keyframes dgEggPop{0%{transform:scale(.4) translateY(8px);opacity:0}55%{transform:scale(1.14) translateY(-2px)}100%{transform:scale(1) translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.egg-wrap,.egg-shake,.egg-hatch-wrap{animation:none}}
 </style><svg style="display:none" aria-hidden="true">
  <symbol id="tyr" viewBox="0 0 100 86"><path fill="currentColor" d="M6 64 C 26 56 36 53 46 53 C 50 44 56 38 66 38 L 62 22 L 74 22 L 72 40 C 78 46 80 54 80 60 C 80 68 74 72 64 72 L 30 72 C 18 72 10 70 6 64 Z"/><rect x="30" y="68" width="9" height="15" rx="3" fill="currentColor"/><rect x="56" y="68" width="9" height="15" rx="3" fill="currentColor"/><path fill="currentColor" d="M58 52 c5 0 9 2 11 5 c-3 -1 -6 -1 -9 0 z"/><rect x="58" y="6" width="26" height="24" rx="6" fill="currentColor"/><circle cx="66" cy="14" r="2.4" fill="#fff"/><rect x="70" y="17" width="9" height="8" rx="1.4" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M70 21h9" stroke="#fff" stroke-width="1.4"/><path d="M74.5 17v8" stroke="#fff" stroke-width="1.4"/></symbol>
  <symbol id="p-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.3 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.3-3.6-8.5S9.6 5.8 12 3.5Z"/></symbol>
@@ -506,6 +515,11 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
  <symbol id="dg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></symbol>
  <symbol id="dg-redo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M19 5v5h-5"/><path d="M18.4 10A7.5 7.5 0 1 0 20 13.5"/></symbol>
  <symbol id="dg-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></symbol>
+ <symbol id="egg-whole" viewBox="0 0 100 120"><path d="M50 8 C68 8 82 40 82 68 C82 97 68 113 50 113 C32 113 18 97 18 68 C18 40 32 8 50 8 Z" fill="#F7E8CF"/><path d="M50 113 C32 113 18 97 18 68 C18 60 19 53 21 46 C26 71 41 87 64 92 C58 105 54 113 50 113 Z" fill="#E9CFA3" opacity=".55"/><ellipse cx="37" cy="50" rx="6" ry="7" fill="#E6A765" opacity=".85"/><ellipse cx="61" cy="38" rx="4.5" ry="5.5" fill="#E6A765" opacity=".85"/><ellipse cx="63" cy="74" rx="7" ry="8" fill="#E6A765" opacity=".85"/><ellipse cx="42" cy="88" rx="4" ry="5" fill="#E6A765" opacity=".85"/><path d="M39 25 C44 21 51 21 56 25" stroke="#fff" stroke-width="3.4" stroke-linecap="round" fill="none" opacity=".6"/></symbol>
+ <symbol id="egg-crack1" viewBox="0 0 100 120"><path d="M50 8 C68 8 82 40 82 68 C82 97 68 113 50 113 C32 113 18 97 18 68 C18 40 32 8 50 8 Z" fill="#F7E8CF"/><path d="M50 113 C32 113 18 97 18 68 C18 60 19 53 21 46 C26 71 41 87 64 92 C58 105 54 113 50 113 Z" fill="#E9CFA3" opacity=".55"/><ellipse cx="37" cy="52" rx="6" ry="7" fill="#E6A765" opacity=".85"/><ellipse cx="63" cy="76" rx="7" ry="8" fill="#E6A765" opacity=".85"/><ellipse cx="42" cy="88" rx="4" ry="5" fill="#E6A765" opacity=".85"/><path d="M47 15 L53 27 L45 35 L52 45" fill="none" stroke="#9C6B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M39 25 C44 21 51 21 56 25" stroke="#fff" stroke-width="3.4" stroke-linecap="round" fill="none" opacity=".55"/></symbol>
+ <symbol id="egg-crack2" viewBox="0 0 100 120"><path d="M50 8 C68 8 82 40 82 68 C82 97 68 113 50 113 C32 113 18 97 18 68 C18 40 32 8 50 8 Z" fill="#F7E8CF"/><path d="M50 113 C32 113 18 97 18 68 C18 60 19 53 21 46 C26 71 41 87 64 92 C58 105 54 113 50 113 Z" fill="#E9CFA3" opacity=".55"/><ellipse cx="37" cy="54" rx="5.5" ry="6.5" fill="#E6A765" opacity=".85"/><ellipse cx="64" cy="78" rx="6.5" ry="7.5" fill="#E6A765" opacity=".85"/><path d="M46 14 L54 26 L44 34 L53 44 L43 53 L51 63" fill="none" stroke="#9C6B2E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 34 L34 38 M53 44 L63 47" fill="none" stroke="#9C6B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="egg-crack3" viewBox="0 0 100 120"><path d="M50 8 C68 8 82 40 82 68 C82 97 68 113 50 113 C32 113 18 97 18 68 C18 40 32 8 50 8 Z" fill="#F7E8CF"/><path d="M50 113 C32 113 18 97 18 68 C18 60 19 53 21 46 C26 71 41 87 64 92 C58 105 54 113 50 113 Z" fill="#E9CFA3" opacity=".55"/><path d="M20 60 L30 54 L37 61 L45 52 L52 60 L60 51 L68 60 L76 55 L81 62" fill="none" stroke="#9C6B2E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M45 14 L53 25 L43 33 L52 42 L42 50 L50 60" fill="none" stroke="#9C6B2E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M43 33 L33 36 M52 42 L62 44 M50 60 L57 70" fill="none" stroke="#9C6B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="egg-hatch" viewBox="0 0 100 120"><g transform="rotate(20 72 18)"><path d="M56 16 L64 9 L78 13 L88 22 L75 25 L63 23 Z" fill="#F7E8CF"/><path d="M63 23 L75 25 L70 21 L65 22 Z" fill="#E9CFA3" opacity=".7"/></g><path d="M33 64 C29 46 36 28 50 28 C64 28 71 46 67 64 Z" fill="#FF7A1A"/><path d="M41 30 l3 -7 l4 7 Z M50 28 l3.5 -7 l3.5 7 Z M59 30 l4 -7 l3 7 Z" fill="#E85D00"/><path d="M42 64 C40 50 44 42 50 42 C56 42 60 50 58 64 Z" fill="#FFC182"/><circle cx="44" cy="46" r="2.8" fill="#2A1C0E"/><circle cx="56" cy="46" r="2.8" fill="#2A1C0E"/><circle cx="45.1" cy="45" r=".9" fill="#fff"/><circle cx="57.1" cy="45" r=".9" fill="#fff"/><path d="M45 55 q5 4 10 0" fill="none" stroke="#2A1C0E" stroke-width="2" stroke-linecap="round"/><path d="M22 65 L30 55 L37 63 L45 53 L52 62 L60 52 L68 62 L76 56 L80 65 C82 92 68 113 50 113 C33 113 18 95 22 65 Z" fill="#F7E8CF"/><path d="M50 113 C33 113 18 95 22 65 C28 84 41 96 64 100 C60 109 54 113 50 113 Z" fill="#E9CFA3" opacity=".5"/><ellipse cx="38" cy="86" rx="5" ry="6" fill="#E6A765" opacity=".8"/><ellipse cx="62" cy="90" rx="6" ry="7" fill="#E6A765" opacity=".8"/></symbol>
  </svg><div class="wrap"><div class="dg-wrap">
  <section class="dg-screen on" id="dgChooser">
   <div style="text-align:center;padding:10px 0 2px">
@@ -539,7 +553,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
   <div class="dg-top" style="justify-content:flex-start;gap:8px"><button class="dg-icnbtn" id="dgIntroBack"><svg><use href="#dg-back"/></svg></button><span class="dg-step">카드 성향 진단</span></div>
   <div class="dg-intro-hero">
    <div class="dg-eb">CARD DIAGNOSIS · 60초</div>
-   <div class="dg-tcircle" style="margin:14px auto 4px;width:118px;height:118px;background:rgba(255,255,255,.55)"><svg width="92" height="80" style="color:#1a1714"><use href="#tyr"/></svg></div>
+   <div class="dg-tcircle" style="margin:14px auto 4px;width:118px;height:118px;background:rgba(255,255,255,.55)"><span class="egg-wrap"><svg width="72" height="90" viewBox="0 0 100 120"><use href="#egg-whole"/></svg></span></div>
    <h1>6개 질문이면<br>내 카드가 보여요</h1>
    <p>2지선다만 누르면 끝. 당신께 맞는 카드와 지금 가장 큰 캐시백 플랫폼·마감 임박 이벤트까지 찾아드려요.</p>
   </div>
@@ -550,9 +564,9 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
   <div class="dg-top"><button class="dg-icnbtn" id="dgBack"><svg><use href="#dg-back"/></svg></button><span class="dg-step" id="dgStepN">01 / 06</span><button class="dg-icnbtn" id="dgClose"><svg><use href="#dg-x"/></svg></button></div>
   <div class="dg-prog"><i id="dgProg" style="width:16.6%"></i></div>
   <div class="dg-card"><div class="dg-qgrid">
-   <div class="qleft"><div class="dg-tcircle" id="dgTcPc" style="width:150px;height:150px;background:var(--block-lime)"><svg width="116" height="100" style="color:#1a1714"><use href="#tyr"/></svg><span class="prop" id="dgPropPc" style="width:48px;height:48px"><svg width="26" height="26"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="dgThemePc" style="margin-top:20px">STEP 01 · 소비처</div></div>
+   <div class="qleft"><div class="dg-tcircle" id="dgTcPc" style="width:150px;height:150px;background:var(--block-lime)"><span class="egg-shake"><svg width="86" height="106" viewBox="0 0 100 120"><use id="dgEggPc" href="#egg-crack1"/></svg></span><span class="prop" id="dgPropPc" style="width:48px;height:48px"><svg width="26" height="26"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="dgThemePc" style="margin-top:20px">STEP 01 · 소비처</div></div>
    <div class="qright">
-    <div class="dg-qhead mo" style="padding:18px 0 0"><div class="dg-tcircle" id="dgTcMo" style="width:128px;height:128px;margin:0 auto;background:var(--block-lime)"><svg width="96" height="84" style="color:#1a1714"><use href="#tyr"/></svg><span class="prop" id="dgPropMo" style="width:42px;height:42px"><svg width="23" height="23"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="dgThemeMo" style="margin-top:10px">STEP 01 · 소비처</div></div>
+    <div class="dg-qhead mo" style="padding:18px 0 0"><div class="dg-tcircle" id="dgTcMo" style="width:128px;height:128px;margin:0 auto;background:var(--block-lime)"><span class="egg-shake"><svg width="74" height="92" viewBox="0 0 100 120"><use id="dgEggMo" href="#egg-crack1"/></svg></span><span class="prop" id="dgPropMo" style="width:42px;height:42px"><svg width="23" height="23"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="dgThemeMo" style="margin-top:10px">STEP 01 · 소비처</div></div>
     <h2 id="dgQ">질문</h2>
     <div class="dg-choices" id="dgChoices"></div>
    </div>
@@ -574,7 +588,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
  </section>
  <section class="dg-screen" id="dgS2Issuers">
   <div class="dg-top"><button class="dg-icnbtn" id="s2BackI"><svg><use href="#dg-back"/></svg></button><span class="dg-step">카드사 선택</span><button class="dg-icnbtn" id="s2CloseI"><svg><use href="#dg-x"/></svg></button></div>
-  <div class="dg-qhead" style="padding:6px 12px 0"><h2 style="font-weight:330;font-size:25px;letter-spacing:-.9px;line-height:1.25;margin:8px 0 0">관심 있는 카드사를<br>모두 골라주세요</h2><p style="font-weight:400;font-size:13px;color:rgba(0,0,0,.58);margin:9px 0 0">복수 선택할 수 있어요 · 고른 카드사끼리 비교해요</p></div>
+  <div class="dg-qhead" style="padding:6px 12px 0"><div class="dg-tcircle" style="width:96px;height:96px;margin:2px auto 0;background:var(--block-lime)"><span class="egg-wrap"><svg width="58" height="72" viewBox="0 0 100 120"><use href="#egg-whole"/></svg></span></div><h2 style="font-weight:330;font-size:25px;letter-spacing:-.9px;line-height:1.25;margin:14px 0 0">관심 있는 카드사를<br>모두 골라주세요</h2><p style="font-weight:400;font-size:13px;color:rgba(0,0,0,.58);margin:9px 0 0">복수 선택할 수 있어요 · 고른 카드사끼리 비교해요</p></div>
   <div class="s2-iss-grid" id="s2IssGrid"></div>
   <div style="padding:18px 0 26px"><button class="dg-cta" id="s2IssNext" disabled>다음 <svg><use href="#dg-right"/></svg></button></div>
  </section>
@@ -582,9 +596,9 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
   <div class="dg-top"><button class="dg-icnbtn" id="s2Back"><svg><use href="#dg-back"/></svg></button><span class="dg-step" id="s2StepN">01 / 07</span><button class="dg-icnbtn" id="s2CloseQ"><svg><use href="#dg-x"/></svg></button></div>
   <div class="dg-prog"><i id="s2Prog" style="width:14.2%"></i></div>
   <div class="dg-card"><div class="dg-qgrid">
-   <div class="qleft"><div class="dg-tcircle" id="s2TcPc" style="width:150px;height:150px;background:var(--block-lime)"><svg width="116" height="100" style="color:#1a1714"><use href="#tyr"/></svg><span class="prop" id="s2PropPc" style="width:48px;height:48px"><svg width="26" height="26"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="s2ThemePc" style="margin-top:20px">STEP 01</div></div>
+   <div class="qleft"><div class="dg-tcircle" id="s2TcPc" style="width:150px;height:150px;background:var(--block-lime)"><span class="egg-shake"><svg width="86" height="106" viewBox="0 0 100 120"><use id="s2EggPc" href="#egg-crack1"/></svg></span><span class="prop" id="s2PropPc" style="width:48px;height:48px"><svg width="26" height="26"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="s2ThemePc" style="margin-top:20px">STEP 01</div></div>
    <div class="qright">
-    <div class="dg-qhead mo" style="padding:18px 0 0"><div class="dg-tcircle" id="s2TcMo" style="width:128px;height:128px;margin:0 auto;background:var(--block-lime)"><svg width="96" height="84" style="color:#1a1714"><use href="#tyr"/></svg><span class="prop" id="s2PropMo" style="width:42px;height:42px"><svg width="23" height="23"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="s2ThemeMo" style="margin-top:10px">STEP 01</div></div>
+    <div class="dg-qhead mo" style="padding:18px 0 0"><div class="dg-tcircle" id="s2TcMo" style="width:128px;height:128px;margin:0 auto;background:var(--block-lime)"><span class="egg-shake"><svg width="74" height="92" viewBox="0 0 100 120"><use id="s2EggMo" href="#egg-crack1"/></svg></span><span class="prop" id="s2PropMo" style="width:42px;height:42px"><svg width="23" height="23"><use href="#p-globe"/></svg></span></div><div class="dg-eb" id="s2ThemeMo" style="margin-top:10px">STEP 01</div></div>
     <h2 id="s2Q">질문</h2>
     <div class="dg-choices" id="s2Choices"></div>
    </div>
@@ -761,6 +775,8 @@ function load(){try{var j=JSON.parse(localStorage.getItem(LS)||'null');if(j&&j.a
 function clearLS(){try{localStorage.removeItem(LS);}catch(e){}}
 var REDUCE=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function show(id){var ss=document.querySelectorAll('.dg-screen');for(var i=0;i<ss.length;i++)ss[i].classList.toggle('on',ss[i].id===id);window.scrollTo(0,0);}
+function eggStage(n,N){var p=n/N;if(p<=0.34)return'#egg-crack1';if(p<=0.7)return'#egg-crack2';return'#egg-crack3';}
+function setEgg(ids,n,N){var h=eggStage(n,N);ids.forEach(function(id){var el=document.getElementById(id);if(el)el.setAttribute('href',h);});}
 function setTheme(){var Q=QS[state.step];var n=state.step+1;
  document.getElementById('dgStepN').textContent=(n<10?'0'+n:n)+' / 06';
  document.getElementById('dgProg').style.width=(n/6*100)+'%';
@@ -769,6 +785,7 @@ function setTheme(){var Q=QS[state.step];var n=state.step+1;
  ['dgThemePc','dgThemeMo'].forEach(function(id){document.getElementById(id).textContent=th;});
  ['dgTcPc','dgTcMo'].forEach(function(id){document.getElementById(id).style.background=Q.bg;});
  ['dgPropPc','dgPropMo'].forEach(function(id){document.getElementById(id).querySelector('use').setAttribute('href',Q.prop);});
+ setEgg(['dgEggPc','dgEggMo'],n,6);
  var sel=state.answers[state.step];
  document.getElementById('dgChoices').innerHTML=[['A','a'],['B','b']].map(function(p){var o=Q[p[1]];var on=sel===p[1];
   return '<button class="choice'+(on?' sel':'')+'" data-opt="'+p[1]+'"><span class="k">'+(on?'<svg><use href="#dg-check"/></svg>':p[0])+'</span><span style="flex:1"><span class="cl">'+o.l+'</span><span class="cs">'+o.s+'</span></span></button>';
@@ -794,10 +811,10 @@ function finish(){var r=pickArch();if(!r){show('dgResult');document.getElementBy
  var a=r.a,card=r.card;var img=card.img||IMGN[(card.name||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'')]||'';
  var desc=({'삼성카드':'해외·여행에 강하고 무실적 캐시백까지 — 당신의 응답에 가장 잘 맞았어요.','현대카드':'마일·포인트 적립과 프리미엄 혜택 — 6개 응답에 가장 잘 맞았어요.','KB국민카드':'조건 없이 일상에서 즉시 캐시백 — 당신의 응답에 가장 잘 맞았어요.','신한카드':'구독·온라인 결제에서 즉시 돌려받기 — 응답에 가장 잘 맞았어요.','롯데카드':'온라인 쇼핑 적립에 강한 한 장 — 응답에 가장 잘 맞았어요.','우리카드':'교통·통신 등 생활 고정비를 알뜰하게 — 응답에 잘 맞았어요.','하나카드':'주유·생활 결제에서 즉시 캐시백 — 응답에 가장 잘 맞았어요.','BC카드':'배달·외식 등 일상 결제 캐시백 — 응답에 잘 맞았어요.'})[a.iss]||'당신의 응답에 가장 잘 맞는 카드예요.';
  var plateImg=img?'<img src="'+encodeURI(img)+'" alt="" onerror="this.style.display=\'none\'">':'';
- var heroInner='<span class="dg-badge">당신의 카드</span><div class="dg-plate"><div class="pl">'+plateImg+'</div><span class="tyr"><svg width="58" height="50"><use href="#tyr"/></svg></span></div><h2>'+card.name+'</h2><div class="rd">'+desc+'</div>';
+ var heroInner='<span class="dg-badge">당신의 카드</span><div class="dg-plate"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="64" height="76" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2>'+card.name+'</h2><div class="rd">'+desc+'</div>';
  document.getElementById('dgRhero').innerHTML=heroInner;
  // desktop left (mirror hero)
- document.getElementById('dgRleft').innerHTML='<span class="dg-badge">당신의 카드</span><div class="dg-plate" style="margin-top:20px"><div class="pl">'+plateImg+'</div><span class="tyr"><svg width="64" height="55"><use href="#tyr"/></svg></span></div><h2 style="font-weight:700;font-size:24px;letter-spacing:-.7px;line-height:1.22;margin:20px 0 0">'+card.name+'</h2><div class="rd" style="font-size:13.5px;color:rgba(0,0,0,.66);margin:9px 4px 0">'+desc+'</div><div class="dg-chips" style="justify-content:center;margin-top:16px">'+a.chips.map(function(c){return '<span style="background:rgba(255,255,255,.6);border:0">'+c+'</span>';}).join('')+'</div>';
+ document.getElementById('dgRleft').innerHTML='<span class="dg-badge">당신의 카드</span><div class="dg-plate" style="margin-top:20px"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="70" height="84" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2 style="font-weight:700;font-size:24px;letter-spacing:-.7px;line-height:1.22;margin:20px 0 0">'+card.name+'</h2><div class="rd" style="font-size:13.5px;color:rgba(0,0,0,.66);margin:9px 4px 0">'+desc+'</div><div class="dg-chips" style="justify-content:center;margin-top:16px">'+a.chips.map(function(c){return '<span style="background:rgba(255,255,255,.6);border:0">'+c+'</span>';}).join('')+'</div>';
  document.getElementById('dgWhy').innerHTML=a.chips.map(function(c){return '<span>'+c+'</span>';}).join('');
  // platform bars
  var pm=platMap(card);var ks=PORD.filter(function(p){return pm[p];}).sort(function(x,y){return pm[y]-pm[x];});var mx=ks.length?pm[ks[0]]:0;
@@ -867,12 +884,12 @@ function s2Finish(){var f=s2Flags();
  var img=p.img||IMGN[(p.name||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'')]||'';
  var plateImg=img?'<img src="'+encodeURI(img)+'" alt="" onerror="this.style.display=\'none\'">':'';
  var pill='<span class="s2-pf" style="'+s2PfStyle(pl)+'">'+(PN[pl]||pl)+' 발급 기준</span>';
- var heroInner='<span class="dg-badge">추천 카드</span><div class="dg-plate"><div class="pl">'+plateImg+'</div><span class="tyr"><svg width="58" height="50"><use href="#tyr"/></svg></span></div><h2>'+p.name+'</h2>'
+ var heroInner='<span class="dg-badge">추천 카드</span><div class="dg-plate"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="64" height="76" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2>'+p.name+'</h2>'
   +'<div class="rd">'+top.label+'카드 · 입력하신 소비 유형 기준 예상 캐시백이 가장 컸어요.</div>'
   +'<div class="s2-total" style="margin-top:14px"><div class="amt"><small>예상 </small>'+_wm(rec.total)+'</div></div>'
   +'<div style="margin-top:12px">'+pill+'</div>';
  document.getElementById('s2Rhero').innerHTML=heroInner;
- document.getElementById('s2Rleft').innerHTML='<span class="dg-badge">추천 카드</span><div class="dg-plate" style="margin-top:20px"><div class="pl">'+plateImg+'</div><span class="tyr"><svg width="64" height="55"><use href="#tyr"/></svg></span></div><h2 style="font-weight:700;font-size:22px;letter-spacing:-.6px;line-height:1.22;margin:20px 0 0">'+p.name+'</h2><div class="s2-total" style="margin-top:14px"><div class="amt"><small>예상 </small>'+_wm(rec.total)+'</div></div><div style="margin-top:14px">'+pill+'</div>';
+ document.getElementById('s2Rleft').innerHTML='<span class="dg-badge">추천 카드</span><div class="dg-plate" style="margin-top:20px"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="70" height="84" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2 style="font-weight:700;font-size:22px;letter-spacing:-.6px;line-height:1.22;margin:20px 0 0">'+p.name+'</h2><div class="s2-total" style="margin-top:14px"><div class="amt"><small>예상 </small>'+_wm(rec.total)+'</div></div><div style="margin-top:14px">'+pill+'</div>';
  // 분해
  var brk=[{label:'주요 캐시백',sub:rec.est.highspend?'월 50만원+ 실적 충족 기준':'실적 미달 가정 — 60%만 반영',won:rec.est.mainGot,on:true}];
  rec.est.detail.forEach(function(d){brk.push({label:d.label,sub:d.on?'해당 소비에 적용':'해당 소비 없음 — 미반영',won:d.won,on:d.on});});
@@ -895,6 +912,7 @@ function s2SetQ(){var Q=S2Q[s2.step];var n=s2.step+1,N=S2Q.length;
  ['s2ThemePc','s2ThemeMo'].forEach(function(id){document.getElementById(id).textContent=th;});
  ['s2TcPc','s2TcMo'].forEach(function(id){document.getElementById(id).style.background=Q.bg;});
  ['s2PropPc','s2PropMo'].forEach(function(id){document.getElementById(id).querySelector('use').setAttribute('href',Q.prop);});
+ setEgg(['s2EggPc','s2EggMo'],n,N);
  var sel=s2.ans[Q.key];
  document.getElementById('s2Choices').innerHTML=[['A','a'],['B','b']].map(function(pp){var o=Q[pp[1]];var on=sel===pp[1];return '<button class="choice'+(on?' sel':'')+'" data-opt="'+pp[1]+'"><span class="k">'+(on?'<svg><use href="#dg-check"/></svg>':pp[0])+'</span><span style="flex:1"><span class="cl">'+o.l+'</span><span class="cs">'+o.s+'</span></span></button>';}).join('');
 }
