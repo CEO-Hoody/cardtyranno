@@ -226,6 +226,17 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .drawer a.soon{opacity:.55}
 .drawer a .dchev{width:18px;height:18px;color:rgba(0,0,0,.3);flex:0 0 auto}
 .drawer .soon-tag{font-family:var(--font-mono,monospace);font-size:8px;font-weight:600;background:var(--surface-soft);color:rgba(0,0,0,.45);padding:2px 6px;border-radius:50px;letter-spacing:0}
+/* 공유하기 — 사이드패널·페이지 하단 공통 */
+.drawer-share-wrap{padding:16px 18px 24px}
+.drawer-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;border:1.5px solid var(--hairline);border-radius:50px;background:#fff;color:var(--text);font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:transform .12s ease,border-color .12s ease}
+.drawer-share svg{width:17px;height:17px;flex:0 0 auto}
+.drawer-share:hover{border-color:rgba(0,0,0,.4)}.drawer-share:active{transform:scale(.97)}
+.pgshare{padding:30px 0 6px;text-align:center}
+.pgshare .pgshare-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border:1.5px solid var(--hairline);border-radius:50px;background:#fff;color:var(--text);font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:transform .12s ease,border-color .12s ease}
+.pgshare .pgshare-btn svg{width:17px;height:17px;flex:0 0 auto}
+.pgshare .pgshare-btn:hover{border-color:rgba(0,0,0,.4)}.pgshare .pgshare-btn:active{transform:scale(.97)}
+.ct-toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%) translateY(12px);background:#1a1714;color:#fff;font-weight:540;font-size:13.5px;padding:12px 20px;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,.22);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:2000;white-space:nowrap}
+.ct-toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 /* 인터랙션: 카드 플레이트·광고배너 호버 */
 .ctile .plate img{transition:transform .18s ease}.ctile:hover .plate img{transform:scale(1.07)}
 .adbanner img{transition:transform .25s ease}.adbanner{transition:box-shadow .18s,transform .18s}.adbanner:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.12)}.adbanner:hover img{transform:scale(1.02)}
@@ -447,6 +458,11 @@ function isFav(id){return getFav().indexOf(id)>=0;}
 function toggleFav(id){var a=getFav();var i=a.indexOf(id);if(i>=0)a.splice(i,1);else a.push(id);setFav(a);updateFavCount();if(window.ctPushSync)try{ctPushSync();}catch(e){}return i<0;}
 function updateFavCount(){var el=document.getElementById('favCount');if(el){var n=getFav().length;el.textContent=n;el.style.display=n?'inline-block':'none';}}
 function _pg(){return location.pathname.split('/').pop()||'index.html';}
+// 공유하기: Web Share API 우선, 미지원 시 클립보드 복사 + 토스트
+function ctToast(msg){var t=document.getElementById('ctToast');if(!t){t=document.createElement('div');t.id='ctToast';t.className='ct-toast';document.body.appendChild(t);}t.textContent=msg;void t.offsetWidth;t.classList.add('on');clearTimeout(ctToast._t);ctToast._t=setTimeout(function(){t.classList.remove('on');},2000);}
+function _ctCopyFallback(text){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok;}catch(e){return false;}}
+function ctCopyLink(url){var ok=function(){ctToast('링크가 복사됐어요');};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){if(_ctCopyFallback(url))ok();else ctToast('복사에 실패했어요');});}else if(_ctCopyFallback(url)){ok();}else{ctToast('복사에 실패했어요');}}
+function ctShare(url,title,text){try{if(navigator.share){navigator.share({title:title,text:text,url:url}).catch(function(){});return;}}catch(e){}ctCopyLink(url);}
 function track(type,label){try{
  var a=JSON.parse(localStorage.getItem('ct_evt')||'[]');
  a.push({t:type,l:(label||'').toString().trim().slice(0,80),p:_pg(),ts:Date.now()});
@@ -466,6 +482,8 @@ function bindTrack(){document.addEventListener('click',function(ev){
  el=t.closest('.rk,.crow');if(el){track('rank',(el.querySelector('.rn,.cn')||{}).textContent||'');return;}
 },true);}
 function bindUI(){var d=document.getElementById('drawer'),s=document.getElementById('scrim'),m=document.getElementById('menuBtn');if(m)m.onclick=function(){d.classList.add('on');s.classList.add('on');};if(s)s.onclick=function(){d.classList.remove('on');s.classList.remove('on');};var dx=document.getElementById('drawerX');if(dx)dx.onclick=function(){d.classList.remove('on');s.classList.remove('on');};
+ var dsh=document.getElementById('drawerShare');if(dsh)dsh.onclick=function(){ctShare(location.origin+'/','카드티라노','같은 카드도 발급 채널 따라 캐시백이 달라요. 토스·네이버페이·카카오페이·아정당·카드고릴라·뱅크샐러드 6개 플랫폼 캐시백을 한눈에 비교하세요.');};
+ var psh=document.getElementById('pageShare');if(psh)psh.onclick=function(){ctShare(location.href,document.title||'카드티라노','카드티라노에서 확인해 보세요.');};
  function go(){var q=(document.getElementById('siteSearch')||{}).value||'';location.href='search.html?q='+encodeURIComponent(q);}
  var f=document.getElementById('siteSearch');if(f)f.addEventListener('keydown',function(e){if(e.key==='Enter')go();});
  ['searchGo','searchGo2'].forEach(function(id){var b=document.getElementById(id);if(b)b.onclick=go;});
@@ -552,7 +570,8 @@ def header(active):
     gnb="".join('<a href="%s" class="%s%s"><span class="nm">%s%s</span><span class="sub">%s</span></a>'%(u,("on" if k==active else ""),(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
     drawer="".join('<a href="%s" class="%s"><div class="dt"><div class="dn">%s%s</div><div class="ds">%s</div></div><svg class="dchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>'%(u,("on" if k==active else "")+(" soon" if soon else ""),t,(_st if soon else ''),s) for k,u,t,s,soon in L)
     return (ICONS+'<div class="scrim" id="scrim"></div><aside class="drawer" id="drawer">'
-            '<div class="drawer-hd"><div class="logo"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div><button class="drawer-x" id="drawerX" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'+drawer+'</aside>'
+            '<div class="drawer-hd"><div class="logo"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></div><button class="drawer-x" id="drawerX" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'+drawer
+            +'<div class="drawer-share-wrap"><button class="drawer-share" id="drawerShare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M8 7l4-3.5L16 7"/><path d="M5.5 12v6.5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V12"/></svg>카드티라노 홈 공유하기</button></div></aside>'
             '<div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:contact@cardtyranno.com">제휴·광고 문의</a></div></div>'
             '<header class="hd"><div class="wrap row">'
             '<span class="icbtn menu" id="menuBtn">☰</span>'
@@ -590,6 +609,11 @@ FOOTER=('<footer><div class="wrap foot">'
  '<div class="biz muted">카드티라노(CardTyranno) · 쥬라기랩스 · 제휴/광고 contact@cardtyranno.com</div>'
  '<div class="biz">© 2026 CARDTYRANNO. All rights reserved.</div></div></footer>')
 
+# 각 페이지 하단 공유하기(현재 페이지 URL 공유) — page()가 본문 뒤·푸터 앞에 삽입
+PAGE_SHARE=('<div class="pgshare"><div class="wrap"><button class="pgshare-btn" id="pageShare">'
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M8 7l4-3.5L16 7"/><path d="M5.5 12v6.5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V12"/></svg>'
+ '이 페이지 공유하기</button></div></div>')
+
 def jsonld_base(path):
     site={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"alternateName":BRAND_EN,"url":BASE,
       "description":DESC_SITE,"inLanguage":"ko",
@@ -623,7 +647,7 @@ def page(fname,title,desc,path,body,script="",extra_jsonld=None,searchbar=False,
       +'<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">'
       +'<style>'+CSS+'</style></head><body>'
       +header(active)+(SEARCHBAR if searchbar else "")+(CATSTRIP if catstrip else "")
-      +body+FOOTER+MTABBAR+'<script>'+HELPERS+script+'\nbindUI();</script></body></html>')
+      +body+PAGE_SHARE+FOOTER+MTABBAR+'<script>'+HELPERS+script+'\nbindUI();</script></body></html>')
     open(os.path.join(SITE,fname),"w",encoding="utf-8").write(html)
 
 # ===== 티라노 브랜드 플레이트 배너(특정 카드 아님 · 서비스 대표 장식) =====
@@ -904,7 +928,7 @@ CARDS_BODY=('<style>'
 CARDS_JS=r"""
 var PKO={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
 var PCO={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
-var PORDK=['toss','cardgorilla','banksalad','ajungdang','naver','kakaopay'];
+var PORDK=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];
 var ALL=[],st={cat:'전체',iss:'전체',fee:100000,sort:'cash',q:''};
 var CATS=['전체','여행','쇼핑','교통','구독','생활요금'];
 var CATKW={'여행':['여행','항공','해외','면세','라운지','마일','트래블','호텔'],'쇼핑':['쇼핑','백화점','온라인','아울렛','쿠팡','11번가','마트','편의점','다이닝','외식','적립'],'교통':['교통','대중교통','버스','지하철','하이패스','주유','충전','자동차','대중'],'구독':['구독','멤버십','스트리밍','넷플','유튜브','ott','영화','문화','카페','커피'],'생활요금':['통신','공과금','관리비','자동이체','렌탈','요금','공공','생활']};
@@ -1262,7 +1286,7 @@ var PN={cardgorilla:"카드고릴라",banksalad:"뱅크샐러드",toss:"토스",
 var PSHORT={cardgorilla:"고릴라",banksalad:"뱅샐",toss:"토스",naver:"네이버",ajungdang:"아정당",kakaopay:"카카오"};
 var PBC={cardgorilla:"#FF6A13",banksalad:"#19C37D",toss:"#3182F6",ajungdang:"#1B64DA",naver:"#03C75A",kakaopay:"#FEE500"};
 function _pdk(pk,shrt){return '<span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><i style="width:7px;height:7px;border-radius:50%;background:'+(PBC[pk]||"#888")+';flex:0 0 auto"></i>'+((shrt?PSHORT[pk]:PN[pk])||pk)+'</span>';}
-var PORD=["cardgorilla","banksalad","toss","ajungdang","naver","kakaopay"];
+var PORD=["toss","naver","kakaopay","ajungdang","cardgorilla","banksalad"];
 var VIS={cardgorilla:1,banksalad:1,toss:1,ajungdang:1,naver:1,kakaopay:1};   // 표시 플랫폼(최소 2)
 function visList(){return PORD.filter(function(pk){return VIS[pk];});}
 var HEART='<svg class="hrt" viewBox="0 0 24 24" width="11" height="11" style="vertical-align:-1px;margin-right:3px"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg>';
@@ -1917,7 +1941,7 @@ CHART_BODY=('<style>'
 CHART_JS=r"""
 var PKO={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
 var PCO={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
-var PORDK=['toss','cardgorilla','banksalad','ajungdang','naver','kakaopay'];
+var PORDK=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];
 var MD=[],NAME2={},CUR=null,PREV=null,platFilter='all',chMode='pop',POP=[],CASH=[],slide=0,slideIv=null;
 function _nk(s){return (s||'').replace(/[\s()（）·\-_/+]+/g,'').toLowerCase();}
 function wman(v){if(v==null||v===0)return '0';var m=v/10000;return (m>=10?Math.round(m):Math.round(m*10)/10)+'만원';}
@@ -2261,7 +2285,7 @@ DASHBOARD_BODY=('<style>'
  '<div class="dsec"><h3>🕒 최근 활동</h3><div id="log"></div></div></div>')
 DASHBOARD_JS=r"""
 // === 스크래핑 헬스 — 콜렉터 산출물(platform_events.json) 실시간 분석 ===
-(function(){var PN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};var PORD=['cardgorilla','banksalad','toss','ajungdang','naver','kakaopay'];var PC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a',kakaopay:'#e8b800'};
+(function(){var PN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};var PORD=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];var PC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a',kakaopay:'#e8b800'};
  function wm(n){return n>=10000?(Math.round(n/1000)/10+'만'):(n||0);}
  fetch('platform_events.json').then(function(r){return r.json();}).then(function(d){
   var prods=d.products||[];var withEv=prods.filter(function(p){return (p.events||[]).length;});
@@ -2351,7 +2375,7 @@ TRENDS_BODY=('<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1
  '</div>')
 TRENDS_JS=r"""
 var TPN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
-var TPORD=['cardgorilla','banksalad','toss','ajungdang','naver','kakaopay'];
+var TPORD=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];
 var TPC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a',kakaopay:'#e8b800'};
 var TMONTHS=[],SNAP={},chIss=null,chProd=null;
 function tesc(s){return (s||'').toString().replace(/</g,'&lt;');}
@@ -2693,7 +2717,7 @@ DIAG_BODY=(r'''<style>
  </section>
  </div></div>''')
 DIAG_JS=r"""
-var PORD=['toss','cardgorilla','banksalad','ajungdang','naver','kakaopay'];
+var PORD=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];
 var PN={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이',issuer:'카드사 직접'};
 var PC={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
 var QS=[
