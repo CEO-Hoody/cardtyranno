@@ -192,6 +192,13 @@ def export_json(con):
                     mw=_cm; bw=_tt-_cm
                 elif bw==0 and 0<_cb<_tt:            # 주요 없음 + 부가 수치 있음(자동납부 등) → 부가=bonusWon, 주요=전체-부가
                     bw=_cb; mw=_tt-_cb
+            # 분해 신뢰도 가드: 아정당 등은 거주지 main이 없으면 '전체-부가'로 main이 부풀 수 있음(예 74만-4만=70만).
+            # naver/아정당/카카오에서 main이 전체의 70% 이상이면 '분해 실패'로 보고 미방출(null).
+            # 프론트 splTier가 카드 main_tier 우선 사용·null 폴백하므로 표시엔 무해, raw 뻥튀기만 제거(혼동 방지).
+            # 아정당은 main을 '전체-부가'로 계산(거주지 main 직접추출 없음)이라 부가 미달 시 main이 부풀음(74만-4만=70만).
+            # naver/카카오는 거주지·시드 기반 실측 split이라 제외. 아정당만: 큰 이벤트(30만↑)에서 main이 전체의 70%↑면 분해실패로 보고 미방출(null).
+            if r[0]=="ajungdang" and mw and (r[2] or 0)>=300000 and mw>=0.7*(r[2] or 0):
+                mw=None; bw=None   # 프론트 splTier(카드 main_tier)·null 폴백이라 표시 무해, raw 뻥튀기만 제거
             e={"platform":r[0],"reward_text":r[1],"reward_won":r[2],"period_end":r[3],"url":r[4],
                "main_won":mw,"bonus_won":bw}
             if comps and bw>0: e["breakdown"]=comps   # 부가가 실제 있을 때만 첨부
@@ -854,8 +861,10 @@ if __name__=="__main__":
         aj=_ajraw.get("cards",{})
         if not aj: print("⚠️ 아정당 수집 0건 — pending(업데이트 예정) 처리."); PENDING_PLATFORMS.add("ajungdang")
         bynk={_nk(p["name"]):p for p in products}
-        try: _ressub=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("subByName",{})
-        except Exception: _ressub={}
+        try:
+            _rm=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8"))
+            _resmain_a=_rm.get("mainByName",{}); _ressub=_rm.get("subByName",{})   # 거주지 아정당 실측 주요/부가
+        except Exception: _resmain_a={}; _ressub={}
         _abn=0
         for nm,info in aj.items():
             p=bynk.get(_nk(nm))
@@ -864,10 +873,17 @@ if __name__=="__main__":
             _rw=info["reward_won"]
             injected[(p["name"],"ajungdang")]={"reward_won":_rw,"reward_text":info.get("reward_text"),
                                                "period_start":None,"period_end":None,"url":info.get("url","")}
-            _abw=_text_bd(info.get("reward_text") or "", _rw)        # 시드 텍스트 '+' 티어
-            if _abw<=0:                                              # 없으면 거주지 부가 티어(subByName)
-                _abw=min(sum(_won_of(s) for s in (_ressub.get(_nk(nm)) or [])), max(_rw-10000,0))
-            if _abw>0: BREAKDOWN[(p["name"],"ajungdang")]={"main":max(_rw-_abw,0),"bonus":_abw}; _abn+=1
+            # ① 거주지 실측 주요(mainByName) 직접 사용 — '20만원 쓰고 14만원'→14만(우선, 정확). 부가=전체-주요.
+            _amain=_won_of(_resmain_a.get(_nk(nm)) or "")
+            if _amain and 0<_amain<_rw:
+                BREAKDOWN[(p["name"],"ajungdang")]={"main":_amain,"bonus":_rw-_amain}; _abn+=1
+            else:
+                # ② 실측 주요 없을 때만 '전체-부가' 폴백 — 단 부가가 충분해 main이 전체의 70% 미만일 때만(뻥튀기 금지).
+                _abw=_text_bd(info.get("reward_text") or "", _rw)
+                if _abw<=0:
+                    _abw=min(sum(_won_of(s) for s in (_ressub.get(_nk(nm)) or [])), max(_rw-10000,0))
+                if _abw>0 and (_rw-_abw)<0.7*_rw:
+                    BREAKDOWN[(p["name"],"ajungdang")]={"main":_rw-_abw,"bonus":_abw}; _abn+=1
         if injected: print(f"아정당 로컬 주입 {len(injected)}건 (부가 분해 {_abn}건)")
     except FileNotFoundError:
         pass
