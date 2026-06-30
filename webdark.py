@@ -11,7 +11,7 @@ CF_BEACON_TOKEN=""
 #  네이버 서치어드바이저(searchadvisor.naver.com) → 사이트 등록 → HTML 태그 방식의 content 값만 붙여넣기
 NAVER_SITE_VERIFICATION=""
 #  구글 서치콘솔(search.google.com/search-console) → HTML 태그 방식의 content 값만 붙여넣기
-GOOGLE_SITE_VERIFICATION=""
+GOOGLE_SITE_VERIFICATION="CJtR_-EgzygFicvG6SX4pkTjKKCQC88HGHKgMy0brzM"
 DESC_SITE="여러 카드 중개 플랫폼(토스 카드라운지·카드고릴라·아정당·뱅크샐러드)의 카드 발급 혜택과 결제 할인 이벤트를 한곳에서 비교·분석하는 카드 비교 플랫폼."
 
 CSS = r"""
