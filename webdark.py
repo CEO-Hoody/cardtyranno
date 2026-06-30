@@ -2683,6 +2683,21 @@ DIAG_BODY=(r'''<style>
 .choice .k{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono,monospace);font-size:13px;font-weight:600;color:rgba(0,0,0,.55)}.choice .k svg{width:16px;height:16px}
 .choice .cl{display:block;font-weight:700;font-size:15.5px;letter-spacing:-.3px}.choice .cs{display:block;font-weight:400;font-size:12.5px;color:rgba(0,0,0,.58);margin-top:2px}
 .choice.sel{border-color:#000;background:#000;color:#fff}.choice.sel .k{border-color:#fff;background:#fff;color:#000}.choice.sel .cs{color:rgba(255,255,255,.66)}
+/* 4~8지선다 아이콘 2열 그리드 */
+.dg-grid{padding:18px 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dg-gopt{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 14px;border-radius:14px;border:1.5px solid var(--hairline);background:#fff;color:#111;text-align:left;cursor:pointer;font-family:inherit;min-height:56px;transition:transform .12s ease}
+.dg-gopt:active{transform:scale(.97)}
+.dg-gopt .gi{width:32px;height:32px;border-radius:9px;background:var(--surface-soft);color:#1a1714;display:flex;align-items:center;justify-content:center}.dg-gopt .gi svg{width:18px;height:18px}
+.dg-gopt .gt{font-weight:700;font-size:13px;letter-spacing:-.3px}
+.dg-gopt.sel{border-color:#000;background:#000;color:#fff}.dg-gopt.sel .gi{background:rgba(255,255,255,.16);color:#fff}
+/* 결과 · 내 진단 유형 비중 */
+.dg-dist .bar{display:flex;height:18px;border-radius:50px;overflow:hidden;margin-top:11px}
+.dg-dist .bar span{display:block;height:100%}
+.dg-dist .lg{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:12px}
+.dg-dist .lg .it{display:flex;align-items:center;gap:7px}
+.dg-dist .lg .dt{width:8px;height:8px;border-radius:50%}
+.dg-dist .lg .nm{font-size:12px}.dg-dist .lg .pc{font-weight:700;font-size:12px}
+.dg-dist .lg .me{font-family:var(--font-mono,monospace);font-size:8px;background:var(--accent-magenta);color:#fff;padding:2px 6px;border-radius:50px;text-transform:uppercase}
 /* result */
 .dg-rhero{background:var(--block-lime);border-radius:26px;padding:22px 22px 24px;text-align:center;position:relative;overflow:hidden}
 .dg-badge{display:inline-block;font-family:var(--font-mono,monospace);font-size:9px;background:var(--accent-magenta);color:#fff;padding:5px 11px;border-radius:50px}
@@ -2777,6 +2792,14 @@ DIAG_BODY=(r'''<style>
  <symbol id="p-spark" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M19 15l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></symbol>
  <symbol id="p-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 8h13l-1 11.5a1.5 1.5 0 0 1-1.5 1.4H8a1.5 1.5 0 0 1-1.5-1.4z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/></symbol>
  <symbol id="p-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5l3.5 3 4.5-6 4.5 6 3.5-3-1.5 11h-13z"/><path d="M5.5 21h13"/></symbol>
+ <symbol id="c-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2 11h11"/><path d="M5.5 7h15l-1.6 6H7"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></symbol>
+ <symbol id="c-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5V20h16V9.5"/><path d="M3 9.5L4.5 4h15L21 9.5a2.5 2.5 0 0 1-4.5 1.5 2.5 2.5 0 0 1-4.5 0 2.5 2.5 0 0 1-4.5 0A2.5 2.5 0 0 1 3 9.5z"/><path d="M9.5 20v-5h5v5"/></symbol>
+ <symbol id="c-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h12v4a6 6 0 0 1-12 0z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2"/><path d="M6 21h10"/></symbol>
+ <symbol id="c-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3l2-5h12l2 5v3"/><path d="M3 16h18v2h-2v1.5h-2V18H7v1.5H5V18H3z"/><circle cx="7.5" cy="14" r="1"/><circle cx="16.5" cy="14" r="1"/></symbol>
+ <symbol id="c-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 18h2"/></symbol>
+ <symbol id="c-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 13.5L3 11l2-3 4 1 5-5.5c.8-.8 2.2-.8 2.8 0s.8 2 0 2.8L13 11l1 4-2 2-2.5-3.5z"/></symbol>
+ <symbol id="c-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8.5v7M8.5 12h7"/></symbol>
+ <symbol id="c-bill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h12v17l-2.2-1.4-2 1.4-1.8-1.4-1.8 1.4-2-1.4L6 20.5z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></symbol>
  <symbol id="dg-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></symbol>
  <symbol id="dg-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
  <symbol id="dg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></symbol>
@@ -2849,6 +2872,7 @@ DIAG_BODY=(r'''<style>
     <div class="dg-sec"><div class="dg-eb">왜 이 카드?</div><div class="dg-chips" id="dgWhy"></div></div>
     <div class="dg-sec"><div style="display:flex;align-items:baseline;justify-content:space-between"><div class="dg-eb">지금 발급 캐시백</div><div style="font-weight:400;font-size:11px;color:rgba(0,0,0,.5)" id="dgBarsCap">플랫폼 비교</div></div><div class="dg-bars" id="dgBars"></div></div>
     <div class="dg-sec"><div class="dg-eb">마감 임박 이벤트</div><div id="dgEvents" style="margin-top:8px"></div></div>
+    <div class="dg-sec dg-dist"><div style="display:flex;align-items:baseline;justify-content:space-between"><div class="dg-eb">내 진단 유형 비중</div><div style="font-weight:400;font-size:11px;color:rgba(0,0,0,.5)" id="dgDistCap">최근 30일</div></div><div class="bar" id="dgDistBar"></div><div class="lg" id="dgDistLg"></div></div>
     <div class="dg-rcta"><a class="dg-cta" id="dgGo" href="#">발급 이벤트 전체 보기 <svg><use href="#dg-right"/></svg></a><button class="dg-redo" id="dgRedo"><svg><use href="#dg-redo"/></svg> 다시 진단하기</button><button class="dg-redo" id="dgShareResult"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> 결과 공유</button>
      <div class="dg-foot">추천은 입력한 응답 + 공개 캐시백 데이터 기준이에요. 금액은 최대 금액 기준(조건 충족 시)이며 수집 시점에 따라 달라질 수 있어요.</div></div>
    </div>
@@ -2891,30 +2915,39 @@ var PORD=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];
 var PN={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이',issuer:'카드사 직접'};
 var PC={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
 var QS=[
- {theme:'소비처',q:'어디서 결제가 더 잦나요?',prop:'#p-globe',bg:'var(--block-lime)',a:{l:'해외·여행',s:'출장·여행·직구가 많아요',t:'overseas'},b:{l:'국내 일상',s:'국내 생활 결제 위주예요',t:'domestic'}},
- {theme:'카드 실적',q:'전월 실적, 채울 수 있나요?',prop:'#p-receipt',bg:'var(--block-lilac)',a:{l:'실적 채워도 OK',s:'어느 정도 쓰는 편이에요',t:'spend'},b:{l:'무실적이 좋아요',s:'조건 없이 받고 싶어요',t:'nospend'}},
- {theme:'혜택 취향',q:'더 끌리는 혜택은 어느 쪽인가요?',prop:'#p-spark',bg:'var(--block-mint)',a:{l:'포인트·마일리지 적립',s:'쌓아서 크게 쓰는 맛',t:'point'},b:{l:'즉시 캐시백·할인',s:'결제할 때 바로 돌려받기',t:'cash'}},
- {theme:'연회비',q:'연회비는 어느 정도가 좋아요?',prop:'#p-coins',bg:'var(--block-pink)',a:{l:'프리미엄도 OK',s:'혜택 크면 연회비 감수',t:'premium'},b:{l:'실속·저연회비',s:'부담 없는 쪽이 좋아요',t:'value'}},
- {theme:'주력 소비',q:'어디에 가장 많이 쓰세요?',prop:'#p-bag',bg:'var(--block-cream)',a:{l:'온라인 쇼핑·구독',s:'쿠팡·넷플릭스·배민까지',t:'shopping'},b:{l:'교통·주유·외식',s:'매일 나가는 생활 동선',t:'transit'}},
- {theme:'사용 스타일',q:'카드는 어떻게 쓰는 편이에요?',prop:'#p-crown',bg:'var(--block-coral)',a:{l:'한 장에 몰아쓰기',s:'주력 카드 하나면 충분',t:'single'},b:{l:'여러 장 가볍게',s:'상황 따라 나눠 써요',t:'multi'}}
+ {theme:'소비처',q:'어디서 결제가 더 잦나요?',prop:'#p-globe',bg:'var(--block-lime)',opts:[
+   {l:'해외·여행',s:'출장·여행·직구가 많아요',tk:'overseas'},{l:'국내 일상',s:'국내 생활 결제 위주예요',tk:'domestic'}]},
+ {theme:'카드 실적',q:'월 카드값, 보통 얼마쯤 쓰세요?',prop:'#p-receipt',bg:'var(--block-lilac)',opts:[
+   {l:'30만원 미만',s:'가볍게 쓰는 편',tk:'nospend'},{l:'30~80만원',s:'딱 생활비만큼',tk:'nospend'},{l:'80만원 이상',s:'메인카드로 몰아서',tk:'spend'}]},
+ {theme:'혜택 취향',q:'더 끌리는 혜택은 어느 쪽인가요?',prop:'#p-spark',bg:'var(--block-mint)',opts:[
+   {l:'포인트·마일리지 적립',s:'쌓아서 크게 쓰는 맛',tk:'point'},{l:'즉시 캐시백·할인',s:'결제할 때 바로 돌려받기',tk:'cash'}]},
+ {theme:'연회비',q:'연회비는 어느 정도가 좋아요?',prop:'#p-coins',bg:'var(--block-pink)',opts:[
+   {l:'프리미엄도 OK',s:'혜택 크면 연회비 감수',tk:'premium'},{l:'실속·저연회비',s:'부담 없는 쪽이 좋아요',tk:'value'}]},
+ {theme:'주력 소비',q:'어디에 가장 많이 쓰세요?',prop:'#p-bag',bg:'var(--block-cream)',hint:'최대 8개 중 하나를 골라주세요',opts:[
+   {l:'온라인 쇼핑',icon:'#c-cart',tk:'shopping'},{l:'마트·편의점',icon:'#c-store',tk:'shopping'},{l:'카페·외식',icon:'#c-cup',tk:'transit'},{l:'교통·주유',icon:'#c-car',tk:'transit'},
+   {l:'통신·구독',icon:'#c-phone',tk:'shopping'},{l:'해외·여행',icon:'#c-plane',tk:'overseas'},{l:'병원·약국',icon:'#c-cross',tk:'value'},{l:'공과금·기타',icon:'#c-bill',tk:'transit'}]},
+ {theme:'사용 스타일',q:'카드는 어떻게 쓰는 편이에요?',prop:'#p-crown',bg:'var(--block-coral)',opts:[
+   {l:'한 장에 몰아쓰기',s:'주력 카드 하나면 충분',tk:'single'},{l:'여러 장 가볍게',s:'상황 따라 나눠 써요',tk:'multi'}]}
 ];
 var ARCH=[
- {iss:'삼성카드',label:'삼성 트래블 캐시백',chips:['해외 결제','무실적','즉시 캐시백'],likes:['overseas','nospend','cash','value','single'],kw:['트래블','마일','아멕스','taptap','iD','travel']},
- {iss:'현대카드',label:'현대 프리미엄 마일리지',chips:['마일 적립','프리미엄','여행'],likes:['overseas','spend','point','premium','single'],kw:['the ','대한항공','마일','green','프리미엄','M']},
- {iss:'KB국민카드',label:'국민 올인원 캐시백',chips:['일상 캐시백','무실적','생활'],likes:['domestic','nospend','cash','value','single'],kw:['올인원','이지','다담','wish','tantan','너구리','my']},
- {iss:'신한카드',label:'신한 구독 라이프',chips:['구독 할인','즉시 캐시백','일상'],likes:['domestic','cash','shopping','value','multi'],kw:['딥','구독','life','mr.','처음','yay','드림']},
- {iss:'롯데카드',label:'롯데 쇼핑 플러스',chips:['온라인 쇼핑','적립','생활'],likes:['domestic','shopping','cash','single'],kw:['로카','likit','쇼핑','digital','로카365']},
- {iss:'우리카드',label:'우리 교통·통신 세이브',chips:['교통·통신','실속','생활'],likes:['domestic','transit','value','multi'],kw:['카드의정석','교통','7core','mile','뉴플래티넘','d4']},
- {iss:'하나카드',label:'하나 데일리 주유',chips:['주유','즉시 캐시백','생활'],likes:['domestic','transit','cash','value'],kw:['주유','오일','energy','원더','클럽','비비드']},
- {iss:'BC카드',label:'BC 배달·외식 캐시백',chips:['배달·외식','즉시 캐시백','생활'],likes:['domestic','transit','cash','multi'],kw:['바로','배달','외식','시발점','clovi','k-패스']}
+ {iss:'삼성카드',type:'트래블·해외형',chips:['해외 결제','무실적','즉시 캐시백'],likes:['overseas','nospend','cash','value','single']},
+ {iss:'현대카드',type:'프리미엄형',chips:['마일 적립','프리미엄','여행'],likes:['overseas','spend','point','premium','single']},
+ {iss:'KB국민카드',type:'캐시백·실속형',chips:['일상 캐시백','무실적','생활'],likes:['domestic','nospend','cash','value','single']},
+ {iss:'신한카드',type:'온라인쇼핑형',chips:['구독 할인','즉시 캐시백','일상'],likes:['domestic','cash','shopping','value','multi']},
+ {iss:'롯데카드',type:'온라인쇼핑형',chips:['온라인 쇼핑','적립','생활'],likes:['domestic','shopping','cash','single']},
+ {iss:'우리카드',type:'교통·생활형',chips:['교통·통신','실속','생활'],likes:['domestic','transit','value','multi']},
+ {iss:'하나카드',type:'교통·생활형',chips:['주유','즉시 캐시백','생활'],likes:['domestic','transit','cash','value']},
+ {iss:'BC카드',type:'교통·생활형',chips:['배달·외식','즉시 캐시백','생활'],likes:['domestic','transit','cash','multi']}
 ];
+// 진단 유형 비중(최근 30일 누적, 예시) — 결과에서 내 유형만 강조
+var DIST=[{type:'트래블·해외형',pct:32,color:'#9a86e8'},{type:'캐시백·실속형',pct:24,color:'#3182F6'},{type:'온라인쇼핑형',pct:21,color:'#19C37D'},{type:'교통·생활형',pct:14,color:'#FF6A13'},{type:'프리미엄형',pct:9,color:'#1a1714'}];
 function issAlias(s){s=s||'';if(/국민/.test(s))return 'KB국민카드';if(/^bc|비씨|바로/i.test(s))return 'BC카드';if(/신한/.test(s))return '신한카드';if(/현대/.test(s))return '현대카드';if(/삼성/.test(s))return '삼성카드';if(/롯데/.test(s))return '롯데카드';if(/우리/.test(s))return '우리카드';if(/하나/.test(s))return '하나카드';return s;}
 function _wm(n){if(!n)return'0원';if(n>=10000){var m=n/10000;return (m>=10?Math.round(m):Math.round(m*10)/10)+'만원';}return n.toLocaleString()+'원';}
 function platMap(p){var o={};(p.events||[]).forEach(function(e){if(e.platform==='issuer')return;var w=e.reward_won||0;if(w>(o[e.platform]||0))o[e.platform]=w;});return o;}
 function maxRw(p){var m=0;(p.events||[]).forEach(function(e){if(e.platform!=='issuer'&&(e.reward_won||0)>m)m=e.reward_won;});return m;}
 var PRODS=[],IMGN={};
 var state={screen:'intro',step:0,answers:[]};
-var LS='ct_diag_v1';
+var LS='ct_diag_v2';
 function save(){try{localStorage.setItem(LS,JSON.stringify({step:state.step,answers:state.answers}));}catch(e){}}
 function load(){try{var j=JSON.parse(localStorage.getItem(LS)||'null');if(j&&j.answers)return j;}catch(e){}return null;}
 function clearLS(){try{localStorage.removeItem(LS);}catch(e){}}
@@ -2931,19 +2964,23 @@ function setTheme(){var Q=QS[state.step];var n=state.step+1;
  ['dgTcPc','dgTcMo'].forEach(function(id){document.getElementById(id).style.background=Q.bg;});
  ['dgPropPc','dgPropMo'].forEach(function(id){document.getElementById(id).querySelector('use').setAttribute('href',Q.prop);});
  setEgg(['dgEggPc','dgEggMo'],n,6);
- var sel=state.answers[state.step];
- document.getElementById('dgChoices').innerHTML=[['A','a'],['B','b']].map(function(p){var o=Q[p[1]];var on=sel===p[1];
-  return '<button class="choice'+(on?' sel':'')+'" data-opt="'+p[1]+'"><span class="k">'+(on?'<svg><use href="#dg-check"/></svg>':p[0])+'</span><span style="flex:1"><span class="cl">'+o.l+'</span><span class="cs">'+o.s+'</span></span></button>';
- }).join('');
+ var sel=state.answers[state.step];var C=document.getElementById('dgChoices');
+ if(Q.opts.length<=3){C.className='dg-choices';
+  C.innerHTML=Q.opts.map(function(o,i){var on=sel===i;var key=String.fromCharCode(65+i);
+   return '<button class="choice'+(on?' sel':'')+'" data-opt="'+i+'"><span class="k">'+(on?'<svg><use href="#dg-check"/></svg>':key)+'</span><span style="flex:1"><span class="cl">'+o.l+'</span>'+(o.s?'<span class="cs">'+o.s+'</span>':'')+'</span></button>';}).join('');
+ }else{C.className='dg-grid';
+  C.innerHTML=(Q.hint?'<div style="grid-column:1/-1;font-weight:400;font-size:11.5px;color:rgba(0,0,0,.5);margin:-2px 0 2px">'+Q.hint+'</div>':'')
+   +Q.opts.map(function(o,i){var on=sel===i;return '<button class="dg-gopt'+(on?' sel':'')+'" data-opt="'+i+'"><span class="gi"><svg><use href="'+(o.icon||'#c-cart')+'"/></svg></span><span class="gt">'+o.l+'</span></button>';}).join('');
+ }
 }
 function gotoStep(i){state.step=i;state.screen='q';show('dgQuestion');setTheme();save();}
-function choose(opt){state.answers[state.step]=opt;
- var btns=document.getElementById('dgChoices').querySelectorAll('.choice');btns.forEach(function(b){b.classList.toggle('sel',b.getAttribute('data-opt')===opt);var k=b.querySelector('.k');if(b.getAttribute('data-opt')===opt)k.innerHTML='<svg><use href="#dg-check"/></svg>';});
+function choose(idx){idx=parseInt(idx);if(isNaN(idx))return;var Q=QS[state.step];if(idx<0||idx>=Q.opts.length)return;state.answers[state.step]=idx;
+ var btns=document.getElementById('dgChoices').querySelectorAll('[data-opt]');btns.forEach(function(b){var on=parseInt(b.getAttribute('data-opt'))===idx;b.classList.toggle('sel',on);if(on&&b.classList.contains('choice')){var k=b.querySelector('.k');if(k)k.innerHTML='<svg><use href="#dg-check"/></svg>';}});
  save();
- var next=function(){if(state.step>=5){finish();}else{gotoStep(state.step+1);}};
+ var next=function(){if(state.step>=QS.length-1){finish();}else{gotoStep(state.step+1);}};
  if(REDUCE)next();else setTimeout(next,220);
 }
-function pickArch(){var toks=state.answers.map(function(o,i){return QS[i][o].t;});
+function pickArch(){var toks=state.answers.map(function(idx,i){return (QS[i].opts[idx]||{}).tk;}).filter(Boolean);
  var scored=ARCH.map(function(a){var sc=toks.filter(function(t){return a.likes.indexOf(t)>=0;}).length;var card=pickCard(a);return {a:a,sc:sc,card:card,cmax:card?maxRw(card):-1};});
  scored=scored.filter(function(x){return x.card;});
  scored.sort(function(x,y){return (y.sc-x.sc)||(y.cmax-x.cmax);});
@@ -2974,7 +3011,13 @@ function finish(){var r=pickArch();if(!r){show('dgResult');document.getElementBy
   return '<a class="dg-evrow" href="'+cgUrl(e)+'" rel="sponsored nofollow noopener" target="_blank"><span class="dot" style="background:'+(PC[e.platform]||'#888')+'"></span><div style="flex:1;min-width:0"><div class="et">'+title+'</div><div class="ep">'+(PN[e.platform]||e.platform)+' · 외부 광고 링크</div></div><span class="dd">'+dl+'</span></a>';
  }).join(''):'<div style="font-size:13px;color:rgba(0,0,0,.45);padding:10px 0">마감 임박 이벤트가 없어요. 카드 상세에서 전체 이벤트를 확인하세요.</div>';
  document.getElementById('dgGo').setAttribute('href','carddetail.html?n='+encodeURIComponent(card.name));
+ renderDist(a.type);
  state.screen='result';show('dgResult');clearLS();
+}
+// 내 진단 유형 비중(스택바+범례, 내 유형만 강조) — 최근 30일 누적(예시)
+function renderDist(myType){var bar=document.getElementById('dgDistBar'),lg=document.getElementById('dgDistLg');if(!bar||!lg)return;
+ bar.innerHTML=DIST.map(function(d){return '<span style="width:'+d.pct+'%;background:'+d.color+';opacity:'+(d.type===myType?'1':'.4')+'"></span>';}).join('');
+ lg.innerHTML=DIST.map(function(d){var me=d.type===myType;return '<span class="it" style="opacity:'+(me?'1':'.4')+'"><span class="dt" style="background:'+d.color+'"></span><span class="nm" style="font-weight:'+(me?700:540)+'">'+d.type+'</span><span class="pc">'+d.pct+'%</span>'+(me?'<span class="me">내 유형</span>':'')+'</span>';}).join('');
 }
 function startFresh(){state.step=0;state.answers=[];gotoStep(0);}
 function dgToast(m){var t=document.createElement("div");t.textContent=m;t.style.cssText="position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#000;color:#fff;padding:11px 18px;border-radius:50px;font-size:13px;font-weight:600;z-index:9999;opacity:0;transition:opacity .2s";document.body.appendChild(t);requestAnimationFrame(function(){t.style.opacity="1";});setTimeout(function(){t.style.opacity="0";setTimeout(function(){t.remove();},300);},1800);}
@@ -3076,8 +3119,8 @@ function bind(){
  document.getElementById('dgBack').onclick=function(){if(state.step<=0){state.screen='intro';show('dgIntro');}else gotoStep(state.step-1);};
  function close(){if(confirm('진단을 종료할까요? 진행 내용이 초기화됩니다.')){clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}}
  document.getElementById('dgClose').onclick=close;document.getElementById('dgClose2').onclick=function(){location.href='index.html';};
- document.getElementById('dgChoices').addEventListener('click',function(e){var b=e.target.closest('.choice[data-opt]');if(b)choose(b.getAttribute('data-opt'));});
- document.addEventListener('keydown',function(e){if(state.screen!=='q')return;if(e.key==='a'||e.key==='A')choose('a');else if(e.key==='b'||e.key==='B')choose('b');else if(e.key==='ArrowLeft'){if(state.step>0)gotoStep(state.step-1);}});
+ document.getElementById('dgChoices').addEventListener('click',function(e){var b=e.target.closest('[data-opt]');if(b)choose(b.getAttribute('data-opt'));});
+ document.addEventListener('keydown',function(e){if(state.screen!=='q')return;if(/^[1-8]$/.test(e.key))choose(parseInt(e.key)-1);else if(e.key==='ArrowLeft'){if(state.step>0)gotoStep(state.step-1);}});
  // 시나리오 선택(스와이프)
  var sw=document.getElementById('dgSwipe');if(sw){sw.addEventListener('scroll',s2Dots);s2Dots();sw.querySelectorAll('[data-scn]').forEach(function(btn){btn.onclick=function(){if(btn.getAttribute('data-scn')==='2')s2Start();else{clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}};});}
  var _ib=document.getElementById('dgIntroBack');if(_ib)_ib.onclick=function(){show('dgChooser');s2Dots();};
