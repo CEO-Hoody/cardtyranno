@@ -468,6 +468,72 @@ function ctSeo(title,desc,canonPath){try{
  if(desc){desc=(''+desc).replace(/\s+/g,' ').trim().slice(0,158);_setMeta('meta[name="description"]',desc);_setMeta('meta[property="og:description"]',desc);_setMeta('meta[name="twitter:description"]',desc);}
  if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
 }catch(e){}}
+/* ===== 통합 검색필터(UF) 제네릭 팩토리 — 표준 .uf 마크업(id=uf)을 받아 플랫폼사·카드사(다중)+유형/정렬(단일) 구동. PC 팝오버·모바일 바텀시트·URL 동기화. cfg={plats:[{k,name,color}],issuers:[name],types:[[v,label]],sorts:[[v,label]],state:{vis,issF,type,sortK},onChange,countText(n),applyText(n),urlSync} ===== */
+function ufBuild(cfg){var root=document.getElementById('uf');if(!root)return {refresh:function(){},resetAll:function(){}};
+ var S=cfg.state,PL=cfg.plats||[],IS=cfg.issuers||[],TY=cfg.types||[],SO=cfg.sorts||[];
+ var CK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></svg>';
+ var XI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+ function el(id){return document.getElementById(id);}
+ function tlabel(){for(var i=0;i<TY.length;i++)if(TY[i][0]===S.type)return TY[i][1];return TY[0]?TY[0][1]:'';}
+ function slabel(){for(var i=0;i<SO.length;i++)if(SO[i][0]===S.sortK)return SO[i][1];return SO[0]?SO[0][1]:'';}
+ function optList(kind){if(kind==='plat')return PL.map(function(p){return '<div class="uf-opt'+(S.vis[p.k]?' on':'')+'" data-uf-k="'+p.k+'"><span class="uf-cb">'+CK+'</span><span class="dot" style="background:'+(p.color||'#888')+'"></span><span class="nm">'+p.name+'</span></div>';}).join('');
+  return IS.map(function(n){return '<div class="uf-opt'+(S.issF[n]?' on':'')+'" data-uf-k="'+n+'"><span class="uf-cb">'+CK+'</span><span class="nm">'+n+'</span></div>';}).join('');}
+ function seg(kind){var arr=kind==='type'?TY:SO,cur=kind==='type'?S.type:S.sortK;return '<div class="uf-seg" data-uf-seg="'+kind+'"'+(kind==='sort'?' style="flex-wrap:wrap"':'')+'>'+arr.map(function(t){return '<button type="button" data-v="'+t[0]+'" class="'+(cur===t[0]?'on':'')+'">'+t[1]+'</button>';}).join('')+'</div>';}
+ function sortRows(){return SO.map(function(s){return '<div class="uf-srow'+(S.sortK===s[0]?' on':'')+'" data-uf-s="'+s[0]+'"><span class="sl">'+s[1]+'</span>'+CK+'</div>';}).join('');}
+ function fillPop(w){if(w==='plat')el('ufPopplat').innerHTML='<div class="uf-poph"><span class="pt">플랫폼사</span><span class="pm">다중 선택</span></div>'+optList('plat')+'<div class="uf-popft"><button type="button" class="r" data-uf-clr="plat">초기화</button><button type="button" class="a" data-uf-close="1">적용</button></div>';
+  else if(w==='iss')el('ufPopiss').innerHTML='<div class="uf-poph"><span class="pt">카드사</span><span class="pm">다중 선택</span></div>'+optList('iss')+'<div class="uf-popft"><button type="button" class="r" data-uf-clr="iss">초기화</button><button type="button" class="a" data-uf-close="1">적용</button></div>';
+  else if(w==='type')el('ufPoptype').innerHTML='<div class="uf-poph"><span class="pt">캐시백 유형</span><span class="pm">단일</span></div><div style="margin-top:4px">'+seg('type')+'</div>';
+  else if(w==='sort')el('ufPopsort').innerHTML='<div class="uf-poph" style="padding:0 4px 4px;margin-bottom:2px"><span class="pt" style="font-size:12px;color:rgba(0,0,0,.45)">정렬</span></div>'+sortRows();}
+ function closePops(){['plat','iss','type','sort'].forEach(function(w){var p=el('ufPop'+w);if(p)p.classList.remove('open');});var dq=root.querySelectorAll('.uf-ddl[aria-expanded="true"]');for(var i=0;i<dq.length;i++)dq[i].setAttribute('aria-expanded','false');}
+ function openPop(w,trig){var p=el('ufPop'+w);if(!p)return;var was=p.classList.contains('open');closePops();if(was)return;fillPop(w);p.style.left=Math.max(0,trig.offsetLeft)+'px';p.style.top=(trig.offsetTop+trig.offsetHeight+8)+'px';p.classList.add('open');if(p.offsetLeft+p.offsetWidth>root.clientWidth)p.style.left=Math.max(0,root.clientWidth-p.offsetWidth)+'px';if(trig.hasAttribute('aria-expanded'))trig.setAttribute('aria-expanded','true');}
+ function fillSheet(){el('ufSheetBody').innerHTML=
+  '<div class="uf-sg"><div class="uf-sg-t">플랫폼사 <span>다중</span></div><div class="uf-sg-opts" data-uf-tags="plat">'+PL.map(function(p){return '<button type="button" class="uf-tag'+(S.vis[p.k]?' on':'')+'" data-uf-k="'+p.k+'"><span class="dot" style="background:'+(p.color||'#888')+'"></span>'+p.name+'</button>';}).join('')+'</div></div>'
+  +'<div class="uf-sg"><div class="uf-sg-t">카드사 <span>다중</span></div><div class="uf-sg-opts" data-uf-tags="iss">'+IS.map(function(n){return '<button type="button" class="uf-tag'+(S.issF[n]?' on':'')+'" data-uf-k="'+n+'">'+n+'</button>';}).join('')+'</div></div>'
+  +'<div class="uf-sg"><div class="uf-sg-t">캐시백 유형 <span>단일</span></div><div style="margin-top:11px">'+seg('type')+'</div></div>'
+  +'<div class="uf-sg"><div class="uf-sg-t">정렬</div><div style="margin-top:11px">'+seg('sort')+'</div></div>';}
+ function openSheet(){fillSheet();el('ufSheetBg').classList.add('open');document.body.style.overflow='hidden';}
+ function closeSheet(){var b=el('ufSheetBg');if(b)b.classList.remove('open');document.body.style.overflow='';}
+ function writeURL(){if(!cfg.urlSync)return;var sp=new URLSearchParams(location.search);
+  var pl=PL.filter(function(p){return S.vis[p.k];}).map(function(p){return p.k;});pl.length?sp.set('plat',pl.join(',')):sp.delete('plat');sp.delete('issuer');
+  var is=IS.filter(function(n){return S.issF[n];});is.length?sp.set('iss',is.join(',')):sp.delete('iss');
+  (TY[0]&&S.type!==TY[0][0])?sp.set('type',S.type):sp.delete('type');(SO[0]&&S.sortK!==SO[0][0])?sp.set('sort',S.sortK):sp.delete('sort');
+  var q=sp.toString();try{history.replaceState(null,'',location.pathname+(q?'?'+q:''));}catch(_){}}
+ function apply(){cfg.onChange();writeURL();}
+ function refresh(count){
+  var chips=PL.filter(function(p){return S.vis[p.k];}).map(function(p){return '<span class="uf-chip"><span class="dot" style="background:'+(p.color||'#888')+'"></span>'+p.name+'<span class="x" data-uf-rm-plat="'+p.k+'">'+XI+'</span></span>';})
+   .concat(IS.filter(function(n){return S.issF[n];}).map(function(n){return '<span class="uf-chip">'+n+'<span class="x" data-uf-rm-iss="'+n+'">'+XI+'</span></span>';})).join('');
+  var ch=el('ufChips');if(ch)ch.innerHTML=chips;
+  var np=PL.filter(function(p){return S.vis[p.k];}).length,ni=IS.filter(function(n){return S.issF[n];}).length,tot=np+ni;
+  var cp=el('ufCplat');if(cp)cp.textContent=np?String(np):'';var ci=el('ufCiss');if(ci)ci.textContent=ni?String(ni):'';
+  var fn=el('ufFn');if(fn){fn.textContent=tot?String(tot):'';fn.className='uf-fn'+(tot?'':' zero');}
+  var tt=el('ufTtype');if(tt)tt.textContent=tlabel();
+  ['ufSortPc','ufSortMo'].forEach(function(id){var b=el(id);if(b&&b.firstChild)b.firstChild.textContent=slabel()+' ';});
+  var rs=el('ufReset');if(rs)rs.style.display=tot?'':'none';
+  var cn=el('ufCnt');if(cn&&cfg.countText&&count!=null)cn.innerHTML=cfg.countText(count);
+  var fa=el('ufFtApply');if(fa&&count!=null)fa.textContent=(cfg.applyText?cfg.applyText(count):(count+'건 결과 보기'));}
+ function resetAll(){S.vis={};S.issF={};S.type=(TY[0]&&TY[0][0])||'main';S.sortK=(SO[0]&&SO[0][0])||'cash';closePops();apply();var sb=el('ufSheetBg');if(sb&&sb.classList.contains('open'))fillSheet();}
+ if(!root._b){root._b=1;
+  root.addEventListener('click',function(e){
+   var dd=e.target.closest('.uf-ddl');if(dd){e.stopPropagation();openPop(dd.getAttribute('data-uf'),dd);return;}
+   var spc=e.target.closest('#ufSortPc');if(spc){e.stopPropagation();openPop('sort',spc);return;}
+   var opt=e.target.closest('.uf-opt[data-uf-k]');if(opt){var pop=opt.closest('.uf-pop');var k=opt.getAttribute('data-uf-k');if(pop&&pop.id==='ufPopplat')S.vis[k]=S.vis[k]?0:1;else S.issF[k]=S.issF[k]?0:1;opt.classList.toggle('on');apply();return;}
+   var sg=e.target.closest('.uf-seg[data-uf-seg] button[data-v]');if(sg){var g=sg.closest('.uf-seg').getAttribute('data-uf-seg');if(g==='type')S.type=sg.getAttribute('data-v');else S.sortK=sg.getAttribute('data-v');var bb=sg.closest('.uf-seg').querySelectorAll('button');for(var j=0;j<bb.length;j++)bb[j].classList.toggle('on',bb[j]===sg);apply();return;}
+   var sr=e.target.closest('.uf-srow[data-uf-s]');if(sr){S.sortK=sr.getAttribute('data-uf-s');closePops();apply();return;}
+   var clr=e.target.closest('[data-uf-clr]');if(clr){var cg=clr.getAttribute('data-uf-clr');if(cg==='plat')S.vis={};else S.issF={};fillPop(cg);apply();return;}
+   if(e.target.closest('[data-uf-close]')){closePops();return;}
+   var rmp=e.target.closest('[data-uf-rm-plat]');if(rmp){S.vis[rmp.getAttribute('data-uf-rm-plat')]=0;apply();return;}
+   var rmi=e.target.closest('[data-uf-rm-iss]');if(rmi){S.issF[rmi.getAttribute('data-uf-rm-iss')]=0;apply();return;}
+   if(e.target.closest('#ufReset')){resetAll();return;}});
+  var fb=el('ufFbtn');if(fb)fb.onclick=openSheet;var sm=el('ufSortMo');if(sm)sm.onclick=openSheet;
+  var sheet=el('ufSheet');if(sheet)sheet.addEventListener('click',function(e){
+   var tag=e.target.closest('.uf-tag[data-uf-k]');if(tag){var box=tag.closest('[data-uf-tags]').getAttribute('data-uf-tags');var k=tag.getAttribute('data-uf-k');if(box==='plat')S.vis[k]=S.vis[k]?0:1;else S.issF[k]=S.issF[k]?0:1;tag.classList.toggle('on');apply();return;}
+   var sg=e.target.closest('.uf-seg[data-uf-seg] button[data-v]');if(sg){var g=sg.closest('.uf-seg').getAttribute('data-uf-seg');if(g==='type')S.type=sg.getAttribute('data-v');else S.sortK=sg.getAttribute('data-v');var bb=sg.closest('.uf-seg').querySelectorAll('button');for(var j=0;j<bb.length;j++)bb[j].classList.toggle('on',bb[j]===sg);apply();return;}});
+  var sx=el('ufSheetX');if(sx)sx.onclick=closeSheet;var bg=el('ufSheetBg');if(bg)bg.addEventListener('click',function(e){if(e.target===bg)closeSheet();});
+  var fr=el('ufFtReset');if(fr)fr.onclick=function(){S.vis={};S.issF={};S.type=(TY[0]&&TY[0][0])||'main';S.sortK=(SO[0]&&SO[0][0])||'cash';fillSheet();apply();};
+  var fa=el('ufFtApply');if(fa)fa.onclick=closeSheet;
+  document.addEventListener('click',function(e){if(!e.target.closest('#uf'))closePops();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePops();closeSheet();}});}
+ return {refresh:refresh,resetAll:resetAll};}
 // 공유하기: Web Share API 우선, 미지원 시 클립보드 복사 + 토스트
 function ctToast(msg){var t=document.getElementById('ctToast');if(!t){t=document.createElement('div');t.id='ctToast';t.className='ct-toast';document.body.appendChild(t);}t.textContent=msg;void t.offsetWidth;t.classList.add('on');clearTimeout(ctToast._t);ctToast._t=setTimeout(function(){t.classList.remove('on');},2000);}
 function _ctCopyFallback(text){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok;}catch(e){return false;}}
@@ -925,27 +991,80 @@ CARDS_BODY=('<style>'
  '.cfx-feew{display:flex;align-items:center;gap:12px;margin-top:4px}.cfx-feew input{flex:1;accent-color:#000}.cfx-feel{font-weight:700;font-size:13px;min-width:80px;text-align:right}'
  '.cfx-apply{width:100%;margin-top:18px;padding:14px;border-radius:14px;background:#000;color:#fff;font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:inherit}'
  '@media(min-width:761px){.cfx-h{font-size:34px}.cfx-list{grid-template-columns:1fr 1fr;gap:12px}.cfx-cats{flex-wrap:wrap;overflow:visible}}'
+ # ===== 통합 검색필터(UF) 스타일(공용) =====
+ '.uf{position:relative;margin:14px 0 4px}'
+ '.uf-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}'
+ '.uf-fbtn{display:none}'
+ '.uf-ddls{display:flex;gap:10px;flex-wrap:wrap}'
+ '.uf-ddl{display:inline-flex;align-items:center;gap:7px;padding:10px 15px;border:1.5px solid var(--hairline);border-radius:50px;background:#fff;font-family:inherit;font-weight:540;font-size:14px;color:#000;cursor:pointer;white-space:nowrap}'
+ '.uf-ddl svg{width:14px;height:14px;opacity:.5}.uf-ddl .cv{transition:transform .2s}.uf-ddl[aria-expanded="true"] .cv{transform:rotate(180deg)}'
+ '.uf-ddl .uf-c{color:var(--accent-magenta);font-weight:700}.uf-ddl .uf-c:empty{display:none}.uf-ddl .uf-t{color:rgba(0,0,0,.55);font-weight:540}'
+ '.uf-spacer{flex:1}'
+ '.uf-sortb{display:inline-flex;align-items:center;gap:5px;font-weight:540;font-size:13.5px;color:rgba(0,0,0,.6);background:0;border:0;cursor:pointer;font-family:inherit;white-space:nowrap}.uf-sortb svg{width:13px;height:13px;opacity:.6}'
+ '.uf-msort{display:none}'
+ '.uf-chips{display:flex;gap:9px;flex-wrap:wrap}.uf-chips:empty{display:none}'
+ '.uf-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 8px 7px 13px;border-radius:50px;background:#000;color:#fff;font-weight:540;font-size:13px;white-space:nowrap;border:0}'
+ '.uf-chip .dot{width:7px;height:7px;border-radius:50%;flex:0 0 auto}'
+ '.uf-chip .x{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto}.uf-chip .x svg{width:11px;height:11px;opacity:1}'
+ '.uf-meta{display:flex;align-items:center;gap:10px;margin-top:14px}'
+ '.uf-cnt{font-weight:540;font-size:13px;color:rgba(0,0,0,.55)}.uf-cnt b{color:#000;font-weight:700}'
+ '.uf-reset{font-weight:540;font-size:13px;color:rgba(0,0,0,.45);text-decoration:underline;text-underline-offset:2px;cursor:pointer;background:0;border:0;font-family:inherit}'
+ '.uf-mspacer{flex:1}'
+ '.uf-pop{position:absolute;z-index:40;background:#fff;border:1px solid var(--hairline);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.12);padding:16px 18px;min-width:248px;display:none}.uf-pop.open{display:block}'
+ '.uf-pop-sort{padding:8px;min-width:208px}'
+ '.uf-poph{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.uf-poph .pt{font-weight:700;font-size:14px}.uf-poph .pm{font-weight:540;font-size:12px;color:rgba(0,0,0,.45)}'
+ '.uf-opt{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px solid var(--hairline-soft);cursor:pointer}.uf-opt:last-child{border-bottom:0}'
+ '.uf-cb{width:22px;height:22px;border-radius:6px;border:1.5px solid rgba(0,0,0,.2);background:#fff;display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto}.uf-cb svg{width:13px;height:13px;display:none}'
+ '.uf-opt.on .uf-cb{border-color:#000;background:#000}.uf-opt.on .uf-cb svg{display:block}'
+ '.uf-opt .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}.uf-opt .nm{font-weight:540;font-size:14px}'
+ '.uf-popft{display:flex;gap:8px;margin-top:14px}.uf-popft button{flex:1;text-align:center;padding:11px;border-radius:50px;font-weight:540;font-size:13.5px;font-family:inherit;cursor:pointer}.uf-popft .r{border:1.5px solid var(--hairline);background:#fff;color:#000}.uf-popft .a{border:0;background:#000;color:#fff}'
+ '.uf-srow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 12px;border-radius:10px;cursor:pointer;background:transparent}.uf-srow:hover{background:var(--surface-soft)}.uf-srow.on{background:var(--surface-soft)}.uf-srow .sl{font-weight:540;font-size:14px;color:rgba(0,0,0,.7)}.uf-srow.on .sl{font-weight:700;color:#000}.uf-srow svg{width:15px;height:15px;display:none}.uf-srow.on svg{display:block}'
+ '.uf-seg{display:inline-flex;align-items:center;gap:2px;padding:3px;border-radius:50px;background:var(--surface-soft);flex-wrap:wrap}.uf-seg button{font-family:inherit;font-weight:540;font-size:13px;padding:8px 16px;border-radius:50px;border:0;background:0;color:rgba(0,0,0,.6);cursor:pointer}.uf-seg button.on{background:#000;color:#fff;font-weight:600}'
+ '.uf-sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:1200;display:none;opacity:0;transition:opacity .2s}.uf-sheet-bg.open{display:block;opacity:1}'
+ '.uf-sheet{position:fixed;left:0;right:0;bottom:0;background:#fff;border-radius:26px 26px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.14);padding:8px 0 calc(20px + env(safe-area-inset-bottom));max-height:86vh;overflow:auto;transform:translateY(100%);transition:transform .26s cubic-bezier(.2,.8,.2,1)}.uf-sheet-bg.open .uf-sheet{transform:translateY(0)}'
+ '.uf-grab{width:44px;height:5px;border-radius:50px;background:var(--hairline);margin:6px auto 0}'
+ '.uf-sheet-h{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 0}.uf-sheet-h span{font-weight:700;font-size:18px;letter-spacing:-.4px}'
+ '.uf-sheet-x{width:32px;height:32px;border-radius:50%;background:var(--surface-soft);border:0;display:flex;align-items:center;justify-content:center;cursor:pointer}.uf-sheet-x svg{width:15px;height:15px}'
+ '.uf-sg{padding:18px 20px 0}.uf-sg-t{font-weight:700;font-size:14px}.uf-sg-t span{font-weight:400;font-size:12px;color:rgba(0,0,0,.45);margin-left:4px}'
+ '.uf-sg-opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}'
+ '.uf-tag{display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:50px;font-weight:540;font-size:13px;border:1.5px solid var(--hairline);background:#fff;color:#111;cursor:pointer}.uf-tag .dot{width:7px;height:7px;border-radius:50%}.uf-tag.on{border-color:#000;background:#000;color:#fff}'
+ '.uf-sheet-ft{display:flex;gap:9px;padding:20px 20px 0}.uf-sheet-ft button{padding:14px;border-radius:50px;font-weight:600;font-size:14px;font-family:inherit;cursor:pointer}.uf-sheet-ft .r{flex:1;border:1.5px solid var(--hairline);background:#fff;color:#000;font-weight:540}.uf-sheet-ft .a{flex:2;border:0;background:#000;color:#fff}'
+ '@media(max-width:760px){.uf-ddls{display:none}.uf-bar .uf-spacer,.uf-bar #ufSortPc{display:none}'
+ '.uf-fbtn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:50px;background:#000;color:#fff;flex-shrink:0;font-family:inherit;font-weight:600;font-size:13px;border:0;cursor:pointer}.uf-fbtn svg{width:15px;height:15px;opacity:1}.uf-fbtn .uf-fn{min-width:18px;height:18px;border-radius:50%;background:var(--accent-magenta);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;padding:0 5px}.uf-fbtn .uf-fn:empty,.uf-fbtn .uf-fn.zero{display:none}'
+ '.uf-bar{flex-wrap:nowrap;overflow:hidden}.uf-chips{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.uf-chips::-webkit-scrollbar{display:none}'
+ '.uf-msort{display:inline-flex}}'
  '</style>'
  '<div class="wrap"><div class="cfx">'
  '<div class="cfx-top"><span class="pg-eb">FIND A CARD</span><h1 class="cfx-h">카드찾기</h1><p class="cfx-sub">조건을 고르면, 받을 수 있는 카드를 캐시백 순으로.</p></div>'
  '<div class="cfx-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M19.5 19.5l-4.7-4.7"/></svg><input id="cfQ" type="search" placeholder="카드명·혜택으로 검색" autocomplete="off"></div>'
- '<div class="cfx-cats" id="cfCats"></div>'
- '<div class="cfx-bar"><button class="cfx-fbtn" id="cfFiltBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2.2"/><circle cx="8" cy="17" r="2.2"/></svg>연회비·카드사<span class="n" id="cfFiltN" style="display:none"></span></button>'
- '<button class="cfx-sortb" id="cfSortBtn">최고 캐시백순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></div>'
+ '<div class="uf" id="uf">'
+   '<div class="uf-bar">'
+     '<button class="uf-fbtn" id="ufFbtn" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>필터 <span class="uf-fn zero" id="ufFn"></span></button>'
+     '<div class="uf-ddls">'
+       '<button class="uf-ddl" type="button" data-uf="plat" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>플랫폼사 <span class="uf-c" id="ufCplat"></span> <svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+       '<button class="uf-ddl" type="button" data-uf="iss" aria-expanded="false">카드사 <span class="uf-c" id="ufCiss"></span> <svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+       '<button class="uf-ddl" type="button" data-uf="type" aria-expanded="false">캐시백 유형 <span class="uf-t" id="ufTtype">주요</span> <svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+     '</div>'
+     '<div class="uf-chips" id="ufChips"></div>'
+     '<div class="uf-spacer"></div>'
+     '<button class="uf-sortb" id="ufSortPc" type="button">캐시백 많은 순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>'
+   '</div>'
+   '<div class="uf-meta"><span class="uf-cnt" id="ufCnt">카드 –개</span><button class="uf-reset" id="ufReset" type="button" style="display:none">초기화</button><span class="uf-mspacer"></span><button class="uf-sortb uf-msort" id="ufSortMo" type="button">캐시백 많은 순 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></div>'
+   '<div class="uf-pop" id="ufPopplat"></div><div class="uf-pop" id="ufPopiss"></div><div class="uf-pop" id="ufPoptype"></div><div class="uf-pop uf-pop-sort" id="ufPopsort"></div>'
+ '</div>'
  '<div class="cfx-list" id="list"><div class="cfx-empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
- '<div class="cfx-empty" id="cfEmpty" style="display:none">조건에 맞는 카드가 없어요.</div>'
- '<div class="cfx-scrim" id="cfScrim"></div>'
- '<div class="cfx-sheet" id="cfSortSheet"><div class="cfx-sheet-h">정렬</div><div class="cfx-shsort"><button data-s="cash" class="on">최고 캐시백순</button><button data-s="rank">티라노 순위순</button><button data-s="fee">연회비 낮은순</button></div></div>'
- '<div class="cfx-sheet" id="cfFiltSheet"><div class="cfx-sheet-h">연회비 · 카드사</div>'
- '<div class="cfx-fl">카드사</div><div class="cfx-chips" id="cfIss"></div>'
- '<div class="cfx-fl">연회비</div><div class="cfx-feew"><input type="range" id="cfFee" min="0" max="100000" step="5000" value="100000"><span class="cfx-feel" id="cfFeeL">무제한</span></div>'
- '<button class="cfx-apply" id="cfApply">적용하기</button></div>'
+ '<div class="cfx-empty" id="cfEmpty" style="display:none">조건에 맞는 카드가 없어요. <button class="uf-reset" type="button" id="ufEmptyReset" style="display:inline">조건 줄이기</button></div>'
+ '<div class="uf-sheet-bg" id="ufSheetBg"><div class="uf-sheet" id="ufSheet" role="dialog" aria-modal="true" aria-label="필터"><div class="uf-grab"></div>'
+   '<div class="uf-sheet-h"><span id="ufSheetTtl">필터</span><button class="uf-sheet-x" id="ufSheetX" type="button" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'
+   '<div id="ufSheetBody"></div>'
+   '<div class="uf-sheet-ft"><button class="r" id="ufFtReset" type="button">초기화</button><button class="a" id="ufFtApply" type="button">결과 보기</button></div>'
+ '</div></div>'
  '</div></div>')
 CARDS_JS=r"""
 var PKO={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
 var PCO={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
 var PORDK=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];
-var ALL=[],st={cat:'전체',iss:'전체',fee:100000,sort:'cash',q:''};
+var ALL=[],cfQ='';var cfS={vis:{},issF:{},type:'all',sortK:'cash'};var cardsUF=null;
 var CATS=['전체','여행','쇼핑','교통','구독','생활요금'];
 var CATKW={'여행':['여행','항공','해외','면세','라운지','마일','트래블','호텔'],'쇼핑':['쇼핑','백화점','온라인','아울렛','쿠팡','11번가','마트','편의점','다이닝','외식','적립'],'교통':['교통','대중교통','버스','지하철','하이패스','주유','충전','자동차','대중'],'구독':['구독','멤버십','스트리밍','넷플','유튜브','ott','영화','문화','카페','커피'],'생활요금':['통신','공과금','관리비','자동이체','렌탈','요금','공공','생활']};
 function _nkc(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
@@ -957,15 +1076,21 @@ function bestPlat(pl){var bk=null,bv=-1;PORDK.forEach(function(k){var v=(pl||{})
 var STAR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l2.4 5 5.4.7-3.9 3.7 1 5.4-4.9-2.7-4.9 2.7 1-5.4L4.2 9.7 9.6 9z"/></svg>';
 var HRT='<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg>';
 function pass(c){
- if(st.cat!=='전체'&&c.cats.indexOf(st.cat)<0)return false;
- if(st.iss!=='전체'&&c.issuer!==st.iss)return false;
- if(st.fee<100000&&c.feeN>st.fee)return false;
- if(st.q){var q=st.q.toLowerCase();if((c.name+' '+c.issuer+' '+c.benefit).toLowerCase().indexOf(q)<0)return false;}
+ var ps=PORDK.filter(function(k){return cfS.vis[k];});if(ps.length&&!c.plats.some(function(k){return cfS.vis[k];}))return false;
+ var iss=Object.keys(cfS.issF).filter(function(k){return cfS.issF[k];});if(iss.length&&iss.indexOf(c.issuer)<0)return false;
+ if(cfS.type==='main'&&!c.hasMain)return false;
+ if(cfS.type==='bonus'&&!c.hasBonus)return false;
+ if(cfQ){var q=cfQ.toLowerCase();if((c.name+' '+c.issuer+' '+c.benefit).toLowerCase().indexOf(q)<0)return false;}
  return true;}
 function render(){
  var rows=ALL.filter(pass);
- rows.sort(function(a,b){if(st.sort==='fee')return a.feeN-b.feeN;if(st.sort==='rank')return a.rankN-b.rankN;return (b.cash-a.cash)||(a.rankN-b.rankN);});
+ rows.sort(function(a,b){
+  if(cfS.sortK==='iss')return (a.issuer||'').localeCompare(b.issuer||'','ko')||(b.cash-a.cash);
+  if(cfS.sortK==='plat')return (PORDK.indexOf(a.pkey)-PORDK.indexOf(b.pkey))||(b.cash-a.cash);
+  if(cfS.sortK==='pop')return (a.rankN-b.rankN)||(b.cash-a.cash);
+  return (b.cash-a.cash)||(a.rankN-b.rankN);});
  var L=document.getElementById('list'),E=document.getElementById('cfEmpty');
+ if(cardsUF)cardsUF.refresh(rows.length);
  if(!rows.length){L.innerHTML='';E.style.display='block';return;}E.style.display='none';
  L.innerHTML=rows.map(function(c){
   var rank=c.rankN<9999?'<span class="cfr-rank">'+STAR+'티라노 '+c.rankN+'위</span>':'';
@@ -976,35 +1101,31 @@ function render(){
  }).join('');
  if(window.repairImages)repairImages();
 }
-function chips(id,arr,key,cls){var el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(function(x){return '<button class="'+cls+(st[key]===x?' on':'')+'" data-v="'+x+'">'+x+'</button>';}).join('');
- el.querySelectorAll('button').forEach(function(b){b.onclick=function(){st[key]=b.dataset.v;el.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');if(key!=='iss')render();};});}
+// (카테고리/카드사 chips 헬퍼 제거 — 통합 검색필터(UF)로 대체)
 Promise.all([fetch('cards.json').then(function(r){return r.json();}),fetch('platform_events.json').then(function(r){return r.json();}).catch(function(){return {products:[]};})]).then(function(A){
  var cj=A[0],PEIMG={};((A[1].products)||[]).forEach(function(p){if(p.img&&!PEIMG[_nkc(p.name)])PEIMG[_nkc(p.name)]=p.img;});
  var ord=cj.order||Object.keys(cj.cards||{});
  return fetch('history/index.json').then(function(r){return r.json();}).then(function(idx){var ms=(idx.months||[]);var m=ms.length?ms[ms.length-1]:'2026-06';return fetch('history/'+m+'.json').then(function(r){return r.json();});}).catch(function(){return {cards:[]};}).then(function(hist){
   var H={};((hist.cards)||[]).forEach(function(hc){H[_nkc(hc.name)]=hc;});
   ord.forEach(function(iss){(cj.cards[iss]||[]).forEach(function(c){var n=_nkc(c.name);var h=H[n]||{};var bp=bestPlat(h.platforms);var rk=parseInt(c.rank);
-    ALL.push({id:c.id,name:c.name,issuer:iss,img:c.img||PEIMG[n]||'',benefit:c.benefit||'',fee:c.fee||'',feeN:_feeNum(c.fee),cats:catsOf(c.benefit||''),rankN:(c.rank&&!isNaN(rk))?rk:9999,cash:h.max||0,pkey:bp.key,platform:PKO[bp.key]||'',pColor:PCO[bp.key]||'#888'});});});
-  initUI(ord);render();
+    ALL.push({id:c.id,name:c.name,issuer:iss,img:c.img||PEIMG[n]||'',benefit:c.benefit||'',fee:c.fee||'',rankN:(c.rank&&!isNaN(rk))?rk:9999,cash:h.max||0,pkey:bp.key,platform:PKO[bp.key]||'',pColor:PCO[bp.key]||'#888',plats:Object.keys(h.platforms||{}).filter(function(k){return PCO[k];}),hasMain:!!(c.main_tier&&(c.main_tier.reward||c.main_tier.text)),hasBonus:!!(c.sub_tiers&&c.sub_tiers.length)});});});
+  cardsSetup(ord);render();
  });
 }).catch(function(){var L=document.getElementById('list');if(L)L.innerHTML='<div class="cfx-empty">데이터를 불러오지 못했어요.</div>';});
-function initUI(ord){
- chips('cfCats',CATS,'cat','cfx-cat');
- var availIss=['전체'].concat(ord.filter(function(o){return ALL.some(function(x){return x.issuer===o;});}));
- chips('cfIss',availIss,'iss','');
- var q=document.getElementById('cfQ');q.oninput=function(){st.q=q.value.trim();render();};
- var scrim=document.getElementById('cfScrim'),sortSheet=document.getElementById('cfSortSheet'),filtSheet=document.getElementById('cfFiltSheet');
- function close(){scrim.classList.remove('open');sortSheet.classList.remove('open');filtSheet.classList.remove('open');}
- document.getElementById('cfSortBtn').onclick=function(){scrim.classList.add('open');sortSheet.classList.add('open');};
- document.getElementById('cfFiltBtn').onclick=function(){scrim.classList.add('open');filtSheet.classList.add('open');};
- scrim.onclick=close;
- var SL={cash:'최고 캐시백순',rank:'티라노 순위순',fee:'연회비 낮은순'};
- sortSheet.querySelectorAll('button').forEach(function(b){b.onclick=function(){st.sort=b.dataset.s;sortSheet.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});document.getElementById('cfSortBtn').firstChild.textContent=SL[b.dataset.s]+' ';render();close();};});
- var fr=document.getElementById('cfFee'),fl=document.getElementById('cfFeeL');
- fr.oninput=function(){st.fee=parseInt(fr.value);fl.textContent=(st.fee>=100000?'무제한':_wm(st.fee)+' 이하');};
- document.getElementById('cfApply').onclick=function(){updFiltN();render();close();};
+function cardsSetup(ord){
+ var q=document.getElementById('cfQ');if(q)q.oninput=function(){cfQ=q.value.trim();render();};
+ var availIss=ord.filter(function(o){return ALL.some(function(x){return x.issuer===o;});});
+ // URL 쿼리 복원(plat·iss·type·sort)
+ var sp=new URLSearchParams(location.search);
+ var qp=sp.get('plat');if(qp)qp.split(',').forEach(function(k){k=k.trim();if(PCO[k])cfS.vis[k]=1;});
+ var qi=sp.get('iss');if(qi)qi.split(',').forEach(function(n){n=n.trim();if(availIss.indexOf(n)>=0)cfS.issF[n]=1;});
+ var qt=sp.get('type');if(qt&&['all','main','bonus'].indexOf(qt)>=0)cfS.type=qt;
+ var qs=sp.get('sort');if(qs&&['cash','pop','iss','plat'].indexOf(qs)>=0)cfS.sortK=qs;
+ cardsUF=ufBuild({plats:PORDK.map(function(k){return {k:k,name:PKO[k],color:PCO[k]};}),issuers:availIss,
+  types:[['all','전체'],['main','주요'],['bonus','부가']],sorts:[['cash','캐시백 많은 순'],['pop','인기 순'],['iss','카드사 순'],['plat','플랫폼사 순']],
+  state:cfS,urlSync:true,onChange:render,countText:function(n){return '카드 <b>'+n+'</b>개';},applyText:function(n){return n+'개 결과 보기';}});
+ var er=document.getElementById('ufEmptyReset');if(er)er.onclick=function(){if(cardsUF)cardsUF.resetAll();};
 }
-function updFiltN(){var n=0;if(st.iss!=='전체')n++;if(st.fee<100000)n++;var el=document.getElementById('cfFiltN');if(!el)return;if(n){el.textContent=n;el.style.display='';}else el.style.display='none';}
 """
 
 # ===== ISSUE =====
