@@ -821,6 +821,11 @@ if __name__=="__main__":
         if k in by: by[k]["platforms"].setdefault("cardgorilla", d["platforms"]["cardgorilla"])
         else: by[k]=d
     products=list(by.values())
+    # 카드고릴라 라이브에 섞인 테스트/등록용 더미 제외(예: '팝업구조 TEST'/issuer '이벤트 등록용')
+    _before=len(products)
+    products=[p for p in products if (p.get("issuer") or "")!="이벤트 등록용"
+              and not re.search(r"팝업구조|테스트|\bTEST\b", p.get("name") or "", re.I)]
+    if len(products)<_before: print(f"테스트 더미 제외: {_before-len(products)}건")
     # 토스: cards.json 매칭 시드(toss_seed.json) → toss 플랫폼 부착(라이브 parse_toss로 수집)
     try:
         ts=json.load(open(os.path.join(BASE,"toss_seed.json"),encoding="utf-8")).get("cards",{})
