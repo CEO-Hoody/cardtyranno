@@ -861,8 +861,10 @@ if __name__=="__main__":
         aj=_ajraw.get("cards",{})
         if not aj: print("⚠️ 아정당 수집 0건 — pending(업데이트 예정) 처리."); PENDING_PLATFORMS.add("ajungdang")
         bynk={_nk(p["name"]):p for p in products}
-        try: _ressub=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8")).get("subByName",{})
-        except Exception: _ressub={}
+        try:
+            _rm=json.load(open(os.path.join(os.path.dirname(BASE),"scrape","residential_meta.json"),encoding="utf-8"))
+            _resmain_a=_rm.get("mainByName",{}); _ressub=_rm.get("subByName",{})   # 거주지 아정당 실측 주요/부가
+        except Exception: _resmain_a={}; _ressub={}
         _abn=0
         for nm,info in aj.items():
             p=bynk.get(_nk(nm))
@@ -871,10 +873,17 @@ if __name__=="__main__":
             _rw=info["reward_won"]
             injected[(p["name"],"ajungdang")]={"reward_won":_rw,"reward_text":info.get("reward_text"),
                                                "period_start":None,"period_end":None,"url":info.get("url","")}
-            _abw=_text_bd(info.get("reward_text") or "", _rw)        # 시드 텍스트 '+' 티어
-            if _abw<=0:                                              # 없으면 거주지 부가 티어(subByName)
-                _abw=min(sum(_won_of(s) for s in (_ressub.get(_nk(nm)) or [])), max(_rw-10000,0))
-            if _abw>0: BREAKDOWN[(p["name"],"ajungdang")]={"main":max(_rw-_abw,0),"bonus":_abw}; _abn+=1
+            # ① 거주지 실측 주요(mainByName) 직접 사용 — '20만원 쓰고 14만원'→14만(우선, 정확). 부가=전체-주요.
+            _amain=_won_of(_resmain_a.get(_nk(nm)) or "")
+            if _amain and 0<_amain<_rw:
+                BREAKDOWN[(p["name"],"ajungdang")]={"main":_amain,"bonus":_rw-_amain}; _abn+=1
+            else:
+                # ② 실측 주요 없을 때만 '전체-부가' 폴백 — 단 부가가 충분해 main이 전체의 70% 미만일 때만(뻥튀기 금지).
+                _abw=_text_bd(info.get("reward_text") or "", _rw)
+                if _abw<=0:
+                    _abw=min(sum(_won_of(s) for s in (_ressub.get(_nk(nm)) or [])), max(_rw-10000,0))
+                if _abw>0 and (_rw-_abw)<0.7*_rw:
+                    BREAKDOWN[(p["name"],"ajungdang")]={"main":_rw-_abw,"bonus":_abw}; _abn+=1
         if injected: print(f"아정당 로컬 주입 {len(injected)}건 (부가 분해 {_abn}건)")
     except FileNotFoundError:
         pass
