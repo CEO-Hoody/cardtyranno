@@ -1805,11 +1805,11 @@ Promise.all([
     +'<div class="rg-main"><div class="l">주요 캐시백</div><div class="row"><span class="t">조건 금액 이상 이용 시</span><span class="v">'+(mainReward?_wm(mainReward):'—')+'</span></div></div>'
     +(subItems?('<div class="rg-subh">부가 캐시백<span class="rg-only-pc"> · 조건 카테고리별</span></div><div class="rg-subs">'+subItems+'</div>'):'<div class="rg-subh">부가 캐시백</div><div class="rg-subnone">이 상품은 부가 캐시백 없이 주요 캐시백으로 구성돼요.</div>')+'</div>';
    // 티라노 코칭
-   var maxOther=0;(p.events||[]).forEach(function(x){if(x.platform!==P&&(x.reward_won||0)>maxOther)maxOther=x.reward_won;});
-   var rec=(S.total>=maxOther)?'rec':(S.total>=maxOther*0.8?'hold':'no');
+   var maxOther=0;(p.events||[]).forEach(function(x){if(x.platform!==P){var _xm=(x.main_won!=null?x.main_won:((x.reward_won||0)-(x.bonus_won||0)));if(_xm>maxOther)maxOther=_xm;}});
+   var rec=(S.main>=maxOther)?'rec':(S.main>=maxOther*0.8?'hold':'no');
    var recLab=rec==='rec'?'추천':(rec==='hold'?'보류':'비추천');var recCls=rec==='rec'?'':(rec==='hold'?'hold':'no');
    var isPeak=vals.length?(S.total>=Math.max.apply(null,vals)):true;
-   var recMsg=rec==='rec'?(p.name+'은 지금이 발급 적기예요. 당월 전체 '+_wm(S.total)+(isPeak?'으로 최근 4개월 중 가장 커요.':'으로 발급 캐시백이 좋아요.')):(rec==='hold'?(pnm+' 캐시백도 괜찮지만, 다른 채널이 최대 '+_wm(maxOther-S.total)+' 더 클 수 있어요.'):('다른 채널이 최대 '+_wm(maxOther-S.total)+' 더 커요. 비교 후 결정하세요.'));
+   var recMsg=rec==='rec'?(p.name+'은 지금이 발급 적기예요. 주요 캐시백 '+_wm(S.main)+'으로 다른 채널과 같거나 더 커요.'):(rec==='hold'?(pnm+'도 괜찮지만, 주요 캐시백이 다른 채널보다 최대 '+_wm(Math.max(maxOther-S.main,0))+' 작을 수 있어요. 추이를 지켜보세요.'):('주요 캐시백이 다른 채널보다 최대 '+_wm(Math.max(maxOther-S.main,0))+' 작아요. 비교 후 결정하세요.'));
    var coach='<div class="rg-coach"><div class="rg-coach-badge"><span class="rg-coach-ring '+recCls+'"><span></span></span><div class="lab rg-only-pc" style="color:'+(rec==='rec'?'var(--success)':(rec==='hold'?'#cf9220':'rgba(0,0,0,.55)'))+'">'+recLab+'</div><div class="mono rg-only-pc">티라노 코칭</div></div>'
     +'<div><div class="rg-coach-head rg-only-pc">'+TYR+'<span class="eb">티라노 코칭</span></div><div class="rg-coach-molab rg-only-mo '+recCls+'">'+recLab+' · 티라노 코칭</div><div class="rg-coach-t">'+recMsg+'</div>'
     +'<div class="rg-coach-leg rg-only-pc"><span><span class="dot o"></span>추천 — 지금 발급</span><span><svg class="dot" viewBox="0 0 24 24" style="color:rgba(0,0,0,.6)"><path d="M12 5l8 14H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>보류 — 추이 지켜보기</span><span><svg class="dot" viewBox="0 0 24 24" style="color:rgba(0,0,0,.6)"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>비추천 — 다음 달 권장</span></div></div></div>';
@@ -2477,7 +2477,7 @@ ABOUT_BODY=(r'''<style>
  .ab-lime{padding:32px 24px}.ab-lime .ab-g2{gap:28px}
  .ab-navy{padding:40px 24px}.ab-navy h2{font-size:30px;letter-spacing:-1px}.ab-navy p{font-size:15px}
  .ab-stats{gap:24px}.ab-stats .v{font-size:30px}
- .ab-eg{grid-template-columns:1fr;gap:12px}.ab-ec{grid-column:auto!important;flex-direction:row!important;align-items:center!important}.ab-ec .gl{width:96px!important}.ab-eg>:nth-child(1){order:1}.ab-eg>:nth-child(4){order:2}.ab-eg>:nth-child(2){order:3}.ab-eg>:nth-child(3){order:4}
+ .ab-eg{grid-template-columns:1fr;gap:12px}.ab-ec{grid-column:auto!important;flex-direction:row!important;align-items:center!important}.ab-ec .gl{width:96px!important}.ab-eg>:nth-child(1){order:1}.ab-eg>:nth-child(4){order:2}.ab-eg>:nth-child(3){order:3}.ab-eg>:nth-child(2){order:4}
  .ab-cream{padding:40px 24px}.ab-cream h2{font-size:30px;letter-spacing:-1px}
  .ab-card{padding:22px 20px}
  .ab-hero-ctas{flex-wrap:wrap}
@@ -2534,7 +2534,7 @@ ABOUT_BODY=(r'''<style>
  # SKYSCANNER VISION
  '<section class="sec"><div class="block ab-navy"><svg viewBox="0 0 140 92" style="position:absolute;right:34px;top:40px;width:170px;opacity:.16;color:#fff"><use href="#d-quetzal"/></svg>'
  '<div class="eb" style="color:rgba(255,255,255,.6)">우리가 꿈꾸는 것</div>'
- '<h2>카드 시장의 스카이스캐너를<br>꿈꿉니다</h2>'
+ '<h2>카드 시장의<br>스카이스캐너를&nbsp;꿈꿉니다</h2>'
  '<p>항공권을 살 때 우리는 더 이상 항공사 사이트를 일일이 돌지 않습니다. 한 곳에서 <b>모든 항공사를 비교</b>하고, 가장 싼 항공권을 찾으니까요.</p>'
  '<p>카드도 그래야 한다고 믿습니다. <b>모든 발급 플랫폼의 혜택을 한 화면에서 비교</b>해, 가장 이득인 곳을 찾는 곳. 카드티라노가 그 자리를 만들고 있습니다.</p>'
  '<div class="ab-stats">'
@@ -2546,10 +2546,10 @@ ABOUT_BODY=(r'''<style>
  '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:20px 0 0;color:rgba(0,0,0,.72)">자동화만으로는 \'진짜 좋은 카드\'를 가려낼 수 없습니다. 조건의 함정, 실적의 무게, 갱신 시점의 미묘한 차이는 결국 사람이 읽어야 하니까요. 그래서 카드티라노의 중심에는 <b style="font-weight:700">방향을 정하고 직접 만든 두 창업자 — 코파운더 듀오</b>가 있고, 그 곁에서 캐시백·마케팅·분석을 맡은 전문가들이 함께합니다.</p></div>'
  '<div class="ab-eg">'
  + "".join('<div class="ab-ec" style="background:%s;%s;%s"><div class="gl" style="width:%s"><svg viewBox="%s"><use href="%s"/></svg></div><div style="min-width:0"><div class="role">%s</div><div class="nm">%s</div><div class="tag">%s</div><div class="ds">%s</div></div></div>'%(bg,span,flex,gw,vb,ic,role,nm,tag,desc) for ic,vb,nm,role,tag,desc,bg,span,flex,gw in [
-   ("#d-eoraptor","0 0 120 100","에오랍토르","창립자 · CEO · CTO/CPO","비전을 세우고, 직접 만듭니다","카드티라노가 어디로 갈지 — 전략과 비전을 세우고, 프로덕트·기술·디자인을 직접 이끕니다. 가장 먼저 나타난 공룡처럼, 이 모든 것의 시작이자 중심.","var(--block-lilac)","grid-column:span 2","flex-direction:row;align-items:center","140px"),
-   ("#d-maia","0 0 120 100","마이아사우라","캐시백·이벤트 분석","좋은 건 놓치지 않습니다","매달 바뀌는 캐시백과 발급 이벤트를 꼼꼼히 살펴, 가장 이득인 것을 골라냅니다.","var(--block-mint)","","flex-direction:column;align-items:flex-start","104px"),
-   ("#d-ptera","0 0 120 100","프테라노돈","마케팅 총괄","멀리, 빠르게 알립니다","카드티라노가 찾은 가장 이득인 선택을, 필요한 사람에게 가장 빠르게 전합니다.","var(--block-pink)","","flex-direction:column;align-items:flex-start","104px"),
-   ("#d-brachio","0 0 120 100","브라키오","공동창업자 · CBO · 사업 총괄","크게, 멀리 내다봅니다","에오랍토르와 함께 카드티라노를 세운 공동창업자. 사업 기반과 카드사·플랫폼 파트너십을 다져, 서비스가 더 크고 멀리 나아갈 길을 엽니다.","var(--block-cream)","grid-column:span 2","flex-direction:row;align-items:center","140px")])
+   ("#d-eoraptor","0 0 120 100","에오랍토르","공동창업자 · CEO","비전을 세우고, 직접 만듭니다","카드티라노가 어디로 갈지 — 전략과 비전을 세우고, 프로덕트·기술·디자인을 직접 이끕니다. 가장 먼저 나타난 공룡처럼, 이 모든 것의 시작이자 중심.","var(--block-lilac)","grid-column:span 2","flex-direction:row;align-items:center","140px"),
+   ("#d-maia","0 0 120 100","마이아사우라","공동창업자 · 캐시백·이벤트 분석","좋은 건 놓치지 않습니다","매달 바뀌는 캐시백과 발급 이벤트를 꼼꼼히 살펴, 가장 이득인 것을 골라냅니다.","var(--block-mint)","","flex-direction:column;align-items:flex-start","104px"),
+   ("#d-ptera","0 0 120 100","프테라노돈","공동창업자 · 마케팅 총괄","멀리, 빠르게 알립니다","카드티라노가 찾은 가장 이득인 선택을, 필요한 사람에게 가장 빠르게 전합니다.","var(--block-pink)","","flex-direction:column;align-items:flex-start","104px"),
+   ("#d-brachio","0 0 120 100","브라키오","공동창업자 · CSO · 전략 총괄","크게, 멀리 내다봅니다","에오랍토르와 함께 카드티라노를 세운 공동창업자. 사업 기반과 카드사·플랫폼 파트너십을 다져, 서비스가 더 크고 멀리 나아갈 길을 엽니다.","var(--block-cream)","grid-column:span 2","flex-direction:row;align-items:center","140px")])
  + '</div>'
  '<p style="font-weight:400;font-size:14px;line-height:1.55;margin:26px auto 0;max-width:680px;color:rgba(0,0,0,.6);text-align:center">데이터가 숫자를 모으고, 전문가가 그 숫자에 맥락을 입힙니다. 그래서 카드티라노의 추천에는 늘 <b style="font-weight:700;color:#000">근거</b>가 있습니다.</p></section>'
  # BELIEF
@@ -2663,7 +2663,7 @@ DIAG_BODY=(r'''<style>
    <p>2지선다만 누르면 끝. 당신께 맞는 카드와 지금 가장 큰 캐시백 플랫폼·마감 임박 이벤트까지 찾아드려요.</p>
   </div>
   <div style="padding:18px 0 0"><button class="dg-cta" id="dgStart">진단 시작하기 <svg><use href="#dg-right"/></svg></button>
-   <p class="dg-note">약 1분 소요 · 가입 없이 바로</p></div>
+   <p class="dg-note">약 1분 소요 · 가입 없이 바로</p><div style="text-align:center;margin-top:14px"><button id="dgShareIntro" style="display:inline-flex;align-items:center;gap:7px;background:none;border:1px solid var(--line,#e6e6e6);border-radius:50px;padding:10px 18px;font-weight:600;font-size:13px;color:var(--sub,#666);cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> 친구에게 공유</button></div></div>
  </section>
  <section class="dg-screen" id="dgQuestion">
   <div class="dg-top"><button class="dg-icnbtn" id="dgBack"><svg><use href="#dg-back"/></svg></button><span class="dg-step" id="dgStepN">01 / 06</span><button class="dg-icnbtn" id="dgClose"><svg><use href="#dg-x"/></svg></button></div>
@@ -2686,7 +2686,7 @@ DIAG_BODY=(r'''<style>
     <div class="dg-sec"><div class="dg-eb">왜 이 카드?</div><div class="dg-chips" id="dgWhy"></div></div>
     <div class="dg-sec"><div style="display:flex;align-items:baseline;justify-content:space-between"><div class="dg-eb">지금 발급 캐시백</div><div style="font-weight:400;font-size:11px;color:rgba(0,0,0,.5)" id="dgBarsCap">플랫폼 비교</div></div><div class="dg-bars" id="dgBars"></div></div>
     <div class="dg-sec"><div class="dg-eb">마감 임박 이벤트</div><div id="dgEvents" style="margin-top:8px"></div></div>
-    <div class="dg-rcta"><a class="dg-cta" id="dgGo" href="#">발급 이벤트 전체 보기 <svg><use href="#dg-right"/></svg></a><button class="dg-redo" id="dgRedo"><svg><use href="#dg-redo"/></svg> 다시 진단하기</button>
+    <div class="dg-rcta"><a class="dg-cta" id="dgGo" href="#">발급 이벤트 전체 보기 <svg><use href="#dg-right"/></svg></a><button class="dg-redo" id="dgRedo"><svg><use href="#dg-redo"/></svg> 다시 진단하기</button><button class="dg-redo" id="dgShareResult"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> 결과 공유</button>
      <div class="dg-foot">추천은 입력한 응답 + 공개 캐시백 데이터 기준이에요. 금액은 최대 금액 기준(조건 충족 시)이며 수집 시점에 따라 달라질 수 있어요.</div></div>
    </div>
   </div></div>
@@ -2780,8 +2780,12 @@ function finish(){var r=pickArch();if(!r){show('dgResult');document.getElementBy
  state.screen='result';show('dgResult');clearLS();
 }
 function startFresh(){state.step=0;state.answers=[];gotoStep(0);}
+function dgToast(m){var t=document.createElement("div");t.textContent=m;t.style.cssText="position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#000;color:#fff;padding:11px 18px;border-radius:50px;font-size:13px;font-weight:600;z-index:9999;opacity:0;transition:opacity .2s";document.body.appendChild(t);requestAnimationFrame(function(){t.style.opacity="1";});setTimeout(function(){t.style.opacity="0";setTimeout(function(){t.remove();},300);},1800);}
+function dgShare(isResult){var url=location.origin+"/diagnose.html";var text=isResult?"내 카드, 60초 만에 진단받았어요 — 카드티라노":"60초 2지선다로 내게 맞는 카드 찾기 — 카드티라노";if(navigator.share){navigator.share({title:"카드티라노 카드 진단",text:text,url:url}).catch(function(){});return;}var sx=text+" "+url;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(sx).then(function(){dgToast("링크를 복사했어요");},function(){window.prompt("아래 링크를 복사하세요",sx);});}else{window.prompt("아래 링크를 복사하세요",sx);}}
 function bind(){
  document.getElementById('dgStart').onclick=startFresh;
+ var _si=document.getElementById('dgShareIntro');if(_si)_si.onclick=function(){dgShare(false);};
+ var _sr=document.getElementById('dgShareResult');if(_sr)_sr.onclick=function(){dgShare(true);};
  document.getElementById('dgRedo').onclick=function(){clearLS();state.screen='intro';show('dgIntro');};
  document.getElementById('dgBack').onclick=function(){if(state.step<=0){state.screen='intro';show('dgIntro');}else gotoStep(state.step-1);};
  function close(){if(confirm('진단을 종료할까요? 진행 내용이 초기화됩니다.')){clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}}
