@@ -22,9 +22,10 @@
    "reward_text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
    "cards": [
     "신한카드 Mr.Life",
-    "신한카드 Deep Oil"
+    "신한카드 Deep Oil",
+    "신한카드 Deep On Platinum"
    ],
-   "count": 2
+   "count": 3
   },
   "2026-07|ajungdang|신한카드|740000": {
    "month": "2026-07",
@@ -76,7 +77,21 @@
    "reward_won": 155000,
    "reward_text": "최대 15.5만원 캐시백",
    "cards": [
-    "K-패스 (신용)",
+    "IBK K-패스 (신용)",
+    "IBK포인트(신용)",
+    "IBK포인트3.8(신용)",
+    "I-ALL"
+   ],
+   "count": 4
+  },
+  "2026-07|cardgorilla|IBK기업은행|125000": {
+   "month": "2026-07",
+   "platform": "cardgorilla",
+   "issuer": "IBK기업은행",
+   "reward_won": 125000,
+   "reward_text": "12.5만원 캐시백",
+   "cards": [
+    "IBK K-패스 (신용)",
     "IBK포인트(신용)",
     "IBK포인트3.8(신용)",
     "I-ALL"
@@ -88,51 +103,29 @@
    "platform": "kakaopay",
    "issuer": "IBK기업은행",
    "reward_won": 135000,
-   "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동이체 시 최대 3.5만",
+   "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
    "cards": [
-    "K-패스 (신용)"
-   ],
-   "count": 1
-  },
-  "2026-07|cardgorilla|IBK기업은행|125000": {
-   "month": "2026-07",
-   "platform": "cardgorilla",
-   "issuer": "IBK기업은행",
-   "reward_won": 125000,
-   "reward_text": "12.5만원 캐시백",
-   "cards": [
-    "K-패스 (신용)",
-    "IBK포인트(신용)",
-    "IBK포인트3.8(신용)",
-    "I-ALL"
+    "IBK K-패스 (신용)",
+    "IBK KaPick",
+    "IBK포인트3.8",
+    "IBK포인트"
    ],
    "count": 4
   },
-  "2026-07|naver|IBK기업은행|125000": {
-   "month": "2026-07",
-   "platform": "naver",
-   "issuer": "IBK기업은행",
-   "reward_won": 125000,
-   "reward_text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
-   "cards": [
-    "K-패스 (신용)",
-    "해피메이트 IBK카드(신용)",
-    "IBK포인트(신용)",
-    "IBK포인트3.8(신용)",
-    "I-ALL"
-   ],
-   "count": 5
-  },
-  "2026-07|toss|IBK기업은행|125000": {
+  "2026-07|toss|IBK기업은행|90000": {
    "month": "2026-07",
    "platform": "toss",
    "issuer": "IBK기업은행",
-   "reward_won": 125000,
-   "reward_text": "20만원 이상 + 마케팅 동의 시 토스포인트 9만 + 자동이체 3.5만",
+   "reward_won": 90000,
+   "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
    "cards": [
-    "K-패스 (신용)"
+    "IBK K-패스 (신용)",
+    "해피메이트 IBK카드(신용)",
+    "IBK 일상의 기쁨카드",
+    "IBK 포인트 카드",
+    "IBK 포인트3.8 토스 제휴카드"
    ],
-   "count": 1
+   "count": 5
   },
   "2026-07|cardgorilla|롯데카드|650000": {
    "month": "2026-07",
@@ -170,10 +163,10 @@
    "reward_text": "최대 49만원 (롯데카드 발급 이벤트)",
    "cards": [
     "LOCA 365 카드",
-    "LOCA LIKIT 2.0",
+    "롯데카드 LOCA LIKIT 2.0",
     "디지로카 London",
-    "LOCA LIKIT 1.5",
-    "LOCA LIKIT"
+    "롯데카드 LOCA LIKIT 1.5",
+    "롯데카드 LOCA LIKIT"
    ],
    "count": 5
   },
@@ -187,7 +180,7 @@
     "삼성 iD SELECT ALL 카드",
     "삼성카드 taptap O",
     "삼성 iD SELECT ON 카드",
-    "taptap DRIVE"
+    "삼성카드 taptap DRIVE"
    ],
    "count": 4
   },
@@ -199,7 +192,7 @@
    "reward_text": "최대 18.7만원 (네이버페이 삼성카드 이벤트)",
    "cards": [
     "삼성 iD SELECT ALL 카드",
-    "taptap DRIVE"
+    "삼성카드 taptap DRIVE"
    ],
    "count": 2
   },
@@ -224,18 +217,6 @@
     "삼성카드 & MILEAGE PLATINUM (스카이패스)"
    ],
    "count": 1
-  },
-  "2026-07|kakaopay|삼성카드|120000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "삼성카드",
-   "reward_won": 120000,
-   "reward_text": "30만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만",
-   "cards": [
-    "삼성카드 & MILEAGE PLATINUM (스카이패스)",
-    "THE iD. 1st"
-   ],
-   "count": 2
   },
   "2026-07|kakaopay|현대카드|745000": {
    "month": "2026-07",
@@ -372,61 +353,6 @@
    ],
    "count": 2
   },
-  "2026-07|kakaopay|우리카드|780000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "우리카드",
-   "reward_won": 780000,
-   "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-   "cards": [
-    "카드의정석 2",
-    "우리카드 MILE&POINT",
-    "우리카드 7CORE",
-    "the OPUS silver"
-   ],
-   "count": 4
-  },
-  "2026-07|naver|우리카드|780000": {
-   "month": "2026-07",
-   "platform": "naver",
-   "issuer": "우리카드",
-   "reward_won": 780000,
-   "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-   "cards": [
-    "카드의정석 2",
-    "우리카드 MILE&POINT",
-    "우리카드 7CORE",
-    "the OPUS silver"
-   ],
-   "count": 4
-  },
-  "2026-07|ajungdang|우리카드|770000": {
-   "month": "2026-07",
-   "platform": "ajungdang",
-   "issuer": "우리카드",
-   "reward_won": 770000,
-   "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-   "cards": [
-    "카드의정석 2",
-    "우리카드 MILE&POINT",
-    "우리카드 7CORE"
-   ],
-   "count": 3
-  },
-  "2026-07|banksalad|우리카드|750000": {
-   "month": "2026-07",
-   "platform": "banksalad",
-   "issuer": "우리카드",
-   "reward_won": 750000,
-   "reward_text": "최대 75만원 캐시백",
-   "cards": [
-    "카드의정석 2",
-    "카드의정석 SHOPPING+",
-    "카드의정석 TEN",
-    "카드의정석 I&U+"
-   ],
-   "count": 4
-  },
   "2026-07|issuer|우리카드|240000": {
    "month": "2026-07",
    "platform": "issuer",
@@ -445,8 +371,8 @@
    "reward_won": 850000,
    "reward_text": "최대 85만원 캐시백",
    "cards": [
-    "LOCA LIKIT 2.0",
-    "LOCA LIKIT 1.5"
+    "롯데카드 LOCA LIKIT 2.0",
+    "롯데카드 LOCA LIKIT 1.5"
    ],
    "count": 2
   },
@@ -457,9 +383,9 @@
    "reward_won": 680000,
    "reward_text": "최대 68만원 (아정당 롯데카드 발급 이벤트)",
    "cards": [
-    "LOCA LIKIT 2.0",
-    "LOCA LIKIT 1.5",
-    "LOCA LIKIT"
+    "롯데카드 LOCA LIKIT 2.0",
+    "롯데카드 LOCA LIKIT 1.5",
+    "롯데카드 LOCA LIKIT"
    ],
    "count": 3
   },
@@ -470,8 +396,8 @@
    "reward_won": 680000,
    "reward_text": "68만원 혜택",
    "cards": [
-    "LOCA LIKIT 2.0",
-    "LOCA LIKIT 1.5"
+    "롯데카드 LOCA LIKIT 2.0",
+    "롯데카드 LOCA LIKIT 1.5"
    ],
    "count": 2
   },
@@ -482,11 +408,35 @@
    "reward_won": 650000,
    "reward_text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
    "cards": [
-    "LOCA LIKIT 2.0",
-    "LOCA LIKIT 1.5",
-    "LOCA LIKIT"
+    "롯데카드 LOCA LIKIT 2.0",
+    "롯데카드 LOCA LIKIT 1.5",
+    "롯데카드 LOCA LIKIT"
    ],
    "count": 3
+  },
+  "2026-07|kakaopay|롯데카드|680000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "롯데카드",
+   "reward_won": 680000,
+   "reward_text": "30만원 이상 이용 시 최대 22만원 캐시백(AMEX 21/MASTER 18 + 리볼빙 1) + 해외 30만 + 롯데백화점몰 쿠폰 10만 + 멤버십 3만",
+   "cards": [
+    "롯데카드 LOCA LIKIT 2.0",
+    "롯데카드 LOCA LIKIT 1.5"
+   ],
+   "count": 2
+  },
+  "2026-07|toss|롯데카드|170000": {
+   "month": "2026-07",
+   "platform": "toss",
+   "issuer": "롯데카드",
+   "reward_won": 170000,
+   "reward_text": "25만원 쓰면 최대 17만 토스포인트(AMEX 17/이외 15) + 해외 30만 + 멤버십 3만 + 롯데백화점몰 쿠폰 10만 + 리볼빙 1만",
+   "cards": [
+    "롯데카드 LOCA LIKIT 2.0",
+    "롯데카드 LOCA LIKIT 1.5"
+   ],
+   "count": 2
   },
   "2026-07|cardgorilla|현대카드|200000": {
    "month": "2026-07",
@@ -546,17 +496,6 @@
    ],
    "count": 1
   },
-  "2026-07|cardgorilla|삼성카드|120000": {
-   "month": "2026-07",
-   "platform": "cardgorilla",
-   "issuer": "삼성카드",
-   "reward_won": 120000,
-   "reward_text": "12만원 캐시백",
-   "cards": [
-    "트라이플러스 삼성카드"
-   ],
-   "count": 1
-  },
   "2026-07|ajungdang|NH농협카드|265000": {
    "month": "2026-07",
    "platform": "ajungdang",
@@ -564,7 +503,7 @@
    "reward_won": 265000,
    "reward_text": "최대 26.5만원 (아정당 NH농협카드 발급 이벤트)",
    "cards": [
-    "올바른 FLEX 카드",
+    "NH농협 올바른 FLEX 카드",
     "zgm.play카드",
     "zgm.streaming카드"
    ],
@@ -577,7 +516,7 @@
    "reward_won": 235000,
    "reward_text": "최대 23.5만원 캐시백",
    "cards": [
-    "올바른 FLEX 카드",
+    "NH농협 올바른 FLEX 카드",
     "zgm.play카드"
    ],
    "count": 2
@@ -589,7 +528,7 @@
    "reward_won": 215000,
    "reward_text": "21.5만원 캐시백",
    "cards": [
-    "올바른 FLEX 카드",
+    "NH농협 올바른 FLEX 카드",
     "zgm.play카드",
     "zgm.streaming카드"
    ],
@@ -602,33 +541,24 @@
    "reward_won": 215000,
    "reward_text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
    "cards": [
-    "올바른 FLEX 카드",
+    "NH농협 올바른 FLEX 카드",
     "zgm.play카드",
     "zgm.streaming카드"
    ],
    "count": 3
   },
-  "2026-07|naver|하나카드|570000": {
+  "2026-07|kakaopay|NH농협카드|265000": {
    "month": "2026-07",
-   "platform": "naver",
-   "issuer": "하나카드",
-   "reward_won": 570000,
-   "reward_text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+   "platform": "kakaopay",
+   "issuer": "NH농협카드",
+   "reward_won": 265000,
+   "reward_text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
    "cards": [
-    "트래블로그+(플러스) 신용카드"
+    "NH농협 올바른 FLEX 카드",
+    "zgm.play카드",
+    "zgm.streaming카드"
    ],
-   "count": 1
-  },
-  "2026-07|toss|하나카드|570000": {
-   "month": "2026-07",
-   "platform": "toss",
-   "issuer": "하나카드",
-   "reward_won": 570000,
-   "reward_text": "2만원 쓰면 2만원 + 해외 최대 50만 + 일본 여행 5만 캐시백",
-   "cards": [
-    "트래블로그+(플러스) 신용카드"
-   ],
-   "count": 1
+   "count": 3
   },
   "2026-07|cardgorilla|삼성카드|127000": {
    "month": "2026-07",
@@ -647,6 +577,17 @@
    "issuer": "삼성카드",
    "reward_won": 127000,
    "reward_text": "최대 12.7만원 (네이버페이 삼성카드 이벤트)",
+   "cards": [
+    "THE iD. 1st"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|삼성카드|120000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "삼성카드",
+   "reward_won": 120000,
+   "reward_text": "100만원 이상 이용 시 10만원 캐시백 + 해외 2만",
    "cards": [
     "THE iD. 1st"
    ],
@@ -926,17 +867,6 @@
    ],
    "count": 1
   },
-  "2026-07|kakaopay|NH농협카드|65000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "NH농협카드",
-   "reward_won": 65000,
-   "reward_text": "5만원 이용 시 5만원 캐시백 + 추가 5만↑ 연회비 캐시백",
-   "cards": [
-    "zgm.the pay카드"
-   ],
-   "count": 1
-  },
   "2026-07|cardgorilla|NH농협카드|14000": {
    "month": "2026-07",
    "platform": "cardgorilla",
@@ -994,21 +924,6 @@
     "현대카드ZERO Edition3(포인트형)"
    ],
    "count": 2
-  },
-  "2026-07|kakaopay|현대카드|440000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "현대카드",
-   "reward_won": 440000,
-   "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-   "cards": [
-    "현대카드ZERO Edition3(할인형)",
-    "현대카드S",
-    "현대카드D",
-    "현대카드H",
-    "현대카드Z everyday"
-   ],
-   "count": 5
   },
   "2026-07|cardgorilla|현대카드|15000": {
    "month": "2026-07",
@@ -1087,16 +1002,18 @@
    ],
    "count": 3
   },
-  "2026-07|toss|IBK기업은행|90000": {
+  "2026-07|naver|IBK기업은행|125000": {
    "month": "2026-07",
-   "platform": "toss",
+   "platform": "naver",
    "issuer": "IBK기업은행",
-   "reward_won": 90000,
-   "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
+   "reward_won": 125000,
+   "reward_text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
    "cards": [
-    "해피메이트 IBK카드(신용)"
+    "해피메이트 IBK카드(신용)",
+    "IBK포인트(신용)",
+    "IBK포인트3.8(신용)"
    ],
-   "count": 1
+   "count": 3
   },
   "2026-07|cardgorilla|IBK기업은행|20000": {
    "month": "2026-07",
@@ -1116,9 +1033,13 @@
    "reward_won": 110000,
    "reward_text": "20만원 쓰고 11만원 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 1.5만",
    "cards": [
-    "모니모A 카드"
+    "모니모A 카드",
+    "삼성카드 taptap DRIVE",
+    "삼성카드 taptap DIGITAL",
+    "Toss taptap S",
+    "토스 삼성카드"
    ],
-   "count": 1
+   "count": 5
   },
   "2026-07|cardgorilla|삼성카드|10000": {
    "month": "2026-07",
@@ -1128,31 +1049,26 @@
    "reward_text": "1만원 캐시백",
    "cards": [
     "모니모A 카드",
-    "taptap DRIVE"
+    "삼성카드 taptap DRIVE"
    ],
    "count": 2
   },
-  "2026-07|toss|삼성카드|455000": {
-   "month": "2026-07",
-   "platform": "toss",
-   "issuer": "삼성카드",
-   "reward_won": 455000,
-   "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
-   "cards": [
-    "taptap DRIVE"
-   ],
-   "count": 1
-  },
-  "2026-07|kakaopay|삼성카드|440000": {
+  "2026-07|kakaopay|삼성카드|160000": {
    "month": "2026-07",
    "platform": "kakaopay",
    "issuer": "삼성카드",
-   "reward_won": 440000,
-   "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
+   "reward_won": 160000,
+   "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
    "cards": [
-    "taptap DRIVE"
+    "삼성카드 taptap DRIVE",
+    "삼성 iD ON 카드",
+    "삼성카드 taptap S",
+    "삼성카드 taptap SHOPPING",
+    "삼성카드 taptap DIGITAL",
+    "삼성 iD ENERGY 카드",
+    "삼성 iD STATION 카드"
    ],
-   "count": 1
+   "count": 7
   },
   "2026-07|banksalad|롯데카드|840000": {
    "month": "2026-07",
@@ -1164,22 +1080,9 @@
     "디지로카 London",
     "디지로카 Las Vegas",
     "디지로카 Paris",
-    "LOCA LIKIT"
+    "롯데카드 LOCA LIKIT"
    ],
    "count": 4
-  },
-  "2026-07|ajungdang|롯데카드|660000": {
-   "month": "2026-07",
-   "platform": "ajungdang",
-   "issuer": "롯데카드",
-   "reward_won": 660000,
-   "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-   "cards": [
-    "디지로카 London",
-    "디지로카 Las Vegas",
-    "디지로카 Paris"
-   ],
-   "count": 3
   },
   "2026-07|cardgorilla|BC 바로카드|12000": {
    "month": "2026-07",
@@ -1260,9 +1163,10 @@
    "reward_text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
    "cards": [
     "신한카드 Air One",
-    "신한카드 Edu Plan+"
+    "신한카드 Edu Plan+",
+    "신한카드 RPM+ Platinum"
    ],
-   "count": 2
+   "count": 3
   },
   "2026-07|banksalad|신한카드|840000": {
    "month": "2026-07",
@@ -1301,18 +1205,6 @@
    ],
    "count": 2
   },
-  "2026-07|kakaopay|NH농협카드|265000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "NH농협카드",
-   "reward_won": 265000,
-   "reward_text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
-   "cards": [
-    "zgm.play카드",
-    "zgm.streaming카드"
-   ],
-   "count": 2
-  },
   "2026-07|banksalad|현대백화점|10000": {
    "month": "2026-07",
    "platform": "banksalad",
@@ -1345,45 +1237,6 @@
     "현대백화점카드"
    ],
    "count": 1
-  },
-  "2026-07|kakaopay|우리카드|750000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "우리카드",
-   "reward_won": 750000,
-   "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-   "cards": [
-    "카드의정석 SHOPPING+",
-    "카드의정석 TEN",
-    "카드의정석 I&U+"
-   ],
-   "count": 3
-  },
-  "2026-07|naver|우리카드|750000": {
-   "month": "2026-07",
-   "platform": "naver",
-   "issuer": "우리카드",
-   "reward_won": 750000,
-   "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
-   "cards": [
-    "카드의정석 SHOPPING+",
-    "카드의정석 TEN",
-    "카드의정석 I&U+"
-   ],
-   "count": 3
-  },
-  "2026-07|banksalad|우리카드|780000": {
-   "month": "2026-07",
-   "platform": "banksalad",
-   "issuer": "우리카드",
-   "reward_won": 780000,
-   "reward_text": "최대 78만원 캐시백",
-   "cards": [
-    "우리카드 MILE&POINT",
-    "우리카드 7CORE",
-    "the OPUS silver"
-   ],
-   "count": 3
   },
   "2026-07|banksalad|현대카드|400000": {
    "month": "2026-07",
@@ -1490,17 +1343,6 @@
    ],
    "count": 1
   },
-  "2026-07|kakaopay|삼성카드|160000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "삼성카드",
-   "reward_won": 160000,
-   "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
-   "cards": [
-    "삼성 iD ON 카드"
-   ],
-   "count": 1
-  },
   "2026-07|cardgorilla|삼성카드|20000": {
    "month": "2026-07",
    "platform": "cardgorilla",
@@ -1544,11 +1386,42 @@
    "reward_won": 600000,
    "reward_text": "60만원 혜택",
    "cards": [
-    "LOCA LIKIT",
-    "LOCA LIKIT Eat",
-    "LOCA LIKIT Play"
+    "롯데카드 LOCA LIKIT",
+    "롯데카드 LOCA LIKIT Eat",
+    "롯데카드 LOCA LIKIT Play"
    ],
    "count": 3
+  },
+  "2026-07|kakaopay|롯데카드|670000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "롯데카드",
+   "reward_won": 670000,
+   "reward_text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3만",
+   "cards": [
+    "롯데카드 LOCA LIKIT",
+    "롯데카드 LOCA LIKIT Eat",
+    "롯데카드 LOCA LIKIT Play",
+    "롯데카드 LOCA LIKIT Shopping"
+   ],
+   "count": 4
+  },
+  "2026-07|toss|롯데카드|150000": {
+   "month": "2026-07",
+   "platform": "toss",
+   "issuer": "롯데카드",
+   "reward_won": 150000,
+   "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+   "cards": [
+    "롯데카드 LOCA LIKIT",
+    "롯데카드 디지로카 Link",
+    "롯데카드 LOCA 365",
+    "롯데카드 LOCA 나누기",
+    "롯데카드 Digi-LOCA Las Vegas",
+    "롯데카드 Digi-LOCA London",
+    "롯데카드 Digi-LOCA Paris"
+   ],
+   "count": 7
   },
   "2026-07|banksalad|롯데카드|790000": {
    "month": "2026-07",
@@ -1557,7 +1430,7 @@
    "reward_won": 790000,
    "reward_text": "최대 79만원 캐시백",
    "cards": [
-    "디지로카 Link"
+    "롯데카드 디지로카 Link"
    ],
    "count": 1
   },
@@ -1580,6 +1453,73 @@
    "reward_text": "최대 4만원 캐시백!",
    "cards": [
     "KB국민카드 생활대금 자동납부 신청"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|하나카드|570000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "하나카드",
+   "reward_won": 570000,
+   "reward_text": "20만원 이상 이용 시 7만원 + 해외 최대 50만",
+   "cards": [
+    "하나 스카이패스 아멕스"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|삼성카드|460000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "삼성카드",
+   "reward_won": 460000,
+   "reward_text": "20만원 이상 결제 시 12만원 캐시백 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 2만",
+   "cards": [
+    "카카오페이신용카드"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|신한카드|660000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "신한카드",
+   "reward_won": 660000,
+   "reward_text": "마케팅 동의 + 40만원 이상 이용 시 16만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+   "cards": [
+    "신한카드 The CLASSIC NEO",
+    "신한카드 The Premium PET"
+   ],
+   "count": 2
+  },
+  "2026-07|kakaopay|현대카드|400000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 400000,
+   "reward_text": "60만원 이상 이용 시 30만원 캐시백 + 해외 15만 이상 시 10만",
+   "cards": [
+    "American Express Gold Edition2"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|현대카드|620000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 620000,
+   "reward_text": "20만원 이상 + 마케팅 동의 시 10만원 + 해외 최대 50.5만 + 정기결제 1.5만",
+   "cards": [
+    "현대카드MY BUSINESS M"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|현대카드|250000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 250000,
+   "reward_text": "60만원 이상 이용 시 15만원 캐시백 + 해외 15만 이상 시 10만",
+   "cards": [
+    "American Express Green Edition2"
    ],
    "count": 1
   }
@@ -1906,7 +1846,7 @@
   },
   {
    "id": 4,
-   "name": "K-패스 (신용)",
+   "name": "IBK K-패스 (신용)",
    "issuer": "IBK기업은행",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2559/card_img/45648/2559card.png",
    "platforms": {
@@ -1943,16 +1883,6 @@
      "reward_group": "2026-07|banksalad|IBK기업은행|155000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동이체 시 최대 3.5만",
-     "reward_won": 135000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18593b0aaffa3c8f306f00",
-     "main_won": 35000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|IBK기업은행|135000"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "12.5만원 캐시백",
      "reward_won": 125000,
@@ -1970,24 +1900,31 @@
      "reward_group": "2026-07|cardgorilla|IBK기업은행|125000"
     },
     {
-     "platform": "naver",
-     "reward_text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
-     "reward_won": 125000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|IBK기업은행|125000"
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+     "reward_won": 135000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4288651ae1bb48cd4c1b35",
+     "main_won": 100000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+       "won": 35000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|IBK기업은행|135000"
     },
     {
      "platform": "toss",
-     "reward_text": "20만원 이상 + 마케팅 동의 시 토스포인트 9만 + 자동이체 3.5만",
-     "reward_won": 125000,
-     "period_end": "2026-06-30",
-     "url": "https://toss.im/_m/dwdCISRa",
+     "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
+     "reward_won": 90000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/FWBrNuni",
      "main_won": 35000,
      "bonus_won": 0,
-     "reward_group": "2026-07|toss|IBK기업은행|125000"
+     "reward_group": "2026-07|toss|IBK기업은행|90000"
     }
    ]
   },
@@ -2216,16 +2153,6 @@
       }
      ],
      "reward_group": "2026-07|naver|삼성카드|140000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "30만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만",
-     "reward_won": 120000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a33cf201ae1bb48cd4c1a87",
-     "main_won": 10000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|삼성카드|120000"
     }
    ]
   },
@@ -2483,46 +2410,6 @@
    },
    "events": [
     {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "reward_won": 780000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18f5493f63cd52506201dd",
-     "main_won": 60000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|우리카드|780000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 780000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 200000,
-     "bonus_won": 580000,
-     "reward_group": "2026-07|naver|우리카드|780000"
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-     "reward_won": 770000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/267",
-     "main_won": 770000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|ajungdang|우리카드|770000"
-    },
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 75만원 캐시백",
-     "reward_won": 750000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004426",
-     "main_won": 750000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|banksalad|우리카드|750000"
-    },
-    {
      "platform": "issuer",
      "reward_text": "최대 24만원 (우리카드 발급 이벤트)",
      "reward_won": 240000,
@@ -2536,7 +2423,7 @@
   },
   {
    "id": 13,
-   "name": "LOCA LIKIT 2.0",
+   "name": "롯데카드 LOCA LIKIT 2.0",
    "issuer": "롯데카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2987/card_img/48809/2987card.png",
    "platforms": {
@@ -2559,6 +2446,14 @@
     "naver": {
      "id": "",
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3498211ae1bb48cd4c1a8b"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/xeA1feTA"
     }
    },
    "events": [
@@ -2639,6 +2534,50 @@
      "main_won": 490000,
      "bonus_won": 0,
      "reward_group": "2026-07|issuer|롯데카드|490000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "30만원 이상 이용 시 최대 22만원 캐시백(AMEX 21/MASTER 18 + 리볼빙 1) + 해외 30만 + 롯데백화점몰 쿠폰 10만 + 멤버십 3만",
+     "reward_won": 680000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3498211ae1bb48cd4c1a8b",
+     "main_won": 220000,
+     "bonus_won": 460000,
+     "breakdown": [
+      {
+       "text": "30만원 이상 이용 시 최대 22만원 캐시백(AMEX 21",
+       "won": 220000,
+       "cond": true
+      },
+      {
+       "text": "MASTER 18 + 리볼빙 1) + 해외 30만 + 롯데백화점몰 쿠폰 10만 + 멤버십 3만",
+       "won": 30000,
+       "cond": true
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|롯데카드|680000"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 최대 17만 토스포인트(AMEX 17/이외 15) + 해외 30만 + 멤버십 3만 + 롯데백화점몰 쿠폰 10만 + 리볼빙 1만",
+     "reward_won": 170000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/xeA1feTA",
+     "main_won": 170000,
+     "bonus_won": 10000,
+     "breakdown": [
+      {
+       "text": "25만원 쓰면 최대 17만 토스포인트(AMEX 17",
+       "won": 170000,
+       "cond": false
+      },
+      {
+       "text": "이외 15) + 해외 30만 + 멤버십 3만 + 롯데백화점몰 쿠폰 10만 + 리볼빙 1만",
+       "won": 10000,
+       "cond": true
+      }
+     ],
+     "reward_group": "2026-07|toss|롯데카드|170000"
     }
    ]
   },
@@ -2801,22 +2740,11 @@
      "url": "https://www.card-gorilla.com/event/detail/1"
     }
    },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "12만원 캐시백",
-     "reward_won": 120000,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/event/detail/1",
-     "main_won": 120000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|cardgorilla|삼성카드|120000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 20,
-   "name": "올바른 FLEX 카드",
+   "name": "NH농협 올바른 FLEX 카드",
    "issuer": "NH농협카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/666/card_img/47865/666card.png",
    "platforms": {
@@ -2839,6 +2767,10 @@
     "toss": {
      "id": "1236",
      "url": "https://card-lounge.toss.im/card/1236"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41f5f91f94d85bad33f6a1"
     }
    },
    "events": [
@@ -2909,6 +2841,23 @@
       }
      ],
      "reward_group": "2026-07|naver|NH농협카드|215000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
+     "reward_won": 265000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41f5f91f94d85bad33f6a1",
+     "main_won": 170000,
+     "bonus_won": 95000,
+     "breakdown": [
+      {
+       "text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
+       "won": 50000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|NH농협카드|265000"
     }
    ]
   },
@@ -2931,28 +2880,7 @@
      "url": "https://toss.im/_m/bcjcyh3m"
     }
    },
-   "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 57만원 (네이버페이 하나카드 이벤트)",
-     "reward_won": 570000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=044",
-     "main_won": 20000,
-     "bonus_won": 550000,
-     "reward_group": "2026-07|naver|하나카드|570000"
-    },
-    {
-     "platform": "toss",
-     "reward_text": "2만원 쓰면 2만원 + 해외 최대 50만 + 일본 여행 5만 캐시백",
-     "reward_won": 570000,
-     "period_end": "2026-06-30",
-     "url": "https://toss.im/_m/bcjcyh3m",
-     "main_won": 50000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|toss|하나카드|570000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 23,
@@ -3981,16 +3909,6 @@
    },
    "events": [
     {
-     "platform": "kakaopay",
-     "reward_text": "5만원 이용 시 5만원 캐시백 + 추가 5만↑ 연회비 캐시백",
-     "reward_won": 65000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a195ac047a5727be5c4af3d",
-     "main_won": 50000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|NH농협카드|65000"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "3만원 캐시백+라운지 이용권",
      "reward_won": 30000,
@@ -4333,16 +4251,6 @@
      "reward_group": "2026-07|naver|현대카드|715000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|현대카드|440000"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "1.5만원 캐시백",
      "reward_won": 15000,
@@ -4473,16 +4381,6 @@
      "main_won": 600000,
      "bonus_won": 0,
      "reward_group": "2026-07|issuer|현대카드|600000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|현대카드|440000"
     }
    ]
   },
@@ -4515,16 +4413,6 @@
      "main_won": 600000,
      "bonus_won": 0,
      "reward_group": "2026-07|issuer|현대카드|600000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|현대카드|440000"
     }
    ]
   },
@@ -4548,16 +4436,6 @@
     }
    },
    "events": [
-    {
-     "platform": "kakaopay",
-     "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|현대카드|440000"
-    },
     {
      "platform": "issuer",
      "reward_text": "최대 28만원 (현대카드 발급 이벤트)",
@@ -4849,7 +4727,7 @@
   },
   {
    "id": 69,
-   "name": "taptap DRIVE",
+   "name": "삼성카드 taptap DRIVE",
    "issuer": "삼성카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/658/card_img/48139/658card.png",
    "platforms": {
@@ -4875,38 +4753,6 @@
     }
    },
    "events": [
-    {
-     "platform": "toss",
-     "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
-     "reward_won": 455000,
-     "period_end": "2026-07-31",
-     "url": "https://toss.im/_m/banBQDY5",
-     "main_won": 15000,
-     "bonus_won": 10000,
-     "breakdown": [
-      {
-       "text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6",
-       "won": 10000,
-       "cond": true
-      },
-      {
-       "text": "30만 + 생활요금 1.5만",
-       "won": 15000,
-       "cond": false
-      }
-     ],
-     "reward_group": "2026-07|toss|삼성카드|455000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208ae1f94d85bad33f598",
-     "main_won": 300000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|삼성카드|440000"
-    },
     {
      "platform": "banksalad",
      "reward_text": "최대 25.7만원 캐시백",
@@ -4943,6 +4789,33 @@
      "main_won": 10000,
      "bonus_won": 0,
      "reward_group": "2026-07|cardgorilla|삼성카드|10000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+     "reward_won": 160000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0",
+     "main_won": 110000,
+     "bonus_won": 50000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|160000"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 11만원 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 1.5만",
+     "reward_won": 110000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/ziH5VIci",
+     "main_won": 15000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|삼성카드|110000"
     }
    ]
   },
@@ -5471,16 +5344,6 @@
       }
      ],
      "reward_group": "2026-07|cardgorilla|IBK기업은행|125000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
-     "reward_won": 125000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|IBK기업은행|125000"
     }
    ]
   },
@@ -5528,16 +5391,6 @@
       }
      ],
      "reward_group": "2026-07|banksalad|롯데카드|840000"
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "reward_won": 660000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/255",
-     "main_won": 660000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|ajungdang|롯데카드|660000"
     },
     {
      "platform": "cardgorilla",
@@ -5627,16 +5480,6 @@
      "reward_group": "2026-07|banksalad|롯데카드|840000"
     },
     {
-     "platform": "ajungdang",
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "reward_won": 660000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/255",
-     "main_won": 660000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|ajungdang|롯데카드|660000"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "65만원 혜택",
      "reward_won": 650000,
@@ -5714,16 +5557,6 @@
      "reward_group": "2026-07|banksalad|롯데카드|840000"
     },
     {
-     "platform": "ajungdang",
-     "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-     "reward_won": 660000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/255",
-     "main_won": 660000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|ajungdang|롯데카드|660000"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "65만원 혜택",
      "reward_won": 650000,
@@ -5761,7 +5594,7 @@
   },
   {
    "id": 82,
-   "name": "LOCA LIKIT 1.5",
+   "name": "롯데카드 LOCA LIKIT 1.5",
    "issuer": "롯데카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2975/card_img/48266/2975card.png",
    "platforms": {
@@ -5784,6 +5617,14 @@
     "naver": {
      "id": "",
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3498211ae1bb48cd4c1a8b"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/xeA1feTA"
     }
    },
    "events": [
@@ -5864,6 +5705,50 @@
      "main_won": 490000,
      "bonus_won": 0,
      "reward_group": "2026-07|issuer|롯데카드|490000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "30만원 이상 이용 시 최대 22만원 캐시백(AMEX 21/MASTER 18 + 리볼빙 1) + 해외 30만 + 롯데백화점몰 쿠폰 10만 + 멤버십 3만",
+     "reward_won": 680000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3498211ae1bb48cd4c1a8b",
+     "main_won": 220000,
+     "bonus_won": 460000,
+     "breakdown": [
+      {
+       "text": "30만원 이상 이용 시 최대 22만원 캐시백(AMEX 21",
+       "won": 220000,
+       "cond": true
+      },
+      {
+       "text": "MASTER 18 + 리볼빙 1) + 해외 30만 + 롯데백화점몰 쿠폰 10만 + 멤버십 3만",
+       "won": 30000,
+       "cond": true
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|롯데카드|680000"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 최대 17만 토스포인트(AMEX 17/이외 15) + 해외 30만 + 멤버십 3만 + 롯데백화점몰 쿠폰 10만 + 리볼빙 1만",
+     "reward_won": 170000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/xeA1feTA",
+     "main_won": 170000,
+     "bonus_won": 10000,
+     "breakdown": [
+      {
+       "text": "25만원 쓰면 최대 17만 토스포인트(AMEX 17",
+       "won": 170000,
+       "cond": false
+      },
+      {
+       "text": "이외 15) + 해외 30만 + 멤버십 3만 + 롯데백화점몰 쿠폰 10만 + 리볼빙 1만",
+       "won": 10000,
+       "cond": true
+      }
+     ],
+     "reward_group": "2026-07|toss|롯데카드|170000"
     }
    ]
   },
@@ -6792,38 +6677,7 @@
      "url": "https://card-lounge.toss.im/card/1959"
     }
    },
-   "events": [
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 75만원 캐시백",
-     "reward_won": 750000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004419",
-     "main_won": 750000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|banksalad|우리카드|750000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "reward_won": 750000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1860e33f63cd52506201d3",
-     "main_won": 60000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|우리카드|750000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 750000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 170000,
-     "bonus_won": 580000,
-     "reward_group": "2026-07|naver|우리카드|750000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 99,
@@ -6861,38 +6715,7 @@
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    },
-   "events": [
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 75만원 캐시백",
-     "reward_won": 750000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004408",
-     "main_won": 750000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|banksalad|우리카드|750000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "reward_won": 750000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1860e33f63cd52506201d3",
-     "main_won": 60000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|우리카드|750000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 750000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 170000,
-     "bonus_won": 580000,
-     "reward_group": "2026-07|naver|우리카드|750000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 101,
@@ -6934,38 +6757,7 @@
      "url": "https://card-lounge.toss.im/card/1961"
     }
    },
-   "events": [
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 75만원 캐시백",
-     "reward_won": 750000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004418",
-     "main_won": 750000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|banksalad|우리카드|750000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "reward_won": 750000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1860e33f63cd52506201d3",
-     "main_won": 60000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|우리카드|750000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 750000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 170000,
-     "bonus_won": 580000,
-     "reward_group": "2026-07|naver|우리카드|750000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 103,
@@ -6994,48 +6786,7 @@
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    },
-   "events": [
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 78만원 캐시백",
-     "reward_won": 780000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004530",
-     "main_won": 780000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|banksalad|우리카드|780000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "reward_won": 780000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18f5493f63cd52506201dd",
-     "main_won": 60000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|우리카드|780000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 780000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 200000,
-     "bonus_won": 580000,
-     "reward_group": "2026-07|naver|우리카드|780000"
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-     "reward_won": 770000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/267",
-     "main_won": 770000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|ajungdang|우리카드|770000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 104,
@@ -7064,48 +6815,7 @@
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    },
-   "events": [
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 78만원 캐시백",
-     "reward_won": 780000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004443",
-     "main_won": 780000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|banksalad|우리카드|780000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "reward_won": 780000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18f5493f63cd52506201dd",
-     "main_won": 60000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|우리카드|780000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 780000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 200000,
-     "bonus_won": 580000,
-     "reward_group": "2026-07|naver|우리카드|780000"
-    },
-    {
-     "platform": "ajungdang",
-     "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-     "reward_won": 770000,
-     "period_end": null,
-     "url": "https://www.ajd.co.kr/card/event/detail/267",
-     "main_won": 770000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|ajungdang|우리카드|770000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 105,
@@ -7130,38 +6840,7 @@
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR"
     }
    },
-   "events": [
-    {
-     "platform": "banksalad",
-     "reward_text": "최대 78만원 캐시백",
-     "reward_won": 780000,
-     "period_end": null,
-     "url": "https://www.banksalad.com/product/cards/CARD004531",
-     "main_won": 780000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|banksalad|우리카드|780000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "reward_won": 780000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a18f5493f63cd52506201dd",
-     "main_won": 60000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|우리카드|780000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
-     "reward_won": 780000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
-     "main_won": 200000,
-     "bonus_won": 580000,
-     "reward_group": "2026-07|naver|우리카드|780000"
-    }
-   ]
+   "events": []
   },
   {
    "id": 106,
@@ -7804,16 +7483,6 @@
    },
    "events": [
     {
-     "platform": "kakaopay",
-     "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|현대카드|440000"
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "2만원 캐시백",
      "reward_won": 20000,
@@ -7920,7 +7589,7 @@
   },
   {
    "id": 126,
-   "name": "LOCA LIKIT",
+   "name": "롯데카드 LOCA LIKIT",
    "issuer": "롯데카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2228/card_img/21353/2228card.png",
    "platforms": {
@@ -7947,6 +7616,10 @@
     "toss": {
      "id": "1583",
      "url": "https://toss.im/_m/rB3VnV8v"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5"
     }
    },
    "events": [
@@ -8027,12 +7700,39 @@
      "main_won": 490000,
      "bonus_won": 0,
      "reward_group": "2026-07|issuer|롯데카드|490000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3만",
+     "reward_won": 670000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5",
+     "main_won": 180000,
+     "bonus_won": 490000,
+     "breakdown": [
+      {
+       "text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3",
+       "won": 30000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|롯데카드|670000"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+     "reward_won": 150000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/V1AyC8zn",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|롯데카드|150000"
     }
    ]
   },
   {
    "id": 127,
-   "name": "LOCA LIKIT Eat",
+   "name": "롯데카드 LOCA LIKIT Eat",
    "issuer": "롯데카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2262/card_img/20704/2262card.png",
    "platforms": {
@@ -8043,6 +7743,10 @@
     "toss": {
      "id": "1699",
      "url": "https://toss.im/_m/7xU5L2v8"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5"
     }
    },
    "events": [
@@ -8062,12 +7766,29 @@
       }
      ],
      "reward_group": "2026-07|cardgorilla|롯데카드|600000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3만",
+     "reward_won": 670000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5",
+     "main_won": 180000,
+     "bonus_won": 490000,
+     "breakdown": [
+      {
+       "text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3",
+       "won": 30000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|롯데카드|670000"
     }
    ]
   },
   {
    "id": 128,
-   "name": "LOCA LIKIT Play",
+   "name": "롯데카드 LOCA LIKIT Play",
    "issuer": "롯데카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2263/card_img/20703/2263card.png",
    "platforms": {
@@ -8078,6 +7799,10 @@
     "toss": {
      "id": "1701",
      "url": "https://toss.im/_m/zgTwn3un"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5"
     }
    },
    "events": [
@@ -8097,12 +7822,29 @@
       }
      ],
      "reward_group": "2026-07|cardgorilla|롯데카드|600000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3만",
+     "reward_won": 670000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5",
+     "main_won": 180000,
+     "bonus_won": 490000,
+     "breakdown": [
+      {
+       "text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3",
+       "won": 30000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|롯데카드|670000"
     }
    ]
   },
   {
    "id": 129,
-   "name": "디지로카 Link",
+   "name": "롯데카드 디지로카 Link",
    "issuer": "롯데카드",
    "img": "https://static.toss.im/assets/credit-card/new/lotte_DiGiLOCA_LINK.png",
    "platforms": {
@@ -8136,6 +7878,16 @@
       }
      ],
      "reward_group": "2026-07|banksalad|롯데카드|790000"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+     "reward_won": 150000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/V1AyC8zn",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|롯데카드|150000"
     }
    ]
   },
@@ -8282,6 +8034,818 @@
      "main_won": 870000,
      "bonus_won": 0,
      "reward_group": "2026-07|cardgorilla|KB국민카드|870000"
+    }
+   ]
+  },
+  {
+   "id": 142,
+   "name": "롯데카드 LOCA LIKIT Shopping",
+   "issuer": "롯데카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3만",
+     "reward_won": 670000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3351701f94d85bad33f5c5",
+     "main_won": 180000,
+     "bonus_won": 490000,
+     "breakdown": [
+      {
+       "text": "30만원 이상 이용 시 최대 18만원 캐시백(17 + 리볼빙 1) + 추가 3만 + 해외 30만 + 쿠폰 10만 + 멤버십 3",
+       "won": 30000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|롯데카드|670000"
+    }
+   ]
+  },
+  {
+   "id": 144,
+   "name": "IBK KaPick",
+   "issuer": "IBK기업은행",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4288651ae1bb48cd4c1b35"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+     "reward_won": 135000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4288651ae1bb48cd4c1b35",
+     "main_won": 100000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+       "won": 35000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|IBK기업은행|135000"
+    }
+   ]
+  },
+  {
+   "id": 145,
+   "name": "IBK포인트3.8",
+   "issuer": "IBK기업은행",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4288651ae1bb48cd4c1b35"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+     "reward_won": 135000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4288651ae1bb48cd4c1b35",
+     "main_won": 100000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+       "won": 35000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|IBK기업은행|135000"
+    }
+   ]
+  },
+  {
+   "id": 146,
+   "name": "IBK포인트",
+   "issuer": "IBK기업은행",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4288651ae1bb48cd4c1b35"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+     "reward_won": 135000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4288651ae1bb48cd4c1b35",
+     "main_won": 100000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 이용 시 10만원 캐시백 + 자동납부 최대 3.5만",
+       "won": 35000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|IBK기업은행|135000"
+    }
+   ]
+  },
+  {
+   "id": 147,
+   "name": "하나 스카이패스 아멕스",
+   "issuer": "하나카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a437dcc1ae1bb48cd4c1bc2"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 이용 시 7만원 + 해외 최대 50만",
+     "reward_won": 570000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a437dcc1ae1bb48cd4c1bc2",
+     "main_won": 70000,
+     "bonus_won": 500000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 이용 시 7만원 + 해외 최대 50만",
+       "won": 500000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|하나카드|570000"
+    }
+   ]
+  },
+  {
+   "id": 148,
+   "name": "카카오페이신용카드",
+   "issuer": "삼성카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4207d51ae1bb48cd4c1b19"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 12만원 캐시백 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 2만",
+     "reward_won": 460000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4207d51ae1bb48cd4c1b19",
+     "main_won": 120000,
+     "bonus_won": 340000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 12만원 캐시백 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|460000"
+    }
+   ]
+  },
+  {
+   "id": 149,
+   "name": "삼성카드 taptap S",
+   "issuer": "삼성카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+     "reward_won": 160000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0",
+     "main_won": 110000,
+     "bonus_won": 50000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|160000"
+    }
+   ]
+  },
+  {
+   "id": 150,
+   "name": "삼성카드 taptap SHOPPING",
+   "issuer": "삼성카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+     "reward_won": 160000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0",
+     "main_won": 110000,
+     "bonus_won": 50000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|160000"
+    }
+   ]
+  },
+  {
+   "id": 152,
+   "name": "삼성카드 taptap DIGITAL",
+   "issuer": "삼성카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/ziH5VIci"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+     "reward_won": 160000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0",
+     "main_won": 110000,
+     "bonus_won": 50000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|160000"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 11만원 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 1.5만",
+     "reward_won": 110000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/ziH5VIci",
+     "main_won": 15000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|삼성카드|110000"
+    }
+   ]
+  },
+  {
+   "id": 153,
+   "name": "삼성 iD ENERGY 카드",
+   "issuer": "삼성카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+     "reward_won": 160000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0",
+     "main_won": 110000,
+     "bonus_won": 50000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|160000"
+    }
+   ]
+  },
+  {
+   "id": 154,
+   "name": "삼성 iD STATION 카드",
+   "issuer": "삼성카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+     "reward_won": 160000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0",
+     "main_won": 110000,
+     "bonus_won": 50000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|160000"
+    }
+   ]
+  },
+  {
+   "id": 156,
+   "name": "신한카드 Deep On Platinum",
+   "issuer": "신한카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4315a41f94d85bad33f6e1"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 780000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4315a41f94d85bad33f6e1",
+     "main_won": 10000,
+     "bonus_won": 770000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|780000"
+    }
+   ]
+  },
+  {
+   "id": 157,
+   "name": "신한카드 RPM+ Platinum",
+   "issuer": "신한카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4367101ae1bb48cd4c1b6e"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 730000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4367101ae1bb48cd4c1b6e",
+     "main_won": 10000,
+     "bonus_won": 720000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|730000"
+    }
+   ]
+  },
+  {
+   "id": 158,
+   "name": "신한카드 The CLASSIC NEO",
+   "issuer": "신한카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a436a321ae1bb48cd4c1b85"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 40만원 이상 이용 시 16만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 660000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a436a321ae1bb48cd4c1b85",
+     "main_won": 10000,
+     "bonus_won": 650000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 40만원 이상 이용 시 16만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|660000"
+    }
+   ]
+  },
+  {
+   "id": 159,
+   "name": "신한카드 The Premium PET",
+   "issuer": "신한카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a436a321ae1bb48cd4c1b85"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 40만원 이상 이용 시 16만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 660000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a436a321ae1bb48cd4c1b85",
+     "main_won": 10000,
+     "bonus_won": 650000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 40만원 이상 이용 시 16만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|660000"
+    }
+   ]
+  },
+  {
+   "id": 160,
+   "name": "American Express Gold Edition2",
+   "issuer": "현대카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3b3a811ae1bb48cd4c1afd"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "60만원 이상 이용 시 30만원 캐시백 + 해외 15만 이상 시 10만",
+     "reward_won": 400000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3b3a811ae1bb48cd4c1afd",
+     "main_won": 300000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "60만원 이상 이용 시 30만원 캐시백 + 해외 15만 이상 시 10만",
+       "won": 100000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|현대카드|400000"
+    }
+   ]
+  },
+  {
+   "id": 161,
+   "name": "현대카드MY BUSINESS M",
+   "issuer": "현대카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41d2951ae1bb48cd4c1b11"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 + 마케팅 동의 시 10만원 + 해외 최대 50.5만 + 정기결제 1.5만",
+     "reward_won": 620000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41d2951ae1bb48cd4c1b11",
+     "main_won": 420000,
+     "bonus_won": 200000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 + 마케팅 동의 시 10만원 + 해외 최대 50.5만 + 정기결제 1.5만",
+       "won": 15000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|현대카드|620000"
+    }
+   ]
+  },
+  {
+   "id": 162,
+   "name": "American Express Green Edition2",
+   "issuer": "현대카드",
+   "img": null,
+   "platforms": {
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3b39881ae1bb48cd4c1afb"
+    }
+   },
+   "events": [
+    {
+     "platform": "kakaopay",
+     "reward_text": "60만원 이상 이용 시 15만원 캐시백 + 해외 15만 이상 시 10만",
+     "reward_won": 250000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3b39881ae1bb48cd4c1afb",
+     "main_won": 150000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "60만원 이상 이용 시 15만원 캐시백 + 해외 15만 이상 시 10만",
+       "won": 100000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|현대카드|250000"
+    }
+   ]
+  },
+  {
+   "id": 163,
+   "name": "롯데카드 LOCA 365",
+   "issuer": "롯데카드",
+   "img": null,
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/V1AyC8zn"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+     "reward_won": 150000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/V1AyC8zn",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|롯데카드|150000"
+    }
+   ]
+  },
+  {
+   "id": 164,
+   "name": "롯데카드 LOCA 나누기",
+   "issuer": "롯데카드",
+   "img": null,
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/V1AyC8zn"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+     "reward_won": 150000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/V1AyC8zn",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|롯데카드|150000"
+    }
+   ]
+  },
+  {
+   "id": 165,
+   "name": "롯데카드 Digi-LOCA Las Vegas",
+   "issuer": "롯데카드",
+   "img": null,
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/V1AyC8zn"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+     "reward_won": 150000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/V1AyC8zn",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|롯데카드|150000"
+    }
+   ]
+  },
+  {
+   "id": 166,
+   "name": "롯데카드 Digi-LOCA London",
+   "issuer": "롯데카드",
+   "img": null,
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/V1AyC8zn"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+     "reward_won": 150000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/V1AyC8zn",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|롯데카드|150000"
+    }
+   ]
+  },
+  {
+   "id": 167,
+   "name": "롯데카드 Digi-LOCA Paris",
+   "issuer": "롯데카드",
+   "img": null,
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/V1AyC8zn"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "25만원 쓰면 15만 토스포인트 + 해외 30만 + 리볼빙 1만",
+     "reward_won": 150000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/V1AyC8zn",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|롯데카드|150000"
+    }
+   ]
+  },
+  {
+   "id": 169,
+   "name": "Toss taptap S",
+   "issuer": "삼성카드",
+   "img": "https://static.toss.im/assets/credit-card/samsung-taptap-s.png",
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/ziH5VIci"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 11만원 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 1.5만",
+     "reward_won": 110000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/ziH5VIci",
+     "main_won": 15000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|삼성카드|110000"
+    }
+   ]
+  },
+  {
+   "id": 170,
+   "name": "토스 삼성카드",
+   "issuer": "삼성카드",
+   "img": null,
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/5ydUjj97"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰면 11만원 + 마케팅 1만 + 해외 30만 + 자동납부 1.5만",
+     "reward_won": 110000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/5ydUjj97",
+     "main_won": 15000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|삼성카드|110000"
+    }
+   ]
+  },
+  {
+   "id": 171,
+   "name": "IBK 일상의 기쁨카드",
+   "issuer": "IBK기업은행",
+   "img": "https://static.toss.im/assets/credit-card/ibk_happy.png",
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/FWBrNuni"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
+     "reward_won": 90000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/FWBrNuni",
+     "main_won": 35000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|IBK기업은행|90000"
+    }
+   ]
+  },
+  {
+   "id": 172,
+   "name": "IBK 포인트 카드",
+   "issuer": "IBK기업은행",
+   "img": "https://static.toss.im/assets/credit-card/10130.png",
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/FWBrNuni"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
+     "reward_won": 90000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/FWBrNuni",
+     "main_won": 35000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|IBK기업은행|90000"
+    }
+   ]
+  },
+  {
+   "id": 173,
+   "name": "IBK 포인트3.8 토스 제휴카드",
+   "issuer": "IBK기업은행",
+   "img": "https://static.toss.im/assets/credit-card/10184.png",
+   "platforms": {
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/b3USP4tC"
+    }
+   },
+   "events": [
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
+     "reward_won": 90000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/b3USP4tC",
+     "main_won": 35000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|IBK기업은행|90000"
     }
    ]
   }
