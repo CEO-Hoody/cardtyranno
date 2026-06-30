@@ -3136,32 +3136,18 @@ DIAG_BODY=(r'''<style>
  </svg>'''
  r'''<div class="wrap"><div class="dg-wrap">
  <section class="dg-screen on" id="dgChooser">
-  <div style="text-align:center;padding:10px 0 2px">
-   <div class="dg-eb">CARD DIAGNOSIS</div>
-   <h1 style="font-weight:330;font-size:27px;letter-spacing:-1px;line-height:1.2;margin:11px 0 0">어떤 진단을<br>받아볼까요?</h1>
-   <p style="font-weight:400;font-size:13px;color:rgba(0,0,0,.58);margin:9px 0 0">좌우로 넘겨 보고 골라주세요</p>
+  <div class="dh-head"><span class="ti"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>진단하기</span><button class="dh-share" id="dhShare" type="button" aria-label="공유"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></div>
+  <div class="dh-hero">
+   <span class="eb">대표 진단</span>
+   <div class="hrow"><div style="flex:1"><h2>60초 카드 진단</h2><div class="hd">6개 질문이면 내게 맞는 카드 1장과 지금 가장 큰 캐시백 플랫폼까지.</div></div><span class="tc"><svg viewBox="0 0 100 86"><use href="#tyr"/></svg></span></div>
+   <div class="acts"><button class="dh-cta" type="button" data-scn="1">진단 시작 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button></div>
   </div>
-  <div class="dg-swipe" id="dgSwipe">
-   <article class="dg-scard sc-b">
-    <div class="sc-ic"><svg><use href="#p-coins"/></svg></div>
-    <div class="sc-eb">NEW · 캐시백 진단</div>
-    <h3>캐시백 최적 카드사 진단</h3>
-    <div class="sc-d">관심 카드사를 고르고 소비 유형을 답하면, 받을 수 있는 예상 캐시백을 카드사·플랫폼별로 추정해 드려요.</div>
-    <ul><li><svg><use href="#dg-check"/></svg> 카드사 복수 선택 · 질문 7개</li><li><svg><use href="#dg-check"/></svg> 예상 캐시백 금액 + 최적 플랫폼</li></ul>
-    <div class="sc-sp"></div>
-    <button class="dg-cta" data-scn="2" style="margin-top:18px">캐시백 진단 시작 <svg><use href="#dg-right"/></svg></button>
-   </article>
-   <article class="dg-scard sc-a">
-    <div class="sc-ic"><svg><use href="#tyr"/></svg></div>
-    <div class="sc-eb">카드 성향 진단 · 60초</div>
-    <h3>카드 성향 진단</h3>
-    <div class="sc-d">6개 질문으로 내 소비 성향에 맞는 카드 1종과 지금 가장 큰 발급 캐시백 플랫폼을 찾아드려요.</div>
-    <ul><li><svg><use href="#dg-check"/></svg> 질문 6개 · 약 1분</li><li><svg><use href="#dg-check"/></svg> 맞춤 카드 + 마감 임박 이벤트</li></ul>
-    <div class="sc-sp"></div>
-    <button class="dg-cta" data-scn="1" style="margin-top:18px">성향 진단 시작 <svg><use href="#dg-right"/></svg></button>
-   </article>
-  </div>
-  <div class="dg-dots" id="dgDots"><span class="on"></span><span></span></div>
+  <button class="dh-resume" id="dhResume" type="button" style="display:none"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><span><span class="t">이어서 진단하기</span><span class="s" id="dhResumeS">카드 진단 · 0/6 단계</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></button>
+  <div class="dh-cats" id="dhCats"><button class="dh-cat on" type="button" data-cat="전체">전체</button><button class="dh-cat" type="button" data-cat="추천">추천</button><button class="dh-cat" type="button" data-cat="소비성향">소비성향</button><button class="dh-cat" type="button" data-cat="상황별">상황별</button></div>
+  <div class="dh-sect">진단 콘텐츠</div>
+  <div class="dh-grid" id="dhGrid"></div>
+  <div class="dh-sect">다른 사람들의 진단 결과</div>
+  <div class="dh-others" id="dhOthers"></div>
  </section>
  <section class="dg-screen" id="dgIntro">
   <div class="dg-top" style="justify-content:flex-start;gap:8px"><button class="dg-icnbtn" id="dgIntroBack"><svg><use href="#dg-back"/></svg></button><span class="dg-step">카드 성향 진단</span></div>
@@ -3275,7 +3261,7 @@ function save(){try{localStorage.setItem(LS,JSON.stringify({step:state.step,answ
 function load(){try{var j=JSON.parse(localStorage.getItem(LS)||'null');if(j&&j.answers)return j;}catch(e){}return null;}
 function clearLS(){try{localStorage.removeItem(LS);}catch(e){}}
 var REDUCE=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-function show(id){var ss=document.querySelectorAll('.dg-screen');for(var i=0;i<ss.length;i++)ss[i].classList.toggle('on',ss[i].id===id);window.scrollTo(0,0);}
+function show(id){var ss=document.querySelectorAll('.dg-screen');for(var i=0;i<ss.length;i++)ss[i].classList.toggle('on',ss[i].id===id);window.scrollTo(0,0);if(id==='dgChooser'&&window.dhRefresh)dhRefresh();}
 function eggStage(n,N){var p=n/N;if(p<=0.34)return'#egg-crack1';if(p<=0.7)return'#egg-crack2';return'#egg-crack3';}
 function setEgg(ids,n,N){var h=eggStage(n,N);ids.forEach(function(id){var el=document.getElementById(id);if(el)el.setAttribute('href',h);});}
 function setTheme(){var Q=QS[state.step];var n=state.step+1;
@@ -3433,7 +3419,26 @@ function s2Choose(opt){var Q=S2Q[s2.step];s2.ans[Q.key]=opt;
  var next=function(){if(s2.step>=S2Q.length-1)s2Finish();else s2GotoStep(s2.step+1);};
  if(REDUCE)next();else setTimeout(next,200);
 }
-function s2Dots(){var sw=document.getElementById('dgSwipe'),dots=document.getElementById('dgDots');if(!sw||!dots)return;var cs=sw.querySelectorAll('.dg-scard'),mid=sw.scrollLeft+sw.clientWidth/2,idx=0;for(var i=0;i<cs.length;i++){if(cs[i].offsetLeft<=mid)idx=i;}var ds=dots.children;for(var j=0;j<ds.length;j++)ds[j].classList.toggle('on',j===idx);}
+function s2Dots(){}
+/* 진단 메인 허브(#2): 진단 콘텐츠 그리드 + 다른 사람 결과 + 이어하기 */
+var DTESTS=[
+ {t:'카드 진단',d:'6문항으로 내게 맞는 카드',m:'6문항 · 60초',scn:'1',bg:'var(--block-lime)',cat:'추천'},
+ {t:'캐시백 최적 카드사',d:'관심 카드사 예상 캐시백 추정',m:'7문항 · 90초',scn:'2',badge:'NEW',bg:'var(--block-mint)',cat:'추천'},
+ {t:'소비 유형 진단',d:'내 소비 패턴 분석',m:'준비 중',soon:1,bg:'var(--block-cream)',cat:'소비성향'},
+ {t:'연회비 적정선',d:'프리미엄 vs 실속',m:'준비 중',soon:1,badge:'NEW',bg:'var(--block-pink)',cat:'상황별'},
+ {t:'해외·여행 카드',d:'환전·캐시백 최적 카드',m:'준비 중',soon:1,bg:'var(--block-coral)',cat:'상황별'},
+ {t:'첫 카드 진단',d:'사회초년생 추천',m:'준비 중',soon:1,bg:'var(--block-lilac)',cat:'소비성향'}
+];
+var DOTHERS=[{who:'20대 · 온라인쇼핑형',card:'신한 딥드림 플러스',c:'var(--block-mint)'},{who:'30대 · 해외여행형',card:'삼성 트래블 캐시백',c:'var(--block-lilac)'},{who:'사회초년생 · 실속형',card:'KB 마이 데일리',c:'var(--block-cream)'}];
+function dhRenderGrid(cat){var g=document.getElementById('dhGrid');if(!g)return;cat=cat||'전체';
+ g.innerHTML=DTESTS.filter(function(t){return cat==='전체'||t.cat===cat;}).map(function(t){
+  var tag=t.soon?'<span class="badge so">준비중</span>':(t.badge?'<span class="badge nw">'+t.badge+'</span>':'');
+  var inner='<span class="tc"><svg viewBox="0 0 100 86"><use href="#tyr"/></svg></span><span class="tt">'+t.t+'</span><span class="td">'+t.d+'</span><span class="tm">'+t.m+'</span>';
+  if(t.soon)return '<div class="dh-tcard soon" style="background:'+t.bg+'">'+tag+inner+'</div>';
+  return '<button type="button" class="dh-tcard" data-scn="'+t.scn+'" style="background:'+t.bg+'">'+tag+inner+'</button>';}).join('');}
+function dhRenderOthers(){var o=document.getElementById('dhOthers');if(!o)return;
+ o.innerHTML=DOTHERS.map(function(x){return '<div class="dh-orow"><span class="pl" style="background:'+x.c+'"><svg viewBox="2 3.6 20 16.4" style="position:absolute;right:-6%;bottom:-10%;width:54%;height:auto;opacity:.16"><use href="#mk"/></svg></span><span style="min-width:0"><span class="who">'+x.who+'</span><span class="card">'+x.card+'</span></span></div>';}).join('');}
+function dhRefresh(){var r=document.getElementById('dhResume');if(!r)return;var j=load();if(j&&j.answers&&j.answers.length>0&&j.answers.length<QS.length){r.style.display='';var s=document.getElementById('dhResumeS');if(s)s.textContent='카드 진단 · '+j.answers.length+'/'+QS.length+' 단계';}else r.style.display='none';}
 function bind(){
  document.getElementById('dgStart').onclick=startFresh;
  var _si=document.getElementById('dgShareIntro');if(_si)_si.onclick=function(){dgShare(false);};
@@ -3445,7 +3450,12 @@ function bind(){
  document.getElementById('dgChoices').addEventListener('click',function(e){var b=e.target.closest('[data-opt]');if(b)choose(b.getAttribute('data-opt'));});
  document.addEventListener('keydown',function(e){if(state.screen!=='q')return;if(/^[1-8]$/.test(e.key))choose(parseInt(e.key)-1);else if(e.key==='ArrowLeft'){if(state.step>0)gotoStep(state.step-1);}});
  // 시나리오 선택(스와이프)
- var sw=document.getElementById('dgSwipe');if(sw){sw.addEventListener('scroll',s2Dots);s2Dots();sw.querySelectorAll('[data-scn]').forEach(function(btn){btn.onclick=function(){if(btn.getAttribute('data-scn')==='2')s2Start();else{clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}};});}
+ // 진단 허브 초기화 + 위임(data-scn 1=성향 intro / 2=캐시백 s2), 카테고리·이어하기·공유
+ dhRenderGrid('전체');dhRenderOthers();dhRefresh();
+ var _ch=document.getElementById('dgChooser');if(_ch)_ch.addEventListener('click',function(e){var b=e.target.closest('[data-scn]');if(!b)return;if(b.getAttribute('data-scn')==='2')s2Start();else{clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}});
+ var _cts=document.getElementById('dhCats');if(_cts)_cts.addEventListener('click',function(e){var b=e.target.closest('.dh-cat');if(!b)return;var bs=this.querySelectorAll('.dh-cat');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i]===b);dhRenderGrid(b.getAttribute('data-cat'));});
+ var _rsm=document.getElementById('dhResume');if(_rsm)_rsm.onclick=function(){var j=load();if(j&&j.answers&&j.answers.length){state.answers=j.answers.slice();state.step=Math.min(j.answers.length,QS.length-1);state.screen='q';show('dgQuestion');setTheme();}};
+ var _dsh=document.getElementById('dhShare');if(_dsh)_dsh.onclick=function(){dgShare(false);};
  var _ib=document.getElementById('dgIntroBack');if(_ib)_ib.onclick=function(){show('dgChooser');s2Dots();};
  // 시나리오2 바인딩
  document.getElementById('s2BackI').onclick=function(){show('dgChooser');s2Dots();};
