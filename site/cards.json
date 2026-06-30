@@ -6405,7 +6405,14 @@
     "events": [],
     "rank": null,
     "detail": null,
-    "plat": {}
+    "plat": {},
+    "main_benefit": "20만원 쓰고 7만원 상당 혜택 받기",
+    "main_tier": {
+     "spend": 200000,
+     "reward": 70000,
+     "eff": 35,
+     "text": "20만원 쓰고 7만원 상당 혜택 받기"
+    }
    },
    {
     "id": 209,
@@ -6728,7 +6735,14 @@
     "events": [],
     "rank": 56,
     "detail": null,
-    "plat": {}
+    "plat": {},
+    "main_benefit": "20만원 쓰고 7만원 상당 혜택 받기",
+    "main_tier": {
+     "spend": 200000,
+     "reward": 70000,
+     "eff": 35,
+     "text": "20만원 쓰고 7만원 상당 혜택 받기"
+    }
    },
    {
     "id": 230,
@@ -6759,7 +6773,14 @@
     ],
     "rank": null,
     "detail": null,
-    "plat": {}
+    "plat": {},
+    "main_benefit": "20만원 쓰고 7만원 상당 혜택 받기",
+    "main_tier": {
+     "spend": 200000,
+     "reward": 70000,
+     "eff": 35,
+     "text": "20만원 쓰고 7만원 상당 혜택 받기"
+    }
    }
   ],
   "NH농협카드": [

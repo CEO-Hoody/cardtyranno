@@ -2634,6 +2634,15 @@
    "period": "~07/31",
    "url": "https://toss.im/_m/b3USP4tC",
    "won": 90000
+  },
+  {
+   "issuer": "하나카드",
+   "card": "하나 스카이패스 아멕스 플래티늄 카드",
+   "platform": "네이버페이",
+   "benefit": "최대 57만원 캐시백",
+   "period": "",
+   "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865360&cardCompanyId=CCHN&cardIssuerCode=044",
+   "won": 570000
   }
  ]
 }

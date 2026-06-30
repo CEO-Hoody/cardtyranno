@@ -1,7 +1,7 @@
 {
  "month": "2026-07",
  "updated": "2026-07-01",
- "count": 140,
+ "count": 141,
  "cards": [
   {
    "id": 9,
@@ -2050,6 +2050,30 @@
      "reward_won": 570000,
      "reward_text": "20만원 이상 이용 시 7만원 + 해외 최대 50만",
      "period_end": "2026-07-31",
+     "main_won": 70000,
+     "bonus_won": 500000
+    }
+   ]
+  },
+  {
+   "id": 174,
+   "name": "하나 스카이패스 아멕스 플래티늄 카드",
+   "issuer": "하나카드",
+   "img": null,
+   "maxCashbackWon": 570000,
+   "maxCashbackText": "최대 57만원 (네이버페이 하나카드 이벤트)",
+   "bestPlatform": "naver",
+   "periodEnd": null,
+   "platforms": [
+    "naver"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "naver",
+     "reward_won": 570000,
+     "reward_text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+     "period_end": null,
      "main_won": 70000,
      "bonus_won": 500000
     }
