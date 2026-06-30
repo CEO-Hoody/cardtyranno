@@ -2448,22 +2448,60 @@ FAV_BODY=('<style>'
  '.pb-sw input:disabled+.pb-track{opacity:.5}'
  '.pb-test{display:inline-flex;align-items:center;gap:6px;margin:-8px 0 18px;padding:9px 15px;border-radius:50px;border:1px solid var(--hairline,#e6e6e6);background:#fff;color:var(--text,#000);font-size:12.5px;font-weight:700;cursor:pointer}'
  '.pb-test:active{transform:scale(.97)}.pb-test:disabled{opacity:.55;cursor:default}'
+ # 관심 — 카드/이벤트 세그먼트 + 항목별 현재 최고 캐시백·플랫폼
+ '.fv-seg{display:inline-flex;align-items:center;gap:2px;padding:3px;border-radius:50px;background:var(--surface-soft,#f4f3ef);margin:2px 0 16px}'
+ '.fv-seg button{border:0;background:0;font-family:inherit;font-weight:540;font-size:12.5px;padding:8px 16px;border-radius:50px;color:rgba(0,0,0,.6);cursor:pointer}.fv-seg button.on{background:#000;color:#fff;font-weight:600}.fv-seg button b{font-weight:700}'
+ '.fv-list{display:grid;grid-template-columns:1fr;gap:11px}'
+ '.fv-card{border:1px solid var(--hairline,#e6e6e6);border-radius:16px;padding:14px 15px;text-decoration:none;color:#000;display:block;background:#fff}'
+ '.fv-top{display:flex;align-items:center;gap:13px}'
+ '.fv-pl{width:64px;flex:0 0 auto;aspect-ratio:1.586/1;border-radius:8px;overflow:hidden;background:var(--surface-soft,#f4f3ef);box-shadow:0 3px 8px rgba(0,0,0,.12)}.fv-pl img{width:100%;height:100%;object-fit:cover}'
+ '.fv-mid{flex:1;min-width:0}.fv-nm{font-weight:700;font-size:14.5px;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fv-iss{font-weight:400;font-size:12px;color:rgba(0,0,0,.5);margin-top:2px}'
+ '.fv-h{flex:0 0 auto;border:0;background:0;cursor:pointer;color:var(--accent-magenta,#ff3d8b);padding:2px}.fv-h svg{width:21px;height:21px;display:block}'
+ '.fv-foot{display:flex;align-items:center;justify-content:space-between;margin-top:11px;padding-top:11px;border-top:1px solid var(--hairline-soft,#f0f0f0)}'
+ '.fv-cash{font-weight:400;font-size:12px;color:rgba(0,0,0,.55)}.fv-cash b{color:#000;font-weight:700}.fv-go{font-weight:540;font-size:12px;display:inline-flex;align-items:center;gap:4px}.fv-go svg{width:12px;height:12px}'
+ '.fv-evt{display:flex;align-items:center;gap:11px;border:1px solid var(--hairline,#e6e6e6);border-radius:14px;padding:13px 15px;text-decoration:none;color:#000;background:#fff}'
+ '.fv-evt .pf{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:50px;background:#000;color:#fff;flex:0 0 auto}.fv-evt .pf .dot{width:6px;height:6px;border-radius:50%}.fv-evt .pf .pn{font-weight:600;font-size:11px}'
+ '.fv-evt .eb2{flex:1;min-width:0}.fv-evt .et{font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fv-evt .em{font-size:11.5px;color:rgba(0,0,0,.5);margin-top:2px}.fv-evt .dd{flex:0 0 auto;font-weight:700;font-size:11.5px;color:var(--accent-magenta,#ff3d8b)}'
  '</style>'
- '<div class="wrap"><section><div class="sec-h"><h2>관심 카드</h2></div>'
- '<div class="muted" style="font-size:12.5px;padding-bottom:8px">로그인 없이 이 브라우저에 저장돼요. 담은 카드를 한눈에 비교하세요.</div>'
+ '<div class="wrap"><section><div class="sec-h" style="display:flex;align-items:center;gap:8px"><svg viewBox="0 0 24 24" width="20" height="20" style="color:var(--accent-magenta,#ff3d8b)"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg><h2 style="margin:0">관심</h2></div>'
+ '<div class="muted" style="font-size:12.5px;padding-bottom:8px">로그인 없이 이 브라우저에 저장돼요. 담은 카드와 그 진행 이벤트를 한눈에.</div>'
  '<div class="pushbox" id="pushbox"><div class="pb-l"><div class="pb-t"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg>새 이벤트 알림</div>'
  '<div class="pb-d" id="pbDesc">관심 카드에 다음 달 새 캐시백 이벤트가 등록되면 알려드려요.</div></div>'
  '<label class="pb-sw"><input type="checkbox" id="pushTg"><span class="pb-track"><span class="pb-thumb"></span></span></label></div>'
- '<div class="cgrid" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section></div>')
+ '<div class="fv-seg" id="favSeg"><button type="button" data-s="card" class="on">카드 <b id="favNC">0</b></button><button type="button" data-s="evt">이벤트 <b id="favNE">0</b></button></div>'
+ '<div class="fv-list" id="favCard"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
+ '<div class="fv-list" id="favEvt" style="display:none"></div>'
+ '</section></div>')
 FAV_JS=r"""
-fetch('cards.json').then(r=>r.json()).then(function(j){
+var FPN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',naver:'네이버페이',ajungdang:'아정당',kakaopay:'카카오페이'};
+var FPC={cardgorilla:'#FF6A13',banksalad:'#19C37D',toss:'#3182F6',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
+function _fnk(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
+function _fwm(n){if(!n)return'';return n>=10000?((Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만원'):(n.toLocaleString()+'원');}
+function _fdday(pe){if(!pe)return null;try{var d=Math.ceil((new Date(pe+'T23:59:59+09:00')-new Date(Date.now()+324e5+ -9*3600000))/(864e5));return d;}catch(e){return null;}}
+var favSeg='card';
+Promise.all([fetch('cards.json').then(r=>r.json()),fetch('platform_events.json').then(r=>r.json()).catch(function(){return{products:[]};})]).then(function(A){
+ var j=A[0];var prods=(window.liveEvents?liveEvents(A[1].products||[]):(A[1].products||[]));
+ var PMAP={};prods.forEach(function(p){PMAP[_fnk(p.name)]=p;});
  var all=[];for(var k in j.cards){(j.cards[k]||[]).forEach(function(c){c._iss=k;all.push(c);});}
- function render(){var fav=getFav();var items=all.filter(function(c){return fav.indexOf(c.id)>=0;});var L=document.getElementById('list');
-  if(!items.length){L.innerHTML='<div class="empty">아직 관심 카드가 없어요.<br><br><a class="accent" href="cards.html">카드찾기에서 하트를 눌러 담아보세요 ›</a></div>';updateFavCount();return;}
-  L.innerHTML=items.map(function(c){var fee=c.fee?('연회비 '+c.fee):'';
-   var hb='<span class="favbtn on" onclick="event.preventDefault();event.stopPropagation();favClick(this,'+c.id+')">'+favSvg(true)+'</span>';
-   return '<a class="ctile" href="carddetail.html?id='+c.id+'">'+hb+'<div class="plate">'+imgTag(c.img)+'</div><div class="cbody"><div class="cn">'+c.name+'</div>'+(fee?'<div class="cfee">'+fee+'</div>':'')+'<div class="cd">'+c._iss+' · '+c.benefit+'</div></div></a>';}).join("");updateFavCount();}
- window._fr=render; render();
+ function bestOf(name){var p=PMAP[_fnk(name)];if(!p)return null;var bw=0,bp='';(p.events||[]).forEach(function(e){if(e.platform==='issuer')return;var w=e.reward_won||0;if(w>bw){bw=w;bp=e.platform;}});return bw?{won:bw,plat:bp,p:p}:(p?{won:0,plat:'',p:p}:null);}
+ function render(){var fav=getFav();var items=all.filter(function(c){return fav.indexOf(c.id)>=0;});
+  var CardEl=document.getElementById('favCard'),EvtEl=document.getElementById('favEvt');
+  // 관심 카드의 진행 이벤트 평탄화(마감 임박순)
+  var evts=[];items.forEach(function(c){var b=bestOf(c.name);if(!b||!b.p)return;(b.p.events||[]).forEach(function(e){if(e.platform==='issuer'||!(e.reward_won||0))return;evts.push({card:c,name:c.name,plat:e.platform,won:e.reward_won||0,pe:e.period_end||'',url:e.url||''});});});
+  evts.sort(function(a,b){var da=_fdday(a.pe),db=_fdday(b.pe);da=(da==null?9999:da);db=(db==null?9999:db);return da-db||b.won-a.won;});
+  var nc=items.length,ne=evts.length;
+  document.getElementById('favNC').textContent=nc;document.getElementById('favNE').textContent=ne;
+  if(!nc){CardEl.innerHTML='<div class="empty">아직 관심 카드가 없어요.<br><br><a class="accent" href="cards.html">카드찾기에서 하트를 눌러 담아보세요 ›</a></div>';EvtEl.innerHTML='';updateFavCount();return;}
+  CardEl.innerHTML=items.map(function(c){var b=bestOf(c.name);
+   var foot=b&&b.won?('지금 최고 <b>'+_fwm(b.won)+'</b> · '+(FPN[b.plat]||'')):'발급 이벤트 준비 중';
+   return '<a class="fv-card" href="carddetail.html?id='+c.id+'"><div class="fv-top"><span class="fv-pl">'+imgTag(c.img)+'</span><div class="fv-mid"><div class="fv-nm">'+c.name+'</div><div class="fv-iss">'+c._iss+(c.fee?' · 연회비 '+c.fee:'')+'</div></div><button class="fv-h" type="button" aria-label="관심 해제" onclick="event.preventDefault();event.stopPropagation();favClick(this,'+c.id+')"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg></button></div><div class="fv-foot"><span class="fv-cash">'+foot+'</span><span class="fv-go">보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}).join('');
+  EvtEl.innerHTML=ne?evts.map(function(x){var dd=_fdday(x.pe);var dl=(dd==null?'진행중':(dd<=0?'오늘 마감':'D-'+dd));
+   return '<a class="fv-evt" href="events.html?platform='+x.plat+'&n='+encodeURIComponent(x.name)+'"><span class="pf"><span class="dot" style="background:'+(FPC[x.plat]||'#888')+'"></span><span class="pn">'+(FPN[x.plat]||x.plat)+'</span></span><span class="eb2"><span class="et">최대 '+_fwm(x.won)+'</span><span class="em">'+x.name+'</span></span><span class="dd">'+dl+'</span></a>';}).join(''):'<div class="empty">관심 카드의 진행 이벤트가 없어요.</div>';
+  if(window.repairImages)repairImages();updateFavCount();}
+ function showSeg(){document.getElementById('favCard').style.display=favSeg==='card'?'':'none';document.getElementById('favEvt').style.display=favSeg==='evt'?'':'none';
+  var bs=document.querySelectorAll('#favSeg button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-s')===favSeg);}
+ var seg=document.getElementById('favSeg');if(seg)seg.addEventListener('click',function(e){var b=e.target.closest('button[data-s]');if(!b)return;favSeg=b.getAttribute('data-s');showSeg();});
+ window._fr=function(){render();showSeg();}; render();showSeg();
 });
 /* 알림 토글 */
 (function(){var tg=document.getElementById('pushTg'),desc=document.getElementById('pbDesc');if(!tg)return;
