@@ -2613,8 +2613,15 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 720000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "78만원 혜택",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
@@ -7113,8 +7120,15 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 690000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "75만원 혜택",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|750000"
     },
     {
@@ -7171,8 +7185,15 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 690000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "75만원 혜택",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|750000"
     }
    ]
@@ -7224,8 +7245,15 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 690000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "75만원 혜택",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|750000"
     },
     {
@@ -7282,8 +7310,15 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 690000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "75만원 혜택",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|750000"
     }
    ]
@@ -7339,8 +7374,15 @@
      "reward_won": 750000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 690000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "75만원 혜택",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|750000"
     },
     {
@@ -7430,8 +7472,15 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 720000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "78만원 혜택",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
@@ -7538,8 +7587,15 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 720000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "78만원 혜택",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
@@ -7642,8 +7698,15 @@
      "reward_won": 780000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
-     "main_won": 780000,
-     "bonus_won": 0,
+     "main_won": 720000,
+     "bonus_won": 60000,
+     "breakdown": [
+      {
+       "text": "78만원 혜택",
+       "won": 780000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
