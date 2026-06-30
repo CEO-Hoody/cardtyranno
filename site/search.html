@@ -451,11 +451,14 @@ function ctSeo(title,desc,canonPath){try{
  if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
 }catch(e){}}
 /* 캐시백 주요/부가 분해(티어 인지) — 플랫폼 이벤트가 분해(bonus_won>0)면 그대로, 미분해(네이버·카카오 등 bonus=0·main=전체)면 카드 main_tier 보상으로 주요를 유도(부가=전체−주요). events 상세 '전체 캐시백 구성'(cards.json main_tier/sub_tiers)과 비교표·차트의 주요/부가 표기를 일치시킨다. mt=카드 main_tier.reward(원). */
-function splTier(e,mt){var t=(e.reward_won||0),b=(e.bonus_won||0),m=(e.main_won!=null?e.main_won:null);
- if(b>0){if(m==null)m=Math.max(t-b,0);else{if(m>t)m=t;b=Math.max(t-m,0);}return {t:t,m:m,b:b};}
- if(m!=null&&m<t)return {t:t,m:m,b:Math.max(t-m,0)};
- mt=mt||0;if(mt>0&&mt<t)return {t:t,m:mt,b:Math.max(t-mt,0)};
- return {t:t,m:(m==null?t:Math.min(m,t)),b:0};}
+function splTier(e,mt){var t=(e.reward_won||0);mt=mt||0;
+ // 카드 main_tier(주요 캐시백)를 최우선 — 플랫폼별 main_won은 채널마다 들쭉날쭉(네이버=전액·카카오 임의·뱅샐 0)이라 'events 전체 캐시백 구성'과 어긋남. 티어가 있으면 주요=티어로 통일, 부가=전체−주요.
+ if(mt>0){var m=Math.min(mt,t);return {t:t,m:m,b:Math.max(t-m,0)};}
+ // 티어 없으면 플랫폼 분해로 폴백(분해됨=그대로, 미분해=전액 주요)
+ var b=(e.bonus_won||0),pm=(e.main_won!=null?e.main_won:null);
+ if(b>0){if(pm==null)pm=Math.max(t-b,0);else{if(pm>t)pm=t;b=Math.max(t-pm,0);}return {t:t,m:pm,b:b};}
+ if(pm!=null&&pm<t)return {t:t,m:pm,b:Math.max(t-pm,0)};
+ return {t:t,m:(pm==null?t:Math.min(pm,t)),b:0};}
 /* ===== 통합 검색필터(UF) 제네릭 팩토리 — 표준 .uf 마크업(id=uf)을 받아 플랫폼사·카드사(다중)+유형/정렬(단일) 구동. PC 팝오버·모바일 바텀시트·URL 동기화. cfg={plats:[{k,name,color}],issuers:[name],types:[[v,label]],sorts:[[v,label]],state:{vis,issF,type,sortK},onChange,countText(n),applyText(n),urlSync} ===== */
 function ufBuild(cfg){var root=document.getElementById('uf');if(!root)return {refresh:function(){},resetAll:function(){}};
  var S=cfg.state,PL=cfg.plats||[],IS=cfg.issuers||[],TY=cfg.types||[],SO=cfg.sorts||[];
