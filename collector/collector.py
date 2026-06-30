@@ -35,6 +35,10 @@ from bronto import parse_ajd_rsc                             # 아정당
 from mamenchi import parse_naver                             # 네이버페이
 from stego import parse_meta_from_text, parse_meta_from_json # 카드 메타(연회비·혜택·전월실적) 파서 — 복원
 
+# 이번 달 '미수집(대기)' 플랫폼 집합 — 앱캡처 stale 등으로 주입 SKIP된 플랫폼.
+# export_json이 site/status.json에 기록 → 프론트가 '업데이트 예정' 표시에 사용(진짜 없음과 구분).
+PENDING_PLATFORMS=set()
+
 # ---------- 라이브 수집(Actions용; requests 필요) ----------
 def fetch(url, headers=None, timeout=20):
     import requests
@@ -238,6 +242,12 @@ def export_json(con):
     json.dump({"updated":datetime.date.today().isoformat(),"month":MONTH,"reward_groups":_rg,"products":out},
               open(os.path.join(SITE,"platform_events.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/platform_events.json ({len(out)} products)")
+    # ── 사이트 상태 신호(status.json): 이번 달 '미수집(대기)' 플랫폼 = 앱캡처 stale 등. ──
+    # 프론트 계약: 고정 플랫폼 영역에 데이터 없을 때 → 그 플랫폼이 pending_platforms에 있으면 pending_label 표시, 아니면 미노출.
+    json.dump({"month":MONTH,"updated":datetime.date.today().isoformat(),
+               "pending_platforms":sorted(PENDING_PLATFORMS),"pending_label":"업데이트 예정"},
+              open(os.path.join(SITE,"status.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    print(f"export → site/status.json (pending: {sorted(PENDING_PLATFORMS) or '없음'})")
     # ── 발급이벤트 목록(events.json) = platform_events 평탄화(5개 플랫폼·네이버 포함). 구형 build_data 산출물(네이버 0건) 대체 ──
     PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당","kakaopay":"카카오페이"}
     def _man(w):
@@ -476,6 +486,7 @@ def _merge_seismo_seed(platform, seed_file, injected, products):
     _sm=sd.get("month")                                 # stale 가드: 앱캡처는 매달 수동 업로드 → 전월 캡처 섞임 방지
     if _sm and _sm!=current_month_kst():
         print(f"⚠️ {platform} 앱캡처 시드 stale(시드={_sm}, 현재={current_month_kst()}) — 주입 SKIP. 새 캡처 업로드 후 재빌드 필요.")
+        PENDING_PLATFORMS.add(platform)                 # 프론트 '업데이트 예정' 신호
         return 0
     bynk={_nk(p["name"]):p for p in products}; n=0; nnew=0
     for ev in sd.get("events",[]):
@@ -896,6 +907,7 @@ if __name__=="__main__":
         _km=kp.get("month")                             # stale 가드(앱캡처 — 전월 캡처 섞임 방지)
         if _km and _km!=current_month_kst():
             print(f"⚠️ 카카오페이 앱캡처 시드 stale(시드={_km}, 현재={current_month_kst()}) — 주입 SKIP. 새 캡처 업로드 후 재빌드 필요.")
+            PENDING_PLATFORMS.add("kakaopay")            # 프론트 '업데이트 예정' 신호
             kp={"events":[]}
         _bk={_nk(p["name"]):p for p in products}; _kn=0; _knew=0
         for ev in kp.get("events",[]):
