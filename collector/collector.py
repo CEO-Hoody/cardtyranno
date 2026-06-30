@@ -887,7 +887,9 @@ if __name__=="__main__":
         NAVER_MAX=1_000_000   # 1인 캐시백 현실 상한. 초과액은 '총 행사규모/최대적립한도' 마케팅 수치로 보고 금액 비표시
         for nm,info in nv.items():
             p=_bn.get(_nk(nm))
-            if not p: continue
+            if not p:                              # 미존재 카드(중개 미발견·수동추가) → 신규 상품 생성(누락 방지)
+                p={"name":nm,"issuer":(info.get("issuer") or ""),"platforms":{},"events":[]}; products.append(p); _bn[_nk(nm)]=p
+            if not p.get("issuer") and info.get("issuer"): p["issuer"]=info["issuer"]
             rw=info.get("reward_won") or 0
             rtext=info.get("reward_text")
             if rw>NAVER_MAX:                       # 3600만원 등 비현실 금액 → 금액 숨기고 이벤트만 표기
