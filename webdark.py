@@ -752,10 +752,12 @@ def head(title,desc,path,extra_jsonld=None,noindex=False):
       '<meta property="og:type" content="website"><meta property="og:site_name" content="'+BRAND+'"><meta property="og:title" content="'+title+'">'
       '<meta property="og:description" content="'+desc+'"><meta property="og:url" content="'+BASE+path+'"><meta property="og:image" content="'+BASE+'/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="'+BRAND+'"><meta property="og:locale" content="ko_KR">'
       '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="'+title+'"><meta name="twitter:description" content="'+desc+'"><meta name="twitter:image" content="'+BASE+'/og-image.png">'
+      '<link rel="icon" type="image/svg+xml" href="/icon.svg">'
       '<link rel="icon" type="image/x-icon" href="/favicon.ico">'
       '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">'
       '<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">'
       '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">'
+      '<link rel="manifest" href="/manifest.webmanifest">'
       +('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token":"'+CF_BEACON_TOKEN+'"}\'></script>' if CF_BEACON_TOKEN else '')
       +ld)
 
