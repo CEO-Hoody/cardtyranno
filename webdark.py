@@ -561,7 +561,7 @@ def header(active):
     L=[("compare","issue.html?v=cmp","한눈에 비교","카드·카드사별 캐시백 한 표에서",False),
        ("issue","issue.html","캐시백","이번 달 플랫폼별 최대 캐시백",False),
        ("cards","cards.html","카드찾기","조건으로 내 카드 탐색",False),
-       ("diagnose","diagnose.html","카드 진단","60초 2지선다 카드 추천",False),
+       ("diagnose","diagnose.html","카드 진단","내 소비에 맞는 맞춤 카드 찾기",False),
        ("charts","chart.html","티라노 차트","캐시백 추이·랭킹 데이터",False),
        ("content","content.html","티라노 TIP","발급 전략·꿀팁 콘텐츠",False),
        ("community","community.html","커뮤니티","발급 후기·정보 공유",False),
@@ -2735,23 +2735,23 @@ DIAG_BODY=(r'''<style>
    <p style="font-weight:400;font-size:13px;color:rgba(0,0,0,.58);margin:9px 0 0">좌우로 넘겨 보고 골라주세요</p>
   </div>
   <div class="dg-swipe" id="dgSwipe">
-   <article class="dg-scard sc-a">
-    <div class="sc-ic"><svg><use href="#tyr"/></svg></div>
-    <div class="sc-eb">SCENARIO 01 · 60초</div>
-    <h3>카드 성향 진단</h3>
-    <div class="sc-d">6개 2지선다로 내 소비 성향에 맞는 카드 1종과 지금 가장 큰 발급 캐시백 플랫폼을 찾아드려요.</div>
-    <ul><li><svg><use href="#dg-check"/></svg> 질문 6개 · 약 1분</li><li><svg><use href="#dg-check"/></svg> 맞춤 카드 + 마감 임박 이벤트</li></ul>
-    <div class="sc-sp"></div>
-    <button class="dg-cta" data-scn="1" style="margin-top:18px">성향 진단 시작 <svg><use href="#dg-right"/></svg></button>
-   </article>
    <article class="dg-scard sc-b">
     <div class="sc-ic"><svg><use href="#p-coins"/></svg></div>
-    <div class="sc-eb">SCENARIO 02 · NEW</div>
+    <div class="sc-eb">NEW · 캐시백 진단</div>
     <h3>캐시백 최적 카드사 진단</h3>
     <div class="sc-d">관심 카드사를 고르고 소비 유형을 답하면, 받을 수 있는 예상 캐시백을 카드사·플랫폼별로 추정해 드려요.</div>
     <ul><li><svg><use href="#dg-check"/></svg> 카드사 복수 선택 · 질문 7개</li><li><svg><use href="#dg-check"/></svg> 예상 캐시백 금액 + 최적 플랫폼</li></ul>
     <div class="sc-sp"></div>
     <button class="dg-cta" data-scn="2" style="margin-top:18px">캐시백 진단 시작 <svg><use href="#dg-right"/></svg></button>
+   </article>
+   <article class="dg-scard sc-a">
+    <div class="sc-ic"><svg><use href="#tyr"/></svg></div>
+    <div class="sc-eb">카드 성향 진단 · 60초</div>
+    <h3>카드 성향 진단</h3>
+    <div class="sc-d">6개 질문으로 내 소비 성향에 맞는 카드 1종과 지금 가장 큰 발급 캐시백 플랫폼을 찾아드려요.</div>
+    <ul><li><svg><use href="#dg-check"/></svg> 질문 6개 · 약 1분</li><li><svg><use href="#dg-check"/></svg> 맞춤 카드 + 마감 임박 이벤트</li></ul>
+    <div class="sc-sp"></div>
+    <button class="dg-cta" data-scn="1" style="margin-top:18px">성향 진단 시작 <svg><use href="#dg-right"/></svg></button>
    </article>
   </div>
   <div class="dg-dots" id="dgDots"><span class="on"></span><span></span></div>
