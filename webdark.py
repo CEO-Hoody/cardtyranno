@@ -424,6 +424,21 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 @keyframes ctsPulse{0%,100%{transform:scale(1);opacity:.92}50%{transform:scale(1.07);opacity:1}}
 @keyframes ctsBar{0%{transform:translateX(-100%)}100%{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){#ctSplash .cts-mk{animation:none}#ctSplash .cts-bar span{animation:none;transform:none;width:40%;left:30%;inset:auto}}
+/* 공유 시트(공유하기 가이드 #6) — 모바일 바텀시트 / PC 모달. navigator.share 미지원 시 노출 */
+.ctsh-bg{position:fixed;inset:0;z-index:3200;background:rgba(0,0,0,.4);display:none;opacity:0;transition:opacity .2s}.ctsh-bg.on{display:block;opacity:1}
+.ctsh{position:fixed;left:0;right:0;bottom:0;background:#fff;border-radius:26px 26px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.16);padding:8px 0 calc(22px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .26s cubic-bezier(.2,.8,.2,1)}.ctsh-bg.on .ctsh{transform:none}
+.ctsh-grab{width:44px;height:5px;border-radius:50px;background:var(--hairline);margin:6px auto 0}
+.ctsh-h{display:flex;align-items:center;justify-content:space-between;padding:14px 22px 0}.ctsh-h span{font-weight:700;font-size:18px;letter-spacing:-.4px}
+.ctsh-x{width:32px;height:32px;border-radius:50%;background:var(--surface-soft);border:0;display:flex;align-items:center;justify-content:center;cursor:pointer}.ctsh-x svg{width:15px;height:15px}
+.ctsh-prev{display:flex;align-items:center;gap:12px;margin:16px 22px 0;border:1px solid var(--hairline);border-radius:14px;padding:13px}
+.ctsh-prev .pv-mk{width:50px;height:32px;flex:0 0 auto;border-radius:7px;background:var(--block-lime);display:flex;align-items:center;justify-content:center}.ctsh-prev .pv-mk svg{width:26px;height:20px;color:#0f0d0b}
+.ctsh-prev .pv-t{font-weight:700;font-size:13.5px;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ctsh-prev .pv-u{font-size:11.5px;color:rgba(0,0,0,.5);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctsh-ch{display:flex;justify-content:space-around;gap:8px;padding:20px 18px 0}
+.ctsh-cbtn{background:0;border:0;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;font-family:inherit;flex:1}.ctsh-cbtn:active{transform:scale(.96)}
+.ctsh-cbtn .ic{width:54px;height:54px;border-radius:50%;background:var(--surface-soft);display:flex;align-items:center;justify-content:center}.ctsh-cbtn .ic svg{width:23px;height:23px;color:#111}
+.ctsh-cbtn .cl{font-weight:500;font-size:11.5px;color:rgba(0,0,0,.7)}
+.ctsh-copy{display:flex;align-items:center;gap:10px;margin:22px 22px 0;padding:13px 16px;border:1.5px solid var(--hairline);border-radius:14px}.ctsh-copy .lk{flex:0 0 auto;opacity:.6;display:inline-flex}.ctsh-copy .lk svg{width:18px;height:18px}.ctsh-copy .u{flex:1;font-size:13px;color:rgba(0,0,0,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ctsh-copy .cp{flex:0 0 auto;font-weight:600;font-size:13px;padding:7px 14px;border-radius:50px;background:#000;color:#fff;border:0;cursor:pointer;font-family:inherit}
+@media(min-width:761px){.ctsh{left:50%;right:auto;bottom:auto;top:50%;transform:translate(-50%,-50%) scale(.96);width:380px;border-radius:20px;padding-bottom:22px}.ctsh-bg.on .ctsh{transform:translate(-50%,-50%)}.ctsh-grab{display:none}}
 """
 
 HELPERS = r"""
@@ -568,7 +583,33 @@ function ufBuild(cfg){var root=document.getElementById('uf');if(!root)return {re
 function ctToast(msg){var t=document.getElementById('ctToast');if(!t){t=document.createElement('div');t.id='ctToast';t.className='ct-toast';document.body.appendChild(t);}t.textContent=msg;void t.offsetWidth;t.classList.add('on');clearTimeout(ctToast._t);ctToast._t=setTimeout(function(){t.classList.remove('on');},2000);}
 function _ctCopyFallback(text){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok;}catch(e){return false;}}
 function ctCopyLink(url){var ok=function(){ctToast('링크가 복사됐어요');};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){if(_ctCopyFallback(url))ok();else ctToast('복사에 실패했어요');});}else if(_ctCopyFallback(url)){ok();}else{ctToast('복사에 실패했어요');}}
-function ctShare(url,title,text){try{if(navigator.share){navigator.share({title:title,text:text,url:url}).catch(function(){});return;}}catch(e){}ctCopyLink(url);}
+/* 공유 시트(#6): 모바일 바텀시트 / PC 모달. 채널 = 링크복사·카카오톡·메일·이미지. navigator.share 우선. */
+var _CTLINK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6"/><path d="M11 6.5l1.5-1.5a3.5 3.5 0 0 1 5 5L16 11.5"/><path d="M13 17.5L11.5 19a3.5 3.5 0 0 1-5-5L8 12.5"/></svg>';
+var _CTKAKAO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11H8l-4 3.5z"/></svg>';
+var _CTMAIL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 5 8-5"/></svg>';
+var _CTIMG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M5 17l4.5-4 3 2.5L17 11l3 3"/></svg>';
+var _CTMK='<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>';
+function _ctShClose(){var el=document.getElementById('ctShareSheet');if(el){el.classList.remove('on');document.body.style.overflow='';}}
+function ctShareSheet(url,title,text){var el=document.getElementById('ctShareSheet');
+ if(!el){el=document.createElement('div');el.id='ctShareSheet';el.className='ctsh-bg';
+  el.innerHTML='<div class="ctsh" role="dialog" aria-modal="true" aria-label="공유하기"><div class="ctsh-grab"></div><div class="ctsh-h"><span>공유하기</span><button class="ctsh-x" type="button" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="ctsh-prev" id="ctShPrev"></div><div class="ctsh-ch" id="ctShCh"></div><div class="ctsh-copy"><span class="lk">'+_CTLINK+'</span><span class="u" id="ctShUrl"></span><button class="cp" type="button" id="ctShCopyBtn">복사</button></div></div>';
+  document.body.appendChild(el);
+  el.addEventListener('click',function(e){if(e.target===el||e.target.closest('.ctsh-x'))_ctShClose();});}
+ var _esc=function(s){return (s==null?'':''+s).replace(/&/g,'&amp;').replace(/</g,'&lt;');};
+ var og=(document.querySelector('meta[property="og:image"]')||{}).content||'/og-image.png';
+ document.getElementById('ctShPrev').innerHTML='<span class="pv-mk">'+_CTMK+'</span><span style="min-width:0"><span class="pv-t" style="display:block">'+_esc(title||'카드티라노')+'</span><span class="pv-u" style="display:block">'+_esc(url.replace(/^https?:\/\//,''))+'</span></span>';
+ var ch=[['copy','링크 복사',_CTLINK,''],['kakao','카카오톡',_CTKAKAO,'#FEE500'],['mail','메일',_CTMAIL,''],['image','이미지',_CTIMG,'']];
+ document.getElementById('ctShCh').innerHTML=ch.map(function(c){return '<button class="ctsh-cbtn" type="button" data-act="'+c[0]+'"><span class="ic"'+(c[3]?' style="background:'+c[3]+'"':'')+'>'+c[2]+'</span><span class="cl">'+c[1]+'</span></button>';}).join('');
+ document.getElementById('ctShUrl').textContent=url;
+ document.getElementById('ctShCh').onclick=function(e){var b=e.target.closest('[data-act]');if(!b)return;var a=b.getAttribute('data-act');
+  if(a==='copy'){ctCopyLink(url);_ctShClose();}
+  else if(a==='kakao'){ctCopyLink(url);ctToast('링크 복사됨 · 카카오톡에 붙여넣기');_ctShClose();}
+  else if(a==='mail'){location.href='mailto:?subject='+encodeURIComponent(title||'카드티라노')+'&body='+encodeURIComponent((text?text+'\n\n':'')+url);_ctShClose();}
+  else if(a==='image'){try{window.open(og,'_blank','noopener');}catch(_){}_ctShClose();}};
+ document.getElementById('ctShCopyBtn').onclick=function(){ctCopyLink(url);_ctShClose();};
+ el.classList.add('on');document.body.style.overflow='hidden';
+ if(!el._k){el._k=1;document.addEventListener('keydown',function(e){if(e.key==='Escape')_ctShClose();});}}
+function ctShare(url,title,text){try{if(navigator.share){navigator.share({title:title,text:text,url:url}).catch(function(){});return;}}catch(e){}ctShareSheet(url,title,text);}
 function track(type,label){try{
  var a=JSON.parse(localStorage.getItem('ct_evt')||'[]');
  a.push({t:type,l:(label||'').toString().trim().slice(0,80),p:_pg(),ts:Date.now()});
