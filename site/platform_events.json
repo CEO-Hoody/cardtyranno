@@ -3145,29 +3145,6 @@
    ]
   },
   {
-   "id": 22,
-   "name": "팝업구조 TEST",
-   "issuer": "이벤트 등록용",
-   "img": null,
-   "platforms": {
-    "cardgorilla": {
-     "id": "1530",
-     "url": "https://www.card-gorilla.com/card/detail/1530"
-    }
-   },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "팝업구조 TEST",
-     "reward_won": null,
-     "period_end": null,
-     "url": "https://www.card-gorilla.com/card/detail/1530",
-     "main_won": 0,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
    "id": 23,
    "name": "THE iD. 1st",
    "issuer": "삼성카드",
