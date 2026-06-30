@@ -2477,7 +2477,7 @@ ABOUT_BODY=(r'''<style>
  .ab-lime{padding:32px 24px}.ab-lime .ab-g2{gap:28px}
  .ab-navy{padding:40px 24px}.ab-navy h2{font-size:30px;letter-spacing:-1px}.ab-navy p{font-size:15px}
  .ab-stats{gap:24px}.ab-stats .v{font-size:30px}
- .ab-eg{grid-template-columns:1fr;gap:12px}.ab-ec{grid-column:auto!important;flex-direction:row!important;align-items:center!important}.ab-ec .gl{width:96px!important}
+ .ab-eg{grid-template-columns:1fr;gap:12px}.ab-ec{grid-column:auto!important;flex-direction:row!important;align-items:center!important}.ab-ec .gl{width:96px!important}.ab-eg>:nth-child(1){order:1}.ab-eg>:nth-child(4){order:2}.ab-eg>:nth-child(2){order:3}.ab-eg>:nth-child(3){order:4}
  .ab-cream{padding:40px 24px}.ab-cream h2{font-size:30px;letter-spacing:-1px}
  .ab-card{padding:22px 20px}
  .ab-hero-ctas{flex-wrap:wrap}
@@ -2543,13 +2543,13 @@ ABOUT_BODY=(r'''<style>
  # EXPERTS 공룡
  '<section class="sec"><div style="max-width:680px"><div class="eb" style="color:var(--accent-magenta)">곁의 전문가</div>'
  '<h2 class="ab-h2">데이터를 읽는 공룡 넷</h2>'
- '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:20px 0 0;color:rgba(0,0,0,.72)">자동화만으로는 \'진짜 좋은 카드\'를 가려낼 수 없습니다. 조건의 함정, 실적의 무게, 갱신 시점의 미묘한 차이는 결국 사람이 읽어야 하니까요. 그래서 카드티라노 곁에는 <b style="font-weight:700">사이트를 만든 사람과 사업·마케팅·분석을 맡은 전문가들</b>이 있습니다.</p></div>'
+ '<p style="font-weight:400;font-size:16px;line-height:1.55;margin:20px 0 0;color:rgba(0,0,0,.72)">자동화만으로는 \'진짜 좋은 카드\'를 가려낼 수 없습니다. 조건의 함정, 실적의 무게, 갱신 시점의 미묘한 차이는 결국 사람이 읽어야 하니까요. 그래서 카드티라노의 중심에는 <b style="font-weight:700">방향을 정하고 직접 만든 두 창업자 — 코파운더 듀오</b>가 있고, 그 곁에서 캐시백·마케팅·분석을 맡은 전문가들이 함께합니다.</p></div>'
  '<div class="ab-eg">'
  + "".join('<div class="ab-ec" style="background:%s;%s;%s"><div class="gl" style="width:%s"><svg viewBox="%s"><use href="%s"/></svg></div><div style="min-width:0"><div class="role">%s</div><div class="nm">%s</div><div class="tag">%s</div><div class="ds">%s</div></div></div>'%(bg,span,flex,gw,vb,ic,role,nm,tag,desc) for ic,vb,nm,role,tag,desc,bg,span,flex,gw in [
-   ("#d-eoraptor","0 0 120 100","에오랍토르","창립자 · 메이커","최초의 공룡","카드티라노를 기획하고, 만들고, 디자인했습니다. 가장 먼저 나타난 공룡처럼 — 이 모든 것의 시작.","var(--block-lilac)","grid-column:span 2","flex-direction:row;align-items:center","140px"),
+   ("#d-eoraptor","0 0 120 100","에오랍토르","창립자 · CEO · CTO/CPO","비전을 세우고, 직접 만듭니다","카드티라노가 어디로 갈지 — 전략과 비전을 세우고, 프로덕트·기술·디자인을 직접 이끕니다. 가장 먼저 나타난 공룡처럼, 이 모든 것의 시작이자 중심.","var(--block-lilac)","grid-column:span 2","flex-direction:row;align-items:center","140px"),
    ("#d-maia","0 0 120 100","마이아사우라","캐시백·이벤트 분석","좋은 건 놓치지 않습니다","매달 바뀌는 캐시백과 발급 이벤트를 꼼꼼히 살펴, 가장 이득인 것을 골라냅니다.","var(--block-mint)","","flex-direction:column;align-items:flex-start","104px"),
    ("#d-ptera","0 0 120 100","프테라노돈","마케팅 총괄","멀리, 빠르게 알립니다","카드티라노가 찾은 가장 이득인 선택을, 필요한 사람에게 가장 빠르게 전합니다.","var(--block-pink)","","flex-direction:column;align-items:flex-start","104px"),
-   ("#d-brachio","0 0 120 100","브라키오","CBO · 사업 총괄","크게, 멀리 내다봅니다","서비스가 단단히 설 수 있는 사업 기반을 다지고, 카드사·플랫폼 등 파트너와의 협업을 만들어 카드티라노가 더 멀리 나아갈 길을 엽니다.","var(--block-cream)","grid-column:span 2","flex-direction:row;align-items:center","140px")])
+   ("#d-brachio","0 0 120 100","브라키오","공동창업자 · CBO · 사업 총괄","크게, 멀리 내다봅니다","에오랍토르와 함께 카드티라노를 세운 공동창업자. 사업 기반과 카드사·플랫폼 파트너십을 다져, 서비스가 더 크고 멀리 나아갈 길을 엽니다.","var(--block-cream)","grid-column:span 2","flex-direction:row;align-items:center","140px")])
  + '</div>'
  '<p style="font-weight:400;font-size:14px;line-height:1.55;margin:26px auto 0;max-width:680px;color:rgba(0,0,0,.6);text-align:center">데이터가 숫자를 모으고, 전문가가 그 숫자에 맥락을 입힙니다. 그래서 카드티라노의 추천에는 늘 <b style="font-weight:700;color:#000">근거</b>가 있습니다.</p></section>'
  # BELIEF
