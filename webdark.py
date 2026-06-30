@@ -913,7 +913,7 @@ INDEX_BODY=('<div class="wrap">'
    '<a class="nmt" style="background:var(--block-lilac,#c5b0f4)" href="issue.html" rel="sponsored nofollow"><div><div class="adm">광고(AD) · 신규발급</div><div class="adh">첫 결제 즉시 캐시백</div><div class="ads">최대 7만원</div></div><div class="adgo">자세히 보기 ›</div></a>'
  '</div></section>'
  '<section class="ntip-sec"><div class="ntip-h"><div><div class="nhe-eb dim">티라노TIP</div><h2 class="ntip-t">이번 달 발급 전략</h2></div><a class="nmore" href="content.html">전체 콘텐츠 ›</a></div>'
- '<a class="ntip-card" id="tipLatest" href="content.html"><div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">티라노TIP · 2026.06</div><div class="th">불러오는 중…</div></div></a></section>'
+ '<a class="ntip-card" id="tipLatest" href="content.html"><div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">티라노TIP · 2026.07</div><div class="th">불러오는 중…</div></div></a></section>'
  +FAQ_HTML+'</div>')
 INDEX_JS=r"""
 var PMETA={cardgorilla:{n:'카드고릴라',c:'#FF6A13'},banksalad:{n:'뱅크샐러드',c:'#19C37D'},toss:{n:'토스',c:'#3182F6'},ajungdang:{n:'아정당',c:'#1B64DA'},naver:{n:'네이버페이',c:'#03C75A'},kakaopay:{n:'카카오페이',c:'#FEE500'},issuer:{n:'카드사 직접',c:'#7a8088'}};
@@ -977,7 +977,7 @@ fetch('content.json').then(function(r){return r.json();}).then(function(cd){var 
  var hc=document.getElementById('heroTipCta');if(hc)hc.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
  var el=document.getElementById('tipLatest');if(!el)return;
  el.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
- el.innerHTML='<div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">'+(t.cat||'티라노TIP')+' · 2026.06</div><div class="th">'+(t.title||'')+'</div><div class="ts">'+(t.summary||'')+'</div><div class="tgo">전략 보러가기 ›</div></div>';
+ el.innerHTML='<div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">'+(t.cat||'티라노TIP')+' · '+((cd.updated||'2026-07-01').slice(0,7).replace('-','.'))+'</div><div class="th">'+(t.title||'')+'</div><div class="ts">'+(t.summary||'')+'</div><div class="tgo">전략 보러가기 ›</div></div>';
 }).catch(function(){});
 // A · 히어로 롤링 캐러셀 (자동 4.2s + 도트 + prefers-reduced-motion 정지)
 (function(){var tr=document.getElementById('nhcTrack'),dots=document.getElementById('nhcDots'),wrap=document.getElementById('nhc');if(!tr||!dots)return;
@@ -1450,9 +1450,9 @@ ISSUE_BODY=('<style>'
  '<div id="cmp-iss"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
  '<div id="cmp-prod" style="display:none"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div>'
  # 하단 배너(가이드 변경10) — PC: 전략(170px)+AD / 모바일: mint 전략
- '<div class="pcmp-banners"><a class="pcb-strat" href="content.html"><img src="assets/tip-headers/header-strategy.png" alt="이번 달 발급 전략"><div><div class="mono">티라노TIP</div><div class="t">이번 달 어디서 받는 게 이득일까?</div><div class="d">카드사별 최대 플랫폼과 마감 임박 이벤트를 정리했어요.</div><span class="go">전략 보기 ›</span></div></a>'
+ '<div class="pcmp-banners"><a class="pcb-strat" href="content.html?id=19"><img src="assets/tip-headers/header-strategy.png" alt="2026년 7월 카드 캐시백 전략"><div><div class="mono">티라노TIP · 2026.07</div><div class="t">“최대 117만원”의 함정과 진짜 알짜 카드</div><div class="d">6개 플랫폼 7월 데이터 전수 분석 — 주요·효율·연회비·발급 플랫폼까지.</div><span class="go">7월 전략 보기 ›</span></div></a>'
  '<a class="pcb-ad" href="cards.html" rel="sponsored nofollow"><div class="mono">광고(AD) · 제휴</div><div><div class="t">해외 수수료 면제 여행카드</div><div class="d">최대 금액 기준, 조건 충족 시</div></div><span class="go">자세히 ›</span></a></div>'
- '<div class="pcmp-banner-mo"><a href="content.html"><div class="mono">티라노TIP</div><div class="t">이번 달 어디서 받는 게 이득일까?</div><span class="go">전략 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></a></div>'
+ '<div class="pcmp-banner-mo"><a href="content.html?id=19"><div class="mono">티라노TIP · 2026.07</div><div class="t">“최대 117만원”의 함정과 진짜 알짜 카드</div><span class="go">7월 전략 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></a></div>'
  '</div>'
  '</section></div>')
 ISSUE_JS=r"""
@@ -1782,7 +1782,7 @@ function tabs(){var t=document.getElementById('tipTabs');t.innerHTML=TYPES.map(f
  t.querySelectorAll('.tip-tab').forEach(function(b){b.onclick=function(){cur=b.dataset.k;tabs();renderList();};});}
 function pick(){var st=C.filter(function(x){return x.cat==='발급 팁';})[0]||C[0];var el=document.getElementById('tipPick');if(!st||!el)return;
  el.innerHTML='<a class="tip-pick" href="content.html?id='+st.id+'"><div class="tip-pick-img"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg><span class="tip-pick-badge">이달의 PICK</span></div>'
-  +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.06</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
+  +'<div class="tip-pick-body"><div class="tip-pick-eb">이달의 캐시백 전략 · 2026.07</div><div class="tip-pick-t">'+st.title+'</div>'+(st.summary?'<div class="tip-pick-d">'+st.summary+'</div>':'')+'<span class="tip-pick-cta">전략 보러가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></div></a>';}
 function detail(d){document.getElementById('listwrap').style.display='none';var el=document.getElementById('detail');el.style.display='';
  if(d.html){el.innerHTML='<div class="adt">'+d.html+'<a class="bk2" href="content.html" style="display:inline-block;margin-top:32px">← 티라노 TIP</a></div>';ctSeo(d.title+' | 카드티라노',(d.summary||d.title),'content.html?id='+d.id);return;}
  var hero=d.img?'<div class="ghero"><img src="'+d.img+'" alt="'+d.cat+'" loading="eager"/></div>':'';
