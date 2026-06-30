@@ -2091,7 +2091,6 @@ FAV_BODY=('<style>'
  '<div class="pushbox" id="pushbox"><div class="pb-l"><div class="pb-t">🔔 새 이벤트 알림</div>'
  '<div class="pb-d" id="pbDesc">관심 카드에 다음 달 새 캐시백 이벤트가 등록되면 알려드려요.</div></div>'
  '<label class="pb-sw"><input type="checkbox" id="pushTg"><span class="pb-track"><span class="pb-thumb"></span></span></label></div>'
- '<button type="button" class="pb-test" id="pushTest">🔔 테스트 알림 보내기</button>'
  '<div class="cgrid" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section></div>')
 FAV_JS=r"""
 fetch('cards.json').then(r=>r.json()).then(function(j){
