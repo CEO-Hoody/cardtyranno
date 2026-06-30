@@ -180,7 +180,9 @@ def export_json(con):
         for _pl,_m in maps.items():           # url 누락(과거 ON CONFLICT 미갱신 등) 시 id로 정확 랜딩 URL 보정
             if not _m.get("url"): _m["url"]=plat_url(_pl,_m.get("id"))
         evs=[]
-        for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall():
+        # 이번 달 재확인된 이벤트만(last_seen 월=현재월). 전월에 마지막 확인된(미재확인) 잔류 이벤트는
+        # 데이터에 날짜가 없어도(뱅샐·아정당) last_seen으로 결정적 제외 → 비교표/캐시백에 전월건 안 섞임.
+        for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' AND substr(last_seen,1,7)=? ORDER BY reward_won DESC",(pid,current_month_kst())).fetchall():
             mw,bw,comps=parse_breakdown(r[1],r[2])   # reward_text→메인/부가 분해
             ov=BREAKDOWN.get((name,r[0]))            # 거주지 수집 이벤트상세 분해값 우선
             if ov: mw,bw=ov["main"],ov["bonus"]
@@ -253,7 +255,9 @@ def export_json(con):
               open(os.path.join(SITE,"status.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/status.json (pending: {sorted(PENDING_PLATFORMS) or '없음'})")
     # ── 발급이벤트 목록(events.json) = platform_events 평탄화(5개 플랫폼·네이버 포함). 구형 build_data 산출물(네이버 0건) 대체 ──
-    PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당","kakaopay":"카카오페이"}
+    PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당","kakaopay":"카카오페이","issuer":"카드사 공식"}
+    def _plabel(pl, iss):   # issuer(카드사 직접) 채널은 'issuer' 대신 각 카드사명으로 표기
+        return (iss if (pl=="issuer" and iss and iss!="기타") else PN.get(pl,pl))
     def _man(w):
         if not w: return ""
         return (str(round(w/1000)/10).replace(".0","")+"만원") if w>=10000 else (f"{w:,}원")
@@ -265,7 +269,7 @@ def export_json(con):
             w=e.get("reward_won") or 0
             ben=("최대 "+_man(w)+" 캐시백") if w>0 else (e.get("reward_text") or "")
             pe=e.get("period_end")
-            items.append({"issuer":iss,"card":p["name"],"platform":PN.get(pl,pl),"benefit":ben,
+            items.append({"issuer":iss,"card":p["name"],"platform":_plabel(pl,iss),"benefit":ben,
                           "period":("~"+str(pe)[5:].replace("-","/")) if pe else "","url":url,"won":w})
             iss_max[iss]=max(iss_max.get(iss,0),w)
     order=sorted(iss_max,key=lambda k:-iss_max[k])
@@ -499,8 +503,9 @@ def _merge_seismo_seed(platform, seed_file, injected, products):
         ps=ev.get("period_start"); pe=ev.get("period_end"); iss=ev.get("issuer") or ""
         for cn in ev.get("cards",[]):
             p=bynk.get(_nk(cn))
-            if not p:
-                continue                                   # 우리 시드/DB에 없는 카드는 제외(신규 상품 생성 안 함)
+            if not p:                                      # 미존재 카드(앱 전용·중개 플랫폼 미발견) → 신규 상품 생성(platform_events 누락 방지)
+                p={"name":cn,"issuer":iss,"platforms":{},"events":[]}; products.append(p); bynk[_nk(cn)]=p; nnew+=1
+            if not p.get("issuer") and iss: p["issuer"]=iss
             had_live = platform in p.get("platforms",{})   # 이미 라이브 매핑이 붙어 있던 카드
             p.setdefault("platforms",{}).setdefault(platform,{"id":"","url":""})
             key=(p["name"],platform)
@@ -944,8 +949,9 @@ if __name__=="__main__":
             eurl=ev.get("url","")                      # 카카오페이 이벤트 페이지 랜딩 스킴(fest.kakaopay.com 그룹)
             for cn in ev.get("cards",[]):
                 p=_bk.get(_nk(cn))
-                if not p:                              # 우리 시드/DB에 없는 카드는 제외(신규 상품 생성 안 함)
-                    continue
+                if not p:                              # 미존재 카드(카카오 전용·중개 플랫폼 미발견) → 신규 상품 생성(platform_events 누락 방지)
+                    p={"name":cn,"issuer":iss,"platforms":{},"events":[]}; products.append(p); _bk[_nk(cn)]=p; _knew+=1
+                if not p.get("issuer") and iss: p["issuer"]=iss
                 p.setdefault("platforms",{})["kakaopay"]={"id":"","url":eurl}
                 if rw:
                     injected[(p["name"],"kakaopay")]={"reward_won":rw,"reward_text":rtext,
