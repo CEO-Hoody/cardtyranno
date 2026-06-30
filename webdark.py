@@ -207,9 +207,8 @@ table.cmp td .st{font-size:10px;display:block} .doth{display:inline-flex;align-i
 .adt p{font-size:15.5px;line-height:1.8;color:#44444c;margin:15px 0}.adt .bk2{display:inline-block;margin-top:24px;font-weight:800;color:var(--blue)}
 .adt .hl{font-weight:900;font-size:1.16em;color:var(--accent-magenta,#ff3d8b);letter-spacing:-.3px;white-space:nowrap}
 .adt .kw{font-weight:800;color:#000000;background:linear-gradient(transparent 62%,rgba(197,176,244,.55) 0)}
-.adt .tip{display:block;position:relative;background:var(--block-cream,#f7f3e9);border-left:3px solid var(--accent-magenta,#ff3d8b);border-radius:10px;padding:13px 16px 13px 44px;margin:18px 0;font-size:14.5px;line-height:1.65;color:#3a3a42}
-.adt .tip::before{content:"💡";position:absolute;left:15px;top:12px;font-size:16px}
-.adt .tip.warn{border-left-color:#e8843c}.adt .tip.warn::before{content:"⚠️"}
+.adt .tip{display:block;position:relative;background:var(--block-cream,#f7f3e9);border-left:3px solid var(--accent-magenta,#ff3d8b);border-radius:10px;padding:13px 16px;margin:18px 0;font-size:14.5px;line-height:1.65;color:#3a3a42}
+.adt .tip.warn{border-left-color:#e8843c}
 footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .foot{display:flex;gap:50px;padding:42px 0 10px;flex-wrap:wrap}
 .foot .col h4{font-size:12px;color:var(--dim);font-weight:800;margin-bottom:13px}.foot .col a{display:block;font-size:13.5px;color:#55555e;margin-bottom:9px}.foot .col a:hover{color:var(--accent)}
@@ -585,7 +584,7 @@ def header(active):
             +'<div class="drawer-share-wrap"><button class="drawer-share" id="drawerShare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M8 7l4-3.5L16 7"/><path d="M5.5 12v6.5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V12"/></svg>카드티라노 홈 공유하기</button></div></aside>'
             '<div class="util"><div class="wrap"><a href="content.html">가이드</a><a href="mailto:contact@cardtyranno.com">제휴·광고 문의</a></div></div>'
             '<header class="hd"><div class="wrap row">'
-            '<span class="icbtn menu" id="menuBtn">☰</span>'
+            '<span class="icbtn menu" id="menuBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>'
             '<a class="logo" href="index.html"><svg class="rx" viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.4 4.6 H19 A2 2 0 0 1 21 6.6 V9.2 A2 2 0 0 1 19 11.2 H15.4 A2 2 0 0 1 13.4 9.2 V6.6 A2 2 0 0 1 15.4 4.6 Z M17.6 6.5 a0.8 0.8 0 1 1 -1.6 0 a0.8 0.8 0 1 1 1.6 0 Z M18.2 7.8 H19.9 A0.5 0.5 0 0 1 20.4 8.3 V9.6 A0.5 0.5 0 0 1 19.9 10.1 H18.2 A0.5 0.5 0 0 1 17.7 9.6 V8.3 A0.5 0.5 0 0 1 18.2 7.8 Z M18.05 8.87 H20.05 V9.03 H18.05 Z M18.78 8.13 H18.94 V9.77 H18.78 Z"/></svg>CARD<b>TYRANNO</b></a>'
             '<nav class="gnb">'+gnb+'</nav>'
             '<div class="right"><div class="icbtn" id="searchGo"><svg class="ic"><use href="#ic-search"/></svg></div>'
@@ -2088,7 +2087,7 @@ FAV_BODY=('<style>'
  '</style>'
  '<div class="wrap"><section><div class="sec-h"><h2>관심 카드</h2></div>'
  '<div class="muted" style="font-size:12.5px;padding-bottom:8px">로그인 없이 이 브라우저에 저장돼요. 담은 카드를 한눈에 비교하세요.</div>'
- '<div class="pushbox" id="pushbox"><div class="pb-l"><div class="pb-t">🔔 새 이벤트 알림</div>'
+ '<div class="pushbox" id="pushbox"><div class="pb-l"><div class="pb-t"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg>새 이벤트 알림</div>'
  '<div class="pb-d" id="pbDesc">관심 카드에 다음 달 새 캐시백 이벤트가 등록되면 알려드려요.</div></div>'
  '<label class="pb-sw"><input type="checkbox" id="pushTg"><span class="pb-track"><span class="pb-thumb"></span></span></label></div>'
  '<div class="cgrid" id="list"><div class="empty"><span class="tload"><svg class="tmk" viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>불러오는 중</span></div></div></section></div>')
@@ -2305,20 +2304,20 @@ DASHBOARD_BODY=('<style>'
  '@media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.bar .bl{flex-basis:48%}.hgrid{grid-template-columns:repeat(2,1fr)}}'
  '</style>'
  '<div class="wrap dwrap"><div class="sec-h"><h2>카드티라노 대시보드</h2></div>'
- '<div class="dnote">📡 <b>스크래핑 헬스</b>는 콜렉터 산출물(platform_events.json)을 실시간 분석해 플랫폼·카드사별 수집 상태를 보여줍니다.<br>👣 아래 <b>방문 지표(시간/일/월별)</b>는 <b>이 브라우저</b> 로컬 집계예요. <b>전체 방문자</b>는 개인정보(IP) 미저장 <b>Cloudflare Web Analytics</b>(자동 연동됨)에서 집계됩니다.</div>'
- '<div class="dsec"><h3>🌐 Cloudflare 실측 방문 (전체 방문자)</h3>'
+ '<div class="dnote"><b>스크래핑 헬스</b>는 콜렉터 산출물(platform_events.json)을 실시간 분석해 플랫폼·카드사별 수집 상태를 보여줍니다.<br>아래 <b>방문 지표(시간/일/월별)</b>는 <b>이 브라우저</b> 로컬 집계예요. <b>전체 방문자</b>는 개인정보(IP) 미저장 <b>Cloudflare Web Analytics</b>(자동 연동됨)에서 집계됩니다.</div>'
+ '<div class="dsec"><h3>Cloudflare 실측 방문 (전체 방문자)</h3>'
  '<div class="kpis"><div class="kpi"><div class="n" id="cfPV">225</div><div class="l">페이지뷰 · 최근 24h</div></div>'
  '<div class="kpi"><div class="n" id="cfVisit">100</div><div class="l">방문(Visits) · 최근 24h</div></div>'
  '<div class="kpi"><div class="n">자동</div><div class="l">수집 방식(Automatic)</div></div>'
  '<div class="kpi"><div class="n" id="cfAsOf">06/27</div><div class="l">스냅샷 기준일</div></div></div>'
  '<div style="margin-top:4px"><a href="https://dash.cloudflare.com/?to=/:account/web-analytics" target="_blank" rel="noopener" style="display:inline-block;background:#f6821f;color:#fff;font-weight:800;font-size:13px;padding:11px 17px;border-radius:10px;text-decoration:none">Cloudflare에서 실시간 방문자 보기 ↗</a></div>'
  '<div class="dnote" style="margin-top:10px">위 수치는 Cloudflare Web Analytics <b>스냅샷</b>입니다(IP 미저장). <b>시간/일/월별 실시간 추세·국가·인기 페이지</b>는 위 버튼의 Cloudflare 대시보드에서 기간 필터로 확인하세요. (페이지 내 자동 실시간 표시는 토큰 기반 프록시 연동 시 가능 — 원하면 설정해 드립니다.)</div></div>'
- '<div class="dsec"><h3>📡 플랫폼별 스크래핑 상태</h3><div class="hgrid" id="hplat"></div><div id="hfresh" class="empty2"></div></div>'
+ '<div class="dsec"><h3>플랫폼별 스크래핑 상태</h3><div class="hgrid" id="hplat"></div><div id="hfresh" class="empty2"></div></div>'
  '<div class="dsec"><h3>카드사별 커버리지</h3><div id="hiss"></div></div>'
- '<div class="sec-h" style="margin-top:8px"><h2 style="font-size:18px">👣 방문 지표 (이 브라우저)</h2></div>'
- '<div class="dbtns"><button id="rf">↻ 새로고침</button><button id="csv">⬇ CSV 내보내기</button><button id="rs">🗑 이 브라우저 초기화</button></div>'
+ '<div class="sec-h" style="margin-top:8px"><h2 style="font-size:18px">방문 지표 (이 브라우저)</h2></div>'
+ '<div class="dbtns"><button id="rf">새로고침</button><button id="csv">CSV 내보내기</button><button id="rs">이 브라우저 초기화</button></div>'
  '<div class="kpis" id="kpis"></div><div id="secs"></div>'
- '<div class="dsec"><h3>🕒 최근 활동</h3><div id="log"></div></div></div>')
+ '<div class="dsec"><h3>최근 활동</h3><div id="log"></div></div></div>')
 DASHBOARD_JS=r"""
 // === 스크래핑 헬스 — 콜렉터 산출물(platform_events.json) 실시간 분석 ===
 (function(){var PN={cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',toss:'토스',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};var PORD=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];var PC={cardgorilla:'#ff4d4f',banksalad:'#2f6bff',toss:'#3182f6',ajungdang:'#3b5bdb',naver:'#03c75a',kakaopay:'#e8b800'};
@@ -2349,15 +2348,15 @@ function render(){
  var first=Number(localStorage.getItem('ct_first')||0);var fd=first?new Date(first).toLocaleDateString('ko-KR'):'-';
  document.getElementById('kpis').innerHTML=kpi(pv,'페이지뷰')+kpi(ev.length,'총 이벤트')+kpi(new Set(ev.map(function(e){return e.p;})).size,'방문 페이지수')+kpi(fd,'첫 방문');
  var secs=[
-  ['📅 월별 방문(페이지뷰)', tbars(tagg(ev,'month'))],
-  ['🗓 일별 방문 (최근 14일)', tbars(tagg(ev,'day'))],
-  ['🕐 시간대별 방문', tbars(tagg(ev,'hour'))],
-  ['📄 페이지별 조회', bars(agg(ev,'pageview',function(e){return PG(e.l||e.p);}))],
-  ['🧭 메뉴 클릭', bars(agg(ev,'menu',function(e){return e.l;}))],
+  ['월별 방문(페이지뷰)', tbars(tagg(ev,'month'))],
+  ['일별 방문 (최근 14일)', tbars(tagg(ev,'day'))],
+  ['시간대별 방문', tbars(tagg(ev,'hour'))],
+  ['페이지별 조회', bars(agg(ev,'pageview',function(e){return PG(e.l||e.p);}))],
+  ['메뉴 클릭', bars(agg(ev,'menu',function(e){return e.l;}))],
   ['카드 클릭(상품)', bars(agg(ev,'card',function(e){return e.l;}))],
   ['필터·카드사 탭', bars(agg(ev,'filter',function(e){return e.l;}))],
-  ['📂 업종 카테고리 클릭', bars(agg(ev,'category',function(e){return e.l;}))],
-  ['🔗 플랫폼 상세 클릭', bars(agg(ev,'plat',function(e){return e.l;}))],
+  ['업종 카테고리 클릭', bars(agg(ev,'category',function(e){return e.l;}))],
+  ['플랫폼 상세 클릭', bars(agg(ev,'plat',function(e){return e.l;}))],
   ['카드사 공식 클릭', bars(agg(ev,'official',function(e){return e.l;}))],
   ['발급 이벤트 클릭', bars(agg(ev,'event',function(e){return e.l;}))],
   ['리스트/검색 클릭', bars(agg(ev,'item',function(e){return e.l;}))]
@@ -2683,6 +2682,21 @@ DIAG_BODY=(r'''<style>
 .choice .k{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono,monospace);font-size:13px;font-weight:600;color:rgba(0,0,0,.55)}.choice .k svg{width:16px;height:16px}
 .choice .cl{display:block;font-weight:700;font-size:15.5px;letter-spacing:-.3px}.choice .cs{display:block;font-weight:400;font-size:12.5px;color:rgba(0,0,0,.58);margin-top:2px}
 .choice.sel{border-color:#000;background:#000;color:#fff}.choice.sel .k{border-color:#fff;background:#fff;color:#000}.choice.sel .cs{color:rgba(255,255,255,.66)}
+/* 4~8지선다 아이콘 2열 그리드 */
+.dg-grid{padding:18px 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dg-gopt{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 14px;border-radius:14px;border:1.5px solid var(--hairline);background:#fff;color:#111;text-align:left;cursor:pointer;font-family:inherit;min-height:56px;transition:transform .12s ease}
+.dg-gopt:active{transform:scale(.97)}
+.dg-gopt .gi{width:32px;height:32px;border-radius:9px;background:var(--surface-soft);color:#1a1714;display:flex;align-items:center;justify-content:center}.dg-gopt .gi svg{width:18px;height:18px}
+.dg-gopt .gt{font-weight:700;font-size:13px;letter-spacing:-.3px}
+.dg-gopt.sel{border-color:#000;background:#000;color:#fff}.dg-gopt.sel .gi{background:rgba(255,255,255,.16);color:#fff}
+/* 결과 · 내 진단 유형 비중 */
+.dg-dist .bar{display:flex;height:18px;border-radius:50px;overflow:hidden;margin-top:11px}
+.dg-dist .bar span{display:block;height:100%}
+.dg-dist .lg{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:12px}
+.dg-dist .lg .it{display:flex;align-items:center;gap:7px}
+.dg-dist .lg .dt{width:8px;height:8px;border-radius:50%}
+.dg-dist .lg .nm{font-size:12px}.dg-dist .lg .pc{font-weight:700;font-size:12px}
+.dg-dist .lg .me{font-family:var(--font-mono,monospace);font-size:8px;background:var(--accent-magenta);color:#fff;padding:2px 6px;border-radius:50px;text-transform:uppercase}
 /* result */
 .dg-rhero{background:var(--block-lime);border-radius:26px;padding:22px 22px 24px;text-align:center;position:relative;overflow:hidden}
 .dg-badge{display:inline-block;font-family:var(--font-mono,monospace);font-size:9px;background:var(--accent-magenta);color:#fff;padding:5px 11px;border-radius:50px}
@@ -2777,6 +2791,14 @@ DIAG_BODY=(r'''<style>
  <symbol id="p-spark" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M19 15l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></symbol>
  <symbol id="p-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 8h13l-1 11.5a1.5 1.5 0 0 1-1.5 1.4H8a1.5 1.5 0 0 1-1.5-1.4z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/></symbol>
  <symbol id="p-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5l3.5 3 4.5-6 4.5 6 3.5-3-1.5 11h-13z"/><path d="M5.5 21h13"/></symbol>
+ <symbol id="c-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2 11h11"/><path d="M5.5 7h15l-1.6 6H7"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></symbol>
+ <symbol id="c-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5V20h16V9.5"/><path d="M3 9.5L4.5 4h15L21 9.5a2.5 2.5 0 0 1-4.5 1.5 2.5 2.5 0 0 1-4.5 0 2.5 2.5 0 0 1-4.5 0A2.5 2.5 0 0 1 3 9.5z"/><path d="M9.5 20v-5h5v5"/></symbol>
+ <symbol id="c-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h12v4a6 6 0 0 1-12 0z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2"/><path d="M6 21h10"/></symbol>
+ <symbol id="c-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3l2-5h12l2 5v3"/><path d="M3 16h18v2h-2v1.5h-2V18H7v1.5H5V18H3z"/><circle cx="7.5" cy="14" r="1"/><circle cx="16.5" cy="14" r="1"/></symbol>
+ <symbol id="c-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 18h2"/></symbol>
+ <symbol id="c-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 13.5L3 11l2-3 4 1 5-5.5c.8-.8 2.2-.8 2.8 0s.8 2 0 2.8L13 11l1 4-2 2-2.5-3.5z"/></symbol>
+ <symbol id="c-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8.5v7M8.5 12h7"/></symbol>
+ <symbol id="c-bill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h12v17l-2.2-1.4-2 1.4-1.8-1.4-1.8 1.4-2-1.4L6 20.5z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></symbol>
  <symbol id="dg-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></symbol>
  <symbol id="dg-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
  <symbol id="dg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></symbol>
@@ -2849,6 +2871,7 @@ DIAG_BODY=(r'''<style>
     <div class="dg-sec"><div class="dg-eb">왜 이 카드?</div><div class="dg-chips" id="dgWhy"></div></div>
     <div class="dg-sec"><div style="display:flex;align-items:baseline;justify-content:space-between"><div class="dg-eb">지금 발급 캐시백</div><div style="font-weight:400;font-size:11px;color:rgba(0,0,0,.5)" id="dgBarsCap">플랫폼 비교</div></div><div class="dg-bars" id="dgBars"></div></div>
     <div class="dg-sec"><div class="dg-eb">마감 임박 이벤트</div><div id="dgEvents" style="margin-top:8px"></div></div>
+    <div class="dg-sec dg-dist"><div style="display:flex;align-items:baseline;justify-content:space-between"><div class="dg-eb">내 진단 유형 비중</div><div style="font-weight:400;font-size:11px;color:rgba(0,0,0,.5)" id="dgDistCap">최근 30일</div></div><div class="bar" id="dgDistBar"></div><div class="lg" id="dgDistLg"></div></div>
     <div class="dg-rcta"><a class="dg-cta" id="dgGo" href="#">발급 이벤트 전체 보기 <svg><use href="#dg-right"/></svg></a><button class="dg-redo" id="dgRedo"><svg><use href="#dg-redo"/></svg> 다시 진단하기</button><button class="dg-redo" id="dgShareResult"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> 결과 공유</button>
      <div class="dg-foot">추천은 입력한 응답 + 공개 캐시백 데이터 기준이에요. 금액은 최대 금액 기준(조건 충족 시)이며 수집 시점에 따라 달라질 수 있어요.</div></div>
    </div>
@@ -2891,30 +2914,39 @@ var PORD=['toss','naver','kakaopay','ajungdang','cardgorilla','banksalad'];
 var PN={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이',issuer:'카드사 직접'};
 var PC={toss:'#3182F6',cardgorilla:'#FF6A13',banksalad:'#19C37D',ajungdang:'#1B64DA',naver:'#03C75A',kakaopay:'#FEE500'};
 var QS=[
- {theme:'소비처',q:'어디서 결제가 더 잦나요?',prop:'#p-globe',bg:'var(--block-lime)',a:{l:'해외·여행',s:'출장·여행·직구가 많아요',t:'overseas'},b:{l:'국내 일상',s:'국내 생활 결제 위주예요',t:'domestic'}},
- {theme:'카드 실적',q:'전월 실적, 채울 수 있나요?',prop:'#p-receipt',bg:'var(--block-lilac)',a:{l:'실적 채워도 OK',s:'어느 정도 쓰는 편이에요',t:'spend'},b:{l:'무실적이 좋아요',s:'조건 없이 받고 싶어요',t:'nospend'}},
- {theme:'혜택 취향',q:'더 끌리는 혜택은 어느 쪽인가요?',prop:'#p-spark',bg:'var(--block-mint)',a:{l:'포인트·마일리지 적립',s:'쌓아서 크게 쓰는 맛',t:'point'},b:{l:'즉시 캐시백·할인',s:'결제할 때 바로 돌려받기',t:'cash'}},
- {theme:'연회비',q:'연회비는 어느 정도가 좋아요?',prop:'#p-coins',bg:'var(--block-pink)',a:{l:'프리미엄도 OK',s:'혜택 크면 연회비 감수',t:'premium'},b:{l:'실속·저연회비',s:'부담 없는 쪽이 좋아요',t:'value'}},
- {theme:'주력 소비',q:'어디에 가장 많이 쓰세요?',prop:'#p-bag',bg:'var(--block-cream)',a:{l:'온라인 쇼핑·구독',s:'쿠팡·넷플릭스·배민까지',t:'shopping'},b:{l:'교통·주유·외식',s:'매일 나가는 생활 동선',t:'transit'}},
- {theme:'사용 스타일',q:'카드는 어떻게 쓰는 편이에요?',prop:'#p-crown',bg:'var(--block-coral)',a:{l:'한 장에 몰아쓰기',s:'주력 카드 하나면 충분',t:'single'},b:{l:'여러 장 가볍게',s:'상황 따라 나눠 써요',t:'multi'}}
+ {theme:'소비처',q:'어디서 결제가 더 잦나요?',prop:'#p-globe',bg:'var(--block-lime)',opts:[
+   {l:'해외·여행',s:'출장·여행·직구가 많아요',tk:'overseas'},{l:'국내 일상',s:'국내 생활 결제 위주예요',tk:'domestic'}]},
+ {theme:'카드 실적',q:'월 카드값, 보통 얼마쯤 쓰세요?',prop:'#p-receipt',bg:'var(--block-lilac)',opts:[
+   {l:'30만원 미만',s:'가볍게 쓰는 편',tk:'nospend'},{l:'30~80만원',s:'딱 생활비만큼',tk:'nospend'},{l:'80만원 이상',s:'메인카드로 몰아서',tk:'spend'}]},
+ {theme:'혜택 취향',q:'더 끌리는 혜택은 어느 쪽인가요?',prop:'#p-spark',bg:'var(--block-mint)',opts:[
+   {l:'포인트·마일리지 적립',s:'쌓아서 크게 쓰는 맛',tk:'point'},{l:'즉시 캐시백·할인',s:'결제할 때 바로 돌려받기',tk:'cash'}]},
+ {theme:'연회비',q:'연회비는 어느 정도가 좋아요?',prop:'#p-coins',bg:'var(--block-pink)',opts:[
+   {l:'프리미엄도 OK',s:'혜택 크면 연회비 감수',tk:'premium'},{l:'실속·저연회비',s:'부담 없는 쪽이 좋아요',tk:'value'}]},
+ {theme:'주력 소비',q:'어디에 가장 많이 쓰세요?',prop:'#p-bag',bg:'var(--block-cream)',hint:'최대 8개 중 하나를 골라주세요',opts:[
+   {l:'온라인 쇼핑',icon:'#c-cart',tk:'shopping'},{l:'마트·편의점',icon:'#c-store',tk:'shopping'},{l:'카페·외식',icon:'#c-cup',tk:'transit'},{l:'교통·주유',icon:'#c-car',tk:'transit'},
+   {l:'통신·구독',icon:'#c-phone',tk:'shopping'},{l:'해외·여행',icon:'#c-plane',tk:'overseas'},{l:'병원·약국',icon:'#c-cross',tk:'value'},{l:'공과금·기타',icon:'#c-bill',tk:'transit'}]},
+ {theme:'사용 스타일',q:'카드는 어떻게 쓰는 편이에요?',prop:'#p-crown',bg:'var(--block-coral)',opts:[
+   {l:'한 장에 몰아쓰기',s:'주력 카드 하나면 충분',tk:'single'},{l:'여러 장 가볍게',s:'상황 따라 나눠 써요',tk:'multi'}]}
 ];
 var ARCH=[
- {iss:'삼성카드',label:'삼성 트래블 캐시백',chips:['해외 결제','무실적','즉시 캐시백'],likes:['overseas','nospend','cash','value','single'],kw:['트래블','마일','아멕스','taptap','iD','travel']},
- {iss:'현대카드',label:'현대 프리미엄 마일리지',chips:['마일 적립','프리미엄','여행'],likes:['overseas','spend','point','premium','single'],kw:['the ','대한항공','마일','green','프리미엄','M']},
- {iss:'KB국민카드',label:'국민 올인원 캐시백',chips:['일상 캐시백','무실적','생활'],likes:['domestic','nospend','cash','value','single'],kw:['올인원','이지','다담','wish','tantan','너구리','my']},
- {iss:'신한카드',label:'신한 구독 라이프',chips:['구독 할인','즉시 캐시백','일상'],likes:['domestic','cash','shopping','value','multi'],kw:['딥','구독','life','mr.','처음','yay','드림']},
- {iss:'롯데카드',label:'롯데 쇼핑 플러스',chips:['온라인 쇼핑','적립','생활'],likes:['domestic','shopping','cash','single'],kw:['로카','likit','쇼핑','digital','로카365']},
- {iss:'우리카드',label:'우리 교통·통신 세이브',chips:['교통·통신','실속','생활'],likes:['domestic','transit','value','multi'],kw:['카드의정석','교통','7core','mile','뉴플래티넘','d4']},
- {iss:'하나카드',label:'하나 데일리 주유',chips:['주유','즉시 캐시백','생활'],likes:['domestic','transit','cash','value'],kw:['주유','오일','energy','원더','클럽','비비드']},
- {iss:'BC카드',label:'BC 배달·외식 캐시백',chips:['배달·외식','즉시 캐시백','생활'],likes:['domestic','transit','cash','multi'],kw:['바로','배달','외식','시발점','clovi','k-패스']}
+ {iss:'삼성카드',type:'트래블·해외형',chips:['해외 결제','무실적','즉시 캐시백'],likes:['overseas','nospend','cash','value','single']},
+ {iss:'현대카드',type:'프리미엄형',chips:['마일 적립','프리미엄','여행'],likes:['overseas','spend','point','premium','single']},
+ {iss:'KB국민카드',type:'캐시백·실속형',chips:['일상 캐시백','무실적','생활'],likes:['domestic','nospend','cash','value','single']},
+ {iss:'신한카드',type:'온라인쇼핑형',chips:['구독 할인','즉시 캐시백','일상'],likes:['domestic','cash','shopping','value','multi']},
+ {iss:'롯데카드',type:'온라인쇼핑형',chips:['온라인 쇼핑','적립','생활'],likes:['domestic','shopping','cash','single']},
+ {iss:'우리카드',type:'교통·생활형',chips:['교통·통신','실속','생활'],likes:['domestic','transit','value','multi']},
+ {iss:'하나카드',type:'교통·생활형',chips:['주유','즉시 캐시백','생활'],likes:['domestic','transit','cash','value']},
+ {iss:'BC카드',type:'교통·생활형',chips:['배달·외식','즉시 캐시백','생활'],likes:['domestic','transit','cash','multi']}
 ];
+// 진단 유형 비중(최근 30일 누적, 예시) — 결과에서 내 유형만 강조
+var DIST=[{type:'트래블·해외형',pct:32,color:'#9a86e8'},{type:'캐시백·실속형',pct:24,color:'#3182F6'},{type:'온라인쇼핑형',pct:21,color:'#19C37D'},{type:'교통·생활형',pct:14,color:'#FF6A13'},{type:'프리미엄형',pct:9,color:'#1a1714'}];
 function issAlias(s){s=s||'';if(/국민/.test(s))return 'KB국민카드';if(/^bc|비씨|바로/i.test(s))return 'BC카드';if(/신한/.test(s))return '신한카드';if(/현대/.test(s))return '현대카드';if(/삼성/.test(s))return '삼성카드';if(/롯데/.test(s))return '롯데카드';if(/우리/.test(s))return '우리카드';if(/하나/.test(s))return '하나카드';return s;}
 function _wm(n){if(!n)return'0원';if(n>=10000){var m=n/10000;return (m>=10?Math.round(m):Math.round(m*10)/10)+'만원';}return n.toLocaleString()+'원';}
 function platMap(p){var o={};(p.events||[]).forEach(function(e){if(e.platform==='issuer')return;var w=e.reward_won||0;if(w>(o[e.platform]||0))o[e.platform]=w;});return o;}
 function maxRw(p){var m=0;(p.events||[]).forEach(function(e){if(e.platform!=='issuer'&&(e.reward_won||0)>m)m=e.reward_won;});return m;}
 var PRODS=[],IMGN={};
 var state={screen:'intro',step:0,answers:[]};
-var LS='ct_diag_v1';
+var LS='ct_diag_v2';
 function save(){try{localStorage.setItem(LS,JSON.stringify({step:state.step,answers:state.answers}));}catch(e){}}
 function load(){try{var j=JSON.parse(localStorage.getItem(LS)||'null');if(j&&j.answers)return j;}catch(e){}return null;}
 function clearLS(){try{localStorage.removeItem(LS);}catch(e){}}
@@ -2931,19 +2963,23 @@ function setTheme(){var Q=QS[state.step];var n=state.step+1;
  ['dgTcPc','dgTcMo'].forEach(function(id){document.getElementById(id).style.background=Q.bg;});
  ['dgPropPc','dgPropMo'].forEach(function(id){document.getElementById(id).querySelector('use').setAttribute('href',Q.prop);});
  setEgg(['dgEggPc','dgEggMo'],n,6);
- var sel=state.answers[state.step];
- document.getElementById('dgChoices').innerHTML=[['A','a'],['B','b']].map(function(p){var o=Q[p[1]];var on=sel===p[1];
-  return '<button class="choice'+(on?' sel':'')+'" data-opt="'+p[1]+'"><span class="k">'+(on?'<svg><use href="#dg-check"/></svg>':p[0])+'</span><span style="flex:1"><span class="cl">'+o.l+'</span><span class="cs">'+o.s+'</span></span></button>';
- }).join('');
+ var sel=state.answers[state.step];var C=document.getElementById('dgChoices');
+ if(Q.opts.length<=3){C.className='dg-choices';
+  C.innerHTML=Q.opts.map(function(o,i){var on=sel===i;var key=String.fromCharCode(65+i);
+   return '<button class="choice'+(on?' sel':'')+'" data-opt="'+i+'"><span class="k">'+(on?'<svg><use href="#dg-check"/></svg>':key)+'</span><span style="flex:1"><span class="cl">'+o.l+'</span>'+(o.s?'<span class="cs">'+o.s+'</span>':'')+'</span></button>';}).join('');
+ }else{C.className='dg-grid';
+  C.innerHTML=(Q.hint?'<div style="grid-column:1/-1;font-weight:400;font-size:11.5px;color:rgba(0,0,0,.5);margin:-2px 0 2px">'+Q.hint+'</div>':'')
+   +Q.opts.map(function(o,i){var on=sel===i;return '<button class="dg-gopt'+(on?' sel':'')+'" data-opt="'+i+'"><span class="gi"><svg><use href="'+(o.icon||'#c-cart')+'"/></svg></span><span class="gt">'+o.l+'</span></button>';}).join('');
+ }
 }
 function gotoStep(i){state.step=i;state.screen='q';show('dgQuestion');setTheme();save();}
-function choose(opt){state.answers[state.step]=opt;
- var btns=document.getElementById('dgChoices').querySelectorAll('.choice');btns.forEach(function(b){b.classList.toggle('sel',b.getAttribute('data-opt')===opt);var k=b.querySelector('.k');if(b.getAttribute('data-opt')===opt)k.innerHTML='<svg><use href="#dg-check"/></svg>';});
+function choose(idx){idx=parseInt(idx);if(isNaN(idx))return;var Q=QS[state.step];if(idx<0||idx>=Q.opts.length)return;state.answers[state.step]=idx;
+ var btns=document.getElementById('dgChoices').querySelectorAll('[data-opt]');btns.forEach(function(b){var on=parseInt(b.getAttribute('data-opt'))===idx;b.classList.toggle('sel',on);if(on&&b.classList.contains('choice')){var k=b.querySelector('.k');if(k)k.innerHTML='<svg><use href="#dg-check"/></svg>';}});
  save();
- var next=function(){if(state.step>=5){finish();}else{gotoStep(state.step+1);}};
+ var next=function(){if(state.step>=QS.length-1){finish();}else{gotoStep(state.step+1);}};
  if(REDUCE)next();else setTimeout(next,220);
 }
-function pickArch(){var toks=state.answers.map(function(o,i){return QS[i][o].t;});
+function pickArch(){var toks=state.answers.map(function(idx,i){return (QS[i].opts[idx]||{}).tk;}).filter(Boolean);
  var scored=ARCH.map(function(a){var sc=toks.filter(function(t){return a.likes.indexOf(t)>=0;}).length;var card=pickCard(a);return {a:a,sc:sc,card:card,cmax:card?maxRw(card):-1};});
  scored=scored.filter(function(x){return x.card;});
  scored.sort(function(x,y){return (y.sc-x.sc)||(y.cmax-x.cmax);});
@@ -2974,7 +3010,13 @@ function finish(){var r=pickArch();if(!r){show('dgResult');document.getElementBy
   return '<a class="dg-evrow" href="'+cgUrl(e)+'" rel="sponsored nofollow noopener" target="_blank"><span class="dot" style="background:'+(PC[e.platform]||'#888')+'"></span><div style="flex:1;min-width:0"><div class="et">'+title+'</div><div class="ep">'+(PN[e.platform]||e.platform)+' · 외부 광고 링크</div></div><span class="dd">'+dl+'</span></a>';
  }).join(''):'<div style="font-size:13px;color:rgba(0,0,0,.45);padding:10px 0">마감 임박 이벤트가 없어요. 카드 상세에서 전체 이벤트를 확인하세요.</div>';
  document.getElementById('dgGo').setAttribute('href','carddetail.html?n='+encodeURIComponent(card.name));
+ renderDist(a.type);
  state.screen='result';show('dgResult');clearLS();
+}
+// 내 진단 유형 비중(스택바+범례, 내 유형만 강조) — 최근 30일 누적(예시)
+function renderDist(myType){var bar=document.getElementById('dgDistBar'),lg=document.getElementById('dgDistLg');if(!bar||!lg)return;
+ bar.innerHTML=DIST.map(function(d){return '<span style="width:'+d.pct+'%;background:'+d.color+';opacity:'+(d.type===myType?'1':'.4')+'"></span>';}).join('');
+ lg.innerHTML=DIST.map(function(d){var me=d.type===myType;return '<span class="it" style="opacity:'+(me?'1':'.4')+'"><span class="dt" style="background:'+d.color+'"></span><span class="nm" style="font-weight:'+(me?700:540)+'">'+d.type+'</span><span class="pc">'+d.pct+'%</span>'+(me?'<span class="me">내 유형</span>':'')+'</span>';}).join('');
 }
 function startFresh(){state.step=0;state.answers=[];gotoStep(0);}
 function dgToast(m){var t=document.createElement("div");t.textContent=m;t.style.cssText="position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#000;color:#fff;padding:11px 18px;border-radius:50px;font-size:13px;font-weight:600;z-index:9999;opacity:0;transition:opacity .2s";document.body.appendChild(t);requestAnimationFrame(function(){t.style.opacity="1";});setTimeout(function(){t.style.opacity="0";setTimeout(function(){t.remove();},300);},1800);}
@@ -3076,8 +3118,8 @@ function bind(){
  document.getElementById('dgBack').onclick=function(){if(state.step<=0){state.screen='intro';show('dgIntro');}else gotoStep(state.step-1);};
  function close(){if(confirm('진단을 종료할까요? 진행 내용이 초기화됩니다.')){clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}}
  document.getElementById('dgClose').onclick=close;document.getElementById('dgClose2').onclick=function(){location.href='index.html';};
- document.getElementById('dgChoices').addEventListener('click',function(e){var b=e.target.closest('.choice[data-opt]');if(b)choose(b.getAttribute('data-opt'));});
- document.addEventListener('keydown',function(e){if(state.screen!=='q')return;if(e.key==='a'||e.key==='A')choose('a');else if(e.key==='b'||e.key==='B')choose('b');else if(e.key==='ArrowLeft'){if(state.step>0)gotoStep(state.step-1);}});
+ document.getElementById('dgChoices').addEventListener('click',function(e){var b=e.target.closest('[data-opt]');if(b)choose(b.getAttribute('data-opt'));});
+ document.addEventListener('keydown',function(e){if(state.screen!=='q')return;if(/^[1-8]$/.test(e.key))choose(parseInt(e.key)-1);else if(e.key==='ArrowLeft'){if(state.step>0)gotoStep(state.step-1);}});
  // 시나리오 선택(스와이프)
  var sw=document.getElementById('dgSwipe');if(sw){sw.addEventListener('scroll',s2Dots);s2Dots();sw.querySelectorAll('[data-scn]').forEach(function(btn){btn.onclick=function(){if(btn.getAttribute('data-scn')==='2')s2Start();else{clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}};});}
  var _ib=document.getElementById('dgIntroBack');if(_ib)_ib.onclick=function(){show('dgChooser');s2Dots();};
@@ -3243,7 +3285,7 @@ function feed(){cmPage=1;var ttl=cmCat==='전체'?'카드 라운지':cmCat;
  V().querySelectorAll('.cm-sort').forEach(function(b){b.onclick=function(){cmSort=b.getAttribute('data-s');feed();};});
  document.getElementById('cmMore').onclick=function(){cmPage++;loadList(false);};
  loadList(true);}
-function rowHtml(p){var img=p.image||p.img||'';return '<a class="cm-row" href="community.html?id='+p.id+'" data-id="'+p.id+'">'+tag(p.category)+'<div class="cm-rb"><div class="cm-rt">'+esc(p.title)+(p.comment_count?' <span style="color:var(--accent-magenta);font-weight:800">['+p.comment_count+']</span>':'')+'</div><div class="cm-rm">'+esc(p.author_nickname||'익명')+' · '+ago(p.created_at)+' · 조회 '+(p.views||0)+'</div></div><div class="cm-rs"><b>♥ '+(p.likes||0)+'</b><br>댓글 '+(p.comment_count||0)+'</div>'+(img?'<span class="cm-th"><img src="'+esc(img)+'" alt=""></span>':'')+'</a>';}
+function rowHtml(p){var img=p.image||p.img||'';return '<a class="cm-row" href="community.html?id='+p.id+'" data-id="'+p.id+'">'+tag(p.category)+'<div class="cm-rb"><div class="cm-rt">'+esc(p.title)+(p.comment_count?' <span style="color:var(--accent-magenta);font-weight:800">['+p.comment_count+']</span>':'')+'</div><div class="cm-rm">'+esc(p.author_nickname||'익명')+' · '+ago(p.created_at)+' · 조회 '+(p.views||0)+'</div></div><div class="cm-rs"><b><svg viewBox="0 0 24 24" width="11" height="11" style="vertical-align:-1px" fill="currentColor" aria-hidden="true"><path d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg> '+(p.likes||0)+'</b><br>댓글 '+(p.comment_count||0)+'</div>'+(img?'<span class="cm-th"><img src="'+esc(img)+'" alt=""></span>':'')+'</a>';}
 function loadList(reset){var R=document.getElementById('cmRows');if(!R)return;if(reset)R.innerHTML='';
  var srt=cmSort==='cmt'?'popular':cmSort;
  var q='?page='+cmPage+'&size=20&sort='+srt+(cmCat!=='전체'?'&category='+encodeURIComponent(cmCat):'');
@@ -3297,7 +3339,7 @@ function detail(id){V().innerHTML='<div class="cm-empty"><span class="tload"><sv
   document.getElementById('cmEdit').onclick=function(){editForm(p);};
  }).catch(function(e){V().innerHTML='<a class="cm-back" href="community.html">← 커뮤니티로</a><div class="cm-empty">'+esc(e.message)+'</div>';});}
 function renderCmts(cs,pid){var C=document.getElementById('cmCmts');if(!cs.length){C.innerHTML='<div style="color:#aaa;font-size:13px;padding:12px 0">첫 댓글을 남겨보세요.</div>';return;}
- C.innerHTML=cs.map(function(c){var liked=lks('c'+c.id);var rep=c.parent_id?' reply':'';return '<div class="cm-cmt'+rep+'"><div class="cm-cmt-h"><span class="cm-cmt-n">'+ava(BMAP[c.category]?c.category:'자유게시판').replace('cm-ava','cm-ava" style="width:20px;height:20px')+esc(c.author_nickname||'익명')+' <span class="cm-cmt-t">'+ago(c.created_at)+'</span></span><span><button class="cm-cmt-a lk'+(liked?' on':'')+'" data-lc="'+c.id+'">♥ <span>'+(c.likes||0)+'</span></button> <button class="cm-cmt-a" data-dc="'+c.id+'">삭제</button></span></div><div class="cm-cmt-c">'+esc(c.content)+'</div></div>';}).join('');
+ C.innerHTML=cs.map(function(c){var liked=lks('c'+c.id);var rep=c.parent_id?' reply':'';return '<div class="cm-cmt'+rep+'"><div class="cm-cmt-h"><span class="cm-cmt-n">'+ava(BMAP[c.category]?c.category:'자유게시판').replace('cm-ava','cm-ava" style="width:20px;height:20px')+esc(c.author_nickname||'익명')+' <span class="cm-cmt-t">'+ago(c.created_at)+'</span></span><span><button class="cm-cmt-a lk'+(liked?' on':'')+'" data-lc="'+c.id+'"><svg viewBox="0 0 24 24" width="11" height="11" style="vertical-align:-1px" fill="currentColor" aria-hidden="true"><path d="M12 20.3S3.8 15.3 3.8 9.4A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.2 2.4c0 5.9-8.2 10.9-8.2 10.9z"/></svg> <span>'+(c.likes||0)+'</span></button> <button class="cm-cmt-a" data-dc="'+c.id+'">삭제</button></span></div><div class="cm-cmt-c">'+esc(c.content)+'</div></div>';}).join('');
  C.querySelectorAll('[data-lc]').forEach(function(b){b.onclick=function(){var cid=b.dataset.lc;api('/api/comments/'+cid+'/like',{method:'POST'}).then(function(r){b.querySelector('span').textContent=r.likes;b.classList.toggle('on',r.liked);setLk('c'+cid,r.liked);});};});
  C.querySelectorAll('[data-dc]').forEach(function(b){b.onclick=function(){var pw=prompt('댓글 비밀번호(4자리)');if(!pw)return;api('/api/comments/'+b.dataset.dc,{method:'DELETE',headers:{'content-type':'application/json'},body:JSON.stringify({password:pw})}).then(function(){detail(pid);}).catch(function(e){alert(e.message);});};});}
 function editForm(p){V().innerHTML='<a class="cm-back" id="cmBack"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>취소</a><div class="cm-form"><h3>글 수정</h3><div class="cm-bchips" id="efboards"></div><div class="cm-f"><label>비밀번호(4자리)</label><input id="efp" maxlength="4" inputmode="numeric"></div><div class="cm-f"><label>제목</label><input id="eft" maxlength="120"></div><div class="cm-f"><label>내용</label><textarea id="efb"></textarea></div><div class="cm-err" id="eferr"></div><div class="cm-actions"><button class="cm-btn" id="efsave">수정 저장</button></div></div>';
