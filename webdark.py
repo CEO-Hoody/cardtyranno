@@ -2,7 +2,7 @@
 """카드티라노 프론트엔드 v2 — 다크테마(무신사 감성·카드고릴라 구조) + SEO/AEO 최적화.
 데이터는 site/*.json(DB export) 런타임 fetch. AEO: JSON-LD, llms.txt, FAQ, AI 크롤러 허용.
 """
-import os, json, datetime
+import os, json, datetime, re
 OUT=os.path.dirname(os.path.abspath(__file__)); SITE=os.path.join(OUT,"site")
 BASE="https://cardtyranno.com"; BRAND="카드티라노"; BRAND_EN="CardTyranno"
 # Cloudflare Web Analytics 토큰(대시보드 Web Analytics에서 발급). 값 채우면 전 페이지에 beacon 자동 삽입.
@@ -11,7 +11,7 @@ CF_BEACON_TOKEN=""
 #  네이버 서치어드바이저(searchadvisor.naver.com) → 사이트 등록 → HTML 태그 방식의 content 값만 붙여넣기
 NAVER_SITE_VERIFICATION=""
 #  구글 서치콘솔(search.google.com/search-console) → HTML 태그 방식의 content 값만 붙여넣기
-GOOGLE_SITE_VERIFICATION=""
+GOOGLE_SITE_VERIFICATION="CJtR_-EgzygFicvG6SX4pkTjKKCQC88HGHKgMy0brzM"
 DESC_SITE="여러 카드 중개 플랫폼(토스 카드라운지·카드고릴라·아정당·뱅크샐러드)의 카드 발급 혜택과 결제 할인 이벤트를 한곳에서 비교·분석하는 카드 비교 플랫폼."
 
 CSS = r"""
@@ -262,6 +262,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 .nhe-p{font-weight:400;font-size:19px;line-height:1.5;margin:20px 0 0;max-width:480px;color:rgba(0,0,0,.72)}
 .nhe-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;background:#000;color:#fff;font-weight:600;font-size:16px;margin-top:30px;transition:transform .12s}
 .nhe-cta:active{transform:scale(.97)}
+.nhe-ctas{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:30px}.nhe-ctas .nhe-cta{margin-top:0}
+.nhe-cta.sec{background:#fff;color:#000;border:1.5px solid var(--line,#e6e6e6)}.nhe-cta.sec:hover{border-color:#000}
 .nhe-plate{position:absolute;right:40px;top:50%;transform:translateY(-50%) rotate(7deg);width:300px}
 .nhe-plate .hpcard{border-radius:14px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.22)}
 .nhe-plate img,.npc-plate img,.nrow .mp img{width:100%;display:block}
@@ -696,7 +698,8 @@ INDEX_BODY=('<div class="wrap">'
  '<div class="nhc-txt"><div class="nhe-eb">2026 JUNE</div>'
  '<h1 class="nhc-h">6개 사이트<br>캐시백, 한눈에.</h1>'
  '<p class="nhc-p">토스·카드고릴라·아정당·뱅크샐러드·카카오페이·네이버페이. <b>6개 카드 발급 사이트의 캐시백을 한 번에 비교</b>해 드려요.</p>'
- '<a class="nhe-cta" href="content.html">이번달 전문가 TIP <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div>'
+ '<div class="nhe-ctas"><a class="nhe-cta" id="heroTipCta" href="content.html">이번달 전문가 TIP <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a>'
+ '<a class="nhe-cta sec" href="issue.html?v=cmp">한눈에 비교 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a></div></div>'
  '<div class="nhc-ill"><div class="nhc-cmp" id="heroCmp"><div class="nhc-cmp-h"><span class="mono">6개 플랫폼 캐시백</span><span class="mono nhc-cmp-top">최고값</span></div><div class="nhc-cmp-bars" id="heroCmpBars"></div></div></div>'
  '</div>'
  # 슬라이드 2 · 이번달 최고 캐시백 상품 (JS가 채움)
@@ -817,7 +820,7 @@ Promise.all([
  var best=null,bw=-1;PE.forEach(function(p){(p.events||[]).forEach(function(e){if((e.reward_won||0)>bw){bw=e.reward_won;best=p;}});});
  // 히어로 슬라이드1 · 6개 플랫폼 캐시백 비교 막대(최고값=검정 하이라이트)
  var platMax={};PE.forEach(function(p){(p.events||[]).forEach(function(e){var w=e.reward_won||0;if(w>(platMax[e.platform]||0))platMax[e.platform]=w;});});
- var cmpRows=Object.keys(PMETA).map(function(k){return{k:k,m:PMETA[k],v:platMax[k]||0};}).sort(function(a,b){return b.v-a.v;});
+ var cmpRows=Object.keys(PMETA).filter(function(k){return k!=='issuer';}).map(function(k){return{k:k,m:PMETA[k],v:platMax[k]||0};}).sort(function(a,b){return b.v-a.v;});
  var cmpTop=cmpRows.length?cmpRows[0].v:0;var cbb=document.getElementById('heroCmpBars');
  if(cbb){cbb.innerHTML=cmpRows.map(function(r,ri){var w=cmpTop?Math.max(8,Math.round(r.v/cmpTop*100)):8;return '<div class="nhc-cmp-row"><i style="background:'+r.m.c+'"></i><span class="nm">'+r.m.n+'</span><div class="tr"><i style="width:'+w+'%;background:'+(ri===0?'#000':'#cfcfcf')+'"></i></div></div>';}).join('');}
  // 히어로 슬라이드2 · 이번달 최고 캐시백 상품 배너
@@ -856,7 +859,9 @@ Promise.all([
  if(window.repairImages)repairImages();
 }).catch(function(){});
 // 티라노TIP 최신 전략 콘텐츠 1건
-fetch('content.json').then(function(r){return r.json();}).then(function(cd){var its=(cd.items||[]);var t=its.filter(function(x){return /전략|발급/.test(x.cat||'');})[0]||its[0];if(!t)return;var el=document.getElementById('tipLatest');if(!el)return;
+fetch('content.json').then(function(r){return r.json();}).then(function(cd){var its=(cd.items||[]);var t=its.filter(function(x){return /전략|발급/.test(x.cat||'');})[0]||its[0];if(!t)return;
+ var hc=document.getElementById('heroTipCta');if(hc)hc.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
+ var el=document.getElementById('tipLatest');if(!el)return;
  el.setAttribute('href','content.html?id='+encodeURIComponent(t.id));
  el.innerHTML='<div class="ntip-thumb"><svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg></div><div class="tb"><div class="tm">'+(t.cat||'티라노TIP')+' · 2026.06</div><div class="th">'+(t.title||'')+'</div><div class="ts">'+(t.summary||'')+'</div><div class="tgo">전략 보러가기 ›</div></div>';
 }).catch(function(){});
@@ -2484,6 +2489,30 @@ def _seo_static_index():
       +intro+'<div class="seo-tbl-wrap">'+table+'</div>'+rank+links+'</div></section>')
 SEO_STATIC_INDEX=_seo_static_index()
 
+# 데이터 바인딩 페이지(JS 렌더)에 서버 정적 SEO 텍스트 보강 — 색인 강도/핵심 검색어 반영
+_SEO_BLK_STYLE=('<style>.seo-static{border-top:1px solid var(--line);background:var(--surface-soft);padding:30px 0 8px;margin-top:34px}'
+ '.seo-static .wrap{max-width:880px}.seo-static h2{font-size:19px;font-weight:900;letter-spacing:-.5px;margin-bottom:10px}'
+ '.seo-static p{font-size:13.5px;color:var(--sub);line-height:1.75;margin:0 0 12px}.seo-static p b{color:var(--text)}'
+ '.seo-static h3{font-size:14px;font-weight:800;margin:18px 0 9px}'
+ '.seo-static .seo-links ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
+ '.seo-static .seo-links a{display:inline-block;font-size:13px;font-weight:700;color:var(--text);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;text-decoration:none}'
+ '.seo-static .seo-links a:hover{border-color:var(--accent)}</style>')
+def _seo_block(h2,paras,links):
+    ps="".join('<p>%s</p>'%p for p in paras)
+    ls=('<nav class="seo-links" aria-label="관련 메뉴"><h3>관련 메뉴</h3><ul>'
+      +"".join('<li><a href="%s">%s</a></li>'%(u,t) for u,t in links)+'</ul></nav>') if links else ''
+    return ('<section class="seo-static">'+_SEO_BLK_STYLE+'<div class="wrap"><h2>'+h2+'</h2>'+ps+ls+'</div></section>')
+SEO_STATIC_ISSUE=_seo_block(
+ "이번 달 카드 캐시백·발급 혜택, 플랫폼별로 비교",
+ ["<b>카드 캐시백</b>은 같은 카드라도 발급 채널(토스 카드라운지·카드고릴라·아정당·카카오페이·뱅크샐러드)에 따라 금액이 크게 달라집니다. 카드티라노는 매달 각 플랫폼의 <b>신규 발급 캐시백(카드 발급 혜택)</b>을 자동 집계해, 같은 카드를 <b>어디서 발급하면 가장 많이 받는지</b> 한 표로 비교해 드립니다.",
+  "캐시백 금액은 전월실적·결제기간·마케팅 동의 등 조건 충족 시 받을 수 있는 <b>최대 금액 기준</b>이며, 직전 6개월 내 동일 카드사 발급 이력이 있으면 제외될 수 있습니다. 발급 전 각 플랫폼·카드사에서 최종 조건을 확인하세요."],
+ [("issue.html?v=cmp","한눈에 비교 (카드사·카드별)"),("cards.html","카드 찾기"),("diagnose.html","카드 진단으로 내 카드 찾기"),("content.html","카드 발급 혜택 가이드"),("chart.html","카드 캐시백 랭킹")])
+SEO_STATIC_CARDS=_seo_block(
+ "카드사별 신용카드 혜택·연회비 한눈에 비교",
+ ["삼성·현대·신한·KB국민·롯데·우리·하나·NH농협·BC·IBK 등 <b>카드사별 대표 신용카드의 카드 혜택</b>을 영역별 적립·할인, 연회비, 전월실적, 그리고 이번 달 <b>발급 캐시백</b>까지 한곳에서 비교할 수 있습니다.",
+  "여행·쇼핑·교통·구독·생활요금 등 <b>소비 카테고리별로 카드 혜택</b>을 좁혀 보고, 카드별 <b>최고 궁합 플랫폼</b>과 최대 캐시백을 함께 확인하세요. 어떤 카드가 맞을지 모르겠다면 <b>카드 진단</b>으로 2지선다 추천을 받아볼 수 있습니다."],
+ [("diagnose.html","카드 진단 (2지선다 추천)"),("issue.html","이번 달 카드 캐시백"),("discount.html","가맹점별 카드 할인 혜택"),("content.html","카드 가이드")])
+
 # ===== ABOUT (카드티라노란?) =====
 ABOUT_BODY=(r'''<style>
 .ab{font-family:'Pretendard','Pretendard Variable',-apple-system,sans-serif}
@@ -3068,8 +3097,8 @@ Promise.all([fetch('platform_events.json').then(function(r){return r.json();}),f
 """
 page("diagnose.html",BRAND+" | 카드 진단 · 성향/캐시백 2가지","2지선다 카드 성향 진단과 카드사·소비 유형 기반 예상 캐시백 진단 — 원하는 진단을 골라 내게 맞는 카드와 최적 플랫폼을 찾아드려요.","/diagnose.html",DIAG_BODY,DIAG_JS,active="diagnose")
 page("discount.html",BRAND+" | 카드 할인 혜택 (가맹점·업종별)","네이버·쿠팡·무신사·이마트·GS25 등 가맹점의 카드 즉시할인·청구할인·캐시백·무이자할부를 업종·카드사별로.","/discount.html",DISC_BODY,DISC_JS,searchbar=True,catstrip=True,active="discount")
-page("cards.html",BRAND+" | 카드 찾기 (카드사별 신용카드)","삼성·현대·신한·KB국민·롯데·우리·하나·NH농협·BC·IBK 카드사별 대표 신용카드를 플레이트 이미지·연회비·혜택으로 비교.","/cards.html",CARDS_BODY,CARDS_JS,active="cards")
-page("issue.html",BRAND+" | 이번달 캐시백 (플랫폼별 비교)","카드사별 신규 발급 캐시백을 아정당·카드고릴라·토스·카카오페이 등 플랫폼별로 비교. 이번달 캐시백 리스트와 최대 혜택 비교표.","/issue.html",ISSUE_BODY,ISSUE_JS,active="issue")
+page("cards.html",BRAND+" | 카드 찾기 (카드사별 신용카드)","삼성·현대·신한·KB국민·롯데·우리·하나·NH농협·BC·IBK 카드사별 대표 신용카드를 플레이트 이미지·연회비·혜택으로 비교.","/cards.html",CARDS_BODY+SEO_STATIC_CARDS,CARDS_JS,active="cards")
+page("issue.html",BRAND+" | 이번달 캐시백 (플랫폼별 비교)","카드사별 신규 발급 캐시백을 아정당·카드고릴라·토스·카카오페이 등 플랫폼별로 비교. 이번달 캐시백 리스트와 최대 혜택 비교표.","/issue.html",ISSUE_BODY+SEO_STATIC_ISSUE,ISSUE_JS,active="issue")
 page("detail.html",BRAND+" | 혜택 상세","카드 할인 혜택 상세와 공식 안내 링크.","/detail.html",DETAIL_BODY,DETAIL_JS,active="discount")
 # ===== COMMUNITY (Cloudflare Workers + D1 백엔드 연동) =====
 COMMUNITY_BODY=('<meta name="community-api" content="https://cardtyranno-community.yyty12.workers.dev">'   # 운영 라우트(/api/community) 쓰면 이 값을 "/api/community"로 교체. 현재는 배포된 Worker 직접 호출
@@ -3493,6 +3522,34 @@ for p,cf,pr in SITEMAP_PAGES:
     fp=os.path.join(SITE,fn)
     lm=datetime.date.fromtimestamp(os.path.getmtime(fp)).isoformat() if os.path.exists(fp) else _today
     sm+='<url><loc>%s%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority></url>\n'%(BASE,p,lm,cf,pr)
+# 인기 카드상세(carddetail?id=) URL을 사이트맵에 포함 — 카드별 색인 유도(JS가 카드별 canonical=?id= 로 갱신)
+try:
+    _cj=json.load(open(os.path.join(SITE,"cards.json"),encoding="utf-8"))
+    _n2id={};_n2rk={}
+    for _iss,_lst in (_cj.get("cards") or {}).items():
+        for _c in _lst:
+            _nm=re.sub(r"[^0-9a-z가-힣]","",(_c.get("name") or "").lower())
+            if _c.get("id") is not None:_n2id[_nm]=_c["id"]
+    try:_rkj=json.load(open(os.path.join(SITE,"rank.json"),encoding="utf-8"))
+    except Exception:_rkj={"items":[]}
+    _seen=set();_cardlm=datetime.date.fromtimestamp(os.path.getmtime(os.path.join(SITE,"carddetail.html"))).isoformat() if os.path.exists(os.path.join(SITE,"carddetail.html")) else _today
+    for _it in (_rkj.get("items") or [])[:60]:
+        _nm=re.sub(r"[^0-9a-z가-힣]","",(_it.get("name") or "").lower())
+        _id=_n2id.get(_nm)
+        if _id is None or _id in _seen:continue
+        _seen.add(_id)
+        sm+='<url><loc>%s/carddetail.html?id=%s</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>\n'%(BASE,_id,_cardlm)
+except Exception as _e:
+    pass
+# 카드 가이드 글(content?id=) — 정보성 검색 유입용
+try:
+    _ctj=json.load(open(os.path.join(SITE,"content.json"),encoding="utf-8"))
+    _ctlm=datetime.date.fromtimestamp(os.path.getmtime(os.path.join(SITE,"content.html"))).isoformat() if os.path.exists(os.path.join(SITE,"content.html")) else _today
+    for _it in (_ctj.get("items") or []):
+        if _it.get("id") is None:continue
+        sm+='<url><loc>%s/content.html?id=%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n'%(BASE,_it["id"],_ctlm)
+except Exception as _e:
+    pass
 sm+='</urlset>\n'
 open(os.path.join(SITE,"sitemap.xml"),"w").write(sm)
 
