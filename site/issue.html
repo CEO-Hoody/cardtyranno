@@ -652,7 +652,7 @@ function render(){var groups=_evGroups();
    var shown=g.cards.slice(0,3),over=g.cards.length-shown.length;
    var stack=shown.map(function(c){return '<span class="ev2c-mp">'+(c.img?'<img src="'+encodeURI(c.img)+'" alt="" onerror="this.style.display=\'none\'">':'<svg viewBox="2 3.6 20 16.4"><use href="#mk"/></svg>')+'</span>';}).join('')+(over>0?'<span class="ev2c-more">+'+over+'</span>':'');
    return '<a class="ev2c'+(top?' top':'')+'" href="'+href+'">'
-    +'<div class="ev2c-plwrap"><span class="ev2c-pl"><span class="dot" style="background:'+(PBC[g.pk]||"#888")+'"></span><span class="pn">'+(PN[g.pk]||g.platform)+'</span></span>'+(top?'<span class="ev2c-topb">최고</span>':'')+'</div>'
+    +'<div class="ev2c-plwrap"><span class="ev2c-pl"><span class="dot" style="background:'+(PBC[g.pk]||"#888")+'"></span><span class="pn">'+(g.pk==='issuer'?(g.issuer||'카드사 공식'):(PN[g.pk]||g.platform))+'</span></span>'+(top?'<span class="ev2c-topb">최고</span>':'')+'</div>'
     +'<div class="ev2c-cash">최대 '+_wm(amt)+'</div>'
     +'<div class="ev2c-mid"><span class="ev2c-stack">'+stack+'</span><span class="ev2c-rep"><span class="rn">'+g.rep+'</span><span class="ev2c-cnt">카드 '+g.cards.length+'종</span></span></div>'
     +'<div class="ev2c-cond">'+cond+'</div>'
