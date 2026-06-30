@@ -451,6 +451,10 @@ function ctSeo(title,desc,canonPath){try{
  if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
 }catch(e){}}
 /* 캐시백 주요/부가 분해(티어 인지) — 플랫폼 이벤트가 분해(bonus_won>0)면 그대로, 미분해(네이버·카카오 등 bonus=0·main=전체)면 카드 main_tier 보상으로 주요를 유도(부가=전체−주요). events 상세 '전체 캐시백 구성'(cards.json main_tier/sub_tiers)과 비교표·차트의 주요/부가 표기를 일치시킨다. mt=카드 main_tier.reward(원). */
+/* 만료 이벤트 제외 — period_end(마감일)가 오늘(KST) 이전이면 종료된 이벤트(예: 6월 마감). 비교표·캐시백 등에서 진행 중인 이벤트만 노출. period_end 없음=상시/미정이라 유지. */
+function ctToday(){try{return new Date(Date.now()+324e5).toISOString().slice(0,10);}catch(e){return '0000-00-00';}}
+function evExpired(e){var pe=e&&e.period_end;return !!(pe&&String(pe).slice(0,10)<ctToday());}
+function liveEvents(prods){(prods||[]).forEach(function(p){p.events=(p.events||[]).filter(function(e){return !evExpired(e);});});return (prods||[]).filter(function(p){return (p.events||[]).length;});}
 function splTier(e,mt){var t=(e.reward_won||0);mt=mt||0;
  // 카드 main_tier(주요 캐시백)를 최우선 — 플랫폼별 main_won은 채널마다 들쭉날쭉(네이버=전액·카카오 임의·뱅샐 0)이라 'events 전체 캐시백 구성'과 어긋남. 티어가 있으면 주요=티어로 통일, 부가=전체−주요.
  if(mt>0){var m=Math.min(mt,t);return {t:t,m:m,b:Math.max(t-m,0)};}
@@ -623,7 +627,7 @@ Promise.all([
  fetch('history/index.json').then(function(r){return r.json();}).catch(function(){return{months:[]};})
 ]).then(function(A){
  var _now=new Date();var _cm=_now.getFullYear()+'-'+('0'+(_now.getMonth()+1)).slice(-2);
- var PE=A[0].products||[],cj=A[1].cards||{},HIX=A[2].months||[];
+ var PE=liveEvents(A[0].products||[]),cj=A[1].cards||{},HIX=A[2].months||[];
  var months=HIX.slice().sort().filter(function(m){return m<_cm;}).slice(-3).concat([_cm]);
  var CARDMAP={},ID2={};for(var _k in cj){(cj[_k]||[]).forEach(function(c){var n=_nk(c.name);if(!CARDMAP[n])CARDMAP[n]=c;if(c.id!=null)ID2[String(c.id)]=n;});}
  var root=document.getElementById('edroot');

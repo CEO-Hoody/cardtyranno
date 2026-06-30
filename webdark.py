@@ -469,6 +469,10 @@ function ctSeo(title,desc,canonPath){try{
  if(canonPath){var u=canonPath.indexOf('http')===0?canonPath:('https://cardtyranno.com/'+canonPath.replace(/^\//,''));var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);_setMeta('meta[property="og:url"]',u);}
 }catch(e){}}
 /* 캐시백 주요/부가 분해(티어 인지) — 플랫폼 이벤트가 분해(bonus_won>0)면 그대로, 미분해(네이버·카카오 등 bonus=0·main=전체)면 카드 main_tier 보상으로 주요를 유도(부가=전체−주요). events 상세 '전체 캐시백 구성'(cards.json main_tier/sub_tiers)과 비교표·차트의 주요/부가 표기를 일치시킨다. mt=카드 main_tier.reward(원). */
+/* 만료 이벤트 제외 — period_end(마감일)가 오늘(KST) 이전이면 종료된 이벤트(예: 6월 마감). 비교표·캐시백 등에서 진행 중인 이벤트만 노출. period_end 없음=상시/미정이라 유지. */
+function ctToday(){try{return new Date(Date.now()+324e5).toISOString().slice(0,10);}catch(e){return '0000-00-00';}}
+function evExpired(e){var pe=e&&e.period_end;return !!(pe&&String(pe).slice(0,10)<ctToday());}
+function liveEvents(prods){(prods||[]).forEach(function(p){p.events=(p.events||[]).filter(function(e){return !evExpired(e);});});return (prods||[]).filter(function(p){return (p.events||[]).length;});}
 function splTier(e,mt){var t=(e.reward_won||0);mt=mt||0;
  // 카드 main_tier(주요 캐시백)를 최우선 — 플랫폼별 main_won은 채널마다 들쭉날쭉(네이버=전액·카카오 임의·뱅샐 0)이라 'events 전체 캐시백 구성'과 어긋남. 티어가 있으면 주요=티어로 통일, 부가=전체−주요.
  if(mt>0){var m=Math.min(mt,t);return {t:t,m:m,b:Math.max(t-m,0)};}
@@ -886,7 +890,7 @@ Promise.all([
  fetch('platform_events.json?t='+Date.now()).then(r=>r.json()).catch(function(){return{products:[]};}),
  fetch('hero.json').then(r=>r.json()).catch(function(){return{items:[]};})
 ]).then(function(A){
- var cj=A[0].cards||{},PE=A[1].products||[],HR=A[2].items||[];
+ var cj=A[0].cards||{},PE=liveEvents(A[1].products||[]),HR=A[2].items||[];
  var NAME2ID={},IMG={};for(var k in cj){(cj[k]||[]).forEach(function(c){var n=_nk2(c.name);if(NAME2ID[n]==null)NAME2ID[n]=c.id;if(c.img&&!IMG[n])IMG[n]=c.img;});}
  function href(name){var id=NAME2ID[_nk2(name||'')];if(id==null)id=NAME2ID[_nk2((name||'').replace(/^토스\s*/,''))];return id!=null?('carddetail.html?id='+id):'chart.html';}
  var EVMAP={};PE.forEach(function(p){var n=_nk2(p.name);EVMAP[n]=(p.events||[]);if(p.img&&!IMG[n])IMG[n]=p.img;});
@@ -1521,7 +1525,7 @@ function _pick(e){var m=(e.main_won!=null?e.main_won:(e.reward_won||0));var b=(e
 function _bd(e){var b=(e.bonus_won||0);if(b<=0)return '';var m=(e.main_won!=null?e.main_won:(e.reward_won||0));return '<div class="bd">메인 <b>'+_wm(m)+'</b> + 부가 '+_wm(b)+' <span class="bdt">최대 합 '+_wm((e.reward_won||0))+'</span></div>';}
 function _nk2(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
 Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json').then(r=>r.json()).catch(function(){return {cards:{}};})]).then(function(A){
- var prods=(A[0].products||[]);var IMG={},MTIER={},cj=A[1].cards||{};for(var ik in cj){(cj[ik]||[]).forEach(function(c){var k=_nk2(c.name);if(c.img&&!IMG[k])IMG[k]=c.img;var r=c.main_tier&&c.main_tier.reward;if(r&&!MTIER[k])MTIER[k]=r;});}
+ var prods=liveEvents(A[0].products||[]);var IMG={},MTIER={},cj=A[1].cards||{};for(var ik in cj){(cj[ik]||[]).forEach(function(c){var k=_nk2(c.name);if(c.img&&!IMG[k])IMG[k]=c.img;var r=c.main_tier&&c.main_tier.reward;if(r&&!MTIER[k])MTIER[k]=r;});}
  // main_tier 없는 카드도 '주요'를 카드 단위로 고정 — 분해된 플랫폼(부가>0)의 main_won 최솟값(가장 보수적=실 주요)으로 폴백. 모든 플랫폼이 동일 주요를 쓰게 해 채널 간 불일치 차단.
  prods.forEach(function(p){var k=_nk2(p.name);if(MTIER[k])return;var ms=(p.events||[]).filter(function(e){return (e.bonus_won||0)>0&&e.main_won!=null;}).map(function(e){return e.main_won;});if(ms.length)MTIER[k]=Math.min.apply(null,ms);});
  // (0) 발급이벤트 EV 목록 = 전 플랫폼(네이버 포함) 평탄화. 각 행은 실제 플랫폼 이벤트로 아웃링크.
@@ -1847,7 +1851,7 @@ Promise.all([
  fetch('rank.json').then(r=>r.json()).catch(function(){return {items:[]};}),
  fetch('history/index.json').then(r=>r.json()).catch(function(){return {months:[]};})
 ]).then(function(A){
- var j=A[0],PE=(A[2]&&A[2].products)||[],RK=(A[3]&&A[3].items)||[],HIX=(A[4]&&A[4].months)||[];
+ var j=A[0],PE=liveEvents((A[2]&&A[2].products)||[]),RK=(A[3]&&A[3].items)||[],HIX=(A[4]&&A[4].months)||[];
  var CH={toss:'토스',cardgorilla:'카드고릴라',banksalad:'뱅크샐러드',ajungdang:'아정당',naver:'네이버페이',kakaopay:'카카오페이'};
  var PCOL={토스:'#3182F6',카드고릴라:'#FF6A13',뱅크샐러드:'#19C37D',아정당:'#1B64DA',네이버페이:'#03C75A',카카오페이:'#FEE500'};
  var card=null,issuer='';
@@ -2055,7 +2059,7 @@ Promise.all([
  fetch('history/index.json').then(function(r){return r.json();}).catch(function(){return{months:[]};})
 ]).then(function(A){
  var _now=new Date();var _cm=_now.getFullYear()+'-'+('0'+(_now.getMonth()+1)).slice(-2);
- var PE=A[0].products||[],cj=A[1].cards||{},HIX=A[2].months||[];
+ var PE=liveEvents(A[0].products||[]),cj=A[1].cards||{},HIX=A[2].months||[];
  var months=HIX.slice().sort().filter(function(m){return m<_cm;}).slice(-3).concat([_cm]);
  var CARDMAP={},ID2={};for(var _k in cj){(cj[_k]||[]).forEach(function(c){var n=_nk(c.name);if(!CARDMAP[n])CARDMAP[n]=c;if(c.id!=null)ID2[String(c.id)]=n;});}
  var root=document.getElementById('edroot');
@@ -3417,7 +3421,7 @@ function bind(){
  document.addEventListener('keydown',function(e){if(!document.getElementById('dgS2Question').classList.contains('on'))return;if(e.key==='a'||e.key==='A')s2Choose('a');else if(e.key==='b'||e.key==='B')s2Choose('b');else if(e.key==='ArrowLeft'){if(s2.step>0)s2GotoStep(s2.step-1);else show('dgS2Issuers');}});
 }
 Promise.all([fetch('platform_events.json').then(function(r){return r.json();}),fetch('cards.json').then(function(r){return r.json();}).catch(function(){return {cards:{}};})]).then(function(A){
- PRODS=(A[0].products||[]);
+ PRODS=liveEvents(A[0].products||[]);
  for(var k in (A[1].cards||{})){(A[1].cards[k]||[]).forEach(function(c){if(c.img)IMGN[(c.name||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'')]=c.img;});}
  // 카드 이미지 폴백: products img → cards.json IMGN 우선, 없으면 product.img
  PRODS.forEach(function(p){if(!p.img){var n=(p.name||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');if(IMGN[n])p.img=IMGN[n];}});
