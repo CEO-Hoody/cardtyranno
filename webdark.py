@@ -3536,6 +3536,15 @@ try:
         sm+='<url><loc>%s/carddetail.html?id=%s</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>\n'%(BASE,_id,_cardlm)
 except Exception as _e:
     pass
+# 카드 가이드 글(content?id=) — 정보성 검색 유입용
+try:
+    _ctj=json.load(open(os.path.join(SITE,"content.json"),encoding="utf-8"))
+    _ctlm=datetime.date.fromtimestamp(os.path.getmtime(os.path.join(SITE,"content.html"))).isoformat() if os.path.exists(os.path.join(SITE,"content.html")) else _today
+    for _it in (_ctj.get("items") or []):
+        if _it.get("id") is None:continue
+        sm+='<url><loc>%s/content.html?id=%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n'%(BASE,_it["id"],_ctlm)
+except Exception as _e:
+    pass
 sm+='</urlset>\n'
 open(os.path.join(SITE,"sitemap.xml"),"w").write(sm)
 
