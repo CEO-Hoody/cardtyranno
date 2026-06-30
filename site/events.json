@@ -8,13 +8,12 @@
   "신한카드",
   "롯데카드",
   "우리카드",
-  "NH농협카드",
-  "BC 바로카드",
   "하나카드",
+  "NH농협카드",
   "IBK기업은행",
+  "BC 바로카드",
   "현대백화점",
-  "이벤트 등록용",
-  "Sh수협은행"
+  "이벤트 등록용"
  ],
  "items": [
   {
@@ -70,15 +69,6 @@
    "period": "",
    "url": "https://www.banksalad.com/product/cards/CARD000118",
    "won": 840000
-  },
-  {
-   "issuer": "신한카드",
-   "card": "신한카드 Deep Oil",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.19",
-   "url": "https://card-lounge.toss.im/card/34",
-   "won": 810000
   },
   {
    "issuer": "신한카드",
@@ -376,15 +366,6 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
    "won": 830000
-  },
-  {
-   "issuer": "KB국민카드",
-   "card": "KB국민 굿데이카드",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.25",
-   "url": "https://card-lounge.toss.im/card/1121",
-   "won": 810000
   },
   {
    "issuer": "우리카드",
@@ -970,15 +951,6 @@
    "period": "",
    "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
    "won": 450000
-  },
-  {
-   "issuer": "Sh수협은행",
-   "card": "The Aureum(더 아우름)카드",
-   "platform": "카드고릴라",
-   "benefit": "SH수협은행",
-   "period": "~06/30",
-   "url": "https://www.card-gorilla.com/card/detail/2932",
-   "won": 0
   },
   {
    "issuer": "NH농협카드",
@@ -1567,15 +1539,6 @@
   },
   {
    "issuer": "KB국민카드",
-   "card": "KB국민 My WE:SH 카드",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.25",
-   "url": "https://card-lounge.toss.im/card/1467",
-   "won": 810000
-  },
-  {
-   "issuer": "KB국민카드",
    "card": "KB YOU Wish 카드",
    "platform": "카드고릴라",
    "benefit": "최대 86만원 캐시백",
@@ -1829,15 +1792,6 @@
   {
    "issuer": "BC 바로카드",
    "card": "BC 바로 MACAO 카드",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.24",
-   "url": "https://card-lounge.toss.im/card/1953",
-   "won": 810000
-  },
-  {
-   "issuer": "BC 바로카드",
-   "card": "BC 바로 MACAO 카드",
    "platform": "카드고릴라",
    "benefit": "최대 1.2만원 캐시백",
    "period": "~06/30",
@@ -2072,15 +2026,6 @@
   {
    "issuer": "NH농협카드",
    "card": "zgm.play카드",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.23",
-   "url": "https://card-lounge.toss.im/card/10173",
-   "won": 810000
-  },
-  {
-   "issuer": "NH농협카드",
-   "card": "zgm.play카드",
    "platform": "아정당",
    "benefit": "최대 20.5만원 캐시백",
    "period": "",
@@ -2180,15 +2125,6 @@
   {
    "issuer": "우리카드",
    "card": "카드의정석 SHOPPING+",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.19",
-   "url": "https://card-lounge.toss.im/card/1959",
-   "won": 810000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 SHOPPING+",
    "platform": "뱅크샐러드",
    "benefit": "최대 75만원 캐시백",
    "period": "",
@@ -2275,15 +2211,6 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/5",
    "won": 750000
-  },
-  {
-   "issuer": "우리카드",
-   "card": "카드의정석 I&U+",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.22",
-   "url": "https://card-lounge.toss.im/card/1961",
-   "won": 810000
   },
   {
    "issuer": "우리카드",
@@ -2765,15 +2692,6 @@
   {
    "issuer": "롯데카드",
    "card": "LOCA LIKIT",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.30",
-   "url": "https://card-lounge.toss.im/card/1583",
-   "won": 810000
-  },
-  {
-   "issuer": "롯데카드",
-   "card": "LOCA LIKIT",
    "platform": "아정당",
    "benefit": "최대 66만원 캐시백",
    "period": "",
@@ -2815,15 +2733,6 @@
    "period": "~06/30",
    "url": "https://www.card-gorilla.com/event/detail/4",
    "won": 590000
-  },
-  {
-   "issuer": "롯데카드",
-   "card": "LOCA LIKIT Play",
-   "platform": "토스",
-   "benefit": "최대 81만원 캐시백",
-   "period": "~06.30",
-   "url": "https://card-lounge.toss.im/card/1701",
-   "won": 810000
   },
   {
    "issuer": "롯데카드",

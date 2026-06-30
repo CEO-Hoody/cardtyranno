@@ -7,8 +7,7 @@
    "cardgorilla": 789000,
    "ajungdang": 540000,
    "naver": 559000,
-   "kakaopay": 390000,
-   "toss": 810000
+   "kakaopay": 390000
   },
   "IBK기업은행": {
    "banksalad": 155000,
@@ -23,8 +22,7 @@
    "naver": 780000,
    "ajungdang": 770000,
    "banksalad": 780000,
-   "issuer": 240000,
-   "toss": 810000
+   "issuer": 240000
   },
   "롯데카드": {
    "cardgorilla": 670000,
@@ -32,7 +30,7 @@
    "issuer": 490000,
    "banksalad": 840000,
    "kakaopay": 100000,
-   "toss": 810000,
+   "toss": 460000,
    "ajungdang": 660000
   },
   "삼성카드": {
@@ -55,8 +53,7 @@
    "ajungdang": 850000,
    "kakaopay": 850000,
    "banksalad": 840000,
-   "naver": 830000,
-   "toss": 810000
+   "naver": 830000
   },
   "하나카드": {
    "issuer": 20000,
@@ -69,11 +66,9 @@
    "banksalad": 195000,
    "cardgorilla": 175000,
    "naver": 175000,
-   "kakaopay": 195000,
-   "toss": 810000
+   "kakaopay": 195000
   },
   "BC 바로카드": {
-   "toss": 810000,
    "cardgorilla": 43000
   },
   "현대백화점": {
@@ -99,7 +94,6 @@
    "issuer": "신한카드",
    "platforms": {
     "banksalad": 840000,
-    "toss": 810000,
     "cardgorilla": 579000,
     "ajungdang": 540000,
     "naver": 500000,
@@ -195,8 +189,7 @@
     "ajungdang": 850000,
     "kakaopay": 850000,
     "banksalad": 840000,
-    "naver": 830000,
-    "toss": 810000
+    "naver": 830000
    },
    "max": 860000
   },
@@ -738,8 +731,7 @@
    "platforms": {
     "cardgorilla": 860000,
     "ajungdang": 850000,
-    "kakaopay": 850000,
-    "toss": 810000
+    "kakaopay": 850000
    },
    "max": 860000
   },
@@ -831,10 +823,9 @@
    "name": "BC 바로 MACAO 카드",
    "issuer": "BC 바로카드",
    "platforms": {
-    "toss": 810000,
     "cardgorilla": 12000
    },
-   "max": 810000
+   "max": 12000
   },
   {
    "name": "BC 바로 Air Master 카드",
@@ -942,14 +933,13 @@
    "name": "zgm.play카드",
    "issuer": "NH농협카드",
    "platforms": {
-    "toss": 810000,
     "ajungdang": 205000,
     "banksalad": 195000,
     "kakaopay": 195000,
     "cardgorilla": 175000,
     "naver": 175000
    },
-   "max": 810000
+   "max": 205000
   },
   {
    "name": "zgm.streaming카드",
@@ -975,13 +965,12 @@
    "name": "카드의정석 SHOPPING+",
    "issuer": "우리카드",
    "platforms": {
-    "toss": 810000,
     "banksalad": 750000,
     "cardgorilla": 750000,
     "kakaopay": 750000,
     "naver": 750000
    },
-   "max": 810000
+   "max": 750000
   },
   {
    "name": "카드의정석2 EVERY DISCOUNT",
@@ -1014,13 +1003,12 @@
    "name": "카드의정석 I&U+",
    "issuer": "우리카드",
    "platforms": {
-    "toss": 810000,
     "banksalad": 750000,
     "cardgorilla": 750000,
     "kakaopay": 750000,
     "naver": 750000
    },
-   "max": 810000
+   "max": 750000
   },
   {
    "name": "우리카드 MILE&POINT",
@@ -1236,7 +1224,6 @@
    "issuer": "롯데카드",
    "platforms": {
     "banksalad": 840000,
-    "toss": 810000,
     "ajungdang": 660000,
     "naver": 644000,
     "cardgorilla": 590000,
@@ -1256,10 +1243,9 @@
    "name": "LOCA LIKIT Play",
    "issuer": "롯데카드",
    "platforms": {
-    "toss": 810000,
     "cardgorilla": 590000
    },
-   "max": 810000
+   "max": 590000
   },
   {
    "name": "디지로카 Link",
