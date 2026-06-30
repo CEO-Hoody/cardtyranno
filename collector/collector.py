@@ -255,7 +255,9 @@ def export_json(con):
               open(os.path.join(SITE,"status.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     print(f"export → site/status.json (pending: {sorted(PENDING_PLATFORMS) or '없음'})")
     # ── 발급이벤트 목록(events.json) = platform_events 평탄화(5개 플랫폼·네이버 포함). 구형 build_data 산출물(네이버 0건) 대체 ──
-    PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당","kakaopay":"카카오페이"}
+    PN={"cardgorilla":"카드고릴라","banksalad":"뱅크샐러드","toss":"토스","naver":"네이버페이","ajungdang":"아정당","kakaopay":"카카오페이","issuer":"카드사 공식"}
+    def _plabel(pl, iss):   # issuer(카드사 직접) 채널은 'issuer' 대신 각 카드사명으로 표기
+        return (iss if (pl=="issuer" and iss and iss!="기타") else PN.get(pl,pl))
     def _man(w):
         if not w: return ""
         return (str(round(w/1000)/10).replace(".0","")+"만원") if w>=10000 else (f"{w:,}원")
@@ -267,7 +269,7 @@ def export_json(con):
             w=e.get("reward_won") or 0
             ben=("최대 "+_man(w)+" 캐시백") if w>0 else (e.get("reward_text") or "")
             pe=e.get("period_end")
-            items.append({"issuer":iss,"card":p["name"],"platform":PN.get(pl,pl),"benefit":ben,
+            items.append({"issuer":iss,"card":p["name"],"platform":_plabel(pl,iss),"benefit":ben,
                           "period":("~"+str(pe)[5:].replace("-","/")) if pe else "","url":url,"won":w})
             iss_max[iss]=max(iss_max.get(iss,0),w)
     order=sorted(iss_max,key=lambda k:-iss_max[k])
