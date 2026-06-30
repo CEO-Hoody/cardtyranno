@@ -1522,6 +1522,8 @@ function _bd(e){var b=(e.bonus_won||0);if(b<=0)return '';var m=(e.main_won!=null
 function _nk2(s){return (s||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'');}
 Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json').then(r=>r.json()).catch(function(){return {cards:{}};})]).then(function(A){
  var prods=(A[0].products||[]);var IMG={},MTIER={},cj=A[1].cards||{};for(var ik in cj){(cj[ik]||[]).forEach(function(c){var k=_nk2(c.name);if(c.img&&!IMG[k])IMG[k]=c.img;var r=c.main_tier&&c.main_tier.reward;if(r&&!MTIER[k])MTIER[k]=r;});}
+ // main_tier 없는 카드도 '주요'를 카드 단위로 고정 — 분해된 플랫폼(부가>0)의 main_won 최솟값(가장 보수적=실 주요)으로 폴백. 모든 플랫폼이 동일 주요를 쓰게 해 채널 간 불일치 차단.
+ prods.forEach(function(p){var k=_nk2(p.name);if(MTIER[k])return;var ms=(p.events||[]).filter(function(e){return (e.bonus_won||0)>0&&e.main_won!=null;}).map(function(e){return e.main_won;});if(ms.length)MTIER[k]=Math.min.apply(null,ms);});
  // (0) 발급이벤트 EV 목록 = 전 플랫폼(네이버 포함) 평탄화. 각 행은 실제 플랫폼 이벤트로 아웃링크.
  (function(){var tmp=[],mx={};
   prods.forEach(function(p){var iss=p.issuer||'기타';(p.events||[]).forEach(function(e){var _pp=(p.platforms||{})[e.platform]||{};var u=_best(e.platform,e.url||_pp.url,_pp.id);if(e.platform==='cardgorilla'){var _cg=_cgUrl(iss,_pp.id);if(_cg)u=_cg;}
@@ -1550,7 +1552,10 @@ Promise.all([fetch('platform_events.json').then(r=>r.json()),fetch('cards.json')
   var rows=ISSROWS.slice();
   var VL=visList(),gc='1.6fr repeat('+VL.length+',1fr)';
   rows.forEach(function(r){var mx=0;VL.forEach(function(pk){var v=mval(r.o[pk],cashMode);if(v>mx)mx=v;});r.mx=mx;});
-  rows.sort(function(a,b){return b.mx-a.mx;});
+  // 카드사별 비교 = 고정 순서(정렬 기준 변동으로 인한 혼동 방지). 지정 7사 우선, 나머지는 뒤에 캐시백순.
+  var ISSORD=['삼성카드','신한카드','현대카드','KB국민카드','우리카드','하나카드','롯데카드'];
+  function _ir(n){n=n||'';for(var i=0;i<ISSORD.length;i++){if(n===ISSORD[i]||n.indexOf(ISSORD[i])===0)return i;}return 99;}
+  rows.sort(function(a,b){return (_ir(a.iss)-_ir(b.iss))||(b.mx-a.mx);});
   var ctl='';
   var chips='';
   var head='<div class="ptr hd" style="grid-template-columns:'+gc+'"><div>카드사 ('+rows.length+')</div>'+VL.map(function(pk){return '<div>'+_pdk(pk,true)+'</div>';}).join('')+'</div>';
@@ -2094,7 +2099,8 @@ Promise.all([
    listSec='<div class="rg-sec"><div class="rg-listhd"><h2>이 캐시백을 받는 카드</h2><span class="hint">상품을 누르면 아래 차트·구성이 바뀌어요</span></div><div class="rg-plist" id="rgList">'+rows+'</div></div>';
   }
   root.innerHTML=head+listSec+'<div id="rgDyn"></div>';
-  function buildSeries(p,e){var nk=_nk(p.name);var _cd=CARDMAP[nk]||{};var _s=splTier(e,_cd.main_tier&&_cd.main_tier.reward);var total=_s.t,bonus=_s.b,main=_s.m;
+  function _cardMain(p){var cd=CARDMAP[_nk(p.name)]||{};if(cd.main_tier&&cd.main_tier.reward)return cd.main_tier.reward;var ms=(p.events||[]).filter(function(x){return (x.bonus_won||0)>0&&x.main_won!=null;}).map(function(x){return x.main_won;});return ms.length?Math.min.apply(null,ms):0;}
+  function buildSeries(p,e){var nk=_nk(p.name);var _s=splTier(e,_cardMain(p));var total=_s.t,bonus=_s.b,main=_s.m;
    var series=months.map(function(m,i){if(m===_cm)return {m:m,v:total,sub:bonus,cur:true};
     var snap=MS[i],v=null;if(snap){var c=(snap.cards||[]).filter(function(x){return _nk(x.name)===nk;})[0];if(c&&c.max)v=c.max;
      if(v==null&&snap.issuers&&p.issuer&&snap.issuers[p.issuer]){var im=snap.issuers[p.issuer];var vv=Object.keys(im).map(function(kk){return im[kk];});if(vv.length)v=Math.max.apply(null,vv);}}

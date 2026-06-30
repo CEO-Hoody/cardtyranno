@@ -667,7 +667,8 @@ Promise.all([
    listSec='<div class="rg-sec"><div class="rg-listhd"><h2>이 캐시백을 받는 카드</h2><span class="hint">상품을 누르면 아래 차트·구성이 바뀌어요</span></div><div class="rg-plist" id="rgList">'+rows+'</div></div>';
   }
   root.innerHTML=head+listSec+'<div id="rgDyn"></div>';
-  function buildSeries(p,e){var nk=_nk(p.name);var _cd=CARDMAP[nk]||{};var _s=splTier(e,_cd.main_tier&&_cd.main_tier.reward);var total=_s.t,bonus=_s.b,main=_s.m;
+  function _cardMain(p){var cd=CARDMAP[_nk(p.name)]||{};if(cd.main_tier&&cd.main_tier.reward)return cd.main_tier.reward;var ms=(p.events||[]).filter(function(x){return (x.bonus_won||0)>0&&x.main_won!=null;}).map(function(x){return x.main_won;});return ms.length?Math.min.apply(null,ms):0;}
+  function buildSeries(p,e){var nk=_nk(p.name);var _s=splTier(e,_cardMain(p));var total=_s.t,bonus=_s.b,main=_s.m;
    var series=months.map(function(m,i){if(m===_cm)return {m:m,v:total,sub:bonus,cur:true};
     var snap=MS[i],v=null;if(snap){var c=(snap.cards||[]).filter(function(x){return _nk(x.name)===nk;})[0];if(c&&c.max)v=c.max;
      if(v==null&&snap.issuers&&p.issuer&&snap.issuers[p.issuer]){var im=snap.issuers[p.issuer];var vv=Object.keys(im).map(function(kk){return im[kk];});if(vv.length)v=Math.max.apply(null,vv);}}
