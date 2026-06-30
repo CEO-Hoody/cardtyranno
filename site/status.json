@@ -1,6 +1,9 @@
 {
- "month": "2026-06",
- "updated": "2026-06-30",
- "pending_platforms": [],
+ "month": "2026-07",
+ "updated": "2026-07-01",
+ "pending_platforms": [
+  "kakaopay",
+  "toss"
+ ],
  "pending_label": "업데이트 예정"
 }

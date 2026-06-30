@@ -1,137 +1,119 @@
 {
- "as_of": "2026-06",
+ "as_of": "2026-07",
  "cards": {
-  "올바른 FLEX 카드": {
-   "ajd_id": "233",
-   "reward_won": 205000,
-   "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/233"
-  },
-  "zgm.streaming카드": {
-   "ajd_id": "233",
-   "reward_won": 205000,
-   "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/233"
-  },
-  "zgm.play카드": {
-   "ajd_id": "233",
-   "reward_won": 205000,
-   "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/233"
-  },
-  "굿데이카드": {
-   "ajd_id": "246",
-   "reward_won": 850000,
-   "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/246"
-  },
-  "KB국민 My WE:SH 카드": {
-   "ajd_id": "246",
-   "reward_won": 850000,
-   "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/246"
-  },
-  "KB YOU Prime 카드": {
-   "ajd_id": "246",
-   "reward_won": 850000,
-   "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/246"
-  },
-  "KB국민 굿데이카드": {
-   "ajd_id": "246",
-   "reward_won": 850000,
-   "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/246"
-  },
   "노리2 체크카드(KB Pay)": {
-   "ajd_id": "254",
+   "ajd_id": "273",
    "reward_won": 30000,
    "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/254"
+   "url": "https://www.ajd.co.kr/card/event/detail/273"
   },
   "LOCA LIKIT": {
-   "ajd_id": "255",
-   "reward_won": 660000,
-   "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/255"
+   "ajd_id": "275",
+   "reward_won": 680000,
+   "reward_text": "최대 68만원 (아정당 롯데카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/275"
   },
-  "디지로카 London": {
-   "ajd_id": "255",
-   "reward_won": 660000,
-   "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/255"
+  "LOCA LIKIT 1.5": {
+   "ajd_id": "275",
+   "reward_won": 680000,
+   "reward_text": "최대 68만원 (아정당 롯데카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/275"
   },
-  "디지로카 Paris": {
-   "ajd_id": "255",
-   "reward_won": 660000,
-   "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/255"
-  },
-  "디지로카 Las Vegas": {
-   "ajd_id": "255",
-   "reward_won": 660000,
-   "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/255"
-  },
-  "신한카드 Mr.Life": {
-   "ajd_id": "264",
-   "reward_won": 540000,
-   "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/264"
-  },
-  "신한카드 Deep Oil": {
-   "ajd_id": "264",
-   "reward_won": 540000,
-   "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/264"
-  },
-  "신한카드 Point Plan+": {
-   "ajd_id": "264",
-   "reward_won": 540000,
-   "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/264"
-  },
-  "신한카드 처음(ANNIVERSE)": {
-   "ajd_id": "264",
-   "reward_won": 540000,
-   "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/264"
-  },
-  "알리익스프레스 신한카드": {
-   "ajd_id": "264",
-   "reward_won": 540000,
-   "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/264"
-  },
-  "카드의정석 2": {
-   "ajd_id": "267",
-   "reward_won": 770000,
-   "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/267"
-  },
-  "우리카드 7CORE": {
-   "ajd_id": "267",
-   "reward_won": 770000,
-   "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/267"
-  },
-  "우리카드 MILE&POINT": {
-   "ajd_id": "267",
-   "reward_won": 770000,
-   "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/267"
+  "LOCA LIKIT 2.0": {
+   "ajd_id": "275",
+   "reward_won": 680000,
+   "reward_text": "최대 68만원 (아정당 롯데카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/275"
   },
   "삼성 iD ON 카드": {
-   "ajd_id": "271",
-   "reward_won": 611000,
-   "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/271"
+   "ajd_id": "278",
+   "reward_won": 335000,
+   "reward_text": "최대 33.5만원 (아정당 삼성카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/278"
   },
   "삼성 iD STATION 카드 (HD현대오일뱅크)": {
-   "ajd_id": "271",
-   "reward_won": 611000,
-   "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
-   "url": "https://www.ajd.co.kr/card/event/detail/271"
+   "ajd_id": "278",
+   "reward_won": 335000,
+   "reward_text": "최대 33.5만원 (아정당 삼성카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/278"
+  },
+  "신한카드 Mr.Life": {
+   "ajd_id": "281",
+   "reward_won": 740000,
+   "reward_text": "최대 74만원 (아정당 신한카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/281"
+  },
+  "신한카드 Deep Oil": {
+   "ajd_id": "281",
+   "reward_won": 740000,
+   "reward_text": "최대 74만원 (아정당 신한카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/281"
+  },
+  "신한카드 Point Plan+": {
+   "ajd_id": "281",
+   "reward_won": 740000,
+   "reward_text": "최대 74만원 (아정당 신한카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/281"
+  },
+  "신한카드 처음(ANNIVERSE)": {
+   "ajd_id": "281",
+   "reward_won": 740000,
+   "reward_text": "최대 74만원 (아정당 신한카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/281"
+  },
+  "알리익스프레스 신한카드": {
+   "ajd_id": "281",
+   "reward_won": 740000,
+   "reward_text": "최대 74만원 (아정당 신한카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/281"
+  },
+  "굿데이카드": {
+   "ajd_id": "289",
+   "reward_won": 860000,
+   "reward_text": "최대 86만원 (아정당 KB국민카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/289"
+  },
+  "KB국민 My WE:SH 카드": {
+   "ajd_id": "289",
+   "reward_won": 860000,
+   "reward_text": "최대 86만원 (아정당 KB국민카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/289"
+  },
+  "KB YOU Prime 카드": {
+   "ajd_id": "289",
+   "reward_won": 860000,
+   "reward_text": "최대 86만원 (아정당 KB국민카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/289"
+  },
+  "KB YOU Wish 카드": {
+   "ajd_id": "289",
+   "reward_won": 860000,
+   "reward_text": "최대 86만원 (아정당 KB국민카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/289"
+  },
+  "KB국민 굿데이카드": {
+   "ajd_id": "289",
+   "reward_won": 860000,
+   "reward_text": "최대 86만원 (아정당 KB국민카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/289"
+  },
+  "올바른 FLEX 카드": {
+   "ajd_id": "295",
+   "reward_won": 265000,
+   "reward_text": "최대 26.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/295"
+  },
+  "zgm.streaming카드": {
+   "ajd_id": "295",
+   "reward_won": 265000,
+   "reward_text": "최대 26.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/295"
+  },
+  "zgm.play카드": {
+   "ajd_id": "295",
+   "reward_won": 265000,
+   "reward_text": "최대 26.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "url": "https://www.ajd.co.kr/card/event/detail/295"
   }
  }
 }
