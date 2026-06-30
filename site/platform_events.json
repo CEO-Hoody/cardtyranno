@@ -1,6 +1,1646 @@
 {
  "updated": "2026-06-30",
  "month": "2026-06",
+ "reward_groups": {
+  "2026-06|banksalad|신한카드|840000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "신한카드",
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "cards": [
+    "신한카드 Mr.Life",
+    "신한카드 Deep Oil",
+    "신한카드 Discount Plan+",
+    "신한카드 Air One"
+   ],
+   "count": 4
+  },
+  "2026-06|cardgorilla|신한카드|579000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "신한카드",
+   "reward_won": 579000,
+   "reward_text": "57.9만원 혜택",
+   "cards": [
+    "신한카드 Mr.Life",
+    "신한카드 Deep Oil",
+    "신한카드 처음(ANNIVERSE)",
+    "신한카드 Point Plan",
+    "알리익스프레스 신한카드"
+   ],
+   "count": 5
+  },
+  "2026-06|ajungdang|신한카드|540000": {
+   "month": "2026-06",
+   "platform": "ajungdang",
+   "issuer": "신한카드",
+   "reward_won": 540000,
+   "reward_text": "최대 54만원 (아정당 신한카드 발급 이벤트)",
+   "cards": [
+    "신한카드 Mr.Life",
+    "신한카드 Deep Oil",
+    "신한카드 처음(ANNIVERSE)",
+    "신한카드 Point Plan",
+    "알리익스프레스 신한카드"
+   ],
+   "count": 5
+  },
+  "2026-06|naver|신한카드|500000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "신한카드",
+   "reward_won": 500000,
+   "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
+   "cards": [
+    "신한카드 Mr.Life",
+    "신한카드 Deep Oil",
+    "신한카드 처음(ANNIVERSE)"
+   ],
+   "count": 3
+  },
+  "2026-06|kakaopay|신한카드|390000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "신한카드",
+   "reward_won": 390000,
+   "reward_text": "마케팅 동의+35만원 이상 이용 시 25만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
+   "cards": [
+    "신한카드 Mr.Life",
+    "신한카드 Deep Oil"
+   ],
+   "count": 2
+  },
+  "2026-06|banksalad|IBK기업은행|155000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "IBK기업은행",
+   "reward_won": 155000,
+   "reward_text": "최대 15.5만원 캐시백",
+   "cards": [
+    "K-패스 (신용)",
+    "IBK포인트(신용)",
+    "IBK포인트3.8(신용)",
+    "I-ALL"
+   ],
+   "count": 4
+  },
+  "2026-06|kakaopay|IBK기업은행|135000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "IBK기업은행",
+   "reward_won": 135000,
+   "reward_text": "20만원 이상 이용 시 10만원 캐시백 + 자동이체 시 최대 3.5만",
+   "cards": [
+    "K-패스 (신용)"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|IBK기업은행|125000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "IBK기업은행",
+   "reward_won": 125000,
+   "reward_text": "12.5만원 캐시백",
+   "cards": [
+    "K-패스 (신용)",
+    "IBK포인트(신용)",
+    "IBK포인트3.8(신용)",
+    "I-ALL"
+   ],
+   "count": 4
+  },
+  "2026-06|naver|IBK기업은행|125000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "IBK기업은행",
+   "reward_won": 125000,
+   "reward_text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+   "cards": [
+    "K-패스 (신용)",
+    "해피메이트 IBK카드(신용)",
+    "IBK포인트(신용)",
+    "IBK포인트3.8(신용)",
+    "I-ALL"
+   ],
+   "count": 5
+  },
+  "2026-06|toss|IBK기업은행|125000": {
+   "month": "2026-06",
+   "platform": "toss",
+   "issuer": "IBK기업은행",
+   "reward_won": 125000,
+   "reward_text": "20만원 이상 + 마케팅 동의 시 토스포인트 9만 + 자동이체 3.5만",
+   "cards": [
+    "K-패스 (신용)"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|우리카드|12000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "우리카드",
+   "reward_won": 12000,
+   "reward_text": "1.2만원 캐시백",
+   "cards": [
+    "D4카드의정석Ⅱ",
+    "DA카드의정석Ⅱ"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|롯데카드|640000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "롯데카드",
+   "reward_won": 640000,
+   "reward_text": "64만원 혜택",
+   "cards": [
+    "LOCA 365 카드",
+    "디지로카 London",
+    "디지로카 Las Vegas",
+    "디지로카 Paris"
+   ],
+   "count": 4
+  },
+  "2026-06|naver|롯데카드|634000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "롯데카드",
+   "reward_won": 634000,
+   "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
+   "cards": [
+    "LOCA 365 카드",
+    "디지로카 London",
+    "디지로카 Las Vegas",
+    "디지로카 Paris"
+   ],
+   "count": 4
+  },
+  "2026-06|issuer|롯데카드|490000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "롯데카드",
+   "reward_won": 490000,
+   "reward_text": "최대 49만원 (롯데카드 발급 이벤트)",
+   "cards": [
+    "LOCA 365 카드",
+    "LOCA LIKIT 2.0",
+    "디지로카 London",
+    "LOCA LIKIT 1.5",
+    "LOCA LIKIT"
+   ],
+   "count": 5
+  },
+  "2026-06|cardgorilla|삼성카드|494000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "삼성카드",
+   "reward_won": 494000,
+   "reward_text": "49.4만원 혜택",
+   "cards": [
+    "삼성 iD SELECT ALL 카드",
+    "삼성 iD SELECT ON 카드"
+   ],
+   "count": 2
+  },
+  "2026-06|naver|삼성카드|464000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "삼성카드",
+   "reward_won": 464000,
+   "reward_text": "최대 46.4만원 (네이버페이 삼성카드 이벤트)",
+   "cards": [
+    "삼성 iD SELECT ALL 카드",
+    "taptap DRIVE"
+   ],
+   "count": 2
+  },
+  "2026-06|banksalad|삼성카드|230000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "삼성카드",
+   "reward_won": 230000,
+   "reward_text": "최대 23만원 캐시백",
+   "cards": [
+    "삼성 iD SELECT ALL 카드",
+    "삼성카드 taptap O",
+    "삼성 iD SELECT ON 카드",
+    "taptap DRIVE"
+   ],
+   "count": 4
+  },
+  "2026-06|cardgorilla|삼성카드|1170000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "삼성카드",
+   "reward_won": 1170000,
+   "reward_text": "117만원 캐시백",
+   "cards": [
+    "삼성카드 & MILEAGE PLATINUM (스카이패스)"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|삼성카드|440000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "삼성카드",
+   "reward_won": 440000,
+   "reward_text": "최대 44만원 (네이버페이 삼성카드 이벤트)",
+   "cards": [
+    "삼성카드 & MILEAGE PLATINUM (스카이패스)"
+   ],
+   "count": 1
+  },
+  "2026-06|kakaopay|삼성카드|120000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "삼성카드",
+   "reward_won": 120000,
+   "reward_text": "30만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만",
+   "cards": [
+    "삼성카드 & MILEAGE PLATINUM (스카이패스)"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|현대카드|725000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 725000,
+   "reward_text": "최대 72.5만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "현대카드 M"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|685000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 685000,
+   "reward_text": "68.5만원 캐시백",
+   "cards": [
+    "현대카드 M"
+   ],
+   "count": 1
+  },
+  "2026-06|banksalad|현대카드|675000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대카드",
+   "reward_won": 675000,
+   "reward_text": "최대 67.5만원 캐시백",
+   "cards": [
+    "현대카드 M"
+   ],
+   "count": 1
+  },
+  "2026-06|issuer|현대카드|600000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "reward_text": "최대 60만원 (현대카드 발급 이벤트)",
+   "cards": [
+    "현대카드 M",
+    "the Orange",
+    "에너지플러스 현대카드",
+    "현대카드S",
+    "현대카드D"
+   ],
+   "count": 5
+  },
+  "2026-06|kakaopay|현대카드|440000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 440000,
+   "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
+   "cards": [
+    "현대카드 M",
+    "현대카드ZERO Edition3(할인형)",
+    "현대카드S",
+    "현대카드D",
+    "현대카드H",
+    "현대카드Z everyday"
+   ],
+   "count": 6
+  },
+  "2026-06|cardgorilla|KB국민카드|860000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "KB국민카드",
+   "reward_won": 860000,
+   "reward_text": "86만원 캐시백",
+   "cards": [
+    "KB국민 굿데이카드",
+    "KB NEED Pay 카드",
+    "KB YOU Prime 카드",
+    "KB국민 My WE:SH 카드",
+    "KB YOU Wish 카드"
+   ],
+   "count": 5
+  },
+  "2026-06|ajungdang|KB국민카드|850000": {
+   "month": "2026-06",
+   "platform": "ajungdang",
+   "issuer": "KB국민카드",
+   "reward_won": 850000,
+   "reward_text": "최대 85만원 (아정당 KB국민카드 발급 이벤트)",
+   "cards": [
+    "KB국민 굿데이카드",
+    "KB YOU Prime 카드",
+    "KB국민 My WE:SH 카드"
+   ],
+   "count": 3
+  },
+  "2026-06|kakaopay|KB국민카드|850000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "KB국민카드",
+   "reward_won": 850000,
+   "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
+   "cards": [
+    "KB국민 굿데이카드",
+    "KB YOU Prime 카드",
+    "KB국민 My WE:SH 카드"
+   ],
+   "count": 3
+  },
+  "2026-06|banksalad|KB국민카드|840000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "KB국민카드",
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "cards": [
+    "KB국민 굿데이카드",
+    "KB YOU Prime 카드",
+    "KB YOU Wish 카드"
+   ],
+   "count": 3
+  },
+  "2026-06|naver|KB국민카드|830000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "KB국민카드",
+   "reward_won": 830000,
+   "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
+   "cards": [
+    "KB국민 굿데이카드",
+    "KB YOU Prime 카드"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|우리카드|780000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "우리카드",
+   "reward_won": 780000,
+   "reward_text": "78만원 혜택",
+   "cards": [
+    "카드의정석 2",
+    "우리카드 MILE&POINT",
+    "우리카드 7CORE",
+    "the OPUS silver"
+   ],
+   "count": 4
+  },
+  "2026-06|kakaopay|우리카드|780000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "우리카드",
+   "reward_won": 780000,
+   "reward_text": "20만원 이상 이용 시 20만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
+   "cards": [
+    "카드의정석 2",
+    "우리카드 MILE&POINT",
+    "우리카드 7CORE",
+    "the OPUS silver"
+   ],
+   "count": 4
+  },
+  "2026-06|naver|우리카드|780000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "우리카드",
+   "reward_won": 780000,
+   "reward_text": "최대 78만원 (네이버페이 우리카드 이벤트)",
+   "cards": [
+    "카드의정석 2",
+    "우리카드 MILE&POINT",
+    "우리카드 7CORE",
+    "the OPUS silver"
+   ],
+   "count": 4
+  },
+  "2026-06|ajungdang|우리카드|770000": {
+   "month": "2026-06",
+   "platform": "ajungdang",
+   "issuer": "우리카드",
+   "reward_won": 770000,
+   "reward_text": "최대 77만원 (아정당 우리카드 발급 이벤트)",
+   "cards": [
+    "카드의정석 2",
+    "우리카드 MILE&POINT",
+    "우리카드 7CORE"
+   ],
+   "count": 3
+  },
+  "2026-06|banksalad|우리카드|750000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "우리카드",
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "cards": [
+    "카드의정석 2",
+    "카드의정석 SHOPPING+",
+    "카드의정석 TEN",
+    "카드의정석 I&U+"
+   ],
+   "count": 4
+  },
+  "2026-06|issuer|우리카드|240000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "우리카드",
+   "reward_won": 240000,
+   "reward_text": "최대 24만원 (우리카드 발급 이벤트)",
+   "cards": [
+    "카드의정석 2"
+   ],
+   "count": 1
+  },
+  "2026-06|banksalad|롯데카드|820000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "롯데카드",
+   "reward_won": 820000,
+   "reward_text": "최대 82만원 캐시백",
+   "cards": [
+    "LOCA LIKIT 2.0",
+    "LOCA LIKIT 1.5"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|롯데카드|670000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "롯데카드",
+   "reward_won": 670000,
+   "reward_text": "67만원 혜택",
+   "cards": [
+    "LOCA LIKIT 2.0",
+    "LOCA LIKIT 1.5"
+   ],
+   "count": 2
+  },
+  "2026-06|naver|롯데카드|644000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "롯데카드",
+   "reward_won": 644000,
+   "reward_text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
+   "cards": [
+    "LOCA LIKIT 2.0",
+    "LOCA LIKIT 1.5",
+    "LOCA LIKIT"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|현대카드|250000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 250000,
+   "reward_text": "25만원 캐시백",
+   "cards": [
+    "the Orange",
+    "현대카드 Summit",
+    "American Express® Green Card Edition2"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|IBK기업은행|42000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "IBK기업은행",
+   "reward_won": 42000,
+   "reward_text": "4.2만원 캐시백",
+   "cards": [
+    "I-Mileage (대한항공)"
+   ],
+   "count": 1
+  },
+  "2026-06|ajungdang|삼성카드|611000": {
+   "month": "2026-06",
+   "platform": "ajungdang",
+   "issuer": "삼성카드",
+   "reward_won": 611000,
+   "reward_text": "최대 61.1만원 (아정당 삼성카드 발급 이벤트)",
+   "cards": [
+    "삼성 iD STATION 카드 (HD현대오일뱅크)",
+    "삼성 iD ON 카드"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|삼성카드|15000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "삼성카드",
+   "reward_won": 15000,
+   "reward_text": "1.5만원 캐시백",
+   "cards": [
+    "삼성 iD STATION 카드 (HD현대오일뱅크)"
+   ],
+   "count": 1
+  },
+  "2026-06|issuer|하나카드|20000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "하나카드",
+   "reward_won": 20000,
+   "reward_text": "최대 2만원 (하나카드 발급 이벤트)",
+   "cards": [
+    "하나 나라사랑카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|하나카드|10000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "하나카드",
+   "reward_won": 10000,
+   "reward_text": "1만원 + CU 쿠폰 이벤트",
+   "cards": [
+    "하나 나라사랑카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|삼성카드|120000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "삼성카드",
+   "reward_won": 120000,
+   "reward_text": "12만원 캐시백",
+   "cards": [
+    "트라이플러스 삼성카드"
+   ],
+   "count": 1
+  },
+  "2026-06|ajungdang|NH농협카드|205000": {
+   "month": "2026-06",
+   "platform": "ajungdang",
+   "issuer": "NH농협카드",
+   "reward_won": 205000,
+   "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "cards": [
+    "올바른 FLEX 카드",
+    "zgm.play카드",
+    "zgm.streaming카드"
+   ],
+   "count": 3
+  },
+  "2026-06|banksalad|NH농협카드|195000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "NH농협카드",
+   "reward_won": 195000,
+   "reward_text": "최대 19.5만원 캐시백",
+   "cards": [
+    "올바른 FLEX 카드",
+    "zgm.play카드"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|NH농협카드|175000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 175000,
+   "reward_text": "17.5만원 캐시백",
+   "cards": [
+    "올바른 FLEX 카드",
+    "zgm.play카드",
+    "zgm.streaming카드"
+   ],
+   "count": 3
+  },
+  "2026-06|naver|NH농협카드|175000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "NH농협카드",
+   "reward_won": 175000,
+   "reward_text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
+   "cards": [
+    "올바른 FLEX 카드",
+    "zgm.play카드",
+    "zgm.streaming카드"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|하나카드|570000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "하나카드",
+   "reward_won": 570000,
+   "reward_text": "57만원 혜택",
+   "cards": [
+    "트래블로그+(플러스) 신용카드"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|하나카드|570000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "하나카드",
+   "reward_won": 570000,
+   "reward_text": "최대 57만원 (네이버페이 하나카드 이벤트)",
+   "cards": [
+    "트래블로그+(플러스) 신용카드"
+   ],
+   "count": 1
+  },
+  "2026-06|toss|하나카드|570000": {
+   "month": "2026-06",
+   "platform": "toss",
+   "issuer": "하나카드",
+   "reward_won": 570000,
+   "reward_text": "2만원 쓰면 2만원 + 해외 최대 50만 + 일본 여행 5만 캐시백",
+   "cards": [
+    "트래블로그+(플러스) 신용카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|삼성카드|124000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "삼성카드",
+   "reward_won": 124000,
+   "reward_text": "기존회원 12.4만원 혜택",
+   "cards": [
+    "THE iD. 1st"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|삼성카드|124000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "삼성카드",
+   "reward_won": 124000,
+   "reward_text": "최대 12.4만원 (네이버페이 삼성카드 이벤트)",
+   "cards": [
+    "THE iD. 1st"
+   ],
+   "count": 1
+  },
+  "2026-06|kakaopay|삼성카드|100000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "삼성카드",
+   "reward_won": 100000,
+   "reward_text": "100만원 이상 이용 시 10만원 캐시백",
+   "cards": [
+    "THE iD. 1st"
+   ],
+   "count": 1
+  },
+  "2026-06|toss|삼성카드|100000": {
+   "month": "2026-06",
+   "platform": "toss",
+   "issuer": "삼성카드",
+   "reward_won": 100000,
+   "reward_text": "100만원 이상 쓰면 10만원",
+   "cards": [
+    "THE iD. 1st"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|600000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "reward_text": "60만원 캐시백",
+   "cards": [
+    "에너지플러스 현대카드"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|현대카드|600000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 600000,
+   "reward_text": "최대 60만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "에너지플러스 현대카드"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|현대카드|750000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "대한항공카드 060",
+    "대한항공카드 300",
+    "대한항공카드 120",
+    "대한항공카드 the First Edition2"
+   ],
+   "count": 4
+  },
+  "2026-06|cardgorilla|현대카드|730000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 730000,
+   "reward_text": "73만원 캐시백",
+   "cards": [
+    "대한항공카드 060"
+   ],
+   "count": 1
+  },
+  "2026-06|banksalad|현대카드|690000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대카드",
+   "reward_won": 690000,
+   "reward_text": "최대 69만원 캐시백",
+   "cards": [
+    "대한항공카드 060"
+   ],
+   "count": 1
+  },
+  "2026-06|kakaopay|현대카드|690000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 690000,
+   "reward_text": "25만원 이상 이용 시 9만원 캐시백 + 해외 최대 60만",
+   "cards": [
+    "대한항공카드 060"
+   ],
+   "count": 1
+  },
+  "2026-06|issuer|현대카드|240000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "현대카드",
+   "reward_won": 240000,
+   "reward_text": "최대 24만원 (현대카드 발급 이벤트)",
+   "cards": [
+    "대한항공카드 060",
+    "대한항공카드 300",
+    "대한항공카드 120",
+    "대한항공카드 the First Edition2"
+   ],
+   "count": 4
+  },
+  "2026-06|cardgorilla|현대카드|790000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 790000,
+   "reward_text": "79만원 캐시백",
+   "cards": [
+    "대한항공카드 300"
+   ],
+   "count": 1
+  },
+  "2026-06|banksalad|현대카드|720000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대카드",
+   "reward_won": 720000,
+   "reward_text": "최대 72만원 캐시백",
+   "cards": [
+    "대한항공카드 300",
+    "대한항공카드 120"
+   ],
+   "count": 2
+  },
+  "2026-06|kakaopay|현대카드|720000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 720000,
+   "reward_text": "25만원 이상 이용 시 12만원 캐시백 + 해외 최대 60만",
+   "cards": [
+    "대한항공카드 300",
+    "대한항공카드 120"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|현대카드|760000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 760000,
+   "reward_text": "76만원 캐시백",
+   "cards": [
+    "대한항공카드 120"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|890000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 890000,
+   "reward_text": "89만원 캐시백",
+   "cards": [
+    "대한항공카드 the First Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|banksalad|현대카드|750000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대카드",
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 캐시백",
+   "cards": [
+    "대한항공카드 the First Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|issuer|현대카드|60000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "현대카드",
+   "reward_won": 60000,
+   "reward_text": "최대 6만원 (현대카드 발급 이벤트)",
+   "cards": [
+    "현대카드 ZERO Up(할인형)",
+    "현대카드 ZERO Up(포인트형)"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|현대카드|30000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 30000,
+   "reward_text": "3만원 캐시백",
+   "cards": [
+    "현대카드 ZERO Up(할인형)",
+    "현대카드 ZERO Up(포인트형)",
+    "현대카드 X Cut",
+    "현대카드 X Save"
+   ],
+   "count": 4
+  },
+  "2026-06|banksalad|현대카드|450000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대카드",
+   "reward_won": 450000,
+   "reward_text": "최대 45만원 캐시백",
+   "cards": [
+    "현대카드MY BUSINESS M F&B",
+    "현대카드MY BUSINESS M Retail",
+    "현대카드MY BUSINESS M E-seller"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|현대카드|450000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 450000,
+   "reward_text": "45만원 캐시백",
+   "cards": [
+    "현대카드MY BUSINESS M F&B",
+    "현대카드MY BUSINESS M Retail",
+    "현대카드MY BUSINESS M E-seller"
+   ],
+   "count": 3
+  },
+  "2026-06|naver|현대카드|450000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 450000,
+   "reward_text": "최대 45만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "현대카드MY BUSINESS M F&B",
+    "현대카드MY BUSINESS M Retail",
+    "현대카드MY BUSINESS M E-seller"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|NH농협카드|30000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 30000,
+   "reward_text": "3만원 캐시백",
+   "cards": [
+    "zgm 할인카드",
+    "zgm living카드",
+    "zgm shopping카드",
+    "zgm point카드",
+    "클래시 트래블카드"
+   ],
+   "count": 5
+  },
+  "2026-06|cardgorilla|NH농협카드|12000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 12000,
+   "reward_text": "1.2만원 캐시백",
+   "cards": [
+    "zgm.고향으로카드",
+    "zgm.the pay카드",
+    "올바른 NEW HAVE카드"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|NH농협카드|15000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 15000,
+   "reward_text": "1.5만원 캐시백",
+   "cards": [
+    "K-패스카드(신용)",
+    "올바른지구 카드"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|NH농협카드|25000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 25000,
+   "reward_text": "2.5만원 캐시백",
+   "cards": [
+    "zgm.rounding카드",
+    "zgm.휴가중카드"
+   ],
+   "count": 2
+  },
+  "2026-06|kakaopay|NH농협카드|65000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "NH농협카드",
+   "reward_won": 65000,
+   "reward_text": "5만원 이용 시 5만원 캐시백 + 추가 5만↑ 연회비 캐시백",
+   "cards": [
+    "zgm.the pay카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|NH농협카드|14000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 14000,
+   "reward_text": "1.4만원 캐시백",
+   "cards": [
+    "올바른 BAZIC 카드",
+    "별다줄카드",
+    "NH1961카드"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|NH농협카드|13000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 13000,
+   "reward_text": "1.3만원 캐시백",
+   "cards": [
+    "올바른 MYPICK 카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|NH농협카드|10000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 10000,
+   "reward_text": "1만원 캐시백",
+   "cards": [
+    "NH20해봄카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|NH농협카드|17000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "NH농협카드",
+   "reward_won": 17000,
+   "reward_text": "1.7만원 캐시백",
+   "cards": [
+    "SOHO 다사로이OIL카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|15000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 15000,
+   "reward_text": "1.5만원 캐시백",
+   "cards": [
+    "현대카드ZERO Edition3(할인형)",
+    "현대카드ZERO Edition3(포인트형)",
+    "현대카드O",
+    "현대카드S",
+    "현대카드D",
+    "현대카드H",
+    "현대카드T"
+   ],
+   "count": 7
+  },
+  "2026-06|cardgorilla|신한카드|559000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "신한카드",
+   "reward_won": 559000,
+   "reward_text": "55.9만원 혜택+라운지 이용권",
+   "cards": [
+    "신한카드 Globus"
+   ],
+   "count": 1
+  },
+  "2026-06|issuer|현대카드|280000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "현대카드",
+   "reward_won": 280000,
+   "reward_text": "최대 28만원 (현대카드 발급 이벤트)",
+   "cards": [
+    "현대카드O",
+    "현대카드H",
+    "현대카드T"
+   ],
+   "count": 3
+  },
+  "2026-06|issuer|현대카드|500000": {
+   "month": "2026-06",
+   "platform": "issuer",
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "reward_text": "최대 50만원 (현대카드 발급 이벤트)",
+   "cards": [
+    "현대카드 X Cut",
+    "American Express® Gold Card Edition2",
+    "현대카드 MX Black Edition2",
+    "현대카드 Summit",
+    "the Green Edition3",
+    "the Pink Edition2",
+    "American Express® Green Card Edition2"
+   ],
+   "count": 7
+  },
+  "2026-06|cardgorilla|롯데카드|130000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "롯데카드",
+   "reward_won": 130000,
+   "reward_text": "13만원 혜택",
+   "cards": [
+    "롯데 국민행복카드"
+   ],
+   "count": 1
+  },
+  "2026-06|kakaopay|롯데카드|100000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "롯데카드",
+   "reward_won": 100000,
+   "reward_text": "15만원 이상 이용 시 10만원 캐시백",
+   "cards": [
+    "롯데 국민행복카드"
+   ],
+   "count": 1
+  },
+  "2026-06|toss|롯데카드|80000": {
+   "month": "2026-06",
+   "platform": "toss",
+   "issuer": "롯데카드",
+   "reward_won": 80000,
+   "reward_text": "10만원 쓰면 8만 토스포인트",
+   "cards": [
+    "롯데 국민행복카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|IBK기업은행|12000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "IBK기업은행",
+   "reward_won": 12000,
+   "reward_text": "1.2만원 캐시백",
+   "cards": [
+    "일년의 설렘카드",
+    "Daily With(데일리위드)카드",
+    "일상의 기쁨카드(신용)"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|IBK기업은행|20000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "IBK기업은행",
+   "reward_won": 20000,
+   "reward_text": "2만원 캐시백",
+   "cards": [
+    "해피메이트 IBK카드(신용)"
+   ],
+   "count": 1
+  },
+  "2026-06|toss|삼성카드|455000": {
+   "month": "2026-06",
+   "platform": "toss",
+   "issuer": "삼성카드",
+   "reward_won": 455000,
+   "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
+   "cards": [
+    "모니모A 카드",
+    "taptap DRIVE"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|삼성카드|10000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "삼성카드",
+   "reward_won": 10000,
+   "reward_text": "1만원 캐시백",
+   "cards": [
+    "모니모A 카드",
+    "taptap DRIVE"
+   ],
+   "count": 2
+  },
+  "2026-06|kakaopay|삼성카드|440000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "삼성카드",
+   "reward_won": 440000,
+   "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
+   "cards": [
+    "taptap DRIVE",
+    "삼성 iD ON 카드"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|롯데카드|200000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "롯데카드",
+   "reward_won": 200000,
+   "reward_text": "20만원 혜택",
+   "cards": [
+    "롯데멤버스 카드 프리미엄",
+    "롯데멤버스 카드"
+   ],
+   "count": 2
+  },
+  "2026-06|banksalad|롯데카드|840000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "롯데카드",
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 캐시백",
+   "cards": [
+    "디지로카 London",
+    "디지로카 Las Vegas",
+    "디지로카 Paris",
+    "LOCA LIKIT"
+   ],
+   "count": 4
+  },
+  "2026-06|ajungdang|롯데카드|660000": {
+   "month": "2026-06",
+   "platform": "ajungdang",
+   "issuer": "롯데카드",
+   "reward_won": 660000,
+   "reward_text": "최대 66만원 (아정당 롯데카드 발급 이벤트)",
+   "cards": [
+    "디지로카 London",
+    "디지로카 Las Vegas",
+    "디지로카 Paris",
+    "LOCA LIKIT"
+   ],
+   "count": 4
+  },
+  "2026-06|cardgorilla|BC 바로카드|12000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "BC 바로카드",
+   "reward_won": 12000,
+   "reward_text": "1.2만원 캐시백",
+   "cards": [
+    "BC 바로 MACAO 카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|BC 바로카드|29000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "BC 바로카드",
+   "reward_won": 29000,
+   "reward_text": "2.9만원 캐시백",
+   "cards": [
+    "BC 바로 Air Master 카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|BC 바로카드|43000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "BC 바로카드",
+   "reward_won": 43000,
+   "reward_text": "4.3만원 캐시백",
+   "cards": [
+    "BC 바로 Air Max 카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|BC 바로카드|19000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "BC 바로카드",
+   "reward_won": 19000,
+   "reward_text": "1.9만원 캐시백",
+   "cards": [
+    "BC 바로 ZONE 카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|신한카드|789000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "신한카드",
+   "reward_won": 789000,
+   "reward_text": "78.9만원 혜택",
+   "cards": [
+    "신한카드 Discount Plan+",
+    "신한카드 Air One",
+    "신한카드 Simple Plan+"
+   ],
+   "count": 3
+  },
+  "2026-06|naver|신한카드|559000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "신한카드",
+   "reward_won": 559000,
+   "reward_text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
+   "cards": [
+    "신한카드 Discount Plan+",
+    "신한카드 Air One",
+    "신한카드 Simple Plan+"
+   ],
+   "count": 3
+  },
+  "2026-06|kakaopay|신한카드|320000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "신한카드",
+   "reward_won": 320000,
+   "reward_text": "마케팅 동의+30만원 이상 이용 시 20만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
+   "cards": [
+    "신한카드 Air One",
+    "신한카드 Edu Plan+"
+   ],
+   "count": 2
+  },
+  "2026-06|banksalad|신한카드|830000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "신한카드",
+   "reward_won": 830000,
+   "reward_text": "최대 83만원 캐시백",
+   "cards": [
+    "신한카드 Point Plan",
+    "신한카드 Edu Plan+"
+   ],
+   "count": 2
+  },
+  "2026-06|naver|신한카드|520000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "신한카드",
+   "reward_won": 520000,
+   "reward_text": "최대 52만원 (네이버페이 신한카드 이벤트)",
+   "cards": [
+    "신한카드 Point Plan",
+    "Haru(Hoshino Resorts)",
+    "신한카드 Edu Plan+"
+   ],
+   "count": 3
+  },
+  "2026-06|cardgorilla|신한카드|349000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "신한카드",
+   "reward_won": 349000,
+   "reward_text": "34.9만원 혜택",
+   "cards": [
+    "Haru(Hoshino Resorts)",
+    "신한카드 Edu Plan+"
+   ],
+   "count": 2
+  },
+  "2026-06|cardgorilla|우리카드|39000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "우리카드",
+   "reward_won": 39000,
+   "reward_text": "3.9만원 캐시백",
+   "cards": [
+    "카드의정석 EVERY MILE SKYPASS"
+   ],
+   "count": 1
+  },
+  "2026-06|kakaopay|NH농협카드|195000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "NH농협카드",
+   "reward_won": 195000,
+   "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
+   "cards": [
+    "zgm.play카드",
+    "zgm.streaming카드"
+   ],
+   "count": 2
+  },
+  "2026-06|banksalad|현대백화점|10000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대백화점",
+   "reward_won": 10000,
+   "reward_text": "1만원 캐시백",
+   "cards": [
+    "현대백화점카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대백화점|10000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대백화점",
+   "reward_won": 10000,
+   "reward_text": "H.Point 1만P 증정",
+   "cards": [
+    "현대백화점카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|우리카드|750000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "우리카드",
+   "reward_won": 750000,
+   "reward_text": "75만원 혜택",
+   "cards": [
+    "카드의정석 SHOPPING+",
+    "카드의정석2 EVERY DISCOUNT",
+    "카드의정석 TEN",
+    "카드의정석2 EVERY POINT",
+    "카드의정석 I&U+"
+   ],
+   "count": 5
+  },
+  "2026-06|kakaopay|우리카드|750000": {
+   "month": "2026-06",
+   "platform": "kakaopay",
+   "issuer": "우리카드",
+   "reward_won": 750000,
+   "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
+   "cards": [
+    "카드의정석 SHOPPING+",
+    "카드의정석 TEN",
+    "카드의정석 I&U+"
+   ],
+   "count": 3
+  },
+  "2026-06|naver|우리카드|750000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "우리카드",
+   "reward_won": 750000,
+   "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
+   "cards": [
+    "카드의정석 SHOPPING+",
+    "카드의정석 TEN",
+    "카드의정석 I&U+"
+   ],
+   "count": 3
+  },
+  "2026-06|banksalad|우리카드|780000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "우리카드",
+   "reward_won": 780000,
+   "reward_text": "최대 78만원 캐시백",
+   "cards": [
+    "우리카드 MILE&POINT",
+    "우리카드 7CORE",
+    "the OPUS silver"
+   ],
+   "count": 3
+  },
+  "2026-06|banksalad|현대카드|500000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "reward_text": "최대 50만원 캐시백",
+   "cards": [
+    "American Express® Gold Card Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|500000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "reward_text": "50만원 캐시백",
+   "cards": [
+    "American Express® Gold Card Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|현대카드|500000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 500000,
+   "reward_text": "최대 50만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "American Express® Gold Card Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|200000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 200000,
+   "reward_text": "20만원 캐시백",
+   "cards": [
+    "현대카드 MX Black Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|150000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 150000,
+   "reward_text": "15만원 캐시백",
+   "cards": [
+    "the Green Edition3",
+    "the Pink Edition2"
+   ],
+   "count": 2
+  },
+  "2026-06|banksalad|현대카드|250000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "현대카드",
+   "reward_won": 250000,
+   "reward_text": "최대 25만원 캐시백",
+   "cards": [
+    "American Express® Green Card Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|naver|현대카드|250000": {
+   "month": "2026-06",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 250000,
+   "reward_text": "최대 25만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "American Express® Green Card Edition2"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|KB국민카드|25000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "KB국민카드",
+   "reward_won": 25000,
+   "reward_text": "2.5만원 혜택",
+   "cards": [
+    "트래블러스 체크카드(토심이)",
+    "토심이 첵첵 체크카드",
+    "노리2 체크카드(KB Pay)",
+    "KB 틴업 체크카드",
+    "트래블러스 체크카드",
+    "KB Youth Club 체크카드"
+   ],
+   "count": 6
+  },
+  "2026-06|ajungdang|KB국민카드|30000": {
+   "month": "2026-06",
+   "platform": "ajungdang",
+   "issuer": "KB국민카드",
+   "reward_won": 30000,
+   "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
+   "cards": [
+    "노리2 체크카드(KB Pay)"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|삼성카드|20000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "삼성카드",
+   "reward_won": 20000,
+   "reward_text": "2만원 캐시백",
+   "cards": [
+    "삼성 iD ON 카드"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|현대카드|20000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "현대카드",
+   "reward_won": 20000,
+   "reward_text": "2만원 캐시백",
+   "cards": [
+    "현대카드Z family Edition2",
+    "현대카드Z play",
+    "현대카드Z everyday",
+    "현대카드Z work Edition2"
+   ],
+   "count": 4
+  },
+  "2026-06|cardgorilla|IBK기업은행|19000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "IBK기업은행",
+   "reward_won": 19000,
+   "reward_text": "1.9만원 캐시백",
+   "cards": [
+    "I-PET"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|롯데카드|590000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "롯데카드",
+   "reward_won": 590000,
+   "reward_text": "59만원 혜택",
+   "cards": [
+    "LOCA LIKIT",
+    "LOCA LIKIT Eat",
+    "LOCA LIKIT Play",
+    "디지로카 Link"
+   ],
+   "count": 4
+  },
+  "2026-06|banksalad|롯데카드|790000": {
+   "month": "2026-06",
+   "platform": "banksalad",
+   "issuer": "롯데카드",
+   "reward_won": 790000,
+   "reward_text": "최대 79만원 캐시백",
+   "cards": [
+    "디지로카 Link"
+   ],
+   "count": 1
+  },
+  "2026-06|toss|롯데카드|460000": {
+   "month": "2026-06",
+   "platform": "toss",
+   "issuer": "롯데카드",
+   "reward_won": 460000,
+   "reward_text": "20만원 이상 이용 시 15만 토스포인트 + 해외 30만",
+   "cards": [
+    "디지로카 Link"
+   ],
+   "count": 1
+  },
+  "2026-06|cardgorilla|신한카드|10000": {
+   "month": "2026-06",
+   "platform": "cardgorilla",
+   "issuer": "신한카드",
+   "reward_won": 10000,
+   "reward_text": "1만원 캐시백",
+   "cards": [
+    "신한카드 플리 체크(산리오캐릭터즈)",
+    "신한카드 플리(체크)"
+   ],
+   "count": 2
+  }
+ },
  "products": [
   {
    "id": 1,
@@ -48,7 +1688,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|신한카드|840000"
     },
     {
      "platform": "cardgorilla",
@@ -64,7 +1705,8 @@
        "won": 579000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|579000"
     },
     {
      "platform": "ajungdang",
@@ -80,7 +1722,8 @@
        "won": 540000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|신한카드|540000"
     },
     {
      "platform": "naver",
@@ -89,7 +1732,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|500000"
     },
     {
      "platform": "kakaopay",
@@ -105,7 +1749,8 @@
        "won": 10000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|신한카드|390000"
     }
    ]
   },
@@ -155,16 +1800,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
-    },
-    {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.19",
-     "url": "https://card-lounge.toss.im/card/34",
-     "main_won": 810000,
-     "bonus_won": 0
+     ],
+     "reward_group": "2026-06|banksalad|신한카드|840000"
     },
     {
      "platform": "cardgorilla",
@@ -180,7 +1817,8 @@
        "won": 579000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|579000"
     },
     {
      "platform": "ajungdang",
@@ -196,7 +1834,8 @@
        "won": 540000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|신한카드|540000"
     },
     {
      "platform": "naver",
@@ -205,7 +1844,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|500000"
     },
     {
      "platform": "kakaopay",
@@ -221,7 +1861,8 @@
        "won": 10000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|신한카드|390000"
     }
    ]
   },
@@ -267,7 +1908,8 @@
        "won": 579000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|579000"
     },
     {
      "platform": "ajungdang",
@@ -283,7 +1925,8 @@
        "won": 540000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|신한카드|540000"
     },
     {
      "platform": "naver",
@@ -292,7 +1935,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|500000"
     }
    ]
   },
@@ -331,7 +1975,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004320",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|IBK기업은행|155000"
     },
     {
      "platform": "kakaopay",
@@ -347,7 +1992,8 @@
        "won": 35000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|IBK기업은행|135000"
     },
     {
      "platform": "cardgorilla",
@@ -363,7 +2009,8 @@
        "won": 125000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|125000"
     },
     {
      "platform": "naver",
@@ -372,7 +2019,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
      "main_won": 125000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|IBK기업은행|125000"
     },
     {
      "platform": "toss",
@@ -388,7 +2036,8 @@
        "won": 35000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|toss|IBK기업은행|125000"
     }
    ]
   },
@@ -415,7 +2064,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|12000"
     }
    ]
   },
@@ -457,7 +2107,8 @@
        "won": 640000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|640000"
     },
     {
      "platform": "naver",
@@ -466,7 +2117,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
      "main_won": 634000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|롯데카드|634000"
     },
     {
      "platform": "issuer",
@@ -475,7 +2127,8 @@
      "period_end": null,
      "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
      "main_won": 490000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|롯데카드|490000"
     }
    ]
   },
@@ -513,7 +2166,8 @@
        "won": 494000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|삼성카드|494000"
     },
     {
      "platform": "naver",
@@ -522,7 +2176,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
      "main_won": 464000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|삼성카드|464000"
     },
     {
      "platform": "banksalad",
@@ -531,7 +2186,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004534",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|삼성카드|230000"
     }
    ]
   },
@@ -562,7 +2218,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD003051",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|삼성카드|230000"
     }
    ]
   },
@@ -604,7 +2261,8 @@
        "won": 1170000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|삼성카드|1170000"
     },
     {
      "platform": "naver",
@@ -613,7 +2271,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590508&cardCompanyId=CCSS&cardIssuerCode=CCSS",
      "main_won": 440000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|삼성카드|440000"
     },
     {
      "platform": "kakaopay",
@@ -629,7 +2288,8 @@
        "won": 10000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|삼성카드|120000"
     }
    ]
   },
@@ -672,7 +2332,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260528001782191066&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 725000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|725000"
     },
     {
      "platform": "cardgorilla",
@@ -688,7 +2349,8 @@
        "won": 685000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|685000"
     },
     {
      "platform": "banksalad",
@@ -697,7 +2359,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004305",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|현대카드|675000"
     },
     {
      "platform": "issuer",
@@ -706,7 +2369,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
      "main_won": 600000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|600000"
     },
     {
      "platform": "kakaopay",
@@ -727,7 +2391,8 @@
        "won": 80000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|440000"
     }
    ]
   },
@@ -777,7 +2442,8 @@
        "won": 860000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|KB국민카드|860000"
     },
     {
      "platform": "ajungdang",
@@ -793,7 +2459,8 @@
        "won": 850000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|KB국민카드|850000"
     },
     {
      "platform": "kakaopay",
@@ -809,7 +2476,8 @@
        "won": 30000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|KB국민카드|850000"
     },
     {
      "platform": "banksalad",
@@ -825,7 +2493,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|KB국민카드|840000"
     },
     {
      "platform": "naver",
@@ -834,16 +2503,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
      "main_won": 830000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.25",
-     "url": "https://card-lounge.toss.im/card/1121",
-     "main_won": 810000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|KB국민카드|830000"
     }
    ]
   },
@@ -890,7 +2551,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
      "platform": "kakaopay",
@@ -906,7 +2568,8 @@
        "won": 60000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|우리카드|780000"
     },
     {
      "platform": "naver",
@@ -915,7 +2578,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|우리카드|780000"
     },
     {
      "platform": "ajungdang",
@@ -931,7 +2595,8 @@
        "won": 770000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|우리카드|770000"
     },
     {
      "platform": "banksalad",
@@ -947,7 +2612,8 @@
        "won": 750000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|우리카드|750000"
     },
     {
      "platform": "issuer",
@@ -956,7 +2622,8 @@
      "period_end": null,
      "url": "https://pc.wooricard.com/dcpc/yh1/bnf/bnf02/prgevnt/H1BNF202S00.do",
      "main_won": 240000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|우리카드|240000"
     }
    ]
   },
@@ -998,7 +2665,8 @@
        "won": 820000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|롯데카드|820000"
     },
     {
      "platform": "cardgorilla",
@@ -1014,7 +2682,8 @@
        "won": 670000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|670000"
     },
     {
      "platform": "naver",
@@ -1023,7 +2692,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
      "main_won": 644000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|롯데카드|644000"
     },
     {
      "platform": "issuer",
@@ -1032,7 +2702,8 @@
      "period_end": null,
      "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
      "main_won": 490000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|롯데카드|490000"
     }
    ]
   },
@@ -1072,7 +2743,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
      "main_won": 600000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|600000"
     },
     {
      "platform": "cardgorilla",
@@ -1081,7 +2753,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 250000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|250000"
     }
    ]
   },
@@ -1104,7 +2777,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
      "main_won": 42000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|42000"
     }
    ]
   },
@@ -1138,7 +2812,8 @@
        "won": 611000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|삼성카드|611000"
     },
     {
      "platform": "cardgorilla",
@@ -1147,7 +2822,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|삼성카드|15000"
     }
    ]
   },
@@ -1174,7 +2850,8 @@
      "period_end": null,
      "url": "https://www.hanacard.co.kr/OPP99999998N.web?Code=moevent",
      "main_won": 20000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|하나카드|20000"
     },
     {
      "platform": "cardgorilla",
@@ -1183,7 +2860,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/8",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|하나카드|10000"
     }
    ]
   },
@@ -1206,7 +2884,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
      "main_won": 120000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|삼성카드|120000"
     }
    ]
   },
@@ -1252,7 +2931,8 @@
        "won": 205000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|NH농협카드|205000"
     },
     {
      "platform": "banksalad",
@@ -1268,7 +2948,8 @@
        "won": 195000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|NH농협카드|195000"
     },
     {
      "platform": "cardgorilla",
@@ -1284,7 +2965,8 @@
        "won": 175000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|NH농협카드|175000"
     },
     {
      "platform": "naver",
@@ -1293,7 +2975,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
      "main_won": 175000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|NH농협카드|175000"
     }
    ]
   },
@@ -1331,7 +3014,8 @@
        "won": 570000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|하나카드|570000"
     },
     {
      "platform": "naver",
@@ -1340,7 +3024,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260529001787031369&cardCompanyId=CCHN&cardIssuerCode=044",
      "main_won": 570000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|하나카드|570000"
     },
     {
      "platform": "toss",
@@ -1356,7 +3041,8 @@
        "won": 50000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|toss|하나카드|570000"
     }
    ]
   },
@@ -1421,7 +3107,8 @@
        "won": 124000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|삼성카드|124000"
     },
     {
      "platform": "naver",
@@ -1430,7 +3117,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590510&cardCompanyId=CCSS&cardIssuerCode=CCSS",
      "main_won": 124000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|삼성카드|124000"
     },
     {
      "platform": "kakaopay",
@@ -1439,7 +3127,8 @@
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15566ef3bfd14294a5a1e5",
      "main_won": 100000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|kakaopay|삼성카드|100000"
     },
     {
      "platform": "toss",
@@ -1448,7 +3137,8 @@
      "period_end": "2026-06-30",
      "url": "https://toss.im/_m/LUWffhjw",
      "main_won": 100000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|toss|삼성카드|100000"
     }
    ]
   },
@@ -1486,7 +3176,8 @@
        "won": 600000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|600000"
     },
     {
      "platform": "issuer",
@@ -1495,7 +3186,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
      "main_won": 600000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|600000"
     },
     {
      "platform": "naver",
@@ -1504,7 +3196,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590520&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 600000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|600000"
     }
    ]
   },
@@ -1543,7 +3236,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
      "platform": "cardgorilla",
@@ -1559,7 +3253,8 @@
        "won": 730000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|730000"
     },
     {
      "platform": "banksalad",
@@ -1568,7 +3263,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004617",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|현대카드|690000"
     },
     {
      "platform": "kakaopay",
@@ -1584,7 +3280,8 @@
        "won": 600000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|690000"
     },
     {
      "platform": "issuer",
@@ -1593,7 +3290,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=50U984&amp;searchWord=",
      "main_won": 240000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|240000"
     }
    ]
   },
@@ -1639,7 +3337,8 @@
        "won": 790000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|790000"
     },
     {
      "platform": "naver",
@@ -1648,7 +3347,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
      "platform": "banksalad",
@@ -1657,7 +3357,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004622",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|현대카드|720000"
     },
     {
      "platform": "kakaopay",
@@ -1673,7 +3374,8 @@
        "won": 600000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|720000"
     },
     {
      "platform": "issuer",
@@ -1682,7 +3384,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=O4P983&amp;searchWord=",
      "main_won": 240000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|240000"
     }
    ]
   },
@@ -1728,7 +3431,8 @@
        "won": 760000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|760000"
     },
     {
      "platform": "naver",
@@ -1737,7 +3441,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
      "platform": "banksalad",
@@ -1746,7 +3451,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004621",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|현대카드|720000"
     },
     {
      "platform": "kakaopay",
@@ -1762,7 +3468,8 @@
        "won": 600000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|720000"
     },
     {
      "platform": "issuer",
@@ -1771,7 +3478,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=50U984&amp;searchWord=",
      "main_won": 240000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|240000"
     }
    ]
   },
@@ -1817,7 +3525,8 @@
        "won": 890000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|890000"
     },
     {
      "platform": "banksalad",
@@ -1826,7 +3535,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004620",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|현대카드|750000"
     },
     {
      "platform": "naver",
@@ -1835,7 +3545,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|750000"
     },
     {
      "platform": "issuer",
@@ -1844,7 +3555,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=O4P983&amp;searchWord=",
      "main_won": 240000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|240000"
     }
    ]
   },
@@ -1871,7 +3583,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=92H973&amp;searchWord=",
      "main_won": 60000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|60000"
     },
     {
      "platform": "cardgorilla",
@@ -1880,7 +3593,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|30000"
     }
    ]
   },
@@ -1907,7 +3621,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=92H973&amp;searchWord=",
      "main_won": 60000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|60000"
     },
     {
      "platform": "cardgorilla",
@@ -1916,7 +3631,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|30000"
     }
    ]
   },
@@ -1954,7 +3670,8 @@
        "won": 450000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|현대카드|450000"
     },
     {
      "platform": "cardgorilla",
@@ -1970,7 +3687,8 @@
        "won": 450000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|450000"
     },
     {
      "platform": "naver",
@@ -1979,7 +3697,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 450000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|450000"
     }
    ]
   },
@@ -2017,7 +3736,8 @@
        "won": 450000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|현대카드|450000"
     },
     {
      "platform": "cardgorilla",
@@ -2033,7 +3753,8 @@
        "won": 450000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|450000"
     },
     {
      "platform": "naver",
@@ -2042,7 +3763,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 450000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|450000"
     }
    ]
   },
@@ -2080,7 +3802,8 @@
        "won": 450000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|현대카드|450000"
     },
     {
      "platform": "cardgorilla",
@@ -2096,7 +3819,8 @@
        "won": 450000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|450000"
     },
     {
      "platform": "naver",
@@ -2105,7 +3829,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 450000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|450000"
     }
    ]
   },
@@ -2113,24 +3838,14 @@
    "id": 35,
    "name": "The Aureum(더 아우름)카드",
    "issuer": "Sh수협은행",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2932/card_img/48313/2932card.png",
+   "img": null,
    "platforms": {
     "cardgorilla": {
      "id": "2932",
      "url": "https://www.card-gorilla.com/card/detail/2932"
     }
    },
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_text": "SH수협은행",
-     "reward_won": null,
-     "period_end": "2026-06-30",
-     "url": "https://www.card-gorilla.com/card/detail/2932",
-     "main_won": 0,
-     "bonus_won": 0
-    }
-   ]
+   "events": []
   },
   {
    "id": 36,
@@ -2151,7 +3866,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|30000"
     }
    ]
   },
@@ -2174,7 +3890,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|12000"
     }
    ]
   },
@@ -2197,7 +3914,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|15000"
     }
    ]
   },
@@ -2220,7 +3938,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|25000"
     }
    ]
   },
@@ -2243,7 +3962,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|25000"
     }
    ]
   },
@@ -2277,7 +3997,8 @@
        "won": 50000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|NH농협카드|65000"
     },
     {
      "platform": "cardgorilla",
@@ -2286,7 +4007,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|12000"
     }
    ]
   },
@@ -2309,7 +4031,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|30000"
     }
    ]
   },
@@ -2332,7 +4055,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|30000"
     }
    ]
   },
@@ -2355,7 +4079,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|30000"
     }
    ]
   },
@@ -2382,7 +4107,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|12000"
     }
    ]
   },
@@ -2405,7 +4131,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 14000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|14000"
     }
    ]
   },
@@ -2428,7 +4155,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|15000"
     }
    ]
   },
@@ -2451,7 +4179,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 13000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|13000"
     }
    ]
   },
@@ -2474,7 +4203,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 14000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|14000"
     }
    ]
   },
@@ -2497,7 +4227,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 14000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|14000"
     }
    ]
   },
@@ -2524,7 +4255,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|10000"
     }
    ]
   },
@@ -2547,7 +4279,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 17000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|17000"
     }
    ]
   },
@@ -2581,7 +4314,8 @@
        "won": 494000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|삼성카드|494000"
     },
     {
      "platform": "banksalad",
@@ -2590,7 +4324,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004532",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|삼성카드|230000"
     }
    ]
   },
@@ -2633,7 +4368,8 @@
        "won": 80000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|440000"
     },
     {
      "platform": "cardgorilla",
@@ -2642,7 +4378,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|15000"
     }
    ]
   },
@@ -2669,7 +4406,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|15000"
     }
    ]
   },
@@ -2699,7 +4437,8 @@
        "won": 559000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|559000"
     }
    ]
   },
@@ -2726,7 +4465,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
      "main_won": 280000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|280000"
     },
     {
      "platform": "cardgorilla",
@@ -2735,7 +4475,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|15000"
     }
    ]
   },
@@ -2766,7 +4507,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
      "main_won": 600000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|600000"
     },
     {
      "platform": "kakaopay",
@@ -2787,7 +4529,8 @@
        "won": 80000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|440000"
     },
     {
      "platform": "cardgorilla",
@@ -2796,7 +4539,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|15000"
     }
    ]
   },
@@ -2827,7 +4571,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=EI3938&amp;searchWord=",
      "main_won": 600000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|600000"
     },
     {
      "platform": "kakaopay",
@@ -2848,7 +4593,8 @@
        "won": 80000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|440000"
     },
     {
      "platform": "cardgorilla",
@@ -2857,7 +4603,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|15000"
     }
    ]
   },
@@ -2900,7 +4647,8 @@
        "won": 80000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|440000"
     },
     {
      "platform": "issuer",
@@ -2909,7 +4657,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
      "main_won": 280000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|280000"
     },
     {
      "platform": "cardgorilla",
@@ -2918,7 +4667,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|15000"
     }
    ]
   },
@@ -2945,7 +4695,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=YCK811&amp;searchWord=",
      "main_won": 280000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|280000"
     },
     {
      "platform": "cardgorilla",
@@ -2954,7 +4705,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 15000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|15000"
     }
    ]
   },
@@ -2981,7 +4733,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|500000"
     },
     {
      "platform": "cardgorilla",
@@ -2990,7 +4743,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|30000"
     }
    ]
   },
@@ -3013,7 +4767,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|30000"
     }
    ]
   },
@@ -3051,7 +4806,8 @@
        "won": 130000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|130000"
     },
     {
      "platform": "kakaopay",
@@ -3060,7 +4816,8 @@
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a194fef3f63cd5250620206",
      "main_won": 100000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|kakaopay|롯데카드|100000"
     },
     {
      "platform": "toss",
@@ -3069,7 +4826,8 @@
      "period_end": "2026-06-30",
      "url": "https://toss.im/_m/zgTwn3un",
      "main_won": 80000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|toss|롯데카드|80000"
     }
    ]
   },
@@ -3092,7 +4850,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/9",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|NH농협카드|30000"
     }
    ]
   },
@@ -3115,7 +4874,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|12000"
     }
    ]
   },
@@ -3142,7 +4902,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
      "main_won": 125000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|IBK기업은행|125000"
     },
     {
      "platform": "cardgorilla",
@@ -3151,7 +4912,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
      "main_won": 20000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|20000"
     }
    ]
   },
@@ -3190,7 +4952,8 @@
        "won": 15000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|toss|삼성카드|455000"
     },
     {
      "platform": "cardgorilla",
@@ -3199,7 +4962,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|삼성카드|10000"
     }
    ]
   },
@@ -3238,7 +5002,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
      "main_won": 464000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|삼성카드|464000"
     },
     {
      "platform": "toss",
@@ -3259,7 +5024,8 @@
        "won": 15000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|toss|삼성카드|455000"
     },
     {
      "platform": "kakaopay",
@@ -3275,7 +5041,8 @@
        "won": 300000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|삼성카드|440000"
     },
     {
      "platform": "banksalad",
@@ -3284,7 +5051,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD000171",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|삼성카드|230000"
     },
     {
      "platform": "cardgorilla",
@@ -3293,7 +5061,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|삼성카드|10000"
     }
    ]
   },
@@ -3323,7 +5092,8 @@
        "won": 200000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|200000"
     }
    ]
   },
@@ -3357,7 +5127,8 @@
        "won": 200000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|200000"
     }
    ]
   },
@@ -3387,7 +5158,8 @@
        "won": 860000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|KB국민카드|860000"
     }
    ]
   },
@@ -3433,7 +5205,8 @@
        "won": 860000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|KB국민카드|860000"
     },
     {
      "platform": "ajungdang",
@@ -3449,7 +5222,8 @@
        "won": 850000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|KB국민카드|850000"
     },
     {
      "platform": "kakaopay",
@@ -3465,7 +5239,8 @@
        "won": 30000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|KB국민카드|850000"
     },
     {
      "platform": "banksalad",
@@ -3481,7 +5256,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|KB국민카드|840000"
     },
     {
      "platform": "naver",
@@ -3490,7 +5266,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
      "main_won": 830000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|KB국민카드|830000"
     }
    ]
   },
@@ -3532,7 +5309,8 @@
        "won": 860000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|KB국민카드|860000"
     },
     {
      "platform": "ajungdang",
@@ -3548,7 +5326,8 @@
        "won": 850000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|KB국민카드|850000"
     },
     {
      "platform": "kakaopay",
@@ -3564,16 +5343,8 @@
        "won": 30000,
        "cond": false
       }
-     ]
-    },
-    {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.25",
-     "url": "https://card-lounge.toss.im/card/1467",
-     "main_won": 810000,
-     "bonus_won": 0
+     ],
+     "reward_group": "2026-06|kakaopay|KB국민카드|850000"
     }
    ]
   },
@@ -3607,7 +5378,8 @@
        "won": 860000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|KB국민카드|860000"
     },
     {
      "platform": "banksalad",
@@ -3623,7 +5395,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|KB국민카드|840000"
     }
    ]
   },
@@ -3654,7 +5427,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004361",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|IBK기업은행|155000"
     },
     {
      "platform": "cardgorilla",
@@ -3670,7 +5444,8 @@
        "won": 125000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|125000"
     },
     {
      "platform": "naver",
@@ -3679,7 +5454,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
      "main_won": 125000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|IBK기업은행|125000"
     }
    ]
   },
@@ -3710,7 +5486,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004360",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|IBK기업은행|155000"
     },
     {
      "platform": "cardgorilla",
@@ -3726,7 +5503,8 @@
        "won": 125000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|125000"
     },
     {
      "platform": "naver",
@@ -3735,7 +5513,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
      "main_won": 125000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|IBK기업은행|125000"
     }
    ]
   },
@@ -3766,7 +5545,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD004232",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|IBK기업은행|155000"
     },
     {
      "platform": "cardgorilla",
@@ -3782,7 +5562,8 @@
        "won": 125000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|125000"
     },
     {
      "platform": "naver",
@@ -3791,7 +5572,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
      "main_won": 125000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|IBK기업은행|125000"
     }
    ]
   },
@@ -3837,7 +5619,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|롯데카드|840000"
     },
     {
      "platform": "ajungdang",
@@ -3853,7 +5636,8 @@
        "won": 660000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|롯데카드|660000"
     },
     {
      "platform": "cardgorilla",
@@ -3869,7 +5653,8 @@
        "won": 640000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|640000"
     },
     {
      "platform": "naver",
@@ -3878,7 +5663,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
      "main_won": 634000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|롯데카드|634000"
     },
     {
      "platform": "issuer",
@@ -3887,7 +5673,8 @@
      "period_end": null,
      "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
      "main_won": 490000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|롯데카드|490000"
     }
    ]
   },
@@ -3929,7 +5716,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|롯데카드|840000"
     },
     {
      "platform": "ajungdang",
@@ -3945,7 +5733,8 @@
        "won": 660000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|롯데카드|660000"
     },
     {
      "platform": "cardgorilla",
@@ -3961,7 +5750,8 @@
        "won": 640000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|640000"
     },
     {
      "platform": "naver",
@@ -3970,7 +5760,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
      "main_won": 634000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|롯데카드|634000"
     }
    ]
   },
@@ -4012,7 +5803,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|롯데카드|840000"
     },
     {
      "platform": "ajungdang",
@@ -4028,7 +5820,8 @@
        "won": 660000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|롯데카드|660000"
     },
     {
      "platform": "cardgorilla",
@@ -4044,7 +5837,8 @@
        "won": 640000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|640000"
     },
     {
      "platform": "naver",
@@ -4053,7 +5847,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
      "main_won": 634000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|롯데카드|634000"
     }
    ]
   },
@@ -4095,7 +5890,8 @@
        "won": 820000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|롯데카드|820000"
     },
     {
      "platform": "cardgorilla",
@@ -4111,7 +5907,8 @@
        "won": 670000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|670000"
     },
     {
      "platform": "naver",
@@ -4120,7 +5917,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
      "main_won": 644000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|롯데카드|644000"
     },
     {
      "platform": "issuer",
@@ -4129,7 +5927,8 @@
      "period_end": null,
      "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
      "main_won": 490000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|롯데카드|490000"
     }
    ]
   },
@@ -4150,22 +5949,14 @@
    },
    "events": [
     {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.24",
-     "url": "https://card-lounge.toss.im/card/1953",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "1.2만원 캐시백",
      "reward_won": 12000,
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/detail/2728",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|BC 바로카드|12000"
     }
    ]
   },
@@ -4188,7 +5979,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/detail/2926",
      "main_won": 29000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|BC 바로카드|29000"
     }
    ]
   },
@@ -4211,7 +6003,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/detail/2927",
      "main_won": 43000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|BC 바로카드|43000"
     }
    ]
   },
@@ -4238,7 +6031,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/detail/2928",
      "main_won": 19000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|BC 바로카드|19000"
     }
    ]
   },
@@ -4280,7 +6074,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|신한카드|840000"
     },
     {
      "platform": "cardgorilla",
@@ -4296,7 +6091,8 @@
        "won": 789000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|789000"
     },
     {
      "platform": "naver",
@@ -4305,7 +6101,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 559000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|559000"
     }
    ]
   },
@@ -4347,7 +6144,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|신한카드|840000"
     },
     {
      "platform": "cardgorilla",
@@ -4363,7 +6161,8 @@
        "won": 789000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|789000"
     },
     {
      "platform": "naver",
@@ -4372,7 +6171,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 559000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|559000"
     },
     {
      "platform": "kakaopay",
@@ -4388,7 +6188,8 @@
        "won": 10000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|신한카드|320000"
     }
    ]
   },
@@ -4426,7 +6227,8 @@
        "won": 789000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|789000"
     },
     {
      "platform": "naver",
@@ -4435,7 +6237,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 559000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|559000"
     }
    ]
   },
@@ -4477,7 +6280,8 @@
        "won": 830000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|신한카드|830000"
     },
     {
      "platform": "cardgorilla",
@@ -4493,7 +6297,8 @@
        "won": 579000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|579000"
     },
     {
      "platform": "ajungdang",
@@ -4509,7 +6314,8 @@
        "won": 540000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|신한카드|540000"
     },
     {
      "platform": "naver",
@@ -4518,7 +6324,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 520000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|520000"
     }
    ]
   },
@@ -4545,7 +6352,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 520000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|520000"
     },
     {
      "platform": "cardgorilla",
@@ -4561,7 +6369,8 @@
        "won": 349000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|349000"
     }
    ]
   },
@@ -4603,7 +6412,8 @@
        "won": 830000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|신한카드|830000"
     },
     {
      "platform": "naver",
@@ -4612,7 +6422,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
      "main_won": 520000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|신한카드|520000"
     },
     {
      "platform": "cardgorilla",
@@ -4628,7 +6439,8 @@
        "won": 349000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|349000"
     },
     {
      "platform": "kakaopay",
@@ -4644,7 +6456,8 @@
        "won": 10000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|신한카드|320000"
     }
    ]
   },
@@ -4678,7 +6491,8 @@
        "won": 579000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|신한카드|579000"
     },
     {
      "platform": "ajungdang",
@@ -4694,7 +6508,8 @@
        "won": 540000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|신한카드|540000"
     }
    ]
   },
@@ -4721,7 +6536,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 39000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|39000"
     }
    ]
   },
@@ -4758,15 +6574,6 @@
    },
    "events": [
     {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.23",
-     "url": "https://card-lounge.toss.im/card/10173",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
      "platform": "ajungdang",
      "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
      "reward_won": 205000,
@@ -4780,7 +6587,8 @@
        "won": 205000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|NH농협카드|205000"
     },
     {
      "platform": "banksalad",
@@ -4796,7 +6604,8 @@
        "won": 195000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|NH농협카드|195000"
     },
     {
      "platform": "kakaopay",
@@ -4812,7 +6621,8 @@
        "won": 50000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|NH농협카드|195000"
     },
     {
      "platform": "cardgorilla",
@@ -4828,7 +6638,8 @@
        "won": 175000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|NH농협카드|175000"
     },
     {
      "platform": "naver",
@@ -4837,7 +6648,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
      "main_won": 175000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|NH농협카드|175000"
     }
    ]
   },
@@ -4883,7 +6695,8 @@
        "won": 205000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|NH농협카드|205000"
     },
     {
      "platform": "kakaopay",
@@ -4899,7 +6712,8 @@
        "won": 50000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|NH농협카드|195000"
     },
     {
      "platform": "cardgorilla",
@@ -4915,7 +6729,8 @@
        "won": 175000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|NH농협카드|175000"
     },
     {
      "platform": "naver",
@@ -4924,7 +6739,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
      "main_won": 175000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|NH농협카드|175000"
     }
    ]
   },
@@ -4951,7 +6767,8 @@
      "period_end": null,
      "url": "https://www.banksalad.com/product/cards/CARD000075",
      "main_won": 0,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|banksalad|현대백화점|10000"
     },
     {
      "platform": "cardgorilla",
@@ -4960,7 +6777,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/card/detail/2344",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대백화점|10000"
     }
    ]
   },
@@ -4993,15 +6811,6 @@
    },
    "events": [
     {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.19",
-     "url": "https://card-lounge.toss.im/card/1959",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
      "platform": "banksalad",
      "reward_text": "최대 75만원 캐시백",
      "reward_won": 750000,
@@ -5015,7 +6824,8 @@
        "won": 750000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|우리카드|750000"
     },
     {
      "platform": "cardgorilla",
@@ -5024,7 +6834,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|750000"
     },
     {
      "platform": "kakaopay",
@@ -5040,7 +6851,8 @@
        "won": 60000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|우리카드|750000"
     },
     {
      "platform": "naver",
@@ -5049,7 +6861,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|우리카드|750000"
     }
    ]
   },
@@ -5072,7 +6885,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|750000"
     }
    ]
   },
@@ -5114,7 +6928,8 @@
        "won": 750000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|우리카드|750000"
     },
     {
      "platform": "cardgorilla",
@@ -5123,7 +6938,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|750000"
     },
     {
      "platform": "kakaopay",
@@ -5139,7 +6955,8 @@
        "won": 60000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|우리카드|750000"
     },
     {
      "platform": "naver",
@@ -5148,7 +6965,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|우리카드|750000"
     }
    ]
   },
@@ -5171,7 +6989,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|750000"
     }
    ]
   },
@@ -5204,15 +7023,6 @@
    },
    "events": [
     {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.22",
-     "url": "https://card-lounge.toss.im/card/1961",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
      "platform": "banksalad",
      "reward_text": "최대 75만원 캐시백",
      "reward_won": 750000,
@@ -5226,7 +7036,8 @@
        "won": 750000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|우리카드|750000"
     },
     {
      "platform": "cardgorilla",
@@ -5235,7 +7046,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|750000"
     },
     {
      "platform": "kakaopay",
@@ -5251,7 +7063,8 @@
        "won": 60000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|우리카드|750000"
     },
     {
      "platform": "naver",
@@ -5260,7 +7073,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590526&cardCompanyId=CCWR&cardIssuerCode=CCWR",
      "main_won": 750000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|우리카드|750000"
     }
    ]
   },
@@ -5306,7 +7120,8 @@
        "won": 780000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|우리카드|780000"
     },
     {
      "platform": "cardgorilla",
@@ -5315,7 +7130,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
      "platform": "kakaopay",
@@ -5331,7 +7147,8 @@
        "won": 60000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|우리카드|780000"
     },
     {
      "platform": "naver",
@@ -5340,7 +7157,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|우리카드|780000"
     },
     {
      "platform": "ajungdang",
@@ -5356,7 +7174,8 @@
        "won": 770000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|우리카드|770000"
     }
    ]
   },
@@ -5402,7 +7221,8 @@
        "won": 780000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|우리카드|780000"
     },
     {
      "platform": "cardgorilla",
@@ -5411,7 +7231,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
      "platform": "kakaopay",
@@ -5427,7 +7248,8 @@
        "won": 60000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|우리카드|780000"
     },
     {
      "platform": "naver",
@@ -5436,7 +7258,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|우리카드|780000"
     },
     {
      "platform": "ajungdang",
@@ -5452,7 +7275,8 @@
        "won": 770000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|우리카드|770000"
     }
    ]
   },
@@ -5494,7 +7318,8 @@
        "won": 780000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|우리카드|780000"
     },
     {
      "platform": "cardgorilla",
@@ -5503,7 +7328,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|780000"
     },
     {
      "platform": "kakaopay",
@@ -5519,7 +7345,8 @@
        "won": 60000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|우리카드|780000"
     },
     {
      "platform": "naver",
@@ -5528,7 +7355,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590524&cardCompanyId=CCWR&cardIssuerCode=CCWR",
      "main_won": 780000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|우리카드|780000"
     }
    ]
   },
@@ -5570,7 +7398,8 @@
        "won": 500000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|현대카드|500000"
     },
     {
      "platform": "cardgorilla",
@@ -5586,7 +7415,8 @@
        "won": 500000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|500000"
     },
     {
      "platform": "issuer",
@@ -5602,7 +7432,8 @@
        "won": 500000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|issuer|현대카드|500000"
     },
     {
      "platform": "naver",
@@ -5611,7 +7442,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|500000"
     }
    ]
   },
@@ -5642,7 +7474,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|500000"
     },
     {
      "platform": "cardgorilla",
@@ -5651,7 +7484,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 200000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|200000"
     }
    ]
   },
@@ -5678,7 +7512,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|500000"
     },
     {
      "platform": "cardgorilla",
@@ -5687,7 +7522,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 250000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|250000"
     }
    ]
   },
@@ -5714,7 +7550,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|500000"
     },
     {
      "platform": "cardgorilla",
@@ -5723,7 +7560,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 150000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|150000"
     }
    ]
   },
@@ -5750,7 +7588,8 @@
      "period_end": null,
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_01.hc",
      "main_won": 500000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|현대카드|500000"
     },
     {
      "platform": "cardgorilla",
@@ -5759,7 +7598,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 150000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|150000"
     }
    ]
   },
@@ -5801,7 +7641,8 @@
        "won": 500000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|issuer|현대카드|500000"
     },
     {
      "platform": "banksalad",
@@ -5817,7 +7658,8 @@
        "won": 250000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|현대카드|250000"
     },
     {
      "platform": "cardgorilla",
@@ -5833,7 +7675,8 @@
        "won": 250000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|현대카드|250000"
     },
     {
      "platform": "naver",
@@ -5842,7 +7685,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776761&cardCompanyId=CCDI&cardIssuerCode=CCDI",
      "main_won": 250000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|현대카드|250000"
     }
    ]
   },
@@ -5865,7 +7709,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|KB국민카드|25000"
     }
    ]
   },
@@ -5888,7 +7733,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|KB국민카드|25000"
     }
    ]
   },
@@ -5915,7 +7761,8 @@
      "period_end": null,
      "url": "https://www.ajd.co.kr/card/event/detail/254",
      "main_won": 30000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|ajungdang|KB국민카드|30000"
     },
     {
      "platform": "cardgorilla",
@@ -5924,7 +7771,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|KB국민카드|25000"
     }
    ]
   },
@@ -5947,7 +7795,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|KB국민카드|25000"
     }
    ]
   },
@@ -5970,7 +7819,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|KB국민카드|25000"
     }
    ]
   },
@@ -5993,7 +7843,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/3",
      "main_won": 25000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|KB국민카드|25000"
     }
    ]
   },
@@ -6031,7 +7882,8 @@
        "won": 611000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|삼성카드|611000"
     },
     {
      "platform": "kakaopay",
@@ -6047,7 +7899,8 @@
        "won": 300000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|삼성카드|440000"
     },
     {
      "platform": "cardgorilla",
@@ -6056,7 +7909,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/1",
      "main_won": 20000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|삼성카드|20000"
     }
    ]
   },
@@ -6083,7 +7937,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 20000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|20000"
     }
    ]
   },
@@ -6110,7 +7965,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 20000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|20000"
     }
    ]
   },
@@ -6149,7 +8005,8 @@
        "won": 80000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|kakaopay|현대카드|440000"
     },
     {
      "platform": "cardgorilla",
@@ -6158,7 +8015,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 20000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|20000"
     }
    ]
   },
@@ -6185,7 +8043,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/7",
      "main_won": 20000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|현대카드|20000"
     }
    ]
   },
@@ -6208,7 +8067,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
      "main_won": 19000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|19000"
     }
    ]
   },
@@ -6235,7 +8095,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/5",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|우리카드|12000"
     }
    ]
   },
@@ -6258,7 +8119,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|12000"
     }
    ]
   },
@@ -6308,16 +8170,8 @@
        "won": 840000,
        "cond": false
       }
-     ]
-    },
-    {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.30",
-     "url": "https://card-lounge.toss.im/card/1583",
-     "main_won": 810000,
-     "bonus_won": 0
+     ],
+     "reward_group": "2026-06|banksalad|롯데카드|840000"
     },
     {
      "platform": "ajungdang",
@@ -6333,7 +8187,8 @@
        "won": 660000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|ajungdang|롯데카드|660000"
     },
     {
      "platform": "naver",
@@ -6342,7 +8197,8 @@
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
      "main_won": 644000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|naver|롯데카드|644000"
     },
     {
      "platform": "cardgorilla",
@@ -6358,7 +8214,8 @@
        "won": 590000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|590000"
     },
     {
      "platform": "issuer",
@@ -6367,7 +8224,8 @@
      "period_end": null,
      "url": "https://www.lottecard.co.kr/app/LPBNFDA_V100.lc",
      "main_won": 490000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|issuer|롯데카드|490000"
     }
    ]
   },
@@ -6401,7 +8259,8 @@
        "won": 590000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|590000"
     }
    ]
   },
@@ -6422,15 +8281,6 @@
    },
    "events": [
     {
-     "platform": "toss",
-     "reward_text": "최대 81만원 이벤트",
-     "reward_won": 810000,
-     "period_end": "2026.06.30",
-     "url": "https://card-lounge.toss.im/card/1701",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
      "platform": "cardgorilla",
      "reward_text": "59만원 혜택",
      "reward_won": 590000,
@@ -6444,7 +8294,8 @@
        "won": 590000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|590000"
     }
    ]
   },
@@ -6482,7 +8333,8 @@
        "won": 790000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|banksalad|롯데카드|790000"
     },
     {
      "platform": "cardgorilla",
@@ -6498,7 +8350,8 @@
        "won": 590000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|cardgorilla|롯데카드|590000"
     },
     {
      "platform": "toss",
@@ -6514,7 +8367,8 @@
        "won": 300000,
        "cond": false
       }
-     ]
+     ],
+     "reward_group": "2026-06|toss|롯데카드|460000"
     }
    ]
   },
@@ -6537,7 +8391,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/10",
      "main_won": 12000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|IBK기업은행|12000"
     }
    ]
   },
@@ -6560,7 +8415,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|신한카드|10000"
     }
    ]
   },
@@ -6583,7 +8439,8 @@
      "period_end": "2026-06-30",
      "url": "https://www.card-gorilla.com/event/detail/2",
      "main_won": 10000,
-     "bonus_won": 0
+     "bonus_won": 0,
+     "reward_group": "2026-06|cardgorilla|신한카드|10000"
     }
    ]
   }

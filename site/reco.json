@@ -1,7 +1,7 @@
 {
  "month": "2026-06",
  "updated": "2026-06-30",
- "count": 130,
+ "count": 129,
  "cards": [
   {
    "id": 9,
@@ -110,10 +110,9 @@
     "banksalad",
     "cardgorilla",
     "kakaopay",
-    "naver",
-    "toss"
+    "naver"
    ],
-   "platformCount": 6,
+   "platformCount": 5,
    "events": [
     {
      "platform": "cardgorilla",
@@ -153,14 +152,6 @@
      "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
      "period_end": null,
      "main_won": 830000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.25",
-     "main_won": 810000,
      "bonus_won": 0
     }
    ]
@@ -261,10 +252,9 @@
    "platforms": [
     "ajungdang",
     "cardgorilla",
-    "kakaopay",
-    "toss"
+    "kakaopay"
    ],
-   "platformCount": 4,
+   "platformCount": 3,
    "events": [
     {
      "platform": "cardgorilla",
@@ -289,14 +279,6 @@
      "period_end": "2026-06-30",
      "main_won": 190000,
      "bonus_won": 660000
-    },
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.25",
-     "main_won": 810000,
-     "bonus_won": 0
     }
    ]
   },
@@ -407,10 +389,9 @@
     "banksalad",
     "cardgorilla",
     "kakaopay",
-    "naver",
-    "toss"
+    "naver"
    ],
-   "platformCount": 6,
+   "platformCount": 5,
    "events": [
     {
      "platform": "banksalad",
@@ -419,14 +400,6 @@
      "period_end": null,
      "main_won": 190000,
      "bonus_won": 650000
-    },
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.19",
-     "main_won": 810000,
-     "bonus_won": 0
     },
     {
      "platform": "cardgorilla",
@@ -731,10 +704,9 @@
     "banksalad",
     "cardgorilla",
     "issuer",
-    "naver",
-    "toss"
+    "naver"
    ],
-   "platformCount": 6,
+   "platformCount": 5,
    "events": [
     {
      "platform": "banksalad",
@@ -743,14 +715,6 @@
      "period_end": null,
      "main_won": 200000,
      "bonus_won": 640000
-    },
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.30",
-     "main_won": 810000,
-     "bonus_won": 0
     },
     {
      "platform": "ajungdang",
@@ -987,261 +951,6 @@
      "period_end": null,
      "main_won": 490000,
      "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 83,
-   "name": "BC 바로 MACAO 카드",
-   "issuer": "BC 바로카드",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2728/card_img/36134/2728card.png",
-   "maxCashbackWon": 810000,
-   "maxCashbackText": "최대 81만원 이벤트",
-   "bestPlatform": "toss",
-   "periodEnd": "2026.06.24",
-   "platforms": [
-    "cardgorilla",
-    "toss"
-   ],
-   "platformCount": 2,
-   "events": [
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.24",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_won": 12000,
-     "reward_text": "1.2만원 캐시백",
-     "period_end": "2026-06-30",
-     "main_won": 12000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 95,
-   "name": "zgm.play카드",
-   "issuer": "NH농협카드",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2544/card_img/29533/2544card.png",
-   "maxCashbackWon": 810000,
-   "maxCashbackText": "최대 81만원 이벤트",
-   "bestPlatform": "toss",
-   "periodEnd": "2026.06.23",
-   "platforms": [
-    "ajungdang",
-    "banksalad",
-    "cardgorilla",
-    "kakaopay",
-    "naver",
-    "toss"
-   ],
-   "platformCount": 6,
-   "events": [
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.23",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "ajungdang",
-     "reward_won": 205000,
-     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
-     "period_end": null,
-     "main_won": 55000,
-     "bonus_won": 150000
-    },
-    {
-     "platform": "banksalad",
-     "reward_won": 195000,
-     "reward_text": "최대 19.5만원 캐시백",
-     "period_end": null,
-     "main_won": 100000,
-     "bonus_won": 95000
-    },
-    {
-     "platform": "kakaopay",
-     "reward_won": 195000,
-     "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
-     "period_end": "2026-06-30",
-     "main_won": 100000,
-     "bonus_won": 95000
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_won": 175000,
-     "reward_text": "17.5만원 캐시백",
-     "period_end": "2026-06-30",
-     "main_won": 80000,
-     "bonus_won": 95000
-    },
-    {
-     "platform": "naver",
-     "reward_won": 175000,
-     "reward_text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
-     "period_end": null,
-     "main_won": 175000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 98,
-   "name": "카드의정석 SHOPPING+",
-   "issuer": "우리카드",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2687/card_img/33239/2687card.png",
-   "maxCashbackWon": 810000,
-   "maxCashbackText": "최대 81만원 이벤트",
-   "bestPlatform": "toss",
-   "periodEnd": "2026.06.19",
-   "platforms": [
-    "banksalad",
-    "cardgorilla",
-    "kakaopay",
-    "naver",
-    "toss"
-   ],
-   "platformCount": 5,
-   "events": [
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.19",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "banksalad",
-     "reward_won": 750000,
-     "reward_text": "최대 75만원 캐시백",
-     "period_end": null,
-     "main_won": 170000,
-     "bonus_won": 580000
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_won": 750000,
-     "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30",
-     "main_won": 750000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "kakaopay",
-     "reward_won": 750000,
-     "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "period_end": "2026-06-30",
-     "main_won": 170000,
-     "bonus_won": 580000
-    },
-    {
-     "platform": "naver",
-     "reward_won": 750000,
-     "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
-     "period_end": null,
-     "main_won": 750000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 102,
-   "name": "카드의정석 I&U+",
-   "issuer": "우리카드",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2688/card_img/33240/2688card.png",
-   "maxCashbackWon": 810000,
-   "maxCashbackText": "최대 81만원 이벤트",
-   "bestPlatform": "toss",
-   "periodEnd": "2026.06.22",
-   "platforms": [
-    "banksalad",
-    "cardgorilla",
-    "kakaopay",
-    "naver",
-    "toss"
-   ],
-   "platformCount": 5,
-   "events": [
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.22",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "banksalad",
-     "reward_won": 750000,
-     "reward_text": "최대 75만원 캐시백",
-     "period_end": null,
-     "main_won": 170000,
-     "bonus_won": 580000
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_won": 750000,
-     "reward_text": "75만원 혜택",
-     "period_end": "2026-06-30",
-     "main_won": 750000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "kakaopay",
-     "reward_won": 750000,
-     "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
-     "period_end": "2026-06-30",
-     "main_won": 170000,
-     "bonus_won": 580000
-    },
-    {
-     "platform": "naver",
-     "reward_won": 750000,
-     "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
-     "period_end": null,
-     "main_won": 750000,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 128,
-   "name": "LOCA LIKIT Play",
-   "issuer": "롯데카드",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2263/card_img/20703/2263card.png",
-   "maxCashbackWon": 810000,
-   "maxCashbackText": "최대 81만원 이벤트",
-   "bestPlatform": "toss",
-   "periodEnd": "2026.06.30",
-   "platforms": [
-    "cardgorilla",
-    "toss"
-   ],
-   "platformCount": 2,
-   "events": [
-    {
-     "platform": "toss",
-     "reward_won": 810000,
-     "reward_text": "최대 81만원 이벤트",
-     "period_end": "2026.06.30",
-     "main_won": 810000,
-     "bonus_won": 0
-    },
-    {
-     "platform": "cardgorilla",
-     "reward_won": 590000,
-     "reward_text": "59만원 혜택",
-     "period_end": "2026-06-30",
-     "main_won": 130000,
-     "bonus_won": 460000
     }
    ]
   },
@@ -1741,6 +1450,57 @@
    ]
   },
   {
+   "id": 98,
+   "name": "카드의정석 SHOPPING+",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2687/card_img/33239/2687card.png",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "최대 75만원 캐시백",
+   "bestPlatform": "banksalad",
+   "periodEnd": null,
+   "platforms": [
+    "banksalad",
+    "cardgorilla",
+    "kakaopay",
+    "naver"
+   ],
+   "platformCount": 4,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 750000,
+     "reward_text": "최대 75만원 캐시백",
+     "period_end": null,
+     "main_won": 170000,
+     "bonus_won": 580000
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "kakaopay",
+     "reward_won": 750000,
+     "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
+     "period_end": "2026-06-30",
+     "main_won": 170000,
+     "bonus_won": 580000
+    },
+    {
+     "platform": "naver",
+     "reward_won": 750000,
+     "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
+     "period_end": null,
+     "main_won": 750000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
    "id": 99,
    "name": "카드의정석2 EVERY DISCOUNT",
    "issuer": "우리카드",
@@ -1834,6 +1594,57 @@
      "reward_won": 750000,
      "reward_text": "75만원 혜택",
      "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "name": "카드의정석 I&U+",
+   "issuer": "우리카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2688/card_img/33240/2688card.png",
+   "maxCashbackWon": 750000,
+   "maxCashbackText": "최대 75만원 캐시백",
+   "bestPlatform": "banksalad",
+   "periodEnd": null,
+   "platforms": [
+    "banksalad",
+    "cardgorilla",
+    "kakaopay",
+    "naver"
+   ],
+   "platformCount": 4,
+   "events": [
+    {
+     "platform": "banksalad",
+     "reward_won": 750000,
+     "reward_text": "최대 75만원 캐시백",
+     "period_end": null,
+     "main_won": 170000,
+     "bonus_won": 580000
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 750000,
+     "reward_text": "75만원 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 750000,
+     "bonus_won": 0
+    },
+    {
+     "platform": "kakaopay",
+     "reward_won": 750000,
+     "reward_text": "20만원 이상 이용 시 17만원 청구할인 + 추가 2만 + 해외 50만 + 자동납부 6만",
+     "period_end": "2026-06-30",
+     "main_won": 170000,
+     "bonus_won": 580000
+    },
+    {
+     "platform": "naver",
+     "reward_won": 750000,
+     "reward_text": "최대 75만원 (네이버페이 우리카드 이벤트)",
+     "period_end": null,
      "main_won": 750000,
      "bonus_won": 0
     }
@@ -2180,6 +1991,30 @@
    "name": "LOCA LIKIT Eat",
    "issuer": "롯데카드",
    "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2262/card_img/20704/2262card.png",
+   "maxCashbackWon": 590000,
+   "maxCashbackText": "59만원 혜택",
+   "bestPlatform": "cardgorilla",
+   "periodEnd": "2026-06-30",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 590000,
+     "reward_text": "59만원 혜택",
+     "period_end": "2026-06-30",
+     "main_won": 130000,
+     "bonus_won": 460000
+    }
+   ]
+  },
+  {
+   "id": 128,
+   "name": "LOCA LIKIT Play",
+   "issuer": "롯데카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2263/card_img/20703/2263card.png",
    "maxCashbackWon": 590000,
    "maxCashbackText": "59만원 혜택",
    "bestPlatform": "cardgorilla",
@@ -3162,6 +2997,66 @@
      "reward_won": 195000,
      "reward_text": "최대 19.5만원 캐시백",
      "period_end": null,
+     "main_won": 100000,
+     "bonus_won": 95000
+    },
+    {
+     "platform": "cardgorilla",
+     "reward_won": 175000,
+     "reward_text": "17.5만원 캐시백",
+     "period_end": "2026-06-30",
+     "main_won": 80000,
+     "bonus_won": 95000
+    },
+    {
+     "platform": "naver",
+     "reward_won": 175000,
+     "reward_text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
+     "period_end": null,
+     "main_won": 175000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
+   "id": 95,
+   "name": "zgm.play카드",
+   "issuer": "NH농협카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2544/card_img/29533/2544card.png",
+   "maxCashbackWon": 205000,
+   "maxCashbackText": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+   "bestPlatform": "ajungdang",
+   "periodEnd": null,
+   "platforms": [
+    "ajungdang",
+    "banksalad",
+    "cardgorilla",
+    "kakaopay",
+    "naver"
+   ],
+   "platformCount": 5,
+   "events": [
+    {
+     "platform": "ajungdang",
+     "reward_won": 205000,
+     "reward_text": "최대 20.5만원 (아정당 NH농협카드 발급 이벤트)",
+     "period_end": null,
+     "main_won": 55000,
+     "bonus_won": 150000
+    },
+    {
+     "platform": "banksalad",
+     "reward_won": 195000,
+     "reward_text": "최대 19.5만원 캐시백",
+     "period_end": null,
+     "main_won": 100000,
+     "bonus_won": 95000
+    },
+    {
+     "platform": "kakaopay",
+     "reward_won": 195000,
+     "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
+     "period_end": "2026-06-30",
      "main_won": 100000,
      "bonus_won": 95000
     },
@@ -4600,6 +4495,30 @@
    ]
   },
   {
+   "id": 83,
+   "name": "BC 바로 MACAO 카드",
+   "issuer": "BC 바로카드",
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2728/card_img/36134/2728card.png",
+   "maxCashbackWon": 12000,
+   "maxCashbackText": "1.2만원 캐시백",
+   "bestPlatform": "cardgorilla",
+   "periodEnd": "2026-06-30",
+   "platforms": [
+    "cardgorilla"
+   ],
+   "platformCount": 1,
+   "events": [
+    {
+     "platform": "cardgorilla",
+     "reward_won": 12000,
+     "reward_text": "1.2만원 캐시백",
+     "period_end": "2026-06-30",
+     "main_won": 12000,
+     "bonus_won": 0
+    }
+   ]
+  },
+  {
    "id": 124,
    "name": "DA카드의정석Ⅱ",
    "issuer": "우리카드",
@@ -4795,30 +4714,6 @@
      "reward_won": null,
      "reward_text": "팝업구조 TEST",
      "period_end": null,
-     "main_won": 0,
-     "bonus_won": 0
-    }
-   ]
-  },
-  {
-   "id": 35,
-   "name": "The Aureum(더 아우름)카드",
-   "issuer": "Sh수협은행",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2932/card_img/48313/2932card.png",
-   "maxCashbackWon": 0,
-   "maxCashbackText": "SH수협은행",
-   "bestPlatform": "cardgorilla",
-   "periodEnd": "2026-06-30",
-   "platforms": [
-    "cardgorilla"
-   ],
-   "platformCount": 1,
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_won": null,
-     "reward_text": "SH수협은행",
-     "period_end": "2026-06-30",
      "main_won": 0,
      "bonus_won": 0
     }
