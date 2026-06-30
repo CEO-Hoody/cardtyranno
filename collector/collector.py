@@ -180,7 +180,9 @@ def export_json(con):
         for _pl,_m in maps.items():           # url 누락(과거 ON CONFLICT 미갱신 등) 시 id로 정확 랜딩 URL 보정
             if not _m.get("url"): _m["url"]=plat_url(_pl,_m.get("id"))
         evs=[]
-        for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' ORDER BY reward_won DESC",(pid,)).fetchall():
+        # 이번 달 재확인된 이벤트만(last_seen 월=현재월). 전월에 마지막 확인된(미재확인) 잔류 이벤트는
+        # 데이터에 날짜가 없어도(뱅샐·아정당) last_seen으로 결정적 제외 → 비교표/캐시백에 전월건 안 섞임.
+        for r in c.execute("SELECT platform,reward_text,reward_won,period_end,source_url FROM event WHERE card_product_id=? AND status='active' AND substr(last_seen,1,7)=? ORDER BY reward_won DESC",(pid,current_month_kst())).fetchall():
             mw,bw,comps=parse_breakdown(r[1],r[2])   # reward_text→메인/부가 분해
             ov=BREAKDOWN.get((name,r[0]))            # 거주지 수집 이벤트상세 분해값 우선
             if ov: mw,bw=ov["main"],ov["bonus"]
