@@ -410,6 +410,20 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:#f5f5f7}
 }
 /* 리스트형 메인 페이지 타이틀 규격(타이틀 점검 가이드): mono 아이브로우 + display 32/34·w340·-0.8 */
 .pg-eb{font-family:var(--font-mono),'JetBrains Mono',ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.5);display:block;line-height:1.3}
+/* 브랜드 스플래시(로딩 화면 가이드 #7) — 세션 첫 진입 시 1회 */
+#ctSplash{position:fixed;inset:0;z-index:3000;background:var(--block-lime,#d7f5b6);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .45s ease;overflow:hidden}
+#ctSplash.out{opacity:0;pointer-events:none}
+.splash-done #ctSplash{display:none}
+#ctSplash .cts-mk{color:#0f0d0b;animation:ctsPulse 1.5s ease-in-out infinite;display:block}#ctSplash .cts-mk svg{width:88px;height:88px;display:block}
+#ctSplash .cts-wm{font-weight:700;font-size:23px;letter-spacing:-.5px;margin-top:20px;color:#0f0d0b}#ctSplash .cts-wm span{font-weight:340}
+#ctSplash .cts-deco{position:absolute;right:-40px;bottom:-70px;width:340px;height:340px;opacity:.10;color:#000}#ctSplash .cts-deco svg{width:100%;height:100%}
+#ctSplash .cts-foot{position:absolute;left:0;right:0;bottom:calc(60px + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;gap:14px}
+#ctSplash .cts-bar{position:relative;width:150px;height:4px;border-radius:50px;background:rgba(0,0,0,.13);overflow:hidden}
+#ctSplash .cts-bar span{position:absolute;inset:0;background:#000;border-radius:50px;animation:ctsBar 1.6s cubic-bezier(.4,0,.2,1) infinite}
+#ctSplash .cts-tag{font-weight:540;font-size:13.5px;color:rgba(0,0,0,.62);letter-spacing:-.3px}
+@keyframes ctsPulse{0%,100%{transform:scale(1);opacity:.92}50%{transform:scale(1.07);opacity:1}}
+@keyframes ctsBar{0%{transform:translateX(-100%)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){#ctSplash .cts-mk{animation:none}#ctSplash .cts-bar span{animation:none;transform:none;width:40%;left:30%;inset:auto}}
 """
 
 HELPERS = r"""
@@ -625,6 +639,14 @@ function ctPushTest(cb){cb=cb||function(){};
 function ctPushBoot(){if(!ctPushOn()||!('serviceWorker' in navigator))return;
  ctRegSW().then(function(){ctFavList(function(list){_ctMsg({type:'sync',favList:list});_ctMsg({type:'check'});});}).catch(function(){});}
 if(typeof window!=='undefined'){window.addEventListener('load',function(){setTimeout(ctPushBoot,1500);});}
+/* 브랜드 스플래시 페이드아웃 — 세션 첫 진입만(최소 600ms 노출·준비되면 즉시·최대 2.5s 안전장치) */
+(function(){var s=document.getElementById('ctSplash');if(!s)return;
+ try{if(sessionStorage.getItem('ctSplashSeen')){if(s.parentNode)s.parentNode.removeChild(s);return;}}catch(e){}
+ var t0=Date.now(),done=false;
+ function fin(){if(done)return;done=true;var wait=Math.max(0,600-(Date.now()-t0));setTimeout(function(){s.classList.add('out');s.setAttribute('aria-busy','false');try{sessionStorage.setItem('ctSplashSeen','1');}catch(e){}setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s);},500);},wait);}
+ if(document.readyState==='complete')fin();else window.addEventListener('load',fin);
+ setTimeout(fin,2500);
+})();
 """
 
 # 디자인 QA HIGH: 이모지 → 아웃라인 글리프(24 그리드, 1.75 stroke, currentColor). OS 의존·모노크롬 붕괴 제거.
@@ -740,13 +762,22 @@ def head(title,desc,path,extra_jsonld=None,noindex=False):
 def page(fname,title,desc,path,body,script="",extra_jsonld=None,searchbar=False,catstrip=False,active="",noindex=False):
     html=('<!DOCTYPE html><html lang="ko"><head>'+head(title,desc,path,extra_jsonld,noindex)
       +'<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">'
-      +'<style>'+CSS+'</style></head><body>'
-      +header(active)+(SEARCHBAR if searchbar else "")+(CATSTRIP if catstrip else "")
+      +'<style>'+CSS+'</style>'
+      +'<script>try{if(sessionStorage.getItem("ctSplashSeen"))document.documentElement.classList.add("splash-done");}catch(e){}</script>'
+      +'</head><body>'
+      +SPLASH+header(active)+(SEARCHBAR if searchbar else "")+(CATSTRIP if catstrip else "")
       +body+PAGE_SHARE+FOOTER+MTABBAR+'<script>'+HELPERS+script+'\nbindUI();</script></body></html>')
     open(os.path.join(SITE,fname),"w",encoding="utf-8").write(html)
 
 # ===== 티라노 브랜드 플레이트 배너(특정 카드 아님 · 서비스 대표 장식) =====
 _DINO='<path fill="currentColor" d="M3 11.6 L11 9.8 C13.2 9.8 14.4 11 14.4 13.2 L14.4 18.4 Q14.4 19 13.8 19 L12.8 19 Q12.2 19 12.2 18.4 L12.2 14.6 L10.4 14.6 L10.4 18.4 Q10.4 19 9.8 19 L8.8 19 Q8.2 19 8.2 18.4 L8.2 13.7 C6.3 13.5 4.7 13 3 11.6 Z M13.5 12.4 l2 1.1 -2 .9 z"/><path fill="currentColor" fill-rule="evenodd" d="M15.8 4.6 h2.6 a2.6 2.6 0 0 1 2.6 2.6 v1.7 a2.6 2.6 0 0 1 -2.6 2.6 h-2.6 a2.6 2.6 0 0 1 -2.6 -2.6 v-1.7 a2.6 2.6 0 0 1 2.6 -2.6 z M17.75 7.4 a0.85 0.85 0 1 0 1.7 0 a0.85 0.85 0 1 0 -1.7 0 z M18.4 9.5 h2.6 v1 h-2.6 z"/>'
+# 브랜드 스플래시 마크업(전 페이지 <body> 최상단 주입, 세션 1회)
+SPLASH=('<div id="ctSplash" role="status" aria-busy="true" aria-label="불러오는 중">'
+ '<span class="cts-deco"><svg viewBox="0 0 24 24" aria-hidden="true">'+_DINO+'</svg></span>'
+ '<span class="cts-mk"><svg viewBox="0 0 24 24" aria-hidden="true">'+_DINO+'</svg></span>'
+ '<div class="cts-wm">CARD<span>TYRANNO</span></div>'
+ '<div class="cts-foot"><div class="cts-bar"><span></span></div><div class="cts-tag">흩어진 카드 캐시백, 여기서 한눈에.</div></div>'
+ '</div>')
 def tybnr(href,eb,h,sub):
     dino='<svg class="tyb-dino" viewBox="0 0 24 24" aria-hidden="true">'+_DINO+'</svg>'
     plate=('<div class="tyb-plate"><span class="tyb-mk">CARD<b>TYRANNO</b></span>'+dino+'</div>')
