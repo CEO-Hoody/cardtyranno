@@ -174,6 +174,8 @@ def export_json(con):
         _wimg(_cj); print(f"이미지 폴백맵(cards.json) {len(CARDS_IMG)}개")
     except Exception as _e: print("cards.json 이미지맵 로드 실패:", str(_e)[:60])
     for pid,name,issuer in rows:
+        if (issuer or "")=="이벤트 등록용" or re.search(r"팝업구조|테스트|\bTEST\b", name or "", re.I):
+            continue   # 테스트 더미 제외(DB 잔존분도 출력 차단 — platform_events/events/reco 전부)
         maps={r[0]:{"id":r[1],"url":r[2]} for r in c.execute("SELECT platform,platform_product_id,url FROM product_platform WHERE card_product_id=?",(pid,)).fetchall()}
         for _pl,_m in maps.items():           # url 누락(과거 ON CONFLICT 미갱신 등) 시 id로 정확 랜딩 URL 보정
             if not _m.get("url"): _m["url"]=plat_url(_pl,_m.get("id"))

@@ -4694,30 +4694,6 @@
      "bonus_won": 0
     }
    ]
-  },
-  {
-   "id": 22,
-   "name": "팝업구조 TEST",
-   "issuer": "이벤트 등록용",
-   "img": null,
-   "maxCashbackWon": 0,
-   "maxCashbackText": "팝업구조 TEST",
-   "bestPlatform": "cardgorilla",
-   "periodEnd": null,
-   "platforms": [
-    "cardgorilla"
-   ],
-   "platformCount": 1,
-   "events": [
-    {
-     "platform": "cardgorilla",
-     "reward_won": null,
-     "reward_text": "팝업구조 TEST",
-     "period_end": null,
-     "main_won": 0,
-     "bonus_won": 0
-    }
-   ]
   }
  ]
 }

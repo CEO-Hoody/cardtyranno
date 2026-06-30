@@ -12,8 +12,7 @@
   "NH농협카드",
   "IBK기업은행",
   "BC 바로카드",
-  "현대백화점",
-  "이벤트 등록용"
+  "현대백화점"
  ],
  "items": [
   {
@@ -591,15 +590,6 @@
    "period": "~06/30",
    "url": "https://toss.im/_m/bcjcyh3m",
    "won": 570000
-  },
-  {
-   "issuer": "이벤트 등록용",
-   "card": "팝업구조 TEST",
-   "platform": "카드고릴라",
-   "benefit": "팝업구조 TEST",
-   "period": "",
-   "url": "https://www.card-gorilla.com/card/detail/1530",
-   "won": 0
   },
   {
    "issuer": "삼성카드",
