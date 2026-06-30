@@ -14,6 +14,18 @@
    ],
    "count": 2
   },
+  "2026-07|kakaopay|신한카드|780000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "신한카드",
+   "reward_won": 780000,
+   "reward_text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+   "cards": [
+    "신한카드 Mr.Life",
+    "신한카드 Deep Oil"
+   ],
+   "count": 2
+  },
   "2026-07|ajungdang|신한카드|740000": {
    "month": "2026-07",
    "platform": "ajungdang",
@@ -44,30 +56,18 @@
    ],
    "count": 5
   },
-  "2026-07|naver|신한카드|500000": {
+  "2026-07|naver|신한카드|690000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "신한카드",
-   "reward_won": 500000,
-   "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
+   "reward_won": 690000,
+   "reward_text": "최대 69만원 (네이버페이 신한카드 이벤트)",
    "cards": [
     "신한카드 Mr.Life",
     "신한카드 Deep Oil",
     "신한카드 처음(ANNIVERSE)"
    ],
    "count": 3
-  },
-  "2026-07|kakaopay|신한카드|390000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "신한카드",
-   "reward_won": 390000,
-   "reward_text": "마케팅 동의+35만원 이상 이용 시 25만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
-   "cards": [
-    "신한카드 Mr.Life",
-    "신한카드 Deep Oil"
-   ],
-   "count": 2
   },
   "2026-07|banksalad|IBK기업은행|155000": {
    "month": "2026-07",
@@ -148,12 +148,12 @@
    ],
    "count": 4
   },
-  "2026-07|naver|롯데카드|634000": {
+  "2026-07|naver|롯데카드|620000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "롯데카드",
-   "reward_won": 634000,
-   "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
+   "reward_won": 620000,
+   "reward_text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
    "cards": [
     "LOCA 365 카드",
     "디지로카 London",
@@ -177,18 +177,6 @@
    ],
    "count": 5
   },
-  "2026-07|naver|삼성카드|464000": {
-   "month": "2026-07",
-   "platform": "naver",
-   "issuer": "삼성카드",
-   "reward_won": 464000,
-   "reward_text": "최대 46.4만원 (네이버페이 삼성카드 이벤트)",
-   "cards": [
-    "삼성 iD SELECT ALL 카드",
-    "taptap DRIVE"
-   ],
-   "count": 2
-  },
   "2026-07|banksalad|삼성카드|257000": {
    "month": "2026-07",
    "platform": "banksalad",
@@ -203,6 +191,18 @@
    ],
    "count": 4
   },
+  "2026-07|naver|삼성카드|187000": {
+   "month": "2026-07",
+   "platform": "naver",
+   "issuer": "삼성카드",
+   "reward_won": 187000,
+   "reward_text": "최대 18.7만원 (네이버페이 삼성카드 이벤트)",
+   "cards": [
+    "삼성 iD SELECT ALL 카드",
+    "taptap DRIVE"
+   ],
+   "count": 2
+  },
   "2026-07|cardgorilla|삼성카드|1170000": {
    "month": "2026-07",
    "platform": "cardgorilla",
@@ -214,12 +214,12 @@
    ],
    "count": 1
   },
-  "2026-07|naver|삼성카드|440000": {
+  "2026-07|naver|삼성카드|140000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "삼성카드",
-   "reward_won": 440000,
-   "reward_text": "최대 44만원 (네이버페이 삼성카드 이벤트)",
+   "reward_won": 140000,
+   "reward_text": "최대 14만원 (네이버페이 삼성카드 이벤트)",
    "cards": [
     "삼성카드 & MILEAGE PLATINUM (스카이패스)"
    ],
@@ -232,16 +232,17 @@
    "reward_won": 120000,
    "reward_text": "30만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만",
    "cards": [
-    "삼성카드 & MILEAGE PLATINUM (스카이패스)"
+    "삼성카드 & MILEAGE PLATINUM (스카이패스)",
+    "THE iD. 1st"
    ],
-   "count": 1
+   "count": 2
   },
-  "2026-07|naver|현대카드|725000": {
+  "2026-07|kakaopay|현대카드|745000": {
    "month": "2026-07",
-   "platform": "naver",
+   "platform": "kakaopay",
    "issuer": "현대카드",
-   "reward_won": 725000,
-   "reward_text": "최대 72.5만원 (네이버페이 현대카드 이벤트)",
+   "reward_won": 745000,
+   "reward_text": "25만원 이상 이용 시 23만원 캐시백 + 해외 50만 + 정기결제 1.5만",
    "cards": [
     "현대카드 M"
    ],
@@ -258,6 +259,20 @@
    ],
    "count": 1
   },
+  "2026-07|naver|현대카드|620000": {
+   "month": "2026-07",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 620000,
+   "reward_text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "현대카드 M",
+    "현대카드MY BUSINESS M F&B",
+    "현대카드MY BUSINESS M Retail",
+    "현대카드MY BUSINESS M E-seller"
+   ],
+   "count": 4
+  },
   "2026-07|issuer|현대카드|600000": {
    "month": "2026-07",
    "platform": "issuer",
@@ -272,22 +287,6 @@
     "현대카드D"
    ],
    "count": 5
-  },
-  "2026-07|kakaopay|현대카드|440000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "현대카드",
-   "reward_won": 440000,
-   "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-   "cards": [
-    "현대카드 M",
-    "현대카드ZERO Edition3(할인형)",
-    "현대카드S",
-    "현대카드D",
-    "현대카드H",
-    "현대카드Z everyday"
-   ],
-   "count": 6
   },
   "2026-07|cardgorilla|현대카드|30000": {
    "month": "2026-07",
@@ -334,6 +333,20 @@
    ],
    "count": 4
   },
+  "2026-07|kakaopay|KB국민카드|860000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "KB국민카드",
+   "reward_won": 860000,
+   "reward_text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+   "cards": [
+    "KB국민 굿데이카드",
+    "KB YOU Prime 카드",
+    "KB국민 My WE:SH 카드",
+    "KB YOU Wish 카드"
+   ],
+   "count": 4
+  },
   "2026-07|banksalad|KB국민카드|850000": {
    "month": "2026-07",
    "platform": "banksalad",
@@ -347,25 +360,12 @@
    ],
    "count": 3
   },
-  "2026-07|kakaopay|KB국민카드|850000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "KB국민카드",
-   "reward_won": 850000,
-   "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
-   "cards": [
-    "KB국민 굿데이카드",
-    "KB YOU Prime 카드",
-    "KB국민 My WE:SH 카드"
-   ],
-   "count": 3
-  },
-  "2026-07|naver|KB국민카드|830000": {
+  "2026-07|naver|KB국민카드|840000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "KB국민카드",
-   "reward_won": 830000,
-   "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
+   "reward_won": 840000,
+   "reward_text": "최대 84만원 (네이버페이 KB국민카드 이벤트)",
    "cards": [
     "KB국민 굿데이카드",
     "KB YOU Prime 카드"
@@ -475,12 +475,12 @@
    ],
    "count": 2
   },
-  "2026-07|naver|롯데카드|644000": {
+  "2026-07|naver|롯데카드|650000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "롯데카드",
-   "reward_won": 644000,
-   "reward_text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
+   "reward_won": 650000,
+   "reward_text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
    "cards": [
     "LOCA LIKIT 2.0",
     "LOCA LIKIT 1.5",
@@ -595,12 +595,12 @@
    ],
    "count": 3
   },
-  "2026-07|naver|NH농협카드|175000": {
+  "2026-07|naver|NH농협카드|215000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "NH농협카드",
-   "reward_won": 175000,
-   "reward_text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
+   "reward_won": 215000,
+   "reward_text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
    "cards": [
     "올바른 FLEX 카드",
     "zgm.play카드",
@@ -641,23 +641,12 @@
    ],
    "count": 1
   },
-  "2026-07|naver|삼성카드|124000": {
+  "2026-07|naver|삼성카드|127000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "삼성카드",
-   "reward_won": 124000,
-   "reward_text": "최대 12.4만원 (네이버페이 삼성카드 이벤트)",
-   "cards": [
-    "THE iD. 1st"
-   ],
-   "count": 1
-  },
-  "2026-07|kakaopay|삼성카드|100000": {
-   "month": "2026-07",
-   "platform": "kakaopay",
-   "issuer": "삼성카드",
-   "reward_won": 100000,
-   "reward_text": "100만원 이상 이용 시 10만원 캐시백",
+   "reward_won": 127000,
+   "reward_text": "최대 12.7만원 (네이버페이 삼성카드 이벤트)",
    "cards": [
     "THE iD. 1st"
    ],
@@ -668,7 +657,7 @@
    "platform": "toss",
    "issuer": "삼성카드",
    "reward_won": 100000,
-   "reward_text": "100만원 이상 쓰면 10만원",
+   "reward_text": "100만원 쓰면 10만원",
    "cards": [
     "THE iD. 1st"
    ],
@@ -836,6 +825,17 @@
    ],
    "count": 1
   },
+  "2026-07|kakaopay|현대카드|750000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 750000,
+   "reward_text": "25만원 이상 이용 시 15만원 캐시백 + 해외 최대 60만",
+   "cards": [
+    "대한항공카드 the First Edition2"
+   ],
+   "count": 1
+  },
   "2026-07|issuer|현대카드|60000": {
    "month": "2026-07",
    "platform": "issuer",
@@ -867,19 +867,6 @@
    "issuer": "현대카드",
    "reward_won": 620000,
    "reward_text": "62만원 캐시백",
-   "cards": [
-    "현대카드MY BUSINESS M F&B",
-    "현대카드MY BUSINESS M Retail",
-    "현대카드MY BUSINESS M E-seller"
-   ],
-   "count": 3
-  },
-  "2026-07|naver|현대카드|450000": {
-   "month": "2026-07",
-   "platform": "naver",
-   "issuer": "현대카드",
-   "reward_won": 450000,
-   "reward_text": "최대 45만원 (네이버페이 현대카드 이벤트)",
    "cards": [
     "현대카드MY BUSINESS M F&B",
     "현대카드MY BUSINESS M Retail",
@@ -996,6 +983,33 @@
    ],
    "count": 1
   },
+  "2026-07|naver|현대카드|715000": {
+   "month": "2026-07",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 715000,
+   "reward_text": "최대 71.5만원 (네이버페이 현대카드 이벤트)",
+   "cards": [
+    "현대카드ZERO Edition3(할인형)",
+    "현대카드ZERO Edition3(포인트형)"
+   ],
+   "count": 2
+  },
+  "2026-07|kakaopay|현대카드|440000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "현대카드",
+   "reward_won": 440000,
+   "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
+   "cards": [
+    "현대카드ZERO Edition3(할인형)",
+    "현대카드S",
+    "현대카드D",
+    "현대카드H",
+    "현대카드Z everyday"
+   ],
+   "count": 5
+  },
   "2026-07|cardgorilla|현대카드|15000": {
    "month": "2026-07",
    "platform": "cardgorilla",
@@ -1038,12 +1052,12 @@
    ],
    "count": 7
   },
-  "2026-07|kakaopay|롯데카드|100000": {
+  "2026-07|kakaopay|롯데카드|110000": {
    "month": "2026-07",
    "platform": "kakaopay",
    "issuer": "롯데카드",
-   "reward_won": 100000,
-   "reward_text": "15만원 이상 이용 시 10만원 캐시백",
+   "reward_won": 110000,
+   "reward_text": "30만원 이상 이용 시 최대 11만원 캐시백(10 + 리볼빙 1)",
    "cards": [
     "롯데 국민행복카드"
    ],
@@ -1054,7 +1068,7 @@
    "platform": "toss",
    "issuer": "롯데카드",
    "reward_won": 80000,
-   "reward_text": "10만원 쓰면 8만 토스포인트",
+   "reward_text": "30만원 쓰면 8만 토스포인트",
    "cards": [
     "롯데 국민행복카드"
    ],
@@ -1073,6 +1087,17 @@
    ],
    "count": 3
   },
+  "2026-07|toss|IBK기업은행|90000": {
+   "month": "2026-07",
+   "platform": "toss",
+   "issuer": "IBK기업은행",
+   "reward_won": 90000,
+   "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
+   "cards": [
+    "해피메이트 IBK카드(신용)"
+   ],
+   "count": 1
+  },
   "2026-07|cardgorilla|IBK기업은행|20000": {
    "month": "2026-07",
    "platform": "cardgorilla",
@@ -1084,17 +1109,16 @@
    ],
    "count": 1
   },
-  "2026-07|toss|삼성카드|455000": {
+  "2026-07|toss|삼성카드|110000": {
    "month": "2026-07",
    "platform": "toss",
    "issuer": "삼성카드",
-   "reward_won": 455000,
-   "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
+   "reward_won": 110000,
+   "reward_text": "20만원 쓰고 11만원 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 1.5만",
    "cards": [
-    "모니모A 카드",
-    "taptap DRIVE"
+    "모니모A 카드"
    ],
-   "count": 2
+   "count": 1
   },
   "2026-07|cardgorilla|삼성카드|10000": {
    "month": "2026-07",
@@ -1108,6 +1132,17 @@
    ],
    "count": 2
   },
+  "2026-07|toss|삼성카드|455000": {
+   "month": "2026-07",
+   "platform": "toss",
+   "issuer": "삼성카드",
+   "reward_won": 455000,
+   "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
+   "cards": [
+    "taptap DRIVE"
+   ],
+   "count": 1
+  },
   "2026-07|kakaopay|삼성카드|440000": {
    "month": "2026-07",
    "platform": "kakaopay",
@@ -1115,10 +1150,9 @@
    "reward_won": 440000,
    "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
    "cards": [
-    "taptap DRIVE",
-    "삼성 iD ON 카드"
+    "taptap DRIVE"
    ],
-   "count": 2
+   "count": 1
   },
   "2026-07|banksalad|롯데카드|840000": {
    "month": "2026-07",
@@ -1205,12 +1239,12 @@
    ],
    "count": 3
   },
-  "2026-07|naver|신한카드|559000": {
+  "2026-07|naver|신한카드|720000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "신한카드",
-   "reward_won": 559000,
-   "reward_text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
+   "reward_won": 720000,
+   "reward_text": "최대 72만원 (네이버페이 신한카드 이벤트)",
    "cards": [
     "신한카드 Discount Plan+",
     "신한카드 Air One",
@@ -1218,12 +1252,12 @@
    ],
    "count": 3
   },
-  "2026-07|kakaopay|신한카드|320000": {
+  "2026-07|kakaopay|신한카드|730000": {
    "month": "2026-07",
    "platform": "kakaopay",
    "issuer": "신한카드",
-   "reward_won": 320000,
-   "reward_text": "마케팅 동의+30만원 이상 이용 시 20만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
+   "reward_won": 730000,
+   "reward_text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
    "cards": [
     "신한카드 Air One",
     "신한카드 Edu Plan+"
@@ -1242,12 +1276,12 @@
    ],
    "count": 2
   },
-  "2026-07|naver|신한카드|520000": {
+  "2026-07|naver|신한카드|710000": {
    "month": "2026-07",
    "platform": "naver",
    "issuer": "신한카드",
-   "reward_won": 520000,
-   "reward_text": "최대 52만원 (네이버페이 신한카드 이벤트)",
+   "reward_won": 710000,
+   "reward_text": "최대 71만원 (네이버페이 신한카드 이벤트)",
    "cards": [
     "신한카드 Point Plan",
     "Haru(Hoshino Resorts)",
@@ -1267,12 +1301,12 @@
    ],
    "count": 2
   },
-  "2026-07|kakaopay|NH농협카드|195000": {
+  "2026-07|kakaopay|NH농협카드|265000": {
    "month": "2026-07",
    "platform": "kakaopay",
    "issuer": "NH농협카드",
-   "reward_won": 195000,
-   "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
+   "reward_won": 265000,
+   "reward_text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
    "cards": [
     "zgm.play카드",
     "zgm.streaming카드"
@@ -1296,6 +1330,17 @@
    "issuer": "현대백화점",
    "reward_won": 10000,
    "reward_text": "H.Point 1만P 증정",
+   "cards": [
+    "현대백화점카드"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|현대백화점|10000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "현대백화점",
+   "reward_won": 10000,
+   "reward_text": "신규 발급 시 페이포인트 1만원",
    "cards": [
     "현대백화점카드"
    ],
@@ -1340,17 +1385,6 @@
    ],
    "count": 3
   },
-  "2026-07|naver|현대카드|500000": {
-   "month": "2026-07",
-   "platform": "naver",
-   "issuer": "현대카드",
-   "reward_won": 500000,
-   "reward_text": "최대 50만원 (네이버페이 현대카드 이벤트)",
-   "cards": [
-    "American Express® Gold Card Edition2"
-   ],
-   "count": 1
-  },
   "2026-07|banksalad|현대카드|400000": {
    "month": "2026-07",
    "platform": "banksalad",
@@ -1368,6 +1402,17 @@
    "issuer": "현대카드",
    "reward_won": 400000,
    "reward_text": "40만원 캐시백",
+   "cards": [
+    "American Express® Gold Card Edition2"
+   ],
+   "count": 1
+  },
+  "2026-07|naver|현대카드|400000": {
+   "month": "2026-07",
+   "platform": "naver",
+   "issuer": "현대카드",
+   "reward_won": 400000,
+   "reward_text": "최대 40만원 (네이버페이 현대카드 이벤트)",
    "cards": [
     "American Express® Gold Card Edition2"
    ],
@@ -1442,6 +1487,17 @@
    "reward_text": "최대 3만원 (아정당 KB국민카드 발급 이벤트)",
    "cards": [
     "노리2 체크카드(KB Pay)"
+   ],
+   "count": 1
+  },
+  "2026-07|kakaopay|삼성카드|160000": {
+   "month": "2026-07",
+   "platform": "kakaopay",
+   "issuer": "삼성카드",
+   "reward_won": 160000,
+   "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+   "cards": [
+    "삼성 iD ON 카드"
    ],
    "count": 1
   },
@@ -1549,11 +1605,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a16535c2b22005aa4ee0f18"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4315a41f94d85bad33f6e1"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865352&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     },
     "toss": {
      "id": "3480",
@@ -1579,6 +1635,23 @@
      "reward_group": "2026-07|banksalad|신한카드|830000"
     },
     {
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 780000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4315a41f94d85bad33f6e1",
+     "main_won": 10000,
+     "bonus_won": 770000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|780000"
+    },
+    {
      "platform": "ajungdang",
      "reward_text": "최대 74만원 (아정당 신한카드 발급 이벤트)",
      "reward_won": 740000,
@@ -1614,23 +1687,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 500000,
+     "reward_text": "최대 69만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 690000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 500000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|500000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "마케팅 동의+35만원 이상 이용 시 25만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
-     "reward_won": 390000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a16535c2b22005aa4ee0f18",
-     "main_won": 10000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|신한카드|390000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865352&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 140000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 69만원 (네이버페이 신한카드 이벤트)",
+       "won": 690000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|690000"
     }
    ]
   },
@@ -1654,11 +1724,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a16535c2b22005aa4ee0f18"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4315a41f94d85bad33f6e1"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865352&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     },
     "toss": {
      "id": "34",
@@ -1684,6 +1754,23 @@
      "reward_group": "2026-07|banksalad|신한카드|830000"
     },
     {
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 780000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4315a41f94d85bad33f6e1",
+     "main_won": 10000,
+     "bonus_won": 770000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 28만원 이상 이용 시 23만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|780000"
+    },
+    {
      "platform": "ajungdang",
      "reward_text": "최대 74만원 (아정당 신한카드 발급 이벤트)",
      "reward_won": 740000,
@@ -1719,23 +1806,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 500000,
+     "reward_text": "최대 69만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 690000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 500000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|500000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "마케팅 동의+35만원 이상 이용 시 25만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
-     "reward_won": 390000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a16535c2b22005aa4ee0f18",
-     "main_won": 10000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|신한카드|390000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865352&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 140000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 69만원 (네이버페이 신한카드 이벤트)",
+       "won": 690000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|690000"
     }
    ]
   },
@@ -1759,7 +1843,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865352&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     },
     "toss": {
      "id": "10023",
@@ -1803,13 +1887,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 50만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 500000,
+     "reward_text": "최대 69만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 690000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590514&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 500000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|500000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865352&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 140000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 69만원 (네이버페이 신한카드 이벤트)",
+       "won": 690000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|690000"
     }
    ]
   },
@@ -1937,7 +2028,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO"
     }
    },
    "events": [
@@ -1960,13 +2051,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 634000,
+     "reward_text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 620000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|롯데카드|634000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO",
+     "main_won": 180000,
+     "bonus_won": 440000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|롯데카드|620000"
     },
     {
      "platform": "issuer",
@@ -1996,20 +2094,10 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865366&cardCompanyId=CCSS&cardIssuerCode=CCSS"
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 46.4만원 (네이버페이 삼성카드 이벤트)",
-     "reward_won": 464000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 464000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|삼성카드|464000"
-    },
     {
      "platform": "banksalad",
      "reward_text": "최대 25.7만원 캐시백",
@@ -2019,6 +2107,23 @@
      "main_won": 0,
      "bonus_won": 0,
      "reward_group": "2026-07|banksalad|삼성카드|257000"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 18.7만원 (네이버페이 삼성카드 이벤트)",
+     "reward_won": 187000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865366&cardCompanyId=CCSS&cardIssuerCode=CCSS",
+     "main_won": 120000,
+     "bonus_won": 67000,
+     "breakdown": [
+      {
+       "text": "최대 18.7만원 (네이버페이 삼성카드 이벤트)",
+       "won": 187000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|삼성카드|187000"
     }
    ]
   },
@@ -2074,7 +2179,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590508&cardCompanyId=CCSS&cardIssuerCode=CCSS"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865368&cardCompanyId=CCSS&cardIssuerCode=CCSS"
     }
    },
    "events": [
@@ -2097,13 +2202,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 44만원 (네이버페이 삼성카드 이벤트)",
-     "reward_won": 440000,
+     "reward_text": "최대 14만원 (네이버페이 삼성카드 이벤트)",
+     "reward_won": 140000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590508&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 440000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|삼성카드|440000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865368&cardCompanyId=CCSS&cardIssuerCode=CCSS",
+     "main_won": 120000,
+     "bonus_won": 20000,
+     "breakdown": [
+      {
+       "text": "최대 14만원 (네이버페이 삼성카드 이벤트)",
+       "won": 140000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|삼성카드|140000"
     },
     {
      "platform": "kakaopay",
@@ -2137,11 +2249,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4322591ae1bb48cd4c1b40"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260528001782191066&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     },
     "toss": {
      "id": "1827",
@@ -2150,14 +2262,21 @@
    },
    "events": [
     {
-     "platform": "naver",
-     "reward_text": "최대 72.5만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 725000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260528001782191066&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 725000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|현대카드|725000"
+     "platform": "kakaopay",
+     "reward_text": "25만원 이상 이용 시 23만원 캐시백 + 해외 50만 + 정기결제 1.5만",
+     "reward_won": 745000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4322591ae1bb48cd4c1b40",
+     "main_won": 230000,
+     "bonus_won": 515000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 23만원 캐시백 + 해외 50만 + 정기결제 1.5만",
+       "won": 15000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|현대카드|745000"
     },
     {
      "platform": "banksalad",
@@ -2170,6 +2289,23 @@
      "reward_group": "2026-07|banksalad|현대카드|715000"
     },
     {
+     "platform": "naver",
+     "reward_text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+     "reward_won": 620000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+     "main_won": 100000,
+     "bonus_won": 520000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|현대카드|620000"
+    },
+    {
      "platform": "issuer",
      "reward_text": "최대 60만원 (현대카드 발급 이벤트)",
      "reward_won": 600000,
@@ -2178,16 +2314,6 @@
      "main_won": 600000,
      "bonus_won": 0,
      "reward_group": "2026-07|issuer|현대카드|600000"
-    },
-    {
-     "platform": "kakaopay",
-     "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28",
-     "main_won": 200000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|현대카드|440000"
     },
     {
      "platform": "cardgorilla",
@@ -2221,11 +2347,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981668445&cardCompanyId=CCKM&cardIssuerCode=100"
     },
     "toss": {
      "id": "1121",
@@ -2268,6 +2394,23 @@
      "reward_group": "2026-07|ajungdang|KB국민카드|860000"
     },
     {
+     "platform": "kakaopay",
+     "reward_text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+     "reward_won": 860000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5",
+     "main_won": 190000,
+     "bonus_won": 670000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+       "won": 40000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|KB국민카드|860000"
+    },
+    {
      "platform": "banksalad",
      "reward_text": "최대 85만원 캐시백",
      "reward_won": 850000,
@@ -2285,24 +2428,21 @@
      "reward_group": "2026-07|banksalad|KB국민카드|850000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
-     "reward_won": 850000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c",
-     "main_won": 30000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|KB국민카드|850000"
-    },
-    {
      "platform": "naver",
-     "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
-     "reward_won": 830000,
+     "reward_text": "최대 84만원 (네이버페이 KB국민카드 이벤트)",
+     "reward_won": 840000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 830000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|KB국민카드|830000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981668445&cardCompanyId=CCKM&cardIssuerCode=100",
+     "main_won": 170000,
+     "bonus_won": 670000,
+     "breakdown": [
+      {
+       "text": "최대 84만원 (네이버페이 KB국민카드 이벤트)",
+       "won": 840000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|KB국민카드|840000"
     }
    ]
   },
@@ -2418,7 +2558,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO"
     }
    },
    "events": [
@@ -2475,13 +2615,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 644000,
+     "reward_text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 650000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 644000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|롯데카드|644000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO",
+     "main_won": 210000,
+     "bonus_won": 440000,
+     "breakdown": [
+      {
+       "text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
+       "won": 650000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|롯데카드|650000"
     },
     {
      "platform": "issuer",
@@ -2687,7 +2834,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001974825484&cardCompanyId=CCNH&cardIssuerCode=CCNH"
     },
     "toss": {
      "id": "1236",
@@ -2748,13 +2895,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
-     "reward_won": 175000,
+     "reward_text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
+     "reward_won": 215000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
-     "main_won": 175000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|NH농협카드|175000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001974825484&cardCompanyId=CCNH&cardIssuerCode=CCNH",
+     "main_won": 170000,
+     "bonus_won": 45000,
+     "breakdown": [
+      {
+       "text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
+       "won": 215000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|NH농협카드|215000"
     }
    ]
   },
@@ -2812,15 +2966,15 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15566ef3bfd14294a5a1e5"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41df501ae1bb48cd4c1b13"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590510&cardCompanyId=CCSS&cardIssuerCode=CCSS"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001972542623&cardCompanyId=CCSS&cardIssuerCode=CCSS"
     },
     "toss": {
      "id": "",
-     "url": "https://toss.im/_m/LUWffhjw"
+     "url": "https://toss.im/_m/pgEDoiSe"
     }
    },
    "events": [
@@ -2843,30 +2997,44 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 12.4만원 (네이버페이 삼성카드 이벤트)",
-     "reward_won": 124000,
+     "reward_text": "최대 12.7만원 (네이버페이 삼성카드 이벤트)",
+     "reward_won": 127000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590510&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 124000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|삼성카드|124000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001972542623&cardCompanyId=CCSS&cardIssuerCode=CCSS",
+     "main_won": 100000,
+     "bonus_won": 27000,
+     "breakdown": [
+      {
+       "text": "최대 12.7만원 (네이버페이 삼성카드 이벤트)",
+       "won": 127000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|삼성카드|127000"
     },
     {
      "platform": "kakaopay",
-     "reward_text": "100만원 이상 이용 시 10만원 캐시백",
-     "reward_won": 100000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15566ef3bfd14294a5a1e5",
+     "reward_text": "100만원 이상 이용 시 10만원 캐시백 + 해외 2만",
+     "reward_won": 120000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41df501ae1bb48cd4c1b13",
      "main_won": 100000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|삼성카드|100000"
+     "bonus_won": 20000,
+     "breakdown": [
+      {
+       "text": "100만원 이상 이용 시 10만원 캐시백 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|120000"
     },
     {
      "platform": "toss",
-     "reward_text": "100만원 이상 쓰면 10만원",
+     "reward_text": "100만원 쓰면 10만원",
      "reward_won": 100000,
-     "period_end": "2026-06-30",
-     "url": "https://toss.im/_m/LUWffhjw",
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/pgEDoiSe",
      "main_won": 100000,
      "bonus_won": 0,
      "reward_group": "2026-07|toss|삼성카드|100000"
@@ -2893,7 +3061,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590520&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865370&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -2947,8 +3115,15 @@
      "reward_won": 600000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590520&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 600000,
-     "bonus_won": 0,
+     "main_won": 100000,
+     "bonus_won": 500000,
+     "breakdown": [
+      {
+       "text": "최대 60만원 (네이버페이 현대카드 이벤트)",
+       "won": 600000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|현대카드|600000"
     }
    ]
@@ -2973,11 +3148,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a168003e4fd92445c8372d0"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4212281f94d85bad33f6c4"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260624001967393139&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -2987,8 +3162,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|현대카드|750000"
     },
     {
@@ -3024,8 +3206,15 @@
      "reward_won": 690000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a168003e4fd92445c8372d0",
-     "main_won": 600000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 9만원 캐시백 + 해외 최대 60만",
+       "won": 600000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|kakaopay|현대카드|690000"
     },
     {
@@ -3060,11 +3249,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1682bce0eb334818c07cb3"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4212391f94d85bad33f6c6"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260624001967393139&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -3091,8 +3280,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|현대카드|750000"
     },
     {
@@ -3111,8 +3307,15 @@
      "reward_won": 720000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1682bce0eb334818c07cb3",
-     "main_won": 600000,
-     "bonus_won": 0,
+     "main_won": 120000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 12만원 캐시백 + 해외 최대 60만",
+       "won": 600000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|kakaopay|현대카드|720000"
     },
     {
@@ -3147,11 +3350,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1682bce0eb334818c07cb3"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4212391f94d85bad33f6c6"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260624001967393139&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -3178,8 +3381,15 @@
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|현대카드|750000"
     },
     {
@@ -3198,8 +3408,15 @@
      "reward_won": 720000,
      "period_end": "2026-06-30",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1682bce0eb334818c07cb3",
-     "main_won": 600000,
-     "bonus_won": 0,
+     "main_won": 120000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 12만원 캐시백 + 해외 최대 60만",
+       "won": 600000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|kakaopay|현대카드|720000"
     },
     {
@@ -3232,9 +3449,13 @@
      "id": "",
      "url": "https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=O4P983&amp;searchWord="
     },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a42124b1f94d85bad33f6c8"
+    },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260624001967393139&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     },
     "toss": {
      "id": "10341",
@@ -3270,13 +3491,37 @@
      "reward_group": "2026-07|banksalad|현대카드|750000"
     },
     {
+     "platform": "kakaopay",
+     "reward_text": "25만원 이상 이용 시 15만원 캐시백 + 해외 최대 60만",
+     "reward_won": 750000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a42124b1f94d85bad33f6c8",
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 15만원 캐시백 + 해외 최대 60만",
+       "won": 600000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|현대카드|750000"
+    },
+    {
      "platform": "naver",
      "reward_text": "최대 75만원 (네이버페이 현대카드 이벤트)",
      "reward_won": 750000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590486&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 750000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 600000,
+     "breakdown": [
+      {
+       "text": "최대 75만원 (네이버페이 현대카드 이벤트)",
+       "won": 750000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|현대카드|750000"
     },
     {
@@ -3383,7 +3628,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -3423,13 +3668,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 45만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 450000,
+     "reward_text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+     "reward_won": 620000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 450000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|현대카드|450000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+     "main_won": 100000,
+     "bonus_won": 520000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|현대카드|620000"
     }
    ]
   },
@@ -3449,7 +3701,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -3489,13 +3741,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 45만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 450000,
+     "reward_text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+     "reward_won": 620000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 450000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|현대카드|450000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+     "main_won": 100000,
+     "bonus_won": 520000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|현대카드|620000"
     }
    ]
   },
@@ -3515,7 +3774,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -3555,13 +3814,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 45만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 450000,
+     "reward_text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+     "reward_won": 620000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590522&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 450000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|현대카드|450000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001973966499&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+     "main_won": 100000,
+     "bonus_won": 520000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 현대카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|현대카드|620000"
     }
    ]
   },
@@ -4039,12 +4305,33 @@
      "id": "",
      "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a27e1201ae1bb48cd4c1a28"
     },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001979560799&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+    },
     "toss": {
      "id": "1820",
      "url": "https://card-lounge.toss.im/card/1820"
     }
    },
    "events": [
+    {
+     "platform": "naver",
+     "reward_text": "최대 71.5만원 (네이버페이 현대카드 이벤트)",
+     "reward_won": 715000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001979560799&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+     "main_won": 200000,
+     "bonus_won": 515000,
+     "breakdown": [
+      {
+       "text": "최대 71.5만원 (네이버페이 현대카드 이벤트)",
+       "won": 715000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|현대카드|715000"
+    },
     {
      "platform": "kakaopay",
      "reward_text": "50/150만원 이상 이용 시 16/20만 카카오페이포인트 + 7~9월 6/8만(3개월)",
@@ -4077,12 +4364,33 @@
      "id": "2647",
      "url": "https://www.card-gorilla.com/event/detail/7"
     },
+    "naver": {
+     "id": "",
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001979560799&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+    },
     "toss": {
      "id": "1822",
      "url": "https://card-lounge.toss.im/card/1822"
     }
    },
    "events": [
+    {
+     "platform": "naver",
+     "reward_text": "최대 71.5만원 (네이버페이 현대카드 이벤트)",
+     "reward_won": 715000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001979560799&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+     "main_won": 200000,
+     "bonus_won": 515000,
+     "breakdown": [
+      {
+       "text": "최대 71.5만원 (네이버페이 현대카드 이벤트)",
+       "won": 715000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|현대카드|715000"
+    },
     {
      "platform": "cardgorilla",
      "reward_text": "1.5만원 캐시백",
@@ -4364,30 +4672,30 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a194fef3f63cd5250620206"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a334bb31ae1bb48cd4c1a79"
     },
     "toss": {
      "id": "",
-     "url": "https://toss.im/_m/zgTwn3un"
+     "url": "https://toss.im/_m/pB7zTyNa"
     }
    },
    "events": [
     {
      "platform": "kakaopay",
-     "reward_text": "15만원 이상 이용 시 10만원 캐시백",
-     "reward_won": 100000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a194fef3f63cd5250620206",
-     "main_won": 100000,
+     "reward_text": "30만원 이상 이용 시 최대 11만원 캐시백(10 + 리볼빙 1)",
+     "reward_won": 110000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a334bb31ae1bb48cd4c1a79",
+     "main_won": 110000,
      "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|롯데카드|100000"
+     "reward_group": "2026-07|kakaopay|롯데카드|110000"
     },
     {
      "platform": "toss",
-     "reward_text": "10만원 쓰면 8만 토스포인트",
+     "reward_text": "30만원 쓰면 8만 토스포인트",
      "reward_won": 80000,
-     "period_end": "2026-06-30",
-     "url": "https://toss.im/_m/zgTwn3un",
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/pB7zTyNa",
      "main_won": 80000,
      "bonus_won": 0,
      "reward_group": "2026-07|toss|롯데카드|80000"
@@ -4454,7 +4762,11 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865358&cardCompanyId=CCBC&cardIssuerCode=0003"
+    },
+    "toss": {
+     "id": "",
+     "url": "https://toss.im/_m/FWBrNuni"
     }
    },
    "events": [
@@ -4464,9 +4776,26 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|IBK기업은행|125000"
+    },
+    {
+     "platform": "toss",
+     "reward_text": "20만원 쓰고 마케팅 동의 시 9만 토스포인트 + 자동납부 3.5만",
+     "reward_won": 90000,
+     "period_end": "2026-07-31",
+     "url": "https://toss.im/_m/FWBrNuni",
+     "main_won": 35000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|IBK기업은행|90000"
     },
     {
      "platform": "cardgorilla",
@@ -4492,31 +4821,19 @@
     },
     "toss": {
      "id": "",
-     "url": "https://toss.im/_m/banBQDY5"
+     "url": "https://toss.im/_m/ziH5VIci"
     }
    },
    "events": [
     {
      "platform": "toss",
-     "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
-     "reward_won": 455000,
+     "reward_text": "20만원 쓰고 11만원 + 마케팅 1만 + 해외 30만 + 휴대폰알림 1만 + 자동납부 1.5만",
+     "reward_won": 110000,
      "period_end": "2026-07-31",
-     "url": "https://toss.im/_m/banBQDY5",
+     "url": "https://toss.im/_m/ziH5VIci",
      "main_won": 15000,
-     "bonus_won": 10000,
-     "breakdown": [
-      {
-       "text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6",
-       "won": 10000,
-       "cond": true
-      },
-      {
-       "text": "30만 + 생활요금 1.5만",
-       "won": 15000,
-       "cond": false
-      }
-     ],
-     "reward_group": "2026-07|toss|삼성카드|455000"
+     "bonus_won": 0,
+     "reward_group": "2026-07|toss|삼성카드|110000"
     },
     {
      "platform": "cardgorilla",
@@ -4550,7 +4867,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865366&cardCompanyId=CCSS&cardIssuerCode=CCSS"
     },
     "toss": {
      "id": "",
@@ -4558,16 +4875,6 @@
     }
    },
    "events": [
-    {
-     "platform": "naver",
-     "reward_text": "최대 46.4만원 (네이버페이 삼성카드 이벤트)",
-     "reward_won": 464000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590506&cardCompanyId=CCSS&cardIssuerCode=CCSS",
-     "main_won": 464000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|삼성카드|464000"
-    },
     {
      "platform": "toss",
      "reward_text": "20만원 쓰고 12만원 + 마케팅 1만 + 해외 6/30만 + 생활요금 1.5만",
@@ -4609,6 +4916,23 @@
      "main_won": 0,
      "bonus_won": 0,
      "reward_group": "2026-07|banksalad|삼성카드|257000"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 18.7만원 (네이버페이 삼성카드 이벤트)",
+     "reward_won": 187000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865366&cardCompanyId=CCSS&cardIssuerCode=CCSS",
+     "main_won": 120000,
+     "bonus_won": 67000,
+     "breakdown": [
+      {
+       "text": "최대 18.7만원 (네이버페이 삼성카드 이벤트)",
+       "won": 187000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|삼성카드|187000"
     },
     {
      "platform": "cardgorilla",
@@ -4703,11 +5027,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981668445&cardCompanyId=CCKM&cardIssuerCode=100"
     }
    },
    "events": [
@@ -4746,6 +5070,23 @@
      "reward_group": "2026-07|ajungdang|KB국민카드|860000"
     },
     {
+     "platform": "kakaopay",
+     "reward_text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+     "reward_won": 860000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5",
+     "main_won": 190000,
+     "bonus_won": 670000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+       "won": 40000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|KB국민카드|860000"
+    },
+    {
      "platform": "banksalad",
      "reward_text": "최대 85만원 캐시백",
      "reward_won": 850000,
@@ -4763,24 +5104,21 @@
      "reward_group": "2026-07|banksalad|KB국민카드|850000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
-     "reward_won": 850000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c",
-     "main_won": 30000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|KB국민카드|850000"
-    },
-    {
      "platform": "naver",
-     "reward_text": "최대 83만원 (네이버페이 KB국민카드 이벤트)",
-     "reward_won": 830000,
+     "reward_text": "최대 84만원 (네이버페이 KB국민카드 이벤트)",
+     "reward_won": 840000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590489&cardCompanyId=CCKM&cardIssuerCode=100",
-     "main_won": 830000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|KB국민카드|830000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981668445&cardCompanyId=CCKM&cardIssuerCode=100",
+     "main_won": 170000,
+     "bonus_won": 670000,
+     "breakdown": [
+      {
+       "text": "최대 84만원 (네이버페이 KB국민카드 이벤트)",
+       "won": 840000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|KB국민카드|840000"
     }
    ]
   },
@@ -4800,7 +5138,7 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5"
     },
     "toss": {
      "id": "1467",
@@ -4844,13 +5182,20 @@
     },
     {
      "platform": "kakaopay",
-     "reward_text": "25만원 이상 이용 시 19+3만원 캐시백 + 추가 30만 + 해외 30만 + 자동납부 3만",
-     "reward_won": 850000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a1544755a7309565020993c",
-     "main_won": 30000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|KB국민카드|850000"
+     "reward_text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+     "reward_won": 860000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5",
+     "main_won": 190000,
+     "bonus_won": 670000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+       "won": 40000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|KB국민카드|860000"
     }
    ]
   },
@@ -4858,7 +5203,7 @@
    "id": 75,
    "name": "KB YOU Wish 카드",
    "issuer": "KB국민카드",
-   "img": null,
+   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/2970/card_img/48200/2970card_1.png",
    "platforms": {
     "ajungdang": {
      "id": "289",
@@ -4870,18 +5215,29 @@
     },
     "cardgorilla": {
      "id": "2970",
-     "url": "https://www.card-gorilla.com/card/detail/2970"
+     "url": "https://www.card-gorilla.com/event/detail/3"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5"
     }
    },
    "events": [
     {
      "platform": "cardgorilla",
-     "reward_text": "최대 87만원 캐시백",
+     "reward_text": "87만원 캐시백",
      "reward_won": 870000,
-     "period_end": "2026.7.31",
-     "url": "https://www.card-gorilla.com/card/2970",
-     "main_won": 870000,
-     "bonus_won": 0,
+     "period_end": "2026-07-31",
+     "url": "https://www.card-gorilla.com/event/detail/3",
+     "main_won": 230000,
+     "bonus_won": 640000,
+     "breakdown": [
+      {
+       "text": "87만원 캐시백",
+       "won": 870000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|cardgorilla|KB국민카드|870000"
     },
     {
@@ -4900,6 +5256,23 @@
       }
      ],
      "reward_group": "2026-07|ajungdang|KB국민카드|860000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+     "reward_won": 860000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4284a41f94d85bad33f6d5",
+     "main_won": 190000,
+     "bonus_won": 670000,
+     "breakdown": [
+      {
+       "text": "25만원 이상 이용 시 19+3만원 캐시백(마케팅동의 3) + 추가 30만 + 해외 30만 + 자동납부 4만",
+       "won": 40000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|KB국민카드|860000"
     },
     {
      "platform": "banksalad",
@@ -4936,7 +5309,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865358&cardCompanyId=CCBC&cardIssuerCode=0003"
     }
    },
    "events": [
@@ -4973,8 +5346,15 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|IBK기업은행|125000"
     }
    ]
@@ -4995,7 +5375,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865358&cardCompanyId=CCBC&cardIssuerCode=0003"
     }
    },
    "events": [
@@ -5032,8 +5412,15 @@
      "reward_won": 125000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590498&cardCompanyId=CCBC&cardIssuerCode=0003",
-     "main_won": 125000,
-     "bonus_won": 0,
+     "main_won": 90000,
+     "bonus_won": 35000,
+     "breakdown": [
+      {
+       "text": "최대 12.5만원 (네이버페이 IBK기업은행카드 이벤트)",
+       "won": 125000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|IBK기업은행|125000"
     }
    ]
@@ -5121,7 +5508,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO"
     }
    },
    "events": [
@@ -5171,13 +5558,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 634000,
+     "reward_text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 620000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|롯데카드|634000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO",
+     "main_won": 180000,
+     "bonus_won": 440000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|롯데카드|620000"
     },
     {
      "platform": "issuer",
@@ -5211,7 +5605,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO"
     }
    },
    "events": [
@@ -5261,13 +5655,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 634000,
+     "reward_text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 620000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|롯데카드|634000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO",
+     "main_won": 180000,
+     "bonus_won": 440000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|롯데카드|620000"
     }
    ]
   },
@@ -5291,7 +5692,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO"
     }
    },
    "events": [
@@ -5341,13 +5742,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 63.4만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 634000,
+     "reward_text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 620000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726177937&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 634000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|롯데카드|634000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001949151687&cardCompanyId=CCLO&cardIssuerCode=CCLO",
+     "main_won": 180000,
+     "bonus_won": 440000,
+     "breakdown": [
+      {
+       "text": "최대 62만원 (네이버페이 롯데카드 이벤트)",
+       "won": 620000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|롯데카드|620000"
     }
    ]
   },
@@ -5375,7 +5783,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO"
     }
    },
    "events": [
@@ -5432,13 +5840,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 644000,
+     "reward_text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 650000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 644000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|롯데카드|644000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO",
+     "main_won": 210000,
+     "bonus_won": 440000,
+     "breakdown": [
+      {
+       "text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
+       "won": 650000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|롯데카드|650000"
     },
     {
      "platform": "issuer",
@@ -5561,7 +5976,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865356&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     },
     "toss": {
      "id": "10293",
@@ -5605,13 +6020,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 559000,
+     "reward_text": "최대 72만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 720000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 559000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|559000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865356&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 180000,
+     "bonus_won": 540000,
+     "breakdown": [
+      {
+       "text": "최대 72만원 (네이버페이 신한카드 이벤트)",
+       "won": 720000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|720000"
     }
    ]
   },
@@ -5631,11 +6053,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a190f140aaffa3c8f306f0d"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4367101ae1bb48cd4c1b6e"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865356&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     }
    },
    "events": [
@@ -5674,24 +6096,38 @@
      "reward_group": "2026-07|cardgorilla|신한카드|750000"
     },
     {
-     "platform": "naver",
-     "reward_text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 559000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 559000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|559000"
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 730000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4367101ae1bb48cd4c1b6e",
+     "main_won": 10000,
+     "bonus_won": 720000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|730000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "마케팅 동의+30만원 이상 이용 시 20만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
-     "reward_won": 320000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a190f140aaffa3c8f306f0d",
-     "main_won": 10000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|신한카드|320000"
+     "platform": "naver",
+     "reward_text": "최대 72만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 720000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865356&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 180000,
+     "bonus_won": 540000,
+     "breakdown": [
+      {
+       "text": "최대 72만원 (네이버페이 신한카드 이벤트)",
+       "won": 720000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|720000"
     }
    ]
   },
@@ -5707,7 +6143,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865356&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     },
     "toss": {
      "id": "8594",
@@ -5734,13 +6170,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 55.9만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 559000,
+     "reward_text": "최대 72만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 720000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590518&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 559000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|559000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865356&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 180000,
+     "bonus_won": 540000,
+     "breakdown": [
+      {
+       "text": "최대 72만원 (네이버페이 신한카드 이벤트)",
+       "won": 720000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|720000"
     }
    ]
   },
@@ -5764,7 +6207,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865354&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     }
    },
    "events": [
@@ -5821,13 +6264,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 52만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 520000,
+     "reward_text": "최대 71만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 710000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 520000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|520000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865354&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 160000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 71만원 (네이버페이 신한카드 이벤트)",
+       "won": 710000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|710000"
     }
    ]
   },
@@ -5843,7 +6293,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865354&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     }
    },
    "events": [
@@ -5866,13 +6316,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 52만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 520000,
+     "reward_text": "최대 71만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 710000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 520000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|520000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865354&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 160000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 71만원 (네이버페이 신한카드 이벤트)",
+       "won": 710000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|710000"
     }
    ]
   },
@@ -5892,11 +6349,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a190f140aaffa3c8f306f0d"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4367101ae1bb48cd4c1b6e"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865354&cardCompanyId=CCLG&cardIssuerCode=CCLG"
     }
    },
    "events": [
@@ -5935,24 +6392,38 @@
      "reward_group": "2026-07|cardgorilla|신한카드|740000"
     },
     {
-     "platform": "naver",
-     "reward_text": "최대 52만원 (네이버페이 신한카드 이벤트)",
-     "reward_won": 520000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590516&cardCompanyId=CCLG&cardIssuerCode=CCLG",
-     "main_won": 520000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|신한카드|520000"
+     "platform": "kakaopay",
+     "reward_text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+     "reward_won": 730000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4367101ae1bb48cd4c1b6e",
+     "main_won": 10000,
+     "bonus_won": 720000,
+     "breakdown": [
+      {
+       "text": "마케팅 동의 + 25만원 이상 이용 시 18만원 + 자동납부 4만 + 해외 50만 + 리볼빙 1만 + 슈퍼SOL 2.1만",
+       "won": 21000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|신한카드|730000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "마케팅 동의+30만원 이상 이용 시 20만원 혜택 + 생활요금 4만 + 해외 7만 + 리볼빙 1만",
-     "reward_won": 320000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a190f140aaffa3c8f306f0d",
-     "main_won": 10000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|신한카드|320000"
+     "platform": "naver",
+     "reward_text": "최대 71만원 (네이버페이 신한카드 이벤트)",
+     "reward_won": 710000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260626001981865354&cardCompanyId=CCLG&cardIssuerCode=CCLG",
+     "main_won": 160000,
+     "bonus_won": 550000,
+     "breakdown": [
+      {
+       "text": "최대 71만원 (네이버페이 신한카드 이벤트)",
+       "won": 710000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|신한카드|710000"
     }
    ]
   },
@@ -6045,11 +6516,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41f5f91f94d85bad33f6a1"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001974825484&cardCompanyId=CCNH&cardIssuerCode=CCNH"
     },
     "toss": {
      "id": "10173",
@@ -6073,6 +6544,23 @@
       }
      ],
      "reward_group": "2026-07|ajungdang|NH농협카드|265000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
+     "reward_won": 265000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41f5f91f94d85bad33f6a1",
+     "main_won": 170000,
+     "bonus_won": 95000,
+     "breakdown": [
+      {
+       "text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
+       "won": 50000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|NH농협카드|265000"
     },
     {
      "platform": "banksalad",
@@ -6109,24 +6597,21 @@
      "reward_group": "2026-07|cardgorilla|NH농협카드|215000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
-     "reward_won": 195000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7",
-     "main_won": 50000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|NH농협카드|195000"
-    },
-    {
      "platform": "naver",
-     "reward_text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
-     "reward_won": 175000,
+     "reward_text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
+     "reward_won": 215000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
-     "main_won": 175000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|NH농협카드|175000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001974825484&cardCompanyId=CCNH&cardIssuerCode=CCNH",
+     "main_won": 170000,
+     "bonus_won": 45000,
+     "breakdown": [
+      {
+       "text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
+       "won": 215000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|NH농협카드|215000"
     }
    ]
   },
@@ -6146,11 +6631,11 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41f5f91f94d85bad33f6a1"
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001974825484&cardCompanyId=CCNH&cardIssuerCode=CCNH"
     },
     "toss": {
      "id": "1739",
@@ -6176,6 +6661,23 @@
      "reward_group": "2026-07|ajungdang|NH농협카드|265000"
     },
     {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
+     "reward_won": 265000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a41f5f91f94d85bad33f6a1",
+     "main_won": 170000,
+     "bonus_won": 95000,
+     "breakdown": [
+      {
+       "text": "20만원 이용 시 17만원 캐시백 + 추가 4만 + 마케팅 0.5만 + 자동납부 5만",
+       "won": 50000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|NH농협카드|265000"
+    },
+    {
      "platform": "cardgorilla",
      "reward_text": "21.5만원 캐시백",
      "reward_won": 215000,
@@ -6193,24 +6695,21 @@
      "reward_group": "2026-07|cardgorilla|NH농협카드|215000"
     },
     {
-     "platform": "kakaopay",
-     "reward_text": "11만원 이용 시 10만원 캐시백 + 추가 4만 + 마케팅 5천 + 정기결제 5만",
-     "reward_won": 195000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a15570ef3bfd14294a5a1e7",
-     "main_won": 50000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|NH농협카드|195000"
-    },
-    {
      "platform": "naver",
-     "reward_text": "최대 17.5만원 (네이버페이 농협카드 이벤트)",
-     "reward_won": 175000,
+     "reward_text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
+     "reward_won": 215000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260521001731590500&cardCompanyId=CCNH&cardIssuerCode=CCNH",
-     "main_won": 175000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|NH농협카드|175000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260625001974825484&cardCompanyId=CCNH&cardIssuerCode=CCNH",
+     "main_won": 170000,
+     "bonus_won": 45000,
+     "breakdown": [
+      {
+       "text": "최대 21.5만원 (네이버페이 농협카드 이벤트)",
+       "won": 215000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|NH농협카드|215000"
     }
    ]
   },
@@ -6227,6 +6726,10 @@
     "cardgorilla": {
      "id": "2344",
      "url": "https://www.card-gorilla.com/card/detail/2344"
+    },
+    "kakaopay": {
+     "id": "",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a431d4c1ae1bb48cd4c1b3e"
     }
    },
    "events": [
@@ -6249,6 +6752,16 @@
      "main_won": 10000,
      "bonus_won": 0,
      "reward_group": "2026-07|cardgorilla|현대백화점|10000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "신규 발급 시 페이포인트 1만원",
+     "reward_won": 10000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a431d4c1ae1bb48cd4c1b3e",
+     "main_won": 10000,
+     "bonus_won": 0,
+     "reward_group": "2026-07|kakaopay|현대백화점|10000"
     }
    ]
   },
@@ -6670,7 +7183,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134122&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -6690,16 +7203,6 @@
       }
      ],
      "reward_group": "2026-07|issuer|현대카드|500000"
-    },
-    {
-     "platform": "naver",
-     "reward_text": "최대 50만원 (네이버페이 현대카드 이벤트)",
-     "reward_won": 500000,
-     "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776763&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 500000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|현대카드|500000"
     },
     {
      "platform": "banksalad",
@@ -6734,6 +7237,23 @@
       }
      ],
      "reward_group": "2026-07|cardgorilla|현대카드|400000"
+    },
+    {
+     "platform": "naver",
+     "reward_text": "최대 40만원 (네이버페이 현대카드 이벤트)",
+     "reward_won": 400000,
+     "period_end": null,
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134122&cardCompanyId=CCDI&cardIssuerCode=CCDI",
+     "main_won": 300000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "최대 40만원 (네이버페이 현대카드 이벤트)",
+       "won": 400000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|현대카드|400000"
     }
    ]
   },
@@ -6913,7 +7433,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776761&cardCompanyId=CCDI&cardIssuerCode=CCDI"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134120&cardCompanyId=CCDI&cardIssuerCode=CCDI"
     }
    },
    "events": [
@@ -6974,8 +7494,15 @@
      "reward_won": 250000,
      "period_end": null,
      "url": "https://card.pay.naver.com/home/promotion?promotionId=20260520001726776761&cardCompanyId=CCDI&cardIssuerCode=CCDI",
-     "main_won": 250000,
-     "bonus_won": 0,
+     "main_won": 150000,
+     "bonus_won": 100000,
+     "breakdown": [
+      {
+       "text": "최대 25만원 (네이버페이 현대카드 이벤트)",
+       "won": 250000,
+       "cond": false
+      }
+     ],
      "reward_group": "2026-07|naver|현대카드|250000"
     }
    ]
@@ -7154,20 +7681,10 @@
     },
     "kakaopay": {
      "id": "",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208ae1f94d85bad33f598"
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0"
     }
    },
    "events": [
-    {
-     "platform": "kakaopay",
-     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅동의 1만 + 생활요금 2만 + 해외 30만",
-     "reward_won": 440000,
-     "period_end": "2026-06-30",
-     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a3208ae1f94d85bad33f598",
-     "main_won": 300000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|kakaopay|삼성카드|440000"
-    },
     {
      "platform": "ajungdang",
      "reward_text": "최대 33.5만원 (아정당 삼성카드 발급 이벤트)",
@@ -7184,6 +7701,23 @@
       }
      ],
      "reward_group": "2026-07|ajungdang|삼성카드|335000"
+    },
+    {
+     "platform": "kakaopay",
+     "reward_text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+     "reward_won": 160000,
+     "period_end": "2026-07-31",
+     "url": "https://fest.kakaopay.com/card-brokerage/card/group/6a4209be1f94d85bad33f6b0",
+     "main_won": 110000,
+     "bonus_won": 50000,
+     "breakdown": [
+      {
+       "text": "20만원 이상 결제 시 11만원 캐시백 + 마케팅 1만 + 자동납부 2만 + 해외 2만",
+       "won": 20000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|kakaopay|삼성카드|160000"
     },
     {
      "platform": "cardgorilla",
@@ -7408,7 +7942,7 @@
     },
     "naver": {
      "id": "",
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO"
     },
     "toss": {
      "id": "1583",
@@ -7452,13 +7986,20 @@
     },
     {
      "platform": "naver",
-     "reward_text": "최대 64.4만원 (네이버페이 롯데카드 이벤트)",
-     "reward_won": 644000,
+     "reward_text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
+     "reward_won": 650000,
      "period_end": null,
-     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260608001852815025&cardCompanyId=CCLO&cardIssuerCode=CCLO",
-     "main_won": 644000,
-     "bonus_won": 0,
-     "reward_group": "2026-07|naver|롯데카드|644000"
+     "url": "https://card.pay.naver.com/home/promotion?promotionId=20260622001948134134&cardCompanyId=CCLO&cardIssuerCode=CCLO",
+     "main_won": 210000,
+     "bonus_won": 440000,
+     "breakdown": [
+      {
+       "text": "최대 65만원 (네이버페이 롯데카드 이벤트)",
+       "won": 650000,
+       "cond": false
+      }
+     ],
+     "reward_group": "2026-07|naver|롯데카드|650000"
     },
     {
      "platform": "cardgorilla",
@@ -7724,7 +8265,7 @@
    "id": 136,
    "name": "굿데이올림카드",
    "issuer": "KB국민카드",
-   "img": "https://d1c5n4ri2guedi.cloudfront.net/card/115/card_img/20273/115card.png",
+   "img": null,
    "platforms": {
     "cardgorilla": {
      "id": "115",

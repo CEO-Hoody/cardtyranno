@@ -10,8 +10,8 @@
     "banksalad": {
      "guid": "CARD004534",
      "rendered_name": "삼성카드 삼성 iD SELECT ALL 카드",
-     "event_text": "최대23만원캐시백",
-     "event_won": 230000,
+     "event_text": "최대25.7만원캐시백",
+     "event_won": 257000,
      "no_event": false,
      "url": "https://www.banksalad.com/product/cards/CARD004534",
      "read_at": "2026-07-01"
@@ -46,8 +46,8 @@
     "banksalad": {
      "guid": "CARD000004",
      "rendered_name": "신한카드 Mr.Life",
-     "event_text": "최대84만원캐시백",
-     "event_won": 840000,
+     "event_text": "최대83만원캐시백",
+     "event_won": 830000,
      "no_event": false,
      "url": "https://www.banksalad.com/product/cards/CARD000004",
      "read_at": "2026-07-01"
@@ -64,8 +64,8 @@
     "banksalad": {
      "guid": "CARD000118",
      "rendered_name": "신한카드 Deep Oil",
-     "event_text": "최대84만원캐시백",
-     "event_won": 840000,
+     "event_text": "최대83만원캐시백",
+     "event_won": 830000,
      "no_event": false,
      "url": "https://www.banksalad.com/product/cards/CARD000118",
      "read_at": "2026-07-01"
@@ -154,8 +154,8 @@
     "banksalad": {
      "guid": "CARD000156",
      "rendered_name": "KB국민 굿데이카드",
-     "event_text": "최대84만원캐시백",
-     "event_won": 840000,
+     "event_text": "최대85만원캐시백",
+     "event_won": 850000,
      "no_event": false,
      "url": "https://www.banksalad.com/product/cards/CARD000156",
      "read_at": "2026-07-01"
@@ -172,8 +172,8 @@
     "banksalad": {
      "guid": "CARD000114",
      "rendered_name": "KB국민 굿데이올림카드",
-     "event_text": "최대84만원캐시백",
-     "event_won": 840000,
+     "event_text": "최대85만원캐시백",
+     "event_won": 850000,
      "no_event": false,
      "url": "https://www.banksalad.com/product/cards/CARD000114",
      "read_at": "2026-07-01"
@@ -190,8 +190,8 @@
     "banksalad": {
      "guid": "CARD000128",
      "rendered_name": "KB 국민 My WE:SH",
-     "event_text": "최대84만원캐시백",
-     "event_won": 840000,
+     "event_text": "최대85만원캐시백",
+     "event_won": 850000,
      "no_event": false,
      "url": "https://www.banksalad.com/product/cards/CARD000128",
      "read_at": "2026-07-01"
