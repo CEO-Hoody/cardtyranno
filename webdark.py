@@ -965,7 +965,9 @@ Promise.all([
  fetch('hero.json').then(r=>r.json()).catch(function(){return{items:[]};})
 ]).then(function(A){
  var cj=A[0].cards||{},PE=liveEvents(A[1].products||[]),HR=A[2].items||[];
- var NAME2ID={},IMG={};for(var k in cj){(cj[k]||[]).forEach(function(c){var n=_nk2(c.name);if(NAME2ID[n]==null)NAME2ID[n]=c.id;if(c.img&&!IMG[n])IMG[n]=c.img;});}
+ var NAME2ID={},IMG={},MTIER={};for(var k in cj){(cj[k]||[]).forEach(function(c){var n=_nk2(c.name);if(NAME2ID[n]==null)NAME2ID[n]=c.id;if(c.img&&!IMG[n])IMG[n]=c.img;if(c.main_tier&&c.main_tier.reward&&!MTIER[n])MTIER[n]=c.main_tier.reward;});}
+ // 카드사별 '최대 캐시백'은 기본 발급(주요) 캐시백만 — 부가/추가 캐시백 제외(splTier(e,mt).m). mt=카드 main_tier 보상(원).
+ function _baseWon(p,e){return splTier(e,MTIER[_nk2(p.name)]).m;}
  function href(name){var id=NAME2ID[_nk2(name||'')];if(id==null)id=NAME2ID[_nk2((name||'').replace(/^토스\s*/,''))];return id!=null?('carddetail.html?id='+id):'chart.html';}
  var EVMAP={};PE.forEach(function(p){var n=_nk2(p.name);EVMAP[n]=(p.events||[]);if(p.img&&!IMG[n])IMG[n]=p.img;});
  function plate(name,img){return imgTag(img||IMG[_nk2(name)]);}
@@ -984,7 +986,7 @@ Promise.all([
   if(_e=document.getElementById('heroS2Sub'))_e.innerHTML='6개 플랫폼을 비교한 결과, <b>'+bm.n+'에서 받을 때</b> 캐시백이 가장 커요.';
   if(_e=document.getElementById('heroS2'))_e.setAttribute('href',href(best.name));
   if(_e=document.getElementById('heroS2Plate'))_e.innerHTML=plate(best.name,best.img);}
- var im={};PE.forEach(function(p){var k=p.issuer||'';if(!k)return;(p.events||[]).forEach(function(e){if((e.reward_won||0)>(im[k]||0))im[k]=e.reward_won;});});
+ var im={};PE.forEach(function(p){var k=p.issuer||'';if(!k)return;(p.events||[]).forEach(function(e){var w=_baseWon(p,e);if(w>(im[k]||0))im[k]=w;});});
  var ta=Object.keys(im).map(function(k){return[k,im[k]];}).sort(function(a,b){return b[1]-a[1];}).slice(0,8);
  var lt=document.getElementById('liveTk');if(lt&&ta.length){var s=ta.map(function(r){return r[0].replace('카드','')+' '+_won(r[1]);}).join('     /     ');lt.textContent=s+'     /     '+s;}
  function evRows(name){var evs=(EVMAP[_nk2(name)]||[]).slice().filter(function(e){return e.reward_won;}).sort(function(a,b){return b.reward_won-a.reward_won;}).slice(0,3);
@@ -1000,7 +1002,7 @@ Promise.all([
  // B · 이번달 최고 커플 (카드사 8종 ❤ 최고 플랫폼) — ① 전체 캐시백 최대 플랫폼, 동점이면 공동 1위
  (function(){var ISS8=['삼성카드','현대카드','KB국민카드','신한카드','롯데카드','우리카드','하나카드','BC카드'];
   function alias(s){s=s||'';if(/국민/.test(s))return 'KB국민카드';if(/^비씨|^bc/i.test(s))return 'BC카드';if(/신한/.test(s))return '신한카드';if(/현대/.test(s))return '현대카드';if(/삼성/.test(s))return '삼성카드';if(/롯데/.test(s))return '롯데카드';if(/우리/.test(s))return '우리카드';if(/하나/.test(s))return '하나카드';return s;}
-  var cpl={};PE.forEach(function(p){var iss=alias(p.issuer||'');if(!iss)return;var o=cpl[iss]||(cpl[iss]={});(p.events||[]).forEach(function(e){var w=e.reward_won||0;if(!w||e.platform==='issuer')return;var pp=o[e.platform]||(o[e.platform]={tot:0,max:0,prods:{}});pp.tot+=w;if(w>pp.max)pp.max=w;pp.prods[_nk2(p.name)]=1;});});
+  var cpl={};PE.forEach(function(p){var iss=alias(p.issuer||'');if(!iss)return;var o=cpl[iss]||(cpl[iss]={});(p.events||[]).forEach(function(e){if(e.platform==='issuer')return;var w=_baseWon(p,e);if(!w)return;var pp=o[e.platform]||(o[e.platform]={tot:0,max:0,prods:{}});pp.tot+=w;if(w>pp.max)pp.max=w;pp.prods[_nk2(p.name)]=1;});});
   var cg=document.getElementById('cplGrid');if(!cg)return;
   var rows=ISS8.map(function(iss){var o=cpl[iss];if(!o)return null;
    var arr=Object.keys(o).map(function(pk){return{pk:pk,tot:o[pk].tot,max:o[pk].max,cnt:Object.keys(o[pk].prods).length};}).sort(function(a,b){return b.tot-a.tot;});
@@ -3098,6 +3100,11 @@ DIAG_BODY=(r'''<style>
 /* result */
 .dg-rhero{background:var(--block-lime);border-radius:26px;padding:22px 22px 24px;text-align:center;position:relative;overflow:hidden}
 .dg-badge{display:inline-block;font-family:var(--font-mono,monospace);font-size:9px;background:var(--accent-magenta);color:#fff;padding:5px 11px;border-radius:50px}
+.dg-mbti{margin:0 0 16px;text-align:center}
+.dg-mbti-eb{font-family:var(--font-mono,monospace);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:rgba(0,0,0,.5)}
+.dg-mbti-row{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-top:6px;flex-wrap:wrap}
+.dg-mbti-code{font-weight:800;font-size:32px;letter-spacing:2px;color:var(--accent-magenta)}
+.dg-mbti-nm{font-weight:700;font-size:16px;letter-spacing:-.3px}
 .dg-plate{position:relative;margin:14px auto 0;width:210px;height:132px}
 .dg-plate .pl{position:absolute;left:18px;top:12px;width:176px;height:108px;border-radius:14px;overflow:hidden;transform:rotate(-7deg);box-shadow:0 10px 22px rgba(0,0,0,.18);background:#9a86e8}
 .dg-plate .pl img{width:100%;height:100%;object-fit:cover;display:block}
@@ -3358,6 +3365,32 @@ var ARCH=[
 ];
 // 진단 유형 비중(최근 30일 누적, 예시) — 결과에서 내 유형만 강조
 var DIST=[{type:'트래블·해외형',pct:32,color:'#9a86e8'},{type:'캐시백·실속형',pct:24,color:'#3182F6'},{type:'온라인쇼핑형',pct:21,color:'#19C37D'},{type:'교통·생활형',pct:14,color:'#FF6A13'},{type:'프리미엄형',pct:9,color:'#1a1714'}];
+// ===== 소비 MBTI (세 번째 진단) — 4문항 → MBTI 유형 + 추천 카드 + 이번달 캐시백 =====
+var QS_MBTI=[
+ {theme:'소비 스타일',q:'쇼핑할 때 당신은?',prop:'#p-receipt',bg:'var(--block-lime)',opts:[
+   {l:'검색·비교하고 신중하게',s:'계획형',ax:'P',tk:'value'},{l:'마음에 들면 바로 지름',s:'즉흥형',ax:'I',tk:'premium'}]},
+ {theme:'결제 채널',q:'결제는 주로 어디서 하세요?',prop:'#p-bag',bg:'var(--block-mint)',opts:[
+   {l:'온라인·구독·배달',s:'온라인형',ax:'O',tk:'shopping'},{l:'마트·매장·대중교통',s:'오프라인형',ax:'F',tk:'transit'}]},
+ {theme:'혜택 취향',q:'혜택은 어느 쪽이 좋아요?',prop:'#p-spark',bg:'var(--block-pink)',opts:[
+   {l:'포인트·마일 차곡차곡',s:'적립형',ax:'A',tk:'point'},{l:'즉시 할인·캐시백',s:'즉시형',ax:'C',tk:'cash'}]},
+ {theme:'카드 운용',q:'카드는 어떻게 쓰세요?',prop:'#p-crown',bg:'var(--block-lilac)',opts:[
+   {l:'한 장에 몰아 혜택 극대화',s:'집중형',ax:'B',tk:'single'},{l:'여러 장 상황 따라',s:'분산형',ax:'W',tk:'multi'}]}
+];
+function activeQS(){return state.mode==='mbti'?QS_MBTI:QS;}
+// 진단 결과 저장·집계 API(커뮤니티 워커 D1). CORS는 운영 도메인만 허용 → 로컬은 실패해 샘플 폴백.
+var DIAGAPI=((document.querySelector('meta[name=community-api]')||{}).content)||'https://cardtyranno-community.yyty12.workers.dev';
+var DIAG_DIST_COLOR={'트래블·해외형':'#9a86e8','캐시백·실속형':'#3182F6','온라인쇼핑형':'#19C37D','교통·생활형':'#FF6A13','프리미엄형':'#1a1714'};
+var DIAG_DIST_ORDER=['트래블·해외형','캐시백·실속형','온라인쇼핑형','교통·생활형','프리미엄형'];
+function recordDiag(kind,type){if(!DIAGAPI||!type)return;try{fetch(DIAGAPI+'/api/diag',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind:kind,type:type})}).catch(function(){});}catch(e){}}
+function pickArchByTokens(toks){var scored=ARCH.map(function(a){var sc=toks.filter(function(t){return a.likes.indexOf(t)>=0;}).length;var card=pickCard(a);return {a:a,sc:sc,card:card,cmax:card?maxRw(card):-1};}).filter(function(x){return x.card;});scored.sort(function(x,y){return (y.sc-x.sc)||(y.cmax-x.cmax);});return scored[0]||null;}
+function mbtiStart(){clearLS();state={mode:'mbti',screen:'q',step:0,answers:[]};gotoStep(0);}
+function mbtiFinish(){var r=pickArch();
+ if(!r){show('dgResult');document.getElementById('dgRhero').innerHTML='<p style="padding:30px">추천 데이터를 불러오지 못했어요. 다시 시도해 주세요.</p>';return;}
+ var code=state.answers.map(function(idx,i){return (QS_MBTI[i].opts[idx]||{}).ax||'';}).join('');
+ var labels=state.answers.map(function(idx,i){return (QS_MBTI[i].opts[idx]||{}).s||'';});
+ var name=labels.map(function(x){return x.replace(/형$/,'');}).join('·')+'형';
+ renderCardResult(r.a,r.card,{kind:'spend_mbti',mbti:{code:code,name:name,chips:labels}});
+}
 function issAlias(s){s=s||'';if(/국민/.test(s))return 'KB국민카드';if(/^bc|비씨|바로/i.test(s))return 'BC카드';if(/신한/.test(s))return '신한카드';if(/현대/.test(s))return '현대카드';if(/삼성/.test(s))return '삼성카드';if(/롯데/.test(s))return '롯데카드';if(/우리/.test(s))return '우리카드';if(/하나/.test(s))return '하나카드';return s;}
 function _wm(n){if(!n)return'0원';if(n>=10000){var m=n/10000;return (m>=10?Math.round(m):Math.round(m*10)/10)+'만원';}return n.toLocaleString()+'원';}
 function platMap(p){var o={};(p.events||[]).forEach(function(e){if(e.platform==='issuer')return;var w=e.reward_won||0;if(w>(o[e.platform]||0))o[e.platform]=w;});return o;}
@@ -3365,22 +3398,22 @@ function maxRw(p){var m=0;(p.events||[]).forEach(function(e){if(e.platform!=='is
 var PRODS=[],IMGN={};
 var state={screen:'intro',step:0,answers:[]};
 var LS='ct_diag_v2';
-function save(){try{localStorage.setItem(LS,JSON.stringify({step:state.step,answers:state.answers}));}catch(e){}}
+function save(){if(state.mode==='mbti')return;try{localStorage.setItem(LS,JSON.stringify({step:state.step,answers:state.answers}));}catch(e){}}
 function load(){try{var j=JSON.parse(localStorage.getItem(LS)||'null');if(j&&j.answers)return j;}catch(e){}return null;}
 function clearLS(){try{localStorage.removeItem(LS);}catch(e){}}
 var REDUCE=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function show(id){var ss=document.querySelectorAll('.dg-screen');for(var i=0;i<ss.length;i++)ss[i].classList.toggle('on',ss[i].id===id);window.scrollTo(0,0);if(id==='dgChooser'&&window.dhRefresh)dhRefresh();}
 function eggStage(n,N){var p=n/N;if(p<=0.34)return'#egg-crack1';if(p<=0.7)return'#egg-crack2';return'#egg-crack3';}
 function setEgg(ids,n,N){var h=eggStage(n,N);ids.forEach(function(id){var el=document.getElementById(id);if(el)el.setAttribute('href',h);});}
-function setTheme(){var Q=QS[state.step];var n=state.step+1;
- document.getElementById('dgStepN').textContent=(n<10?'0'+n:n)+' / 06';
- document.getElementById('dgProg').style.width=(n/6*100)+'%';
+function setTheme(){var AQ=activeQS();var Q=AQ[state.step];var n=state.step+1;var N=AQ.length;
+ document.getElementById('dgStepN').textContent=(n<10?'0'+n:n)+' / '+(N<10?'0'+N:N);
+ document.getElementById('dgProg').style.width=(n/N*100)+'%';
  document.getElementById('dgQ').textContent=Q.q;
  var th='STEP '+(n<10?'0'+n:n)+' · '+Q.theme;
  ['dgThemePc','dgThemeMo'].forEach(function(id){document.getElementById(id).textContent=th;});
  ['dgTcPc','dgTcMo'].forEach(function(id){document.getElementById(id).style.background=Q.bg;});
  ['dgPropPc','dgPropMo'].forEach(function(id){document.getElementById(id).querySelector('use').setAttribute('href',Q.prop);});
- setEgg(['dgEggPc','dgEggMo'],n,6);
+ setEgg(['dgEggPc','dgEggMo'],n,N);
  var sel=state.answers[state.step];var C=document.getElementById('dgChoices');
  if(Q.opts.length<=3){C.className='dg-choices';
   C.innerHTML=Q.opts.map(function(o,i){var on=sel===i;var key=String.fromCharCode(65+i);
@@ -3391,30 +3424,29 @@ function setTheme(){var Q=QS[state.step];var n=state.step+1;
  }
 }
 function gotoStep(i){state.step=i;state.screen='q';show('dgQuestion');setTheme();save();}
-function choose(idx){idx=parseInt(idx);if(isNaN(idx))return;var Q=QS[state.step];if(idx<0||idx>=Q.opts.length)return;state.answers[state.step]=idx;
+function choose(idx){idx=parseInt(idx);if(isNaN(idx))return;var AQ=activeQS();var Q=AQ[state.step];if(idx<0||idx>=Q.opts.length)return;state.answers[state.step]=idx;
  var btns=document.getElementById('dgChoices').querySelectorAll('[data-opt]');btns.forEach(function(b){var on=parseInt(b.getAttribute('data-opt'))===idx;b.classList.toggle('sel',on);if(on&&b.classList.contains('choice')){var k=b.querySelector('.k');if(k)k.innerHTML='<svg><use href="#dg-check"/></svg>';}});
  save();
- var next=function(){if(state.step>=QS.length-1){finish();}else{gotoStep(state.step+1);}};
+ var next=function(){if(state.step>=AQ.length-1){finish();}else{gotoStep(state.step+1);}};
  if(REDUCE)next();else setTimeout(next,220);
 }
-function pickArch(){var toks=state.answers.map(function(idx,i){return (QS[i].opts[idx]||{}).tk;}).filter(Boolean);
- var scored=ARCH.map(function(a){var sc=toks.filter(function(t){return a.likes.indexOf(t)>=0;}).length;var card=pickCard(a);return {a:a,sc:sc,card:card,cmax:card?maxRw(card):-1};});
- scored=scored.filter(function(x){return x.card;});
- scored.sort(function(x,y){return (y.sc-x.sc)||(y.cmax-x.cmax);});
- return scored[0]||null;}
+function pickArch(){return pickArchByTokens(state.answers.map(function(idx,i){return (activeQS()[i].opts[idx]||{}).tk;}).filter(Boolean));}
 function pickCard(a){var ps=PRODS.filter(function(p){return issAlias(p.issuer)===a.iss&&maxRw(p)>0;});if(!ps.length)return null;
  ps.sort(function(x,y){return maxRw(y)-maxRw(x);});return ps[0];}
 function _norm(d){return (d||'').replace(/\./g,'-').slice(0,10);}
 function dday(pe){if(!pe)return null;var t=_norm(pe);var end=new Date(t+'T23:59:59');if(isNaN(end))return null;var now=new Date();var ms=end-now;var d=Math.ceil(ms/86400000);return d;}
-function finish(){var r=pickArch();if(!r){show('dgResult');document.getElementById('dgRhero').innerHTML='<p style="padding:30px">추천 데이터를 불러오지 못했어요. 다시 시도해 주세요.</p>';return;}
- var a=r.a,card=r.card;var img=card.img||IMGN[(card.name||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'')]||'';
- var desc=({'삼성카드':'해외·여행에 강하고 무실적 캐시백까지 — 당신의 응답에 가장 잘 맞았어요.','현대카드':'마일·포인트 적립과 프리미엄 혜택 — 6개 응답에 가장 잘 맞았어요.','KB국민카드':'조건 없이 일상에서 즉시 캐시백 — 당신의 응답에 가장 잘 맞았어요.','신한카드':'구독·온라인 결제에서 즉시 돌려받기 — 응답에 가장 잘 맞았어요.','롯데카드':'온라인 쇼핑 적립에 강한 한 장 — 응답에 가장 잘 맞았어요.','우리카드':'교통·통신 등 생활 고정비를 알뜰하게 — 응답에 잘 맞았어요.','하나카드':'주유·생활 결제에서 즉시 캐시백 — 응답에 가장 잘 맞았어요.','BC카드':'배달·외식 등 일상 결제 캐시백 — 응답에 잘 맞았어요.'})[a.iss]||'당신의 응답에 가장 잘 맞는 카드예요.';
+function finish(){if(state.mode==='mbti'){mbtiFinish();return;}var r=pickArch();if(!r){show('dgResult');document.getElementById('dgRhero').innerHTML='<p style="padding:30px">추천 데이터를 불러오지 못했어요. 다시 시도해 주세요.</p>';return;}
+ renderCardResult(r.a,r.card,{kind:'card_style'});}
+function renderCardResult(a,card,opts){opts=opts||{};var mb=opts.mbti;var img=card.img||IMGN[(card.name||'').toLowerCase().replace(/[^0-9a-z가-힣]/g,'')]||'';
+ var desc=mb?('소비 MBTI — '+mb.name+'에게 지금 가장 잘 맞는 카드예요.'):(({'삼성카드':'해외·여행에 강하고 무실적 캐시백까지 — 당신의 응답에 가장 잘 맞았어요.','현대카드':'마일·포인트 적립과 프리미엄 혜택 — 응답에 가장 잘 맞았어요.','KB국민카드':'조건 없이 일상에서 즉시 캐시백 — 당신의 응답에 가장 잘 맞았어요.','신한카드':'구독·온라인 결제에서 즉시 돌려받기 — 응답에 가장 잘 맞았어요.','롯데카드':'온라인 쇼핑 적립에 강한 한 장 — 응답에 가장 잘 맞았어요.','우리카드':'교통·통신 등 생활 고정비를 알뜰하게 — 응답에 잘 맞았어요.','하나카드':'주유·생활 결제에서 즉시 캐시백 — 응답에 가장 잘 맞았어요.','BC카드':'배달·외식 등 일상 결제 캐시백 — 응답에 잘 맞았어요.'})[a.iss]||'당신의 응답에 가장 잘 맞는 카드예요.');
+ var badge=mb?'추천 카드':'당신의 카드';var chips=mb?mb.chips:a.chips;
+ var mbtiHead=mb?'<div class="dg-mbti"><span class="dg-mbti-eb">소비 MBTI</span><div class="dg-mbti-row"><span class="dg-mbti-code">'+mb.code+'</span><span class="dg-mbti-nm">'+mb.name+'</span></div></div>':'';
  var plateImg=img?'<img src="'+encodeURI(img)+'" alt="" onerror="this.style.display=\'none\'">':'';
- var heroInner='<span class="dg-badge">당신의 카드</span><div class="dg-plate"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="64" height="76" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2>'+card.name+'</h2><div class="rd">'+desc+'</div>';
+ var heroInner=mbtiHead+'<span class="dg-badge">'+badge+'</span><div class="dg-plate"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="64" height="76" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2>'+card.name+'</h2><div class="rd">'+desc+'</div>';
  document.getElementById('dgRhero').innerHTML=heroInner;
  // desktop left (mirror hero)
- document.getElementById('dgRleft').innerHTML='<span class="dg-badge">당신의 카드</span><div class="dg-plate" style="margin-top:20px"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="70" height="84" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2 style="font-weight:700;font-size:24px;letter-spacing:-.7px;line-height:1.22;margin:20px 0 0">'+card.name+'</h2><div class="rd" style="font-size:13.5px;color:rgba(0,0,0,.66);margin:9px 4px 0">'+desc+'</div><div class="dg-chips" style="justify-content:center;margin-top:16px">'+a.chips.map(function(c){return '<span style="background:rgba(255,255,255,.6);border:0">'+c+'</span>';}).join('')+'</div>';
- document.getElementById('dgWhy').innerHTML=a.chips.map(function(c){return '<span>'+c+'</span>';}).join('');
+ document.getElementById('dgRleft').innerHTML=mbtiHead+'<span class="dg-badge">'+badge+'</span><div class="dg-plate" style="margin-top:20px"><div class="pl">'+plateImg+'</div><span class="tyr egg-hatch-wrap"><svg width="70" height="84" viewBox="0 0 100 120"><use href="#egg-hatch"/></svg></span></div><h2 style="font-weight:700;font-size:24px;letter-spacing:-.7px;line-height:1.22;margin:20px 0 0">'+card.name+'</h2><div class="rd" style="font-size:13.5px;color:rgba(0,0,0,.66);margin:9px 4px 0">'+desc+'</div><div class="dg-chips" style="justify-content:center;margin-top:16px">'+chips.map(function(c){return '<span style="background:rgba(255,255,255,.6);border:0">'+c+'</span>';}).join('')+'</div>';
+ document.getElementById('dgWhy').innerHTML=chips.map(function(c){return '<span>'+c+'</span>';}).join('');
  // platform bars
  var pm=platMap(card);var ks=PORD.filter(function(p){return pm[p];}).sort(function(x,y){return pm[y]-pm[x];});var mx=ks.length?pm[ks[0]]:0;
  document.getElementById('dgBarsCap').textContent='플랫폼 '+ks.length+'곳 비교';
@@ -3428,15 +3460,25 @@ function finish(){var r=pickArch();if(!r){show('dgResult');document.getElementBy
   return '<a class="dg-evrow" href="'+cgUrl(e)+'" rel="sponsored nofollow noopener" target="_blank"><span class="dot" style="background:'+(PC[e.platform]||'#888')+'"></span><div style="flex:1;min-width:0"><div class="et">'+title+'</div><div class="ep">'+(PN[e.platform]||e.platform)+' · 외부 광고 링크</div></div><span class="dd">'+dl+'</span></a>';
  }).join(''):'<div style="font-size:13px;color:rgba(0,0,0,.45);padding:10px 0">마감 임박 이벤트가 없어요. 카드 상세에서 전체 이벤트를 확인하세요.</div>';
  document.getElementById('dgGo').setAttribute('href','carddetail.html?n='+encodeURIComponent(card.name));
- renderDist(a.type);
+ recordDiag(opts.kind,a.type);renderDist(a.type,opts.kind);
  state.screen='result';show('dgResult');clearLS();
 }
 // 내 진단 유형 비중(스택바+범례, 내 유형만 강조) — 최근 30일 누적(예시)
-function renderDist(myType){var bar=document.getElementById('dgDistBar'),lg=document.getElementById('dgDistLg');if(!bar||!lg)return;
- bar.innerHTML=DIST.map(function(d){return '<span style="width:'+d.pct+'%;background:'+d.color+';opacity:'+(d.type===myType?'1':'.4')+'"></span>';}).join('');
- lg.innerHTML=DIST.map(function(d){var me=d.type===myType;return '<span class="it" style="opacity:'+(me?'1':'.4')+'"><span class="dt" style="background:'+d.color+'"></span><span class="nm" style="font-weight:'+(me?700:540)+'">'+d.type+'</span><span class="pc">'+d.pct+'%</span>'+(me?'<span class="me">내 유형</span>':'')+'</span>';}).join('');
+// 유형 비중 = 같은 진단을 한 사람들의 결과 유형 분포(실제 집계). 즉시 샘플 렌더 후 집계 도착 시 갱신, 실패 시 샘플 유지.
+function _distRender(data,myType,total){var bar=document.getElementById('dgDistBar'),lg=document.getElementById('dgDistLg');if(!bar||!lg)return;
+ var cap=document.getElementById('dgDistCap');if(cap)cap.textContent=total?('참여 '+total.toLocaleString()+'명'):'표본 모으는 중';
+ bar.innerHTML=data.map(function(d){return '<span style="width:'+d.pct+'%;background:'+d.color+';opacity:'+(d.type===myType?'1':'.4')+'"></span>';}).join('');
+ lg.innerHTML=data.map(function(d){var me=d.type===myType;return '<span class="it" style="opacity:'+(me?'1':'.4')+'"><span class="dt" style="background:'+d.color+'"></span><span class="nm" style="font-weight:'+(me?700:540)+'">'+d.type+'</span><span class="pc">'+d.pct+'%</span>'+(me?'<span class="me">내 유형</span>':'')+'</span>';}).join('');}
+function renderDist(myType,kind){
+ _distRender(DIST.map(function(d){return {type:d.type,pct:d.pct,color:d.color};}),myType,0);
+ if(!DIAGAPI||!kind)return;
+ fetch(DIAGAPI+'/api/diag/stats?kind='+encodeURIComponent(kind)).then(function(r){return r.json();}).then(function(d){
+  var total=d.total||0;if(!total)return;var cnt={};(d.stats||[]).forEach(function(s){cnt[s.type]=s.n;});
+  var data=DIAG_DIST_ORDER.filter(function(t){return cnt[t]||t===myType;}).map(function(t){return {type:t,pct:Math.round((cnt[t]||0)/total*100),color:DIAG_DIST_COLOR[t]||'#888'};});
+  if(data.length)_distRender(data,myType,total);
+ }).catch(function(){});
 }
-function startFresh(){state.step=0;state.answers=[];gotoStep(0);}
+function startFresh(){state.mode=null;state.step=0;state.answers=[];gotoStep(0);}
 function dgToast(m){var t=document.createElement("div");t.textContent=m;t.style.cssText="position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#000;color:#fff;padding:11px 18px;border-radius:50px;font-size:13px;font-weight:600;z-index:9999;opacity:0;transition:opacity .2s";document.body.appendChild(t);requestAnimationFrame(function(){t.style.opacity="1";});setTimeout(function(){t.style.opacity="0";setTimeout(function(){t.remove();},300);},1800);}
 function dgShare(isResult){var url=location.origin+"/diagnose.html";var text=isResult?"내 카드, 60초 만에 진단받았어요 — 카드티라노":"60초 2지선다로 내게 맞는 카드 찾기 — 카드티라노";if(navigator.share){navigator.share({title:"카드티라노 카드 진단",text:text,url:url}).catch(function(){});return;}var sx=text+" "+url;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(sx).then(function(){dgToast("링크를 복사했어요");},function(){window.prompt("아래 링크를 복사하세요",sx);});}else{window.prompt("아래 링크를 복사하세요",sx);}}
 /* ===== 시나리오 2 · 캐시백 최적 카드사 진단 ===== */
@@ -3532,7 +3574,7 @@ function s2Dots(){}
 var DTESTS=[
  {t:'카드 진단',d:'6문항으로 내게 맞는 카드',m:'6문항 · 60초',scn:'1',bg:'var(--block-lime)',cat:'추천'},
  {t:'캐시백 최적 카드사',d:'관심 카드사 예상 캐시백 추정',m:'7문항 · 90초',scn:'2',badge:'NEW',bg:'var(--block-mint)',cat:'추천'},
- {t:'소비 유형 진단',d:'내 소비 패턴 분석',m:'준비 중',soon:1,bg:'var(--block-cream)',cat:'소비성향'},
+ {t:'소비 MBTI',d:'4문항으로 소비 유형+추천 카드',m:'4문항 · 40초',scn:'3',badge:'NEW',bg:'var(--block-cream)',cat:'소비성향'},
  {t:'연회비 적정선',d:'프리미엄 vs 실속',m:'준비 중',soon:1,badge:'NEW',bg:'var(--block-pink)',cat:'상황별'},
  {t:'해외·여행 카드',d:'환전·캐시백 최적 카드',m:'준비 중',soon:1,bg:'var(--block-coral)',cat:'상황별'},
  {t:'첫 카드 진단',d:'사회초년생 추천',m:'준비 중',soon:1,bg:'var(--block-lilac)',cat:'소비성향'}
@@ -3560,9 +3602,9 @@ function bind(){
  // 시나리오 선택(스와이프)
  // 진단 허브 초기화 + 위임(data-scn 1=성향 intro / 2=캐시백 s2), 카테고리·이어하기·공유
  dhRenderGrid('전체');dhRenderOthers();dhRefresh();
- var _ch=document.getElementById('dgChooser');if(_ch)_ch.addEventListener('click',function(e){var b=e.target.closest('[data-scn]');if(!b)return;if(b.getAttribute('data-scn')==='2')s2Start();else{clearLS();state.step=0;state.answers=[];state.screen='intro';show('dgIntro');}});
+ var _ch=document.getElementById('dgChooser');if(_ch)_ch.addEventListener('click',function(e){var b=e.target.closest('[data-scn]');if(!b)return;var scn=b.getAttribute('data-scn');if(scn==='2')s2Start();else if(scn==='3')mbtiStart();else{clearLS();state={mode:null,step:0,answers:[],screen:'intro'};show('dgIntro');}});
  var _cts=document.getElementById('dhCats');if(_cts)_cts.addEventListener('click',function(e){var b=e.target.closest('.dh-cat');if(!b)return;var bs=this.querySelectorAll('.dh-cat');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i]===b);dhRenderGrid(b.getAttribute('data-cat'));});
- var _rsm=document.getElementById('dhResume');if(_rsm)_rsm.onclick=function(){var j=load();if(j&&j.answers&&j.answers.length){state.answers=j.answers.slice();state.step=Math.min(j.answers.length,QS.length-1);state.screen='q';show('dgQuestion');setTheme();}};
+ var _rsm=document.getElementById('dhResume');if(_rsm)_rsm.onclick=function(){var j=load();if(j&&j.answers&&j.answers.length){state.mode=null;state.answers=j.answers.slice();state.step=Math.min(j.answers.length,QS.length-1);state.screen='q';show('dgQuestion');setTheme();}};
  var _dsh=document.getElementById('dhShare');if(_dsh)_dsh.onclick=function(){dgShare(false);};
  var _ib=document.getElementById('dgIntroBack');if(_ib)_ib.onclick=function(){show('dgChooser');s2Dots();};
  // 시나리오2 바인딩

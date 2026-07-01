@@ -150,6 +150,28 @@ async function route(request, env, url, pathname, method) {
   m = pathname.match(/^\/api\/comments\/(\d+)\/like$/);
   if (m && method === "POST") return like(db, "comment", +m[1], "comments", request, env);
 
+  // ── 진단 결과 통계 (유형별 참여 비중) ─────────────────────
+  // 테이블은 최초 요청 시 자동 생성(별도 마이그레이션 불필요).
+  // POST /api/diag  결과 기록  body:{kind, type}
+  if (pathname === "/api/diag" && method === "POST") {
+    const b = await request.json().catch(() => ({}));
+    const kind = String(b.kind || "").trim().slice(0, 32);
+    const type = String(b.type || "").trim().slice(0, 48);
+    if (!kind || !type) return json({ error: "kind/type 필요" }, 400);
+    await db.prepare("CREATE TABLE IF NOT EXISTS diag_stats (kind TEXT NOT NULL, type TEXT NOT NULL, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (kind, type))").run();
+    await db.prepare("INSERT INTO diag_stats (kind, type, n) VALUES (?, ?, 1) ON CONFLICT(kind, type) DO UPDATE SET n = n + 1").bind(kind, type).run();
+    return json({ ok: true });
+  }
+  // GET /api/diag/stats?kind=  유형별 집계
+  if (pathname === "/api/diag/stats" && method === "GET") {
+    const kind = String(url.searchParams.get("kind") || "").trim().slice(0, 32);
+    if (!kind) return json({ error: "kind 필요" }, 400);
+    await db.prepare("CREATE TABLE IF NOT EXISTS diag_stats (kind TEXT NOT NULL, type TEXT NOT NULL, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (kind, type))").run();
+    const rows = (await db.prepare("SELECT type, n FROM diag_stats WHERE kind = ? ORDER BY n DESC, type ASC").bind(kind).all()).results;
+    const total = rows.reduce((s, r) => s + (r.n || 0), 0);
+    return json({ kind, total, stats: rows });
+  }
+
   // 헬스체크
   if (pathname === "/" || pathname === "/api" || pathname === "/api/health")
     return json({ ok: true, service: "cardtyranno-community", categories: CATEGORIES });

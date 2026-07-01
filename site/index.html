@@ -680,7 +680,9 @@ Promise.all([
  fetch('hero.json').then(r=>r.json()).catch(function(){return{items:[]};})
 ]).then(function(A){
  var cj=A[0].cards||{},PE=liveEvents(A[1].products||[]),HR=A[2].items||[];
- var NAME2ID={},IMG={};for(var k in cj){(cj[k]||[]).forEach(function(c){var n=_nk2(c.name);if(NAME2ID[n]==null)NAME2ID[n]=c.id;if(c.img&&!IMG[n])IMG[n]=c.img;});}
+ var NAME2ID={},IMG={},MTIER={};for(var k in cj){(cj[k]||[]).forEach(function(c){var n=_nk2(c.name);if(NAME2ID[n]==null)NAME2ID[n]=c.id;if(c.img&&!IMG[n])IMG[n]=c.img;if(c.main_tier&&c.main_tier.reward&&!MTIER[n])MTIER[n]=c.main_tier.reward;});}
+ // 카드사별 '최대 캐시백'은 기본 발급(주요) 캐시백만 — 부가/추가 캐시백 제외(splTier(e,mt).m). mt=카드 main_tier 보상(원).
+ function _baseWon(p,e){return splTier(e,MTIER[_nk2(p.name)]).m;}
  function href(name){var id=NAME2ID[_nk2(name||'')];if(id==null)id=NAME2ID[_nk2((name||'').replace(/^토스\s*/,''))];return id!=null?('carddetail.html?id='+id):'chart.html';}
  var EVMAP={};PE.forEach(function(p){var n=_nk2(p.name);EVMAP[n]=(p.events||[]);if(p.img&&!IMG[n])IMG[n]=p.img;});
  function plate(name,img){return imgTag(img||IMG[_nk2(name)]);}
@@ -699,7 +701,7 @@ Promise.all([
   if(_e=document.getElementById('heroS2Sub'))_e.innerHTML='6개 플랫폼을 비교한 결과, <b>'+bm.n+'에서 받을 때</b> 캐시백이 가장 커요.';
   if(_e=document.getElementById('heroS2'))_e.setAttribute('href',href(best.name));
   if(_e=document.getElementById('heroS2Plate'))_e.innerHTML=plate(best.name,best.img);}
- var im={};PE.forEach(function(p){var k=p.issuer||'';if(!k)return;(p.events||[]).forEach(function(e){if((e.reward_won||0)>(im[k]||0))im[k]=e.reward_won;});});
+ var im={};PE.forEach(function(p){var k=p.issuer||'';if(!k)return;(p.events||[]).forEach(function(e){var w=_baseWon(p,e);if(w>(im[k]||0))im[k]=w;});});
  var ta=Object.keys(im).map(function(k){return[k,im[k]];}).sort(function(a,b){return b[1]-a[1];}).slice(0,8);
  var lt=document.getElementById('liveTk');if(lt&&ta.length){var s=ta.map(function(r){return r[0].replace('카드','')+' '+_won(r[1]);}).join('     /     ');lt.textContent=s+'     /     '+s;}
  function evRows(name){var evs=(EVMAP[_nk2(name)]||[]).slice().filter(function(e){return e.reward_won;}).sort(function(a,b){return b.reward_won-a.reward_won;}).slice(0,3);
@@ -715,7 +717,7 @@ Promise.all([
  // B · 이번달 최고 커플 (카드사 8종 ❤ 최고 플랫폼) — ① 전체 캐시백 최대 플랫폼, 동점이면 공동 1위
  (function(){var ISS8=['삼성카드','현대카드','KB국민카드','신한카드','롯데카드','우리카드','하나카드','BC카드'];
   function alias(s){s=s||'';if(/국민/.test(s))return 'KB국민카드';if(/^비씨|^bc/i.test(s))return 'BC카드';if(/신한/.test(s))return '신한카드';if(/현대/.test(s))return '현대카드';if(/삼성/.test(s))return '삼성카드';if(/롯데/.test(s))return '롯데카드';if(/우리/.test(s))return '우리카드';if(/하나/.test(s))return '하나카드';return s;}
-  var cpl={};PE.forEach(function(p){var iss=alias(p.issuer||'');if(!iss)return;var o=cpl[iss]||(cpl[iss]={});(p.events||[]).forEach(function(e){var w=e.reward_won||0;if(!w||e.platform==='issuer')return;var pp=o[e.platform]||(o[e.platform]={tot:0,max:0,prods:{}});pp.tot+=w;if(w>pp.max)pp.max=w;pp.prods[_nk2(p.name)]=1;});});
+  var cpl={};PE.forEach(function(p){var iss=alias(p.issuer||'');if(!iss)return;var o=cpl[iss]||(cpl[iss]={});(p.events||[]).forEach(function(e){if(e.platform==='issuer')return;var w=_baseWon(p,e);if(!w)return;var pp=o[e.platform]||(o[e.platform]={tot:0,max:0,prods:{}});pp.tot+=w;if(w>pp.max)pp.max=w;pp.prods[_nk2(p.name)]=1;});});
   var cg=document.getElementById('cplGrid');if(!cg)return;
   var rows=ISS8.map(function(iss){var o=cpl[iss];if(!o)return null;
    var arr=Object.keys(o).map(function(pk){return{pk:pk,tot:o[pk].tot,max:o[pk].max,cnt:Object.keys(o[pk].prods).length};}).sort(function(a,b){return b.tot-a.tot;});
