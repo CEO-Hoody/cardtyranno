@@ -3059,6 +3059,7 @@ page("about.html",BRAND+" | 카드티라노란? · 서비스 소개","흩어진 
 DIAG_BODY=(r'''<style>
 .dg-wrap{max-width:780px;margin:0 auto;padding:8px 0 0}
 .dg-screen{display:none}.dg-screen.on{display:block}
+body.dg-inflow .pgshare{display:none}
 .dg-tcircle{position:relative;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .dg-tcircle .prop{position:absolute;right:4px;top:6px;border-radius:50%;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center;color:#1a1714}
 .dg-eb{font-family:var(--font-mono,monospace);font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.5)}
@@ -3195,7 +3196,7 @@ DIAG_BODY=(r'''<style>
 .dh-hero .eb{display:inline-block;font:700 9px var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.5px;background:#000;color:#fff;padding:4px 10px;border-radius:50px}
 .dh-hero .hrow{display:flex;align-items:center;gap:14px;margin-top:14px}
 .dh-hero h2{font-weight:340;font-size:26px;letter-spacing:-.9px;line-height:1.18;margin:0}
-.dh-hero .hd{font-weight:400;font-size:12.5px;color:rgba(0,0,0,.62);margin-top:7px;line-height:1.5}
+.dh-hero .dh-hd{font-weight:400;font-size:12.5px;color:rgba(0,0,0,.62);margin-top:7px;line-height:1.5}
 .dh-hero .tc{width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;flex-shrink:0}.dh-hero .tc svg{width:56px;height:48px;color:#1a1714}
 .dh-hero .acts{display:flex;gap:9px;margin-top:18px}
 .dh-cta{flex:1;text-align:center;padding:13px;border-radius:50px;background:#000;color:#fff;font-weight:600;font-size:14px;border:0;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;gap:8px}.dh-cta svg{width:16px;height:16px}
@@ -3220,7 +3221,7 @@ DIAG_BODY=(r'''<style>
 .dh-orow{display:flex;align-items:center;gap:12px;border:1px solid var(--hairline);border-radius:14px;padding:13px 15px}
 .dh-orow .pl{width:50px;flex-shrink:0;aspect-ratio:1.586/1;border-radius:6px;transform:rotate(-5deg);position:relative;overflow:hidden}
 .dh-orow .who{font-weight:400;font-size:11.5px;color:rgba(0,0,0,.5)}.dh-orow .card{font-weight:700;font-size:13.5px;letter-spacing:-.3px;margin-top:1px;display:block}
-@media(min-width:761px){.dh-hero{padding:32px 30px}.dh-hero h2{font-size:32px}.dh-hero .hd{font-size:14px}.dh-hero .tc{width:108px;height:108px}.dh-hero .tc svg{width:80px;height:68px}.dh-grid{grid-template-columns:repeat(3,1fr);gap:14px}.dh-cats{flex-wrap:wrap;overflow:visible}.dh-others{flex-direction:row}.dh-others .dh-orow{flex:1}}
+@media(min-width:761px){.dh-hero{padding:32px 30px}.dh-hero h2{font-size:32px}.dh-hero .dh-hd{font-size:14px}.dh-hero .tc{width:108px;height:108px}.dh-hero .tc svg{width:80px;height:68px}.dh-grid{grid-template-columns:repeat(3,1fr);gap:14px}.dh-cats{flex-wrap:wrap;overflow:visible}.dh-others{flex-direction:row}.dh-others .dh-orow{flex:1}}
 </style>'''
  r'''<svg style="display:none" aria-hidden="true">
  <symbol id="tyr" viewBox="0 0 100 86"><path fill="currentColor" d="M6 64 C 26 56 36 53 46 53 C 50 44 56 38 66 38 L 62 22 L 74 22 L 72 40 C 78 46 80 54 80 60 C 80 68 74 72 64 72 L 30 72 C 18 72 10 70 6 64 Z"/><rect x="30" y="68" width="9" height="15" rx="3" fill="currentColor"/><rect x="56" y="68" width="9" height="15" rx="3" fill="currentColor"/><path fill="currentColor" d="M58 52 c5 0 9 2 11 5 c-3 -1 -6 -1 -9 0 z"/><rect x="58" y="6" width="26" height="24" rx="6" fill="currentColor"/><circle cx="66" cy="14" r="2.4" fill="#fff"/><rect x="70" y="17" width="9" height="8" rx="1.4" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M70 21h9" stroke="#fff" stroke-width="1.4"/><path d="M74.5 17v8" stroke="#fff" stroke-width="1.4"/></symbol>
@@ -3254,7 +3255,7 @@ DIAG_BODY=(r'''<style>
   <div class="dh-head"><span class="ti"><svg viewBox="0 0 24 24"><use href="#mk"/></svg>진단하기</span><button class="dh-share" id="dhShare" type="button" aria-label="공유"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></div>
   <div class="dh-hero">
    <span class="eb">대표 진단</span>
-   <div class="hrow"><div style="flex:1"><h2>60초 카드 진단</h2><div class="hd">6개 질문이면 내게 맞는 카드 1장과 지금 가장 큰 캐시백 플랫폼까지.</div></div><span class="tc"><svg viewBox="0 0 100 86"><use href="#tyr"/></svg></span></div>
+   <div class="hrow"><div style="flex:1"><h2>60초 카드 진단</h2><div class="dh-hd">6개 질문이면 내게 맞는 카드 1장과 지금 가장 큰 캐시백 플랫폼까지.</div></div><span class="tc"><svg viewBox="0 0 100 86"><use href="#tyr"/></svg></span></div>
    <div class="acts"><button class="dh-cta" type="button" data-scn="1">진단 시작 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></button></div>
   </div>
   <button class="dh-resume" id="dhResume" type="button" style="display:none"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><span><span class="t">이어서 진단하기</span><span class="s" id="dhResumeS">카드 진단 · 0/6 단계</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></span></button>
@@ -3273,7 +3274,7 @@ DIAG_BODY=(r'''<style>
    <p>2지선다만 누르면 끝. 당신께 맞는 카드와 지금 가장 큰 캐시백 플랫폼·마감 임박 이벤트까지 찾아드려요.</p>
   </div>
   <div style="padding:18px 0 0"><button class="dg-cta" id="dgStart">진단 시작하기 <svg><use href="#dg-right"/></svg></button>
-   <p class="dg-note">약 1분 소요 · 가입 없이 바로</p><div style="text-align:center;margin-top:14px"><button id="dgShareIntro" style="display:inline-flex;align-items:center;gap:7px;background:none;border:1px solid var(--line,#e6e6e6);border-radius:50px;padding:10px 18px;font-weight:600;font-size:13px;color:var(--sub,#666);cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> 친구에게 공유</button></div></div>
+   <p class="dg-note">약 1분 소요 · 가입 없이 바로</p></div>
  </section>
  <section class="dg-screen" id="dgQuestion">
   <div class="dg-top"><button class="dg-icnbtn" id="dgBack"><svg><use href="#dg-back"/></svg></button><span class="dg-step" id="dgStepN">01 / 06</span><button class="dg-icnbtn" id="dgClose"><svg><use href="#dg-x"/></svg></button></div>
@@ -3402,7 +3403,7 @@ function save(){if(state.mode==='mbti')return;try{localStorage.setItem(LS,JSON.s
 function load(){try{var j=JSON.parse(localStorage.getItem(LS)||'null');if(j&&j.answers)return j;}catch(e){}return null;}
 function clearLS(){try{localStorage.removeItem(LS);}catch(e){}}
 var REDUCE=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-function show(id){var ss=document.querySelectorAll('.dg-screen');for(var i=0;i<ss.length;i++)ss[i].classList.toggle('on',ss[i].id===id);window.scrollTo(0,0);if(id==='dgChooser'&&window.dhRefresh)dhRefresh();}
+function show(id){var ss=document.querySelectorAll('.dg-screen');for(var i=0;i<ss.length;i++)ss[i].classList.toggle('on',ss[i].id===id);document.body.classList.toggle('dg-inflow',id!=='dgChooser');window.scrollTo(0,0);if(id==='dgChooser'&&window.dhRefresh)dhRefresh();}
 function eggStage(n,N){var p=n/N;if(p<=0.34)return'#egg-crack1';if(p<=0.7)return'#egg-crack2';return'#egg-crack3';}
 function setEgg(ids,n,N){var h=eggStage(n,N);ids.forEach(function(id){var el=document.getElementById(id);if(el)el.setAttribute('href',h);});}
 function setTheme(){var AQ=activeQS();var Q=AQ[state.step];var n=state.step+1;var N=AQ.length;
@@ -3591,7 +3592,6 @@ function dhRenderOthers(){var o=document.getElementById('dhOthers');if(!o)return
 function dhRefresh(){var r=document.getElementById('dhResume');if(!r)return;var j=load();if(j&&j.answers&&j.answers.length>0&&j.answers.length<QS.length){r.style.display='';var s=document.getElementById('dhResumeS');if(s)s.textContent='카드 진단 · '+j.answers.length+'/'+QS.length+' 단계';}else r.style.display='none';}
 function bind(){
  document.getElementById('dgStart').onclick=startFresh;
- var _si=document.getElementById('dgShareIntro');if(_si)_si.onclick=function(){dgShare(false);};
  var _sr=document.getElementById('dgShareResult');if(_sr)_sr.onclick=function(){dgShare(true);};
  document.getElementById('dgRedo').onclick=function(){clearLS();state.screen='intro';show('dgIntro');};
  document.getElementById('dgBack').onclick=function(){if(state.step<=0){state.screen='intro';show('dgIntro');}else gotoStep(state.step-1);};
